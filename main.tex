@@ -18,7 +18,8 @@
 \usepackage{changepage}
 \usepackage{color}
 \usepackage{csquotes}
-\usepackage{draftwatermark}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[pages=1-32, color=red, angle=0, scale=1, xpos=0, ypos=-127]{TECHNICAL DRAFT}
 \usepackage{enumitem}
 \usepackage{etex}
 \usepackage{etoolbox}
@@ -103,10 +104,10 @@
 \renewcommand\cftpartafterpnum{\vskip1pt}
 \renewcommand\cftsecafterpnum{\vskip1pt}
 \setlength{\cftbeforesecskip}{1pt}
-\dottedcontents{chapter}[1.0em]{}{1.3em}{.6em}
+\dottedcontents{chapter}[1.5em]{}{1.3em}{.6em}
 
 \title{Braille Technology Requirements \& Specifications}
-\author{Michael Ryan Hunsaker, M.Ed., Ph.D. \\ Davis School District \\ Farmington, UT}
+\author{Michael Ryan Hunsaker, M.Ed., Ph.D. \\ Davis School District}
 \date{\vfill Last Updated: {\today}}
 \renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
 \renewcommand{\contentsname}{Table of Contents}
@@ -115,7 +116,7 @@
 \begin{document}
 \pagenumbering{gobble}
 \maketitle
-\hypersetup{linkcolor=}
+
 \setcounter{tocdepth}{3}
 \cleardoublepage
 \tableofcontents
@@ -130,8 +131,7 @@
 \fancyfoot[LE, RO]{Last Updated: \today}
 
 \pagebreak \hypertarget{vision-assistive-technology-laptop-computer-requirements}{%
-	\chapter*{Laptop Computer
-	  Requirements}\label{vision-assistive-technology-laptop-computer-requirements}}
+	\chapter*{Laptop Computer Requirements}\label{vision-assistive-technology-laptop-computer-requirements}}
 \pagenumbering{arabic}
 \extramarks{Vision Department Technology Needs}{Laptop Requirements}
 \addcontentsline{toc}{chapter}{Laptop Requirements}
@@ -142,39 +142,45 @@
 \addcontentsline{toc}{section}{Vision Student Software Needs}
 
 \begin{longtable}[]{@{}
-	>{\raggedright\arraybackslash}p{.2\textwidth}
+	>{\raggedright\arraybackslash}p{.3\textwidth}
 	>{\raggedright\arraybackslash}p{.2\textwidth}
 	>{\raggedright\arraybackslash}p{.1\textwidth}
+	>{\raggedright\arraybackslash}p{.1\textwidth}	
 	>{\raggedright\arraybackslash}p{.15\textwidth}
-	>{\raggedright\arraybackslash}p{.2\textwidth}
+	>{\raggedright\arraybackslash}p{.15\textwidth}
 	}
 	\toprule\noalign{}
-	\textbf{Program}                                                                                                                                                                                                                                                                                                                  & \textbf{Type of Program}                   & \textbf{Minimum RAM} & \textbf{Preferred RAM}                                                                & \textbf{Processor}       \\
+	\textbf{Program}                                                                                                                                                                                                                                                                                                                  & \textbf{Type of Program}                   & \textbf{Cost} & \textbf{Min RAM} & \textbf{Pref RAM}                                                                & \textbf{Processor}       \\
 	\midrule\noalign{}
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	JAWS                                                                                                                                                                                                                                                                                                                              & Screenreader                               & 8GB                  & \textgreater16GB\footnote{preferred RAM value is the next consumer level RAM upgrade} & \textgreater11th Gen i5+ \\[1.0em]
-	Narrator                                                                                                                                                                                                                                                                                                                          & Screenreader                               & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen     \\[1.0em]
-	NVDA                                                                                                                                                                                                                                                                                                                              & Screenreader                               & 2GB                  & \textgreater8GB                                                                       & \textgreater11th Gen     \\[1.0em]
-	ZoomText                                                                                                                                                                                                                                                                                                                          & Magnification                              & 16GB                 & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	Fusion                                                                                                                                                                                                                                                                                                                            & Screenreader \break \& Magnification       & 16GB                 & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	Dolphin SuperNova                                                                                                                                                                                                                                                                                                                 & Screenreader \break \& Magnification       & 8GB                  & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	Duxbury DBT 12.7                                                                                                                                                                                                                                                                                                                  & Braille Transcription                      & not given            & not given                                                                             & not given                \\[1.0em]
-	BrailleBlaster                                                                                                                                                                                                                                                                                                                    & Braille Transcription                      & 6GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	Sao Mai Braille                                                                                                                                                                                                                                                                                                                   & Music Braille\break Braille Transcription  & 4GB                  & \textgreater8GB                                                                       & \textgreater11th Gen i7+ \\[1.0em]
-	Microsoft 365 \footnote{Microsoft is adding OpenAI based tools called \href{https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-copilot}{Microsoft CoPilot} to their products, which takes an extra 1-3GB of RAM in order to concurrently run Office applications and screenreaders smoothly on my computers.} & Work Completion                            & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen     \\[1.0em]
-	Windows 11                                                                                                                                                                                                                                                                                                                        & Operating System                           & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	Windows 12 (June 2024)                                                                                                                                                                                                                                                                                                            & Operating System                           & 8GB                  & \textgreater16GB                                                                      & \textgreater12th Gen i7+ \\[1.0em]
-	Microsoft Teams                                                                                                                                                                                                                                                                                                                   & Web Meeting                                & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	Zoom                                                                                                                                                                                                                                                                                                                              & Web Meeting                                & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	Adobe Reader                                                                                                                                                                                                                                                                                                                      & PDF Reader                                 & 2GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	ZDSR                                                                                                                                                                                                                                                                                                                              & Screen Reader                              & 2GB                  & \textgreater8GB                                                                       & \textgreater11th Gen i7+ \\[1.0em]
-	MuseScore                                                                                                                                                                                                                                                                                                                         & Music braille                              & 8GB                  & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	Sibelius                                                                                                                                                                                                                                                                                                                          & Music braille                              & 8GB                  & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	Windows Magnifier                                                                                                                                                                                                                                                                                                                 & Magnification                              & 16GB                 & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	Java JDK 20+                                                                                                                                                                                                                                                                                                                      & Most VI Software have a dependency on Java & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.0em]
-	TeXStudio                                                                                                                                                                                                                                                                                                                         & Math Transcription \break Math Typesetting & 4GB                  & \textgreater8GB                                                                       & \textgreater11th Gen i7+ \\ [1.0em] \hline
+	JAWS                                                                                                                                                                                                                                                                                                                              & Screenreader                               &\$95/yr\footnote{annual is typically purchased via through APH quota funds, perpetual license \$1,100} & 8GB                  & \textgreater16GB & \textgreater11th Gen i5+ \\[1.5em]
+	Narrator                                                                                                                                                                                                                                                                                                                          & Screenreader                               &\$0 & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen     \\[1.5em]
+	NVDA                                                                                                                                                                                                                                                                                                                              & Screenreader                               &\$0 & 2GB                  & \textgreater8GB                                                                       & \textgreater11th Gen     \\[1.5em]
+	ZoomText                                                                                                                                                                                                                                                                                                                          & Magnification                              &\$85\footnote{through APH quota funds, perpetual license \$800} & 16GB                 & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Fusion                                                                                                                                                                                                                                                                                                                            & Screenreader \break \& Magnification       &\$170 & 16GB\footnote{through APH quota funds, tperpetual license \$1,540}                 & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Dolphin Screenreader                                                                                                                                                                                                                                                                                                              & Screenreader       						   &\$1,105/yr & 8GB                  & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Dolphin SuperNova Magnifier                                                                                                                                                                                                                                                                                                       & Magnification       					   &\$545/yr & 8GB                  & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Dolphin SuperNova Magnifier+Speech                                                                                                                                                                                                                                                                                              & Magnification \& Speech     			   &\$825/yr & 8GB                  & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Dolphin Screenreader + SuperNova  Magnifier                                                                                                                                                                                                                                                                                       & Screenreader \break \& Magnification       &\$1,665/yr & 8GB                  & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Duxbury DBT 12.7                                                                                                                                                                                                                                                                                                                  & Braille Transcription                      &\$695/yr & not given            & not given                                                                             & not given                \\[1.5em]
+	Braille2000                                                                                                                                                                                                                                                                                                                       & Braille Transcription                      &\$32/mo or \$1,149/yr & not given            & not given                                                                             & not given                \\[1.5em]
+	BrailleBlaster                                                                                                                                                                                                                                                                                                                    & Braille Transcription                      &\$0 & 6GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Sao Mai Braille                                                                                                                                                                                                                                                                                                                   & Music Braille\break Braille Transcription  &\$0 & 4GB                  & \textgreater8GB                                                                       & \textgreater11th Gen i7+ \\[1.5em]
+	Microsoft 365 \footnote{Microsoft is adding OpenAI based tools called \href{https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-copilot}{Microsoft CoPilot} to their products, which takes an extra 1-3GB of RAM in order to concurrently run Office applications and screenreaders smoothly on my computers.} & Work Completion                            &\$ & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen     \\[1.5em]
+	Windows 11                                                                                                                                                                                                                                                                                                                        & Operating System                           & & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Windows 12 (June 2024)                                                                                                                                                                                                                                                                                                            & Operating System                           & & 8GB                  & \textgreater16GB                                                                      & \textgreater12th Gen i7+ \\[1.5em]
+	Microsoft Teams                                                                                                                                                                                                                                                                                                                   & Web Meeting                                &\$0\footnote{free for a limited set of features} & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Zoom                                                                                                                                                                                                                                                                                                                              & Web Meeting                                &\$0\footnote{free for a limited set of features} & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Adobe Reader                                                                                                                                                                                                                                                                                                                      & PDF Reader                                 &\$0 & 2GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	ZDSR                                                                                                                                                                                                                                                                                                                              & Screen Reader                              &\$232 & 2GB                  & \textgreater8GB                                                                       & \textgreater11th Gen i7+ \\[1.5em]
+	MuseScore                                                                                                                                                                                                                                                                                                                         & Music braille                              &\$0 & 8GB                  & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Sibelius                                                                                                                                                                                                                                                                                                                          & Music braille                              &\$0\footnote{SibeliusONE is free but very limited in capability} & 8GB                  & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Windows Magnifier     & Magnification& \$0 & 8GB & \textgreater16GB       & \textgreater11th Gen i7+ \\[1.5em] 
+	OpenBook                                                                                                                                                                                                                                                                                                                          & Optical Character Recognition & \$1,000 & 8 GB & \textgreater16GB       & \textgreater11th Gen i7+ \\[1.5em]                                                                                                                                                                                                                                                                                      & Magnification                              &\$0 & 16GB                 & \textgreater32GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	Java JDK 20+                                                                                                                                                                                                                                                                                                                      & Most VI Software have a dependency on Java &\$0 & 4GB                  & \textgreater16GB                                                                      & \textgreater11th Gen i7+ \\[1.5em]
+	TeXStudio                                                                                                                                                                                                                                                                                                                         & Math Transcription \break Math Typesetting &\$0 & 4GB                  & \textgreater8GB                                                                       & \textgreater11th Gen i7+ \\ [1.5em] \hline
 	\caption{Software used by Vision Students}
 \end{longtable}
 
@@ -285,10 +291,10 @@ From the article (\emph{emphasis mine}):
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	\fcolorbox{red}{red}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad $\begin{array}{l}\textbf{Students Laptop} \\ \text{8GB RAM}\end{array}\footnote{District Provided}$                & 143 [93-183] \footnote{These are the data plotted in Figure 1 above. The responsiveness data are more clear when presented as a table here than as a plot} & 38 [27-91]\footnote{It is further important to note here that any lag in screenreader responsiveness of \textgreater1 sec means the student is behind their peers and their educational opportunity is limited by the technology not being sufficient (\emph{i.e.}, not an adequate accommodation). } \\[1.0em]
-	\fcolorbox{cyan}{cyan}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad$\begin{array}{l}\textbf{Student/Professional Laptop} \\ \text{16GB RAM}\end{array} \footnote{District Provided}$ & 64 [38-93]                                                                                                                                                 & 9 [4-15]                                                                                                                                                                                                                                                                                              \\[1.0em]
-	\fcolorbox{violet}{violet}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad$\begin{array}{l}\textbf{Professional Laptop}\footnote{TVI Personal Laptop} \\ \text{24GB RAM}\end{array}$    & 49 [26-65]                                                                                                                                                 & 1 [0.05-2.5]                                                                                                                                                                                                                                                                                          \\[1.0em]
-	\fcolorbox{orange}{orange}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad$\begin{array}{l}\textbf{Professional Laptop}\footnote{My Personal Laptop} \\ \text{32GB RAM}\end{array}$     & 25 [10-32]                                                                                                                                                 & 0.5 [0.01-1]\footnote{.01 is for immediate responses that could not be measured}                                                                                                                                                                                                                      \\ [1.0em] \hline \caption{Lag in JAWS Reporting HTML Content} \\
+	\fcolorbox{red}{red}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad $\begin{array}{l}\textbf{Students Laptop} \\ \text{8GB RAM}\end{array}\footnote{District Provided}$                & 143 [93-183] \footnote{These are the data plotted in Figure 1 above. The responsiveness data are more clear when presented as a table here than as a plot} & 38 [27-91]\footnote{It is further important to note here that any lag in screenreader responsiveness of \textgreater1 sec means the student is behind their peers and their educational opportunity is limited by the technology not being sufficient (\emph{i.e.}, not an adequate accommodation). } \\[1.5em]
+	\fcolorbox{cyan}{cyan}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad$\begin{array}{l}\textbf{Student/Professional Laptop} \\ \text{16GB RAM}\end{array} \footnote{District Provided}$ & 64 [38-93]                                                                                                                                                 & 9 [4-15]                                                                                                                                                                                                                                                                                              \\[1.5em]
+	\fcolorbox{violet}{violet}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad$\begin{array}{l}\textbf{Professional Laptop}\footnote{TVI Personal Laptop} \\ \text{24GB RAM}\end{array}$    & 49 [26-65]                                                                                                                                                 & 1 [0.05-2.5]                                                                                                                                                                                                                                                                                          \\[1.5em]
+	\fcolorbox{orange}{orange}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad$\begin{array}{l}\textbf{Professional Laptop}\footnote{My Personal Laptop} \\ \text{32GB RAM}\end{array}$     & 25 [10-32]                                                                                                                                                 & 0.5 [0.01-1]\footnote{.01 is for immediate responses that could not be measured}                                                                                                                                                                                                                      \\ [1.5em] \hline \caption{Lag in JAWS Reporting HTML Content} \\
 \end{longtable}
 
 
@@ -579,7 +585,7 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 		\href{https://notey-project.com/2023/03/07/notey-user-manual-v1-0-2/}{Specs
 	for Notey the NoteTaker}}      &
 	60W                            & QWERTY \break Perkins                     & 8GB-16GB         & none                   & Celeron
-	N5105                                                                                                                                                                             \\ [1.0em] \hline
+	N5105                                                                                                                                                                             \\ [1.5em] \hline
 	\caption{Laptop Computers Meeting Recommended Specifications}
 \end{longtable}
 
@@ -609,19 +615,19 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	Orbit Optima                                                                                                                                                                                                                                 & \$6,000                                   & TBD              & 16GB - 64GB     & QWERTY            & Orbit Research        & Windows 11                                                                                                                                                                                                                                                                                                                                                                                  \\[1.0em]
+	Orbit Optima                                                                                                                                                                                                                                 & \$6,000                                   & TBD              & 16GB - 64GB     & QWERTY            & Orbit Research        & Windows 11                                                                                                                                                                                                                                                                                                                                                                                  \\[1.5em]
 	BrailleNote Touch+\footnote{For both the BrailleNote Touch+ and BrailleSense 6, there is an emerging issue with outdated operating systems, WiFi connectivity inconsistencies, and incompatibility with Google applications. \begin{itemize}
 			                                                                                                                                                                                                                             \item
 			                                                                                                                                                                                                                                   \href{https://perkins.org/braillenote-touch-outdated-os/}{Link to article from Perkins.org regarding the BrailleNote Touch Plus}
 			                                                                                                                                                                                                                             \item
 			                                                                                                                                                                                                                                   \href{https://endoflife.date/android}{Continually Updated List for End of Life for all flavors of AndroidOS}
-		                                                                                                                                                                                                                             \end{itemize}} & \$5,795                                   & 12h              & 64GB            & Perkins           & Humanware             & Android 8\footnote{Android 8 `Oreo' Security Support Ended (\emph{i.e.}, End of Life) 2017-12-05}                                                                                                                                                                                                                                                                                            \\[1.0em]
-	BrailleSense 6                                                                                                                                                                                                                               & \$5,795                                   & 12h              & 128GB           & Perkins           & HIMS                  & Android 10\footnote{Android 10 `Queen Cake' Security Support Ended (\emph{i.e.}, End of Life) 2023-03-06}\footnote{The Braillesense has a firmware update v2.0 released 2023-11-28 which updates the operating system to Android 12, but this is currently buggy and causing system overheating. (\emph{note:} Android 12 will only receive updates until \textasciitilde October of 2024)} \\[1.0em]
-	InsideONE                                                                                                                                                                                                                                    & \$5,499                                   & 6h               & 128GB           & Perkins           & InsideVision          & Windows 11                                                                                                                                                                                                                                                                                                                                                                                  \\[1.0em]
-	Nattiq Note                                                                                                                                                                                                                                  & \$5,200                                   & 12h              & 4GB - 32GB      & QWERTY            & Nattiq                & Windows 11                                                                                                                                                                                                                                                                                                                                                                                  \\[1.0em]
+		                                                                                                                                                                                                                             \end{itemize}} & \$5,795                                   & 12h              & 64GB            & Perkins           & Humanware             & Android 8\footnote{Android 8 `Oreo' Security Support Ended (\emph{i.e.}, End of Life) 2017-12-05}                                                                                                                                                                                                                                                                                            \\[1.5em]
+	BrailleSense 6                                                                                                                                                                                                                               & \$5,795                                   & 12h              & 128GB           & Perkins           & HIMS                  & Android 10\footnote{Android 10 `Queen Cake' Security Support Ended (\emph{i.e.}, End of Life) 2023-03-06}\footnote{The Braillesense has a firmware update v2.0 released 2023-11-28 which updates the operating system to Android 12, but this is currently buggy and causing system overheating. (\emph{note:} Android 12 will only receive updates until \textasciitilde October of 2024)} \\[1.5em]
+	InsideONE                                                                                                                                                                                                                                    & \$5,499                                   & 6h               & 128GB           & Perkins           & InsideVision          & Windows 11                                                                                                                                                                                                                                                                                                                                                                                  \\[1.5em]
+	Nattiq Note                                                                                                                                                                                                                                  & \$5,200                                   & 12h              & 4GB - 32GB      & QWERTY            & Nattiq                & Windows 11                                                                                                                                                                                                                                                                                                                                                                                  \\[1.5em]
 	Notey the Notetaker                                                                                                                                                                                                                          & \textasciitilde\$750+\footnote{Self build
-	\href{https://notey-project.com/2023/03/07/notey-user-manual-v1-0-2/}{Specs for Notey the NoteTaker}}                                                                                                                                        &                                           & 8GB - 16GB       & QWERTY Perkins  & Miscs             & Windows 11                                                                                                                                                                                                                                                                                                                                                                                                          \\[1.0em]
-	b.note                                                                                                                                                                                                                                       & \$4,360                                   & 15h              & SD 64GB         & Perkins           & Eurobraille           & Proprietary                                                                                                                                                                                                                                                                                                                                                                                 \\[1.0em]\hline
+	\href{https://notey-project.com/2023/03/07/notey-user-manual-v1-0-2/}{Specs for Notey the NoteTaker}}                                                                                                                                        &                                           & 8GB - 16GB       & QWERTY Perkins  & Miscs             & Windows 11                                                                                                                                                                                                                                                                                                                                                                                                          \\[1.5em]
+	b.note                                                                                                                                                                                                                                       & \$4,360                                   & 15h              & SD 64GB         & Perkins           & Eurobraille           & Proprietary                                                                                                                                                                                                                                                                                                                                                                                 \\[1.5em]\hline
 	\caption{ Braille NoteTakers and Laptops }
 \end{longtable}
 \addcontentsline{toc}{section}{ Braille NoteTakers and Laptops }
@@ -648,23 +654,23 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	Brailliant BI40x   & \$3,195       & 14               & 32GB            & Perkins              & Humanware             \\[1.0em]
-	Focus 40 Blue      & \$3,145       & 18               & microSD         & Perkins              & Vispero               \\[1.0em]
-	Mantis Q40         & \$2,495       & 14               & 16GB            & QWERTY               & APH\break Humanware   \\[1.0em]
-	Orbit Reader 40    & \$1,399       & 20               & SD Card         & Perkins              & Orbit Research        \\[1.0em]
-	QBraille XL        & \$3,195       & 16               & SD Card         & Perkins              & HIMS                  \\[1.0em]
-	Basic Braille Plus & \$3,295       & 12               & n/a             & Perkins              & Help Tech             \\[1.0em]
-	Active Star        & \$6,795       & 40               & 16GB            & Perkins              & Help Tech             \\[1.0em]
-	Active Braille     & \$6,495       & 20               & 64GB            & Perkins              & Help Tech             \\[1.0em]
-	Activator          & \$6,495       & 40               & 64GB            & Perkins\break QWERTY & Help Tech             \\[1.0em]
-	Vario Ultra 40     & \$7,643       & 12               & USB, 32GB       & Perkins              & VisioBraille          \\[1.0em]
-	Vario 340          & \$5,138       & 20               & n/a             & none                 & VisioBraille          \\[1.0em]
-	Vario 440          & \$4,550       & 20               & n/a             & none                 & VisioBraille          \\[1.0em]
-	Seika V5           & \$2,495       & 20               & 4GB             & none                 & Nippon Telesoft       \\[1.0em]
-	Alva 640 Comfort   & \$3,046       & 10               & 8GB             & Perkins              & Optelec               \\[1.0em]
-	Alva 640 USB       & \$3837        & n/a              & n/a             & none                 & Optelec               \\[1.0em]
-	Alva BC 640        & \$2,087       & 10               & 4GB             & none                 & Alva                  \\[1.0em]
-	b.note             & \$3,565       & 15               & 64GB            & Perkins              & Eurobraille           \\[1.0em] \hline
+	Brailliant BI40x   & \$3,195       & 14               & 32GB            & Perkins              & Humanware             \\[1.5em]
+	Focus 40 Blue      & \$3,145       & 18               & microSD         & Perkins              & Vispero               \\[1.5em]
+	Mantis Q40         & \$2,495       & 14               & 16GB            & QWERTY               & APH\break Humanware   \\[1.5em]
+	Orbit Reader 40    & \$1,399       & 20               & SD Card         & Perkins              & Orbit Research        \\[1.5em]
+	QBraille XL        & \$3,195       & 16               & SD Card         & Perkins              & HIMS                  \\[1.5em]
+	Basic Braille Plus & \$3,295       & 12               & n/a             & Perkins              & Help Tech             \\[1.5em]
+	Active Star        & \$6,795       & 40               & 16GB            & Perkins              & Help Tech             \\[1.5em]
+	Active Braille     & \$6,495       & 20               & 64GB            & Perkins              & Help Tech             \\[1.5em]
+	Activator          & \$6,495       & 40               & 64GB            & Perkins\break QWERTY & Help Tech             \\[1.5em]
+	Vario Ultra 40     & \$7,643       & 12               & USB, 32GB       & Perkins              & VisioBraille          \\[1.5em]
+	Vario 340          & \$5,138       & 20               & n/a             & none                 & VisioBraille          \\[1.5em]
+	Vario 440          & \$4,550       & 20               & n/a             & none                 & VisioBraille          \\[1.5em]
+	Seika V5           & \$2,495       & 20               & 4GB             & none                 & Nippon Telesoft       \\[1.5em]
+	Alva 640 Comfort   & \$3,046       & 10               & 8GB             & Perkins              & Optelec               \\[1.5em]
+	Alva 640 USB       & \$3837        & n/a              & n/a             & none                 & Optelec               \\[1.5em]
+	Alva BC 640        & \$2,087       & 10               & 4GB             & none                 & Alva                  \\[1.5em]
+	b.note             & \$3,565       & 15               & 64GB            & Perkins              & Eurobraille           \\[1.5em] \hline
 	\caption{ 32-40 cell Single Line Refreshable Braille Displays }
 \end{longtable}
 
@@ -733,12 +739,12 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	ViewPlus Rogue\break (used to be Max)        & \$5,995                                                                                                                                                               & Complex Graphics, Interpoint Braille & ViewPlus                \\[1.0em]
-	ViewPlus Columbia                            & \$3,495                                                                                                                                                               & Complex Graphics, Interpoint Braille & ViewPlus                \\[1.0em]
-	APH PageBlaster\break (old Model Index-D V4) & \$4,295\footnote{Requires free \href{https://www.aph.org/app/uploads/2020/07/Firebird_signed_V31.zip}{Firebird Tactile Graphics} Software for graphics functionality} & Simple Graphics, Interpoint Braille  & APH\break Index Braille \\[1.0em]
-	Basic-D V5                                   & \$3,695\footnote{Requires \href{https://tactileview.com/}{TactileView} license for full graphics functionality (\$\$484 for 1 year license)}                          & Simple Graphics, Interpoint Braille  & Index Braille           \\[1.0em]
-	Juliet 120                                   & \$4,195\footnote{Requires free \href{https://www.aph.org/app/uploads/2020/07/Firebird_signed_V31.zip}{Firebird Tactile Graphics} Software for graphics functionality} & Simple Graphics, Interpoint Braille  & ETS\break Humanware     \\[1.0em]
-	BrailleTrac 120                              & \$3,595                                                                                                                                                               & Simple Graphics, Interpoint Braills  & Irie-AT                 \\[1.0em]\hline
+	ViewPlus Rogue\break (used to be Max)        & \$5,995                                                                                                                                                               & Complex Graphics, Interpoint Braille & ViewPlus                \\[1.5em]
+	ViewPlus Columbia                            & \$3,495                                                                                                                                                               & Complex Graphics, Interpoint Braille & ViewPlus                \\[1.5em]
+	APH PageBlaster\break (old Model Index-D V4) & \$4,295\footnote{Requires free \href{https://www.aph.org/app/uploads/2020/07/Firebird_signed_V31.zip}{Firebird Tactile Graphics} Software for graphics functionality} & Simple Graphics, Interpoint Braille  & APH\break Index Braille \\[1.5em]
+	Basic-D V5                                   & \$3,695\footnote{Requires \href{https://tactileview.com/}{TactileView} license for full graphics functionality (\$\$484 for 1 year license)}                          & Simple Graphics, Interpoint Braille  & Index Braille           \\[1.5em]
+	Juliet 120                                   & \$4,195\footnote{Requires free \href{https://www.aph.org/app/uploads/2020/07/Firebird_signed_V31.zip}{Firebird Tactile Graphics} Software for graphics functionality} & Simple Graphics, Interpoint Braille  & ETS\break Humanware     \\[1.5em]
+	BrailleTrac 120                              & \$3,595                                                                                                                                                               & Simple Graphics, Interpoint Braills  & Irie-AT                 \\[1.5em]\hline
 	\caption{ Braille Embossers focusing on Text}
 \end{longtable}
 
@@ -763,16 +769,16 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	PIAF tactile embosser                               & \$1,745                                                                                                                                                                                     & Humanware           \\[1.0em]
-	Swell Form Machine                                  & \$1,400.00                                                                                                                                                                                  & American Thermoform \\[1.0em]
-	EZ-Form Brailon Duplicator                          & \$3,899                                                                                                                                                                                     & American thermoform \\[1.0em]
-	ViewPlus Rogue \break (used to be ViewPlus Max)     & \$5,995\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)}  & ViewPlus            \\[1.0em]
-	ViewPlus Columbia                                   & \$3,495\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)}  & ViewPlus            \\[1.0em]
-	APH PixBlaster \break (old Model ViewPlus Columbia) & \$4,295\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)}  & APH\break ViewPlus  \\[1.0em]
-	ViewPlus Delta                                      & \$4,195\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)}  & ViewPlus            \\[1.0em]
-	ViewPlus Premier                                    & \$9,995\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)}  & ViewPlus            \\[1.0em]
-	ViewPlus Elite                                      & \$14,995\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)} & ViewPlus            \\[1.0em]
-	Basic-D V5                                          & \$3,695\footnote{Requires \href{https://tactileview.com/}{TactileView} license for full graphics functionality (\$484 for 1 year license)}                                                  & Index Braille       \\[1.0em]\hline \caption{ Equipment for Tactile Graphics Generation}
+	PIAF tactile embosser                               & \$1,745                                                                                                                                                                                     & Humanware           \\[1.5em]
+	Swell Form Machine                                  & \$1,400.00                                                                                                                                                                                  & American Thermoform \\[1.5em]
+	EZ-Form Brailon Duplicator                          & \$3,899                                                                                                                                                                                     & American thermoform \\[1.5em]
+	ViewPlus Rogue \break (used to be ViewPlus Max)     & \$5,995\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)}  & ViewPlus            \\[1.5em]
+	ViewPlus Columbia                                   & \$3,495\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)}  & ViewPlus            \\[1.5em]
+	APH PixBlaster \break (old Model ViewPlus Columbia) & \$4,295\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)}  & APH\break ViewPlus  \\[1.5em]
+	ViewPlus Delta                                      & \$4,195\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)}  & ViewPlus            \\[1.5em]
+	ViewPlus Premier                                    & \$9,995\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)}  & ViewPlus            \\[1.5em]
+	ViewPlus Elite                                      & \$14,995\footnote{Requires \href{https://viewplus.com/product/tiger-software-suite8/}{Tiger Software Suite} for full functionality (\$195 for 1 year license; \$595 for perpetual license)} & ViewPlus            \\[1.5em]
+	Basic-D V5                                          & \$3,695\footnote{Requires \href{https://tactileview.com/}{TactileView} license for full graphics functionality (\$484 for 1 year license)}                                                  & Index Braille       \\[1.5em]\hline \caption{ Equipment for Tactile Graphics Generation}
 \end{longtable}
 
 
@@ -795,10 +801,10 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	Tangible Magic capsule Paper (11x11.5'')\break(for PIAF tactile embosser)  & \$220 for 100 pages                                      & Humanware           \\[1.0em]
-	Swell Touch Paper \break (for Swell Form Machine)                          & \$165 for 100 pages                                      & American Thermoform \\[1.0em]
-	Tractor-Feed Braille Transcribing Paper: (11x11.5'')\break (for embossers) & \$79.47 for 1000 pages                                   & APH                 \\[1.0em]
-	Brailon Thermoform Paper\break (for EZ-Form Duplicator)                    & \$42.99 (100 sheets heavy), \$75.99 (500 sheets regular) & American Thermoform \\[1.0em]\hline
+	Tangible Magic capsule Paper (11x11.5'')\break(for PIAF tactile embosser)  & \$220 for 100 pages                                      & Humanware           \\[1.5em]
+	Swell Touch Paper \break (for Swell Form Machine)                          & \$165 for 100 pages                                      & American Thermoform \\[1.5em]
+	Tractor-Feed Braille Transcribing Paper: (11x11.5'')\break (for embossers) & \$79.47 for 1000 pages                                   & APH                 \\[1.5em]
+	Brailon Thermoform Paper\break (for EZ-Form Duplicator)                    & \$42.99 (100 sheets heavy), \$75.99 (500 sheets regular) & American Thermoform \\[1.5em]\hline
 	\caption{ Paper supplies for Tactile Graphics Generation }
 \end{longtable}
 
@@ -827,17 +833,17 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	Neptune 4 Pro   & \$330         & 225x225x265mm           & 1.75mm                 & Elegoo                \\[1.0em]
-	Neptune 3 Max   & \$470         & 420x420x500mm           & 1.75mm                 & Elegoo                \\[1.0em]
-	M5C             & \$399         & 220x220x250mm           & 1.75mm                 & AnkerMake             \\[1.0em]
-	Kobra Plus      & \$499         & 300x300x350mm           & 1.75mm                 & Anycubic              \\[1.0em]
-	Kobra Max       & \$569         & 450x400x400mm           & 1.75mm                 & Anycubic              \\[1.0em]
-	Ender 3 Max Neo & \$359         & 300x300x320mm           & 1.75mm                 & Creality              \\[1.0em]
-	Ender 5 Plus    & \$579         & 350x350x400mm           & 1.75mm                 & Creality              \\[1.0em]
-	Mini+           & \$459         & 180x180x180mm           & 1.75mm                 & Prusa                 \\[1.0em]
-	Sidewinder X2   & \$399         & 300x300x396mm           & 1.75mm                 & Artillery             \\[1.0em]
-	P1P 3D Printer  & \$699         & 256×256×256mm           & 1.75mm                 & Bambu                 \\[1.0em]
-	P1S 3D Printer  & \$949         & 256×256×256mm           & 1.75mm                 & Bambu                 \\[1.0em]\hline
+	Neptune 4 Pro   & \$330         & 225x225x265mm           & 1.75mm                 & Elegoo                \\[1.5em]
+	Neptune 3 Max   & \$470         & 420x420x500mm           & 1.75mm                 & Elegoo                \\[1.5em]
+	M5C             & \$399         & 220x220x250mm           & 1.75mm                 & AnkerMake             \\[1.5em]
+	Kobra Plus      & \$499         & 300x300x350mm           & 1.75mm                 & Anycubic              \\[1.5em]
+	Kobra Max       & \$569         & 450x400x400mm           & 1.75mm                 & Anycubic              \\[1.5em]
+	Ender 3 Max Neo & \$359         & 300x300x320mm           & 1.75mm                 & Creality              \\[1.5em]
+	Ender 5 Plus    & \$579         & 350x350x400mm           & 1.75mm                 & Creality              \\[1.5em]
+	Mini+           & \$459         & 180x180x180mm           & 1.75mm                 & Prusa                 \\[1.5em]
+	Sidewinder X2   & \$399         & 300x300x396mm           & 1.75mm                 & Artillery             \\[1.5em]
+	P1P 3D Printer  & \$699         & 256×256×256mm           & 1.75mm                 & Bambu                 \\[1.5em]
+	P1S 3D Printer  & \$949         & 256×256×256mm           & 1.75mm                 & Bambu                 \\[1.5em]\hline
 	\caption{ 3D Printers }
 \end{longtable}
 
@@ -859,11 +865,11 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	1.75mm filament                   & \textasciitilde\$12.00/kg & Elegoo          \\[1.0em]
-	Assorted Sandpaper (48 pcs)       & \$7.00                    & Vicien          \\[1.0em]
-	Glue Sticks (30 pack)             & \$10.00                   & Amazon Basics   \\[1.0em]
-	Painter's Tape (2" width 12 Pack) & \$43.00                   & Amazon          \\[1.0em]
-	3D Print Tool Kit                 & \$58.00                   & HIJIRH          \\[1.0em]\hline
+	1.75mm filament                   & \textasciitilde\$12.00/kg & Elegoo          \\[1.5em]
+	Assorted Sandpaper (48 pcs)       & \$7.00                    & Vicien          \\[1.5em]
+	Glue Sticks (30 pack)             & \$10.00                   & Amazon Basics   \\[1.5em]
+	Painter's Tape (2" width 12 Pack) & \$43.00                   & Amazon          \\[1.5em]
+	3D Print Tool Kit                 & \$58.00                   & HIJIRH          \\[1.5em]\hline
 	\caption{ 3D Printer Materials }
 \end{longtable}
 
@@ -892,51 +898,51 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	Tactonum Pro               & £10,000           & Desktop\break Not Readily Mobile\break Requries mobile App      & Tactonum           \\[1.0em]
-	Taxtonum Reader            & £3,795.00         & Desktop\break Not Readily Mobile                                & Tactonum           \\[1.0em]
-	MATT Connect v2            & \$3,895           & Desktop\break (Camera + Android Tablet)\break Mobile, but heavy & APH                \\[1.0em]
-	Juno                       & \$1,392           & Hand-Held (7'' screen)                                          & APH                \\[1.0em]
-	Jupiter Portable Magnifier & \$3,599.00        & Desktop\break Mobile, but heavy                                 & APH                \\[1.0em]
-	ONYX Desk set HD           & \$3,330           & Desktop                                                         & Freedom Scientific \\[1.0em]
-	ONYX OCR                   & \$4,520           & Desktop                                                         & Freedom Scientific \\[1.0em]
-	RUBY                       & \$600.60          & Hand-Held (4.3'' screen)                                        & Freedom Scientific \\[1.0em]
-	RUBY 10                    & \$1,640           & Hand-Held (10'' Screen)                                         & Freedom Scientific \\[1.0em]
-	RUBY 7 HD                  & \$1,317.75        & Hand-Held (7'' Screen)                                          & Freedom Scientific \\[1.0em]
-	RUBY HD                    & \$710.85          & Hand-Held (4.3'' screen)                                        & Freedom Scientific \\[1.0em]
-	RUBY XL HD                 & \$987.00          & Hand-Held (5'' screen)                                          & Freedom Scientific \\[1.0em]
-	TOPAZ XL HD                & \$4,045.00        & Desktop                                                         & Freedom Scientific \\[1.0em]
-	TOPAZ OCR                  & \$4,640.00        & Desktop                                                         & Freedom Scientific \\[1.0em]
-	TOPAZ EZ HD                & \$3,081.75        & Desktop                                                         & Freedom Scientific \\[1.0em]
-	MAGNA 5                    & \$249             & Hand-Held (5'' screen)                                          & Orbit Research     \\[1.0em]
-	MAGNA 4                    & \$199             & Hand-Held (4.3'' screen)                                        & Orbit Research     \\[1.0em]
-	MAGNA 3                    & \$149             & Hand-Held (3.5'' screen)                                        & Orbit Research     \\[1.0em]
-	I-See 22''                 & \$2,095           & Desktop                                                         & Irie AT            \\[1.0em]
-	MagniLink Vision           & \$3,190 - \$4,250 & Desktop                                                         & Irie AT            \\[1.0em]
-	MagniLink One              & \$2,395           & Desktop                                                         & Irie AT            \\[1.0em]
-	Acuity 22                  & \$2,695           & Desktop                                                         & Irie AT            \\[1.0em]
-	Acuity 22 Speech           & \$3,695           & Desktop                                                         & Irie AT            \\[1.0em]
-	Snow 12                    & \$1,395           & Desktop\break Mobile                                            & Zoomax             \\[1.0em]
-	Luna 6                     & \$795             & Hand-Held (6'' screen)                                          & Zoomax             \\[1.0em]
-	Luna S                     & \$385             & Hand-Held (4.3'' screen)                                        & Zoomax             \\[1.0em]
-	Luna 8                     & \$895             & Hand-Held (8'' screen)                                          & Zoomax             \\[1.0em]
-	Luna HD Pro                & \$2,995           & Desktop                                                         & Zoomax             \\[1.0em]
-	Panda HD                   & \$2,098           & Desktop                                                         & Zoomax             \\[1.0em]
-	Acesight                   & \$4,295           & E-Glasses                                                       & Zoomax             \\[1.0em]
-	Acesight 8                 & \$2,995           & E-Glasses                                                       & Zoomax             \\[1.0em]
-	AceSight VR                & \$2,695           & VR Headset                                                      & Zoomax             \\[1.0em]
-	Luna Eye                   & TBD               & Hand-Held                                                       & Zoomax             \\[1.0em]
-	Snow Pad                   & TBD               & Hand-Held                                                       & Zoomax             \\[1.0em]
-	Distance Camera            & TBD               & Hand-Held                                                       & Zoomax             \\[1.0em]
-	explore 5                  & \$845             & Hand-Held (5'' screen)                                          & Humanware          \\[1.0em]
-	explore 8                  & \$1,275           & Hand-Held (8'' screen)                                          & Humanware          \\[1.0em]
-	explore 12                 & \$1,895           & Desktop                                                         & Humanware          \\[1.0em]
-	Reveal 16                  & \$3,295           & Desktop                                                         & Humanware          \\[1.0em]
-	Reveal 16 (XY table)       & \$3,995           & Desktop                                                         & Humanware          \\[1.0em]
-	Reveal 16i                 & \$4,295           & Desktop                                                         & Humanware          \\[1.0em]
-	Reveal 16i (XY table)      & \$4,995           & Desktop                                                         & Humanware          \\[1.0em]
-	Connect 12 (25x)           & \$2,895           & Desktop\break Mobile                                            & Humanware          \\[1.0em]
-	Connect 12 (10x)           & \$2,845           & Desktop\break Mobile                                            & Humanware          \\[1.0em]
-	Connect 12                 & \$2,695           & Desktop\break Mobile                                            & Humanware          \\[1.0em]\hline
+	Tactonum Pro               & £10,000           & Desktop\break Not Readily Mobile\break Requries mobile App      & Tactonum           \\[1.5em]
+	Taxtonum Reader            & £3,795.00         & Desktop\break Not Readily Mobile                                & Tactonum           \\[1.5em]
+	MATT Connect v2            & \$3,895           & Desktop\break (Camera + Android Tablet)\break Mobile, but heavy & APH                \\[1.5em]
+	Juno                       & \$1,392           & Hand-Held (7'' screen)                                          & APH                \\[1.5em]
+	Jupiter Portable Magnifier & \$3,599.00        & Desktop\break Mobile, but heavy                                 & APH                \\[1.5em]
+	ONYX Desk set HD           & \$3,330           & Desktop                                                         & Freedom Scientific \\[1.5em]
+	ONYX OCR                   & \$4,520           & Desktop                                                         & Freedom Scientific \\[1.5em]
+	RUBY                       & \$600.60          & Hand-Held (4.3'' screen)                                        & Freedom Scientific \\[1.5em]
+	RUBY 10                    & \$1,640           & Hand-Held (10'' Screen)                                         & Freedom Scientific \\[1.5em]
+	RUBY 7 HD                  & \$1,317.75        & Hand-Held (7'' Screen)                                          & Freedom Scientific \\[1.5em]
+	RUBY HD                    & \$710.85          & Hand-Held (4.3'' screen)                                        & Freedom Scientific \\[1.5em]
+	RUBY XL HD                 & \$987.00          & Hand-Held (5'' screen)                                          & Freedom Scientific \\[1.5em]
+	TOPAZ XL HD                & \$4,045.00        & Desktop                                                         & Freedom Scientific \\[1.5em]
+	TOPAZ OCR                  & \$4,640.00        & Desktop                                                         & Freedom Scientific \\[1.5em]
+	TOPAZ EZ HD                & \$3,081.75        & Desktop                                                         & Freedom Scientific \\[1.5em]
+	MAGNA 5                    & \$249             & Hand-Held (5'' screen)                                          & Orbit Research     \\[1.5em]
+	MAGNA 4                    & \$199             & Hand-Held (4.3'' screen)                                        & Orbit Research     \\[1.5em]
+	MAGNA 3                    & \$149             & Hand-Held (3.5'' screen)                                        & Orbit Research     \\[1.5em]
+	I-See 22''                 & \$2,095           & Desktop                                                         & Irie AT            \\[1.5em]
+	MagniLink Vision           & \$3,190 - \$4,250 & Desktop                                                         & Irie AT            \\[1.5em]
+	MagniLink One              & \$2,395           & Desktop                                                         & Irie AT            \\[1.5em]
+	Acuity 22                  & \$2,695           & Desktop                                                         & Irie AT            \\[1.5em]
+	Acuity 22 Speech           & \$3,695           & Desktop                                                         & Irie AT            \\[1.5em]
+	Snow 12                    & \$1,395           & Desktop\break Mobile                                            & Zoomax             \\[1.5em]
+	Luna 6                     & \$795             & Hand-Held (6'' screen)                                          & Zoomax             \\[1.5em]
+	Luna S                     & \$385             & Hand-Held (4.3'' screen)                                        & Zoomax             \\[1.5em]
+	Luna 8                     & \$895             & Hand-Held (8'' screen)                                          & Zoomax             \\[1.5em]
+	Luna HD Pro                & \$2,995           & Desktop                                                         & Zoomax             \\[1.5em]
+	Panda HD                   & \$2,098           & Desktop                                                         & Zoomax             \\[1.5em]
+	Acesight                   & \$4,295           & E-Glasses                                                       & Zoomax             \\[1.5em]
+	Acesight 8                 & \$2,995           & E-Glasses                                                       & Zoomax             \\[1.5em]
+	AceSight VR                & \$2,695           & VR Headset                                                      & Zoomax             \\[1.5em]
+	Luna Eye                   & TBD               & Hand-Held                                                       & Zoomax             \\[1.5em]
+	Snow Pad                   & TBD               & Hand-Held                                                       & Zoomax             \\[1.5em]
+	Distance Camera            & TBD               & Hand-Held                                                       & Zoomax             \\[1.5em]
+	explore 5                  & \$845             & Hand-Held (5'' screen)                                          & Humanware          \\[1.5em]
+	explore 8                  & \$1,275           & Hand-Held (8'' screen)                                          & Humanware          \\[1.5em]
+	explore 12                 & \$1,895           & Desktop                                                         & Humanware          \\[1.5em]
+	Reveal 16                  & \$3,295           & Desktop                                                         & Humanware          \\[1.5em]
+	Reveal 16 (XY table)       & \$3,995           & Desktop                                                         & Humanware          \\[1.5em]
+	Reveal 16i                 & \$4,295           & Desktop                                                         & Humanware          \\[1.5em]
+	Reveal 16i (XY table)      & \$4,995           & Desktop                                                         & Humanware          \\[1.5em]
+	Connect 12 (25x)           & \$2,895           & Desktop\break Mobile                                            & Humanware          \\[1.5em]
+	Connect 12 (10x)           & \$2,845           & Desktop\break Mobile                                            & Humanware          \\[1.5em]
+	Connect 12                 & \$2,695           & Desktop\break Mobile                                            & Humanware          \\[1.5em]\hline
 	\caption{ Video Magnification Devices}
 \end{longtable}
 
@@ -965,13 +971,13 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	Victor Reader Stream            & \$550         & Digital Audio Player                                            & Humanware        \\[1.0em]
-	Victor Reader Stratus           & \$495         & DAISY Reader\break Digital Audio Player\break Not very portable & Humanware        \\[1.0em]
-	Victor Reader Trek(GPS + media) & \$975         & GPS\break Digital Audio Player                                  & Humanware        \\[1.0em]
-	Reizen DAISY Digital Recorder   & \$219         & DAISY Reader\break Digital Audio Player                         & Reizen           \\[1.0em]
-	Milestone 212 Ace Book Reader   & \$380         & DAISY Reader\break Digital Audio Player                         & Bones            \\[1.0em]
-	PlexTalk Pocket                 & \$275         & DAISY Reader\break Digital Audio Player                         & PlexTalk         \\[1.0em]
-	PlexTalk PTN2                   & \$375         & DAISY Reader\break CD Player                                    & PlexTalk         \\[1.0em]\hline
+	Victor Reader Stream            & \$550         & Digital Audio Player                                            & Humanware        \\[1.5em]
+	Victor Reader Stratus           & \$495         & DAISY Reader\break Digital Audio Player\break Not very portable & Humanware        \\[1.5em]
+	Victor Reader Trek(GPS + media) & \$975         & GPS\break Digital Audio Player                                  & Humanware        \\[1.5em]
+	Reizen DAISY Digital Recorder   & \$219         & DAISY Reader\break Digital Audio Player                         & Reizen           \\[1.5em]
+	Milestone 212 Ace Book Reader   & \$380         & DAISY Reader\break Digital Audio Player                         & Bones            \\[1.5em]
+	PlexTalk Pocket                 & \$275         & DAISY Reader\break Digital Audio Player                         & PlexTalk         \\[1.5em]
+	PlexTalk PTN2                   & \$375         & DAISY Reader\break CD Player                                    & PlexTalk         \\[1.5em]\hline
 	\caption{ DAISY/Audiobook/Podcast Devices }
 \end{longtable}
 
@@ -994,10 +1000,10 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	c-Pen2                          & \$399         & Pen Scanner\break Text-to-Speech Reader & c-Pen            \\[1.0em]
-	Scanmarker Air Wireless Digital & \$150         & Hand-held Text to Speech                & Scanmarker       \\[1.0em]
-	Read 3                          & \$2,490       & Hand-held Text to Speech                & OrCam            \\[1.0em]
-	MyEye Pro                       & \$4,250       & Glasses Mounted\break Text to Speech    & OrCam            \\[1.0em]\hline
+	c-Pen2                          & \$399         & Pen Scanner\break Text-to-Speech Reader & c-Pen            \\[1.5em]
+	Scanmarker Air Wireless Digital & \$150         & Hand-held Text to Speech                & Scanmarker       \\[1.5em]
+	Read 3                          & \$2,490       & Hand-held Text to Speech                & OrCam            \\[1.5em]
+	MyEye Pro                       & \$4,250       & Glasses Mounted\break Text to Speech    & OrCam            \\[1.5em]\hline
 	\caption{ Text-to-Speech Devices}
 \end{longtable}
 
@@ -1049,14 +1055,14 @@ I put this Table here to illustrate why I choose to err on the side of spending 
 	\endhead
 	\bottomrule\noalign{}
 	\endlastfoot
-	HapticNav         & free (in app purchases) & WearWorks        \\[1.0em]
-	BlindSquare       & \$39.99                 & MIPsoft          \\[1.0em]
-	WeWalk            & free (in app purchases) & WeWalk           \\[1.0em]
-	Google Maps       & free                    & Alphabet         \\[1.0em]
-	Apple Maps        & free                    & Apple            \\[1.0em]
-	Moovit            & free (in app purchases) & Aria             \\[1.0em]
-	Waymap            & free                    & Waymap           \\[1.0em]
-	Seeing Eye GPS    & free (in app purchases) & GoodMaps         \\[1.0em]\hline
+	HapticNav         & free (in app purchases) & WearWorks        \\[1.5em]
+	BlindSquare       & \$39.99                 & MIPsoft          \\[1.5em]
+	WeWalk            & free (in app purchases) & WeWalk           \\[1.5em]
+	Google Maps       & free                    & Alphabet         \\[1.5em]
+	Apple Maps        & free                    & Apple            \\[1.5em]
+	Moovit            & free (in app purchases) & Aria             \\[1.5em]
+	Waymap            & free                    & Waymap           \\[1.5em]
+	Seeing Eye GPS    & free (in app purchases) & GoodMaps         \\[1.5em]\hline
 	\caption{Accessible GPS iOS apps }
 \end{longtable}
 \end{document}
