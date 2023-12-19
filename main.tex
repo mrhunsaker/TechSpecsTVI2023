@@ -76,6 +76,7 @@
 \setlength{\footnotemargin}{.75em}
 \setlength{\footnotesep}{0pt} % Reduce space between footnotes
 
+
 \newcommand\fnsep{\textsuperscript{,}}
 
 \renewcommand{\footnoterule}{%
@@ -115,15 +116,15 @@
 
 \titleformat{\part}[block]
 {\normalfont\LARGE\bfseries\raggedright}{\thepart\hfill\newline}{1em}{}
-\titlespacing*{\part}{-10pt}{0pt}{10pt}
+\titlespacing*{\part}{-10pt}{10pt}{10pt}
 
 \titleformat{\section}[block]
   {\normalfont\Large\bfseries\raggedright}{\thesection:}{1em}{}
-\titlespacing*{\section}{0pt}{0pt}{10pt}
+\titlespacing*{\section}{0pt}{10pt}{10pt}
 
 \titleformat{\subsection}[block]
   {\normalfont\Large\bfseries\raggedright}{\thesubsection:}{1em}{}
-\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}{0pt}{10pt}{10pt}
 
 \renewcommand\cftsecafterpnum{\vskip1pt}
 \setlength{\cftbeforesecskip}{0pt}
@@ -134,6 +135,9 @@
 \author{Michael Ryan Hunsaker, M.Ed., Ph.D.}
 \date{\vfill \textit{Last Updated: {\today}}}
 \renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+
 \renewcommand{\mtctitle}{Chapter Contents}
 \begin{document}
 \raggedbottom
@@ -166,16 +170,16 @@
 \fancyfoot{}
 
 \hypertarget{intro}{}\chapter*{Introduction}\label{intro}
-
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \extramarks{Vision Department Technology Needs}{Introduction}
 \addstarredchapter{Introduction}
 \pagestyle{fancyplain}
 \fancyfoot[C]{\thepage}
 In the pursuit of an inclusive and equitable educational landscape, it is imperative to recognize the unique challenges faced by students with visual impairments. The Individuals with Disabilities Education Improvement Act (IDEIA) of 2004\footnote{\raggedright \href{http://sites.ed.gov/idea/statuteregulations/}{20 U.S.C. § 1400, et.} \url{http://sites.ed.gov/idea/statuteregulations/}} underscores the commitment to providing every student with a free and appropriate education, regardless of their abilities. For students with visual impairments, technology plays a pivotal role in dismantling barriers, fostering independence, and unlocking opportunities for academic success\footnote{\raggedright \textit{cf}., \href{http://ectacenter.org/topics/atech/laws.asp}{list of federal regulations pertaining to assistive technology} \hfill\break\url{http://ectacenter.org/topics/atech/laws.asp}}.
 
-This document seeks to delve into the critical importance of addressing the technology needs of students with visual impairments within the framework of IDEIA, which mandates that students with disabilities, including those with visual impairments, must be given access to assistive technology to ensure they can participate fully in the curriculum. Screen magnification is one such assistive technology that can help students with visual impairments access their free public education\footnote{\raggedright \href{http://sites.ed.gov/idea/statuteregulations/}{\textit{ibid}}}. The overarching goal is to shed light on the essential role that technology plays in not only accommodating these students but empowering them to thrive in educational environments. By understanding and meeting their specific technological requirements, we can bridge the accessibility gap, promote inclusivity, and ensure that visually impaired students receive the education they deserve.
+This document delves into the critical importance of addressing the technology needs of students with visual impairments within the framework of IDEIA, which mandates that students with disabilities, including those with visual impairments, must be given access to assistive technology to ensure they can participate fully in the curriculum. Screen magnification is one such assistive technology that can help students with visual impairments access their free public education\footnote{\raggedright \href{http://sites.ed.gov/idea/statuteregulations/}{\textit{ibid}}}. The overarching goal is to shed light on the essential role that technology plays in not only accommodating these students but empowering them to thrive in educational environments. By understanding and meeting their specific technological requirements, we can bridge the accessibility gap, promote inclusivity, and ensure that visually impaired students receive the education they deserve\footnote{\raggedright \href{https://qiat.org/new/wp-content/uploads/2020/06/TEBO_VI_Resource_Guide.pdf}{TEBO VI Resource Guide. (2020). Quality Indicators for Assistive Technology in Education. Retrieved December 19, 2023} \url{https://qiat.org/new/wp-content/uploads/2020/06/TEBO_VI_Resource_Guide.pdf}}.
 
-It is evident that technology is not merely an auxiliary tool but a catalyst for educational equality. The integration of appropriate technology is fundamental to providing a level playing field, enabling visually impaired students to engage with educational content, interact with peers, and pursue academic excellence with the same vigor as their sighted counterparts. Throughout this document, we will delve into the diverse spectrum of technological solutions available, ranging from adaptive devices to assistive software, and explore how these tools contribute to an enriched learning experience\footnote{\raggedright \href{http://sites.ed.gov/idea/statuteregulations/}{\textit{ibid}}}.
+It is evident that technology is not merely an auxiliary tool but a catalyst for educational equality. The integration of appropriate technology is fundamental to providing a level playing field, enabling visually impaired students to engage with educational content, interact with peers, and pursue academic excellence with the same vigor as their sighted counterparts. Throughout this document, we will delve into the diverse spectrum of technological solutions available, ranging from adaptive devices to assistive software, and explore how these tools contribute to an enriched learning experience
 
 \pagebreak
 \fancyhead[RO]{\textit{\lastxmark}}
@@ -185,7 +189,7 @@ It is evident that technology is not merely an auxiliary tool but a catalyst for
 \fancyfoot[C]{}
 \pagenumbering{arabic}
 
-\hypertarget{vision-assistive-technology-laptop-computer-requirements}{}\chapter[\raggedright Navigating Success:  \\ The Indispensable Role of Screen Readers and Magnification Programs for Visually Impaired Students]{Navigating Success: The Indispensable Role of Screen Readers and Magnification Programs for Visually Impaired Students}\label{vision-assistive-technology-laptop-computer-requirements}
+\hypertarget{vision-assistive-technology-laptop-computer-requirements}{}\chapter[\raggedright Navigating Success:  \\ The Indispensable Role of Screen Readers and Magnification\\ Programs for Visually Impaired Students]{Navigating Success: The Indispensable Role of Screen Readers and Magnification Programs for Visually Impaired Students}\label{vision-assistive-technology-laptop-computer-requirements}
 \extramarks{Vision Department Technology Needs}{Navigating Success}
 \minitoc \newpage
 
@@ -211,7 +215,13 @@ By using special software, students with visual impairments can have equal acces
 \pagebreak\hypertarget{student-software-needs}{}\subsection{Student Software Needs}\label{student-software-needs}
 Table \ref{tab:table1} is a list of software used to access material as well as necessary academic software used by students with visual impairments\footnote{\raggedright We focus on Windows-based laptops due to the ubiquity of Windows-based software used in schools. MacOS-based laptops are more than adequate to run software along with the built in VoiceOver screenreader  To date there are no additional screenreaders for MacOS, however one is currently in development called \href{http://youtu.be/qTkS-zNzF88?si=3XTXtbyOWD9kvwlk}{VOSH} \url{http://youtu.be/qTkS-zNzF88?si=3XTXtbyOWD9kvwlk}. There are multiple Linux distributions that are actively working to improve ORCA screenreader accessibility within the GNOME desktop environment. There are also a number of independently developed screenreaders for Linux architectures}\fnsep\footnote{\raggedright This includes the TVI teaching how to use the software skills, but primarily refers to programs visually impaired students need to access the curriculum}. This information will be used to determine necessary laptop specifications for students using these software to access their schoolwork at the same time as their sighted peers.
 
-\pagebreak\begin{longtable}[]{>{\raggedright\arraybackslash}b{.25\textwidth}>{\raggedright\arraybackslash}m{.2\textwidth}>{\raggedright\arraybackslash}b{.15\textwidth}>{\raggedright\arraybackslash}m{.1\textwidth}>{\raggedright\arraybackslash}b{.1\textwidth}>{\raggedright\arraybackslash}b{.15\textwidth}}
+\pagebreak\begin{longtable}[]{
+>{\raggedright\arraybackslash}m{.25\textwidth}
+>{\raggedright\arraybackslash}m{.2\textwidth}
+>{\raggedright\arraybackslash}m{.15\textwidth}
+>{\raggedright\arraybackslash}m{.1\textwidth}
+>{\raggedright\arraybackslash}m{.1\textwidth}
+>{\raggedright\arraybackslash}b{.15\textwidth}}
 	\toprule
 	\textbf{Program}                                                                                                                                                                                                                                                                                                                      & \textbf{Type of Program}                                                                                                                                                                                                             & \textbf{Cost}                                                                                                                                                                                                                                                             & \textbf{Min RAM} & \textbf{Pref RAM} & \textbf{Processor}       \\
 	\midrule
@@ -411,7 +421,7 @@ Measuring the latency of a screenreader to respond to key presses is important t
 \pagebreak \hypertarget{notes-on-future-proofing-laptops}{}\section{Laptop Cost Factors}\label{notes-on-future-proofing-laptops}
 Students with visual impairments require laptops that are compatible with assistive technology to receive a free and accessible public education. When selecting a laptop, there are several cost factors that must be taken into account. Firstly, the laptop should have sufficient RAM to run the assistive technology software smoothly. Secondly, the laptop should have a high-quality screen that is large enough to display text and images clearly. Thirdly, the laptop should have a long battery life to ensure that students can use it for extended periods of time without needing to recharge. Fourthly, the laptop should have a durable build quality to withstand daily wear and tear. Finally, the laptop should be lightweight and portable to enable students to carry it around easily. These factors can help ensure that students with visual impairments have access to the technology they need to succeed in their studies.
 
-\hypertarget{future-proofing}{}\section{Laptop Durability}\label{future-proofing}
+\hypertarget{future-proofing}{}\subsection{Laptop Durability}\label{future-proofing}
 
 I asked ChatGPT why we should consider future usage needs of a laptop into my purchasing plans and here is its response (emphasis mine):
 
@@ -534,7 +544,7 @@ I asked ChatGPT why we should consider future usage needs of a laptop into my pu
 		It's important to note that the specific requirements depend on your usage patterns and needs. Not everyone needs the highest specifications, and sometimes a mid-range laptop can be more than sufficient for everyday tasks. However, \textbf{for users with demanding workloads or those who want a longer usable life from their device, opting for higher-end specifications can be a wise investment}.
 	\end{quote}\end{leftbar}
 
-\pagebreak	\hypertarget{optimizing-cost-with-performance}{}\section{Laptop Cost Optimization}\label{optimizing-cost-with-performance}
+\pagebreak	\hypertarget{optimizing-cost-with-performance}{}\subsection{Laptop Cost Optimization}\label{optimizing-cost-with-performance}
 
 There is an economic theory based on a Terry Pratchett novel that explains this phenomenon better than we can. It is called the \href{http://en.wikipedia.org/wiki/Boots_theory}{Boots Theory}\footnote{\raggedright Full Text (emphasis mine):
 	\begin{leftbar}
@@ -583,10 +593,8 @@ There is an economic theory based on a Terry Pratchett novel that explains this 
 
 
 	\caption[Cost of Laptops over Time]{Cost of Laptops Across Time. Notice that the final cost of the 32GB option is comparable to the 4GB over 10 years. However, the 4GB laptop is not capable of running JAWS reliably in the classroom setting.
-		\begin{itemize}[leftmargin=6em]
-			\item For the \textcolor{red}{Best Case} Scenario, the 32GB laptop is between \$3,107 and \$6,192 \textit{\textbf{cheaper}} over time compared to the 16GB and 8GB laptops, respectively.
-			\item For the \textcolor{red}{Cautious} Scenario, the 32GB laptop is between \$283 and \$3,386 \textit{\textbf{cheaper}} over time compared to the 16GB and 8GB laptops, respectively.
-		\end{itemize}}\label{tab:table6}
+	\break\textbullet For the \textcolor{red}{Best Case} Scenario, the 32GB laptop is between \$3,107 and \$6,192 \textit{\textbf{cheaper}} over time compared to the 16GB and 8GB laptops, respectively.
+	\break\textbullet For the \textcolor{red}{Cautious} Scenario, the 32GB laptop is between \$283 and \$3,386 \textit{\textbf{cheaper}} over time compared to the 16GB and 8GB laptops, respectively}\label{tab:table6}
 \end{longtable}
 
 \pagebreak
@@ -647,7 +655,8 @@ Table \ref{tab:table8} is an alphabetical list of laptop computers that meet the
 	Alienware x14                                                                                               & \$1,999                                                                                                                                         & QWERTY                 & 32GB         & 14.0''               & 13th Gen i7        \\[1.0em]
 	Asus ProArt Studiobook                                                                                      & \$2,999                                                                                                                                         & QWERTY                 & 32GB         & 16.0''               & 13th Gen i9        \\[1.0em]
 	Asus Zenbook Pro 16X                                                                                        & \$2,599                                                                                                                                         & QWERTY                 & 32GB         & 16.0''               & 13th Gen i9        \\[1.0em]
-	Dell G16 Gaming Laptop                                                                                      & \$1,999                                                                                                                                         & QWERTY                 & 32GB         & 16.0''               & 13th Gen i7        \\[1.0em]
+	b.book\footnote{\raggedright This is a Windows Computer without a monitor, substituting a 40 cell braille display}                                                                                        & \$5,765                                                                                                                                        & Perkins                 & 8GB-16GB\footnote{\raggedright This is included despite low RAM values since it is a custom modified product} & none               & 13th Gen i9        \\[1.0em]
+ Dell G16 Gaming Laptop                                                                                      & \$1,999                                                                                                                                         & QWERTY                 & 32GB         & 16.0''               & 13th Gen i7        \\[1.0em]
 	Dell Inspiron 16 Plus                                                                                       & \$1,499                                                                                                                                         & QWERTY                 & 32GB         & 16.0''               & 13th Gen i7        \\[1.0em]
 	Dell Precision 3480                                                                                         & \$3,205                                                                                                                                         & QWERTY                 & 32GB         & 14.0''               & 13th Gen i7        \\[1.0em]
 	Dell Precision 3581                                                                                         & \$3,854                                                                                                                                         & QWERTY                 & 32GB         & 15.6''               & 13th Gen i7        \\[1.0em]
@@ -684,11 +693,11 @@ Table \ref{tab:table8} is an alphabetical list of laptop computers that meet the
 	MSI Vector                                                                                                  & \$1,999                                                                                                                                         & QWERTY                 & 64GB         & 14.0''               & 13th Gen i9        \\[1.0em]
 	Microsoft Surface Laptop 5                                                                                  & \$2824                                                                                                                                          & QWERTY                 & 32GB         & 15.0''               & 12th Gen i7        \\[1.0em]
 	Orbit Optima\footnote{\raggedright This is a Windows Computer without a monitor, substituting a 40 cell braille display} & \$6,500                                                                                                                                         & QWERTY                 & 32GB-64GB    & none                 & 13th Gen i7        \\ [1.0em]
-	Seika Studio\footnote{\raggedright This is a Windows Computer without a monitor, substituting a 40 cell braille display} & \$6,500                                                                                                                                         & QWERTY                 & 8GB-16GB     & none                 & 12th Gen i7        \\ [1.0em]\hline
+	Seika Studio\footnote{\raggedright This is a Windows Computer without a monitor, substituting a 40 cell braille display} & \$6,500                                                                                                                                         & QWERTY                 & 8GB-16GB\footnote{\raggedright This is included despite low RAM values since it is a custom modified product}     & none                 & 12th Gen i7        \\ [1.0em]\hline
 	\caption[{Laptop Computers Meeting Specifications}]{Laptop Computers Meeting Recommended Specifications}\label{tab:table8}
 \end{longtable}
 
-\cleardoublepage \hypertarget{ios-devices}{}\chapter[\raggedright Transformative Tablets: \\Pioneering Success for Visually Impaired Students Through Innovative Apps]{Transformative Tablets: Pioneering Success for Visually Impaired Students Through Innovative Apps}\label{ios-devices}
+\cleardoublepage \hypertarget{ios-devices}{}\chapter[\raggedright Transformative Tablets: \\Pioneering Success for Visually Impaired Students Through \\Innovative Apps]{Transformative Tablets: Pioneering Success for Visually Impaired Students Through Innovative Apps}\label{ios-devices}
 \minitoc \newpage
 \extramarks{Vision Department Technology Needs}{Transformative Tablets}
 In an era where technology shapes the landscape of education, tablets have emerged as transformative tools, providing visually impaired students with unprecedented access to knowledge and fostering independence in their academic journeys\footnote{\raggedright I am omitting iPhone and Android phones from this document as the purchase of student phones is beyond the purview of a school district. However, iOS apps are provided as many of these are available on both Tablets and Phones and training students to use the technology on their personal device is often necessary, particularly within the auspice of Orientation \& Mobility instruction}. Within the realm of tablets, both iPad and Android devices stand as beacons of innovation, offering not only user-friendly interfaces but also a diverse array of applications specifically tailored to bridge the accessibility gap. This chapter embarks on a compelling exploration of how tablets, in tandem with purpose-built apps, are not just tools but catalysts for success in the educational odyssey of visually impaired students.
@@ -697,7 +706,7 @@ The tactile elegance of tablets goes beyond mere convenience; it represents a pa
 
 Apps, the lifeblood of these devices, play an instrumental role in transforming tablets into personalized learning companions. From screen readers that convert text to speech with remarkable precision to magnification apps that enhance visual content, the ecosystem of applications available empowers visually impaired students to navigate the digital realm with confidence. Tablets, coupled with innovative apps, are not mere gadgets; they represent a dynamic force propelling visually impaired students toward success; underscoring the indispensable role these tools play in shaping an educational landscape where every student, regardless of visual abilities, can seize the opportunities that lie ahead.
 
-\hypertarget{tablet-considerations}{}\section{Tablet Considerations}\label{tab:tablelet-considerations}
+\pagebreak\hypertarget{tablet-considerations}{}\section{Tablet Considerations}\label{tab:tablelet-considerations}
 
 When selecting a tablet for students with visual impairments to access their schoolwork, careful consideration must be given to the device's accessibility features to ensure an inclusive and conducive learning environment. Essential considerations include the tablet's compatibility with screen readers and magnification tools, ensuring that these assistive technologies seamlessly integrate with the device's operating system. Additionally, evaluating the availability and effectiveness of built-in accessibility features such as VoiceOver for iOS or TalkBack for Android is crucial\footnote{\raggedright Traditionally, assistive technology for the blind has focused on the iPad line since the Android line had historically lagged behind the Apple products for accessibility features prior to 2020 so accessibility apps have favored the iOS/iPadOS architecture. However, groups are emerging that specifically instruct users of Android devices how to access and use accessibility settings \textit{cf.}, \href{http://www.youtube.com/channel/UCvEM-SmpwElNALldhp8hG1g}{Blind Android Users} \url{http://www.youtube.com/channel/UCvEM-SmpwElNALldhp8hG1g}}. The tablet's tactile features, size, and weight should also be taken into account to accommodate students' specific needs. High contrast and customizable color settings, as well as text-to-speech functionalities, are vital components that enhance readability. Furthermore, the tablet's compatibility with a variety of educational apps designed with accessibility in mind is paramount. By prioritizing these considerations, educators and administrators can empower students with visual impairments to engage with their schoolwork independently and efficiently, fostering a more inclusive learning experience.
 
@@ -711,7 +720,12 @@ For individuals with visual impairments, the efficacy of these devices relies he
 
 
 \pagebreak	\hypertarget{tablet-options}{}\section{Tablet Options}\label{tab:tablelet-options}
-Table \ref{tab:table9} describes current tablet computers that are vailable for students with visual impairments.
+When choosing an Android Tablet or iPad for a student with visual impairments, several factors must be considered to ensure that the student receives free and appropriate public education. The first factor to consider is the screen contrast ratio. A high contrast ratio is essential for students with visual impairments as it makes it easier for them to read text and view images on the screen. For Android Tablets, the W3C recommends a contrast ratio of at least 4.5:1 for small text and 3.0:1 for large text\footnote{\raggedright \href{https://support.google.com/accessibility/android/answer/7158390?hl=en}{Google. (n.d.). Color contrast - Android Accessibility Help. Retrieved December 19, 2023} \url{https://support.google.com/accessibility/android/answer/7158390?hl=en}}. On the other hand, Apple devices have an “Increase Contrast” feature that can be turned on to make text and other elements more visible\footnote{\raggedright \href{https://www.imore.com/how-increase-contrast-visual-accessibility-iphone-and-ipad}{iMore. (n.d.). How to increase contrast for visual accessibility on iPhone and iPad. Retrieved December 19, 2023} \url{https://www.imore.com/how-increase-contrast-visual-accessibility-iphone-and-ipad}}.
+
+The second factor to consider is the size of the screen. A larger screen is beneficial for students with visual impairments as it allows them to view text and images more clearly. Tablets usually have larger screens than smartphones, making them a better choice for students with visual impairments\footnote{\raggedright \href{https://www.afb.org/blindness-and-low-vision/using-technology/cell-phones-tablets-mobile/smartphone-or-tablet-which}{American Foundation for the Blind. (n.d.). Smartphone or Tablet: Which is Best for You? Retrieved December 19, 2023} \url{https://www.afb.org/blindness-and-low-vision/using-technology/cell-phones-tablets-mobile/smartphone-or-tablet-which}}. However, it is important to note that larger screens come at the expense of portability. Therefore, it is essential to find a balance between screen size and portability.
+
+The third factor to consider is the availability of accessible apps. Both Android and iOS devices have built-in accessibility features such as screen readers, magnifiers, and high contrast modes \footnote{\raggedright \href{https://www.aao.org/eye-health/tips-prevention/low-vision-impairment-apps-tech-assistive-devices }{American Academy of Ophthalmology. (n.d.). 30 Apps, Devices and Technologies for People With Vision Impairments. Retrieved December 19, 2023} \url{https://www.aao.org/eye-health/tips-prevention/low-vision-impairment-apps-tech-assistive-devices }}\fnsep\footnote{\raggedright \href{https://www.afb.org/blindness-and-low-vision/using-technology/cell-phones-tablets-mobile/apple-ios-iphone-and-ipad }{American Foundation for the Blind. (n.d.). Apple iOS for iPhone and iPad: Considerations for Users with Visual Impairments. Retrieved December 19, 2023} \url{https://www.afb.org/blindness-and-low-vision/using-technology/cell-phones-tablets-mobile/apple-ios-iphone-and-ipad }}. Additionally, there are several apps available that are specifically designed for students with visual impairments. For example, the “Lookout” app for Android provides spoken feedback about things around you, while the “Be My Eyes” app connects visually-impaired people with sighted volunteers through a live video call\footnote{\raggedright \href{https://www.aao.org/eye-health/tips-prevention/technology-apps-devices-children-blind-low-vision}{American Academy of Ophthalmology. (n.d.). Technology Tools for Children with Low Vision. Retrieved December 19, 2023} \url{https://www.aao.org/eye-health/tips-prevention/technology-apps-devices-children-blind-low-vision}}. It is important to ensure that the device has access to these apps to ensure that the student can receive free and appropriate public education.
+Table \ref{tab:table9} describes current tablet computers that are available for students with visual impairments.
 
 \pagebreak\begin{longtable}[]{@{}
 	>{\raggedright\arraybackslash}m{.3\textwidth}
@@ -814,7 +828,7 @@ Zuzanka                                  & free\footnote{\raggedright requires a
 \end{longtable}
 
 \cleardoublepage
-\hypertarget{braille-first-devices}{}\chapter[\raggedright Bridging Literacy: \\The Crucial Role of Refreshable Braille Displays in Empowering Visually Impaired Students]{Bridging Literacy: The Crucial Role of Refreshable Braille Displays in Empowering Visually Impaired Students}\label{braille-first-devices}
+\hypertarget{braille-first-devices}{}\chapter[\raggedright Bridging Literacy: \\The Crucial Role of Refreshable Braille Displays in Empowering \\Visually Impaired Students]{Bridging Literacy: The Crucial Role of Refreshable Braille Displays in Empowering Visually Impaired Students}\label{braille-first-devices}
 \minitoc \newpage
 \extramarks{Vision Department Technology Needs}{Bridging Literacy}
 In the intricate tapestry of education, the pursuit of literacy is a fundamental thread, weaving through the academic journey of every student. For visually impaired learners, the path to literacy takes on a unique character, one in which the tactile elegance of braille becomes a vital conduit to knowledge. Within this narrative, refreshable braille displays emerge as indispensable companions, unlocking the doors to literacy, fostering engagement, and propelling students toward academic success. This chapter embarks on a compelling exploration of how refreshable braille displays are not merely tools but keystones in the quest for literacy and educational achievement among visually impaired students.
@@ -854,7 +868,8 @@ Nattiq Note                                                                     
 Notey the Notetaker                                                                                                                                                                                                                                          & \textasciitilde\$750+\footnote{\raggedright Self build\href{http://notey-project.com/2023/03/07/notey-user-manual-v1-0-2/}{Specs for Notey the NoteTaker}}                                                                                                                                                        &                                                                                                                           & QWERTY Perkins   & Miscs             & Windows 11                                                                                                                                                                                                                                                                                                                                                                                                                \\[1.0em]
 Orbit Optima\footnote{\raggedright This is a Windows Computer without a monitor that runs on any screenreader, but it has settings to function like a braille notetaker}                                                                                                  & \$6,000\break \$9,000                                                                                                                   & TBD              & QWERTY            & Orbit Research        & Windows 11                                                                                                                                                                                                                                                                                                                                                                                        \\[1.0em]
 Seika Studio\footnote{\raggedright This is a Windows Computer without a monitor, but it has settings to function like a braille notetaker}                                                                                                                                & \$6,500                                                                                                                   & TBD              & QWERTY            & Nippon Telesoft       & Windows 10                                                                                                                                                                                                                                                                                                                                                                                        \\[1.0em]
-b.note                                                                                                                                                                                                                                                       & \$4,360                                                                                                                   & 15h              & Perkins           & Eurobraille           & Proprietary                                                                                                                                                                                                                                                                                                                                                                                       \\[1.0em]\hline
+b.note                                                                                                                                                                                                                                                       & \$4,360                                                                                                                   & 15h              & Perkins           & Eurobraille           & Proprietary                                                                                                                                                                                                                                                                                                                                                                                       \\[1.0em]
+b.book                                                                                                                                                                                                                                                       & \$5,765                                                                                                                  & 15h              & Perkins           & Eurobraille           & Windows 10\footnote{\raggedright Windows 11 version coming Q1 2024}                                                                                                                                                                                                                                                                                                                                                                                       \\[1.0em]\hline
 	\caption{ Braille NoteTakers and Laptops }\label{tab:table11}
 \end{longtable}
 \pagebreak
@@ -929,7 +944,7 @@ Seika V5           & \$2,495       & 20               & none              & Nipp
 Vario 340          & \$5,138       & 20               & none              & VisioBraille          \\[1.0em]
 Vario 440          & \$4,550       & 20               & none              & VisioBraille          \\[1.0em]
 Vario Ultra 40     & \$7,643       & 12               & Perkins           & VisioBraille          \\[1.0em]
-b.note             & \$3,565       & 15               & Perkins           & Eurobraille           \\[1.0em] \hline
+b.note 40           & \$3,565       & 15               & Perkins           & Eurobraille           \\[1.0em] \hline
 	\caption{ 32-40 cell Single Line Refreshable Braille Displays }\label{tab:table13}
 \end{longtable}
 
@@ -974,12 +989,11 @@ Tactonom Pro     & \textasciitilde\$15,000  & Requries AC      & 89 row x 119 ce
 \hypertarget{learning-tools}{}\section{Braille Education Devices}\label{learning-tools}
 In many cases, students do not learn braille as efficiently as their sighted peers learn print. One potential explanation is that there is limited time that a student has access to a teacher trained in braille. One solution is to provide devices that can be used to reinforce or train a student in braille skills without the need for a braille-fluent adult present. This is analogous to the Lexia, Prodigy, or other academic learning systems that allow for self-paced learning.  In the last 5 years, a number of teaching tools have been developed, primarily by groups in India and South Korea to address these needs.
 
-The pioneering companies Thinkerbell Labs in India and OHFA Tech in South Korea, have independently suggested that the low braille literacy rates world wide can be mitigated by providing braille instruction using this type of approach\footnote{\raggedright \href{http://www.thinkerbelllabs.com/static/decks/tl_deck.pdf}{PDF Slide Deck}}. Both groups have also demonstrated that the use of their products reduces the time to learn braille by upwards of 50\%\footnote{\raggedright \href{http://www.taptilo.com/}{Taptilo}}. Their reasoning is that the current, more traditional system of braille instruction requires:
-\begin{itemize}
-	\item Hand-holding and constant supervision of a special educator
-	\item Primitive teaching methods resulting in slow learning
-	\item Non-interactive content keeps the students uninterested and demotivated
-\end{itemize}
+Specialized tools like Taptilo and Polly/Annie are crucial for teaching Braille to students with visual impairment. These tools provide a more interactive and engaging learning experience for students, which can help them learn Braille more effectively. Taptilo is a Braille learning device that uses a modular design to teach Braille in a fun and interactive way. It has a variety of features such as audio feedback, games, and quizzes that can help students learn Braille more effectively\footnote{\raggedright \href{https://www.taptilo.com/ }{Taptilo. (n.d.). Taptilo. Retrieved December 19, 2023} \url{https://www.taptilo.com/ }} 1. Polly and Annie are two Braille teaching tools that use a combination of hardware and software to teach Braille to students. They use a variety of interactive games and activities to help students learn Braille more effectively\footnote{\raggedright \href{https://www.thinkerbelllabs.com/}{Thinkerbell Labs. (n.d.). Polly. Retrieved December 19, 2023} \url{https://www.thinkerbelllabs.com/}}.
+
+In addition to providing a more engaging learning experience, specialized tools like Taptilo and Polly/Annie can also help students learn Braille more quickly. These tools are designed to be intuitive and easy to use, which can help students learn Braille more quickly than traditional methods. Additionally, these tools can provide students with immediate feedback on their progress, which can help them identify areas where they need to improve.
+
+Finally, specialized tools like Taptilo and Polly/Annie can help students with visual impairment become more independent. By learning Braille more effectively and quickly, students can become more independent in their daily lives. They can read books, take notes, and communicate with others more easily, which can help them lead more fulfilling lives.
 Table \ref{tab:table15} lists current available options for braille instructional devices.
 
 \pagebreak\begin{flushleft} \pagebreak\begin{longtable}[]{@{}
@@ -996,21 +1010,21 @@ Table \ref{tab:table15} lists current available options for braille instructiona
 		\endfoot	\endlastfoot
 Braille Doodle                                            & \$85                                                                  & Touchpad Pro Fundation      \\[1.0em]
 Braille Teach                                             & \$150                                                                 & Braille Teach               \\[1.0em]
-BrailleBlox                                               & \$85 \footnote{\raggedright Req LeapFrog Fridge Phonics base, \textasciitilde\$20} & BrailleBot                  \\[1.0em]
+BrailleBlox                                               & \$85 \footnote{\raggedright Requires purchase of a LeapFrog Fridge Phonics base, \textasciitilde\$20} & BrailleBot                  \\[1.0em]
 BrailleBuzz                                               & \$99                                                                  & APH                         \\[1.0em]
 BrailleCoach                                              & \$1,095                                                               & Logan Tech                  \\[1.0em]
 Feelif Creator                                            & \$2,200                                                               & Feelif Technology           \\[1.0em]
 Feelif Pro                                                & \$3,595                                                               & Feelif Technology           \\[1.0em]
 Mountbatten Braille Tutor                                 & \$5,495                                                               & Harpo                       \\[1.0em]
 Polly\footnote{\raggedright Called ``Annie" outside the Unites States} & \$999                                                                 & APH \break Thinkerbell Labs \\[1.0em]
-Read Read                                                 & \$645                                                                 & T-var EdVar Tech            \\[1.0em]
+Read Read                                                 & \$645                                                                 & EdVar Tech            \\[1.0em]
 SMART Brailler                                            & \$2,195                                                               & Perkins                     \\[1.0em]
 Taptilo                                                   & \$1,349                                                               & HIMS\break OHFA Tech        \\[1.0em]\hline
 		\caption[Braille Education Device]{Braille Education Device}\label{tab:table15}
 	\end{longtable}  \end{flushleft}
 
 \cleardoublepage
-\hypertarget{generation}{}\chapter[\raggedright Empowering Minds: \\The Crucial Role of High-Quality Braille Embossers in Unlocking STEM Literacy for Visually Impaired Students]{Empowering Minds: The Crucial Role of High-Quality Braille Embossers in Unlocking STEM Literacy for Visually Impaired Students}\label{generation}
+\hypertarget{generation}{}\chapter[\raggedright Empowering Minds: \\The Crucial Role of High-Quality Braille Embossers in Unlocking \\STEM Literacy for Visually Impaired Students]{Empowering Minds: The Crucial Role of High-Quality Braille Embossers in Unlocking STEM Literacy for Visually Impaired Students}\label{generation}
 \minitoc \newpage
 \extramarks{Vision Department Technology Needs}{Empowering Minds}
 In the ever-evolving realms of Science, Technology, Engineering, and Mathematics (STEM), the pursuit of literacy takes on a particularly intricate form. For visually impaired students, the challenges are multifaceted, but with the advent of high-quality braille embossers, a transformative bridge has been constructed. This chapter embarks on a profound exploration of the indispensable role that high-quality braille embossers play in shaping the educational narrative of visually impaired students, especially in the critical domains of Math and STEM. These sophisticated devices, with their ability to translate complex symbols and notations into tangible braille and tactile graphics, stand as pioneers in fostering literacy, comprehension, and success in STEM fields.
@@ -1020,8 +1034,8 @@ The crux of this exploration lies in recognizing the nuanced requirements of vis
 Embossed tactile graphics break down the barriers to understanding complex mathematical equations, graphical representations, and scientific concepts, ultimately fostering a sense of autonomy and empowerment among visually impaired students. Assessing the landscape of inclusive STEM education, it becomes evident that high-quality braille embossers are not merely tools but enablers of success. By providing access to the visual nuances inherent in STEM fields, these devices pave the way for literacy, comprehension, and active participation, ensuring that visually impaired students can unlock the full spectrum of opportunities in the exciting and dynamic world of Math and STEM disciplines.
 
 
-\hypertarget{embossers}{}\section{Braille Embossers}\label{embossers}
-Having access to a high-quality braille embosser is essential for students with visual impairments to receive a free and appropriate public education. Braille embossers are printers that produce braille text and tactile graphics on paper. They are used to create braille copies of textbooks, worksheets, and other educational materials. High-quality embossers produce sharp, clear braille that is easy to read and tactile graphics that are easy to interpret. This is important because it allows students with visual impairments to access the same educational materials as their sighted peers. Braille embossers also allow students to create their own braille notes and written work, which can help improve their literacy skills and independence. By providing students with visual impairments access to high-quality braille embossers, we can help ensure that they have the tools they need to succeed in their studies and beyond. Table \ref{tab:table16} lists current available embossers.
+\pagebreak\hypertarget{embossers}{}\section{Braille Embossers}\label{embossers}
+Having access to a high-quality braille embosser is essential for students with visual impairments to receive a free and appropriate public education. Braille embossers are printers that produce braille text and tactile graphics on paper. They are used to create braille copies of textbooks, worksheets, and other educational materials. High-quality embossers produce sharp, clear braille that is easy to read and tactile graphics that are easy to interpret. This is important because it allows students with visual impairments to access the same educational materials as their sighted peers. Braille embossers also allow students to create their own braille notes and written work, which can help improve their literacy skills and independence. By providing students with visual impairments access to high-quality braille embossers, we can help ensure that they have the tools they need to succeed in their studies and beyond. Table \ref{tab:table16} lists current available embossers\footnote{\raggedright I am only focusing on 11x11.5'' braille paper size as US Letter size is impractical for braille}.
 \pagebreak \pagebreak\begin{longtable}[]{@{}
 	>{\raggedright\arraybackslash}m{.25\textwidth}
 	>{\raggedright\arraybackslash}m{.1\textwidth}
@@ -1035,12 +1049,12 @@ Having access to a high-quality braille embosser is essential for students with 
 	\endhead \hline                                                                                                                                                                                                                                                                                                                                                                     \\
 	\multicolumn{4}{r}{\textbf{Continued on next page}}
 	\endfoot	\endlastfoot
-APH PageBlaster\break (old Model Index-D V4)                                                                                                    & \$4,295\footnote{\raggedright Req free \href{http://www.aph.org/app/uploads/2020/07/Firebird_signed_V31.zip}{Firebird Tactile Graphics} Software for graphics functionality} & Simple Graphics, Interpoint Braille  & APH\break Index Braille \\[1.0em]
-Basic-D V5                                                                                                                                      & \$3,695\footnote{\raggedright Req \href{http://tactileview.com/}{TactileView} license for full graphics functionality (\$\$484 for 1 year license)}                          & Simple Graphics, Interpoint Braille  & Index Braille           \\[1.0em]
+APH PageBlaster\break (old Model Index-D V4)                                                                                                    & \$4,295\footnote{\raggedright Requires free \href{http://www.aph.org/app/uploads/2020/07/Firebird_signed_V31.zip}{Firebird Tactile Graphics} Software for graphics functionality} & Simple Graphics, Interpoint Braille  & APH\break Index Braille \\[1.0em]
+Basic-D V5                                                                                                                                      & \$3,695\footnote{\raggedright Requires \href{http://tactileview.com/}{TactileView} license for full graphics functionality (\$\$484 for 1 year license)}                          & Simple Graphics, Interpoint Braille  & Index Braille           \\[1.0em]
 BrailleTrac 120                                                                                                                                 & \$3,595                                                                                                                                                          & Simple Graphics, Interpoint Braille  & Irie-AT                 \\[1.0em]
-Juliet 120                                                                                                                                      & \$4,195\footnote{\raggedright Req free \href{http://www.aph.org/app/uploads/2020/07/Firebird_signed_V31.zip}{Firebird Tactile Graphics} Software for graphics functionality} & Simple Graphics, Interpoint Braille  & ETS\break Humanware     \\[1.0em]
+Juliet 120                                                                                                                                      & \$4,195\footnote{\raggedright Requires free \href{http://www.aph.org/app/uploads/2020/07/Firebird_signed_V31.zip}{Firebird Tactile Graphics} Software for graphics functionality} & Simple Graphics, Interpoint Braille  & ETS\break Humanware     \\[1.0em]
 ViewPlus Columbia                                                                                                                               & \$3,495                                                                                                                                                          & Complex Graphics, Interpoint Braille & ViewPlus                \\[1.0em]
-ViewPlus Rogue\break (used to be Max)\footnote{\raggedright I am only focusing on 11x11.5'' braille paper size as US Letter size is impractical for braille} & \$5,995                                                                                                                                                          & Complex Graphics, Interpoint Braille & ViewPlus                \\[1.0em]\hline
+ViewPlus Rogue\break (used to be Max)& \$5,995                                                                                                                                                          & Complex Graphics, Interpoint Braille & ViewPlus                \\[1.0em]\hline
 	\caption[ Braille Embossers focusing on Text]{ Braille Embossers focusing on Text}\label{tab:table16}
 \end{longtable}
 
@@ -1102,7 +1116,7 @@ ViewPlus Rogue \break (used to be ViewPlus Max)     & \$5,995\footnote{\raggedri
 \hypertarget{tactile-paper}{}\section{Tactile Graphic Supplies}\label{tactile-paper}
 Table \ref{tab:table18} lists materials needed to use with the graphics devices shown in Table \ref{tab:table17}.
 \pagebreak\begin{longtable}[]{@{}
-	>{\raggedright\arraybackslash}m{.5\textwidth}
+	>{\raggedright\arraybackslash}m{.55\textwidth}
 	>{\raggedright\arraybackslash}m{.3\textwidth}
 	>{\raggedright\arraybackslash}b{.15\textwidth}@{}
 	}
@@ -1120,7 +1134,7 @@ Tractor-Feed Braille Transcribing Paper: (11x11.5'')\break (for embossers) & \$7
 \end{longtable}
 
 \cleardoublepage
-\hypertarget{d-printers}{}\chapter[\raggedright Shaping Knowledge: \\The Imperative Role of 3D Printed Materials in Fostering Hands On Literacy for Visually Impaired Students]{Shaping Knowledge: The Imperative Role of 3D Printed Materials in Fostering Hands On Literacy for Visually Impaired Students}\label{d-printers}
+\hypertarget{d-printers}{}\chapter[\raggedright Shaping Knowledge: \\The Imperative Role of 3D Printed Materials in Fostering Hands-On\\ Literacy for Visually Impaired Students]{Shaping Knowledge: The Imperative Role of 3D Printed Materials in Fostering Hands On Literacy for Visually Impaired Students}\label{d-printers}
 \extramarks{Vision Department Technology Needs}{Shaping Knowledge}
 \minitoc \newpage
 In the realm of education, the power of hands-on experience is unparalleled. For visually impaired students, the journey toward literacy and comprehension takes on a unique dimension—one that is enriched and transformed through the tactile exploration of 3D printed materials. This chapter embarks on a captivating exploration of the indispensable role that 3D printed materials play in providing a tangible, tactile bridge to knowledge. These innovative creations not only facilitate hands-on engagement with concepts but stand as catalysts for literacy, fostering success for visually impaired students across a diverse spectrum of subjects.
@@ -1182,7 +1196,7 @@ Sidewinder X2   & \$399         & 300x300x396mm            & 1.75mm             
 
 \begin{itemize}[leftmargin=*]
 \item \textbf{3D printer}: 3D printers come in various sizes, from small enough to fit on a benchtop to large-format industrial machines. Large printers can produce bigger objects, but the machines take up more space and cost significantly more than benchtop printers\footnote{\raggedright \textit{ibid}.}.
-\item \textbf{Filament}: Filament is the material used to create the 3D object. The most common filament materials are PLA, TPU, ABS, CPE, PETG, nGen, INOVA-1800, HIPS, HT, t-glase, Alloy 910, Polyamide, Nylon 645, Polycarbonate, PC-Max, PC+PBT, PC-ABS Alloy, PCTPE, and more\footnote{\raggedright \href{http://www.techlearning.com/buying-guides/best-3d-printers-for-schools}{Tech & Learning. (2023). Best 3D printers for schools. Retrieved December 19, 2023} \url{http://www.techlearning.com/buying-guides/best-3d-printers-for-schools}}.
+\item \textbf{Filament}: Filament is the material used to create the 3D object. The most common filament materials are PLA, TPU, ABS, CPE, PETG, nGen, INOVA-1800, HIPS, HT, t-glase, Alloy 910, Polyamide, Nylon 645, Polycarbonate, PC-Max, PC+PBT, PC-ABS Alloy, PCTPE, and more\footnote{\raggedright \href{http://www.techlearning.com/buying-guides/best-3d-printers-for-schools}{Tech \& Learning. (2023). Best 3D printers for schools. Retrieved December 19, 2023} \url{http://www.techlearning.com/buying-guides/best-3d-printers-for-schools}}.
 \item \textbf{Computer}: A computer is required to create the 3D model using CAD software. The computer sends the model to the 3D printer to create the object.
 \item \textbf{CAD software}: CAD software is used to create the 3D model. There are many free and paid CAD software options available.
 \item \textbf{Slicing software}: Slicing software is used to convert the 3D model into a format that the 3D printer can understand. The software slices the model into layers and generates the G-code that the printer uses to create the object\footnote{\raggedright \href{http://www.teachthought.com/technology/ways-3d-printing-can-be-used-in-education/}{TeachThought. (2021). 10 ways 3D printing can be used in education. Retrieved December 19, 2023} \url{http://www.teachthought.com/technology/ways-3d-printing-can-be-used-in-education/}}.
@@ -1208,7 +1222,7 @@ Painter's Tape (2" width 12 Pack) & \$43.00                   & Amazon          
 \end{longtable}
 
 \cleardoublepage
-\hypertarget{low-vision}{}\chapter[\raggedright Amplifying Vision: \\The Vital Role of Video Magnification Products in Fostering Literacy and Success for Visually Impaired Students]{Amplifying Vision: The Vital Role of Video Magnification Products in Fostering Literacy and Success for Visually Impaired Students}\label{low-vision}
+\hypertarget{low-vision}{}\chapter[\raggedright Amplifying Vision: \\The Vital Role of Video Magnification Products in Fostering Literacy \\and Success for Visually Impaired Students]{Amplifying Vision: The Vital Role of Video Magnification Products in Fostering Literacy and Success for Visually Impaired Students}\label{low-vision}
 \minitoc \newpage
 \extramarks{Vision Department Technology Needs}{Amplifying Vision}
 In the realm of visual impairment, the quest for literacy and academic success is a journey characterized by innovation and adaptability. For visually impaired students, the challenge of accessing printed materials, charts, and visual content is met with a powerful solution—video magnification products. The indispensable role that video magnification plays in providing enhanced visual access, breaking down barriers to literacy, and empowering students to navigate the educational landscape with confidence cannot be overstated.
@@ -1233,10 +1247,10 @@ Compatibility: The magnifier should be compatible with the student’s other ass
 \end{itemize}
 These considerations will help ensure that students with visual impairments have access to the tools they need to succeed in school. Table \ref{tab:table21} lists current available video magnification devices for students with visual impairments.
 \pagebreak\begin{longtable}[]{@{}
-	>{\raggedright\arraybackslash}m{.25\textwidth}
+	>{\raggedright\arraybackslash}m{.30\textwidth}
 	>{\raggedright\arraybackslash}m{.15\textwidth}
-	>{\raggedright\arraybackslash}m{.25\textwidth}
-	>{\raggedright\arraybackslash}b{.2\textwidth}@{}
+	>{\raggedright\arraybackslash}m{.3\textwidth}
+	>{\raggedright\arraybackslash}b{.25\textwidth}@{}
 	}
 	\toprule
 
@@ -1265,9 +1279,10 @@ Luna S                     & \$385             & Hand-Held (4.3'' screen)       
 MAGNA 3                    & \$149             & Hand-Held (3.5'' screen)                                        & Orbit Research     \\[1.0em]
 MAGNA 4                    & \$199             & Hand-Held (4.3'' screen)                                        & Orbit Research     \\[1.0em]
 MAGNA 5                    & \$249             & Hand-Held (5'' screen)                                          & Orbit Research     \\[1.0em]
-MATT Connect v2            & \$3,895           & Desktop\break (Camera + Android Tablet)\break Mobile, but heavy & APH                \\[1.0em]
-MagniLink One              & \$2,395           & Desktop                                                         & Irie AT            \\[1.0em]
-MagniLink Vision           & \$3,190 - \$4,250 & Desktop                                                         & Irie AT            \\[1.0em]
+MATT Connect v2            & \$3,895           & Desktop\break Mobile, but heavy & APH                \\[1.0em]
+Magnibot                   & \$2,995           & Desktop\break Mobile                                            & Trysight            \\[1.0em]
+MagniLink One              & \$2,395           & Desktop                                                         & Low Vision International            \\[1.0em]
+MagniLink Vision           & \$3,190 - \$4,250 & Desktop                                                         & Low Vision International            \\[1.0em]
 ONYX Desk set HD           & \$3,330           & Desktop                                                         & Freedom Scientific \\[1.0em]
 ONYX OCR                   & \$4,520           & Desktop                                                         & Freedom Scientific \\[1.0em]
 Panda HD                   & \$2,098           & Desktop                                                         & Zoomax             \\[1.0em]
@@ -1285,7 +1300,7 @@ Snow Pad                   & TBD               & Hand-Held                      
 TOPAZ EZ HD                & \$3,081.75        & Desktop                                                         & Freedom Scientific \\[1.0em]
 TOPAZ OCR                  & \$4,640.00        & Desktop                                                         & Freedom Scientific \\[1.0em]
 TOPAZ XL HD                & \$4,045.00        & Desktop                                                         & Freedom Scientific \\[1.0em]
-Tactonum Pro               & £10,000           & Desktop\break Not Readily Mobile\break Requires mobile App      & Tactonum           \\[1.0em]
+Tactonum Pro               & £10,000           & Desktop\break Not Readily Mobile     & Tactonum           \\[1.0em]
 Taxtonum Reader            & £3,795.00         & Desktop\break Not Readily Mobile                                & Tactonum           \\[1.0em]
 explore 12                 & \$1,895           & Desktop                                                         & Humanware          \\[1.0em]
 explore 5                  & \$845             & Hand-Held (5'' screen)                                          & Humanware          \\[1.0em]
@@ -1294,9 +1309,16 @@ explore 8                  & \$1,275           & Hand-Held (8'' screen)         
 \end{longtable}
 
 \cleardoublepage
-\hypertarget{audio}{}\chapter[\raggedright Beyond Boundaries: \\Text-to-Speech and DAISY as Catalysts for Literacy and Success in Visual Impairment Education]{Beyond Boundaries: Text-to-Speech and DAISY as Catalysts for Literacy and Success in Visual Impairment Education}\label{audio}
+\hypertarget{audio}{}\chapter[\raggedright Beyond Boundaries: \\Text-to-Speech and DAISY as Catalysts for Literacy and Success \\in Visual Impairment Education]{Beyond Boundaries: Text-to-Speech and DAISY as Catalysts for Literacy and Success in Visual Impairment Education}\label{audio}
 \minitoc \newpage
 \extramarks{Vision Department Technology Needs}{Beyond Boundaries}
+
+The National Instructional Materials Accessibility Standard (NIMAS) and Digital Accessible Information System (DAISY) are two important tools for the education of students with visual impairments. NIMAS is a technical standard used by publishers to prepare “electronic files” that are used to convert instructional materials into accessible formats. The purpose of NIMAS is to help increase the availability and timely delivery of instructional materials in accessible formats for qualifying students in elementary and secondary schools\footnote{\raggedright \href{https://aem.cast.org/nimas-nimac/nimas-nimac}{AEM Center. (n.d.). NIMAS \& NIMAC. Retrieved December 19, 2023} \url{https://aem.cast.org/nimas-nimac/nimas-nimac}}. DAISY is a digital format for audio books that is designed to be more accessible to people with visual impairments. DAISY books can be read using specialized software that allows users to navigate through the book using headings, bookmarks, and other features\footnote{\raggedright \href{https://daisy.org/about_us/what-is-daisy/}{DAISY Consortium. (n.d.). What is DAISY? Retrieved December 19, 2023} \url{https://daisy.org/about_us/what-is-daisy/}}.
+
+NIMAS and DAISY are important because they help make educational materials more accessible to students with visual impairments. By providing instructional materials in accessible formats, students with visual impairments can participate more fully in the general education curriculum. This can help improve their academic performance and increase their chances of success in school.
+
+Finally, NIMAS and DAISY can help students with visual impairments become more independent. By providing instructional materials in accessible formats, students can read books, take notes, and communicate with others more easily. This can help them lead more fulfilling lives and become more active members of their communities.
+
 In the evolving landscape of education, the pursuit of literacy is a journey marked by innovation and inclusivity. For visually impaired students, the traditional pathways to literacy take on a distinctive form, guided by the transformative power of audiobook and DAISY (Digital Accessible Information System) readers. This chapter embarks on a profound exploration of the indispensable role that these tools play in breaking down barriers to literacy, ensuring access to a rich tapestry of knowledge, and propelling visually impaired students towards academic success.
 
 The quest for literacy is deeply entwined with the ability to access and engage with textual content. Audiobook and DAISY readers emerge as champions in this narrative, providing a dynamic bridge that transcends the limitations posed by traditional print materials. As we delve into this chapter, we will unravel the nuanced functionalities of these tools, showcasing how they offer not just access to literature but a pathway to immersive and engaging learning experiences.
@@ -1360,7 +1382,7 @@ c-Pen2                          & \$399         & Pen Scanner\break Text-to-Spee
 \end{longtable}
 
 
-\cleardoublepage\hypertarget{accessible-gps-mapping}{}\chapter[\raggedright Navigating Independence: \\The Essential Role of Accessible GPS Equipment in Empowering Visually Impaired Students for Success and Safety]{Navigating Independence: The Essential Role of Accessible GPS Equipment in Empowering Visually Impaired Students for Success and Safety}\label{accessible-gps-mapping}
+\cleardoublepage\hypertarget{accessible-gps-mapping}{}\chapter[\raggedright Navigating Independence: \\The Essential Role of Accessible Daily Living Technology in \\Empowering Visually Impaired Students for Success and Safety]{Navigating Independence: The Essential Role of Accessible Daily Living Technology in Empowering Visually Impaired Students for Success and SafetySafety}\label{accessible-gps-mapping}
 \minitoc \newpage
 \extramarks{Vision Department Technology Needs}{Navigating Independence}
 In the pursuit of independence and safety, orientation and mobility training holds a pivotal place in the educational journey of visually impaired students. In this dynamic landscape, accessible GPS equipment emerges as a technological beacon, offering a transformative bridge to mobility, autonomy, and enhanced safety. This chapter embarks on a compelling exploration of the indispensable role that accessible GPS tools play in empowering visually impaired students for success, ensuring safe navigation through the world, and fostering a sense of confidence in their daily lives.
@@ -1404,16 +1426,15 @@ Wayband            & \$250         & GPS (Haptic Output)        & WearWorks     
 	\caption{Accessible GPS Mapping / Navigation}\label{tab:table24}
 \end{longtable}
 
-\cleardoublepage\hypertarget{ind-living}{}\chapter[\raggedright Independent Living\hfill\\]{Independent Living}\label{ind-living}
-\minitoc \newpage
+\pagebreak \hypertarget{ind-living}{}\section[Accessible Technology for Daily Living]{Accessible Technology for Daily Living}\label{ind-living}
 \extramarks{Vision Department Technology Needs}{Independent Living}
 Auditory feedback technology is essential for blind people to live independently and complete daily tasks. It provides a way for the visually impaired to interact with their environment and receive information that they would otherwise miss. For example, an auditory-based tool can be used to support totally blind people to check the lights in an autonomous and relatively simple way\footnote{\raggedright \href{http://link.springer.com/article/10.1007/s12652-020-01944-w}{Leporini, B., Rosellini, M., \& Forgione, N. (2020). Designing assistive technology for getting more independence for blind people when performing everyday tasks: an auditory-based tool as a case study. Journal of Ambient Intelligence and Humanized Computing, 11(6), 6107-6123.} \url{http://link.springer.com/article/10.1007/s12652-020-01944-w}}. This is just one example of how technology can be used to help the blind. Other examples include haptic feedback, which can be used to provide tactile feedback to the user, and voice recognition software, which can be used to control devices and appliances. These technologies can help the visually impaired to navigate their environment, communicate with others, and perform tasks that would otherwise be difficult or impossible.
 
-By providing auditory feedback, technology can help the blind to live more independently and improve their quality of life. For instance, auditory-based tools can be used to support totally blind people to check the lights in an autonomous and relatively simple way\footnote{\raggedright \href{http://link.springer.com/article/10.1007/s12652-020-01944-w}{ibid}}. This tool can be used to detect the presence of light and provide feedback to the user through sound. The study also proposed an idea that can be exploited in other application cases that use light feedback\footnote{\raggedright \href{http://https://www.acb.org/content/accessible-pedestrian-signals-aps/}{American Council of the Blind. (n.d.). Accessible pedestrian signals (APS). Retrieved December 19, 2023} \url{http://https://www.acb.org/content/accessible-pedestrian-signals-aps/}}. This is just one example of how technology can be used to help the blind. Other examples include haptic feedback, which can be used to provide tactile feedback to the user, and voice recognition software, which can be used to control devices and appliances 2. These technologies can help the visually impaired to navigate their environment, communicate with others, and perform tasks that would otherwise be difficult or impossible.
+By providing auditory feedback, technology can help the blind to live more independently and improve their quality of life. For instance, auditory-based tools can be used to support totally blind people to check the lights in an autonomous and relatively simple way\footnote{\raggedright \href{http://link.springer.com/article/10.1007/s12652-020-01944-w}{ibid}}. This tool can be used to detect the presence of light and provide feedback to the user through sound. The study also proposed an idea that can be exploited in other application cases that use light feedback\footnote{\raggedright \href{http://https://www.acb.org/content/accessible-pedestrian-signals-aps/}{American Council of the Blind. (n.d.). Accessible pedestrian signals (APS). Retrieved December 19, 2023} \url{http://https://www.acb.org/content/accessible-pedestrian-signals-aps/}}. This is just one example of how technology can be used to help the blind. Other examples include haptic feedback, which can be used to provide tactile feedback to the user, and voice recognition software, which can be used to control devices and appliances. These technologies can help the visually impaired to navigate their environment, communicate with others, and perform tasks that would otherwise be difficult or impossible.
 
 In addition to the benefits mentioned above, auditory feedback technology can also help the blind to learn new skills and improve their education. For example, a study published in Frontiers in Neuroscience showed how haptic feedback can be used to help blind people learn Braille\footnote{\raggedright \href{http://www.frontiersin.org/articles/10.3389/fnins.2020.00528/full}{Fleury, M., Lioi, G., Barillot, C., \& Lécuyer, A. (2020). A Survey on the Use of Haptic Feedback for Brain-Computer Interfaces and Neurofeedback. Frontiers in Neuroscience, 14. doi.org/10.3389/fnins.2020.00528}}. The study found that haptic feedback can help the user to learn Braille faster and more accurately than traditional methods. This is just one example of how technology can be used to help the blind to learn new skills and improve their education. By providing auditory feedback, haptic feedback, and voice recognition software, technology can help the visually impaired to live more independently, improve their quality of life, and learn new skills.
 
-\hypertarget{ind-living-tools}{}\section{Accessible GPS Hardware}\label{ind-living-tools}
+\hypertarget{ind-living-tools}{}\subsection{Accessible Home Technology}\label{ind-living-tools}
 When purchasing household items modified to give audio feedback for the blind, it is important to consider the following factors to ensure that they can access activities of daily living\footnote{\raggedright \href{http://www.allaboutvision.com/resources/adapting-the-home-better-blindness-accessibility/}{All About Vision. (n.d.). Adapting your home for better blindness accessibility. Retrieved December 19, 2023} \url{http://www.allaboutvision.com/resources/adapting-the-home-better-blindness-accessibility/}}:
 \begin{itemize}[leftmargin=*]
 \item \textbf{Audible feedback}: Household items should provide audible feedback to the user to ensure that they are being used correctly and safely.
@@ -1457,6 +1478,10 @@ WayLink Scanner     & \$125\footnote{\raggedright An extra 25 magnets are availa
 In conclusion, the Individuals with Disabilities Education Act (IDEIA) mandates that students with disabilities, including those with visual impairments, must be given access to assistive technology to ensure they can participate fully in the curriculum\footnote{\raggedright \href{http://sites.ed.gov/idea/statuteregulations/}{20 U.S.C. § 1400, et.} \url{http://sites.ed.gov/idea/statuteregulations/}}. Screen magnification is one such assistive technology that can help students with visual impairments access their free public education. The overarching goal of this document has been  to shed light on the essential role that technology plays in not only accommodating these students but empowering them to thrive in educational environments. By providing students with visual impairments access to the technology they need, we can help ensure that they have the tools they need to succeed in their studies and beyond.
 
 Assistive technology is a critical component of ensuring that students with visual impairments receive a free and appropriate public education. The technology needs of these students must be addressed within the framework of IDEIA, which mandates that students with disabilities must be given access to assistive technology to ensure they can participate fully in the curriculum. Screen magnification is one such assistive technology that can help students with visual impairments access their free public education. By providing students with visual impairments access to the technology they need, we can help ensure that they have the tools they need to succeed in their studies and beyond.
+
+In addition to helping students with visual impairments access information and participate in classroom activities, assistive technology can also help these students become more independent. By providing students with the tools they need to access information and communicate with others, assistive technology can help them become more self-sufficient and less reliant on others 1. This can help improve their self-esteem and confidence, which can have a positive impact on their academic performance and overall well-being.
+
+Finally, it is important to note that the use of assistive technology is not a one-size-fits-all solution. The technology needs of students with visual impairments can vary widely depending on their individual needs and abilities. Therefore, it is important to work with students, families, and educators to identify the most appropriate assistive technology solutions for each student 1. By doing so, we can help ensure that students with visual impairments have the tools they need to succeed in school and beyond.
 
 In conclusion, the use of assistive technology is critical for students with visual impairments to receive a free and appropriate public education. The technology needs of these students must be addressed within the framework of IDEIA\footnote{\raggedright \href{http://sites.ed.gov/idea/statuteregulations/}{ibid}}, which mandates that students with disabilities must be given access to assistive technology to ensure they can participate fully in the curriculum. The use of assistive technology is essential for students with visual impairments to access the same educational materials as their sighted peers. Assistive technology can help students with visual impairments access text information across all curricular areas and participate fully in instruction that is often rich with visual content. The use of assistive technology also helps prepare students for independent living, vocational pursuits, or higher education following graduation from high school. By providing students with visual impairments access to the technology they need, we can help ensure that they have the tools they need to succeed in their studies and beyond.
 \addtocontents{toc}{\protect\clearpage}
@@ -1575,6 +1600,31 @@ Sometimes asking a listserv that talks about refreshable braille displays may gi
 \item \href{http://groups.io/g/blindadtech}{BlindADTech}  \break\url{http://groups.io/g/blindadtech}
 \item \href{http://groups.io/g/blind-techies/messages}{Blind Techies}  \break\url{http://groups.io/g/blind-techies/messages}
 \end{itemize}
+\end{itemize}
+
+\cleardoublepage\hypertarget{trouble3}{}\chapter[\raggedright Assistive Technology Considerations\hfill\\]{Assistive Technology Considerations}\label{trouble3}
+\minitoc \newpage
+\hypertarget{trouble5}{}\section[Assistive Technology Considerations]{Assistive Technology Considerations}\label{trouble5}
+\minitoc \newpage
+Assistive technology is an essential component of ensuring that students with visual impairments receive a free and appropriate public education. However, it is important to use a valid assistive technology assessment before providing assistive technology to a student. A valid assessment can help identify the specific needs of the student and determine the most appropriate assistive technology solutions. This can help ensure that the student receives the right tools to succeed in their studies\footnote{\raggedright \href{https://aem.cast.org/nimas-nimac/nimas-nimac}{AEM Center. (n.d.). NIMAS \& NIMAC. Retrieved December 19, 2023} \url{https://aem.cast.org/nimas-nimac/nimas-nimac}}. Additionally, a valid assessment can help ensure that the student receives the appropriate accommodations and modifications to their educational program\footnote{\raggedright \href{https://daisy.org/about_us/what-is-daisy/ }{DAISY Consortium. (n.d.). What is DAISY? Retrieved December 19, 2023} \url{https://daisy.org/about_us/what-is-daisy/ }}.
+
+It is also essential to use all the data available to guide decision making when providing assistive technology to a student. This includes data from the student, their family, and their educators. By using all the data available, educators can make informed decisions about the most appropriate assistive technology solutions for each student. This can help ensure that the student receives the right tools to succeed in their studies\footnote{\raggedright \href{https://aem.cast.org/learn/assistive-technology}{AEM Center. (n.d.). Assistive Technology. Retrieved December 19, 2023} \url{https://aem.cast.org/learn/assistive-technology}}. It is important to note that convenience should not be a factor when making decisions about assistive technology. The focus should always be on what is best for the student.
+
+Using a valid assistive technology assessment and all available data to guide decision making can help ensure that students with visual impairments receive the appropriate assistive technology solutions to succeed in their studies. This can help improve their academic performance and increase their chances of success in school. Additionally, it can help students with visual impairments become more independent in their daily lives. By providing students with the tools they need to access information and communicate with others, assistive technology can help them become more self-sufficient and less reliant on others\footnote{\raggedright \href{https://www.wati.org/free-publications/assistive-technology-consideration-to-assessment/}{Wisconsin Assistive Technology Initiative. (2010). Assistive technology consideration to assessment. Retrieved December 19, 2023} \url{https://www.wati.org/free-publications/assistive-technology-consideration-to-assessment/}}.
+
+Finally, it is important to note that the use of assistive technology is not a one-size-fits-all solution. The technology needs of students with visual impairments can vary widely depending on their individual needs and abilities. Therefore, it is important to work with students, families, and educators to identify the most appropriate assistive technology solutions for each student. By doing so, we can help ensure that students with visual impairments have the tools they need to succeed in school and beyond.
+
+\hypertarget{trouble4}{}\section[Assistive Technology Assessments]{Assistive Technology Assessments}\label{trouble4}
+There are several assistive technology assessments available for use with blind or visually impaired people. Here are some of the available assessments:
+\begin{itemize}[leftmargin=*]
+\item \href{https://www.teachingvisuallyimpaired.com/assistive-technology-assessment.html}{Snow, A. (n.d.). Assistive Technology Checklist for Assessment. Retrieved December 19, 2023} \break\url{https://www.teachingvisuallyimpaired.com/assistive-technology-assessment.html}
+\item \href{http://www.teachingvisuallyimpaired.com/uploads/1/4/1/2/14122361/at_assessment_revised.pdf}{Teaching Students with Visual Impairments. (n.d.). Assistive Technology Assessment for Students Who Are Blind or Visually Impaired. Retrieved December 19, 2023} \break\url{http://www.teachingvisuallyimpaired.com/uploads/1/4/1/2/14122361/at_assessment_revised.pdf}
+\item \href{https://www.perkins.org/sites/elearning.perkinsdev1.org/files/Basic\%20Technology\%20Assessment\%20Template_0_0.docx}{Perkins School for the Blind. (n.d.). Basic Technology Assessment Template. Retrieved December 19, 2023} \break\url{https://www.perkins.org/sites/elearning.perkinsdev1.org/files/Basic\%20Technology\%20Assessment\%20Template_0_0.docx}
+\item Presley, I., \& Siu, T. (2012). Assistive Technology for Students Who Are Blind or Visually Impaired: A Guide to Assessment. American Foundation for the Blind.
+\item \href{https://www.wati.org/free-publications/assessing-students-needs-for-assistive-technology/}{Wisconsin Assistive Technology Initiative} \break\url{https://www.wati.org/free-publications/assessing-students-needs-for-assistive-technology/}
+\item \href{https://mdelio.org/blind-visually-impaired/educator-support/assistive-technology-guidelines}{MDE-LIO Assistive Technology Guidelines} \break\url{https://mdelio.org/blind-visually-impaired/educator-support/assistive-technology-guidelines}
+
+
 \end{itemize}
 \end{appendices}
 \pagebreak
