@@ -55,8 +55,9 @@
 \usepackage{tikz}
 \usepackage{titlesec}
 \usepackage{titletoc}
+\usepackage{tablefootnote}
 \usepackage{xcolor}
-\usepackage{xcolor}
+\setlength\extrarowheight{0.5em}
 \renewcommand{\thefootnote}{\textbf{\arabic{footnote}}}
 \setlength{\LTleft}{0pt}
 \AtBeginEnvironment{longtable}{\fontsize{10pt}{10pt}\selectfont} 
@@ -197,6 +198,7 @@
 \cleardoublepage\include{./Chapters/Appendix1}
 \cleardoublepage\include{./Chapters/Appendix2}
 \cleardoublepage\include{./Chapters/Appendix3}
+%\cleardoublepage\include{./Chapters/Appendix4}
 \end{appendices}
 \pagebreak
 \end{document}
