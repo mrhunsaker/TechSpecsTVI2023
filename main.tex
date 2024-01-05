@@ -2,8 +2,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[bottom, hang, multiple]{footmisc}
 \usepackage[export]{adjustbox}
-\usepackage[firstpageonly=true]{draftwatermark}
-\DraftwatermarkOptions{color=red, angle=0, scale=.25, text=Technical Draft, vanchor=t, vpos=.05\paperheight}
+%\usepackage[firstpageonly=true]{draftwatermark}
+%\DraftwatermarkOptions{color=red, angle=0, scale=.25, text=Technical Draft, vanchor=t, vpos=.05\paperheight}
 \usepackage[font=small, labelfont=bf, labelsep=colon, hang, singlelinecheck=off, justification=raggedright]{caption}
 \usepackage[none]{hyphenat}
 \usepackage[title,toc,page,header, titletoc]{appendix}
@@ -161,8 +161,7 @@
 \fancyfoot{}
 \pagenumbering{roman}
 \extramarks{Vision Department Technology Needs}{Contents}
-\tableofcontents
-{\listoffigures\let\clearpage\relax\vskip-10pt\listoftables}
+{\tableofcontents\addtocontents{toc}{\protect\clearpage}\let\clearpage\relax\listoffigures\let\clearpage\relax\vskip-10pt\listoftables}
 \newpage{}
 \fancyhead{}
 \fancyfoot{}
