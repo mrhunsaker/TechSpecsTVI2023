@@ -1,9 +1,16 @@
-\documentclass[12pt,letterpaper,twoside,openright]{report}
+\documentclass[12pt,letterpaper,twoside, openright]{report}
+% catoptions patch (no guarantee that will work):
+% must be applied before loading catoptions
+\def\FIXcatoptions\endgroup#1\begingroup{#1}
+\AddToHook{package/after/catoptions}
+  {\gleftaddtocs\document{\FIXcatoptions}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[T1]{fontenc}
 \usepackage[bottom, hang, multiple]{footmisc}
 \usepackage[export]{adjustbox}
-%\usepackage[firstpageonly=true]{draftwatermark}
-%\DraftwatermarkOptions{color=red, angle=0, scale=.25, text=Technical Draft, vanchor=t, vpos=.05\paperheight}
+\usepackage{silence}
+\WarningFilter{hyperref}{Token not allowed in a PDF string}
+\WarningFilter{catoptions}{Undefined options}
 \usepackage[font=small, labelfont=bf, labelsep=colon, hang, singlelinecheck=off, justification=raggedright]{caption}
 \usepackage[none]{hyphenat}
 \usepackage[title,toc,page,header, titletoc]{appendix}
@@ -24,7 +31,7 @@
 \usepackage{color}
 \usepackage{csquotes}
 \usepackage{enumitem}
-\usepackage{enumitem}
+\usepackage[lof,lot]{etoc}
 \usepackage{etoolbox}
 \usepackage{etoolbox}
 \usepackage{extramarks}
@@ -42,7 +49,6 @@
 \usepackage{longtable,booktabs,array}
 \usepackage{makecell}
 \usepackage{mathptmx}
-\usepackage{minitoc}
 \usepackage{multirow}
 \usepackage{parskip}
 \usepackage{pdfpages}
@@ -57,6 +63,7 @@
 \usepackage{titletoc}
 \usepackage{tablefootnote}
 \usepackage{xcolor}
+
 \setlength\extrarowheight{0.5em}
 \renewcommand{\thefootnote}{\textbf{\arabic{footnote}}}
 \setlength{\LTleft}{0pt}
@@ -139,8 +146,7 @@
 \date{\vfill \textit{Last Updated: {\today}}}
 \renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
-
-\renewcommand{\mtctitle}{Chapter Contents}
+\PassOptionsToPackage{naturalnames}{hyperref}
 \begin{document}
 \raggedbottom
 \raggedright
@@ -153,50 +159,53 @@
 	filebordercolor=green,          % color of file links
 	urlbordercolor=blue            % color of external links
 }
-\dominitoc
-\setcounter{minitocdepth}{1}
 \setcounter{tocdepth}{1}
-
 \fancyhead{}
 \fancyfoot{}
 \pagenumbering{roman}
 \extramarks{Vision Department Technology Needs}{Contents}
-{\tableofcontents\addtocontents{toc}{\protect\clearpage}\let\clearpage\relax\listoffigures\let\clearpage\relax\vskip-10pt\listoftables}
+{\let\clearpage\relax\tableofcontents\addtocontents{toc}{\protect\pagebreak}\let\clearpage\relax\listoffigures\let\clearpage\relax\listoftables}
+
+%
 \newpage{}
 \fancyhead{}
 \fancyfoot{}
-
-\addstarredchapter{\raggedright Introduction\hfill\break}
+\interfootnotelinepenalty=10000
+\addcontentsline{toc}{chapter}{\raggedright Introduction}
+%\addstarredchapter{\raggedright Introduction\hfill\break}
 \pagestyle{fancyplain}
 \fancyfoot[C]{\thepage}
 \include{./Chapters/Introduction}
-
 \fancyhead[RO]{\textit{\lastxmark}}
 \fancyhead[LE]{\textit{\firstxmark}}
 \fancyfoot[RE, LO]{\textit{Page \thepage\  of \pageref{LastPage}}}
 \fancyfoot[LE, RO]{\textit{Last Updated: \today}}
 \fancyfoot[C]{}
+
 \pagenumbering{arabic}
-\cleardoublepage\include{./Chapters/Chapter1}
-\cleardoublepage\include{./Chapters/Chapter2}
-\cleardoublepage\include{./Chapters/Chapter3}
-\cleardoublepage\include{./Chapters/Chapter4}
-\cleardoublepage\include{./Chapters/Chapter5}
-\cleardoublepage\include{./Chapters/Chapter6}
-\cleardoublepage\include{./Chapters/Chapter7}
-\cleardoublepage\include{./Chapters/Chapter8}
-\cleardoublepage\include{./Chapters/Conclusion}
+\include{./Chapters/Chapter1}
+\include{./Chapters/Chapter2}
+\include{./Chapters/Chapter3}
+\include{./Chapters/Chapter4}
+\include{./Chapters/Chapter5}
+\include{./Chapters/Chapter6}
+\include{./Chapters/Chapter7}
+\include{./Chapters/Chapter8}
+\include{./Chapters/Conclusion}
 \addtocontents{toc}{\protect\clearpage}
-\renewcommand{\mtctitle}{Appendix Contents}
-\addstarredchapter{\raggedright APPENDICES\hfill\break}
+\addcontentsline{toc}{chapter}{\raggedright APPENDICES}
+\titleformat{\section}[block]
+  {\normalfont\Large\bfseries\raggedright}{Appendix \thesection:\newline}{1em}{}
+\titlespacing*{\section}{0pt}{10pt}{10pt}
+%\addstarredchapter{\raggedright APPENDICES\hfill\break}
 \begin{appendices}
 \titleformat{\chapter}[block]
 {\normalfont\LARGE\bfseries\raggedright}{Appendix \thechapter\newline}{1em}{}
 \titlespacing*{\chapter}{-10pt}{0pt}{0pt}
-\cleardoublepage\include{./Chapters/Appendix1}
-\cleardoublepage\include{./Chapters/Appendix2}
-\cleardoublepage\include{./Chapters/Appendix3}
-%\cleardoublepage\include{./Chapters/Appendix4}
+\include{./Chapters/Appendix1}
+\include{./Chapters/Appendix2}
+\include{./Chapters/Appendix3}
+\include{./Chapters/Appendix4}
 \end{appendices}
 \pagebreak
 \end{document}
