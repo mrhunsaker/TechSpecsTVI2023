@@ -1,4 +1,4 @@
-\documentclass[12pt,letterpaper,twoside, openleft]{extreport}
+\documentclass[11pt,letterpaper,twoside]{extreport}
 % catoptions patch (no guarantee that will work):
 % must be applied before loading catoptions
 \def\FIXcatoptions\endgroup#1\begingroup{#1}
@@ -11,11 +11,12 @@
 \usepackage{silence}
 \WarningFilter{hyperref}{Token not allowed in a PDF string}
 \WarningFilter{catoptions}{Undefined options}
+\WarningFilter{subfloat}{Numbers of floats not counted}
 \usepackage[font=small, labelfont=bf, labelsep=colon, hang, singlelinecheck=off, justification=raggedright]{caption}
 \usepackage[none]{hyphenat}
 \usepackage[title,toc,page,header, titletoc]{appendix}
 \usepackage[titles]{tocloft}
-\PassOptionsToPackage{hyphens}{url}\usepackage[unicode]{hyperref}
+\PassOptionsToPackage{hyphens}{url}\usepackage[unicode,colorlinks=true,linkcolor=blue]{hyperref}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -63,6 +64,11 @@
 \usepackage{titletoc}
 \usepackage{tablefootnote}
 \usepackage{xcolor}
+\usepackage{chngcntr}
+\usepackage{subfig}
+\usepackage[normalem]{ulem}
+\usepackage{subfloat}
+
 \setlength\extrarowheight{0.5em}
 \renewcommand{\thefootnote}{\textbf{\arabic{footnote}}}
 \setlength{\LTleft}{0pt}
@@ -101,19 +107,37 @@
 \renewcommand{\headrulewidth}{1pt} 
 \renewcommand{\footrulewidth}{1pt}
 \setmainfont{Atkinson-Hyperlegible}[
-    Path=./fontfiles/,
+    Path=fontfiles/,
     Extension=.otf,
     UprightFont=*-Regular-102,
     BoldFont=*-Bold-102,
     ItalicFont=*-Italic-102,
     BoldItalicFont=*-BoldItalic-102
 ]
+\setsansfont{Aphont}[
+    Path=fontfiles/,
+    Extension=.ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+    ]
+
+\setmonofont{JetBrainsMono}[
+    Path=fontfiles/,
+    Extension=.ttf,
+    UprightFont= *-Medium,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+    ]
+\newfontfamily\ComicSans{Comic Sans MS}
 \renewcommand{\appendixtocname}{List of appendices}
 \renewcommand{\appendixpagename}{APPENDICES}
 \appendixtocoff
 \titleformat{\chapter}[block]
 {\normalfont\LARGE\bfseries\raggedright}{Chapter \thechapter:\newline}{1em}{}
-\titlespacing*{\chapter}{-10pt}{-20pt}{0pt}
+\titlespacing*{\chapter}{-10pt}{-10pt}{0pt}
 
 \titleformat{\section}[block]
   {\normalfont\Large\bfseries\raggedright}{\thesection:}{1em}{}
@@ -125,6 +149,7 @@
 
 \renewcommand\cftsecafterpnum{\vskip1pt}
 \setlength{\cftbeforesecskip}{0pt}
+
 \appendixtitleon 
 \appendixtitletocon
 
@@ -136,6 +161,7 @@
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \PassOptionsToPackage{naturalnames}{hyperref}
 \begin{document}
+%\renewcommand{\thefootnote}{\textcolor{blue}{\arabic{footnote}}}
 \raggedbottom
 \raggedright
 \pagenumbering{gobble}
@@ -145,24 +171,29 @@
 	
 	Screen readers are software that read content on the computer’s screen and web browsers or content on the computer’s operating system. Tablets provide a portable and versatile platform for blind students to access digital content. Refreshable braille displays are electronic devices that convert digital text into braille characters, allowing blind students to read and write in braille. Embossed braille is a tactile writing system that uses raised dots to represent letters and numbers, enabling blind students to read and read braille. 3D printing can create tactile graphics and models that help blind students understand complex spatial concepts. Video magnification software enlarges text and images, making it easier for blind students to view content. Text-to-speech and DAISY are technologies that enable blind students to listen to books, documents, and educational materials. Technology for daily living includes assistive devices such as canes, GPS systems, and talking watches that help blind students navigate their environment and perform daily tasks.
 	
-	Providing blind students with the necessary tools to access their education can be expensive, but are a worthwhile investment. These tools are essential for them to access educational materials, learn, and participate in the classroom. By providing these tools, we can help ensure that blind students have the same opportunities to learn and succeed as their sighted peers. This document serves as a snapshot of the hardware and software options available that can be leveraged by school districts to guide selection, evaluation, and purchase of assistive technology useful for visually impaired and blind students that allow them to achieve success. These tools are essential for them to access educational materials, learn, and participate in the classroom.
+	Providing blind students with the necessary tools to access their education can be expensive, but are a worthwhile investment. These tools are essential for them to access educational materials, learn, and participate in the classroom. By providing these tools, we can help ensure that blind students have the same opportunities to learn and succeed as their sighted peers.  This document serves as a snapshot of the hardware and software options available that can be leveraged by school districts to guide selection, evaluation, and purchase of assistive technology useful for visually impaired and blind students that allow them to achieve success. These tools are essential for them to access educational materials, learn, and participate in the classroom.
 	\vfill
 }
 \clearpage
 \hypersetup{
-	pdfborderstyle={/S/U/W 1},     % underline links instead of boxes
-	linkbordercolor=red,           % color of internal links
-	citebordercolor=blue,          % color of links to bibliography
-	filebordercolor=blue,          % color of file links
-	urlbordercolor=blue            % color of external links
+	pdfborderstyle={/S/U/W 1},     
+	linkbordercolor=magenta,
+        linkcolor=darkgray,
+	citecolor=darkgray,
+        citebordercolor=magenta,
+	filebordercolor=magenta,           
+	urlbordercolor=magenta,  
+        urlcolor=darkgray
 }
 \setcounter{tocdepth}{1}
+
 \fancyhead{}
 \fancyfoot{}
 \pagenumbering{roman}
 \extramarks{Vision Department Technology Needs}{Contents}
 \tableofcontents
 \listoftables
+\listoffigures
 \newpage{}
 \fancyhead{}
 \fancyfoot{}
@@ -178,7 +209,7 @@
 \fancyfoot[C]{}
 
 \pagenumbering{arabic}
-\include{./Chapters/Chapter1}
+\cleardoublepage \include{./Chapters/Chapter1}
 \include{./Chapters/Chapter2}
 \cleardoublepage\include{./Chapters/Chapter3}
 \include{./Chapters/Chapter4}
@@ -200,6 +231,15 @@
 \include{./Chapters/Appendix2}
 \include{./Chapters/Appendix3}
 \include{./Chapters/Appendix4}
+\include{./Chapters/Appendix5}
 \end{appendices}
-\pagebreak
+\cleardoublepage
+\mbox{}
+\vfill
+Copyright\copyright\quad\today\quad Michael Ryan Hunsaker, M.Ed., Ph.D.
+
+\vspace{2.5em} 
+\textit{The views expressed in this document are solely those of the author and do not necessarily reflect the views of Davis School District.}
+\vfill
+For additional information please contact me at \href{mailto:ryhunsaker@dsdmail.net}{ryhunsaker@dsdmail.net}
 \end{document}
