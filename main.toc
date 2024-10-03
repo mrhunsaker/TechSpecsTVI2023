@@ -1,0 +1,133 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\raggedright Introduction}{vi}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}\raggedright Navigating Success:\hfill \break The Indispensable Role of Screen Readers and Magnification\hfill \break Programs for Visually Impaired Students}{1}{chapter.1}%
+\etoc@startlocaltoc {2}
+\etoc@startlocaltoc {3}
+\contentsline {section}{\numberline {1.1}Vision Specific Software Needs}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Student Software Needs}{4}{subsection.1.1.1}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces Software used by Students with Visual Impairments}}{7}{table.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Teacher Software Needs}{8}{subsection.1.1.2}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Software used by TVIs}}{11}{table.1.2}%
+\contentsline {section}{\numberline {1.2}RAM Requirements}{12}{section.1.2}%
+\contentsline {table}{\numberline {1.3}{\ignorespaces How Much RAM is Needed?\relax }}{13}{table.1.3}%
+\contentsline {section}{\numberline {1.3}Current Student \& Professional Laptops}{15}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Current Laptop Performance}{17}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Screenreader Loading}{18}{section.1.5}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Latency to Load JAWS}}{19}{figure.caption.4}%
+\contentsline {section}{\numberline {1.6}Screenreader Responsiveness}{20}{section.1.6}%
+\contentsline {table}{\numberline {1.5}{\ignorespaces Lag in JAWS Reporting Readable Content\relax }}{21}{table.1.5}%
+\contentsline {table}{\numberline {1.5}{\ignorespaces Lag in JAWS Reporting Readable Content\relax }}{21}{table.1.5}%
+\contentsline {section}{\numberline {1.7}Measured Laptop RAM with Accessibility Tools}{22}{section.1.7}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Measured Laptop RAM with only Accessibility Tools Open}}{23}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Measured Laptop RAM with Accessibility Tools + Microsoft Word}}{24}{figure.caption.6}%
+\contentsline {section}{\numberline {1.8}Laptop Cost Factors}{25}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Laptop Durability}{25}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Role of GPU in Laptop Performance}{27}{subsection.1.8.2}%
+\contentsline {table}{\numberline {1.6}{\ignorespaces Screen Magnifiers Benefit from Integrated GPU}}{29}{table.1.6}%
+\contentsline {subsection}{\numberline {1.8.3}Laptop Cost Optimization}{30}{subsection.1.8.3}%
+\contentsline {table}{\numberline {1.7}{\ignorespaces Cost of Laptops over Time}}{31}{table.1.7}%
+\contentsline {subsection}{\numberline {1.8.4}Replacement Timeline}{32}{subsection.1.8.4}%
+\contentsline {section}{\numberline {1.9}Recommended Laptop Specifications}{33}{section.1.9}%
+\contentsline {table}{\numberline {1.8}{\ignorespaces Recommended Laptop Specifications\relax }}{34}{table.1.8}%
+\contentsline {section}{\numberline {1.10}Laptops Meeting Specifications}{35}{section.1.10}%
+\contentsline {table}{\numberline {1.9}{\ignorespaces Laptop Options Meeting Minimum Recommended Specifications}}{47}{table.1.9}%
+\contentsline {chapter}{\numberline {2}\raggedright Transformative Tablets:\hfill \break Pioneering Success for Visually Impaired Students Through\hfill \break Innovative Apps}{48}{chapter.2}%
+\etoc@startlocaltoc {4}
+\etoc@startlocaltoc {5}
+\contentsline {section}{\numberline {2.1}Tablet Considerations}{50}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Tablet Options}{52}{section.2.2}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Tablet Options}}{55}{table.2.1}%
+\contentsline {section}{\numberline {2.3}Tablet Recommendations}{56}{section.2.3}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Tablet Recommendations}}{56}{table.2.2}%
+\contentsline {section}{\numberline {2.4}Mobile Applications}{57}{section.2.4}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Mobile/Tablet Apps}}{61}{table.2.3}%
+\contentsline {chapter}{\numberline {3}\raggedright Bridging Literacy:\hfill \break The Crucial Role of Refreshable Braille Displays in Empowering\hfill \break Visually Impaired Students}{63}{chapter.3}%
+\etoc@startlocaltoc {6}
+\etoc@startlocaltoc {7}
+\contentsline {section}{\numberline {3.1}Braille Notetakers and Laptops}{65}{section.3.1}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Braille NoteTakers and Laptops \relax }}{66}{table.3.1}%
+\contentsline {section}{\numberline {3.2}Braille Notetaker/Laptop Recommendations}{67}{section.3.2}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Braille Notetaker and Laptop Recommendations}}{68}{table.3.2}%
+\contentsline {section}{\numberline {3.3}Refreshable Braille Displays}{69}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}14-20 cell Refreshable Braille Displays}{70}{subsection.3.3.1}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces 14-20 cell Single Line Refreshable Braille Displays}}{70}{table.3.3}%
+\contentsline {subsection}{\numberline {3.3.2}32-40 cell Refreshable Braille Displays}{71}{subsection.3.3.2}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces 32-40 cell Single Line Refreshable Braille Displays \relax }}{72}{table.3.4}%
+\contentsline {section}{\numberline {3.4}Multiple Line Braille Displays/Tablets}{73}{section.3.4}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Multiple Line Refreshable Braille Devices \relax }}{74}{table.3.5}%
+\contentsline {section}{\numberline {3.5}Braille Education Devices}{75}{section.3.5}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Braille Education Device}}{76}{table.3.6}%
+\contentsline {chapter}{\numberline {4}\raggedright Empowering Minds:\hfill \break The Crucial Role of High-Quality Braille Embossers in Unlocking\hfill \break STEM Literacy for Visually Impaired Students}{77}{chapter.4}%
+\etoc@startlocaltoc {8}
+\etoc@startlocaltoc {9}
+\contentsline {section}{\numberline {4.1}Braille Embossers}{79}{section.4.1}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Braille Embossers focusing on Text}}{79}{table.4.1}%
+\contentsline {section}{\numberline {4.2}High Resolution Tactile Graphics}{80}{section.4.2}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Equipment for Tactile Graphics Generation\relax }}{81}{table.4.2}%
+\contentsline {section}{\numberline {4.3}Tactile Graphic Supplies}{82}{section.4.3}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Paper supplies for Tactile Graphics Generation \relax }}{82}{table.4.3}%
+\contentsline {chapter}{\numberline {5}\raggedright Shaping Knowledge:\hfill \break The Imperative Role of 3D Printed Materials in Fostering Hands-On\hfill \break Literacy for Visually Impaired Students}{83}{chapter.5}%
+\etoc@startlocaltoc {10}
+\etoc@startlocaltoc {11}
+\contentsline {section}{\numberline {5.1}3D Printers}{85}{section.5.1}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces 3D Printers \relax }}{86}{table.5.1}%
+\contentsline {section}{\numberline {5.2}3D Printer Materials}{87}{section.5.2}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces 3D Printer Materials \relax }}{87}{table.5.2}%
+\contentsline {section}{\numberline {5.3}3D Printer Software}{88}{section.5.3}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces 3D Printer Materials \relax }}{88}{table.5.3}%
+\contentsline {chapter}{\numberline {6}\raggedright Amplifying Vision:\hfill \break The Vital Role of Video Magnification Products in Fostering Literacy\hfill \break and Success for Visually Impaired Students}{89}{chapter.6}%
+\etoc@startlocaltoc {12}
+\etoc@startlocaltoc {13}
+\contentsline {section}{\numberline {6.1}Video Magnification Devices}{91}{section.6.1}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Video Magnification Devices\relax }}{93}{table.6.1}%
+\contentsline {chapter}{\numberline {7}\raggedright Beyond Boundaries:\hfill \break Text-to-Speech and DAISY as Catalysts for Literacy and Success\hfill \break in Visual Impairment Education}{95}{chapter.7}%
+\etoc@startlocaltoc {14}
+\etoc@startlocaltoc {15}
+\contentsline {section}{\numberline {7.1}DAISY Readers}{98}{section.7.1}%
+\contentsline {table}{\numberline {7.1}{\ignorespaces DAISY/Audiobook/Podcast Devices \relax }}{99}{table.7.1}%
+\contentsline {section}{\numberline {7.2}Text-to-Speech}{100}{section.7.2}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Text-to-Speech Devices\relax }}{101}{table.7.2}%
+\contentsline {chapter}{\numberline {8}\raggedright Navigating Independence:\hfill \break The Essential Role of Accessible Daily Living Technology in\hfill \break Empowering Visually Impaired Students for Success and Safety}{102}{chapter.8}%
+\etoc@startlocaltoc {16}
+\etoc@startlocaltoc {17}
+\contentsline {section}{\numberline {8.1}Accessible GPS Hardware}{104}{section.8.1}%
+\contentsline {table}{\numberline {8.1}{\ignorespaces Accessible GPS Mapping / Navigation\relax }}{104}{table.8.1}%
+\contentsline {section}{\numberline {8.2}Accessible Technology for Daily Living}{105}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Accessible Home Technology}{106}{subsection.8.2.1}%
+\contentsline {table}{\numberline {8.2}{\ignorespaces Accessible Independent Living Technology\relax }}{107}{table.8.2}%
+\contentsline {chapter}{\numberline {9}\raggedright Conclusion\hfill \break }{108}{chapter.9}%
+\clearpage 
+\clearpage 
+\contentsline {chapter}{\raggedright APPENDICES}{110}{chapter.9}%
+\contentsline {chapter}{Appendix \numberline {A}\hfill \break \raggedright Troubleshooting Screenreader \& Magnifier Performance}{113}{appendix.a.A}%
+\etoc@startlocaltoc {18}
+\contentsline {section}{\numberline {A.1}Clearing System Cache}{114}{section.a.A.1}%
+\contentsline {section}{\numberline {A.2}Slow Responsiveness}{115}{section.a.A.2}%
+\contentsline {section}{\numberline {A.3}Official Support Contact}{116}{section.a.A.3}%
+\contentsline {section}{\numberline {A.4}Community Support via ListServ}{116}{section.a.A.4}%
+\contentsline {chapter}{Appendix \numberline {B}\hfill \break \raggedright Troubleshooting Braille Notebooks and Displays}{118}{appendix.a.B}%
+\etoc@startlocaltoc {19}
+\contentsline {section}{\numberline {B.1}Braille Notetakers}{119}{section.a.B.1}%
+\contentsline {section}{\numberline {B.2}Braille Displays}{120}{section.a.B.2}%
+\contentsline {section}{\numberline {B.3}Official Support Contact}{121}{section.a.B.3}%
+\contentsline {section}{\numberline {B.4}Community Support via ListServ}{122}{section.a.B.4}%
+\contentsline {chapter}{Appendix \numberline {C}\hfill \break \raggedright Assistive Technology Considerations}{123}{appendix.a.C}%
+\etoc@startlocaltoc {20}
+\contentsline {section}{\numberline {C.1}Assistive Technology Considerations}{124}{section.a.C.1}%
+\contentsline {section}{\numberline {C.2}SETT Framework}{125}{section.a.C.2}%
+\contentsline {section}{\numberline {C.3}Assistive Technology Assessments}{126}{section.a.C.3}%
+\contentsline {chapter}{Appendix \numberline {D}\hfill \break \raggedright Instructional Programs \& Materials Materials}{127}{appendix.a.D}%
+\etoc@startlocaltoc {21}
+\contentsline {section}{\numberline {D.1}Accessible Touch Typing Instruction}{129}{section.a.D.1}%
+\contentsline {section}{\numberline {D.2}AndroidOS/iOS/iPadOS Gesture Training}{131}{section.a.D.2}%
+\contentsline {section}{\numberline {D.3}Screenreader Training}{132}{section.a.D.3}%
+\contentsline {section}{\numberline {D.4}Screen Magnifier Training}{134}{section.a.D.4}%
+\contentsline {section}{\numberline {D.5}Braille Display Use}{135}{section.a.D.5}%
+\contentsline {section}{\numberline {D.6}Accessible Coding Curricula}{136}{section.a.D.6}%
+\contentsline {chapter}{Appendix \numberline {E}\hfill \break \raggedright Accessible Fonts}{138}{appendix.a.E}%
+\etoc@startlocaltoc {22}
+\contentsline {section}{\numberline {E.1}Atkinson Hyperlegible Font}{140}{section.a.E.1}%
+\contentsline {section}{\numberline {E.2}APHont}{141}{section.a.E.2}%
+\contentsline {section}{\numberline {E.3}Comic Sans MS}{142}{section.a.E.3}%
+\contentsline {section}{\numberline {E.4}JetBrains Mono}{143}{section.a.E.4}%
+\contentsfinish 
