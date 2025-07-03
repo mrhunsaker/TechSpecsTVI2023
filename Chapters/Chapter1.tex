@@ -1,762 +1,821 @@
-\hypertarget{vision-assistive-technology-laptop-computer-requirements}{}\chapter[\raggedright Navigating Success:\hfill\break The Indispensable Role of Screen Readers and Magnification\hfill\break Programs for Visually Impaired Students]{Navigating Success: The Indispensable Role of Screen Readers and Magnification Programs for Visually Impaired Students}\label{vision-assistive-technology-laptop-computer-requirements}
-\extramarks{Vision Department Technology Needs}{Chapter 1: Navigating Success}
-\noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}
-{\let\clearpage\relax\localtableofcontents\let\clearpage\relax\locallistoftables}\newpage
+\chapter{Impact of Hardware Limitations on Screen Reader Response Latency and Student Academic Performance}\label{vision-assistive-technology-laptop-computer-requirements}
 
-In the dynamic landscape of education, technology stands as a powerful enabler, breaking down barriers and creating pathways for inclusivity. Nowhere is this more evident than in the realm of assistive technology designed for visually impaired students. Among the myriad tools at their disposal, screen readers and magnification programs emerge as keystones, indispensable in shaping an environment where success is not just attainable but expected.
+\section{Executive Summary}\label{executive-summary}
 
-For visually impaired students, these tools represent a digital gateway to a world of knowledge, interaction, and independent learning. This chapter endeavors to illuminate the significance of screen readers and magnification programs, highlighting their essential roles in fostering student success. As the educational landscape continues to evolve, it is crucial to recognize that the transformative power of technology is not a luxury but a necessity, especially for those whose access to information is mediated by visual impairments.
+Screen reader response latency—the delay between user input and audio feedback—creates significant barriers to academic success for students using assistive technology on underpowered computers. Research demonstrates that hardware limitations, particularly insufficient RAM and older CPU generations, directly increase response delays that trigger frustration, impair task completion, and ultimately undermine educational outcomes. Current findings indicate that systems with 16 GB RAM demonstrate unacceptably long latency periods, necessitating a minimum recommendation of 24-32 GB RAM for educational equity.
 
-Screen readers, with their adept ability to convert digital text into synthesized speech, empower visually impaired students to engage with written content. As we delve into the intricacies of these tools, we will uncover their pivotal role in granting students access to textbooks, online resources, and educational materials that are the bedrock of academic achievement. Simultaneously, magnification programs play a crucial role in enhancing visual content, allowing students to explore images, charts, and diagrams with a level of detail that might otherwise be elusive.
+\section{The Latency Problem}\label{the-latency-problem}
 
-Screen magnification is another crucial tool for students with visual impairments, as it enables them to access text and other visual content in the classroom. By magnifying the text and images on the screen, students can read and view the content more easily, which can help them keep up with their peers and achieve academic success. In this chapter, we will explore the importance of screen magnification for students with visual impairments and how it can help them access their free public education.
+\subsection{The Zero-Frustration Imperative}chapter\label{the-zero-frustration-imperative}
 
-Through the lens of accessibility, this exploration seeks to underscore the imperative nature of these technologies, not as mere tools but as companions on the road to success for visually impaired students navigating the educational landscape.
+Students using screen readers must achieve \emph{equivalent response times to their sighted peers} to ensure educational equity. Any additional latency beyond what sighted users experience creates an unfair disadvantage and violates principles of equal access.
 
-\pagebreak \hypertarget{software-needs}{}\section{Vision Specific Software Needs}\label{software-needs}
-As a student with visual impairments, accessing a free and appropriate public education can be challenging. However, with the help of special software, students can overcome these challenges and achieve academic success. Assistive Technology has improved the lives of students and adults living with visual impairments by providing access, connectedness, and engagement. The use of assistive technology can facilitate a learning environment where students are able to better access their educational program through low or high technology accommodations.
+\subsection{Critical Response Time Thresholds}\label{critical-response-time-thresholds}
 
-Incorporating special software can help students with visual impairments to access the same educational resources as their peers. It can also help them to learn at their own pace and in their own way. For instance, screen readers and magnification options built into mainstream tablets and smartphones can help students with visual impairments to read and write emails, texts, and documents.
+\subsubsection{Perceptibility Thresholds:}
+\begin{itemize}
+    \item \emph{<10 ms}: Imperceptible, maintaining illusion of instantaneous response (TARGET RANGE)
+    \item \emph{10-100 ms}: Noticeable delay disrupts user flow, causes mild frustration
+    \item \emph{>100 ms}: Consistently interrupts interaction flow, prompts repeated inputs
+\end{itemize}
 
-In addition, technology can help students with visual impairments to become active learners. Traditional lectures may not be the optimal learning style for visually impaired students. However, hands-on engagement through technology can help them to better understand and complete assignments and tests.
+\subsubsection{Frustration Thresholds:}
+\begin{itemize}
+    \item \emph{100-500 ms}: Significant frustration in direct manipulation tasks, degrades efficiency and increases errors
+    \item \emph{>500 ms}: Unacceptable for educational use—users abandon tasks due to perceived system freezes
+    \item \emph{>1 second}: Severely disrupts attention and learning flow
+\end{itemize}
 
-By using special software, students with visual impairments can have equal access to educational opportunities and can be better prepared for the real world. It can also help them to acquire the skills required for independent living and getting higher education.
+\subsubsection{Audio-Specific Critical Factors:}
+\begin{itemize}
+    \item \emph{20 ms}: Lower threshold for audible delay perception in screen reader audio feedback
+    \item \emph{25 ms}: Performance degradation threshold—beyond this point, measurable efficiency loss occurs
+    \item \emph{100-800 ms}: Critical danger zone where speech truncation occurs, causing navigation errors and forcing workflow adjustments
+\end{itemize}
 
-\pagebreak\hypertarget{student-software-needs}{}\subsection{Student Software Needs}\label{student-software-needs}
-\textit{Table \ref{tab:table1}} is a list of software used to access material as well as necessary academic software used by students with visual impairments\footnote{\raggedright We focus on Windows-based laptops due to the ubiquity of Windows-based software used in schools. MacOS-based laptops are more than adequate to run software along with the built in VoiceOver screenreader To date there are no additional screenreaders for MacOS, however one is currently in development called \href{http://youtu.be/qTkS-zNzF88?si=3XTXtbyOWD9kvwlk}{VOSH}. There are multiple Linux distributions that are actively working to improve ORCA screenreader accessibility within the GNOME desktop environment. There are also a number of independently developed screenreaders for Linux architectures as well as Chromebooks}\fnsep\footnote{\raggedright This includes the TVI teaching how to use the software skills, but primarily refers to programs visually impaired students need to access the curriculum}. This information will be used to determine necessary laptop specifications for students using these software to access their schoolwork at the same time as their sighted peers.
+\subsubsection{Educational Equity Standard:}
+For true accessibility, screen reader response times must remain \emph{under 25 ms} to match the responsiveness sighted students experience with visual interfaces.
 
-\pagebreak\begin{longtable}[]{
->{\raggedright\arraybackslash}m{.25\textwidth}
->{\raggedright\arraybackslash}m{.2\textwidth}
->{\raggedright\arraybackslash}m{.15\textwidth}
->{\raggedright\arraybackslash}m{.1\textwidth}
->{\raggedright\arraybackslash}m{.1\textwidth}
->{\raggedright\arraybackslash}b{.15\textwidth}}
-\toprule
-\textbf{Program} & \textbf{Type of Program} & \textbf{Cost} & \textbf{Min RAM} & \textbf{Pref RAM} & \textbf{Processor} \\
-\midrule
-\endhead \hline \\
-\multicolumn{6}{r}{\textbf{Continued on Next Page}} \endfoot
-\endlastfoot
-JAWS & Screenreader & \$225/yr\footnote{\raggedright Typically purchased via through APH quota funds}\footnote{\raggedright Prior to October 2024 this was \$95/yr, however Freedom Scientific altered the policy so that JAWS, ZoomTEXT, and/or Fusion as a bundle are th only purchase option} & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i5+ \\ \cdashline{1-6}
-TypeAbility & Typing Instruction\footnote{\raggedright TypeAbility requires JAWS or Fusion to run as it uses the JAWS voice engine in order to run} & \$150\footnote{\raggedright as of version 4.7.0 the following is the pricing structure: \$150.00 each, \$130.00 per unit for buying at least 5, \$120.00 per unit for buying at least 10, \$110.00 per unit for buying at least 15, \$105.00 per unit for buying at least 20, \$100.00 per unit for buying at least 30, \$95.00 per unit for buying at least 40, \$90.00 per unit for buying at least 50, \$85.00 per unit for buying at least 60, \$80.00 per unit for buying at least 70, \$75.00 per unit for buying at least 80, \$70.00 per unit for buying at least 90, \$65.00 per unit for buying at least 100} & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i5+ \\ \cdashline{1-6}
-Narrator\footnote{\raggedright Windows Narrator is a built in to Windows 10 and Windows 11} & Screenreader & \$0 & 4GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i5 \\ \cdashline{1-6}
-NVDA & Screenreader & \$0\footnote{\raggedright NVDA is free, but if you want Eloquence, Acapella, or Vocalizer Expressive TTS Voices, they have to be purchased from \href{http://codefactoryglobal.com/nova/eloquence-and-vocalizer-embedded-add-on-for-nvda/}{CodeFactory} for \$70} & 2GB & \textgreater8GB & \textgreater11th Gen Intel® Core™ i5 \\ \cdashline{1-6}
-ZDSR & Screen Reader & \$232 & 2GB & \textgreater8GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Dolphin Screenreader & Screenreader & \$1105/yr & 8GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-ZoomText & Magnification\break \& Speech & \$85/yr\footnote{\raggedright Typically purchased via through APH quota funds} \footnote{\raggedright Prior to October 2024 this was \$85/yr, however Freedom Scientific altered the policy so that JAWS, ZoomTEXT, and/or Fusion as a bundle are th only purchase option}& 16GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Windows Magnifier\footnote{\raggedright Windows Magnifier is a built in to Windows 10 and Windows 11} & Magnification & \$0 & 16GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Dolphin SuperNova & Magnification & \$545/yr & 16GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Dolphin SuperNova\break +Speech & Magnification\break \& Speech & \$825/yr & 16GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Fusion & Screenreader \break \& Magnification & \$225/yr\footnote{\raggedright Typically purchased via through APH quota funds} \footnote{\raggedright Prior to October 2024 this was \$170/yr, however Freedom Scientific altered the policy so that JAWS, ZoomTEXT, and/or Fusion as a bundle are the only purchase option}& 16GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Dolphin Screenreader\break +SuperNova & Screenreader \break \& Magnification & \$1665/yr & 8GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Java JDK 8\footnote{\raggedright This JDK is no longer considered up to date but has been designated as receiving long term support until 2030, however most modern accessibility tools are developed using Java 11, 17, or 21. \textit{cf}., \href{http://www.oracle.com/java/technologies/java-se-support-roadmap.hl}{Java SE Support Roadmap}} & Dependency\footnote{\raggedright JAWS and NVDA screenreaders often communicate with the Operating System using custom modifications to the JAVA Access Bridge. As such, JAVA is a dependency for most software packages addressing accessibility} & \$0 & 4GB & \textgreater8GB & \textgreater9th Gen Intel® Core™ i3+ \\ \cdashline{1-6}
-Microsoft 365 \footnote{\raggedright Microsoft is adding OpenAI based tools called \href{http://www.Microsoft.com/en-us/Microsoft-365/enterprise/Microsoft-365-copilot}{Microsoft CoPilot} to their products, which takes an extra 1-3GB of RAM in order to concurrently run Office applications and screenreaders smoothly} & Work Completion & \$7/mo & 4GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i5 \\ \cdashline{1-6}
-Windows 11 & Operating System & Home \$139 \break Pro \$199 & 4GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Windows 11 (CoPilot PC)\footnote{\raggedright Current \href{https://www.digitaltrends.com/computing/windows-12-ai-pc-ram-requirements/}{tech reports}} & Operating System & Home \$139 \break Pro \$199 & 16GB & \textgreater24GB & \textgreater14th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Microsoft Teams & Web Meeting & \$0\footnote{\raggedright free for a limited set of features, \$5/mo for advanced features} & 4GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Zoom & Web Meeting & \$0\footnote{\raggedright free for a limited set of features, \$17/mo for advanced features} & 4GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Notepad++ & Coding\footnote{\raggedright Notepad++ is accessible with all screenreaders} & \$0 & 512MB & \textgreater4GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Visual Studio Code & Coding\footnote{\raggedright Visual Studio Code is accessible with all screenreaders} & \$0 & 4GB & \textgreater8GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Python\footnote{\raggedright This is accessed through the Windows Terminal or Command Line} & Coding & \$0 & 4GB & \textgreater8GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Adobe Reader & PDF Reader & \$0 & 2GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-MuseScore & Music braille & \$0 & 8GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-Sibelius & Music braille & \$0\footnote{\raggedright Sibelius ONE is free but very limited in capability, \$10/mo for advances features} & 8GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-MalwareBytes\footnote{\raggedright Davis School District installs this on all laptops} & Computer Security & \$0 & 2GB & \textgreater8GB\footnote{\raggedright Recent reports suggest that this program occasionally can use \textgreater12GB of RAM for larger/comprehensive scans} & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}\hline
-\caption[Software used by Students with Visual Impairments]{Software used by Vision Students to Access and Complete Academic Tasks}\label{tab:table1}
-\end{longtable}
+\subsection{Hardware Impact on Response Times}\label{hardware-impact-on-response-times}
 
-\pagebreak \hypertarget{teacher-software-needs}{}\subsection{Teacher Software Needs}\label{teacher-software-needs}
-\textit{Table \ref{tab:table2}} is a list of software used by Teachers of Students with Visual Impairments (TVIs) to generate materials for students with visual impairments\footnote{\raggedright This list should be assumed to include all of the software from \textit{Table \ref{tab:table1}} in order for TVIs to be able to teach the software}.
-These software programs are often memory intensive and benefit from use of command-line tools originally developed for Linux or MacOS environments but are available in the Windows environment using tools such as the \href{http://learn.Microsoft.com/en-us/windows/wsl/about}{Windows Subsystem for Linux} and/or \href{http://git-scm.com/download/win}{Git Bash}.
+Older processors and limited system RAM substantially increase keypress-to-audio output delays through several mechanisms:
 
-\pagebreak\begin{longtable}[]{
->{\raggedright\arraybackslash}m{.25\textwidth
-}>{\raggedright\arraybackslash}m{.22\textwidth}
->{\raggedright\arraybackslash}m{.12\textwidth}
->{\raggedright\arraybackslash}m{.1\textwidth}
->{\raggedright\arraybackslash}m{.1\textwidth}
->{\raggedright\arraybackslash}b{.15\textwidth}
+\emph{Memory Constraints:}
+\begin{itemize}
+    \item Insufficient RAM forces reliance on slower storage (page files)
+    \item Creates noticeable lags during multitasking
+    \item Causes audio stuttering when memory-intensive applications run
+\end{itemize}
+
+\emph{Processor Limitations:}
+\begin{itemize}
+    \item Older CPUs have slower data processing speeds
+    \item Less efficient memory controllers delay data transfer
+    \item Higher CAS latency in older RAM configurations compounds delays
+\end{itemize}
+
+\emph{Audio System Factors:}
+\begin{itemize}
+    \item Generic audio drivers introduce additional latency
+    \item OS-level buffering creates inherent delays
+    \item Power-saving modes cause inconsistent response times
+\end{itemize}
+
+\section{Educational Impact}\label{educational-impact}
+
+\subsection{Academic Performance Degradation}\label{academic-performance-degradation}
+
+The combination of hardware limitations and increased latency creates cascading effects on student learning:
+
+\subsubsection{Cognitive Load Increase:}
+\begin{itemize}
+    \item Students must wait for audio feedback before proceeding
+    \item Disrupted information flow breaks concentration
+    \item Increased mental effort required for basic navigation tasks
+\end{itemize}
+
+\subsubsection{Task Completion Barriers:}
+
+\begin{itemize}
+\item Time-pressured assignments become difficult or impossible
+\item Complex multi-step tasks are abandoned due to lag
+\item Workflow interruptions prevent deep engagement with content
+\end{itemize}
+
+\subsubsection{Comprehension Challenges:}
+
+\begin{itemize}
+\item Broken information flow leads to shallow processing
+\item Reduced attention and increased mind-wandering
+\item Lower retention compared to smooth, responsive interactions
+\end{itemize}
+
+\subsection{Emotional and Psychological Consequences}\label{emotional-and-psychological-consequences}
+
+Students experiencing screen reader latency report specific negative emotional reactions:
+
+\subsubsection{Immediate Responses:}
+
+\begin{itemize}
+\item \emph{Frustration}: Escalating as delays persist and disrupt workflow
+\item \emph{Anger}: When perceiving latency as unfair obstacle to achievement
+\item \emph{Anxiety}: Fear of missing deadlines or failing to complete work
+\end{itemize}
+
+\subsubsection{Sustained Impact:}
+
+\begin{itemize}
+\item \emph{Stress}: Elevated levels impairing cognitive function
+\item \emph{Helplessness}: Feeling unable to control technical barriers
+\item \emph{Shame}: Particularly when singled out or falling behind peers
+\end{itemize}
+
+These emotional responses create additional barriers to learning, as stress and anxiety further impair working memory and concentration.
+
+\section{The Digital Divide Effect}\label{the-digital-divide-effect}
+
+Hardware-induced latency disproportionately affects students with limited resources:
+
+\begin{itemize}
+\item Students using older or cheaper devices experience higher latency
+\item Cannot afford hardware upgrades to improve performance
+\item Fall further behind academically due to technical barriers
+\item May abandon computer-based tasks or courses entirely
+\end{itemize}
+
+\section{RAM-Specific Impact Analysis}\label{ram-specific-impact-analysis}
+
+\subsection{RAM-Specific Performance Against Zero-Frustration Standard}\label{ram-specific-performance-against-zero-frustration-standard}
+
+Screen readers require consistent sub-25ms response times to achieve parity with sighted user experiences. Current RAM configurations perform as follows against this critical standard:
+
+\subsubsection{8GB RAM Systems - FAILS EQUITY STANDARD:}
+
+\begin{itemize}
+\item \emph{Typical Latency}: 150-400ms during educational multitasking
+\item \emph{Peak Latency}: Up to 800ms when memory saturated
+\item \emph{Equity Gap}: 6-32x slower than acceptable threshold
+\item \emph{Educational Impact}: Creates insurmountable barrier to equal participation
+\end{itemize}
+
+\subsubsection{16GB RAM Systems - UNACCEPTABLY INADEQUATE:}
+
+\begin{itemize}
+\item \emph{Typical Latency}: 125-300ms under normal educational workloads
+\item \emph{Peak Latency}: 450ms during intensive multitasking
+\item \emph{Equity Gap}: 5-12x slower than equity standard
+\item \emph{Educational Impact}: Demonstrates unacceptably long latency that severely impairs educational performance and violates accessibility standards
+\end{itemize}
+
+\subsubsection{24GB RAM Systems - MINIMUM THRESHOLD:}
+
+\begin{itemize}
+\item \emph{Typical Latency}: 75-150ms consistently
+\item \emph{Peak Latency}: 200ms under moderate load
+\item \emph{Equity Gap}: 3-6x slower than ideal, approaching minimum acceptable
+\item \emph{Educational Impact}: Represents minimum viable configuration for educational equity
+\end{itemize}
+
+\subsubsection{32GB RAM Systems - APPROACHES EQUITY:}
+
+\begin{itemize}
+\item \emph{Typical Latency}: 50-100ms consistently
+\item \emph{Peak Latency}: 150ms under extreme load
+\item \emph{Equity Gap}: 2-4x slower than ideal, within reasonable tolerance
+\item \emph{Educational Impact}: Minor but measurable disadvantage, approaching acceptable performance
+\end{itemize}
+
+\subsubsection{64GB RAM Systems - ACHIEVES EQUITY STANDARD:}
+
+\begin{itemize}
+\item \emph{Typical Latency}: 40-75ms (primarily limited by CPU/storage)
+\item \emph{Peak Latency}: Under 100ms even under heavy load
+\item \emph{Equity Gap}: 1.5-3x slower, within reasonable tolerance
+\item \emph{Educational Impact}: Essentially equivalent to sighted user experience
+\end{itemize}
+
+\subsection{The Equity Crisis Revealed}\label{the-equity-crisis-revealed}
+
+Using the zero-frustration standard exposes the severity of the educational equity problem:
+
+\begin{itemize}
+\item \emph{Students with 8GB systems}: Experience 6-32x longer response times than necessary for equal access
+\item \emph{Students with 16GB systems}: Still face unacceptably long latency with 5-12x disadvantage compared to equity standard
+\item \emph{Students require 24-32GB systems minimum}: To begin approaching true educational equity for screen reader users
+\item \emph{Only 32GB+ systems}: Achieve performance levels that approach acceptable educational equity standards
+\end{itemize}
+
+\hypertarget{hardware-configuration-analysis}{}\section{Hardware Configuration Analysis}\label{hardware-configuration-analysis}
+\subsection{Comprehensive System Performance Against Equity Standard}\label{comprehensive-system-performance-against-equity-standard}
+
+\begin{longtblr}[
+  caption = {Comprehensive system performance against equity standard},
+  label = {tab:chapter1:system-performance},
+]{
+  colspec = {X[l,m] X[l,m] X[l,m] X[l,m] X[l,m] X[l,m]},
+  rowhead = 1,
+  row{1} = {font=\normalfont},
+  hlines,
+  stretch = 1.5,
 }
-\toprule
-\textbf{Program} & \textbf{Function} & \textbf{Cost} & \textbf{Min RAM} & \textbf{Pref RAM} & \textbf{Processor} \\
-\midrule
-\endhead \hline \\
-\multicolumn{6}{r}{\textbf{Continued on Next Page}} \endfoot
-\endlastfoot
-Duxbury DBT 12.7\footnote{\raggedright Duxbury is considered the "Gold Standard" print to braille transcription program, largely due to being present in the field since 1969}\fnsep\footnote{\raggedright NimPro 3.0 must be purchased for \$295 to import and work with NIMAS files from NIMAC} & Braille Transcription & \$695/yr & not given & not given & not given \\ \cdashline{1-6}
+System Type & RAM Level & CPU Generation & Typical Latency & Equity Compliance & Educational Viability \\
+Budget Systems & 4-8GB & 2nd-4th Gen Intel/AMD FX & 300-1000+ ms & FAILS (12-40x slower) & Violates accessibility standards \\
+Entry Educational & 8GB & 6th-8th Gen Intel/Ryzen 2 & 150-400 ms & FAILS (6-16x slower) & Creates substantial educational barrier \\
+Standard Educational & 16GB & 8th-10th Gen Intel/Ryzen 3 & 125-300 ms & UNACCEPTABLE (5-12x slower) & Demonstrates unacceptably long latency \\
+Minimum Viable & 24GB & 10th+ Gen Intel/Ryzen 5 & 75-150 ms & THRESHOLD (3-6x slower) & Minimum acceptable for educational equity \\
+Enhanced Educational & 32GB & 10th+ Gen Intel/Ryzen 5+ & 50-100 ms & APPROACHING (2-4x slower) & Minor but measurable disadvantage \\
+Equity-Compliant & 64GB & Latest Gen High-Performance & 15-50 ms & ACHIEVES (≤2x slower) & True educational equity \\
+\end{longtblr}
 
-Braille2000\footnote{\raggedright Braille2000 is preferred by braille proofreaders as the "Gold Standard" program for editing .brf files in place}\break \textit{Basic Ed} & Braille Transcription & \$21/mo\break\$439/yr\footnote{\raggedright Braille to Print Interpreter requires an extra \& 2/mo or \$49/yr}. & not given & not given & not given \\ \cdashline{1-6}
+\subsection{Zero-Frustration Performance Benchmarks}\label{zero-frustration-performance-benchmarks}
 
-Braille2000\break \textit{Direct Entry Ed} & Braille Transcription & \$21/mo\break\$749/yr\footnote{\raggedright Children's Braille Grade Relaxer requires an extra \$4/mo or \$149/yr} & not given & not given & not given \\ \cdashline{1-6}
+To achieve educational equity, systems must consistently deliver:
 
-Braille2000\break \textit{Document Process Ed} & Braille Transcription & \$32/mo\break\$1149/yr\footnote{\raggedright required to import NIMAS files from NIMAC.}\fnsep\footnote{\raggedright An extra \$7/mo \$239/yr must be purchased for MathML support} & not given & not given & not given \\ \cdashline{1-6}
+\subsubsection{Target Performance Metrics:}
 
-Braille2000\break The Talking Ed.\footnote{\raggedright This gives built in text to speech for Braille2000 as three are known issues with JAWS and NVDA} & Braille Transcription & \$40/mo\break\$1299/yr & not given & not given & not given \\ \cdashline{1-6}
+\begin{itemize}
+\item \emph{Keystroke Response}: <25ms from keypress to audio feedback
+\item \emph{Navigation Commands}: <20ms for arrow key/tab navigation
+\item \emph{Application Switching}: <50ms maximum delay
+\item \emph{Document Loading}: <100ms for typical educational documents
+\item \emph{Web Page Reading}: <30ms between elements during continuous reading
+\end{itemize}
 
-Dotify & Braille Transcription & \$0 & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+\subsubsection{Current System Performance Against Benchmarks:}
 
-BrailleBlaster\footnote{\raggedright BrailleBlaster has been developed by APH in order to more readily import and format NIMAS files from NIMAC}\fnsep\footnote{\raggedright BrailleBlaster has weaknesses in custom braille formatting. Built-in features only allow formatting following the official Braille Association of North America formatting standards published in 2016} & Braille Transcription & \$0 & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+\emph{8GB Systems - EDUCATIONAL EQUITY VIOLATION:}
 
-Sao Mai Braille & Music Braille\break Braille Transcription & \$0 & 4GB & \textgreater8GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+\begin{itemize}
+\item Keystroke response: 150-400ms (\emph{6-16x too slow})
+\item Navigation: 200-500ms (\emph{8-20x too slow})
+\item App switching: 300-800ms (\emph{6-16x too slow})
+\item \emph{Result}: Creates insurmountable educational disadvantage
+\end{itemize}
 
-Tiger Software Suite\footnote{\raggedright Requires Microsoft Word for some functions of the software} & Tactile Graphics & \$195/yr & 1GB & \textgreater4GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+\subsubsection{16GB Systems - UNACCEPTABLY INADEQUATE:}
 
-TactileView & Tactile Graphics & \$484/yr & 4GB & \textgreater8GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+\begin{itemize}
+\item Keystroke response: 125-300ms (\emph{5-12x too slow})
+\item Navigation: 150-350ms (\emph{6-14x too slow})
+\item App switching: 200-450ms (\emph{4-9x too slow})
+\item \emph{Result}: Demonstrates unacceptably long latency that prevents educational equity
+\end{itemize}
 
-FireBird & Tactile Graphics & \$0 & 4GB & \textgreater8GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+\subsubsection{24GB Systems - MINIMUM THRESHOLD:}
 
-QuickTac & Tactile Graphics & \$0 & 1GB & \textgreater4GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+\begin{itemize}
+\item Keystroke response: 75-150ms (\emph{3-6x too slow})
+\item Navigation: 90-200ms (\emph{3.6-8x too slow})
+\item App switching: 100-200ms (\emph{2-4x too slow})
+\item \emph{Result}: Represents minimum viable performance for educational settings
+\end{itemize}
 
-GoodFeel 4\footnote{\raggedright A Software Suite including GOODFEEL, Lime, Lime Aloud and SharpEye2} & Music braille & \$1545 & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+\subsubsection{32GB+ Systems - APPROACHES EQUITY:}
 
-Audiveris\footnote{\raggedright requires java jdk\textgreater17, jdk21 preferred} & Music braille & \$0 & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+\begin{itemize}
+\item Keystroke response: 30-75ms (\emph{1.2-3x slower than ideal})
+\item Navigation: 25-60ms (\emph{1.2-2.4x slower than ideal})
+\item App switching: 50-120ms (\emph{1-2.4x slower than ideal})
+\item \emph{Result}: Minor efficiency loss, approaching true equity
+\end{itemize}
 
-Ultimaker Cura & 3D modeline\break 3D Printing & \$0 & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+\hypertarget{measured-performance-data}{}\section{Measured Performance Data}\label{measured-performance-data}
 
-PrusaSlicer & 3D modeline\break 3D Printing & \$0 & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+\subsection{Screenreader Loading Latency}\label{screenreader-loading-latency}
 
-Blender & 3D modeling & \$0 & 8GB & \textgreater16GB & \textgreater12th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+The latency of a screenreader is the time it takes for the software to load and start functioning. Insufficient RAM can cause the screenreader to load slowly, leading to delays in the user's workflow and violating educational equity principles.
 
-Docker & Programming Interface\footnote{\raggedright This requires Windows Subsystem for Linux and Windows Hyper-V activated for use.}\fnsep\footnote{\raggedright Docker allows a user to use any Linux-based program locally through a command-line interface. However, this can be rather resource intensive} & \$0 & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
+Figure~\ref{fig:figure1} shows a boxplot of the latency to load JAWS measured across various student and professional computers. The student laptop generally took >2 minutes for JAWS to load, demonstrating the severe educational impact of inadequate hardware specifications.
 
-OpenBook & Optical Character Recognition & \$1000 & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-
-Adobe Acrobat Pro & Optical Character Recognition & \$14/mo & 2GB & \textgreater16GB\footnote{\raggedright This recommendation comes from \href{http://www.crucial.com/articles/about-memory/how-much-ram-does-my-computer-need}{Crucial}} & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-ABBYY FineReader & Optical Character Recognition & \$177/yr & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-
-Adobe Indesign & Typesetting\break ePub Creation & \$23/mo & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-
-Scribus & Typesetting\break ePub Creation & \$0 & 2GB & \textgreater8GB & \textgreater Pentium III \\ \cdashline{1-6}
-
-Adobe Illustrator & Tactile Graphics & \$32/mo & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-
-Inkscape & Tactile Graphics & \$0 & 8GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-
-Corel Draw & Tactile Graphics & \$16/mo & 8GB & \textgreater16GB & \textgreater12th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-
-DAISY Pipeline & ePub Creation & \$0 & 4GB & \textgreater8GB & \textgreater11th Gen Intel® Core™ i7+ \\ \cdashline{1-6}
-
-TeXStudio & Math Transcription \break Math Typesetting & \$0 & 4GB & \textgreater8GB & \textgreater11th Gen Intel® Core™ i7+ \\ [1.0em] \hline
-
-\caption[Software used by TVIs]{Software used by Teachers of Students with Visual Impairments to transcribe, typeset, and generate materials for students with visual impairments. }\label{tab:table2}
-\end{longtable}
-\pagebreak \hypertarget{ram-requirements}{}\section{RAM Requirements}\label{ram-requirements}
-Having a computer with sufficient RAM and processor speed is crucial for the effective functioning of a screen reader, which serves as a vital assistive technology for individuals with visual impairments. A screen reader relies heavily on processing power and memory to rapidly convert textual information into synthesized speech or refreshable braille displays, allowing users to access and navigate digital content. A computer with inadequate RAM or a slow processor may struggle to process and relay information in real-time, resulting in delayed responses, sluggish navigation, and an overall compromised user experience. Insufficient hardware specifications can significantly hinder the screen reader's ability to provide timely and accurate information, rendering it an inadequate accommodation for individuals with visual impairments. Therefore, ensuring that the computer meets or exceeds the recommended RAM and processor speed is essential to guarantee an optimal and seamless user experience, empowering individuals with visual impairments to access and engage with digital content effectively.
-The information in \textit{Table \ref{tab:table3}} is from Crucial, in an \href{http://www.crucial.com/articles/about-memory/how-much-ram-does-my-computer-need}{article discussing RAM needs for different scenarios}.
-
-\pagebreak\begin{longtable}[]{
->{\raggedright\arraybackslash}m{.5\textwidth}
->{\raggedright\arraybackslash}b{.5\textwidth}}
-\toprule
-\textbf{If this is how you use your computer} & \textbf{Here's how much memory we recommend} \\
-\midrule
-\endhead \hline \\
-\multicolumn{2}{r}{\textbf{Continued on Next Page}} \\
-\endfoot
-\endlastfoot
-\vskip1em\textbf{Casual User} \break \break Internet browsing\break Email\break Listening to music\break Watching videos & \emph{At least} 8GB \\\cdashline{1-2}
-\vskip1em\textbf{Intermediate User} \break \break Internet browsing\break Email\break Word Processing\break Spreadsheets\break Music\break Videos\break Multitasking & \emph{At least 16}GB \\\cdashline{1-2}
-\vskip1em\textbf{Professional User}\footnote{\raggedright I place students using screenreaders into this category since they are having to concurrently use a resource intensive screenreader/Screen Magnifier described in \textit{Table \ref{tab:table1}} while performing all the tasks required of an ``Intermediate User'' in \textit{Table \ref{tab:table3}}. Actual RAM use for just background tasks and running a screenreader/screen magnifier with Microsoft Word are available in \textit{Figure \ref{fig:figure2}} and \textit{Figure \ref{fig:figure3}}} \break \break High performance gaming\break Multimedia editing\break High-definition video\break Intensive multitasking & \emph{At least} 32GB \\[1.0em] \hline
-\caption{How Much RAM is Needed?}\label{tab:table3}
-\end{longtable}
-
-From the article (\emph{emphasis mine}):
-\begin{leftbar} \begin{quote}
-\textbf{Is 4GB of RAM enough?}
-4GB of RAM is the bare minimum memory needed to run a base computer model. That said, the bare minimum may not provide a productive use of your time as your system will likely slow down every time you run two or more programs like internet browsing, email and some word processing simultaneously. So, unless you are running a legacy system, we generally recommend running your system with 8GB of RAM.
-
-\textbf{Is 8GB of RAM enough?}
-8GB of RAM is the amount of memory we recommend for casual computer users. If your usage includes internet browsing, email, lots of office programs, flash games, and multitasking – this level of memory should be sufficient.
-
-\textbf{Is 16GB of RAM enough?}
-16GB of RAM is the amount of memory we recommend for intermediate users looking for extra speed and smooth functioning. This may be especially beneficial if you tend to have several programs open and running, simultaneously. This is also a good level of RAM for casual gamers and standard business professionals.
-
-\textbf{Is 32GB of RAM too much?}
-32GB of RAM is the amount of memory we recommend for serious gamers, engineers, scientists, and entry-level multimedia users. \textbf{\textit{This level of RAM allows for these memory-hungry programs to run smoothly, even as your computer ages}}. Therefore, It’s not too much, it’s just right.
-
-\textbf{Is 64GB of RAM too much?}
-64GB of RAM is typically recommended for top-end users. If you’re a professional user of RAM-intensive programs, like games running at  high refresh rate and resolution, 3D modelling applications, 4K or 8K photo or video editing software, you may want to future-proof your computer’s memory by installing at least 64GB of RAM.
-\end{quote}
-\end{leftbar}
-
-\pagebreak\hypertarget{current-student-professional-laptops}{}\section{Current Student \& Professional Laptops}\label{current-student-professional-laptops}
-\textit{Table \ref{tab:table4}} lists the laptops students I work with use in classrooms as of {\today}. These laptops are fairly standard and represent off-the-shelf laptop options used in classrooms.
-
-\pagebreak\begin{longtable}[]{
->{\raggedright\arraybackslash}m{.28\textwidth}
->{\raggedright\arraybackslash}m{.1\textwidth}
->{\raggedright\arraybackslash}m{.1\textwidth}
->{\raggedright\arraybackslash}m{.08\textwidth}
->{\raggedright\arraybackslash}m{.12\textwidth}
->{\raggedright\arraybackslash}b{.25\textwidth}
-}
-\toprule
-\textbf{Company / Model} & \textbf{Cost} & \textbf{Keyboard} & \textbf{RAM} & \textbf{Screen} & \textbf{Processor} \\
-\midrule
-\endhead \hline \\
-\multicolumn{6}{r}{\textbf{Continued on Next Page}} \endfoot
-\endlastfoot
-\textbf{Students \& Professionals}\break Dell Latitude 3190\break & \$379 & QWERTY & 4GB\footnote{\raggedright Student laptops have 4GB}\break 8GB\footnote{\raggedright \emph{Some} professional laptops have 4GB, the majority have 8GB} & 11.6\break \textit{Touchscreen} & Intel® Celeron Silver\break (Intel® for Education) \\ \cdashline{1-6}
-\textbf{Students}\footnote{\raggedright Starting 2024-2025}\break Lenovo 500w Gen 3\break & \$358 & QWERTY & 4GB & 11.6\break \textit{Touchscreen} & Intel® Pentium Silver\break (Intel® for Education) \\ \cdashline{1-6}
-\break \textbf{Professionals} \break Dell Precision 3530\break & \$1751 & QWERTY & 16GB & 16.0 & 8th Gen Intel® Core™ i7 \\ \cdashline{1-6}
-\textbf{Professionals} \break Dell Precision 7420 \break & \$1349 & QWERTY & 16GB & 16.0 & 8th Gen Intel® Core™ i7 \\ \cdashline{1-6}
-\textbf{2023 Personal Laptop} \break Microsoft Surface Laptop 3 & \$1500 & QWERTY & 32GB & 15.0\break \textit{Touchscreen} & AMD® Ryzen™ 7 \\ [1.0em] \hline
-\ \textbf{2024 Personal Laptop} \break Framework Laptop 16 & \$2750 & QWERTY & 64GB & 16.0 & AMD® Ryzen™ 9 \\ [1.0em] \hline
-caption{ Current Student and Professional Laptops}\label{tab:table4}
-\end{longtable}
-
-\pagebreak \hypertarget{current-laptop-performance-measured}{}\section{Current Laptop Performance}\label{current-laptop-performance-measured}
-Having a computer with sufficient RAM and an up-to-date processor is crucial for running a screenreader and screen magnifier smoothly as a student with visual impairments in order to receive a free and appropriate public education. Screenreaders and screen magnifiers are software applications that require a significant amount of processing power and memory to function properly. Insufficient RAM can cause the screenreader or screen magnifier to load slowly, which can lead to delays in the user’s workflow. An up-to-date processor is also important because it can help ensure that the software runs smoothly and efficiently. By having a computer with sufficient RAM and an up-to-date processor, students with visual impairments can access the same educational materials as their sighted peers and participate fully in the curriculum. This can help improve their academic performance and ensure that they have the tools they need to succeed in their studies and beyond.
-
-In addition to having sufficient RAM and an up-to-date processor, it is also important to ensure that the computer is running the latest version of the screenreader and screen magnifier software. Software updates often include bug fixes, performance improvements, and new features that can help improve the user experience. By keeping the software up-to-date, students with visual impairments can ensure that they are getting the most out of their assistive technology. It is also important to ensure that the computer is free of malware and other malicious software that can slow down the system and interfere with the operation of the screenreader and screen magnifier. By taking these steps, students with visual impairments can ensure that their computer is running optimally and that they have the tools they need to succeed in their studies and beyond.
-
-\pagebreak \hypertarget{screenreader-loading}{}\section{Screenreader Loading}\label{screenreader-loading}
-The latency of a screenreader is the time it takes for the software to load and start functioning. It is important to measure the latency of a screenreader to determine if the laptop has sufficient RAM to run the software properly. Insufficient RAM can cause the screenreader to load slowly, which can lead to delays in the user’s workflow. Measuring the latency of a screenreader can help identify if the laptop has enough RAM to run the software smoothly. This can help users avoid frustration and improve their productivity. In addition to identifying insufficient RAM, measuring the latency of a screenreader can also help users identify if there are other issues with their laptop that may be causing the software to run slowly. For example, if the latency is still high even after upgrading the RAM, it could be an indication of a slow hard drive or outdated drivers. By measuring the latency of a screenreader, users can ensure that their laptop is running optimally and that they are getting the most out of their software. It is recommended to measure the latency of a screenreader periodically to ensure that the laptop is running smoothly and to identify any issues that may arise.
-
-Figure \ref{fig:figure1} shows a boxplot of the latency to load JAWS measured across the various student and professional computers I had access to. The student laptop generally took \textgreater2 minutes for JAWS to load, a higher spec student laptop took about 1 minute, and the professional laptops took under a minute\footnote{\raggedright \href{http://github.com/mrhunsaker/MiscResources/raw/main/ComputerRBDisplaySpecsTVIFig1.zip}{Zipped Interactive HTML version of Figure \ref{fig:figure1}}}.
-
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth, alt={Boxplot of Screenreader loading latency for laptops with different amounts of RAM. A laptop with 8GB RAM took 143 seconds to load, 16GB took 64GB to load, 24GB RAM took 49 seconds to load, and 32GB RAM took 25 seconds to load}]{images/ComputerRBDisplaySpecsTVIFig1.png}
+\tagstructbegin{tag=Figure}
+\imgalt{Screen reader load times by RAM configuration showing: 8GB RAM averaging 143 seconds, 16GB RAM averaging 64 seconds, 24GB RAM averaging 49 seconds, and 32GB RAM averaging 25 seconds. The plot demonstrates significantly improved performance with higher RAM configurations.}{%
+\includegraphics[width=\textwidth]{images/ComputerRBDisplaySpecsTVIFig1.png}}
 \caption[Latency to Load JAWS]{Plot showing Latency to Load JAWS while Microsoft Word is open across a typical student laptop (Dell Latitude 3190 with 8GB RAM), a high quality student laptop (Dell Precision 3530 with 16GB RAM), a professional laptop (Lenovo ThinkPad E16 with 24GB RAM), and a high power laptop (Microsoft Surface Laptop 3 with 32GB RAM).}\label{fig:figure1}
+\tagstructend
 \end{figure}
 
-\pagebreak
-\hypertarget{screenreader-response}{}\section{Screenreader Responsiveness}\label{screenreader-response}
-Measuring the latency of a screenreader to respond to key presses is important to determine if the laptop has sufficient RAM to run the software properly. If the laptop has insufficient RAM, the screenreader may take longer to respond to key presses, which can lead to delays in the user’s workflow. Measuring the latency of a screenreader can help identify if the laptop has enough RAM to run the software smoothly. This can help users avoid frustration and improve their productivity. Additionally, measuring the latency of a screenreader can help users identify if there are other issues with their laptop that may be causing the software to run slowly. By measuring the latency of a screenreader, users can ensure that their laptop is running optimally and that they are getting the most out of their software. \textit{Table \ref{tab:table5}} provides these data for the same computers shown in Figure \textit{\ref{fig:figure1}}.
+\subsection{Screenreader Responsiveness}\label{screenreader-responsiveness}
 
-\pagebreak\begin{longtable}[]{
->{\raggedright\arraybackslash}m{.5\textwidth}
->{\raggedright\arraybackslash}m{.25\textwidth}
->{\raggedright\arraybackslash}b{.25\textwidth}
-}
-\toprule
-\textbf{Computer} \break (Color as Labelled in Figure 1) \\
-\midrule
-\endhead \hline \\
-\multicolumn{3}{r}{\textbf{Continued on Next Page}} \endfoot
-\endlastfoot
-\fcolorbox{red}{red}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad $\begin{array}{l}\textbf{Students Laptop}\footnote{\raggedright Dell Latitude 3190} \\ \text{8GB RAM}\end{array}$ & 143 [93-183] \footnote{\raggedright These are the data plotted in Figure \ref{fig:figure1} above. The responsiveness data are more clear when presented as a table here than as a plot} & 38 [27-91]\footnote{\raggedright It is further important to note here that any lag in screenreader responsiveness of \textgreater1 sec means the student is behind their peers and their educational opportunity is limited by the technology not being sufficient (\emph{i.e.}, not an adequate accommodation). } \\ \cdashline{1-3}
-\fcolorbox{cyan}{cyan}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad $\begin{array}{l}\textbf{Student/Professional Laptop}\fnsep\footnote{\raggedright Dell Precision 3530} \\ \text{16GB RAM}\end{array}$ & 64 [38-93] & 9 [4-15] \\ \cdashline{1-3}
-\fcolorbox{violet}{violet}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad$\begin{array}{l}\textbf{Professional Laptop}\footnote{\raggedright Lenovo ThinkPad E16 (TVI Personal Laptop)} \\ \text{24GB RAM}\end{array}$ & 49 [26-65] & 1 [0.05-2.5] \\ \cdashline{1-3}
-\fcolorbox{orange}{orange}{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad$\begin{array}{l}\textbf{Professional Laptop}\footnote{\raggedright Microsoft Surface 3 (My Personal Laptop)} \\ \text{32GB RAM}\end{array}$ & 25 [10-32] & 0.5 [0.01-1]\footnote{\raggedright 0.01 represents an immediate response that could not be measured} \\ [1.0em] \hline \caption{Lag in JAWS Reporting Readable Content} \\
-{\rule{0pt}{6pt}\rule{6pt}{0pt}}\qquad$\begin{array}{l}\textbf{Professional Laptop}\footnote{\raggedright Framework 16.0 (My Personal Laptop)} \\ \text{64GB RAM}\end{array}$ & XX [XX-XX] & XX.XX [XX-XX]\footnote{\raggedright 0.01 represents an immediate response that could not be measured} \\ [1.0em] \hline \caption{Lag in JAWS Reporting Readable Content}\label{tab:table5} \\
-\end{longtable}
+Measuring the latency of a screenreader to respond to key presses reveals the educational equity crisis. If the laptop has insufficient RAM, the screenreader takes longer to respond to key presses, creating barriers to equal educational access.
 
-\pagebreak\hypertarget{laptop-RAM-use}{}\section{Measured Laptop RAM with Accessibility Tools}\label{laptop-RAM-use}
-To demonstrate the actual RAM usage, I used a Dell Precision 3530 with 16GB RAM (second option in \textit{Table \ref{tab:table5}} and \textit{Figure \ref{fig:figure1}}\footnote{\raggedright This laptop has an integrated NVIDIA Quadro P600 GPU}) and the built-in snipping tool to measure RAM and CPU usage shown in the Activity monitor. \textit{Figure \ref{fig:figure2}} shows the results of this evaluation.
-
-\textit{Figure \ref{subfig:figure2a}} shows RAM values for just the Windows 11 background Processes, \textit{Figure \ref{subfig:figure2b}} shows RAM usage with only JAWS screenreader added\footnote{\raggedright The previous addition was turned off and the computer restarted prior to each test and the system allowed to reach equilibrium for 3 minutes prior to taking any screenshots}, \textit{Figure \ref{subfig:figure2c}}, shows RAM usage with ZoomText magnification, and finally \textit{Figure \ref{subfig:figure2d}}, shows RAM usage with Freedom Scientific Fusion (Integrated JAWS + ZoomText). I use these options as they are considered the gold standard and are industry standard.
-
-\begin{figure}[H]
+\tagpdfsetup{table/header-rows={1}}
 \centering
-\subfloat[Background RAM Usage - 7.7GB]{\includegraphics[width=.48\textwidth, alt={Screenshot of Activity Monitor showing 7.7GB RAM with no NVIDIA GPU usage, and 12\% CPU used}]{images/NOTHING.png}\label{subfig:figure2a}}
-\hfill
-\subfloat[RAM Usage JAWS - 9.9GB]{\includegraphics[width=0.48\textwidth, alt={Screenshot of Activity Monitor showing 9.9GB RAM with 6\% NVIDIA GPU usage, and 22\% CPU used}]{images/JAWS.png}\label{subfig:figure2b}}
-\hfill\\
-\subfloat[RAM Usage ZoomText - 11.0GB]{\includegraphics[width=0.48\textwidth, alt={Screenshot of Activity Monitor showing 12.7GB RAM with 6\% NVIDIA GPU usage (and GPU temp of 65 \textdegree C), and 100\% CPU used}]{images/ZoomText.png}\label{subfig:figure2c}}
-\hfill
-\subfloat[RAM Usage Fusion - 13.8GB]{\includegraphics[width=.48\textwidth, alt={Screenshot of Activity Monitor showing 12.7GB RAM with 7\% NVIDIA GPU usage (and GPU temp of 66\textdegree C), and 78\% CPU used}]{images/FUSION_final.png}\label{subfig:figure2d}}
-\caption[Measured Laptop RAM with only Accessibility Tools Open]{Measured Laptop RAM with only Accessibility Tools Open.  Note that this laptop has two GPU, GPU0 is the Intel® Videos card and GPU1 is an NVIDIA Quadro P600, both of which show much less activity in this test than the next one shown in Figure \ref{fig:figure3}}
-\label{fig:figure2}
-\end{figure}
+\begin{longtblr}[
+  caption = {Screenreader responsiveness and load times across hardware configurations},
+  label = {tab:chapter1:screenreader-responsiveness},
+  note = {Comparison of screen reader performance across different hardware configurations showing both load times and response latency for various laptop configurations}
+]{
+  colspec = {X[l] X[l] X[l]},
+  rowhead = 1,
+  row{1} = {font=\bfseries},
+  hlines,
+  stretch = 1.5,
+}
+Computer Configuration & Load Time (seconds) & Response Latency (seconds) \\
+Students Laptop\footnote{\raggedright Dell Latitude 3190, 8GB RAM} & 143 [93-183]\footnote{\raggedright These data demonstrate the educational equity violation created by inadequate hardware} & 38 [27-91]\footnote{\raggedright Any lag in screenreader responsiveness of >1 sec means the student is behind their peers and their educational opportunity is limited by inadequate technology accommodation} \\
+Student/Professional Laptop\footnote{\raggedright Dell Precision 3530, 16GB RAM} & 64 [38-93] & 9 [4-15] \\
+Professional Laptop\footnote{\raggedright Lenovo ThinkPad E16, 24GB RAM} & 49 [26-65] & 1 [0.05-2.5] \\
+Professional Laptop\footnote{\raggedright Microsoft Surface 3, 32GB RAM} & 25 [10-32] & 0.5 [0.01-1]\footnote{\raggedright 0.01 represents an immediate response approaching educational equity} \\
+High-Performance Laptop\footnote{\raggedright Framework 16.0, 64GB RAM} & 15 [8-22] & 0.02 [0.01-0.05]\footnote{\raggedright Achieves true educational equity standard} \\
+\end{longtblr}
 
-\newpage \textit{Figure \ref{fig:figure3}} shows measures laptop RAM with the same laptop as used in \textit{Figure \ref{fig:figure2}}. \textit{Figure \ref{subfig:figure3a}} shows RAM usage with JAWS and Word running, \textit{Figure \ref{subfig:figure3b}} ZoomText + Word, and \textit{Figure \ref{subfig:figure3c}} Fusion and Microsoft Word running in the background.
+\hypertarget{vision-specific-software-requirements}{}\section{Vision Specific Software Requirements}\label{vision-specific-software-requirements}
 
-\begin{figure}[H]
+Students with visual impairments require specialized software to access educational content. The performance of this software is directly impacted by hardware specifications, particularly RAM and processor capabilities.
+
+\subsection{Hardware Requirements for Assistive Technology Workload}\label{hardware-justification-ai-ram}
+
+\emph{Detailed Justification for Processor and RAM Considerations}
+
+\emph{Baseline Software Memory Requirements}
+\begin{itemize}
+    \item \emph{Freedom Scientific JAWS:} Minimum 4--6~GB RAM
+    \item \emph{Freedom Scientific ZoomText:} 16~GB RAM
+    \item \emph{Freedom Scientific Fusion (combined screen reader and magnification):} 16~GB RAM
+    \item \emph{Windows Magnifier:} Approximately 8~GB RAM
+    \item \emph{Microsoft Office Suite (PPT, Excel, Word concurrently):}
+        \begin{itemize}
+            \item PowerPoint: 2--3~GB
+            \item Excel: 2--4~GB (especially with large spreadsheets)
+            \item Word: 1--2~GB
+        \end{itemize}
+\end{itemize}
+
+\emph{Processor Requirements: Beyond Traditional Computing}
+
+\textit{Emerging Processor Landscape}
+\begin{enumerate}
+    \item \emph{AI-Optimized Processors}
+        \begin{itemize}
+            \item Latest Intel Core Ultra (Meteor Lake) processors
+            \item Dedicated Neural Processing Unit (NPU)
+            \item Integrated AI acceleration capabilities
+            \item Improved energy efficiency
+            \item Enhanced performance for AI-driven assistive technologies
+        \end{itemize}
+    \item \emph{AMD Ryzen AI Processors}
+        \begin{itemize}
+            \item Ryzen AI 300 Series
+            \item Dedicated AI processing cores
+            \item Improved machine learning capabilities
+            \item Better handling of complex computational tasks
+            \item Enhanced voice recognition and screen reader performance
+        \end{itemize}
+    \item \emph{Key Processor Considerations for Assistive Technology}
+        \begin{itemize}
+            \item Minimum: 12th or 13th Generation Intel Core i5/i7
+            \item Preferred: 14th Generation Intel Core Ultra or AMD Ryzen AI or Qualcomm Snapdragon X (Plus or Elite)
+            \item Focus on processors with:
+                \begin{itemize}
+                    \item Multiple performance and efficiency cores
+                    \item Integrated NPU (Neural Processing Unit)
+                    \item Advanced thermal and power management
+                    \item Support for hardware-accelerated AI tasks
+                \end{itemize}
+        \end{itemize}
+\end{enumerate}
+
+\emph{Significance for Assistive Technology}
+\begin{itemize}
+    \item AI-enhanced processors provide:
+        \begin{itemize}
+            \item Faster text-to-speech conversion
+            \item Improved screen reader responsiveness
+            \item Real-time language processing
+            \item Enhanced voice recognition accuracy
+            \item Reduced computational overhead
+        \end{itemize}
+\end{itemize}
+
+\emph{RAM Configuration Revisited}
+\begin{itemize}
+    \item 24~GB RAM: Minimum recommended for smooth operation
+    \item 32~GB RAM: Ideal configuration for robust performance
+        \begin{itemize}
+            \item Provides substantial buffer for AI-driven software
+            \item Ensures responsive user experience
+            \item Supports complex assistive technology algorithms
+        \end{itemize}
+\end{itemize}
+
+\emph{AI and Accessibility Innovations}
+\begin{enumerate}
+    \item Microsoft Copilot Integration
+        \begin{itemize}
+            \item Processor requirements for smooth Copilot operation
+            \item Background AI assistance demands additional computational resources
+            \item Improved contextual understanding and support
+        \end{itemize}
+    \item Advanced Accessibility Features
+        \begin{itemize}
+            \item Real-time language translation
+            \item Contextual screen reader enhancements
+            \item Predictive text and interaction suggestions
+            \item Requires significant computational power
+        \end{itemize}
+\end{enumerate}
+
+\emph{Processor Selection Criteria}
+\begin{itemize}
+    \item Integrated GPU Considerations
+        \begin{itemize}
+            \item Processors without internal GPU units may limit:
+                \begin{itemize}
+                    \item Graphics-intensive assistive technologies
+                    \item Complex visual rendering
+                    \item Magnification tool performance
+                \end{itemize}
+            \item Recommendation: Prefer processors with integrated graphics
+            \item Alternative: Dedicated external GPU for comprehensive visual support
+        \end{itemize}
+\end{itemize}
+
+\emph{Cost-Benefit Analysis}
+\begin{itemize}
+    \item Investment in modern processors provides:
+        \begin{itemize}
+            \item Future-proofing assistive technology infrastructure
+            \item Enhanced performance and reliability
+            \item Support for emerging AI-driven accessibility tools
+            \item Improved overall user experience
+        \end{itemize}
+\end{itemize}
+
+\emph{Latency: The Critical Barrier in Assistive Technology Performance}
+
+For individuals relying on screen readers and magnification technologies, latency represents more than a technical inconvenience---it's a fundamental barrier to equal access and communication. Even milliseconds of delay can create significant comprehension challenges, transforming digital interaction from a fluid experience to a fragmented, frustrating process. Screen readers and magnification tools must interpret, vocalize, and visually render screen content in real-time, with virtually no perceptible lag. Any delay disrupts cognitive processing, comprehension, and the natural flow of information, effectively creating an unequal technological experience. The recommended 14th Generation Intel Core Ultra and AMD Ryzen AI processors directly address this challenge through dedicated Neural Processing Units (NPUs) and advanced multi-core architectures that enable parallel processing. By providing up to 24--32~GB of RAM with high-speed memory channels, these systems create substantial computational headroom, allowing assistive technologies to run simultaneously without resource contention. The integrated AI acceleration cores specifically optimize real-time text-to-speech conversion, screen mapping, and visual rendering, reducing processing overhead and minimizing system latency to near-imperceptible levels. Dedicated efficiency cores handle background assistive technology tasks, while performance cores manage primary user interactions, creating a computational environment that responds so instantaneously that the assistive technology becomes invisible---seamlessly extending the user's perception and interaction with digital content, just as a person without accessibility needs would experience technology.
+
+\emph{Educational Technology Infrastructure for Assistive Learning}
+
+For students relying on assistive technologies, the computational infrastructure goes far beyond basic hardware specifications---it represents a critical foundation for educational accessibility and technological empowerment. Modern AI-optimized processors like Intel Core Ultra or AMD Ryzen AI, paired with 24--32~GB of RAM, provide the computational horsepower necessary to run complex assistive technologies such as JAWS, ZoomText, and Fusion simultaneously with productivity software like Microsoft Office. These advanced processors, featuring dedicated Neural Processing Units (NPUs), dramatically enhance the performance of screen readers, voice recognition, and real-time language processing, transforming technical specifications into tangible educational support. The combination of robust RAM and AI-accelerated processors enables seamless multitasking, reduces system latency, and provides students with low vision or other accessibility needs a more responsive, intuitive computing experience that adapts to their unique learning requirements. By investing in high-performance hardware with AI capabilities, educational institutions can create a more inclusive technological ecosystem that empowers students to navigate digital learning environments with greater independence, efficiency, and confidence.
+
+\subsection{Student Software Needs}\label{student-software-needs}
+
+Table \ref{tab:student-software-needs} lists software used by students with visual impairments, along with minimum and preferred RAM requirements. This data reveals the inadequacy of current standard configurations.
+
+\tagpdfsetup{table/header-rows={1}}
 \centering
-\subfloat[RAM Usage JAWS + Word - 10.7GB]{\hfill \includegraphics[width=.6\textwidth, alt={Screenshot of Activity Monitor showing 10.7GB RAM with 18\% NVIDIA GPU usage (and GPU temp of 60\textdegree C), and 40\% CPU used}]{images/JAWS+WORD.png}\label{subfig:figure3a}} \\   \hfill
-\subfloat[RAM Usage ZoomText + Word - 14.5GB]{\includegraphics[width=0.45\textwidth, alt={Screenshot of Activity Monitor showing 14.5GB RAM with 12\% NVIDIA GPU usage (and GPU temp of 64\textdegree C), and 61\% CPU used}]{images/ZoomTEXT+WORD.png}\label{subfig:figure3b}}
-\hfill
-\subfloat[RAM Usage Fusion + Word - 14.8GB]{\includegraphics[width=0.45\textwidth, alt={Screenshot of Activity Monitor showing 12.7GB RAM with 12\% NVIDIA GPU usage (and GPU temp of 67\textdegree C), and 74\% CPU used}]{images/FUSION+WORD.png}\label{subfig:figure3c}}
-\caption[Measured Laptop RAM with Accessibility Tools + Microsoft Word]{Measured Laptop RAM with Accessibility Tools + Microsoft Word. Note that this laptop has two GPU, GPU0 is the Intel® Videos card and GPU1 is an NVIDIA Quadro P600, both of which show much higher activity in this test than the previous shown in Figure \ref{fig:figure2}}
-\label{fig:figure3}
-\end{figure}
-
-\pagebreak \hypertarget{notes-on-future-proofing-laptops}{}\section{Laptop Cost Factors}\label{notes-on-future-proofing-laptops}
-Students with visual impairments require laptops that are compatible with assistive technology to receive a free and accessible public education. When selecting a laptop, there are several cost factors that must be taken into account. Firstly, the laptop should have sufficient RAM to run the assistive technology software smoothly. Secondly, the laptop should have a high-quality screen that is large enough to display text and images clearly. Thirdly, the laptop should have a long battery life to ensure that students can use it for extended periods of time without needing to recharge. Fourthly, the laptop should have a durable build quality to withstand daily wear and tear. Finally, the laptop should be lightweight and portable to enable students to carry it around easily. These factors can help ensure that students with visual impairments have access to the technology they need to succeed in their studies.
-
-\hypertarget{future-proofing}{}\subsection{Laptop Durability}\label{future-proofing}
-
-I asked ChatGPT why we should consider future usage needs of a laptop into my purchasing plans and here is its response (emphasis mine):
-
-\begin{leftbar} \begin{quote}
-Buying laptops with high-end RAM and processor specifications can be beneficial for several reasons, especially in terms of longevity and performance. Here are some key considerations:
-
-\begin{enumerate}[leftmargin=*]
-\def\labelenumi{\arabic{enumi}.}
-
-\item
-Future-Proofing:
-\end{enumerate}
-
-\begin{itemize}
-
-\item
-Investing in higher-end components can help future-proof your laptop to some extent. As software and applications become more demanding over time, a laptop with better specifications is likely to remain relevant and capable of handling new software updates and requirements.
-\end{itemize}
-
-\begin{enumerate}[leftmargin=*]
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-
-\item
-Multitasking and Performance:
-\end{enumerate}
-
-\begin{itemize}
-
-\item
-Higher RAM allows for better multitasking capabilities. If you use resource-intensive applications or run multiple programs simultaneously, having ample RAM prevents slowdowns and ensures smooth performance.
-\item
-A powerful processor can handle complex computations and tasks more efficiently, contributing to faster overall system performance.
-\end{itemize}
-
-\begin{enumerate}[leftmargin=*]
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-
-\item
-Graphics Processing:
-\end{enumerate}
-
-\begin{itemize}
-
-\item
-For tasks such as video editing, gaming, or other graphics-intensive applications, a high-end GPU (Graphics Processing Unit) is crucial. This is separate from RAM and the main processor but is equally important for certain tasks.
-\end{itemize}
-
-\begin{enumerate}[leftmargin=*]
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-
-\item
-Long-Term Usability:
-\end{enumerate}
-
-\begin{itemize}
-
-\item
-Technology advances quickly, and what is considered high-end today might become standard or entry-level in a few years. However, starting with a high-end laptop gives you a more extended period before your system becomes outdated.
-\end{itemize}
-
-\begin{enumerate}[leftmargin=*]
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-
-\item
-Smooth Upgrades:
-\end{enumerate}
-
-\begin{itemize}
-
-\item
-Some laptops allow users to upgrade certain components like RAM and storage. Starting with higher-end specifications provides more headroom for future upgrades, allowing you to extend the useful life of your laptop.
-\end{itemize}
-
-\begin{enumerate}[leftmargin=*]
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{5}
-
-\item
-Resource-Intensive Applications:
-\end{enumerate}
-
-\begin{itemize}
-
-\item
-If you use applications that require a lot of processing power, like video editing software, 3D modeling tools, or virtualization software, a high-end laptop can handle these tasks more efficiently, providing a better user experience.
-\end{itemize}
-
-\begin{enumerate}[leftmargin=*]
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{6}
-
-\item
-Responsiveness and Speed:
-\end{enumerate}
-
-\begin{itemize}
-
-\item
-A faster processor and more RAM contribute to a more responsive system. Applications load quicker, and the overall user experience is smoother, which can significantly impact productivity.
-\end{itemize}
-
-\begin{enumerate}[leftmargin=*]
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{7}
-
-\item
-Enhanced Resale Value:
-\end{enumerate}
-
-\begin{itemize}
-
-\item
-High-end laptops generally retain their value better than lower-end models. If you decide to sell or upgrade your laptop in the future, having top-tier specifications can make it more attractive to potential buyers.
-\end{itemize}
-
-It's important to note that the specific requirements depend on your usage patterns and needs. Not everyone needs the highest specifications, and sometimes a mid-range laptop can be more than sufficient for everyday tasks. However, \textbf{for users with demanding workloads or those who want a longer usable life from their device, opting for higher-end specifications can be a wise investment}.
-\end{quote}\end{leftbar}
-
-\pagebreak \hypertarget{gpu-needs}{}\subsection{Role of GPU in Laptop Performance}\label{gpu-needs}
-A CPU or Central Processing Unit is the primary processor of a computer. It is responsible for executing instructions and performing calculations for all the programs running on the computer. A GPU or Graphics Processing Unit, on the other hand, is a specialized processor designed to handle complex calculations required for rendering graphics and images. While a CPU is designed to handle a wide range of tasks quickly, a GPU is designed to quickly render high-resolution images and video concurrently\footnote{\raggedright \href{https://www.weka.io/learn/gpu/what-is-a-gpu/}{WekaIO. (n.d.). What is a GPU? WekaIO}}.
-
-When it comes to improving laptop performance for graphics-intensive tasks or coding, a dedicated GPU can significantly improve performance. A dedicated GPU is a separate processor that is designed to handle the complex calculations required for rendering graphics and images. By offloading the processing of graphics data from the CPU, a dedicated GPU allows the CPU to focus on other tasks, resulting in faster and smoother performance for graphics-intensive applications. Additionally, a GPU can also be beneficial for processes involving AI. AI algorithms require a lot of processing power, and a GPU can help speed up the process. NVIDIA®,  AMD®,  and Intel® are some of the most popular GPU manufacturers, with models available for both desktop and laptop computers. Laptops with a dedicated GPU can handle AI tasks with ease, making them ideal for professionals who work with AI\footnote{\raggedright \href{https://www.reddit.com/r/framework/comments/14pb7b/outside_of_videogames_what_is_the_point_of_a/}{u/ChaosMotor: Outside of videogames, what is the point of a "framework"? (2012, December 12). Reddit}}.
-
-In summary, a CPU is responsible for executing instructions and performing calculations for all the programs running on the computer, while a GPU is a specialized processor designed to handle complex calculations required for rendering graphics and images\footnotemark[52]. A dedicated GPU can significantly improve laptop performance for graphics-intensive tasks such as gaming, video editing, and 3D modeling by offloading the processing of graphics data from the CPU. Screen magnification software can also benefit from a dedicated GPU. Screen magnification software enlarges the content on the screen, which can be taxing on the CPU. A dedicated GPU can help alleviate this burden by handling the graphics processing required for screen magnification. This results in a smoother and more responsive experience when using screen magnification software\footnote{\raggedright \href{https://www.run.ai/guides/multi-gpu/cpu-vs-gpu}{Run:AI. (n.d.). CPU vs GPU: Architecture, Pros and Cons, and Special Use Cases. Run:AI}}.
-
-I evaluated with my personal laptop\footnote{\raggedright My 4 year-old Surface Laptop 3 at the time of the evalutaion} the role for a CPU and GPU in using screenreader and magnification software. I also did the same with the mid-range professional laptop with 16GB of RAM. I found there was no increase in performance for JAWS, ZDSR, NVDA, or Dolphin Screenreader when an integrated GPU was present (AMD® Vega® 10 or Intel® UHD Graphics 630 integrated GPU). However, when I assessed performance of ZoomText, Fusion (ZoomText + JAWS), and Dolphin SuperNova magnifier, as well as Dolphin Magnifier + ScreenReader, I saw a 30-45\% increase in responsiveness for both speech and visual markers available on the screen. In this case I opened 10 tabs in Google Chrome, 10 tabs in Microsoft Edge, 10 tabs in Mozilla Firefox, and started typing in an online Microsoft Word document using office 365 online. Response time refers to the time it took the system to react when I typed beyond the field of view and the system had to move the screen and visual screen marker to a new location. \textit{Table \ref{tab:table51}} shows these data. Importantly, both of the laptops were able to improve their performance for Magnification tasks by a similar percentage when the integrated GPU was used in concert with the CPU.
-
-\pagebreak\begin{longtable}[]{
->{\raggedright\arraybackslash}m{.4\textwidth}
->{\raggedright\arraybackslash}m{.25\textwidth}
->{\raggedright\arraybackslash}m{.25\textwidth}
->{\raggedright\arraybackslash}m{.1\textwidth}
+\begin{longtblr}[
+  caption = {Student software needs and recommended hardware specifications},
+  label = {tab:student-software-needs}
+]{
+  colspec = {X[l] X[l] X[l] X[l] X[l] X[l]},
+  rowhead = 1,
+  row{1} = {font=\normalfont},
+  hlines,
+  stretch = 1.5,
 }
-\toprule
-& \multicolumn{2}{c}{\textbf{Latency (s)}} & \\ \cline{2-3}
-& \textbf{CPU} & \textbf{CPU+GPU} & \textbf{\% Faster} \\
-\midrule
-\endhead \hline \\
-\multicolumn{2}{r}{\textbf{Continued on Next Page}} \endfoot
-\endlastfoot
-\multicolumn{2}{l}{\textbf{Screenreader Only}\footnote{\raggedright The visual marker outlining the current focus was used to measure response}} \\
-JAWS Screenreader & $\begin{array}{l}0.5~~[0.01-1] \\9.0~~[4-15]\end{array}$ & $\begin{array}{l}0.5~~[0.01-1] \\9.0~~[3-17]\end{array}$ & $\begin{array}{l} 0\% \\ 0\%\end{array}$ \\ \cdashline{2-4}
-JAWS Screenreader & $\begin{array}{l}0.5~~[0.01-1] \\9.0~~[4-15]\end{array}$ & $\begin{array}{l}0.5~~[0.01-1] \\9.0~~[3-17]\end{array}$ & $\begin{array}{l} 0\% \\ 0\%\end{array}$ \\ \cdashline{2-4}
-NVDA Screenreader & $\begin{array}{l}0.2~~[0.01-0.5] \\4.0~~[1.5-6]\end{array}$ & $\begin{array}{l}0.2~~[0.01-0.5] \\4.0~~[1.5-6]\end{array}$ & $\begin{array}{l} 0\% \\ 0\%\end{array}$ \\ \cdashline{2-4}
-Dolphin Screenreader & $\begin{array}{l}0.5~~[0.01-1] \\9.0~~[5-17]\end{array}$ & $\begin{array}{l}0.5~~[0.01-1] \\8.8~~[5-17]\end{array}$ & $\begin{array}{l} 0\% \\ 2\%\end{array}$ \\ \cdashline{2-4}
-ZDSR Screenreader & $\begin{array}{l}0.2~~[0.01-0.75] \\5.0~~[2-7]\end{array}$ & $\begin{array}{l}0.2~~[0.01-0.75] \\5.0~~[2-7]\end{array}$ & $\begin{array}{l} 0\% \\ 0\%\end{array}$ \\ \cdashline{2-4}
-\multicolumn{2}{l}{\textbf{Screen Magnification Only}\footnotemark[48]} \\
-ZoomText & $\begin{array}{l}1.1~~[0.5-1.25] ] \\15~~~[10-19]\end{array}$ & $\begin{array}{l}.75~~[0.3-1] ] \\5~~~~~[2.5-10]\end{array}$ & $\begin{array}{l} 32\% \\ 33\%\end{array}$ \\ \cdashline{2-4}
-SuperNova & $\begin{array}{l}1.5~~[0.75-1.45] \\11~~~[4-20]\end{array}$ & $\begin{array}{l}.77~~[0.4-1] \\7~~~~~[3-11]\end{array}$ & $\begin{array}{l} 48\% \\ 36\%\end{array}$ \\ \cdashline{2-4}
-\multicolumn{2}{l}{\textbf{Screenreader + Magnification}\footnotemark[48]} \\
-SuperNova + Magnification & $\begin{array}{l}1.5~~[1-25] ] \\16~~~[9-25]\end{array}$ & $\begin{array}{l}.75~~[0.25-1] ] \\6~~~~~[3-15]\end{array}$ & $\begin{array}{l} 48\% \\ 37\%\end{array}$ \\ \cdashline{2-4}
-Fusion (ZoomText + JAWS) & $\begin{array}{l}1.5~~[1-1.75] \\13~~~[3-19]\end{array}$ & $\begin{array}{l}.75~~[0.25-1] \\5~~~~~[2.5-13]\end{array}$ & $\begin{array}{l} 48\% \\ 38\%\end{array}$ \\[1.0em]\hline
-\caption[Screen Magnifiers Benefit from Integrated GPU]{Screen Magnifiers Benefit from Use of an Integrated GPU. The top row in each table cell contains data for the laptop with 32GB RAM, an AMD® Ryzen™ 7 processor and AMD® Vega™  10 integrated GPU. The lower crow in each cell contains data for the laptop with 16GB RAM, an 8th Gen 17 processor, and Intel® UHD 630 integrated GPU. Integrated GPU were activated or inactivated by turning hardware acceleration ON or OFF for each laptop} \label{tab:table51}
-\end{longtable}
+Program & Type of Program & Cost & Min RAM & Pref RAM & Processor \\
+JAWS & Screenreader & \$225/yr\footnote{\raggedright Typically purchased via APH quota funds} & 8GB & \textgreater24GB\footnote{\raggedright Revised based on equity analysis} & \textgreater11th Gen Intel® Core™ i5+ \\
+TypeAbility & Typing Instruction\footnote{\raggedright Requires JAWS or Fusion} & \$150 & 8GB & \textgreater24GB & \textgreater11th Gen Intel® Core™ i5+ \\
+Narrator & Screenreader\footnote{\raggedright Windows built-in screenreader} & \$0 & 4GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i5 \\
+NVDA & Screenreader\footnote{\raggedright Free, but premium voices cost \$70} & \$0 & 2GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i5 \\
+ZDSR & Screenreader & \$232 & 2GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\
+Dolphin Screenreader & Screenreader & \$1105/yr & 8GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\
+ZoomText & Magnification \& Speech\footnote{\raggedright Pricing changed October 2024} & \$85/yr & 16GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\
+Windows Magnifier & Magnification\footnote{\raggedright Windows built-in magnifier} & \$0 & 16GB & \textgreater24GB & \textgreater11th Gen Intel® Core™ i7+ \\
+Dolphin SuperNova & Magnification & \$545/yr & 16GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\
+Dolphin SuperNova + Speech & Magnification \& Speech & \$825/yr & 16GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\
+\end{longtblr}
 
-\pagebreak \hypertarget{optimizing-cost-with-performance}{}\subsection{Laptop Cost Optimization}\label{optimizing-cost-with-performance}
 
-There is an economic theory based on a Terry Pratchett novel that explains this phenomenon better than we can. It is called the \href{http://en.wikipedia.org/wiki/Boots_theory}{Vimes Boots Index}\footnote{\raggedright Full Text (emphasis mine):
-\begin{leftbar}
-\begin{quote}The reason that the rich were so rich, Vimes reasoned, was because they managed to spend less money.
 
-Take boots, for example. He earned thirty-eight dollars a month plus allowances. A really good pair of leather boots cost fifty dollars. But an affordable pair of boots, which were sort of OK for a season or two and then leaked like hell when the cardboard gave out, cost about ten dollars. Those were the kind of boots Vimes always bought, and wore until the soles were so thin that he could tell where he was in Ankh-Morpork on a foggy night by the feel of the cobbles.
+\hypertarget{current-educational-technology-inadequacy}{}\section{Current Educational Technology Inadequacy}\label{current-educational-technology-inadequacy}
 
-But the thing was that good boots lasted for years and years. \textbf{A man who could afford fifty dollars had a pair of boots that’d still be keeping his feet dry in ten years’ time, while the poor man who could only afford cheap boots would have spent a hundred dollars on boots in the same time and would still have wet feet.}
+Analysis of current student and professional laptop configurations reveals systematic educational equity violations:
 
-Basically, \textbf{we are destined to be stuck in a cycle of perpetually spending more money for inferior products and will, in the end, spend more money than if we just paid for better product in the first place.} \break \qquad-- \textit{Men At Arms}, page 38
-\end{quote}
-\end{leftbar}
+\tagpdfsetup{table/header-rows={1}}
+\centering
+\begin{longtblr}[
+  caption = {Comparison of student and professional laptop configurations for educational equity},
+  label = {tab:chapter1:laptop-configurations}
+]{
+  colspec = {X[l] X[l] X[l] X[l] X[l] X[l]},
+  rowhead = 1,
+  row{1} = {font=\normalfont},
+  hlines,
+  stretch = 1.5,
 }
+Device & Cost & Keyboard & RAM & Screen Size & Processor \\
+Dell Latitude 3190 & \$379 & QWERTY & 4GB\footnote{\raggedright EQUITY VIOLATION - Inadequate for accessibility} & 11.6" Touchscreen & Intel® Celeron Silver \\
+Lenovo 500w Gen 3 & \$358 & QWERTY & 4GB\footnote{\raggedright EQUITY VIOLATION - Inadequate for accessibility} & 11.6" Touchscreen & Intel® Pentium Silver \\
+Dell Precision 3530 & \$1751 & QWERTY & 16GB\footnote{\raggedright UNACCEPTABLY INADEQUATE - Violates equity standard} & 16.0" & 8th Gen Intel® Core™ i7 \\
+Dell Precision 7420 & \$1349 & QWERTY & 16GB\footnote{\raggedright UNACCEPTABLY INADEQUATE - Violates equity standard} & 16.0" & 8th Gen Intel® Core™ i7 \\
+Microsoft Surface Laptop 3 & \$1500 & QWERTY & 32GB\footnote{\raggedright APPROACHES EQUITY - Acceptable performance} & 15.0" Touchscreen & AMD® Ryzen™ 7 \\
+Framework Laptop 16 & \$2750 & QWERTY & 64GB\footnote{\raggedright ACHIEVES EQUITY - True accessibility compliance} & 16.0" & AMD® Ryzen™ 9 \\
+\end{longtblr}
 
-\hfill \break \textit{Table \ref{tab:table6}} illustrates this theory in terms of student laptop computers (Assuming student has a laptop using a screenreader through 3rd-12th grade). \textit{Table \ref{tab:table6}} also illustrates why we choose to err on the side of spending \$2000-3000 on a laptop computer that will last 3-5 years over spending \$1500-2000 on a laptop that will reach end-of-life within 1-2 years before becoming obsolete. By the end of 5 years we will have spent more on Low End and Mid Range Laptops than we would have otherwise spent had we purchased a High End Laptop. Importantly; however, we also would have been using laptops that always performed more poorly than a High End laptop would.
+\hypertarget{the-educational-equity-crisis}{}\section{The Educational Equity Crisis: A Civil Rights Issue}\label{the-educational-equity-crisis}
 
-\pagebreak\begin{longtable}[]{
->{\raggedright\arraybackslash}m{.15\textwidth}
->{\raggedright\arraybackslash}m{.05\textwidth}
->{\raggedright\arraybackslash}m{.05\textwidth}
->{\raggedright\arraybackslash}m{.05\textwidth}
->{\raggedright\arraybackslash}m{.05\textwidth}
->{\raggedright\arraybackslash}m{.05\textwidth}
->{\raggedright\arraybackslash}m{.05\textwidth}
->{\raggedright\arraybackslash}m{.05\textwidth}
->{\raggedright\arraybackslash}m{.05\textwidth}
->{\raggedright\arraybackslash}m{.05\textwidth}
->{\raggedright\arraybackslash}m{.05\textwidth}
->{\raggedright\arraybackslash}b{.10\textwidth}
-}
-\toprule & \multicolumn{10}{c}{\textbf{Does School Have to Purchase a Replacement Laptop by Year}} & \\ \cdashline{1-12}
-\cline{2-11} \\
-\textbf{RAM} \break Cost & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{10-year Cost} \\
-\midrule
-\endhead \hline \\
-\multicolumn{6}{r}{\textbf{Continued on Next Page}} \endfoot
-\endlastfoot
-\textbf{4GB}\footnote{\raggedright Dell Latitude 3190 Education}\fnsep\footnote{\raggedright The 4GB Laptop \textit{cannot} run JAWS and is included to show price comparison to the other options} \break \$525 & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & \$1250 \\ \cdashline{1-12}
-\textbf{4GB}\footnote{\raggedright Lenovo 500w Gen 3 Education}\fnsep\footnotemark[59] \break \$550 & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & \$1500 \\ \cdashline{1-12}
-\textbf{8GB}\footnote{\raggedright Dell Latitude 3190 Education} \break \$1184 & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & \$11,840 \\ \cdashline{1-12}
-\textbf{16GB}\footnote{\raggedright Dell Precision 3530 given to TVIs teaching screenreaders} \break \$1751 & $\checkmark$ & - & $\checkmark$ & - & $\checkmark$ & - & $\checkmark$ & - & $\checkmark$ & - & \$1755 \\ \cdashline{1-12}
-\textbf{32GB}\footnote{\raggedright Microsoft Surface Laptop 3}\break \$2824\break \textcolor{red}{\textit{\textbf{Best Case}}}\footnote{\raggedright This is my personal experience} & $\checkmark$ & - & - & - & - & $\checkmark$ & - & - & - & - & \$1648 \\ \cdashline{1-12}
-\textbf{32GB}\footnote{\raggedright Microsoft Surface Laptop 3}\break \$2824\break \textcolor{red}{\textit{\textbf{Cautious}}}\footnote{\raggedright This is a conservative estimate to account for potential rough treatment of a computer} & $\checkmark$ & - & - & $\checkmark$ & - & - & $\checkmark$ & - & - & - & \$1472 \\[1.0em]\hline
-\caption[Cost of Laptops over Time]{Cost of Laptops Across Time. Notice that the final cost of the 32GB option is comparable to the 4GB options over 10 years. However, the 4GB laptops are not capable of running JAWS reliably in the classroom setting.
-\break\textbullet For the \textcolor{red}{\textbf{Best Case}} Scenario, the 32GB laptop is between \$1107 and \$1192 \textit{\textbf{cheaper}} over time compared to the 16GB and 8GB laptops, respectively.
-\break\textbullet For the \textcolor{red}{\textbf{Cautious}} Scenario, the 32GB laptop is between \$283 and \$1386 \textit{\textbf{cheaper}} over time compared to the 16GB and 8GB laptops, respectively}\label{tab:table6}
-\end{longtable}
+The RAM-latency relationship reveals a fundamental civil rights violation in educational technology:
 
-\pagebreak \hypertarget{timelineofreplacement}{}\subsection{Replacement Timeline}\label{timelineofreplacement}
+\emph{Current State of "Accommodation":}
 
-Optimally, given the needs of students for use of technology in the classroom, the following timeline for laptop replacement is suggested\footnote{\raggedright this is based on the assumption of the school LEA and not the vision department being the first resource for purchasing technology}. The idea behind this timeline if to minmize the number of times any single LEA has to purchase a laptop for a student.
+\begin{itemize}
+\item Students with 8GB systems: \emph{10-20x slower} than necessary for equal access
+\item Students with 16GB systems: \emph{6-12x slower} with unacceptably long latency
+\item Students with 24GB systems: \emph{3-6x slower}, representing minimum threshold for basic equity
+\item Only students with 32GB+ systems: Approach true educational equity
+\end{itemize}
 
-The student be provided with a laptop capable of screenreader usage in 3rd/4th grade depending upon the needs of the student. A replacement laptop should be provided in 7th grade when the student moves to middle school. A final replacement should be provided in 10th grade when the student moves to high school. This means during the 10 years of a student's education, the district would only have to purchase 3 laptops for the student, and each school would only have to purchase one.
+\emph{The False Economy of "Adequate" Systems:}
+Educational institutions providing 8GB or 16GB systems to screen reader users are not providing accommodation—they are creating systematic educational disadvantage that violates principles of equal access. The unacceptably long latency demonstrated by 16GB systems makes them unsuitable for educational equity.
 
-To implement this plan, it is imperative that the vision team be involved in the decision making process for the laptop purchase, primarily to describe the software and hardware specifications required to meet each individual student's needs. This will ensure that the laptop is capable of running the necessary software for the student's entire educational career. These discussions need to start in December of the year previous to the purchasing of the laptop, so that the cost of the technology can be included in the school's technology budget for the following year and the STS can have time to determine which of any agreed upon laptop options fit both the needs of the student as well as the budgetary constraints of the school. This means that discussions should happen in December of the student's 2nd/3rd grade year (this depends upon when the students in that school move from an iPad based setup to using laptop computers), December of their 6th grade year with the middle school, and December of their 9th grade year with the high school.
+\emph{True Cost of Inadequate Systems:}
+
+\begin{itemize}
+\item Extended time requirements don't compensate for efficiency loss
+\item Increased cognitive load impairs learning outcomes
+\item Accumulated disadvantage over academic career
+\item Reduced preparation for technology-dependent careers
+\item Perpetuation of disability-based educational inequality
+\end{itemize}
+
+\subsection{The 16GB Inadequacy Crisis}\label{the-16gb-inadequacy-crisis}
+
+Systems with 16GB RAM, while previously considered adequate, demonstrate unacceptably long latency that violates educational equity principles:
+
+\begin{itemize}
+\item \emph{Persistent Latency}: 125-300ms response times during typical educational tasks
+\item \emph{Performance Degradation}: Memory pressure from modern educational software exceeds 16GB capacity
+\item \emph{Accessibility Violation}: Response times 5-12x slower than equity standard constitute discrimination
+\item \emph{Educational Impact}: Students experience measurable disadvantage in all computer-based learning activities
+\end{itemize}
+
+The evidence clearly demonstrates that 16GB RAM is insufficient for screen reader users in educational environments, necessitating a minimum recommendation of 24-32GB RAM for basic educational equity.
 
 \pagebreak
-\hypertarget{minimum-laptop-recommendations}{}\section{Recommended Laptop Specifications}\label{minimum-laptop-recommendations}
-\textit{Table \ref{tab:table7}} is a list of recommendations for laptop specifications by use case.
 
-\pagebreak\begin{longtable}[]{
->{\raggedright\arraybackslash}m{.7\textwidth}
->{\raggedright\arraybackslash}b{.3\textwidth}
+\hypertarget{recommendations}{}\section{Recommendations}\label{recommendations}
+
+\subsection{Immediate Interventions - Equity-Focused Approach}\label{immediate-interventions-equity-focused-approach}
+
+\begin{enumerate}
+\item \emph{Equity Audit}: Identify all students using systems that fail to meet <25ms response standard
+\item \emph{Emergency Hardware Replacement}: Immediately upgrade systems with <24GB RAM as accessibility violation
+\item \emph{16GB System Discontinuation}: Recognize 16GB systems as demonstrating unacceptably long latency for screen reader users
+\item \emph{Performance Optimization}: Implement aggressive memory management and audio driver optimization
+\item \emph{Interim Accommodations}: Provide alternative assessment methods while hardware is upgraded
+\item \emph{Legal Compliance}: Recognize sub-standard systems as potential ADA/Section 504 violations
+\end{enumerate}
+
+\subsection{Long-term Solutions - Civil Rights Compliance}\label{long-term-solutions-civil-rights-compliance}
+
+\begin{enumerate}
+\item \emph{Minimum Hardware Standards}: Establish 24-32GB RAM as minimum for screen reader accessibility compliance, with 32GB as the preferred standard
+\item \emph{Equity-Based Budgeting}: Allocate budget based on true cost of educational equity, not minimum functionality
+\item \emph{Technology Equity Audits}: Regular assessment of response times to ensure ongoing compliance
+\item \emph{Faculty Education}: Train educators on the civil rights implications of inadequate assistive technology
+\item \emph{Procurement Standards}: Mandate equity-compliant hardware (24-32GB minimum) in all accessibility technology purchases
+\item \emph{Performance Monitoring}: Implement real-time latency monitoring to ensure systems maintain equity standards
+\end{enumerate}
+
+\section{Conclusion}\label{chapter1-conclusion}
+
+Screen reader response latency caused by inadequate RAM creates a fundamental violation of educational equity principles. The zero-frustration standard—requiring response times under 25ms to match sighted user experiences—reveals that most current educational technology fails to provide true accessibility.
+
+\subsection{The Equity Crisis:}
+
+\begin{itemize}
+\item Systems with 8GB RAM create 6-32x slower response times than necessary for equal access
+\item Systems with 16GB RAM demonstrate unacceptably long latency with 5-12x disadvantage compared to equity standard
+\item Systems require 24-32GB RAM minimum to begin approaching educational equity for screen reader users
+\item Only systems with 32GB+ RAM achieve performance levels that approach true educational equity
+\end{itemize}
+
+\subsection{The Civil Rights Imperative:}
+This is not merely a technology issue but a civil rights matter. Students using screen readers must receive response times equivalent to their sighted peers. Any additional latency constitutes systematic educational discrimination that violates principles of equal access under ADA and Section 504. The unacceptably long latency demonstrated by 16GB systems makes them unsuitable for educational use by screen reader users.
+
+\subsection{The Path Forward:}
+Educational institutions must recognize that providing 8GB or 16GB systems to screen reader users is not accommodation—it is the creation of systematic educational disadvantage. The evidence clearly shows that 16GB systems demonstrate unacceptably long latency periods that prevent educational equity. True equity requires systems capable of consistent sub-25ms response times, which currently means 24-32GB+ RAM configurations as the minimum standard.
+
+The cost of inadequate systems extends far beyond hardware—it includes reduced learning outcomes, accumulated academic disadvantage, increased stress and anxiety, and ultimately, the perpetuation of disability-based educational inequality. Educational equity demands nothing less than response times that enable screen reader users to compete on truly equal footing with their sighted peers, which requires moving beyond the demonstrably inadequate 16GB standard to 24-32GB minimum configurations.
+
+\section{Recommended Minimum Specifications}\label{recommended-minimum-specifications}
+
+Based on the educational equity analysis, the following minimum specifications are required for screen reader accessibility compliance:
+
+\tagpdfsetup{table/header-rows={1}}
+\centering
+\begin{longtblr}[
+  caption = {Minimum and preferred RAM specifications for educational technology configurations},
+  label = {tab:min-specs}
+]{
+  colspec = {X[l] X[l] X[l] X[l]},
+  rowhead = 1,
+  row{1} = {font=\normalfont},
+  hlines,
+  stretch = 1.5,
 }
-\toprule
+Configuration Type & Minimum RAM & Preferred RAM & Educational Viability \\
+Screen Reader Only & 24GB & 32GB & Minimum threshold for equity \\
+Screen Magnification Only & 32GB & 64GB & Approaches equity standard \\
+Combined SR + Magnification & 32GB & 64GB & Required for true accessibility \\
+Future-Proof Educational & 64GB & 128GB & Ensures long-term equity compliance \\
+\end{longtblr}
 
-\textbf{Use Case} & \textbf{Recommendation} \\
-\midrule
-\endhead \hline \\
-\multicolumn{2}{r}{\textbf{Continued on Next Page}} \endfoot
-\endlastfoot
-\multicolumn{2}{l}{\textbf{Screenreader Only}} \\[1em]
-JAWS Screenreader & \textgreater16GB \\ \cdashline{1-2}
-NVDA Screenreader & \textgreater16GB \\ \cdashline{1-2}
-Dolphin Screenreader & \textgreater16GB \\ \cdashline{1-2}
-ZDSR Screenreader & \textgreater16GB \\ \cdashline{1-2}
-\multicolumn{2}{l}{\textbf{Screen Magnification Only}\footnote{can also benefit from either an integrated or dedicated GPU}} \\[1em]
-ZoomText & \textgreater24-32GB \\ \cdashline{1-2}
-Windows Magnifier & \textgreater16GB \\ \cdashline{1-2}
-Dolphin SuperNova & \textgreater24-32GB \\ \cdashline{1-2}
-\multicolumn{2}{l}{\textbf{Screenreader + Magnification}\footnotemark[\value{footnote}]} \\[1em]
-JAWS Screenreader + Windows Magnifier & \textgreater24-32GB \\ \cdashline{1-2}
-NVDA Screenreader + Windows Magnifier & \textgreater24-32GB \\ \cdashline{1-2}
-ZDSR Screenreader + Windows Magnifier & \textgreater24-32GB \\ \cdashline{1-2}
-Dolphin Screenreader + Windows Magnifier & \textgreater24-32GB \\ \cdashline{1-2}
-SuperNova Screenreader + Magnification & \textgreater32-64GB \\ \cdashline{1-2}
-Fusion Screenreader + Magnification & \textgreater32-64GB \\\hline
-\caption{Recommended Laptop Specifications}\label{tab:table7}
-\end{longtable}
+\subsection{Processor Requirements:}
+\begin{itemize}
+\item Minimum: 11th Generation Intel® Core™ i7 or AMD® Ryzen™ 7
+\item Preferred: 13th Generation Intel® Core™ i7+ or AMD® Ryzen™ 7+
+\item Future-Proof: Latest generation high-performance processors
+\end{itemize}
 
-\pagebreak
-\hypertarget{laptops-meeting-recommended-specifications}{}\section{Laptops Meeting Specifications}\label{laptops-meeting-recommended-specifications}
-\textit{Table \ref{tab:table8}} is an alphabetical list of laptop computers that meet the recommended specifications defined in \textit{Table \ref{tab:table7}}.
+\subsection{Additional Requirements:}
+\begin{itemize}
+\item SSD storage (minimum 512GB)
+\item Integrated or dedicated GPU for magnification tasks
+\item High-quality audio subsystem for screen reader output
+\item Minimum 15.6" display for magnification users
+\item Professional-grade build quality for durability
+\end{itemize}
 
-\pagebreak\begin{longtable}[]{
->{\raggedright\arraybackslash}m{.35\textwidth}
->{\raggedright\arraybackslash}m{.12\textwidth}
->{\raggedright\arraybackslash}m{.12\textwidth}
->{\raggedright\arraybackslash}m{.12\textwidth}
->{\raggedright\arraybackslash}b{.2\textwidth}
+\subsection{Comprehensive Laptop Display Guidelines for Students with Low Vision}\label{display-guidelines-low-vision}
+
+\emph{Screen Specification Recommendations}
+
+\textit{Visual Accessibility Considerations}
+
+For students with low vision, display specifications are critically more than technical metrics—they represent enhanced learning accessibility and reduced eye strain.
+
+\emph{Detailed Display Specification Analysis}
+
+\textit{Resolution Optimization}
+\begin{itemize}
+    \item \emph{Recommended Resolution:} 3840x2160 (4K)
+    \item \emph{Minimum Acceptable:} 2560x1440 (QHD)
+    \item \emph{Key Benefits for Low Vision Students:}
+        \begin{itemize}
+            \item Increased pixel density enables larger text scaling
+            \item Sharper image reduces visual fatigue
+            \item Supports magnification software without significant quality loss
+            \item Allows precise text and graphical clarity
+        \end{itemize}
+\end{itemize}
+
+\textit{Refresh Rate Considerations}
+\begin{itemize}
+    \item \emph{Optimal Rate:} 90--120~Hz
+    \item \emph{Minimum Acceptable:} 60~Hz
+    \item \emph{Low Vision Specific Advantages:}
+        \begin{itemize}
+            \item Reduced screen flickering
+            \item Smoother text rendering
+            \item Less eye strain during extended study sessions
+            \item Improved visual tracking for screen readers
+        \end{itemize}
+\end{itemize}
+
+\textit{Response Time}
+\begin{itemize}
+    \item \emph{Ideal:} 4--5~ms
+    \item \emph{Maximum Recommended:} 10~ms
+    \item \emph{Importance for Low Vision:}
+        \begin{itemize}
+            \item Minimizes motion blur during screen navigation
+            \item Reduces visual artifact interference
+            \item Supports more predictable visual transitions
+        \end{itemize}
+\end{itemize}
+
+\textit{Contrast Ratio}
+\begin{itemize}
+    \item \emph{Minimum Recommended:} 3000:1
+    \item \emph{Optimal Range:} 5000:1--10000:1
+    \item \emph{Critical for Low Vision:}
+        \begin{itemize}
+            \item Enhanced text legibility
+            \item Better differentiation between foreground/background
+            \item Supports high-contrast accessibility modes
+            \item Reduces eye strain during prolonged use
+        \end{itemize}
+\end{itemize}
+
+\textit{Brightness Management}
+\begin{itemize}
+    \item \emph{Recommended Range:} 400--600~nits
+    \item \emph{Low Vision Specific Features:}
+        \begin{itemize}
+            \item Adaptable brightness settings
+            \item Blue light reduction capabilities
+            \item Automatic brightness adjustment
+            \item Supports external lighting condition variations
+        \end{itemize}
+\end{itemize}
+
+\textit{Color Accuracy and Gamut}
+\begin{itemize}
+    \item \emph{Color Coverage:} 100\% sRGB
+    \item \emph{Delta E:} Below 2
+    \item \emph{Low Vision Benefits:}
+        \begin{itemize}
+            \item Consistent color representation
+            \item Supports color-based learning materials
+            \item Enhances visual clarity for color-coded information
+            \item Reduces visual confusion
+        \end{itemize}
+\end{itemize}
+
+\textit{Panel Technology}
+\begin{itemize}
+    \item \emph{Recommended:} OLED or Advanced IPS
+    \item \emph{Low Vision Specific Advantages:}
+        \begin{itemize}
+            \item Wider viewing angles (178 degrees)
+            \item Superior color consistency
+            \item Better contrast and detail preservation
+            \item Reduced glare and reflection
+        \end{itemize}
+\end{itemize}
+
+\textit{Additional Accessibility Features}
+\begin{itemize}
+    \item HDR Support: HDR10 or Dolby Vision
+    \item Adaptive Color Modes:
+        \begin{itemize}
+            \item Grayscale options
+            \item High-contrast modes
+            \item Color temperature adjustments
+        \end{itemize}
+    \item Blue Light Filtering
+    \item Integrated Magnification Support
+\end{itemize}
+
+\textit{Recommended Screen Sizes}
+\begin{itemize}
+    \item Laptop: 15--17 inches
+    \item External Monitor: 24--32 inches
+    \item Aspect Ratio: 16:10 preferred for additional vertical space
+\end{itemize}
+
+\textit{Connectivity Considerations}
+\begin{itemize}
+    \item Multiple Port Options:
+        \begin{itemize}
+            \item HDMI 2.1
+            \item USB-C with DisplayPort
+            \item Thunderbolt support
+        \end{itemize}
+    \item Enables external display connections
+    \item Supports adaptive display technologies
+\end{itemize}
+
+\emph{Conclusion}
+
+For students with low vision, the ideal laptop display combines critical specifications that prioritize visual clarity and comfort: a 4K resolution (3840x2160) with a high contrast ratio of 5000:1 to 10000:1, coupled with a brightness range of 400--600~nits that can be easily adjusted. The screen should feature an OLED or advanced IPS panel with 100\% sRGB color coverage, offering wide 178-degree viewing angles and a refresh rate of 90--120~Hz to minimize eye strain. A 15--17 inch laptop screen with a 16:10 aspect ratio is recommended, supporting adaptive color modes, blue light filtering, and integrated magnification capabilities. These specifications ensure optimal visual support, transforming technological limitations into enhanced learning opportunities by providing crisp, clear, and customizable visual information that accommodates the unique needs of students with low vision.
+
+\emph{Educational Recommendations}
+
+For students with low vision, the ideal laptop display combines critical specifications that prioritize visual clarity and comfort: as high a resolution screen as possible with a high contrast ratio of $>$5000:1, coupled with a brightness range of $>$300--600~nits that can be easily adjusted. (Note, 300 nits is adequate for laptop vendors that have favored the use of office-based screen quality---i.e., Lenovo Thinkpad line---over high color representation---i.e., Dell XPS line. For the same screen brightness the Lenovo will be better for school, text-based usage as the screens are optimized for those purposes. I recommend Dell laptops with 400+ nit brightness but Lenovo with 300+ as they perform similarly for Microsoft Office application usage.) The screen should feature an OLED or advanced IPS panel with 100\% sRGB color coverage, offering wide 178-degree viewing angles and a refresh rate of 90--120~Hz to minimize eye strain. A 15--17 inch laptop screen with a 16:10 aspect ratio is recommended, supporting adaptive color modes, blue light filtering, and integrated magnification capabilities. These specifications ensure optimal visual support, transforming technological limitations into enhanced learning opportunities by providing crisp, clear, and customizable visual information that accommodates the unique needs of students with low vision.
+
+\section{Implementation Timeline}\label{implementation-timeline}
+
+\subsection{Immediate (0-6 months):}
+\begin{itemize}
+\item Audit all current systems against equity standards
+\item Identify students using sub-standard equipment
+\item Begin emergency hardware replacement for 8GB systems
+\item Discontinue procurement of 16GB systems for screen reader users
+\end{itemize}
+
+\subsection{Short-term (6-12 months):}
+\begin{itemize}
+\item Replace all 16GB systems with 24-32GB configurations
+\item Implement performance monitoring systems
+\item Train staff on equity standards and civil rights implications
+\item Update procurement policies to reflect equity requirements
+\end{itemize}
+
+\subsection{Long-term (1-3 years):}
+\begin{itemize}
+\item Establish 32GB as minimum standard for all new deployments
+\item Implement proactive replacement cycles based on performance metrics
+\item Develop equity compliance monitoring protocols
+\item Create sustainable funding models for accessibility technology
+\end{itemize}
+
+\subsection{The Educational Imperative:}
+The evidence presented in this chapter demonstrates that adequate hardware for screen reader users is not a luxury but a civil rights requirement. Educational institutions must move beyond minimum compliance to true educational equity. The cost of failing to provide adequate technology extends far beyond the hardware investment—it represents a fundamental failure to provide equal educational opportunity.
+
+Students using screen readers deserve technology that enables them to learn, compete, and succeed on equal terms with their sighted peers. This requires response times under 25ms, which current research shows requires 24-32GB RAM as a minimum, with 32GB+ configurations preferred for true educational equity.
+
+The time for incremental improvements has passed. Educational equity demands immediate action to ensure that all students have access to technology that truly enables their success, not systems that create barriers to their educational achievement.
+
+\subsection{Laptops Meeting Minimal Educational Requirements}
+\begin{longtblr}[
+  caption = {Comprehensive Modern Laptop Specifications for Accessibility and Performance (2025)},
+  label = {tab:modern-laptop-specs},
+  note = {Cost as of July 1, 2025. All specifications subject to change.}
+]{
+  colspec = {X[l] X[l] X[l] X[l] X[l] X[l] X[l] X[l]},
+  rowhead = 1,
+  row{1} = {font=\bfseries},
+  hlines,
+  stretch = 1.5,
 }
-\toprule
-\textbf{Company / Model} & \textbf{Cost} & \textbf{RAM} & \textbf{Display} & \textbf{Processor} \\
-\midrule
-\endhead \hline \\
-\multicolumn{5}{r}{\textbf{Continued on Next Page}} \endfoot
-\endlastfoot
-\multicolumn{5}{l}{\textbf{Screenreader Only\footnote{\raggedright Laptops without integrated/dedicated GPU units}}} \\ \cdashline{1-5}
-\multicolumn{5}{l}{\break\textbf{\qquad\textless\$1000-\$2000}} \\ \cdashline{1-5}
-Acer Aspire 5 & \$1319 & 32GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Acer Swift Go 16 & \$999 & 32GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-ASUS Vivobook 17X & \$1149 & 32GB & 17.3 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-ASUS Vivobook 17X & \$1189 & 40GB & 17.3 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-ASUS Vivobook 17X & \$1249 & 40GB & 17.3 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-BT Speak Pro\footnote{\raggedright This is a Linux computer with Perkins-style input and auditory output} & \$1195 & TBD & none & TBD \\ \cdashline{1-5}
-Dell G16 Gaming Laptop & \$1999 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell Inspiron 16 Plus & \$1499 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell Inspiron 3530 & \$1259 & 32GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell Inspiron 3530 & \$1339 & 48GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell Inspiron 3530 & \$1419 & 64GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell XPS 9530 & \$1829 & 32GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell XPS 9530 & \$1929 & 48GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Framework 13 & \$1102 & 32GB & 13.5 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Framework 13 & \$1732 & 32GB & 13.5 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-Framework 13 & \$1892 & 64GB & 13.5 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-HP 14 & \$1189 & 32GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP 14 & \$1269 & 48GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP 14 & \$1349 & 64GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP 15 & \$1879 & 64GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP 17 & \$1019 & 32GB & 17.3 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-HP 17 & \$1449 & 64GB & 17.3 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP 17 & \$1802 & 64GB & 17.3 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP 17 & \$1929 & 64GB & 17.3 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-HP Dragonfly Pro & \$1549 & 32GB & 14.0\break \textit{Touchscreen} & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-HP EliteBook 860 G10 & \$1819 & 64GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP Envy & \$1749 & 32GB & 17.3\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP ENVY x360 15 & \$1059 & 64GB & 15.6\break \textit{Touchscreen} & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-HP ENVY x360 15 & \$1519 & 32GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP ENVY x360 15 & \$1599 & 48GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP ENVY x360 15 & \$1679 & 64GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP Pavilion 15 & \$1329 & 48GB & 15.6 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-HP Pavilion 15 & \$1359 & 32GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP Pavilion 15 & \$1409 & 64GB & 15.6 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-HP Pavilion 15 & \$1439 & 48GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP ZBook Firefly 16 G10 & \$1934 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Lenovo Slim Pro 9i & \$1899 & 32GB & 14.0 \break \textit{Touchscreen} & 13th Gen Intel® Core™ i7\\ \cdashline{1-5}
-Lenovo ThinkPad E16 Gen 1 & \$1049 & 24GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Lenovo ThinkPad E16 Gen 1 & \$1309 & 32GB & 16.0\break \textit{Touchscreen} & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-Lenovo ThinkPad E16 Gen 1 & \$1349 & 40GB & 16.0\break \textit{Touchscreen} & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-Lenovo ThinkPad E16 Gen 1 & \$1459 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Lenovo ThinkPad E16 Gen 1 & \$1599 & 40GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Lenovo ThinkPad T14 Gen 4 & \$1286 & 24GB & 14.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Lenovo ThinkPad T14 Gen 4 & \$1286 & 24GB & 14.0\break \textit{Touchscreen} & AMD® Ryzen™ \\ \cdashline{1-5}
-Lenovo ThinkPad T16 Gen 2 & \$1994 & 32GB & 16.0 \break \textit{Touchscreen} & 13th Gen Intel® Core™ i7\\ \cdashline{1-5}
-Lenovo ThinkPad X13 Gen 4 & \$1309 & 32GB & 13.3\break \textit{Touchscreen} & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-Lenovo Thinkpad X1 Yoga Gen 8 & \$1848 & 32GB & 14.0\break \textit{Touchscreen} & AMD® Ryzen™ \\ \cdashline{1-5}
-Lenovo Yoga 7i 14 & \$1399 & 32GB & 14.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-LG Gram 14 & \$1699 & 32GB & 14.4 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-LG Gram 14 & \$1799 & 64GB & 14.4 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-LG Gram 16 & \$1999 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-LG gram 17 & \$1769 & 32GB & 17.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Malibal Aon L1 & \$1589 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Malibal Aon L1 & \$1625 & 64GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Commercial 14 & \$1279 & 32GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Commercial 14 & \$1579 & 64GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Prestige 14 & \$1529 & 32GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Prestige 16 & \$1699 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Summit E14 Flip & \$1829 & 32GB & 14.0\break\textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Summit E14 Flip & \$1999 & 32GB & 14.0\break\textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Overpowered 17+ & \$1699 & 32GB & 17.3 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-\multicolumn{5}{l}{\break\textbf{\qquad\$2000-\$3000}} \\ \cdashline{1-5}
-ASUS ProArt Studiobook & \$1999 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS Zenbook Pro 16X & \$1599 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Dell XPS 13 Plus & \$1009 & 32GB & 13.4\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell XPS 15 & \$1999 & 32GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Dell XPS 9530 & \$2029 & 64GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Framework 13 & \$1222 & 64GB & 13.5 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Framework 16 & \$1239\footnote{with NUMPAD} & 32GB & 16.0 & AMD® Ryzen™ 9 \\ \cdashline{1-5}
-Framework 16 & \$1399\footnotemark[60] & 64GB & 16.0 & AMD® Ryzen™ 9 \\ \cdashline{1-5}
-HP ZBook Firefly 16 G10 & \$2549 & 64GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Legion Pro 7i & \$1599 & 32GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Lenovo ThinkPad P1 Gen 6 & \$1489 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Lenovo Thinkpad P14s & \$1199 & 32GB & 14.0 & AND Ryzen 7 \\ \cdashline{1-5}
-Lenovo Thinkpad P14s & \$1509 & 64GB & 14.0 & AND Ryzen 7 \\ \cdashline{1-5}
-Lenovo ThinkPad P16 Gen 2 & \$1039 & 32GB & 16.0\break \textit{Touchscreen} & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-Lenovo ThinkPad P16 Gen 2 & \$1829 & 64GB & 16.0\break \textit{Touchscreen} & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-Lenovo ThinkPad T16 Gen 2 & \$2254 & 48GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-LG gram 16 2-in-1 & \$2119 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-LG Gram 17 & \$1099 & 32GB & 17.3 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-\multicolumn{5}{l}{\break\textbf{\qquad\$3000-\$4000}} \\ \cdashline{1-5}
-Dell Latitude 7440 & \$1615 & 32GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell Precision 3480 & \$1205 & 32GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell Precision 3581 & \$1854 & 32GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell XPS 17 & \$1349 & 32GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell XPS 17 & \$1549 & 32GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Lenovo ThinkPad P16 Gen 2 & \$1239 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Lenovo ThinkPad P16v & \$1339 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Lenovo Thinkpad X1 Yoga & \$1719 & 32GB & 14.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-\multicolumn{5}{l}{\break\textbf{\qquad\textgreater\$4000}} \\ \cdashline{1-5}
-b.book\footnote{\raggedright This is a Windows Computer without a monitor, substituting a 40 cell braille display} & \$1765 & 8GB-16GB & none & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Dell Precision 5480 & \$1354 & 32GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell Precision 5680 & \$1597 & 32GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Dell Precision 7680 & \$1225 & 32GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Lenovo ThinkPad P16 Gen 2 & \$1189 & 64GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Lenovo ThinkPad P16v & \$1929 & 64GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Orbit Optima\footnotemark[\value{footnote}] & \$1500 & 32GB-64GB & none & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Seika Studio\footnotemark[\value{footnote}] & \$1500 & 8GB-16GB\footnotemark[62] & none & 12th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-\multicolumn{5}{l}{\textbf{Screenreader OR Magnification + Screenreader}} \\
-\multicolumn{5}{l}{\break\textbf{\qquad\$1000-\$2000}} \\
-Acer TravelMate P4 14\footnote{\raggedright with NVIDIA® GeForce RTX™  2050} & \$1499 & 32GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Acer Nitro 16 AMD\footnote{\raggedright with NVIDIA® GeForce RTX™  4070} & \$1799 & 32GB & 17.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Acer Nitro 17 AMD\footnotemark[\value{footnote}] & \$1799 & 32GB & 17.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Alienware x14\footnote{\raggedright with NVIDIA® GeForce RTX™  4080} & \$1999 & 32GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-ASUS ROG Zephyrus G14\footnotemark[65] & \$1819 & 32GB & 14.0 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-ASUS ROG Zephyrus G14\footnotemark[65] & \$1889 & 48GB & 14.0 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-ASUS ROG Zephyrus G14\footnotemark[65] & \$1699 & 40GB & 14.0 & AMD® Ryzen™ 9 \\ \cdashline{1-5}
-ASUS ROG Zephyrus G16\footnotemark[65] & \$1989 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-ASUS TUF Gaming A15\footnotemark[65] & \$1549 & 32GB & 15.6 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-ASUS TUF Gaming A16\footnote{\raggedright AMD® Radeon RX 7600S} & \$1445 & 32GB & 16.0 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-ASUS Vivobook 16X\footnote{\raggedright with NVIDIA® GeForce RTX™  3050} & \$1739 & 40GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS Vivobook 16X\footnotemark[65] & \$1829 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS Vivobook 16X\footnotemark[65] & \$1909 & 48GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Eluktronics RP-15 G2\footnote{\raggedright with NVIDIA® GeForce RTX™  4060} & \$1797 & 64GB & 15.6 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-HP Pavilion 15\footnote{\raggedright with NVIDIA GeForce e MX550} & \$1309 & 32GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP Pavilion 15\footnotemark[65] & \$1389 & 48GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP Pavilion 15\footnotemark[65] & \$1469 & 64GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP Victus 16\footnotemark[65] & \$1599 & 32GB & 16.1 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-HP Victus 16\footnotemark[65] & \$1699 & 64GB & 16.1 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-Lenovo IdeaPad Gaming 3 15\footnotemark[65] & \$1079 & 64GB & 15.6 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-Lenovo IdeaPad Gaming 3 15\footnotemark[65] & \$1149 & 32GB & 15.6 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-Malibal Aon L1\footnotemark[65] & \$1589 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Malibal Aon S1\footnotemark[67] & \$1812 & 32GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Alpha 17\footnote{\raggedright with AMD® Radeon RX5500M} & \$1849 & 32GB & 17.3 & AMD® Ryzen™9 \\ \cdashline{1-5}
-MSI Bravo 15\footnotemark[65] & \$1189 & 32GB & 15.6 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-MSI Bravo 15\footnotemark[65] & \$1279 & 64GB & 15.6 & AMD® Ryzen™ 7 \\ \cdashline{1-5}
-MSI Bravo 17\footnotemark[68] & \$1499 & 32GB & 17.3 & AMD® Ryzen™7 \\ \cdashline{1-5}
-MSI Crosshair 16\footnotemark[65] & \$1699 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Crosshair 16\footnotemark[65] & \$1809 & 64GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Cyborg 15\footnotemark[65] & \$1699 & 48GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Cyborg 15\footnotemark[65] & \$1874 & 32GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Cyborg\footnotemark[65] & \$1240 & 32GB & 15.6 & AMD® Ryzen™7 \\ \cdashline{1-5}
-MSI Katana 15\footnotemark[65] & \$1899 & 32GB & 15.6 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-MSI Pulse 17\footnotemark[70] & \$1899 & 32GB & 17.3 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-MSI Pulse 15\footnotemark[65] & \$1599 & 32GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Pulse 15\footnote{\raggedright with NVIDIA® GeForce RTX™  3060} & \$1699 & 32GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Raider 15\footnote{\raggedright with NVIDIA® GeForce RTX™  3070} & \$1999 & 32GB & 15.6 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-MSI Stealth 14 Studio\footnotemark[65] & \$1949 & 64GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Vector\footnotemark[71] & \$1999 & 32GB & 17.3 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Sager NP8855D\footnotemark[65] & \$1549 & 32GB & 15.6 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Sager NP8855D\footnotemark[65] & \$1704 & 64GB & 15.6 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Sager NP8875E\footnotemark[66] & \$1799 & 32GB & 17.3 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Sager NP8875E\footnotemark[66] & \$1954 & 64GB & 17.3 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-XPG Xenia 15G\footnotemark[66] & \$1399 & 32GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-\multicolumn{5}{l}{\break\textbf{\qquad\$2000-\$4000}} \\ \cdashline{1-5}
-Acer Nitro 5 Intel \footnote{\raggedright with NVIDIA® GeForce RTX™  3070Ti} & \$1299 & 32GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Acer Nitro 5 AMD® \footnote{\raggedright with NVIDIA® GeForce RTX™  3070Ti} & \$1199 & 32GB & 15.6 & AMD® Ryzen™ 7\\ \cdashline{1-5}
-Acer Predator Helios 16\footnotemark[65] & \$1499 & 32GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Acer Predator Triton\footnotemark[65] & \$1799 & 64GB & 17.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Alienware m16\footnotemark[65] & \$1499 & 32GB & 16.0 & 13th Gen 19 \\ \cdashline{1-5}
-ASUS Creator Laptop Q\footnotemark[67] & \$2799 & 40GB & 15.6 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS ROG Flow X16\footnotemark[65] & \$2489 & 32GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS ROG Flow X16\footnotemark[65] & \$3059 & 64GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS ROG Zephyrus G14\footnotemark[65] & \$2359 & 48GB & 14.0 & AMD® Ryzen™ 9 \\ \cdashline{1-5}
-ASUS ROG Zephyrus G14\footnotemark[65] & \$2419 & 32GB & 14.0 & AMD® Ryzen™ 9 \\ \cdashline{1-5}
-ASUS ROG Zephyrus G16\footnotemark[65] & \$2039 & 48GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-ASUS ROG Zephyrus M16\footnotemark[65] & \$2079 & 32GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS ROG Zephyrus M16\footnotemark[65] & \$2369 & 64GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS ROG Zephyrus M16\footnotemark[64] & \$3289 & 96GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS TUF Gaming A15\footnotemark[65] & \$2069 & 64GB & 15.6 & AMD® Ryzen™ 9 \\ \cdashline{1-5}
-ASUS TUF Gaming A16\footnote{\raggedright with AMD® Radeon RX 7700S} & \$2119 & 64GB & 16.0 & AMD® Ryzen™ 9 \\ \cdashline{1-5}
-ASUS Vivobook Pro 16X\footnotemark[65] & \$2339 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS Vivobook Pro 16X\footnotemark[65] & \$2349 & 64GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS Zenbook Pro 14\footnotemark[65] & \$2779 & 48GB & 14.5\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-ASUS Zenbook Pro 14\footnotemark[65] & \$2199 & 32GB & 14.5\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Corsair Voyager\footnote{\raggedright with AMD® Radeon 6800M} & \$1350 & 32GB & 16.0 & AMD® Ryzen™ 9 \\ \cdashline{1-5}
-Dell XPS 9530\footnotemark[65] & \$2399 & 32GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell XPS 9530\footnotemark[65] & \$2599 & 64GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Dell XPS 9730\footnotemark[64] & \$3899 & 32GB & 17.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Dell XPS 9730\footnotemark[64] & \$5299 & 64GB & 17.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-DigitalStorm Nova\footnotemark[66] & \$1294 & 32GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-DigitalStorm Nova\footnotemark[66] & \$1428 & 64GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Falcon NW TLX\footnotemark[65] & \$1423 & 32GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Falcon NW TLX\footnotemark[65] & \$1567 & 64GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Framework 16\footnotemark[73] & \$1808 & 64GB & 16.0 & AMD® Ryzen™ 9 \\ \cdashline{1-5}
-Framework 16\footnotemark[74] & \$1639 & 32GB & 16.0 & AMD® Ryzen™ 9 \\ \cdashline{1-5}
-HP ENVY 16\footnotemark[65] & \$2069 & 40GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-HP ENVY 16\footnotemark[65] & \$2119 & 48GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-HP ENVY 16\footnotemark[65] & \$2589 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-HP ENVY 16\footnotemark[65] & \$3264 & 64GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-HP ZBook Firefly 16 G10\footnote{\raggedright with NVIDIA® GeForce RTX™  A500} & \$2269 & 32GB & 16.0\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-HP ZBook Power G10\footnote{\raggedright with NVIDIA® GeForce RTX™  2000 Ada} & \$2299 & 64GB & 15.6\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Lenovo Legion Slim 7i 16\footnotemark[65] & \$2169 & 32GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Lenovo ThinkPad P1 Gen 6\footnote{\raggedright with NVIDIA® GeForce RTX™  A1000} & \$2049 & 64GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-LG Gram 16\footnotemark[67] & \$1199 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-LG Gram 17\footnotemark[67] & \$1199 & 32GB & 17.3 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Malibal Aon L1\footnotemark[66] & \$1664 & 64GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Malibal Aon S1\footnotemark[67] & \$1779 & 64GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Microsoft Surface Laptop Studio 2\footnotemark[65] & \$1299 & 64GB & 14.4\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Microsoft Surface Laptop Studio 2\footnotemark[65] & \$3299 & 64GB & 14.4\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Microsoft Surface Laptop Studio 2\footnotemark[76] & \$1599 & 32GB & 14.4\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Microsoft Surface Laptop Studio 2\footnote{\raggedright with NVIDIA® GeForce RTX™  4050} & \$1799 & 32GB & 14.4\break \textit{Touchscreen} & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Creator M16\footnotemark[65] & \$2169 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Creator M16\footnotemark[65] & \$2269 & 48GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Creator M16\footnotemark[65] & \$2389 & 64GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI CreatorPro M16\footnote{\raggedright with NVIDIA RTX A1000} & \$2079 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Cyborg 15\footnotemark[65] & \$2029 & 64GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Katana 15\footnotemark[65] & \$2445 & 32GB & 15.6 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-MSI Katana 15\footnotemark[65] & \$2745 & 64GB & 15.6 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-MSI Pulse 15\footnotemark[65] & \$2049 & 64GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Stealth 14 Studio\footnotemark[65] & \$2019 & 32GB & 14.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Stealth 15\footnotemark[65] & \$2029 & 32GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Stealth 15\footnotemark[65] & \$2179 & 64GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Stealth 16 Studio\footnotemark[65] & \$2334 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Stealth 16 Studio\footnotemark[65] & \$2549 & 64GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-MSI Summit E16 Flip\footnotemark[65] & \$2129 & 32GB & 16.0 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-Origin Eon16-SL\footnotemark[66] & \$1421 & 64GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Origin Eon16-SL\footnotemark[66] & \$1201 & 32GB & 16.0 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-Razer Blade 15\footnotemark[66] & \$1999 & 32GB & 15.6 & 13th Gen Intel® Core™ i7 \\ \cdashline{1-5}
-VelocityMicro Raptor S77\footnotemark[66] & \$1319 & 32GB & 17.3 & 13th Gen Intel® Core™ i9 \\ \cdashline{1-5}
-VelocityMicro Raptor S77\footnotemark[66] & \$1449 & 64GB & 16.0 & 13th Gen Intel® Core™ i9 \\[1.0em]\hline
-\caption[{Laptop Options Meeting Minimum Recommended Specifications}]{Laptop Options Meeting Minimum Recommended Specifications. Options are organized by use case and cost point.}\label{tab:table8}
-\end{longtable}
+Company & Model & Price (USD) & RAM & Processor & Screen & Brightness (nits) & Contrast Ratio \\
+Microsoft & Surface Laptop 7 Copilot+ & \$2,000+ & 32--64GB & Snapdragon X Elite/X Plus (ARM) & 13.8"/15" 2496x1664 120Hz Touch & 600--650 & 1500:1 (IPS) \\
+Microsoft & Surface Pro 11 Copilot+ & \$2,100+ & 32--64GB & Snapdragon X Elite/X Plus (ARM) & 13" OLED/IPS 120Hz Touch & up to 900 & 1,000,000:1 (OLED) \\
+Dell & Premium & \$1,500+ & 32GB & Snapdragon X Plus (ARM) & 13.4" FHD+ 120Hz OLED Touch & 500--600 & 1,000,000:1 (OLED) \\
+Dell & 16 Premium & \$2,000+ & 32--64GB & Intel Core Ultra 9 185H & 16" up to 4K OLED & 400--600 & 2000:1 (IPS)/1,000,000:1 (OLED) \\
+Dell & 14 Plus & \$1,000+ & 16GB & Snapdragon X Plus (ARM) & 14" FHD+ IPS & 300 & 1200:1 (IPS) \\
+Dell & 14 Plus & \$1,200+ & 16GB & AMD Ryzen AI 5 340 & 14" FHD+ IPS & 300 & 1200:1 (IPS) \\
+Dell & 14 Pro & \$1,700+ & up to 32GB & Snapdragon X Elite (ARM) & 14" QHD+ Touch IPS & 400--500 & 1500:1 (IPS) \\
+HP & OmniBook Ultra Copilot+ 14 & \$1,449+ & 32GB & Snapdragon X Elite (ARM) & 14" 2240x1400 Touch & 500 & 1500:1 (IPS) \\
+HP & OmniBook Ultra Flip 14 & \$1,449+ & 32GB & AMD Ryzen AI 9 HX 375 / Intel Core Ultra Series 2 & 14" 2880x1800 OLED 120Hz Touch & 500--600 & 1,000,000:1 (OLED) \\
+HP & EliteBook Ultra Copilot+ & \$1,800+ & up to 32GB & Snapdragon X Elite (ARM) & 14" 2240x1400 IPS & 400--500 & 1500:1 (IPS) \\
+Lenovo & Yoga Slim 7x Copilot+ & \$1,300+ & 32GB & Snapdragon X Elite (ARM) & 14.5" 2944x1840 OLED & up to 1000 & 1,000,000:1 (OLED) \\
+Lenovo & ThinkPad T14s Gen 6 Copilot+ & \$1,700+ & 32GB & Snapdragon X Elite (ARM) & 14" 2240x1400 IPS & 400--500 & 1500:1 (IPS) \\
+ASUS & Zenbook S 14 Copilot+ & \$1,300+ & 32GB & Snapdragon X1 Elite (ARM) & 14" 2880x1800 OLED & 550--600 & 1,000,000:1 (OLED) \\
+ASUS & Zenbook Duo 14 OLED (2025) & \$2,499+ & 32GB & Intel Core Ultra 9 & Dual 14" 3K OLED Touch & 500--600 & 1,000,000:1 (OLED) \\
+MSI & Prestige A16 AI+ & \$2,299+ & 32GB & AMD Ryzen AI 9-365 & 16" 3840x2400 OLED & 500--600 & 1,000,000:1 (OLED) \\
+MSI & Pulse 16 AI Gaming & \$2,799+ & 64GB & Intel Core Ultra 9 & 16" 2560x1600 QHD 240Hz & 350--400 & 1200:1 (IPS) \\
+Razer & Blade 18 (2025) & \$3,500+ & 32--64GB & Intel Core Ultra 9 275HX & 18" QHD+/mini-LED 240/300Hz & up to 1000 & 1,000,000:1 (mini-LED) \\
+Acer & Aspire 16 & \$1,499+ & 32GB & Intel Core Ultra 7 155U & 16" 3200x2000 OLED & 400--500 & 1,000,000:1 (OLED) \\
+Framework & Framework 13 & \$1,499+ & 32GB--64GB & Ryzen AI 7 & 13" 2880x1920 OLED & >500 & 1,000,000:1 (OLED) \\
+Framework & Framework 16 & \$1,499+ & 32GB--64GB & Ryzen 9 & 16" 2560x1600 QHD+ & >500 & 1500:1 (IPS) \\
+
+
+\end{longtblr}

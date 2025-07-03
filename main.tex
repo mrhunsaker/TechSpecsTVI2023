@@ -1,111 +1,78 @@
-\documentclass[11pt,letterpaper,twoside]{extreport}
-% catoptions patch (no guarantee that will work):
-% must be applied before loading catoptions
-\def\FIXcatoptions\endgroup#1\begingroup{#1}
-\AddToHook{package/after/catoptions}
-  {\gleftaddtocs\document{\FIXcatoptions}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[T1]{fontenc}
+\DocumentMetadata{
+  lang        = en-US,
+  pdfstandard = ua-2,
+  pdfstandard = a-4f, %or a-4
+  pdfversion  = 2.0,
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE},
+  testphase=phase-III,
+}
+\documentclass[11pt,letterpaper,twoside]{report}
 \usepackage[bottom, hang, multiple]{footmisc}
 \usepackage[export]{adjustbox}
-\usepackage{silence}
-\WarningFilter{hyperref}{Token not allowed in a PDF string}
-\WarningFilter{catoptions}{Undefined options}
-\WarningFilter{subfloat}{Numbers of floats not counted}
+
+\PassOptionsToPackage{hyphens}{url}\usepackage[unicode,colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{accsupp}
 \usepackage[font=small, labelfont=bf, labelsep=colon, hang, singlelinecheck=off, justification=raggedright]{caption}
 \usepackage[none]{hyphenat}
-\usepackage[title,toc,page,header, titletoc]{appendix}
-\usepackage[titles]{tocloft}
-\PassOptionsToPackage{hyphens}{url}\usepackage[unicode,colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{appendix}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{tagpdf}
 \usepackage{array}
 \usepackage{arydshln}
-\usepackage{avant}
-\usepackage{bbold}
-\usepackage{blindtext}
-\usepackage{calc}
-\usepackage{catoptions}
-\usepackage{changepage}
-\usepackage{colortbl}
-\usepackage{color}
-\usepackage{csquotes}
 \usepackage{enumitem}
-\usepackage[lof,lot]{etoc}
-\usepackage{etoolbox}
-\usepackage{etoolbox}
-\usepackage{extramarks}
-\usepackage{fancyhdr}
-\usepackage{float}
 \usepackage{fontspec}
-\usepackage{framed}
 \usepackage{geometry}
+\usepackage[export]{adjustbox}
+
+% --- Custom font families for Atkinson Hyperlegible Mono and Next ---
+% Usage: \AtkinsonMonoText{your text} or \AtkinsonNextText{your text}
+\newfontfamily\AtkinsonMono[
+    Path=fontfiles/,
+    Extension=.otf,
+    UprightFont=AtkinsonHyperlegibleMono-Regular
+]{AtkinsonHyperlegibleMono}
+\newfontfamily\AtkinsonNext[
+    Path=fontfiles/,
+    Extension=.otf,
+    UprightFont=AtkinsonHyperlegibleNext-Regular
+]{AtkinsonHyperlegibleNext}
+\newcommand{\AtkinsonMonoText}[1]{{\AtkinsonMono #1}}
+\newcommand{\AtkinsonNextText}[1]{{\AtkinsonNext #1}}
 \usepackage{graphicx}
-\usepackage{iftex}
-\usepackage{lastpage}
-\usepackage{lastpage}
-\usepackage{lipsum}
-\usepackage{lmodern}
-\usepackage{longtable,booktabs,array}
+\pdfvariable suppressoptionalinfo 512
+% Setup accessibility for figures
+\newcommand{\imgalt}[2]{%
+  \BeginAccSupp{method=escape,Alt={{#1}}}%
+  #2%
+  \EndAccSupp{}%
+}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
 \usepackage{makecell}
-\usepackage{mathptmx}
 \usepackage{multirow}
 \usepackage{parskip}
 \usepackage{pdfpages}
 \usepackage{placeins}
-\usepackage{ragged2e}
-\usepackage{rotating}
-\usepackage{stmaryrd}
-\usepackage{tcolorbox}
 \usepackage{textcomp}
-\usepackage{tikz}
-\usepackage{titlesec}
-\usepackage{titletoc}
-\usepackage{tablefootnote}
 \usepackage{xcolor}
 \usepackage{chngcntr}
-\usepackage{subfig}
-\usepackage[normalem]{ulem}
-\usepackage{subfloat}
+\tagpdfsetup{
+  activate-all,
+  uncompress,
+  interwordspace=true,
+  table/tagging=true,
+  table/header-rows=1
+}
 
-\setlength\extrarowheight{0.5em}
-\renewcommand{\thefootnote}{\textbf{\arabic{footnote}}}
-\setlength{\LTleft}{0pt}
-\AtBeginEnvironment{longtable}{\fontsize{10pt}{10pt}\selectfont}
-\AtBeginEnvironment{quote}{\vspace{-\baselineskip}}
-\setlength{\dashlinedash}{0.5pt}
-\setlength{\dashlinegap}{5pt}
-\renewenvironment{leftbar}[1][\hsize]
-{%
-    \def\FrameCommand{%
-        {\color{black}\vrule width 5pt}%
-        \hspace{0pt}
-        \fboxsep=\FrameSep\colorbox{gray!5}%
-    }%
-    \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
-}
-{\endMakeFramed}
-\setlength{\footnotemargin}{1em}
-\setlength{\footnotesep}{0pt} % Reduce space between footnotes
-\newcommand\fnsep{\textsuperscript{,}}
-\renewcommand{\footnoterule}{%
-  \kern -3pt
-  \hrule width \textwidth height .5pt
-  \kern 2pt
-}
+% Configure table and structure tagging
+\ExplSyntaxOn
+\bool_set_true:N \l_tagpdf_table_detection_bool
+\bool_set_true:N \l_tagpdf_struct_destination_auto_bool
+\ExplSyntaxOff
 \graphicspath{ {./images/} }
-\pagestyle{fancyplain}
-\renewcommand\plainheadrulewidth{1pt}
-\renewcommand\plainfootrulewidth{1pt}
-\raggedbottom
-\raggedright
-\setcounter{secnumdepth}{5}
-\setlength\parindent{0pt}
-  \break\urlstyle{same}
-\setlength{\headheight}{25.0pt}
-\renewcommand{\headrulewidth}{1pt}
-\renewcommand{\footrulewidth}{1pt}
 \setmainfont{Atkinson-Hyperlegible}[
     Path=fontfiles/,
     Extension=.otf,
@@ -114,15 +81,14 @@
     ItalicFont=*-Italic-102,
     BoldItalicFont=*-BoldItalic-102
 ]
-\setsansfont{Aphont}[
+\setsansfont[
     Path=fontfiles/,
     Extension=.ttf,
     UprightFont = *-Regular,
     BoldFont = *-Bold,
     ItalicFont = *-Italic,
     BoldItalicFont = *-BoldItalic
-    ]
-
+]{Aphont}
 \setmonofont{JetBrainsMono}[
     Path=fontfiles/,
     Extension=.ttf,
@@ -131,40 +97,47 @@
     ItalicFont = *-Italic,
     BoldItalicFont = *-BoldItalic
     ]
-\newfontfamily\ComicSans{Comic Neue}
-\renewcommand{\appendixtocname}{List of appendices}
-\renewcommand{\appendixpagename}{APPENDICES}
-\appendixtocoff
-\titleformat{\chapter}[block]
-{\normalfont\LARGE\bfseries\raggedright}{Chapter \thechapter:\newline}{1em}{}
-\titlespacing*{\chapter}{-10pt}{-10pt}{0pt}
+% --- Accessible Font Families from Appendix 5 ---
+% Atkinson Hyperlegible (already set as main font)
+% Atkinson Hyperlegible Mono (already defined as \AtkinsonMono)
+% Atkinson Hyperlegible Next (already defined as \AtkinsonNext)
+% APHont (already set as sans font)
+% JetBrains Mono (already set as mono font)
 
-\titleformat{\section}[block]
-  {\normalfont\Large\bfseries\raggedright}{\thesection:}{1em}{}
-\titlespacing*{\section}{0pt}{10pt}{10pt}
+% Comic Sans MS
+\newfontfamily\ComicSansMS{ComicNeue-Regular}
+\newcommand{\ComicSansMSText}[1]{{\ComicSansMS #1}}
 
-\titleformat{\subsection}[block]
-  {\normalfont\Large\bfseries\raggedright}{\thesubsection:}{1em}{}
-\titlespacing*{\subsection}{0pt}{10pt}{10pt}
+% OpenDyslexic
+\newfontfamily\OpenDyslexic{OpenDyslexic}
+\newcommand{\OpenDyslexicText}[1]{{\OpenDyslexic #1}}
 
-\renewcommand\cftsecafterpnum{\vskip1pt}
-\setlength{\cftbeforesecskip}{0pt}
+% Tiresias
+\newfontfamily\Tiresias{Tiresias_Infofont}
+\newcommand{\TiresiasText}[1]{{\Tiresias #1}}
 
-\appendixtitleon
+% Verdana
+\newfontfamily\VerdanaFont{Verdana}
+\newcommand{\VerdanaText}[1]{{\VerdanaFont #1}}
+
+% Arial / Arial Unicode MS
+\newfontfamily\ArialFont{Arial}
+\newcommand{\ArialText}[1]{{\ArialFont #1}}
+
+% Calibri
+\newfontfamily\CalibriFont{Calibri}
+\newcommand{\CalibriText}[1]{{\CalibriFont #1}}
+
+% Century Gothic
+\newfontfamily\CenturyGothic{Century Gothic}
+\newcommand{\CenturyGothicText}[1]{{\CenturyGothic #1}}
+
 \appendixtitletocon
 
 \title{\Huge ENHANCING EDUCATIONAL EQUITY \vskip1em \Large A Comprehensive Exploration of Technology Needs for Students with Visual Impairments}
 \author{Michael Ryan Hunsaker, M.Ed., Ph.D.}
-\date{\vfill \textit{Last Updated: {\today}}}
-\renewcommand{\abstractname}{\Large EXECUTIVE SUMMARY}
-\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
-\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
-\PassOptionsToPackage{naturalnames}{hyperref}
+\date{\vfill \emph{Last Updated: {\today}}}
 \begin{document}
-%\renewcommand{\thefootnote}{\textcolor{blue}{\arabic{footnote}}}
-\raggedbottom
-\raggedright
-\pagenumbering{gobble}
 \maketitle
 \abstract{
 	In the dynamic landscape of education, technology stands as a powerful enabler, breaking down barriers and creating pathways for inclusivity. Nowhere is this more evident than in the realm of assistive technology designed for visually impaired students. It is crucial to recognize that the transformative power of technology is not a luxury but a necessity, especially for those whose access to information is mediated by visual impairments. Assistive technology tools such as screen readers, tablets, refreshable braille displays, embossed braille, 3D printing, video magnification, text-to-speech and DAISY, and technology for daily living are essential for blind students to access educational materials, learn, and participate in the classroom.
@@ -178,61 +151,43 @@
 \hypersetup{
 	pdfborderstyle={/S/U/W 1},
 	linkbordercolor=magenta,
-        linkcolor=darkgray,
+    linkcolor=darkgray,
 	citecolor=darkgray,
-        citebordercolor=magenta,
+    citebordercolor=magenta,
 	filebordercolor=magenta,
 	urlbordercolor=magenta,
-        urlcolor=darkgray
-}
+    urlcolor=darkgray,
+    pdftitle={TechSpecsTVI2023},
+    pdfauthor={Michael Ryan Hunsaker, M.Ed., Ph.D.},
+    pdfkeywords={assistive technology, visually impaired, blind students, braille, tactile graphics, audio description, closed captioning, screen readers, tablets, refreshable braille displays, embossed braille, 3D printing, video magnification software, text-to-speech}
+    }
 \setcounter{tocdepth}{1}
-
-\fancyhead{}
-\fancyfoot{}
 \pagenumbering{roman}
-\extramarks{Vision Department Technology Needs}{Contents}
 \tableofcontents
 \listoftables
 \listoffigures
 \newpage{}
-\fancyhead{}
-\fancyfoot{}
 \interfootnotelinepenalty=10000
-\addcontentsline{toc}{chapter}{\raggedright Introduction}
-\pagestyle{fancyplain}
-\fancyfoot[C]{\thepage}
+\addcontentsline{toc}{chapter}{Introduction}
 \include{./Chapters/Introduction}
-\fancyhead[RO]{\textit{\lastxmark}}
-\fancyhead[LE]{\textit{\firstxmark}}
-\fancyfoot[RE, LO]{\textit{Page \thepage\  of \pageref{LastPage}}}
-\fancyfoot[LE, RO]{\textit{Last Updated: \today}}
-\fancyfoot[C]{}
 
 \pagenumbering{arabic}
-\cleardoublepage \include{./Chapters/Chapter1}
+\include{./Chapters/Chapter1}
 \include{./Chapters/Chapter2}
-\cleardoublepage\include{./Chapters/Chapter3}
+\include{./Chapters/Chapter3}
 \include{./Chapters/Chapter4}
 \include{./Chapters/Chapter5}
-\cleardoublepage\include{./Chapters/Chapter6}
-\cleardoublepage\include{./Chapters/Chapter7}
+\include{./Chapters/Chapter6}
+\include{./Chapters/Chapter7}
 \include{./Chapters/Chapter8}
 \include{./Chapters/Conclusion}
-\addtocontents{toc}{\protect\clearpage}
-\addcontentsline{toc}{chapter}{\raggedright APPENDICES}
-\titleformat{\section}[block]
-{\normalfont\Large\bfseries\raggedright}{Appendix \thesection:\newline }{1em}{}
-\titlespacing*{\section}{0pt}{10pt}{10pt}
-\cleardoublepage \begin{appendices}
-\titleformat{\chapter}[block]
-{\normalfont\LARGE\bfseries\raggedright}{Appendix \thechapter\newline \hrulefill}{1em}{}
-\titlespacing*{\chapter}{-10pt}{0pt}{0pt}
-\cleardoublepage \include{./Chapters/Appendix1}
+\addcontentsline{toc}{chapter}{APPENDICES}
+\begin{appendices}
+\include{./Chapters/Appendix1}
 \include{./Chapters/Appendix2}
 \include{./Chapters/Appendix3}
 \include{./Chapters/Appendix4}
 \include{./Chapters/Appendix5}
 \end{appendices}
-\cleardoublepage
 \include{./Chapters/BackMatter}
 \end{document}

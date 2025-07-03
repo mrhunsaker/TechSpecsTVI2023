@@ -1,14 +1,5 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Latency to Load JAWS}}{19}{figure.caption.4}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Measured Laptop RAM with only Accessibility Tools Open}}{23}{figure.caption.5}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Background RAM Usage - 7.7GB}}}{23}{subfigure.2.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RAM Usage JAWS - 9.9GB}}}{23}{subfigure.2.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {RAM Usage ZoomText - 11.0GB}}}{23}{subfigure.2.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {RAM Usage Fusion - 13.8GB}}}{23}{subfigure.2.4}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Measured Laptop RAM with Accessibility Tools + Microsoft Word}}{24}{figure.caption.6}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {RAM Usage JAWS + Word - 10.7GB}}}{24}{subfigure.3.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RAM Usage ZoomText + Word - 14.5GB}}}{24}{subfigure.3.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {RAM Usage Fusion + Word - 14.8GB}}}{24}{subfigure.3.3}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Latency to Load JAWS}}{10}{figure.caption.106}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -22,4 +13,3 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsfinish 
