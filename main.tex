@@ -41,6 +41,96 @@
 ]{AtkinsonHyperlegibleNext}
 \newcommand{\AtkinsonMonoText}[1]{{\AtkinsonMono #1}}
 \newcommand{\AtkinsonNextText}[1]{{\AtkinsonNext #1}}
+
+% --- Font family commands for FontSample compatibility (matching Appendix5) ---
+
+\newfontfamily\atkinsonhyperlegiblefont[
+    Path=fontfiles/,
+    Extension=.otf,
+    UprightFont=Atkinson-Hyperlegible-Regular-102,
+    BoldFont=Atkinson-Hyperlegible-Bold-102,
+    ItalicFont=Atkinson-Hyperlegible-Italic-102,
+    BoldItalicFont=Atkinson-Hyperlegible-BoldItalic-102
+]{Atkinson-Hyperlegible}
+
+\newfontfamily\atkinsonmonofont[
+    Path=fontfiles/,
+    Extension=.otf,
+    UprightFont=AtkinsonHyperlegibleMono-Regular
+]{AtkinsonHyperlegibleMono}
+
+\newfontfamily\atkinsonnextfont[
+    Path=fontfiles/,
+    Extension=.otf,
+    UprightFont=AtkinsonHyperlegibleNext-Regular
+]{AtkinsonHyperlegibleNext}
+
+\newfontfamily\aphontfont[
+    Path=fontfiles/,
+    Extension=.ttf,
+    UprightFont=Aphont-Regular,
+    BoldFont=Aphont-Bold,
+    ItalicFont=Aphont-Italic,
+    BoldItalicFont=Aphont-BoldItalic
+]{Aphont}
+
+\newfontfamily\comicsansfont[
+    Path=fontfiles/,
+    Extension=.ttf,
+    UprightFont=ComicNeue-Regular,
+    BoldFont=ComicNeue-Bold,
+    ItalicFont=ComicNeue-Italic,
+    BoldItalicFont=ComicNeue-BoldItalic
+]{ComicNeue}
+
+\newfontfamily\jetbrainsmonofont[
+    Path=fontfiles/,
+    Extension=.ttf,
+    UprightFont=JetBrainsMono-Medium,
+    BoldFont=JetBrainsMono-Bold,
+    ItalicFont=JetBrainsMono-Italic,
+    BoldItalicFont=JetBrainsMono-BoldItalic
+]{JetBrainsMono}
+
+\newfontfamily\opendyslexicfont[
+    Path=fontfiles/,
+    Extension=.otf,
+    UprightFont=OpenDyslexicMono-Regular
+]{OpenDyslexic}
+
+\newfontfamily\tiresiasfont[
+    Path=fontfiles/,
+    Extension=.ttf,
+    UprightFont=Tiresias_Infofont,
+    ItalicFont=Tiresias_Infofont_Italic
+]{Tiresias_Infofont}
+
+\newfontfamily\verdanafont[
+    Path=fontfiles/,
+    Extension=.ttf,
+    UprightFont=Verdana
+]{Verdana}
+
+\newfontfamily\arialfont[
+    Path=fontfiles/,
+    Extension=.ttf,
+    UprightFont=ARIAL
+]{Arial}
+
+\newfontfamily\calibrifont[
+    Path=fontfiles/,
+    Extension=.ttf,
+    UprightFont=calibri,
+    BoldFont=calibri_bold
+]{calibri}
+
+\newfontfamily\centurygothicfont[
+    Path=fontfiles/,
+    Extension=.ttf,
+    UprightFont=centurygothic,
+    BoldFont=centurygothic_bold
+]{centurygothic}
+
 \usepackage{graphicx}
 \pdfvariable suppressoptionalinfo 512
 % Setup accessibility for figures
@@ -104,33 +194,20 @@
 % APHont (already set as sans font)
 % JetBrains Mono (already set as mono font)
 
-% Comic Sans MS
-\newfontfamily\ComicSansMS{ComicNeue-Regular}
-\newcommand{\ComicSansMSText}[1]{{\ComicSansMS #1}}
-
-% OpenDyslexic
-\newfontfamily\OpenDyslexic{OpenDyslexic}
-\newcommand{\OpenDyslexicText}[1]{{\OpenDyslexic #1}}
-
-% Tiresias
-\newfontfamily\Tiresias{Tiresias_Infofont}
-\newcommand{\TiresiasText}[1]{{\Tiresias #1}}
-
-% Verdana
-\newfontfamily\VerdanaFont{Verdana}
-\newcommand{\VerdanaText}[1]{{\VerdanaFont #1}}
-
-% Arial / Arial Unicode MS
-\newfontfamily\ArialFont{Arial}
-\newcommand{\ArialText}[1]{{\ArialFont #1}}
-
-% Calibri
-\newfontfamily\CalibriFont{Calibri}
-\newcommand{\CalibriText}[1]{{\CalibriFont #1}}
-
-% Century Gothic
-\newfontfamily\CenturyGothic{Century Gothic}
-\newcommand{\CenturyGothicText}[1]{{\CenturyGothic #1}}
+% Custom commands for sample text blocks
+\newcommand{\FontSample}[1]{%
+    \begin{itemize}
+        \item \textbf{General Text:} #1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Nec ullamcorper sit amet risus nullam eget felis.
+        \item \textbf{Numbers \& Similar Characters:} #1 0O1lI B8 D0 G6 MNNN pPqQ S5 Z2. Try to distinguish these characters.
+        \item \textbf{Superscripts/Subscripts:} #1 $1^1 1_2 2^1 2_2 3^1 3_2 4^1 4_2 5^1 5_2$. (Note: Math mode is often handled by a different font, so this tests the font's math support or fallback.)
+        \item \textbf{Punctuation \& Symbols:} #1 \textbackslash\{\} () [] \# * : ; ! ? ‽ ° \textless{} \textgreater{} © ® ™ \$ € £ ¥.
+        \item \textbf{Character Distinctiveness Test (Lowercase):} #1 a e o c s r n m u v w. How distinct are they?
+        \item \textbf{Character Distinctiveness Test (Uppercase):} #1 I J L T V W X Y Z. How distinct are they?
+        \item \textbf{Accented Characters:} #1 àáâãäåæçèéêëìíîïñòóôõöøùúûüýþÿ. (Tests Latin-1 Supplement coverage)
+        \item \textbf{Problematic Pairs/Triplets:} #1 Il1, 0Oo, cl, rn, fi, fl, ff, ffi, ffl. (Highlights common confusion points and ligatures)
+        \item \textbf{Dense Text Example:} #1 "Minimum wage is no guarantee. It isn't maximum security, or minimum age. It's just a common standard, often ambiguous." (To check letter and word spacing in a compact sentence.)
+    \end{itemize}
+}
 
 \appendixtitletocon
 
@@ -180,6 +257,7 @@
 \include{./Chapters/Chapter6}
 \include{./Chapters/Chapter7}
 \include{./Chapters/Chapter8}
+\include{./Chapters/Chapter9}
 \include{./Chapters/Conclusion}
 \addcontentsline{toc}{chapter}{APPENDICES}
 \begin{appendices}
