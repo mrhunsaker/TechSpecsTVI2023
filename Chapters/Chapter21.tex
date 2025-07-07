@@ -1,6 +1,8 @@
 \chapter{Comprehensive Report on Optical Character Recognition for Text and Math/Scientific Material: Challenges, Solutions, and Accessibility Remediation}
+\label{chap:ocr-accessibility}
 
 \section{Executive Summary}
+\label{sec:ocr-executive-summary}
 
 Optical Character Recognition (OCR) technology stands as a cornerstone in the digital transformation of information, converting physical documents and images into machine-readable text. This report provides an in-depth analysis of OCR, detailing its fundamental processes, historical evolution, and critical role in enhancing accessibility, particularly for individuals relying on screen readers. While OCR offers substantial benefits in digitization and data management, it faces persistent challenges, especially when processing complex layouts, multi-column text, tables, and intricate mathematical or scientific notations.
 
@@ -11,6 +13,7 @@ A central theme of this report is the critical need for correct formatting and l
 The report further examines the transformative impact of emerging OCR tools that heavily leverage Artificial Intelligence (AI). Generative AI and deep learning are significantly improving OCR accuracy, particularly for challenging inputs like handwriting and complex layouts, and are beginning to bridge the gap between character recognition and contextual understanding. However, the adoption of AI also introduces new considerations, such as the computational demands, reliance on extensive training data, and the "black box" problem, which can obscure the decision-making processes of these advanced models. The increasing reliance on OCR for digital inclusion underscores the evolving demands on this technology, requiring continuous advancements in accuracy, structural preservation, and explainability to truly empower users with accessible materials.
 
 \section{Introduction to Optical Character Recognition (OCR)}
+\label{sec:intro-ocr}
 
 \subsection{Defining OCR and its Core Functionality}
 
@@ -41,6 +44,7 @@ OCR is frequently integrated as a foundational component within broader \textbf{
 Furthermore, by digitizing documents, OCR aids in \textbf{regulatory compliance and security}. It helps organizations meet legal requirements for accessibility and facilitates secure archiving of sensitive information. Digitized documents can be encrypted, access-controlled, and backed up across multiple locations, thereby reducing vulnerabilities associated with physical files, such as theft, misplacement, or natural disasters.\urlfootnote{https://www.continualengine.com/blog/ocr-for-accessibility/}\urlfootnote{https://digitaldefynd.com/IQ/optical-character-recognition-pros-cons/}
 
 \section{Current Challenges in OCR for Text and Scientific Material}
+\label{sec:ocr-challenges}
 
 Despite its transformative capabilities, Optical Character Recognition technology encounters several significant hurdles, particularly when dealing with diverse document types, complex layouts, and specialized content like mathematical and scientific notations. These challenges directly impact the accuracy and utility of OCR output, especially for accessibility purposes.
 
@@ -75,6 +79,7 @@ The problem is compounded by the \textbf{lack of a lexicon or spell-check equiva
 Overcoming these challenges requires OCR software specifically designed or trained to recognize a wide array of mathematical characters and symbols.\urlfootnote{https://www.docuclipper.com/blog/ocr-limitations/} More importantly, it necessitates sophisticated algorithms capable of \textbf{symbol-arrangement analysis} to interpret the two-dimensional patterns and subtle use of space in mathematical notation.\urlfootnote{https://www.worldscientific.com/doi/10.1142/9789812830968_0021} Advanced approaches often involve segmenting symbols, recognizing them, and then analyzing their structural relationships.\urlfootnote{https://www.researchgate.net/publication/222543502_Mathematical_symbol_recognition_with_support_vector_machines} Tools like Mathpix aim to bridge this gap by converting screen-grabbed equations into structured formats like LaTeX or MathML, which can encode the semantic meaning of the math.\urlfootnote{https://mathpix.com/} This specialized functionality is critical because for mathematical content, simple character recognition is insufficient; the output must capture the underlying structure and relationships to be truly useful and accessible.
 
 \section{Commercial and Open-Source OCR Solutions}
+\label{sec:ocr-solutions}
 
 The landscape of Optical Character Recognition solutions is diverse, offering a range of tools tailored for various needs, from general document digitization to specialized content like scientific notation. These solutions vary significantly in their features, accuracy, ease of use, and underlying technologies, including their adoption of Artificial Intelligence.
 
@@ -156,6 +161,7 @@ The choice of an OCR solution for accessibility remediation hinges on a nuanced 
 In summary, while general OCR tools can digitize text, achieving true screen-reader accessibility for complex documents, especially those with multi-column layouts, tables, or mathematical notation, requires solutions that prioritize not just character recognition but also accurate layout analysis and semantic structuring. Commercial tools like Mathpix and cloud services from Google and Amazon are leading in specialized content, while open-source options like PaddleOCR and Marker are advancing rapidly in layout understanding, offering powerful components for custom accessibility workflows.
 
 \section{The Imperative for Correct Formatting and Layout Tools in Accessibility Remediation}
+\label{sec:ocr-formatting-remediation}
 
 The conversion of scanned or archived PDF information into screen-reader accessible materials is not merely a matter of extracting text; it fundamentally depends on the correct preservation and creation of formatting and layout. Without this structural integrity, OCR output, no matter how accurate at the character level, remains largely inaccessible.
 
@@ -198,6 +204,7 @@ For tables, the remediation process involves identifying all header cells with \
 The overall process of document planning, content development, and design must integrate structural considerations from the outset. This includes creating a logical outline, planning heading hierarchies, considering reading order in layout design, and ensuring consistent navigation aids.\urlfootnote{https://dev.to/revisepdf/creating-proper-document-structure-for-screen-readers-1ce} Testing with screen readers throughout the remediation process is crucial to verify that the applied formatting and layout tools effectively create an accessible experience.\urlfootnote{https://dev.to/revisepdf/creating-proper-document-structure-for-screen-readers-1ce}
 
 \section{Emerging OCR Tools and the Leverage of AI}
+\label{sec:ocr-ai-tools}
 
 The field of Optical Character Recognition is undergoing a significant transformation driven by advancements in Artificial Intelligence (AI), particularly deep learning and generative AI. These emerging technologies are pushing the boundaries of what OCR can achieve, moving beyond simple character recognition to more sophisticated document understanding and layout interpretation.
 
@@ -246,6 +253,7 @@ However, the future also demands a focus on \textbf{responsible AI development}.
 Ultimately, the future of accessible material creation through OCR will involve a multi-layered approach: highly accurate AI-driven OCR for initial text and layout extraction, sophisticated AI-powered post-processing for semantic structuring and error correction, and a strong emphasis on generating industry-standard accessible formats (e.g., tagged PDFs, MathML, HTML with ARIA attributes). This evolution will enable a more inclusive digital landscape, ensuring that information, regardless of its original format, can be accessed and understood by individuals using assistive technologies.
 
 \section{Conclusions and Recommendations}
+\label{sec:ocr-conclusions}
 
 The analysis presented in this report underscores the pivotal role of Optical Character Recognition in bridging the gap between physical and digital information, with a foundational emphasis on enhancing accessibility. OCR, from its inception, was conceived with the visually impaired in mind, positioning accessibility not as an afterthought but as a core design principle for the technology. This inherent connection means that modern OCR solutions, particularly those leveraging AI, should prioritize and deeply integrate accessibility features.
 

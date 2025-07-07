@@ -1,18 +1,22 @@
 \chapter{Comprehensive Analysis of Braille Transcription Software}
+\label{chap:braille-transcription}
 \author{Gemini AI}
 \date{\today}
 \maketitle
 
 \section{Executive Summary}
+\label{sec:braille-executive-summary}
 This report provides a comprehensive analysis of various braille transcription software solutions, including commercial and open-source options. It evaluates their strengths, limitations, integration capabilities, supported file types (with a focus on NIMAS), ease of use, popularity, support mechanisms, and screen reader accessibility. Key software analyzed include Duxbury DBT, Braille2000, BrailleBlaster (and its community fork BrailleBlaster-NG), Biblos, Sao Mai Braille, Dotify, and Liblouis. A comparative table summarizes their characteristics and outlines necessary complementary software for optimal function.
 
 
 \section{Introduction}
+\label{sec:braille-intro}
 Braille transcription software plays a pivotal role in making printed information accessible to individuals who are blind or visually impaired. These tools convert text into braille code, facilitating the production of braille books, documents, and tactile graphics. The landscape of braille transcription software is diverse, offering a range of features, from basic text-to-braille conversion to advanced functionalities like tactile graphic design and music braille translation. This report delves into a detailed analysis of several prominent braille transcription programs, examining their technical capabilities and practical considerations for users and transcribers.
 
 ---
 
 \section{Detailed Software Analysis}
+\label{sec:braille-detailed-analysis}
 
 \subsection{Duxbury DBT (Duxbury Braille Translator)}
 \textbf{Duxbury DBT} is widely regarded as the industry standard for braille transcription, known for its robustness and extensive feature set.
@@ -212,6 +216,7 @@ Braille transcription software plays a pivotal role in making printed informatio
 ---
 
 \section{Other Noteworthy Open-Source Options}
+\label{sec:braille-other-open-source}
 While less comprehensive as standalone transcription suites, the following open-source solutions serve specific purposes or integrate with other tools:
 
 \begin{itemize}
@@ -226,25 +231,19 @@ While less comprehensive as standalone transcription suites, the following open-
 ---
 
 \section{Comparative Table of Braille Transcription Software Characteristics}
+\label{sec:braille-comparative-table}
 
-\begin{longtable}{|p{2.5cm}|p{2cm}|p{2cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
-\caption{Comparative Table of Braille Transcription Software Characteristics}
-\label{tab:braille_software_comparison}\\
-\hline
+\begin{longtblr}[
+  caption = {Comparative Table of Braille Transcription Software Characteristics},
+  label = {tab:braille_software_comparison}
+]{
+  colspec = {|p{2.5cm}|p{2cm}|p{2cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|},
+  rowhead = 1,
+  hlines,
+  stretch = 1.5
+}
 \textbf{Feature} & \textbf{Duxbury DBT} & \textbf{Braille2000} & \textbf{BrailleBlaster / NG} & \textbf{Biblos} & \textbf{Sao Mai Braille (SMB)} \\
 \hline
-\endfirsthead
-\caption{Comparative Table of Braille Transcription Software Characteristics (continued)}\\
-\hline
-\textbf{Feature} & \textbf{Duxbury DBT} & \textbf{Braille2000} & \textbf{BrailleBlaster / NG} & \textbf{Biblos} & \textbf{Sao Mai Braille (SMB)} \\
-\hline
-\endhead
-\hline
-\multicolumn{6}{|r|}{Continued on next page} \\
-\hline
-\endfoot
-\hline
-\endlastfoot
 
 \textbf{Software Type} & Commercial & Commercial & Free, Open Source & Free & Free \\
 \textbf{Primary Focus} & General Braille Prod. & General Braille Prod. & Textbooks/Education & Word Proc. / Multi-func. & Music / Multi-lang. \\
@@ -261,26 +260,19 @@ While less comprehensive as standalone transcription suites, the following open-
 \textbf{Key Complementary Software / Tools} & NimPro, SWIFT, QuickTac, MathType, Scientific Notebook, GOODFEEL & None explicitly required beyond itself & Liblouis (core engine) & Index Braille embossers & MusicXML sources, NVDA add-on \\
 \textbf{Open Source} & No & No & Yes & No & No \\
 \hline
-\end{longtable}
+\end{longtblr}
 
-\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
-\caption{Comparative Table (Continued): Library/Backend Tools and Niche Software}
-\label{tab:braille_software_comparison_pt2}\\
-\hline
+\begin{longtblr}[
+  caption = {Comparative Table (Continued): Library/Backend Tools and Niche Software},
+  label = {tab:braille_software_comparison_pt2}
+]{
+  colspec = {|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|},
+  rowhead = 1,
+  hlines,
+  stretch = 1.5
+}
 \textbf{Feature} & \textbf{Dotify} & \textbf{Liblouis} & \textbf{AccessBrailleRAP / DesktopBrailleRAP} & \textbf{odt2braille} \\
 \hline
-\endfirsthead
-\caption{Comparative Table (Continued): Library/Backend Tools and Niche Software (continued)}\\
-\hline
-\textbf{Feature} & \textbf{Dotify} & \textbf{Liblouis} & \textbf{AccessBrailleRAP / DesktopBrailleRAP} & \textbf{odt2braille} \\
-\hline
-\endhead
-\hline
-\multicolumn{4}{|r|}{Continued on next page} \\
-\hline
-\endfoot
-\hline
-\endlastfoot
 
 \textbf{Software Type} & Open Source (Library/System) & Open Source (Library) & Open Source (Project-specific) & Open Source (Extension) \\
 \textbf{Primary Focus} & Automated Braille Production & Core Braille Translation & BrailleRAP Embosser Output & OpenOffice.org Integration \\
@@ -297,11 +289,12 @@ While less comprehensive as standalone transcription suites, the following open-
 \textbf{Key Complementary Software / Tools} & DAISY Pipeline & Applications using Liblouis (NVDA, BrailleBlaster, etc.), Liblouisutdml & BrailleRAP Embosser & OpenOffice.org Writer \\
 \textbf{Open Source} & Yes & Yes & Yes & Yes \\
 \hline
-\end{longtable}
+\end{longtblr}
 
 ---
 
 \section{Conclusion}
+\label{sec:braille-conclusion}
 The braille transcription software landscape offers a rich variety of tools catering to diverse needs, from professional publishing houses to individual transcribers, and even developers building accessibility solutions. Commercial powerhouses like \textbf{Duxbury DBT} and \textbf{Braille2000} remain popular due to their comprehensive features and established support, albeit at a cost. The emergence of free and open-source options like \textbf{BrailleBlaster} (and its community-driven \textbf{BrailleBlaster-NG} fork), \textbf{Biblos}, and \textbf{Sao Mai Braille} significantly democratizes access to braille production tools, each bringing unique strengths, such as BrailleBlaster's robust NIMAS handling, Biblos's all-in-one approach, and Sao Mai Braille's exceptional music braille capabilities.
 
 Underpinning many of these solutions are powerful open-source libraries like \textbf{Liblouis} and systems like \textbf{Dotify}, which enable developers to build highly accessible and automated braille workflows. While direct NIMAS processing remains a strength of specialized tools like BrailleBlaster and Braille2000, many contemporary solutions support a wide array of common document formats, often relying on the structured markup within those files. Screen reader accessibility is a critical consideration, and most reputable software in this domain either includes built-in accessibility features or ensures compatibility with external screen readers, often with dedicated configurations or add-ons.

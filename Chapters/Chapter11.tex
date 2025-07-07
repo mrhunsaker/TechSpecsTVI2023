@@ -29,7 +29,7 @@ The integration of Artificial Intelligence (AI), particularly deep learning, has
 
 Tools like \href{https://github.com/datalab-to/marker}{\texttt{Marker}}\footnote{Marker GitHub Repository. (n.d.). Available at: \url{https://github.com/datalab-to/marker}.}. are at the forefront of this advancement, offering high-accuracy conversion of documents, including mathematical content, into structured formats. The user's request emphasizes optimizing math OCR and presentation for accessibility, and the available information indicates that AI-powered OCR tools like \texttt{Marker} are designed to output structured formats such as LaTeX and MathML\footnote{Marker GitHub Repository. (n.d.). Available at: \url{https://github.com/datalab-to/marker}.}\footnote{Marker Documentation. (n.d.). Available at: \url{https://marker.datalab.to/}.}. These formats are then directly consumable by assistive technologies like screen readers and braille translators\footnote{Perkins School for the Blind. (n.d.). Create Accessible Digital Math with MathKicker.ai/}.}. This demonstrates a sophisticated, interconnected workflow where OCR, AI, and structured markup languages are not isolated components but rather integrated parts of a seamless accessibility pipeline. The optimization sought in the query is achieved through this synergistic convergence, creating a comprehensive solution for accessible mathematical content.
 
-\section{Advancements in AI-Powered Math OCR}
+\section{Advancements in AI-Powered Math OCR}\label{sec:ai-math-ocr}
 \subsection{Core Technologies and Deep Learning Architectures}
 The foundation of modern AI-powered Math OCR lies in sophisticated deep learning architectures. These systems leverage multi-layered neural networks to perform complex tasks such as classification, regression, and representation learning, drawing inspiration from biological neuroscience\footnote{Deep Learning. (n.d.). Available at: \url{https://www.ibm.com/cloud/learn/deep-learning}.}. Key architectures employed include Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and, increasingly, Transformers\footnote{Deep Learning. (n.d.). Available at: \url{https://www.ibm.com/cloud/learn/deep-learning}.}\footnote{Mathematical Expression Recognition. (n.d.). Available at: \url{https://arxiv.org/pdf/2103.06411.pdf}.}\footnote{Transformer Networks for Mathematical Expression Recognition. (n.d.). Available at: \url{https://arxiv.org/pdf/2203.06411.pdf}.}\footnote{Mathematical Expression Recognition with Denoising Diffusion Probabilistic Models. (n.d.). Available at: \url{https://arxiv.org/pdf/2303.06411.pdf}.}.
 
@@ -49,7 +49,7 @@ In the context of mathematical content, this semantic understanding is critical 
 
 Semantic AI heavily relies on knowledge graphs\footnote{Semantic AI. (n.d.). Available at: \url{https://www.ibm.com/cloud/learn/semantic-ai}.}\footnote{Knowledge Graphs and Semantic AI. (n.d.). Available at: \url{https://www.ontotext.com/knowledge-graphs/semantic-ai/}.}. to mitigate issues like AI "hallucinations" and provide contextual understanding. For mathematical accessibility, this implies the potential to build knowledge graphs that encode mathematical concepts, theorems, and common problem-solving patterns. Such a system could enable AI not only to recognize and translate equations but also to interpret their mathematical significance. This could lead to advanced features like AI-powered "tutoring support"\footnote{Texthelp. (n.d.). Equatio. Available at: \url{https://www.texthelp.com/products/equatio/}.}\footnote{Texthelp. (n.d.). Equatio Pricing. Available at: \url{https://www.texthelp.com/products/equatio/pricing/}.}. that understands the underlying math, or even the ability for AI to "complete proofs"\footnote{AI for Mathematical Proofs. (n.d.). Available at: \url{https://arxiv.org/pdf/2303.06411.pdf}.}. This points towards a future where AI-driven accessibility tools evolve into intelligent, context-aware educational assistants.
 
-\section{The Role of Marker and Similar Tools in Math OCR Workflows}
+\section{The Role of Marker and Similar Tools in Math OCR Workflows}\label{sec:marker-tools}
 \subsection{Marker's Capabilities for Document and Math Conversion}
 \href{https://github.com/datalab-to/marker}{\texttt{Marker}}\footnote{Marker GitHub Repository. (n.d.). Available at: \url{https://github.com/datalab-to/marker}.}. is an open-source tool designed for high-accuracy conversion of various document types, including PDFs, images, PPTX, DOCX, XLSX, HTML, and EPUB files, into structured formats such as Markdown, JSON, chunks, and HTML\footnote{Marker GitHub Repository. (n.d.). Available at: \url{https://github.com/datalab-to/marker}.}. Its key strength in the context of math accessibility lies in its ability to accurately format and extract complex elements, including tables, forms, equations, inline math, links, references, and code blocks\footnote{Marker GitHub Repository. (n.d.). Available at: \url{https://github.com/datalab-to/marker}.}.
 
@@ -89,38 +89,32 @@ The pervasive presence of MathML across various tools and workflows (e.g., \text
 
 Tools like \href{https://www.wiris.com/en/}{\texttt{MathType}}\footnote{Texthelp. (n.d.). Equatio. Available at: \url{https://www.texthelp.com/products/equatio/}.}\footnote{MathJax. (n.d.). MathJax. Available at: \url{https://www.mathjax.org/}.}\footnote{WIRIS. (n.d.). MathType. Available at: \url{https://www.wiris.com/en/}.}\footnote{Duxbury Systems. (n.d.). DBT Features. Available at: \url{https://www.duxburysystems.com/dbt_features.asp}.}\footnote{Duxbury Systems. (n.d.). DBT for Windows. Available at: \url{https://www.duxburysystems.com/dbt_win.asp}.}\footnote{Duxbury Systems. (n.d.). DBT for Mac. Available at: \url{https://www.duxburysystems.com/dbt_mac.asp}.}. are equation editors that can directly generate MathML and LaTeX outputs. Conversion programs like \href{https://pandoc.org/}{\texttt{Pandoc}}\footnote{Pandoc. (n.d.). Pandoc. Available at: \url{https://pandoc.org/}.}\footnote{Pandoc Documentation. (n.d.). Available at: \url{https://pandoc.org/MANUAL.html}.}. are crucial for converting LaTeX files (or other formats) into HTML with embedded MathML, making content accessible on platforms like Canvas\footnote{Texthelp. (n.d.). Equatio Pricing. Available at: \url{https://www.texthelp.com/products/equatio/pricing/}.}. The ecosystem's reliance on tools like \texttt{Pandoc} and \texttt{MathType} as crucial intermediaries is a key observation. These tools bridge the gap between various authoring formats (e.g., LaTeX, Microsoft Word) and the standardized accessible output formats (MathML). \texttt{Marker}'s direct LaTeX output\footnote{Marker GitHub Repository. (n.d.). Available at: \url{https://github.com/datalab-to/marker}.}. streamlines part of this, but the broader accessibility pipeline depends on these converters to ensure seamless interoperability and fidelity across different platforms and assistive technologies. This highlights the importance of a robust conversion layer within the overall accessibility infrastructure.
 
-\begin{longtable}{|p{4cm}|p{8cm}|p{3cm}|}
-    \caption{Benefits of MathML for Assistive Technologies}
-    \label{tab:mathml_benefits} \\
-    \hline
-    \textbf{Benefit} & \textbf{Explanation/Impact on User} & \textbf{Relevant Assistive Technology} \\
-    \hline
-    \endfirsthead
-    \multicolumn{3}{c}%
-    {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-    \hline
-    \textbf{Benefit} & \textbf{Explanation/Impact on User} & \textbf{Relevant Assistive Technology} \\
-    \hline
-    \endhead
-    \hline \multicolumn{3}{|r|}{{Continued on next page}} \\ \hline
-    \endfoot
-    \hline
-    \endlastfoot
-    Screen Reader Compatibility & Enables screen readers to interpret and speak mathematical expressions, allowing navigation through equation parts. & JAWS, NVDA, VoiceOver, Orca \\
-    \hline
-    Semantic Understanding & Captures both visual structure and mathematical meaning, allowing deeper comprehension and interaction. & Screen Readers, Specialized Math Readers \\
-    \hline
-    Scalability & Equations scale with surrounding text at all zoom levels without pixelation, improving readability for low-vision users. & Magnifiers, Browser Zoom \\
-    \hline
-    Braille Conversion & Supports conversion to various braille math codes (Nemeth, UEB) for tactile output. & Braille Displays, Braille Embossers \\
-    \hline
-    Language Translation & Can automatically adjust for the user's native language, making content globally accessible. & Screen Readers, Translation Software \\
-    \hline
-    Interactive Exploration & Allows users to navigate and explore the hierarchical structure of complex equations (e.g., numerator, denominator, exponent). & Screen Readers with MathML support \\
-    \hline
-\end{longtable}
+\begin{longtblr}[
+  caption = {Benefits of MathML for Assistive Technologies},
+  label = {tab:mathml_benefits}
+]{
+  colspec = {|p{4cm}|p{8cm}|p{3cm}|},
+  rowhead = 1,
+  hlines,
+  stretch = 1.5
+}
+\textbf{Benefit} & \textbf{Explanation/Impact on User} & \textbf{Relevant Assistive Technology} \\
+\hline
+Screen Reader Compatibility & Enables screen readers to interpret and speak mathematical expressions, allowing navigation through equation parts. & JAWS, NVDA, VoiceOver, Orca \\
+\hline
+Semantic Understanding & Captures both visual structure and mathematical meaning, allowing deeper comprehension and interaction. & Screen Readers, Specialized Math Readers \\
+\hline
+Scalability & Equations scale with surrounding text at all zoom levels without pixelation, improving readability for low-vision users. & Magnifiers, Browser Zoom \\
+\hline
+Braille Conversion & Supports conversion to various braille math codes (Nemeth, UEB) for tactile output. & Braille Displays, Braille Embossers \\
+\hline
+Language Translation & Can automatically adjust for the user's native language, making content globally accessible. & Screen Readers, Translation Software \\
+\hline
+Interactive Exploration & Allows users to navigate and explore the hierarchical structure of complex equations (e.g., numerator, denominator, exponent). & Screen Readers with MathML support \\
+\hline
+\end{longtblr}
 
-\section{Commercial Tools for Creating and Reading Accessible STEM Materials}
+\section{Commercial Tools for Creating and Reading Accessible STEM Materials}\label{sec:commercial-stem-tools}
 
 \subsection{Equatio (Texthelp)}
 
@@ -175,7 +169,7 @@ The prominence of tools like MathPix\footnote{Mathpix Snip. (n.d.). Mathpix Snip
     \footnotesize{\textit{Note: OS = Open-Source, Comm = Commercial}}
 \end{table}
 
-\section{Open-Source Tools for Creating and Reading Accessible STEM Materials}
+\section{Open-Source Tools for Creating and Reading Accessible STEM Materials}\label{sec:open-source-stem-tools}
 
 \subsection{MathJax}
 
@@ -211,7 +205,7 @@ As free and open-source software, KAlgebra provides a cost-effective solution fo
 
 KAlgebra's status as an open-source tool within the KDE education package\footnote{KAlgebra. (n.d.). KAlgebra. Available at: \url{https://edu.kde.org/kalgebra/}.}, coupled with its native MathML integration (even without requiring user awareness), exemplifies how open-source communities actively contribute to accessible STEM tools. This approach often prioritizes foundational standards and community-driven development, leading to solutions that are accessible by design rather than as an afterthought. This contrasts with some commercial models that might integrate accessibility as a feature rather than a core architectural principle. Open-source projects like KAlgebra and Chirun\footnote{Texthelp. (n.d.). Equatio Pricing. Available at: \url{https://www.texthelp.com/products/equatio/pricing/}.}. are crucial for diversifying the landscape of accessible STEM solutions. They provide free, customizable, and community-supported alternatives that can drive innovation in accessibility, particularly by embedding standards like MathML directly into their core functionality. This offers significant advantages for institutions with specific customization needs, limited budgets, or a philosophical alignment with open-source principles.
 
-\section{Presentation for Accessibility: LaTeX, MathML, and Braille}
+\section{Presentation for Accessibility: LaTeX, MathML, and Braille}\label{sec:presentation-accessibility}
 \subsection{LaTeX for High-Quality Mathematical Typesetting}
 LaTeX is a typesetting system based on TeX, widely adopted for producing high-quality scientific and mathematical documents. Its strength lies in its ability to handle complex mathematical notation with precise formatting, making it the preferred choice for authors in higher education and research\footnote{BrailleMathCodes Repository. (n.d.). BrailleMathCodes Repository. Available at: \url{https://speech.di.uoa.gr/sppages/spppdf/braillemathcodes_repository.pdf}.}\footnote{MathJax. (n.d.). MathJax. Available at: \url{https://www.mathjax.org/}.}\footnote{University of Washington. (n.d.). Accessible Math. Available at: \url{https://www.washington.edu/accessibility/web/accessible-math/}.}\footnote{LaTeX. (n.d.). Available at: \url{https://www.latex-project.org/}.}. LaTeX is highly flexible and expandable through a vast community-provided ecosystem of packages, allowing users to customize and extend its functionalities for diverse mathematical expressions\footnote{BrailleMathCodes Repository. (n.d.). BrailleMathCodes Repository. Available at: \url{https://speech.di.uoa.gr/sppages/spppdf/braillemathcodes_repository.pdf}.}.
 
@@ -245,7 +239,7 @@ Research is actively exploring how generative AI can learn the rules for both br
 
 The fact that LaTeX "requires translation to braille"\footnote{BrailleMathCodes Repository. (n.d.). BrailleMathCodes Repository. Available at: \url{https://speech.di.uoa.gr/sppages/spppdf/braillemathcodes_repository.pdf}.}. and is "not natively accessible to assistive technology"\footnote{University of Washington. (n.d.). Accessible Math. Available at: \url{https://www.washington.edu/accessibility/web/accessible-math/}.}. underscores the fundamental necessity of a sophisticated translation layer within the accessibility ecosystem. This layer, comprising tools such as \texttt{Pandoc}, \texttt{MathType}, \texttt{BrailleBlaster}, and \texttt{Duxbury DBT}, is responsible for transforming the visual-centric LaTeX into a semantically rich, AT-consumable format like MathML or direct braille. The effectiveness of this layer directly impacts the quality and fidelity of accessible mathematical content.
 
-\section{Accessible Math Visualization and Graphing Tools}
+\section{Accessible Math Visualization and Graphing Tools}\label{sec:math-visualization}
 \subsection{Desmos Accessible Graphing Calculator}
 \href{https://www.desmos.com/}{\texttt{Desmos}}\footnote{Desmos. (n.d.). Desmos Graphing Calculator. Available at: \url{https://www.desmos.com/calculator}.}\footnote{Desmos. (n.d.). Desmos Accessibility. Available at: \url{https://www.desmos.com/accessibility}.}\footnote{Desmos. (n.d.). Desmos Classroom. Available at: \url{https://www.desmos.com/classroom}.}. is a powerful online graphing calculator designed with accessibility as a core feature for students with visual impairments\footnote{Desmos. (n.d.). Desmos Accessibility. Available at: \url{https://www.desmos.com/accessibility}.}\footnote{Desmos. (n.d.). Desmos Classroom. Available at: \url{https://www.desmos.com/classroom}.}. Its robust accessibility features include:
 \begin{itemize}
@@ -289,7 +283,7 @@ The Image Accessibility Generator, developed by Arizona State University, offers
 
 The use of a sophisticated AI model like GPT-4o for alt-text generation\footnote{Arizona State University. (n.d.). Image Accessibility Generator. Available at: \url{https://accessibility.asu.edu/image-accessibility-generator}.}. signifies a significant step towards automating fundamental accessibility tasks. This can substantially streamline the process of making images minimally accessible, especially for content creators who may lack the expertise or time to manually write detailed descriptions for every image. However, for complex STEM diagrams (e.g., intricate graphs, chemical structures, or flowcharts), a simple alt-text, even if AI-generated, may not convey the full semantic meaning or interactive potential required for true comprehension. The information on Desmos and AGC\footnote{Desmos. (n.d.). Desmos Accessibility. Available at: \url{https://www.desmos.com/accessibility}.}\footnote{ViewPlus. (n.d.). Audio Graphing Calculator. Available at: \url{https://viewplus.com/product/audio-graphing-calculator/}.}. suggests that for such complex visuals, a multi-modal, interactive representation is often superior to a purely textual description. AI can democratize basic accessibility by simplifying routine tasks like alt-text generation, making it easier for a wider range of content creators to meet foundational accessibility requirements. However, for the nuanced and information-dense visuals common in STEM, human review and the integration of more sophisticated multi-modal representations (auditory, tactile, interactive) remain essential. AI-generated alt-text should be seen as a starting point, not a complete solution, for complex STEM diagrams.
 
-\section{Ethical Considerations and Future Directions}
+\section{Ethical Considerations and Future Directions}\label{sec:ethical-considerations}
 \subsection{Bias and Fairness in AI}
 The increasing reliance on AI in Math OCR and accessibility tools introduces critical ethical considerations, particularly concerning bias and fairness. AI systems learn from the data they are trained on, and if this data is not diverse or contains societal inequalities, the AI's outcomes can be unfair or skewed\footnote{AI Ethics and Bias. (n.d.). Available at: \url{https://www.ibm.com/cloud/learn/ai-ethics}.}\footnote{Bias in AI. (n.d.). Available at: \url{https://www.accenture.com/us-en/insights/artificial-intelligence/responsible-ai}.}. For instance, biases could manifest as systems that perform less accurately for certain handwriting styles, or in grading systems that unintentionally favor specific demographic groups\footnote{Bias in AI. (n.d.). Available at: \url{https://www.accenture.com/us-en/insights/artificial-intelligence/responsible-ai}.}.
 
@@ -310,7 +304,7 @@ The field of AI-powered math OCR and accessibility is rapidly evolving, with sev
 \end{itemize}
 These advancements promise to further break down barriers in STEM education, ensuring that all students, regardless of their abilities, have equitable access to high-quality mathematical content.
 
-\section{Conclusion}
+\section{Conclusion}\label{sec:conclusion-mathocr}
 The journey towards fully accessible mathematical content is a complex but critical endeavor, driven by both legal mandates and the imperative of educational equity. AI-powered Math OCR, exemplified by tools like \texttt{Marker}, represents a significant leap forward in digitizing and structuring mathematical expressions from various sources, including challenging handwritten inputs. The integration of deep learning architectures, particularly encoder-decoder models with attention mechanisms and the strategic use of LLMs, enables these tools to achieve high accuracy and contextual understanding, transforming static images into semantically rich data.
 
 The ecosystem of accessible math relies heavily on standardized formats like MathML, which acts as a universal language for assistive technologies, enabling features such as aural navigation, dynamic scaling, and braille conversion. While LaTeX remains the gold standard for authoring high-quality mathematical documents, its conversion to MathML through robust intermediary tools like \texttt{Pandoc} and \texttt{MathType} is essential for broad accessibility. Dedicated braille translation software, such as \texttt{DBT} and \texttt{BrailleBlaster}, further bridges the gap to tactile output, with AI poised to revolutionize these processes through generative models that learn braille rules directly.

@@ -1,8 +1,10 @@
 \chapter{Screen Reader Interaction with Windows Environment and User Data Processing}
+\label{chap:screenreader-windows}
 
 This report provides a comprehensive description of how **JAWS**, **NVDA**, **Windows Narrator**, and **Dolphin Supernova** interact with the Windows environment, process user data, and differ in their basic navigation commands and unique features.
 
 \section{Interaction with Windows Environment: Utilizing Accessibility APIs}
+\label{sec:interaction-apis}
 
 Screen readers act as intermediaries between the user and the operating system, translating visual information into audible or tactile formats. They achieve this by leveraging Windows' built-in accessibility Application Programming Interfaces (APIs). The primary APIs used are **Microsoft Active Accessibility (MSAA)** and **UI Automation (UIA)**, with **IAccessible2** playing a crucial role, especially for web content.
 
@@ -23,6 +25,7 @@ Screen readers act as intermediaries between the user and the operating system, 
 ---
 
 \section{Intercepting and Processing User Inputs}
+\label{sec:intercepting-inputs}
 
 Screen readers intercept user inputs, primarily keyboard commands and sometimes touch gestures, to navigate the Windows environment and trigger specific actions or information retrieval. They often employ a "modifier key" (e.g., Insert key, Caps Lock) in combination with other keys to differentiate screen reader commands from standard application commands.
 
@@ -36,6 +39,7 @@ Screen readers intercept user inputs, primarily keyboard commands and sometimes 
 ---
 
 \section{Generating Screen Reader Outputs}
+\label{sec:generating-outputs}
 
 All four screen readers generate output primarily through synthesized speech and refreshable braille displays, often supplemented by auditory cues.
 
@@ -66,6 +70,7 @@ All four screen readers generate output primarily through synthesized speech and
 ---
 
 \section{Internal Data Processing Pipelines and Rendering Logic}
+\label{sec:data-pipelines}
 
 The core of a screen reader's functionality lies in how it interprets raw accessibility data from the Windows environment and transforms it into meaningful output. This involves building an internal representation of the UI and applying rendering logic to determine what information to present and how.
 
@@ -79,6 +84,7 @@ The core of a screen reader's functionality lies in how it interprets raw access
 ---
 
 \section{Architectural Approaches and Unique Methods}
+\label{sec:architectural-approaches}
 
 Each screen reader has distinct architectural philosophies and unique features that differentiate its approach to interacting with Windows.
 
@@ -115,6 +121,7 @@ Each screen reader has distinct architectural philosophies and unique features t
 ---
 
 \section{Comparison of Methodologies for Processing and Rendering UI Elements}
+\label{sec:comparison-methodologies}
 
 The methodologies for processing and rendering UI elements vary in their underlying architecture, flexibility, and focus.
 
@@ -144,6 +151,7 @@ The methodologies for processing and rendering UI elements vary in their underly
 ---
 
 \section{Summary of Basic Navigation Commands}
+\label{sec:summary-navigation}
 
 While specific key combinations can vary slightly or be customized, here's a summary of fundamental navigation commands for common actions across the four screen readers. The "modifier key" is typically Insert or Caps Lock.
 

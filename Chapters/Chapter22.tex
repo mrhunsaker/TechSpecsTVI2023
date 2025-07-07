@@ -1,8 +1,10 @@
 \chapter{Comprehensive Accessibility Audit of Office Suites for Screen Reader Accessibility}
+\label{chap:office-suite-audit}
 
 This chapter provides a comprehensive guide to conducting a full accessibility audit on Microsoft Office, LibreOffice, and Google Suite tools (Docs, Sheets, etc.), with a specific focus on screen reader accessibility. It covers the fundamental principles and relevant standards, built-in accessibility features, commercial and open-source audit tools across macOS, Windows, and Linux, and detailed strategies for remediating common accessibility failures.
 
 \section{Fundamental Principles and Relevant Accessibility Standards}
+\label{sec:office-principles-standards}
 
 A thorough accessibility audit begins with a strong understanding of the underlying principles and standards that govern digital accessibility. For office documents and web-based productivity tools, the following are paramount:
 
@@ -31,6 +33,7 @@ Section 508\footnote{\url{https://www.section508.gov/}} is a U.S. federal law th
 ARIA\footnote{\url{https://www.w3.org/WAI/ARIA/}} is a set of attributes that can be added to HTML elements to improve the accessibility of web content, particularly dynamic content and custom user interface components that are not natively accessible. While ARIA is primarily for web applications, its concepts are crucial for understanding how screen readers interpret complex web-based interfaces like Google Workspace, which often rely on advanced JavaScript and custom controls. ARIA roles, states, and properties provide semantic meaning to elements that screen readers can then convey to users.
 
 \section{Built-in Accessibility Features and Checkers}
+\label{sec:office-built-in-checkers}
 
 Many modern office suites include built-in tools to assist users in creating accessible content. These are often the first line of defense in an accessibility audit.
 
@@ -77,6 +80,7 @@ LibreOffice, a free and open-source office suite, also offers accessibility feat
 \end{itemize}
 
 \section{External Accessibility Audit Tools}
+\label{sec:office-external-tools}
 
 Beyond built-in checkers, a variety of commercial and open-source tools can provide more in-depth analysis for both desktop and web-based office suite content.
 
@@ -200,6 +204,7 @@ Automated tools catch many issues, but manual testing with screen readers is ind
 \end{itemize}
 
 \section{Common Screen Reader Accessibility Failures and Remediation}
+\label{sec:office-remediation}
 
 This section outlines prevalent accessibility issues found in office documents and their effective remediation using native application features and best practices.
 
@@ -289,5 +294,6 @@ This section outlines prevalent accessibility issues found in office documents a
 \end{itemize}
 
 \section{Conclusion}
+\label{sec:office-conclusion}
 
 Conducting a comprehensive accessibility audit for Microsoft Office, LibreOffice, and Google Suite tools requires a multi-faceted approach. It involves a foundational understanding of WCAG, Section 508, and ARIA, leveraging the built-in accessibility checkers provided by the office suites, and employing a range of commercial and open-source audit tools. Crucially, automated checks must be complemented by manual screen reader testing to ensure a truly accessible user experience. By diligently addressing the common failures identified in this report, organizations and individuals can significantly enhance the accessibility of their digital documents, fostering inclusivity and providing equitable access to information for all users.
