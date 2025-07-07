@@ -8,18 +8,18 @@ This report provides a comprehensive description of how **JAWS**, **NVDA**, **Wi
 
 Screen readers act as intermediaries between the user and the operating system, translating visual information into audible or tactile formats. They achieve this by leveraging Windows' built-in accessibility Application Programming Interfaces (APIs). The primary APIs used are **Microsoft Active Accessibility (MSAA)** and **UI Automation (UIA)**, with **IAccessible2** playing a crucial role, especially for web content.
 
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item \textbf{Microsoft Active Accessibility (MSAA):} Introduced with Windows 95, MSAA is a Component Object Model (COM)-based API that allows applications to expose basic UI element information (name, role, state, location) in a hierarchical tree structure. While foundational, MSAA has limitations, particularly in handling complex UI elements, rich text, and modern web content.\footnote{Microsoft Active Accessibility. Wikipedia. \url{https://en.wikipedia.org/wiki/Microsoft_Active_Accessibility}}
-    \item \textbf{UI Automation (UIA):} UIA is Microsoft's newer and more robust accessibility framework, designed to overcome MSAA's limitations. It offers a richer object model, a broader set of properties, and "control patterns" that allow for more granular interaction and information retrieval from UI elements.\footnote{UI Automation Overview. Microsoft Learn. \url{https://learn.microsoft.com/en-us/dotnet/framework/ui-automation/ui-automation-overview}}
-    \item \textbf{IAccessible2:} An open-source API based on MSAA, IAccessible2 was developed to address critical accessibility gaps in MSAA, particularly for rich document applications and web browsers. It complements MSAA by providing enhanced semantics and support for complex web technologies (like ARIA).\footnote{Jantrid, A. (2019). The Ins and Outs of IAccessible2. \url{https://jantrid.net/articles/the-ins-and-outs-of-iaccessible2/}}
+\begin{itemize}
+    \item \emph{Microsoft Active Accessibility (MSAA):} Introduced with Windows 95, MSAA is a Component Object Model (COM)-based API that allows applications to expose basic UI element information (name, role, state, location) in a hierarchical tree structure. While foundational, MSAA has limitations, particularly in handling complex UI elements, rich text, and modern web content.\footnote{Microsoft Active Accessibility. Wikipedia. \url{https://en.wikipedia.org/wiki/Microsoft_Active_Accessibility}}
+    \item \emph{UI Automation (UIA):} UIA is Microsoft's newer and more robust accessibility framework, designed to overcome MSAA's limitations. It offers a richer object model, a broader set of properties, and "control patterns" that allow for more granular interaction and information retrieval from UI elements.\footnote{UI Automation Overview. Microsoft Learn. \url{https://learn.microsoft.com/en-us/dotnet/framework/ui-automation/ui-automation-overview}}
+    \item \emph{IAccessible2:} An open-source API based on MSAA, IAccessible2 was developed to address critical accessibility gaps in MSAA, particularly for rich document applications and web browsers. It complements MSAA by providing enhanced semantics and support for complex web technologies (like ARIA).\footnote{Jantrid, A. (2019). The Ins and Outs of IAccessible2. \url{https://jantrid.net/articles/the-ins-and-outs-of-iaccessible2/}}
 \end{itemize}
 
 \subsection*{How Each Screen Reader Utilizes APIs:}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item \textbf{JAWS (Job Access With Speech):} Utilizes both **UI Automation (UIA)** and **IAccessible2**. For web content, JAWS, like NVDA, continues to heavily rely on IAccessible2 due to UIA's historical and ongoing insufficiencies in fully representing web semantics.\footnote{Jantrid, A. (2019). The Ins and Outs of IAccessible2. \url{https://jantrid.net/articles/the-ins-and-outs-of-iaccessible2/}}\footnote{JAWS: UI Automation Script API. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/documentation/uia-script-api/}}
-    \item \textbf{NVDA (NonVisual Desktop Access):} Employs a comprehensive approach, utilizing **Microsoft Active Accessibility (MSAA), IAccessible2, Java Access Bridge, and UI Automation**.\footnote{How NVDA Uses Accessibility APIs. Clym. \url{https://clym.io/blog/how-nvda-uses-accessibility-apis}}\footnote{Assistiv Labs. (n.d.). NVDA's Architecture. \url{https://www.assistivlabs.com/blog/nvdas-architecture}} NVDA's architecture includes specific **API handlers** (e.g., \texttt{IAccessibleHandler}, \texttt{JABHandler}, \texttt{UIAHandler}) that abstract API complexities, allowing the core of NVDA to work with a unified, abstract representation of UI elements called "NVDA Objects."
-    \item \textbf{Windows Narrator:} As a built-in Windows screen reader, Narrator is deeply integrated with the operating system and primarily relies on the **Microsoft UI Automation framework**.\footnote{Narrator Technical Details. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/win32/wnauto/narrator-technical-details}}
-    \item \textbf{Dolphin Supernova:} While explicit technical documentation detailing its precise API usage is less publicly available, Supernova, as a comprehensive screen reader for Windows, is understood to leverage the standard Windows accessibility APIs, including **UI Automation** and **Microsoft Active Accessibility**.\footnote{SuperNova Magnifier \& Screen Reader. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/}} Its ability to announce detailed information about UI elements, formatting, and on-screen changes strongly implies its reliance on these underlying system interfaces. It also likely uses IAccessible2 for robust web accessibility, similar to JAWS and NVDA.
+\begin{itemize}
+    \item \emph{JAWS (Job Access With Speech):} Utilizes both **UI Automation (UIA)** and **IAccessible2**. For web content, JAWS, like NVDA, continues to heavily rely on IAccessible2 due to UIA's historical and ongoing insufficiencies in fully representing web semantics.\footnote{Jantrid, A. (2019). The Ins and Outs of IAccessible2. \url{https://jantrid.net/articles/the-ins-and-outs-of-iaccessible2/}}\footnote{JAWS: UI Automation Script API. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/documentation/uia-script-api/}}
+    \item \emph{NVDA (NonVisual Desktop Access):} Employs a comprehensive approach, utilizing **Microsoft Active Accessibility (MSAA), IAccessible2, Java Access Bridge, and UI Automation**.\footnote{How NVDA Uses Accessibility APIs. Clym. \url{https://clym.io/blog/how-nvda-uses-accessibility-apis}}\footnote{Assistiv Labs. (n.d.). NVDA's Architecture. \url{https://www.assistivlabs.com/blog/nvdas-architecture}} NVDA's architecture includes specific **API handlers** (e.g., \texttt{IAccessibleHandler}, \texttt{JABHandler}, \texttt{UIAHandler}) that abstract API complexities, allowing the core of NVDA to work with a unified, abstract representation of UI elements called "NVDA Objects."
+    \item \emph{Windows Narrator:} As a built-in Windows screen reader, Narrator is deeply integrated with the operating system and primarily relies on the **Microsoft UI Automation framework**.\footnote{Narrator Technical Details. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/win32/wnauto/narrator-technical-details}}
+    \item \emph{Dolphin Supernova:} While explicit technical documentation detailing its precise API usage is less publicly available, Supernova, as a comprehensive screen reader for Windows, is understood to leverage the standard Windows accessibility APIs, including **UI Automation** and **Microsoft Active Accessibility**.\footnote{SuperNova Magnifier \& Screen Reader. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/}} Its ability to announce detailed information about UI elements, formatting, and on-screen changes strongly implies its reliance on these underlying system interfaces. It also likely uses IAccessible2 for robust web accessibility, similar to JAWS and NVDA.
 \end{itemize}
 
 ---
@@ -29,11 +29,11 @@ Screen readers act as intermediaries between the user and the operating system, 
 
 Screen readers intercept user inputs, primarily keyboard commands and sometimes touch gestures, to navigate the Windows environment and trigger specific actions or information retrieval. They often employ a "modifier key" (e.g., Insert key, Caps Lock) in combination with other keys to differentiate screen reader commands from standard application commands.
 
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item \textbf{JAWS:} Intercepts keyboard commands extensively, using the \textbf{Insert key} (or Caps Lock) as its primary modifier key.\footnote{JAWS Basic Commands. Deque University. \url{https://www.deque.com/axe/devtools/jaws-basic-commands/}} Features a \textbf{Virtual Cursor} for web Browse and document reading, which allows navigation without moving the actual system focus. When interacting with forms or editable content, it automatically or manually switches to \textbf{Forms Mode}, passing keystrokes directly to the application.\footnote{JAWS Keyboard Commands and Gestures. Access Ingenuity. \url{https://accessingen.com/jaws-keyboard-commands-and-gestures/}}
-    \item \textbf{NVDA:} Processes keyboard commands, often using the \textbf{NVDA key} (Insert or Caps Lock by default) as a modifier.\footnote{NVDA User Guide: Keyboard Commands. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html#KeyboardCommands}} Employs distinct \textbf{Browse Mode} and \textbf{Focus Mode}. In Browse Mode (default for web pages and documents), NVDA intercepts most keystrokes for navigation. In Focus Mode, keystrokes are passed directly to the application. Supports touch gestures for Windows tablets.\footnote{NVDA User Guide: Keyboard Commands. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html#KeyboardCommands}}
-    \item \textbf{Windows Narrator:} Intercepts keyboard commands using the \textbf{Narrator key} (Caps Lock or Insert by default).\footnote{Narrator Keyboard Commands. U.S. Department of the Treasury. \url{https://www.fiscal.treasury.gov/files/narrator-keyboard-commands.pdf}} Features a \textbf{Scan mode} (Narrator key + Spacebar) for navigating web pages and documents, similar to browse mode in other screen readers. Supports touch gestures for navigation, particularly useful on touch-enabled devices.\footnote{Complete guide to Narrator. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8c2-a1897d781b00}}
-    \item \textbf{Dolphin Supernova:} Utilizes a range of \textbf{hotkeys}, often involving the \textbf{Caps Lock key} as a modifier, though it can be customized.\footnote{SuperNova Hotkeys. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/hotkeys/}} Features a \textbf{Dolphin Cursor} for exploring the screen and includes a \textbf{Forms Mode} that automatically activates when navigating to editable fields.\footnote{SuperNova Hotkeys. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/hotkeys/}}
+\begin{itemize}
+    \item \emph{JAWS:} Intercepts keyboard commands extensively, using the \emph{Insert key} (or Caps Lock) as its primary modifier key.\footnote{JAWS Basic Commands. Deque University. \url{https://www.deque.com/axe/devtools/jaws-basic-commands/}} Features a \emph{Virtual Cursor} for web Browse and document reading, which allows navigation without moving the actual system focus. When interacting with forms or editable content, it automatically or manually switches to \emph{Forms Mode}, passing keystrokes directly to the application.\footnote{JAWS Keyboard Commands and Gestures. Access Ingenuity. \url{https://accessingen.com/jaws-keyboard-commands-and-gestures/}}
+    \item \emph{NVDA:} Processes keyboard commands, often using the \emph{NVDA key} (Insert or Caps Lock by default) as a modifier.\footnote{NVDA User Guide: Keyboard Commands. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html\#KeyboardCommands}} Employs distinct \emph{Browse Mode} and \emph{Focus Mode}. In Browse Mode (default for web pages and documents), NVDA intercepts most keystrokes for navigation. In Focus Mode, keystrokes are passed directly to the application. Supports touch gestures for Windows tablets.\footnote{NVDA User Guide: Keyboard Commands. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html\#KeyboardCommands}}
+    \item \emph{Windows Narrator:} Intercepts keyboard commands using the \emph{Narrator key} (Caps Lock or Insert by default).\footnote{Narrator Keyboard Commands. U.S. Department of the Treasury. \url{https://www.fiscal.treasury.gov/files/narrator-keyboard-commands.pdf}} Features a \emph{Scan mode} (Narrator key + Spacebar) for navigating web pages and documents, similar to browse mode in other screen readers. Supports touch gestures for navigation, particularly useful on touch-enabled devices.\footnote{Complete guide to Narrator. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8c2-a1897d781b00}}
+    \item \emph{Dolphin Supernova:} Utilizes a range of \emph{hotkeys}, often involving the \emph{Caps Lock key} as a modifier, though it can be customized.\footnote{SuperNova Hotkeys. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/hotkeys/}} Features a \emph{Dolphin Cursor} for exploring the screen and includes a \emph{Forms Mode} that automatically activates when navigating to editable fields.\footnote{SuperNova Hotkeys. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/hotkeys/}}
 \end{itemize}
 
 ---
@@ -44,27 +44,27 @@ Screen readers intercept user inputs, primarily keyboard commands and sometimes 
 All four screen readers generate output primarily through synthesized speech and refreshable braille displays, often supplemented by auditory cues.
 
 \subsection*{Speech Synthesis:}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item \textbf{JAWS:} Supports a variety of speech synthesizers, including its proprietary Eloquence synthesizer, and can automatically detect and switch languages based on content.\footnote{What's New in JAWS. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/whats-new/}}
-    \item \textbf{NVDA:} Bundles the open-source eSpeak NG synthesizer and supports Microsoft SAPI 4/5, Microsoft Speech Platform, and Windows OneCore Voices. Offers extensive customization and supports automatic language switching.\footnote{NVDA User Guide: Speech. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html#Speech}}
-    \item \textbf{Windows Narrator:} Uses built-in Windows voices. Recent updates include "Speech recap" and "Live transcription" (real-time transcription of Narrator's speech), enhancing its output capabilities.\footnote{What's new in Narrator. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/whats-new-narrator}}
-    \item \textbf{Dolphin Supernova:} Offers "human-sounding voices" with customizable options for character/word echo, and a "Read From Here" mode. Features "Sound Splitting" and "Audio Ducking" for managing audio output.\footnote{SuperNova Features: Speech. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/#speech}}
+\begin{itemize}
+    \item \emph{JAWS:} Supports a variety of speech synthesizers, including its proprietary Eloquence synthesizer, and can automatically detect and switch languages based on content.\footnote{What's New in JAWS. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/whats-new/}}
+    \item \emph{NVDA:} Bundles the open-source eSpeak NG synthesizer and supports Microsoft SAPI 4/5, Microsoft Speech Platform, and Windows OneCore Voices. Offers extensive customization and supports automatic language switching.\footnote{NVDA User Guide: Speech. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html\#Speech}}
+    \item \emph{Windows Narrator:} Uses built-in Windows voices. Recent updates include "Speech recap" and "Live transcription" (real-time transcription of Narrator's speech), enhancing its output capabilities.\footnote{What's new in Narrator. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/whats-new-narrator}}
+    \item \emph{Dolphin Supernova:} Offers "human-sounding voices" with customizable options for character/word echo, and a "Read From Here" mode. Features "Sound Splitting" and "Audio Ducking" for managing audio output.\footnote{SuperNova Features: Speech. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/\#speech}}
 \end{itemize}
 
 \subsection*{Braille Display Output:}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\begin{itemize}
     \item All four support a wide range of refreshable braille displays, converting on-screen text into tactile braille.
-    \item \textbf{JAWS:} Supports contracted and uncontracted braille, with customization options. Features updated Liblouis braille translator and supports Braille Font Attribute Marks.\footnote{What's New in JAWS: Braille. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/whats-new/#braille}}
-    \item \textbf{NVDA:} Uses the open-source LibLouis braille translator. Supports both uncontracted and contracted braille input via braille keyboards and can automatically detect many displays. Provides a "Braille Viewer" for sighted users.\footnote{NVDA User Guide: Braille. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html#Braille}}
-    \item \textbf{Windows Narrator:} Requires installation of braille support in Windows. Once enabled, it can output to compatible braille displays.\footnote{Chapter 6: Using Narrator with a braille display. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/chapter-6-using-narrator-with-a-braille-display-a42e56cf-5136-1e66-1077-83c92ce9633e}}
-    \item \textbf{Dolphin Supernova:} Supports over 60 braille displays and more than 50 literary and computer braille codes, including Unified English Braille. Allows braille input via the display's keyboard and offers a "Show Braille On Screen" feature.\footnote{SuperNova Features: Braille. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/#braille}}
+    \item \emph{JAWS:} Supports contracted and uncontracted braille, with customization options. Features updated Liblouis braille translator and supports Braille Font Attribute Marks.\footnote{What's New in JAWS: Braille. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/whats-new/\#braille}}
+    \item \emph{NVDA:} Uses the open-source LibLouis braille translator. Supports both uncontracted and contracted braille input via braille keyboards and can automatically detect many displays. Provides a "Braille Viewer" for sighted users.\footnote{NVDA User Guide: Braille. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html\#Braille}}
+    \item \emph{Windows Narrator:} Requires installation of braille support in Windows. Once enabled, it can output to compatible braille displays.\footnote{Chapter 6: Using Narrator with a braille display. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/chapter-6-using-narrator-with-a-braille-display-a42e56cf-5136-1e66-1077-83c92ce9633e}}
+    \item \emph{Dolphin Supernova:} Supports over 60 braille displays and more than 50 literary and computer braille codes, including Unified English Braille. Allows braille input via the display's keyboard and offers a "Show Braille On Screen" feature.\footnote{SuperNova Features: Braille. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/\#braille}}
 \end{itemize}
 
 \subsection*{Auditory Cues:}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\begin{itemize}
     \item Beyond speech, screen readers use non-speech sounds to convey information, such as beeps for progress, changes in focus, or specific events.
-    \item \textbf{NVDA} can provide audible indication of the mouse position.\footnote{NVDA User Guide: Speech. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html#Speech}}
-    \item \textbf{Dolphin Supernova} uses "Monitor markers" to announce on-screen changes like security notifications or download progress.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
+    \item \emph{NVDA} can provide audible indication of the mouse position.\footnote{NVDA User Guide: Speech. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html\#Speech}}
+    \item \emph{Dolphin Supernova} uses "Monitor markers" to announce on-screen changes like security notifications or download progress.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
 \end{itemize}
 
 ---
@@ -74,11 +74,11 @@ All four screen readers generate output primarily through synthesized speech and
 
 The core of a screen reader's functionality lies in how it interprets raw accessibility data from the Windows environment and transforms it into meaningful output. This involves building an internal representation of the UI and applying rendering logic to determine what information to present and how.
 
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item \textbf{JAWS:} Interprets accessibility data to construct a logical representation of the screen. Its "JAWS Inspect" tool provides a visual, text-based view of how JAWS interprets digital content, including reading order, hierarchy of headings, labels, roles, and states of controls.\footnote{JAWS Inspect. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/jaws-inspect/}} Features like "AI Labeler" demonstrate its ability to process visual information (screenshots) using AI to generate accessible names for unlabeled elements.\footnote{AI Labeler. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/ai-labeler/}} Its "Text Processing" and "Language Processing" groups show a focus on intelligent content analysis.\footnote{What's New in JAWS. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/whats-new/}}
-    \item \textbf{NVDA:} Builds an internal object model using "NVDA Objects," which are abstract representations of UI widgets.\footnote{Assistiv Labs. (n.d.). NVDA's Architecture. \url{https://www.assistivlabs.com/blog/nvdas-architecture}} These objects contain properties like name, role, states, value, description, location, and relational properties. Uses "TextInfo objects" to handle text navigation and formatting. Its rendering logic involves processing symbol pronunciation and providing contextual properties.\footnote{NVDA User Guide: Speech. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html#Speech}}
-    \item \textbf{Windows Narrator:} Leverages the UI Automation framework to build its understanding of the UI. Its rendering logic determines whether text should be read as part of a tab-sequence traversal or as part of an overall document representation.\footnote{Narrator Technical Details. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/win32/wnauto/narrator-technical-details}} Recent advancements include **AI-driven image descriptions**.\footnote{Get image descriptions from Narrator. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/get-image-descriptions-from-narrator-c800c765-b772-4017-8e6c-7f5ddf5b721e}}
-    \item \textbf{Dolphin Supernova:} Employs "True Fonts" technology to ensure text clarity at high magnification levels.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}} Its "Monitor markers" feature suggests an internal mechanism for detecting and announcing dynamic changes on the screen. Improved speech announcements for specific contexts, such as Excel cell coordinates, show a refined rendering logic. "Doc Reader" and "Line View" are dedicated reading modes that reflow and present text in optimized ways.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
+\begin{itemize}
+    \item \emph{JAWS:} Interprets accessibility data to construct a logical representation of the screen. Its "JAWS Inspect" tool provides a visual, text-based view of how JAWS interprets digital content, including reading order, hierarchy of headings, labels, roles, and states of controls.\footnote{JAWS Inspect. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/jaws-inspect/}} Features like "AI Labeler" demonstrate its ability to process visual information (screenshots) using AI to generate accessible names for unlabeled elements.\footnote{AI Labeler. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/ai-labeler/}} Its "Text Processing" and "Language Processing" groups show a focus on intelligent content analysis.\footnote{What's New in JAWS. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/whats-new/}}
+    \item \emph{NVDA:} Builds an internal object model using "NVDA Objects," which are abstract representations of UI widgets.\footnote{Assistiv Labs. (n.d.). NVDA's Architecture. \url{https://www.assistivlabs.com/blog/nvdas-architecture}} These objects contain properties like name, role, states, value, description, location, and relational properties. Uses "TextInfo objects" to handle text navigation and formatting. Its rendering logic involves processing symbol pronunciation and providing contextual properties.\footnote{NVDA User Guide: Speech. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html\#Speech}}
+    \item \emph{Windows Narrator:} Leverages the UI Automation framework to build its understanding of the UI. Its rendering logic determines whether text should be read as part of a tab-sequence traversal or as part of an overall document representation.\footnote{Narrator Technical Details. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/win32/wnauto/narrator-technical-details}} Recent advancements include AI-driven image descriptions\footnote{Get image descriptions from Narrator. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/get-image-descriptions-from-narrator-c800c765-b772-4017-8e6c-7f5ddf5b721e}}
+    \item \emph{Dolphin Supernova:} Employs "True Fonts" technology to ensure text clarity at high magnification levels.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}} Its "Monitor markers" feature suggests an internal mechanism for detecting and announcing dynamic changes on the screen. Improved speech announcements for specific contexts, such as Excel cell coordinates, show a refined rendering logic. "Doc Reader" and "Line View" are dedicated reading modes that reflow and present text in optimized ways.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
 \end{itemize}
 
 ---
@@ -88,33 +88,33 @@ The core of a screen reader's functionality lies in how it interprets raw access
 
 Each screen reader has distinct architectural philosophies and unique features that differentiate its approach to interacting with Windows.
 
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item \textbf{JAWS:}
-    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-        \item \textbf{Proprietary and Commercial:} A long-standing, feature-rich commercial product.
-        \item \textbf{Extensive Scripting:} Offers a powerful scripting language for highly customized interactions with non-standard applications.\footnote{JAWS Scripting. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/jaws-scripting/}}
-        \item \textbf{Virtual Cursor:} A core architectural component for consistent navigation across diverse applications and web content.\footnote{JAWS Keyboard Commands and Gestures. Access Ingenuity. \url{https://accessingen.com/jaws-keyboard-commands-and-gestures/}}
-        \item \textbf{AI Labeler \& Convenient OCR:} Uses AI and OCR to make inaccessible content (unlabeled elements, images, PDFs, even live video streams) accessible.\footnote{AI Labeler. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/ai-labeler/}}\footnote{Convenient OCR (Optical Character Recognition). Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/convenient-ocr/}}
+\begin{itemize}
+    \item \emph{JAWS:}
+    \begin{itemize}
+        \item \emph{Proprietary and Commercial:} A long-standing, feature-rich commercial product.
+        \item \emph{Extensive Scripting:} Offers a powerful scripting language for highly customized interactions with non-standard applications.\footnote{JAWS Scripting. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/jaws-scripting/}}
+        \item \emph{Virtual Cursor:} A core architectural component for consistent navigation across diverse applications and web content.\footnote{JAWS Keyboard Commands and Gestures. Access Ingenuity. \url{https://accessingen.com/jaws-keyboard-commands-and-gestures/}}
+        \item \emph{AI Labeler \& Convenient OCR:} Uses AI and OCR to make inaccessible content (unlabeled elements, images, PDFs, even live video streams) accessible.\footnote{AI Labeler. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/ai-labeler/}}\footnote{Convenient OCR (Optical Character Recognition). Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/convenient-ocr/}}
     \end{itemize}
-    \item \textbf{NVDA:}
-    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-        \item \textbf{Open-Source and Community-Driven:} Cost-free availability, fosters rapid development and widespread adoption.\footnote{NV Access. \url{https://www.nvaccess.org/}}
-        \item \textbf{Portable:} Can run directly from a USB drive without installation.\footnote{NV Access. \url{https://www.nvaccess.org/}}
-        \item \textbf{Modular Architecture:} Written primarily in Python with C++ for performance-critical parts.\footnote{Assistiv Labs. (n.d.). NVDA's Architecture. \url{https://www.assistivlabs.com/blog/nvdas-architecture}}
-        \item \textbf{Browse Mode/Focus Mode:} A fundamental interaction paradigm that intelligently adapts navigation based on content type.\footnote{NVDA User Guide: Keyboard Commands. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html#KeyboardCommands}}
-        \item \textbf{Speech and Braille Viewers:} Built-in tools for sighted users to visualize output.\footnote{NVDA User Guide: Speech. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html#Speech}}\footnote{NVDA User Guide: Braille. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html#Braille}}
+    \item \emph{NVDA:}
+    \begin{itemize}
+        \item \emph{Open-Source and Community-Driven:} Cost-free availability, fosters rapid development and widespread adoption.\footnote{NV Access. \url{https://www.nvaccess.org/}}
+        \item \emph{Portable:} Can run directly from a USB drive without installation.\footnote{NV Access. \url{https://www.nvaccess.org/}}
+        \item \emph{Modular Architecture:} Written primarily in Python with C++ for performance-critical parts.\footnote{Assistiv Labs. (n.d.). NVDA's Architecture. \url{https://www.assistivlabs.com/blog/nvdas-architecture}}
+        \item \emph{Browse Mode/Focus Mode:} A fundamental interaction paradigm that intelligently adapts navigation based on content type.\footnote{NVDA User Guide: Keyboard Commands. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html\#KeyboardCommands}}
+        \item \emph{Speech and Braille Viewers:} Built-in tools for sighted users to visualize output.\footnote{NVDA User Guide: Speech. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html\#Speech}}\footnote{NVDA User Guide: Braille. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html\#Braille}}
     \end{itemize}
-    \item \textbf{Windows Narrator:}
-    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-        \item \textbf{Operating System Integration:} Built directly into Windows, ensuring deep system-level access and tight integration with Microsoft's accessibility initiatives.\footnote{Complete guide to Narrator: Basic usage. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8c2-a1897d781b00}}
-        \item \textbf{AI-Powered Features:} Leveraging AI for image descriptions and live transcription.\footnote{Get image descriptions from Narrator. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/get-image-descriptions-from-narrator-c800c765-b772-4017-8e6c-7f5ddf5b721e}}\footnote{What's new in Narrator. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/whats-new-narrator}}
+    \item \emph{Windows Narrator:}
+    \begin{itemize}
+        \item \emph{Operating System Integration:} Built directly into Windows, ensuring deep system-level access and tight integration with Microsoft's accessibility initiatives.\footnote{Complete guide to Narrator: Basic usage. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8c2-a1897d781b00}}
+        \item \emph{AI-Powered Features:} Leveraging AI for image descriptions and live transcription.\footnote{Get image descriptions from Narrator. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/get-image-descriptions-from-narrator-c800c765-b772-4017-8e6c-7f5ddf5b721e}}\footnote{What's new in Narrator. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/whats-new-narrator}}
     \end{itemize}
-    \item \textbf{Dolphin Supernova:}
-    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-        \item \textbf{Combined Magnification and Screen Reading:} Robust integration of screen magnification with screen reading and braille support.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
-        \item \textbf{True Fonts Technology:} Ensures magnified text remains sharp and clear.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
-        \item \textbf{Connect \& View:} Allows connection to cameras and interactive whiteboards.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
-        \item \textbf{Privacy Screen:} Hides screen content while still providing speech and braille output.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
+    \item \emph{Dolphin Supernova:}
+    \begin{itemize}
+        \item \emph{Combined Magnification and Screen Reading:} Robust integration of screen magnification with screen reading and braille support.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
+        \item \emph{True Fonts Technology:} Ensures magnified text remains sharp and clear.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
+        \item \emph{Connect \& View:} Allows connection to cameras and interactive whiteboards.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
+        \item \emph{Privacy Screen:} Hides screen content while still providing speech and braille output.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
     \end{itemize}
 \end{itemize}
 
@@ -125,26 +125,26 @@ Each screen reader has distinct architectural philosophies and unique features t
 
 The methodologies for processing and rendering UI elements vary in their underlying architecture, flexibility, and focus.
 
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item \textbf{JAWS:}
-    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-        \item \textbf{Processing:} Employs a sophisticated internal model that interprets raw API data (UIA, IAccessible2) into a semantic understanding of the UI. Scripting engine allows for highly customized interpretation rules.\footnote{JAWS Inspect. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/jaws-inspect/}}
-        \item \textbf{Rendering:} Prioritizes a comprehensive and customizable verbalization of UI elements. Its "Virtual Cursor" creates a consistent reading experience across diverse content.\footnote{JAWS Keyboard Commands and Gestures. Access Ingenuity. \url{https://accessingen.com/jaws-keyboard-commands-and-gestures/}}
+\begin{itemize}
+    \item \emph{JAWS:}
+    \begin{itemize}
+        \item \emph{Processing:} Employs a sophisticated internal model that interprets raw API data (UIA, IAccessible2) into a semantic understanding of the UI. Scripting engine allows for highly customized interpretation rules.\footnote{JAWS Inspect. Freedom Scientific. \url{https://www.freedomscientific.com/products/software/jaws/jaws-inspect/}}
+        \item \emph{Rendering:} Prioritizes a comprehensive and customizable verbalization of UI elements. Its "Virtual Cursor" creates a consistent reading experience across diverse content.\footnote{JAWS Keyboard Commands and Gestures. Access Ingenuity. \url{https://accessingen.com/jaws-keyboard-commands-and-gestures/}}
     \end{itemize}
-    \item \textbf{NVDA:}
-    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-        \item \textbf{Processing:} Uses a modular, object-oriented approach with "NVDA Objects" that abstract API-specific details into a unified representation.\footnote{Assistiv Labs. (n.d.). NVDA's Architecture. \url{https://www.assistivlabs.com/blog/nvdas-architecture}}
-        \item \textbf{Rendering:} Offers distinct "Browse Mode" and "Focus Mode" for web content and documents, providing a flexible rendering strategy.\footnote{NVDA User Guide: Keyboard Commands. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html#KeyboardCommands}} Provides detailed textual formatting information.
+    \item \emph{NVDA:}
+    \begin{itemize}
+        \item \emph{Processing:} Uses a modular, object-oriented approach with "NVDA Objects" that abstract API-specific details into a unified representation.\footnote{Assistiv Labs. (n.d.). NVDA's Architecture. \url{https://www.assistivlabs.com/blog/nvdas-architecture}}
+        \item \emph{Rendering:} Offers distinct "Browse Mode" and "Focus Mode" for web content and documents, providing a flexible rendering strategy.\footnote{NVDA User Guide: Keyboard Commands. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html\#KeyboardCommands}} Provides detailed textual formatting information.
     \end{itemize}
-    \item \textbf{Windows Narrator:}
-    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-        \item \textbf{Processing:} Deeply integrated with the Windows UI Automation framework. Its processing is optimized for the Windows ecosystem.\footnote{Narrator Technical Details. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/win32/wnauto/narrator-technical-details}} AI capabilities for image description signify advanced non-textual content interpretation.\footnote{Get image descriptions from Narrator. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/get-image-descriptions-from-narrator-c800c765-b772-4017-8e6c-7f5ddf5b721e}}
-        \item \textbf{Rendering:} Aims for a streamlined and integrated experience within Windows. Adapts reading behavior (tab-sequence vs. document reading) based on UI element purpose.\footnote{Narrator Technical Details. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/win32/wnauto/narrator-technical-details}}
+    \item \emph{Windows Narrator:}
+    \begin{itemize}
+        \item \emph{Processing:} Deeply integrated with the Windows UI Automation framework. Its processing is optimized for the Windows ecosystem.\footnote{Narrator Technical Details. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/win32/wnauto/narrator-technical-details}} AI capabilities for image description signify advanced non-textual content interpretation.\footnote{Get image descriptions from Narrator. Microsoft Support. \url{https://support.microsoft.com/en-us/windows/get-image-descriptions-from-narrator-c800c765-b772-4017-8e6c-7f5ddf5b721e}}
+        \item \emph{Rendering:} Aims for a streamlined and integrated experience within Windows. Adapts reading behavior (tab-sequence vs. document reading) based on UI element purpose.\footnote{Narrator Technical Details. Microsoft Learn. \url{https://learn.microsoft.com/en-us/windows/win32/wnauto/narrator-technical-details}}
     \end{itemize}
-    \item \textbf{Dolphin Supernova:}
-    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-        \item \textbf{Processing:} Combines visual processing (for magnification) with accessibility API data interpretation.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}} Its ability to announce "Monitor markers" suggests continuous monitoring and interpretation of UI state changes.
-        \item \textbf{Rendering:} Offers a blend of visual and auditory/tactile output. For low-vision users, rendering prioritizes clear, magnified visuals. "Doc Reader" and "Line View" are specialized rendering modes that reflow content for optimal reading.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
+    \item \emph{Dolphin Supernova:}
+    \begin{itemize}
+        \item \emph{Processing:} Combines visual processing (for magnification) with accessibility API data interpretation.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}} Its ability to announce "Monitor markers" suggests continuous monitoring and interpretation of UI state changes.
+        \item \emph{Rendering:} Offers a blend of visual and auditory/tactile output. For low-vision users, rendering prioritizes clear, magnified visuals. "Doc Reader" and "Line View" are specialized rendering modes that reflow content for optimal reading.\footnote{SuperNova Features. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/features/}}
     \end{itemize}
 \end{itemize}
 
@@ -155,10 +155,18 @@ The methodologies for processing and rendering UI elements vary in their underly
 
 While specific key combinations can vary slightly or be customized, here's a summary of fundamental navigation commands for common actions across the four screen readers. The "modifier key" is typically Insert or Caps Lock.
 
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-\textbf{Action} & \textbf{JAWS (Modifier: Insert)\footref{note:jaws_commands_basic}} & \textbf{NVDA (Modifier: NVDA key - Insert/Caps Lock)\footref{note:nvda_commands_basic}} & \textbf{Windows Narrator (Modifier: Narrator key - Caps Lock/Insert)\footref{note:narrator_commands_basic}} & \textbf{Dolphin Supernova (Modifier: Caps Lock)\footref{note:supernova_commands_basic}} \\ \hline
-\textbf{Reading Text} & & & & \\ \hline
+\begin{longtblr}[
+  caption = {Summary of Basic Navigation Commands for Major Screen Readers},
+  label = {tab:screenreader-navigation-commands},
+  note = {JAWS: \url{https://www.deque.com/axe/devtools/jaws-basic-commands/}; NVDA: \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html\#KeyboardCommands}; Narrator: \url{https://www.fiscal.treasury.gov/files/narrator-keyboard-commands.pdf}; SuperNova: \url{https://www.dolphincomputeraccess.com/product/supernova/hotkeys/}}
+]{
+  colspec = {X[l] X[l] X[l] X[l] X[l]},
+  rowhead = 1,
+  hlines,
+  stretch = 1.5
+}
+\emph{Action} & \emph{JAWS (Modifier: Insert)} & \emph{NVDA (Modifier: NVDA key - Insert/Caps Lock)} & \emph{Windows Narrator (Modifier: Narrator key - Caps Lock/Insert)} & \emph{Dolphin Supernova (Modifier: Caps Lock)} \\
+\emph{Reading Text} & & & & \\
 Read Current Character & Numpad 5 (or Left/Right Arrow) & Numpad 2 (or Left/Right Arrow) & Narrator + Comma (,) / Narrator + Period (.) & Numpad 2 (or Left/Right Arrow) \\
 Read Prior Word & Insert + Left Arrow & Ctrl + Left Arrow (or Numpad 4) & Narrator + J (or Ctrl + Narrator + Left Arrow) & Ctrl + Left Arrow \\
 Read Next Word & Insert + Right Arrow & Ctrl + Right Arrow (or Numpad 6) & Narrator + L (or Ctrl + Narrator + Right Arrow) & Ctrl + Right Arrow \\
@@ -167,8 +175,8 @@ Read Prior Line & Up Arrow & Up Arrow (or Numpad 7) & Narrator + U (or Narrator 
 Read Next Line & Down Arrow & Down Arrow (or Numpad 9) & Narrator + O (or Narrator + Down Arrow) & Down Arrow \\
 Read Current Line & Insert + Up Arrow & NVDA + Up Arrow (or Numpad 8) & Narrator + I (or Narrator + Up Arrow) & Caps Lock + Up Arrow \\
 Read All / Say All & Insert + Down Arrow & NVDA + Down Arrow (or Numpad Plus) & Narrator + Down Arrow (Start reading) & Caps Lock + Plus (Read From Here) \\
-Stop Speech & Ctrl & Ctrl & Ctrl & Ctrl \\ \hline
-\textbf{Navigating Structural Elements (Web/Documents)} & & & & \\ \hline
+Stop Speech & Ctrl & Ctrl & Ctrl & Ctrl \\
+\emph{Navigating Structural Elements (Web/Documents)} & & & & \\
 Next Heading & H & H & Narrator + H & Caps Lock + Delete \\
 Previous Heading & Shift + H & Shift + H & Shift + Narrator + H & Caps Lock + Insert \\
 Next Link & Tab (or K) & K & Tab & Tab (or K) \\
@@ -180,10 +188,5 @@ Previous Table & Shift + T & Shift + T & Shift + Narrator + T & Shift + T \\
 Next Landmark/Region & R & D & Narrator + N (Main landmark) & Caps Lock + R (Next Region) \\
 List Links & Insert + F7 & NVDA + F7 & Narrator + F7 (Links list) & Caps Lock + F7 (Item Finder) \\
 List Headings & Insert + F6 & NVDA + F7 (then select Headings) & Narrator + F6 (Headings list) & Caps Lock + F6 (Item Finder) \\
-Toggle Forms/Browse Mode & Insert + Z (Virtual Cursor) & NVDA + Spacebar & Narrator + Spacebar (Scan Mode) & Caps Lock + Enter (Dolphin Cursor Forms Mode) \\ \hline
-\end{tabular}
-% Footnote definitions for the table to avoid re-writing URLs
-\addเท้าnote{JAWS Basic Commands. Deque University. \url{https://www.deque.com/axe/devtools/jaws-basic-commands/}}{jaws_commands_basic}
-\addเท้าnote{NVDA User Guide: Keyboard Commands. NV Access. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html#KeyboardCommands}}{nvda_commands_basic}
-\addเท้าnote{Narrator Keyboard Commands. U.S. Department of the Treasury. \url{https://www.fiscal.treasury.gov/files/narrator-keyboard-commands.pdf}}{narrator_commands_basic}
-\addเท้าnote{SuperNova Hotkeys. Dolphin Computer Access. \url{https://www.dolphincomputeraccess.com/product/supernova/hotkeys/}}{supernova_commands_basic}
+Toggle Forms/Browse Mode & Insert + Z (Virtual Cursor) & NVDA + Spacebar & Narrator + Spacebar (Scan Mode) & Caps Lock + Enter (Dolphin Cursor Forms Mode) \\
+\end{longtblr}
