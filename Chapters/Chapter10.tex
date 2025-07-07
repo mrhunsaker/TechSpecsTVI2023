@@ -1,0 +1,344 @@
+\chapter{Comprehensive Analysis of Accessible Music Braille Transcription Solutions}}
+
+\section{abstract}
+The landscape of music braille transcription is characterized by a dynamic interplay of technological advancements and a profound commitment to accessibility. This report provides a thorough examination of open-source, GitHub-hosted, and commercial software solutions designed to convert standard sheet music into music braille code. The analysis spans the entire transcription pipeline, from initial input methods to the generation of various braille formats, with a particular emphasis on tools that prioritize accessibility and screen reader compatibility for visually impaired users.
+
+A significant observation within this domain is the existence of two primary approaches to music braille production. One method involves automated translation from print or digital notation, such as MusicXML, which offers considerable efficiency for large-scale transcription tasks. The other approach centers on direct, braille-centric input and editing, a method often favored for producing high-quality, nuanced scores tailored specifically for tactile readability. The presence of both methodologies underscores a maturing field that addresses diverse user workflows and preferences, recognizing that a simple one-to-one translation from print notation may not always yield the most effective braille output.
+
+Central to the interoperability of this ecosystem is MusicXML, which functions as a critical, widely adopted standard. Its pervasive use by mainstream music notation software establishes it as the de facto bridge for accessibility, facilitating seamless data exchange across a diverse array of transcription tools.\footnote{\url{https://digitalstrategy.unt.edu/clear/teaching-resources/accessibility/music-accessibility/braille-music-resources.html}} Without MusicXML, the integration between various notation programs and braille transcription software would be severely hampered, leading to fragmented and less efficient solutions for accessible music.
+
+Furthermore, a substantial portion of the innovation and enhancement in accessible music braille tools, particularly within the open-source sector, is propelled by community contributions and non-profit initiatives. This collaborative spirit, extending beyond commercial interests, is evident in projects that welcome external contributions and in the concerted efforts of organizations like the DAISY Consortium to develop and standardize accessible music formats.\footnote{\url{https://daisy.org/activities/projects/music-braille/latest-developments/}} This demonstrates that a passionate community and dedicated non-profit sector are indispensable for advancing accessibility in this specialized yet vital area, frequently addressing needs that commercial ventures might not prioritize.
+
+
+\section{Understanding Music Braille: Fundamentals and Unique Considerations}
+
+\subsection{Introduction to Braille Music Notation}
+Braille music notation is a specialized tactile system that enables visually impaired individuals to read and comprehend musical scores. It employs combinations of the standard six-dot braille cell to represent both the pitch and rhythm of each note. Typically, the top two rows of the braille cell convey pitch information, while the bottom row is dedicated to rhythmic values.\footnote{\url{https://www.rnib.org.uk/living-with-sight-loss/education-and-learning/braille-tactile-codes/braille-music/}}
+
+A fundamental distinction between braille music and conventional stave notation lies in its linearity. Unlike stave notation, where notes in chords are often displayed vertically and various musical signs can appear above or below, braille music signs must be presented strictly from left to right, one at a time.\footnote{\url{https://www.rnib.org.uk/living-with-sight-loss/education-and-learning/braille-tactile-codes/braille-music/}} This sequential arrangement dictates the order of musical elements: dynamic markings, accents, staccato signs, accidentals, and octave indications precede the note, while signs for added duration, harmonic indications, fingering numbers, and slur signs follow it.\footnote{\url{https://www.rnib.org.uk/living-with-sight-loss/education-and-learning/braille-tactile-codes/braille-music/}}
+
+Chords in braille music are represented uniquely to accommodate the linear format. Instead of displaying all notes of a chord simultaneously, only one note is explicitly written, with the remaining notes indicated by special interval signs that immediately follow the primary note.\footnote{\url{https://blogs.loc.gov/nls-music-notes/2023/11/braille-music-basics-intervals/}} For example, a C major chord played by the right hand on a piano might begin with an eighth note G, followed by an interval of a third to denote E, and then an interval of a fifth to denote C. A crucial rule is that all notes within a braille chord must share the same rhythmic value.\footnote{\url{https://blogs.loc.gov/nls-music-notes/2023/11/braille-music-basics-intervals/}} There are seven distinct interval signs in braille music, each corresponding to a specific dot pattern for seconds, thirds, fourths, fifths, sixths, sevenths, and octaves.\footnote{\url{https://blogs.loc.gov/nls-music-notes/2023/11/braille-music-basics-intervals/}} Octave signs are also essential for precise pitch indication, with specific braille marks representing each of the seven complete octaves on an 88-key piano.\footnote{\url{https://musescore.org/en/handbook/4/braille}}
+
+\subsection{Comparison with Standard Print Notation}
+The core difference between braille music and standard print notation is their spatial organization. Print music allows for a vertical and layered display of information, enabling simultaneous comprehension of chords, dynamics, and articulations. Braille music, by contrast, is inherently linear and tactile.\footnote{\url{https://www.rnib.org.uk/living-with-sight-loss/education-and-learning/braille-tactile-codes/braille-music/}} This linearity significantly impacts how music is perceived and processed by the musician.
+
+Space is another critical factor. A single bar of braille music can consume considerably more physical space than its print counterpart, often resulting in only one bar per page.\footnote{\url{https://www.rnib.org.uk/living-with-sight-loss/education-and-learning/braille-tactile-codes/braille-music/}} To conserve space and improve readability, braille music frequently incorporates repeat signs for beats, part-bars, or whole bars.\footnote{\url{https://www.rnib.org.uk/living-with-sight-loss/education-and-learning/braille-tactile-codes/braille-music/}}
+
+The tactile nature of braille music also imposes a unique cognitive demand. Reading braille with the hands typically makes it impossible to simultaneously read and play an instrument, with pianists being a notable exception. Singers, while capable of sight-reading with practice, often find it necessary to memorize either the lyrics or the music due to the difficulty of reading both concurrently.\footnote{\url{https://www.rnib.org.uk/living-with-sight-loss/education-and-learning/braille-tactile-codes/braille-music/}} Consequently, a musician reading braille may require significantly more time to learn a score compared to a print reader.\footnote{\url{https://www.rnib.org.uk/living-with-sight-loss/education-and-learning/braille-tactile-codes/braille-music/}}
+
+\subsection{The Imperative for Accessible Music Notation}
+Braille sheet music serves as an indispensable tool for fostering inclusivity and independence among musicians with visual impairments.\footnote{\url{https://braillemusicandmore.com/braille-sheet-music-guide/}} It grants them the ability to deeply engage with musical compositions, participate in ensembles, and pursue their musical aspirations on an equal footing with their sighted peers.\footnote{\url{https://braillemusicandmore.com/braille-sheet-music-guide/}} The advent of digital technology has profoundly enhanced this inclusivity, enabling visually impaired musicians to efficiently access and navigate extensive libraries of braille music.\footnote{\url{https://braillemusicandmore.com/braille-sheet-music-guide/}}
+
+The inherent differences between print and braille music notation, particularly the linear reading structure, space constraints, and the necessity of memorization, mean that effective braille music transcription is not merely a direct translation. Instead, it requires a thoughtful re-composition specifically for tactile readability. Tools that prioritize a "braille-first" design or facilitate direct braille input are therefore crucial for generating high-quality, legible scores that genuinely serve the needs of the blind musician.\footnote{\url{https://www.pathstoliteracy.org/resource/braille-music-notator/}} This approach recognizes that automatic translation engines, while convenient, often produce unpolished, inefficient, or even inaccurate results because they do not fully account for the unique tactile and cognitive demands of braille music.\footnote{\url{https://www.pathstoliteracy.org/resource/braille-music-notator/}}
+
+The linear nature and substantial space requirements of braille music, combined with the physical act of reading with hands, impose a considerable cognitive load. This often necessitates memorization for performance, as simultaneous reading and playing is generally not feasible.\footnote{\url{https://www.rnib.org.uk/living-with-sight-loss/education-and-learning/braille-tactile-codes/braille-music/}} This implies that transcription tools must not only be accurate in their conversion but also optimize formatting for ease of memorization and navigation. Features such as synchronized playback with audio cues become critical compensatory mechanisms, and the choice of braille music format (e.g., bar-over-bar, line-by-line, or paragraph formats) directly influences the practicality of using the braille score during performance.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} This highlights a deeper requirement for tools to support the learning and memorization process, extending beyond mere translation, to truly empower visually impaired musicians.
+
+\section{The Music Braille Generation Pipeline: Stages and Technologies}
+The process of converting standard sheet music into accessible music braille involves several distinct stages, each supported by specialized technologies and software.
+
+\subsection{Input Stage}
+The initial phase of the pipeline focuses on getting the musical data into a digital format suitable for transcription.
+
+\subsubsection{Optical Music Recognition (OMR) for Print Scores}
+Optical Music Recognition (OMR) systems aim to transform scanned print music scores into structured digital formats, most commonly MusicXML.\footnote{\url{https://www.researchgate.net/figure/The-classes-of-symbols-from-MuseScore-used-in-our-work-These-symbols-are-depicted_fig2_334137649}} This technology holds significant promise for automating the input of existing print scores. While deep learning has led to considerable advancements in OMR for printed scores, the recognition of handwritten music remains a less developed area of research.\footnote{\url{https://www.researchgate.net/figure/The-classes-of-symbols-from-MuseScore-used-in-our-work-These-symbols-are-depicted_fig2_334137649}}
+
+Some music notation software, such as MuseScore, is developing OMR capabilities. Its current framework can recognize staves and barlines, with future potential for full note entry.\footnote{\url{https://musescore.org/en/node/110306}} However, the accuracy and speed of OMR, particularly for small symbols like note heads, still present challenges, and comprehensive training data from diverse fonts is needed for further improvement.\footnote{\url{https://musescore.org/en/node/110306}} While traditional OMR pipelines involve multiple stages, modern deep learning approaches like YOLO are streamlining this process into single-stage detection.\footnote{\url{https://www.researchgate.net/figure/The-classes-of-symbols-from-MuseScore-used-in-our-work-These-symbols-are-depicted_fig2_334137649}}
+
+Despite these advancements, OMR for music notation is not yet a seamless, highly accurate solution for complex music braille. Tools like GOODFEEL, which allow scanning print scores as an optional input, explicitly state that a sighted musician must correct any errors introduced during the scanning process.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} This indicates that for generating high-quality braille music, MusicXML import and manual braille-centric input remain more reliable and accessible pathways. OMR is more of a future potential than a current robust solution for complex music braille. SharpEye Music Reader, bundled with Lime Aloud, also offers music OCR capabilities.\footnote{\url{https://canasstech.com/products/lime-aloud}}
+
+\subsubsection{Audiveris}
+Audiveris is an open-source Optical Music Recognition (OMR) software developed in Java, available for Windows, macOS, and Linux.\footnote{\url{https://audiveris.org/}}\footnote{\url{https://github.com/Audiveris/audiveris}} Its primary function is to recognize printed music notation from scanned images or photos and convert it into a digital format, specifically MusicXML.\footnote{\url{https://audiveris.org/}} It can also recognize text within scores using Tesseract.\footnote{\url{https://audiveris.org/}}
+
+Audiveris provides outputs in its own OMR format and the standard MusicXML format.\footnote{\url{https://audiveris.org/}} It is designed to process scores written in Common Western Music Notation (CWMN) but has limitations: it does not support handwritten scores and only recognizes common musical symbols.\footnote{\url{https://audiveris.org/}} Due to the OMR engine's accuracy not being perfect, Audiveris includes a graphical user interface (GUI) for quick verification and manual correction of the OMR outputs.\footnote{\url{https://audiveris.org/}} The MusicXML output can then be used with external sophisticated music editors like MuseScore or Finale.\footnote{\url{https://audiveris.org/}} While Audiveris is an open-source tool, explicit details regarding its direct screen reader compatibility for its GUI are not provided in the available information. However, its ability to generate MusicXML is crucial for downstream accessible tools.
+
+\subsubsection{Deep Learning-Based OMR (PyTorch/TensorFlow)}
+Recent advancements in Optical Music Recognition (OMR) have largely been driven by deep learning methods, particularly end-to-end models that process input images to produce a linear sequence of tokens.\footnote{\url{https://www.researchgate.net/publication/355469493_An_Empirical_Evaluation_of_End-to-End_Polyphonic_Optical_Music_Recognition}}\footnote{\url{https://www.researchgate.net/publication/362243760_Linearized_MusicXML_for_End-to-End_Optical_Music_Recognition}} These models are applied to various stages of OMR, including staff processing, music object detection, and music notation reconstruction.\footnote{\url{https://www.researchgate.net/publication/355469493_An_Empirical_Evaluation_of_End-to-End_Polyphonic_Optical_Music_Recognition}} Frameworks like PyTorch and TensorFlow are foundational for these general-purpose machine learning and deep learning applications.\footnote{\url{https://pytorch.org/}}\footnote{\url{https://www.tensorflow.org/}}
+
+One notable project is \texttt{sachindae/polyphonic-omr}, hosted on GitHub, which provides PyTorch code for end-to-end OMR on polyphonic scores.\footnote{\url{https://github.com/sachindae/polyphonic-omr}} This project is derived from a TensorFlow-based OMR for monophonic scores and was used in research for "An Empirical Evaluation of End-to-End Polyphonic Optical Music Recognition" (ISMIR 2021).\footnote{\url{https://github.com/sachindae/polyphonic-omr}} Another example is \texttt{GaetanBaert/OMR\_deep}, a deep learning OMR system that aims to recognize notes on images.\footnote{\url{https://github.com/GaetanBaert/OMR_deep}} It utilizes a dataset derived from MuseScore (limited to monophonic scores) and employs a neural network architecture consisting of Convolutional Neural Networks (CNN) followed by Bidirectional Long-Short Term Memory (BLSTM) layers and a CTC (Connectionist Temporal Classification) model to classify note name, octave, and rhythm.\footnote{\url{https://github.com/GaetanBaert/OMR_deep}}
+
+A challenge in deep learning OMR, especially for complex scores like piano music, is the difficulty of converting them into a simple linear sequence, which has led researchers to develop custom linearized encodings.\footnote{\url{https://www.researchgate.net/publication/362243760_Linearized_MusicXML_for_End-to-End_Optical_Music_Recognition}} To bridge this gap and maintain compatibility with the industry-standard MusicXML, a sequential format called Linearized MusicXML has been defined, allowing end-to-end models to be trained directly.\footnote{\url{https://www.researchgate.net/publication/362243760_Linearized_MusicXML_for_End-to-End_Optical_Music_Recognition}} While these deep learning projects are primarily research-oriented and hosted on platforms like GitHub (which has its own accessibility initiatives\footnote{\url{https://github.blog/2020-03-24-a-more-accessible-github/}}), explicit accessibility features for visually impaired users within the OMR tools themselves are not detailed in the provided information. Their value lies in their potential to improve the accuracy and automation of the initial OMR step, producing MusicXML that can then be processed by accessible braille transcription tools.
+
+\subsubsection{Manual Note Entry}
+Direct manual entry of musical notation is a robust alternative to OMR, offering greater control and accuracy. Several tools support this method:
+
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Lime:} Integrated with GOODFEEL and Lime Aloud, Lime allows users to enter and edit scores using a PC keyboard and/or a MIDI musical keyboard. Lime can automatically convert played input into conventional musical notation.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}\footnote{\url{https://canasstech.com/products/lime-aloud}}\footnote{\url{https://www.dancingdots.com/main/prodesc/lime.htm}}
+    \item \textbf{MuseScore Studio:} This software incorporates "basic braille music input".\footnote{\url{https://soundwithoutsight.org/hub-articles/using-musescore-studio-with-a-screen-reader/}} It utilizes a 6-key braille input method, mimicking a Perkins Brailler, where specific computer keyboard keys (F, D, S for dots 1-3; J, K, L for dots 4-6; Space for dot 0) are used to construct braille cells.\footnote{\url{https://musescore.org/en/handbook/4/braille}}
+    \item \textbf{Braille Music Notator:} This online tool is specifically designed for direct input in braille music notation. It features a braille-centric interface where braille characters are automatically translated into traditional musical symbols for visual display. It supports both keyboard input and a visual keyboard diagram.\footnote{\url{https://www.pathstoliteracy.org/resource/braille-music-notator/}}\footnote{\url{https://www.braillemusicnotator.com/}}
+    \item \textbf{Braille Music Editor:} This program also provides an intuitive interface for creating and modifying musical compositions directly using braille notation.\footnote{\url{https://braillemusiceditor.com/}}
+\end{itemize}
+
+\subsubsection{Digital Music Interchange: The Pivotal Role of MusicXML}
+MusicXML is widely recognized as a standard format used by music educators and publishers for interchanging scores between applications.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} Its importance as a universal interoperability backbone cannot be overstated. Its widespread adoption ensures that musical data can be seamlessly exchanged between diverse notation tools and braille transcription software.
+
+The critical role of MusicXML is underscored by its extensive support across various transcription tools for both import and export:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{GOODFEEL:} Imports MusicXML scores.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+    \item \textbf{FreeDots:} Currently supports only MusicXML as an input format.\footnote{\url{https://blind.guru/projects/freedots.html}}
+    \item \textbf{BrailleMUSE:} Translates MusicXML into braille music.\footnote{\url{https://www.braillemuse.net/braille_music_score/en2/index.html}}
+    \item \textbf{Braille Music Editor:} Supports import and export up to MusicXML 4.0.\footnote{\url{https://braillemusiceditor.com/}}
+    \item \textbf{MuseScore:} Can export MusicXML, and its braille conversion plugins/web services often utilize MusicXML as an intermediary.\footnote{\url{https://musescore.org/en/accessibility}}
+\end{itemize}
+
+The DAISY Consortium actively champions the creation of "braille-conversion-friendly" MusicXML files, providing guidelines for engravers who use mainstream notation software like Sibelius, Finale, and MuseScore.\footnote{\url{https://daisy.org/activities/projects/music-braille/latest-developments/}} This concerted effort to standardize and streamline the pipeline through MusicXML highlights that the music braille ecosystem is not composed of isolated tools but rather an interconnected network where strong standards and collaborative initiatives are critical for overall accessibility. The combined utility of these tools, facilitated by MusicXML, is often greater than the sum of their individual parts.
+
+\subsection{Conversion and Editing Stage}
+Once musical data is in a digital format, it proceeds to the conversion and editing stage, where it is transformed into braille and refined for readability.
+
+\subsubsection{Automated Braille Translation Engines}
+Many tools offer automated conversion from MusicXML or other digital formats into braille:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{GOODFEEL:} Automatically converts computer files of print scores to braille music, including MusicXML imports.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+    \item \textbf{FreeDots:} Designed to translate MusicXML files into braille music.\footnote{\url{https://blind.guru/projects/freedots.html}}
+    \item \textbf{BrailleMUSE:} An online server that translates MusicXML format to braille music systems.\footnote{\url{https://www.braillemuse.net/braille_music_score/en2/index.html}}
+    \item \textbf{MusicBrailleRAP:} Uses the \texttt{music21} Python module to translate MusicXML files into braille text.\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}}
+    \item \textbf{MakeBraille:} Supported by the DAISY Consortium, this is an online automated professional conversion tool that processes well-marked-up scanned music files and structured MusicXML files into music braille.\footnote{\url{https://daisy.org/activities/projects/music-braille/latest-developments/}}
+\end{itemize}
+
+BrailleBlaster, while primarily focused on literary and math braille transcription, utilizes Liblouis, a well-known open-source braille translator.\footnote{\url{https://www.aph.org/product/brailleblaster/}} Its specific capabilities for comprehensive music score transcription from MusicXML are not explicitly detailed in the provided information, suggesting its music braille support might be more general, perhaps focused on embedding short musical examples within general texts rather than full score conversion.
+
+\subsubsection{Dedicated Braille Music Editing Interfaces}
+For nuanced control and refinement of braille music, dedicated editing interfaces are essential:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Braille Music Notator:} This free online tool facilitates editing directly in braille music notation. It automatically translates braille characters into traditional musical symbols for sighted users, allowing scores to be designed with the braille reader in mind for elegance and legibility.\footnote{\url{https://www.pathstoliteracy.org/resource/braille-music-notator/}}\footnote{\url{https://www.braillemusicnotator.com/}} It also supports opening and editing braille music files created in other programs.\footnote{\url{https://www.braillemusicnotator.com/}}
+    \item \textbf{Braille Music Editor:} Described as offering "the most advanced braille music editing capabilities," this commercial software supports improved import/export of lyrics and fingering from MusicXML, includes standardized jazz chord symbols, and allows control of external keyboards via Midimapper.\footnote{\url{https://braillemusiceditor.com/}}
+    \item \textbf{MuseScore Studio:} Provides "basic braille music input" and a dedicated braille panel for navigation and 6-key input, enabling users to interact with the score directly in braille.\footnote{\url{https://soundwithoutsight.org/hub-articles/using-musescore-studio-with-a-screen-reader/}}\footnote{\url{https://musescore.org/en/handbook/4/braille}}
+\end{itemize}
+
+\subsection{Output Stage}
+The final stage involves generating braille music in various formats for consumption by visually impaired musicians.
+
+\subsubsection{Standard Braille Formats (.brf)}
+The .brf format is a standard for braille files. GOODFEEL saves braille scores in the standard .brf format by default.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} Refreshable braille displays, such as the Focus Blue, can directly read .brf files, providing immediate tactile access to the transcribed music.\footnote{\url{https://www.aph.org/product/focus-blue-5th-generation-braille-displays/}}
+
+\subsubsection{MusicXML for Further Processing or Interchange}
+Beyond braille output, some tools can export MusicXML, allowing for further processing or interchange with other music software. Braille Music Editor supports import and export up to MusicXML 4.0, ensuring compatibility with current standards.\footnote{\url{https://braillemusiceditor.com/}} MuseScore can also export MusicXML.\footnote{\url{https://musescore.org/en/accessibility}} GOODFEEL enables blind musicians to independently create print scores from their musical ideas, which would typically involve MusicXML as an intermediary.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+
+\subsubsection{Direct Output to Embossers and Refreshable Braille Displays}
+For physical braille output, software often interfaces directly with braille embossers. Duxbury Braille Translator (DBT) supports output to all commercial braille embossers, accommodating a wide range of models, from very old to recent ones.\footnote{\url{https://www.duxburysystems.com/dbt.asp}} MusicBrailleRAP is specifically designed to produce braille text "ready to emboss on a BrailleRAP" device.\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}}
+
+For real-time tactile reading, refreshable braille displays are crucial. Devices like the Focus Blue can connect to Windows, Apple, or Android devices running screen readers (e.g., JAWS, VoiceOver) to provide tactile braille access to content.\footnote{\url{https://www.aph.org/product/focus-blue-5th-generation-braille-displays/}}\footnote{\url{https://www.freedomscientific.com/products/software/jaws/}} These displays can also read .brf and plain text files directly.\footnote{\url{https://www.aph.org/product/focus-blue-5th-generation-braille-displays/}} Braille Music Editor includes a script for managing the six points on the Braille line of the Focus display, indicating specific integration for enhanced tactile interaction.\footnote{\url{https://braillemusiceditor.com/}}
+
+\subsubsection{Accessibility Integration Across the Pipeline}
+Accessibility is a paramount consideration throughout the music braille generation pipeline, with various features designed to support visually impaired users.
+
+\subsubsection{Screen Reader Compatibility}
+Many tools are designed to work seamlessly with screen readers, which convert on-screen text and elements into speech or braille:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{MuseScore:} Compatible with NVDA (NonVisual Desktop Access).\footnote{\url{https://soundwithoutsight.org/hub-articles/using-musescore-studio-with-a-screen-reader/}}\footnote{\url{https://musescore.org/en/handbook/4/accessibility}}\footnote{\url{https://musescore.org/en/handbook/4/accessibility}} MuseScore 4 also includes support for VoiceOver on macOS.\footnote{\url{https://daisy.org/activities/projects/music-braille/latest-developments/}}
+    \item \textbf{GOODFEEL:} Its integrated Lime Aloud talking score feature works with JAWS for Windows (versions 15 through current) and is also compatible with non-JAWS screen readers such as NVDA and Narrator.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}\footnote{\url{https://canasstech.com/products/lime-aloud}}
+    \item \textbf{Braille Music Notator:} Adheres to WAI-ARIA standards for accessible web applications and is compatible with major screen reading software like JAWS and VoiceOver.\footnote{\url{https://www.braillemusicnotator.com/}}
+    \item \textbf{Braille Music Editor:} Offers a free JAWS script specifically for Windows 10 and 11 users.\footnote{\url{https://braillemusiceditor.com/}}
+    \item \textbf{MusicBrailleRAP:} Explicitly stated as NVDA compatible.\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}}
+    \item \textbf{Duxbury Braille Translator (DBT):} Described as "fully accessible" and compatible with modern operating systems and applications for both blind and sighted users.\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}}
+    \item \textbf{KNFB Reader:} While a general text-to-speech/braille app, it demonstrates core accessibility principles for print-disabled users across mobile platforms.\footnote{\url{https://www.knfbreader.com/}}
+\end{itemize}
+
+\subsubsection{Keyboard Navigation}
+Efficient keyboard navigation is crucial for blind users who do not rely on a mouse. MuseScore provides a wide array of keyboard shortcuts for efficient task execution.\footnote{\url{https://musescore.org/en/handbook/4/accessibility}}\footnote{\url{https://musescore.org/en/handbook/4/braille}} Notably, MuseScore 4's navigation relies on arrow keys in addition to the tab key for cycling through control groups and individual controls.\footnote{\url{https://musescore.org/en/accessibility}} Braille Music Notator also supports arrow keys, return, and home keys for cursor navigation within the braille score.\footnote{\url{https://www.braillemusicnotator.com/quick-start-screen-reader-users}}
+
+\subsubsection{Audio Descriptions/Feedback}
+Auditory feedback enhances the user experience by providing spoken information about musical elements:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{MuseScore:} Includes audio descriptions of sheet music elements, allowing screen readers to provide detailed information about notes, chords, and dynamics.\footnote{\url{https://musescore.org/en/handbook/4/accessibility}} It also plays the sound of a note when it is selected in the braille panel.\footnote{\url{https://musescore.org/en/handbook/4/braille}}
+    \item \textbf{GOODFEEL/Lime Aloud:} Plays each note or chord and verbally describes associated annotations (e.g., accents, staccato marks, lyrics, ties) via the JAWS screen reader.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}\footnote{\url{https://canasstech.com/products/lime-aloud}} Users have the option to speak lyric syllables and chords during playback\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} and can temporarily mute verbal descriptions with a "Silenzio" mode for focused listening.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+    \item \textbf{Refreshable Braille Displays:} When used with screen readers like JAWS, these displays can announce current braille characters or spell out words in "Braille Study Mode".\footnote{\url{https://www.aph.org/product/focus-blue-5th-generation-braille-displays/}}
+\end{itemize}
+
+\subsubsection{Synchronized Playback}
+A particularly valuable accessibility feature for learning and proofreading is synchronized playback. GOODFEEL offers this capability, where braille and print music track in sync with audio cues, provided JAWS and a braille display are used.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} This allows users to follow the music tactilely, visually (for sighted collaborators or low-vision users), and audibly simultaneously.
+
+\section{Open-Source and GitHub-Hosted Solutions for Music Braille Transcription}
+
+Open-source projects offer cost-free access and the potential for community-driven development, making them vital components of the accessible music braille ecosystem.
+
+\subsection{BrailleBlaster (APH)}
+Developed by the American Printing House for the Blind (APH), BrailleBlaster is a free and open-source braille transcription program.\footnote{\url{https://github.com/aphtech/brailleblaster-ng}}\footnote{\url{https://www.aph.org/product/brailleblaster/}}\footnote{\url{https://github.com/aphtech/brailleblaster}} Its primary focus is on producing high-quality braille materials, especially textbooks, by leveraging rich markup in files like NIMAS, EPUB, and DOCX to automate translation and formatting.\footnote{\url{https://www.aph.org/product/brailleblaster/}} The software relies on Liblouis, a widely recognized open-source braille translator, for handling text and mathematics.\footnote{\url{https://www.aph.org/product/brailleblaster/}} BrailleBlaster-NG is a community-enhanced fork, aiming to be responsive to community needs and contributions.\footnote{\url{https://github.com/aphtech/brailleblaster-ng}}
+
+While Duxbury DBT, which can import from GOODFEEL, mentions "extensive math, science and music code support" in relation to general braille software\footnote{\url{https://www.duxburysystems.com/dbt.asp}}, the core BrailleBlaster documentation primarily emphasizes literary and math braille transcription.\footnote{\url{https://github.com/aphtech/brailleblaster-ng}}\footnote{\url{https://www.aph.org/product/brailleblaster/}} There is no explicit mention of MusicXML import for full music notation or specific music braille features beyond general "music code support." This suggests its music braille capabilities might be more general, perhaps focused on embedding short musical examples within literary texts rather than comprehensive score transcription. BrailleBlaster is designed to help braille producers ensure timely access to educational materials for blind individuals and supports Windows, Mac OS X, and Ubuntu Linux.\footnote{\url{https://github.com/aphtech/brailleblaster-ng}}\footnote{\url{https://www.aph.org/product/brailleblaster/}}
+
+\subsection{MusicBrailleRAP}
+MusicBrailleRAP is music score transcription software specifically designed for BrailleRAP devices, with its source code hosted on GitHub.\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}} It utilizes the \texttt{music21} Python module to translate MusicXML files into braille text, which is then prepared for embossing on a BrailleRAP device.\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}} The project also incorporates \texttt{liblouisreact}, a modified version of \texttt{liblouis} adapted for a React.js environment.\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}} It is noted that the project is "still a work in progress".\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}} Its input is MusicXML, and its output is braille text for BrailleRAP embossing; specific braille output formats beyond "Braille text" are not detailed.\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}} The software is compatible with NVDA (NonVisual Desktop Access), indicating a focus on accessibility for visually impaired users.\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}}
+
+\subsection{FreeDots}
+FreeDots is a Free Software project hosted on GitHub, dedicated to translating musical notation into braille music for blind users.\footnote{\url{https://blind.guru/projects/freedots.html}} Currently, the only supported input file format is MusicXML.\footnote{\url{https://blind.guru/projects/freedots.html}} It features a graphical user interface (GUI) frontend for viewing braille music, with future plans to support editing.\footnote{\url{https://blind.guru/projects/freedots.html}} The project is described as "very young," with many braille music notation features not yet implemented and an incomplete user manual.\footnote{\url{https://blind.guru/projects/freedots.html}} Its core mission is to enable blind users to access musical notation\footnote{\url{https://blind.guru/projects/freedots.html}}, though specific details regarding the GUI's accessibility features (e.g., screen reader compatibility) are not specified.\footnote{\url{https://blind.guru/projects/freedots.html}}
+
+\subsection{MuseScore}
+MuseScore is a popular, free, and widely used music notation software that enables musicians globally to create, play, and share musical scores.\footnote{\url{https://soundwithoutsight.org/hub-articles/using-musescore-studio-with-a-screen-reader/}}\footnote{\url{https://musescore.org/en/handbook/4/accessibility}} It allows users to write notation, explore, and play existing digital scores on Windows and Mac operating systems.\footnote{\url{https://soundwithoutsight.org/hub-articles/using-musescore-studio-with-a-screen-reader/}}
+
+\subsubsection{Braille Music Capabilities}
+The latest version, MuseScore Studio, includes "basic braille music input" capabilities.\footnote{\url{https://soundwithoutsight.org/hub-articles/using-musescore-studio-with-a-screen-reader/}} MuseScore 4 offers a native ability to export braille via its File > Export function.\footnote{\url{https://musescore.org/en/accessibility}} For users of MuseScore 3, the SM Music Braille plugin, which utilizes a free web service from the Sao Mai Center for the Blind, can convert scores to Music Braille. It is noted that this web service often yields better results than MuseScore 4's native export.\footnote{\url{https://musescore.org/en/accessibility}} MuseScore provides a dedicated braille panel for navigation and supports a 6-key braille input method, similar to a Perkins Brailler, using specific computer keyboard keys (F, D, S for dots 1-3; J, K, L for dots 4-6; Space for dot 0).\footnote{\url{https://musescore.org/en/handbook/4/braille}} The braille panel displays one measure at a time for all instruments, with lyrics appearing on separate lines below their corresponding staff.\footnote{\url{https://musescore.org/en/handbook/4/braille}} New music braille capabilities are actively being developed for MuseScore 4 in partnership with the DAISY Consortium and Sao Mai Center for the Blind.\footnote{\url{https://daisy.org/activities/projects/music-braille/latest-developments/}}
+
+\subsubsection{Accessibility Features}
+MuseScore is highly committed to accessibility:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Screen Reader Compatibility:} It is compatible with NVDA (NonVisual Desktop Access).\footnote{\url{https://soundwithoutsight.org/hub-articles/using-musescore-studio-with-a-screen-reader/}}\footnote{\url{https://musescore.org/en/handbook/4/accessibility}} MuseScore 4 also includes support for VoiceOver on macOS.\footnote{\url{https://daisy.org/activities/projects/music-braille/latest-developments/}}
+    \item \textbf{Keyboard Shortcuts:} It offers a wide range of keyboard shortcuts, which are crucial for efficient navigation and task execution by blind users without a mouse.\footnote{\url{https://musescore.org/en/accessibility}}\footnote{\url{https://musescore.org/en/handbook/4/braille}}
+    \item \textbf{Audio Descriptions:} MuseScore provides audio descriptions of sheet music elements, allowing the screen reader to convey detailed information about notes, chords, and dynamics.\footnote{\url{https://musescore.org/en/handbook/4/accessibility}} It also plays the sound of a note when it is selected in the braille panel.\footnote{\url{https://musescore.org/en/handbook/4/braille}}
+    \item \textbf{Accessibility Guide:} A detailed accessibility guide is available on the MuseScore website, offering step-by-step instructions and practical tips for blind users.\footnote{\url{https://soundwithoutsight.org/hub-articles/using-musescore-studio-with-a-screen-reader/}}\footnote{\url{https://musescore.org/en/accessibility}}
+\end{itemize}
+
+\subsubsection{OMR Potential}
+MuseScore has an OMR development branch that currently recognizes staves and barlines.\footnote{\url{https://musescore.org/en/node/110306}} The long-term goal is to recognize all symbols simultaneously to significantly improve accuracy.\footnote{\url{https://musescore.org/en/node/110306}}
+
+\subsection{Table 1: Overview of Open-Source Music Braille Transcription Software}
+
+\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{3.5cm}|p{2.5cm}|p{2.5cm}|p{3.5cm}|p{2.5cm}|p{2.5cm}|}
+\caption{Overview of Open-Source Music Braille Transcription Software} \\
+\hline
+\textbf{Software Name} & \textbf{Developer/Host} & \textbf{Primary Focus} & \textbf{Music Braille Input} & \textbf{Music Braille Output} & \textbf{Key Accessibility Features} &\textbf{Development Status/Last Commit} & \textbf{License} \\
+\hline
+\endfirsthead
+\multicolumn{8}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline
+\textbf{Software Name} & \textbf{Developer/Host} & \textbf{Primary Focus} & \textbf{Music Braille Input} & \textbf{Music Braille Output} & \textbf{Key Accessibility Features} &\textbf{Development Status/Last Commit} & \textbf{License} \\
+\hline
+\endhead
+\hline \multicolumn{8}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+\hline
+\endlastfoot
+\textbf{Audiveris} & Audiveris.org / GitHub (\texttt{Audiveris/audiveris}) & Optical Music Recognition (OMR) & Scanned images/photos of print music & MusicXML, Audiveris OMR format & GUI for manual correction; MusicXML output for accessible downstream tools & Active (Ongoing) & GPLv2\footnote{\url{https://github.com/Audiveris/audiveris/blob/master/LICENSE}} \\
+\hline
+\textbf{Deep Learning OMR (e.g., \texttt{sachindae/polyphonic-omr}, \texttt{GaetanBaert/OMR\_deep})} & GitHub & Research-oriented OMR for MusicXML generation & Image of music score & Linearized MusicXML & Primarily research tools; output MusicXML for accessible tools & Active (Research-driven) & Varies (often MIT/GPL for research code)\footnote{\url{https://github.com/sachindae/polyphonic-omr/blob/master/LICENSE}}\footnote{\url{https://github.com/GaetanBaert/OMR_deep/blob/main/LICENSE}} \\
+\hline
+\textbf{BrailleBlaster} & APH (\texttt{aphtech/brailleblaster}) & General braille transcription (textbooks, literary, math) & NIMAS, EPUB, DOCX (general text); limited music code support & UEB, EBAE braille & Designed for accessibility, supports Windows, Mac, Linux & Active (2 weeks ago)\footnote{\url{https://github.com/aphtech/brailleblaster-ng}} & Open Source (APH), Community Fork (BrailleBlaster-NG)\footnote{\url{https://github.com/aphtech/brailleblaster-ng}} \\
+\hline
+\textbf{MusicBrailleRAP} & \texttt{braillerap/MusicBrailleRAP} & Music score transcription for BrailleRAP embossers & MusicXML\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}} & Braille text for BrailleRAP embossing\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}} & NVDA compatible\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}} & 2 years ago (Initial release)\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}} & GPL-3.0 (MusicBrailleRAP), LGPL V2.1 (liblouis), BSD (music21)\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}} \\
+\hline
+\textbf{FreeDots} & \texttt{mlang/FreeDots} (blind.guru) & MusicXML to Braille Music translation & MusicXML\footnote{\url{https://blind.guru/projects/freedots.html}} & Braille music (viewable via GUI)\footnote{\url{https://blind.guru/projects/freedots.html}} & Designed for blind users; GUI frontend\footnote{\url{https://blind.guru/projects/freedots.html}} & Active (GitHub)\footnote{\url{https://blind.guru/projects/freedots.html}} & Free Software\footnote{\url{https://blind.guru/projects/freedots.html}} \\
+\hline
+\textbf{MuseScore} & MuseScore.org & General music notation software & Manual (6-key braille, PC/MIDI keyboard), MusicXML import & MusicXML, Native Braille Export, SM Music Braille Plugin output & NVDA/VoiceOver compatible, extensive keyboard shortcuts, audio descriptions, accessibility guide\footnote{\url{https://musescore.org/en/accessibility}}\footnote{\url{https://musescore.org/en/handbook/4/braille}}\footnote{\url{https://musescore.org/en/handbook/4/accessibility}} & Active (MuseScore 4, ongoing braille development)\footnote{\url{https://daisy.org/activities/projects/music-braille/latest-developments/}}\footnote{\url{https://musescore.org/en/accessibility}} & Free, Open Source\footnote{\url{https://musescore.org/en/handbook/4/accessibility}} \\
+\hline
+\end{longtable}
+
+Many open-source projects, while promising and community-driven, are still in early development stages with known limitations. For instance, FreeDots is described as a "very young project" with "many braille music notation features not yet implemented" and an "incomplete user manual".\footnote{\url{https://blind.guru/projects/freedots.html}} Similarly, MusicBrailleRAP is explicitly noted as "still a work in progress project".\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}} This indicates that while open-source solutions offer cost-free access and the potential for customization, they may not yet provide the comprehensive, polished experience of commercial alternatives. Users considering these tools should be prepared for potential bugs or missing features.
+
+There is a discernible trade-off in open-source tools between specialization and generalization. Some tools are highly specialized for music braille, such as MusicBrailleRAP, which is tailored for specific BrailleRAP devices\footnote{\url{https://github.com/braillerap/MusicBrailleRAP}}, or FreeDots, which focuses solely on MusicXML to braille music translation.\footnote{\url{https://blind.guru/projects/freedots.html}} In contrast, BrailleBlaster is a general-purpose braille translator primarily for textbooks, with its "music code support" being a broader feature rather than a dedicated music score transcriber.\footnote{\url{https://www.aph.org/product/brailleblaster/}} MuseScore stands out as a general music notation tool that has increasingly integrated robust music braille capabilities, offering a hybrid approach. This means users seeking a dedicated, "braille-first" experience for music might look to highly specialized open-source tools, while those needing a broader music notation environment with integrated braille capabilities would gravitate towards MuseScore, which offers a more comprehensive, yet still free, solution.
+
+\section{Commercial Software Solutions for Music Braille Transcription}
+
+Commercial software typically offers more polished features, dedicated customer support, and often a more integrated user experience, appealing to professional transcribers and institutions.
+
+\subsection{GOODFEEL Braille Music Translator (Dancing Dots)}
+Developed by Dancing Dots, GOODFEEL is a comprehensive software suite designed to enable sighted musicians to quickly and accurately convert print scores to braille music. It also empowers blind musicians to review braille scores and independently create print scores of their musical ideas.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}\footnote{\url{https://www.dancingdots.com/main/products.htm}}
+
+\subsubsection{Input}
+GOODFEEL supports scanning print scores, though it explicitly requires sighted musicians to correct any errors introduced during the scanning process.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} Crucially, it allows the import of MusicXML scores created in mainstream notation software like Finale and Sibelius.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} Scores can also be entered and edited using Lime, an integrated notation editor, with a PC keyboard and/or a MIDI musical keyboard.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}\footnote{\url{https://canasstech.com/products/lime-aloud}}\footnote{\url{https://www.dancingdots.com/main/prodesc/lime.htm}}
+
+\subsubsection{Output}
+The software produces braille music scores in the standard .brf format by default.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} It can also generate print scores in standard staff notation for sighted readers and supports direct embossing of formatted braille music.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} Additionally, MIDI files can be transcribed.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+
+\subsubsection{Key Features}
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Supports Unified English Braille (UEB) for transcribing text elements such as titles and lyrics within scores.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+    \item Includes integrated literary braille translation for most Western languages, enabling the brailling of both words and music.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+    \item Can be configured to conform to UK braille music production formatting conventions.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+    \item Offers a user-friendly interface for customizing braille music output.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+    \item Provides optional integration with the Duxbury (literary) Braille Translator to facilitate the transcription of theory or method books containing large blocks of expository text.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+\end{itemize}
+
+\subsubsection{Accessibility}
+GOODFEEL offers extensive accessibility features:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Screen Reader Compatibility:} Its Lime Aloud talking score feature works seamlessly with JAWS for Windows (versions 15 through current) and is also compatible with non-JAWS screen readers such as NVDA and Narrator.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}\footnote{\url{https://canasstech.com/products/lime-aloud}}
+    \item \textbf{Audio Feedback:} Offers optional verbal and musical cues during playback.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} There is an option to speak lyric syllables and chords, and a "Silenzio" mode to temporarily mute verbal descriptions for focused listening.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+    \item \textbf{Synchronized Playback:} A key feature for learning and proofreading is the ability for braille and print music to track in sync during playback from Lime's Hear dialog, requiring JAWS and a braille display.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+    \item \textbf{Low Vision Support:} An optional add-on, Lime Lighter, provides special scrolling and magnification features for users with low vision, allowing them to mix speech and braille cues with magnified print.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}\footnote{\url{https://www.dancingdots.com/main/products.htm}}
+    \item Improved responsiveness with JAWS and other screen readers compared to previous versions.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+\end{itemize}
+
+\subsubsection{Licensing}
+GOODFEEL is available as a perpetual license, with an option to subscribe annually for a lower initial cost.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} A 15-day free trial is offered.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}
+
+\subsection{Duxbury Braille Translator (DBT)}
+Produced by Duxbury Systems since 1975, DBT is widely recognized as a leading software for producing braille globally.\footnote{\url{https://www.duxburysystems.com/dbt.asp}}\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}}\footnote{\url{https://www.duxburysystems.com/}}
+
+\subsubsection{Primary Focus}
+DBT's core strength lies in general braille translation for a wide array of documents, including Microsoft Word, Open Office, HTML, DAISY, and NIMAS files. It is extensively used for textbooks, office memos, and personal letters.\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}} It supports over 180 languages and variations, including contracted braille for most regions.\footnote{\url{https://www.duxburysystems.com/dbt.asp}}\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}}
+
+\subsubsection{Music Braille Capabilities}
+DBT is stated to have "extensive math, science and music code support".\footnote{\url{https://www.duxburysystems.com/dbt.asp}} It can import files from the GOODFEEL Music Translation program.\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}} However, the provided information does not explicitly detail its direct capability to transcribe music braille from sheet music or MusicXML \textit{within DBT itself}.\footnote{\url{https://www.duxburysystems.com/dbt.asp}} This suggests its music code support is more geared towards embedding musical examples within literary braille documents or handling specific braille music codes as part of a broader braille translation, rather than being a dedicated music score converter. The observation that DBT can import files \textit{from} GOODFEEL implies that direct MusicXML to music braille conversion isn't its primary or direct function, but rather it can process braille music \textit{generated by other tools}.\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}} This is a crucial distinction for users seeking a direct sheet music-to-braille solution, as it highlights that "music code support" in a general translator may not fulfill the needs of comprehensive music score transcription.
+
+\subsubsection{Input/Output}
+DBT imports numerous document formats.\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}} It supports output to all commercial braille embossers, covering a wide range of models.\footnote{\url{https://www.duxburysystems.com/dbt.asp}} A useful feature is built-in interline printing, which displays ink text alongside braille for easier proofing and teaching.\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}}
+
+\subsubsection{Accessibility}
+DBT is designed to be "fully accessible AND fully in tune with the latest advances in operating systems and sister applications" for both blind and sighted users.\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}} It is Section 508 compliant\footnote{\url{https://www.duxburysystems.com/dbt.asp}} and allows displaying ink text alongside braille for simplified proofreading.\footnote{\url{https://www.duxburysystems.com/dbt.asp}}
+
+\subsubsection{Licensing}
+DBT is a commercial product, priced at \$695.00 for a perpetual license.\footnote{\url{https://www.duxburysystems.com/dbt.asp}} A 30-day demo software is available.\footnote{\url{https://www.duxburysystems.com/dbt.asp}}
+
+\subsection{Table 2: Overview of Commercial Music Braille Transcription Software}
+
+\begin{longtable}{|p{3.5cm}|p{2cm}|p{3.5cm}|p{2.5cm}|p{2.5cm}|p{3.5cm}|p{2.5cm}|p{3.5cm}|}
+\caption{Overview of Commercial Music Braille Transcription Software} \\
+\hline
+\textbf{Software Name} & \textbf{Developer} & \textbf{Primary Focus} & \textbf{Music Braille Input} & \textbf{Music Braille Output} & \textbf{Key Accessibility Features} & \textbf{Licensing Model} & \textbf{Unique Selling Points} \\
+\hline
+\endfirsthead
+\multicolumn{8}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline
+\textbf{Software Name} & \textbf{Developer} & \textbf{Primary Focus} & \textbf{Music Braille Input} & \textbf{Music Braille Output} & \textbf{Key Accessibility Features} & \textbf{Licensing Model} & \textbf{Unique Selling Points} \\
+\hline
+\endhead
+\hline \multicolumn{8}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+\hline
+\endlastfoot
+\textbf{GOODFEEL Braille Music Translator} & Dancing Dots & Comprehensive music braille conversion and editing & Scanned print (sighted correction), MusicXML, Manual (via Lime/MIDI)\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} &.brf, Print notation, Embossed braille, MIDI\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} & JAWS/NVDA/Narrator compatible, audio cues, synchronized playback, low vision add-on (Lime Lighter), UEB/UK formatting\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} & Perpetual license, annual subscription option, 15-day free trial\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}} & Integrated suite (Lime editor, Lime Aloud, SharpEye OCR), highly polished, designed for both sighted transcribers and blind musicians\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}\footnote{\url{https://canasstech.com/products/lime-aloud}} \\
+\hline
+\textbf{Duxbury Braille Translator (DBT)} & Duxbury Systems & General braille translation for diverse documents & MS Word, Open Office, HTML, DAISY, NIMAS, can import from GOODFEEL\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}} & General braille (various codes), Embossed braille, Interline print/braille\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}} & Fully accessible (blind/sighted), Section 508 compliant, ink text/braille display for proofing\footnote{\url{https://www.duxburysystems.com/dbt.asp}}\footnote{\url{https://www.duxburysystems.com/dbt_brochure.asp}} & Perpetual license (\$695.00), 30-day demo\footnote{\url{https://www.duxburysystems.com/dbt.asp}} & World's leading general braille software, extensive language support (180+), supports all commercial embossers\footnote{\url{https://www.duxburysystems.com/dbt.asp}} \\
+\hline
+\end{longtable}
+
+Commercial software like GOODFEEL provides a highly integrated and polished experience, often bundling multiple functionalities such as a notation editor, OCR, and advanced braille translation and accessibility features into a single, cohesive suite.\footnote{\url{https://www.dancingdots.com/main/goodfeel.htm}}\footnote{\url{https://canasstech.com/products/lime-aloud}} This contrasts with open-source solutions that might require combining multiple distinct tools, offering a more streamlined workflow for professional use. This integrated approach can be particularly appealing to professional transcribers, educational institutions, or production facilities seeking a comprehensive, well-supported, and reliable solution with minimal integration overhead.
+
+\section{Dedicated Braille Music Editors: Direct Braille Input and Refinement}
+
+Beyond automated translation, dedicated braille music editors allow for direct input and meticulous refinement of braille scores, often prioritizing the unique tactile reading experience.
+
+\subsection{Braille Music Notator}
+Braille Music Notator is a free online tool specifically designed for creating braille music scores.\footnote{\url{https://www.pathstoliteracy.org/resource/braille-music-notator/}}\footnote{\url{https://www.braillemusicnotator.com/}}
+
+\subsubsection{Braille-Centric Design}
+A core philosophy of this tool is that the entire process of creating or editing a score is done directly in braille music notation. The braille characters are then automatically translated into traditional musical symbols for visual display, allowing the score to be designed with the braille reader's needs paramount. This approach aims for "elegant, legible scores which promote sight-reading and accuracy".\footnote{\url{https://www.pathstoliteracy.org/resource/braille-music-notator/}}\footnote{\url{https://www.braillemusicnotator.com/}} This contrasts with tools that primarily translate print notation to braille, which often result in unpolished or inaccurate translations that do not fully account for the nuances of tactile reading.\footnote{\url{https://www.pathstoliteracy.org/resource/braille-music-notator/}}\footnote{\url{https://www.braillemusicnotator.com/}}
+
+\subsubsection{Input}
+The input method involves using braille music notation via a keyboard diagram and corresponding keys for musical symbols. It also includes a text keyboard for entering literary braille characters. The tool supports saving scores to local disk and opening/editing braille music files created in other programs.\footnote{\url{https://www.braillemusicnotator.com/}}\footnote{\url{https://www.braillemusicnotator.com/quick-start-screen-reader-users}}
+
+\subsubsection{Accessibility}
+Braille Music Notator meets WAI-ARIA standards for accessible web applications and is compatible with major screen reading software such as JAWS and VoiceOver.\footnote{\url{https://www.braillemusicnotator.com/}} It provides a "Quick Start for Screen Reader Users" guide to facilitate adoption by visually impaired individuals.\footnote{\url{https://www.braillemusicnotator.com/}}
+
+\subsubsection{Target Audience}
+While its primary goal is to produce high-quality scores for musicians who rely on braille, the utility is also designed for sighted musicians, teachers, and engravers. A secondary goal is to help sighted people learn braille music notation, fostering a "meet halfway" approach between visually impaired and sighted musicians.\footnote{\url{https://www.pathstoliteracy.org/resource/braille-music-notator/}}\footnote{\url{https://www.braillemusicnotator.com/}}
+
+\subsection{Braille Music Editor}
+Braille Music Editor (e.g., Braille Music Editor 2025) is a commercial software offering advanced capabilities for creating and modifying music compositions using braille notation.\footnote{\url{https://braillemusiceditor.com/}}
+
+\subsubsection{Key Features}
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Includes a script for managing the six points on the Braille line of the Focus refreshable braille display, indicating deep integration with tactile output devices for precise control over braille cells.\footnote{\url{https://braillemusiceditor.com/}}
+    \item Offers improved import and export functionalities for lyrics and fingering from MusicXML files, ensuring compatibility with other notation software.\footnote{\url{https://braillemusiceditor.com/}}
+    \item Standardized 140 jazz chord symbols in Braille, based on The New Real Book and the Finale and Sibelius libraries, providing a comprehensive set for contemporary music.\footnote{\url{https://braillemusiceditor.com/}}
+    \item Allows control of external keyboards via Midimapper, enhancing input flexibility for musicians.\footnote{\url{https://braillemusiceditor.com/}}
+    \item Revised pause management to support anacrustic and acephalous pieces, addressing complex rhythmic structures.\footnote{\url{https://braillemusiceditor.com/}}
+    \item Added new options for handling MIDI parameters, providing granular control over musical performance data.\footnote{\url{https://braillemusiceditor.com/}}
+\end{itemize}
+
+\subsubsection{Accessibility}
+The program provides an intuitive and user-friendly interface for creating and modifying music compositions utilizing braille notation.\footnote{\url{https://braillemusiceditor.com/}} A free Bm2025 script for JAWS is available for download, compatible with Windows 10 and 11, ensuring robust screen reader support.\footnote{\url{https://braillemusiceditor.com/}} The \textit{Giuseppe Paccini Association}, a partner in the European \textit{Erasmus+ MUVIE} project, is actively involved in transforming music education for the visually impaired through technology, including the creation of accessible digital tools, cutting-edge methodologies, and a Braille music library, demonstrating a commitment to broader accessibility initiatives.\footnote{\url{https://braillemusiceditor.com/}}
+
+\section{Conclusions}
+
+The landscape of accessible music braille transcription is a multifaceted domain, driven by both technological innovation and a profound dedication to inclusivity. The analysis reveals a dual approach to braille music production: automated translation from digital notation (primarily MusicXML) for efficiency, and direct braille-centric input/editing for tactile readability and nuanced control. This duality underscores the understanding that a direct one-to-one conversion from print notation often falls short of producing truly optimal braille for the visually impaired musician, necessitating tools that prioritize the unique characteristics of braille music.
+
+MusicXML stands as the indispensable backbone of this ecosystem, serving as the universal standard for digital music interchange. Its widespread adoption by mainstream notation software is critical for facilitating seamless data flow between diverse tools, making it the most reliable input format for automated braille conversion. Without this standardized intermediary, the interoperability required for a comprehensive and efficient transcription pipeline would be severely compromised.
+
+A significant portion of the advancements in accessible music braille tools, particularly within the open-source realm, is powered by collaborative community efforts and non-profit initiatives. This collective drive fills crucial gaps that commercial ventures might not address, fostering a vibrant environment for innovation and development. However, it is important to acknowledge that many open-source projects are still in nascent stages, with known limitations and ongoing development. This implies that while they offer accessible, cost-free solutions, they may not yet provide the comprehensive and polished experience found in more mature commercial offerings.
+
+Commercial solutions, exemplified by GOODFEEL, typically offer a highly integrated and refined user experience, often bundling multiple functionalities into a cohesive suite. This integrated approach can streamline workflows for professional transcribers and institutions, providing a robust and well-supported environment. Conversely, general braille translators like Duxbury Braille Translator, while possessing "music code support," are primarily designed for literary braille and may not offer the direct, comprehensive music score transcription capabilities from MusicXML that dedicated music braille software provides. This distinction is crucial for users to understand when selecting tools for specific music transcription needs.
+
+Finally, the inherent cognitive load of reading braille music, stemming from its linear nature and significant space requirements, necessitates that transcription tools go beyond mere accuracy. Features such as synchronized playback, audio descriptions, and intuitive braille-centric editing interfaces are not merely enhancements but essential components that support learning, memorization, and performance for visually impaired musicians. The continuous development and integration of these accessibility features across the entire pipeline are paramount to ensuring that visually impaired musicians can engage with music on an equal footing with their sighted peers, fostering independence and creative expression.

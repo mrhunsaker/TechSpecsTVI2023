@@ -1,0 +1,372 @@
+\chapter{Comprehensive Report on PDF Accessibility: Auditing, Tagging, and Remediation Across Platforms}
+\author{} % Author can be added here if desired
+\date{} % Date can be added here if desired
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction to PDF Accessibility}
+
+The digital landscape increasingly relies on Portable Document Format (PDF) files for information dissemination, from official government documents to academic papers and corporate reports. Ensuring these documents are accessible to all users, including individuals with disabilities, is not merely a matter of good practice but a critical requirement for legal compliance, inclusivity, and overall usability.
+
+\subsection{The Imperative of Accessible PDFs: Legal Compliance, Inclusivity, and Usability}
+
+The drive for accessible PDFs stems from a confluence of legal mandates, ethical considerations, and practical benefits. Globally, numerous laws and standards compel organizations to ensure their digital content, including PDFs, is accessible. In the United States, the \textbf{Americans with Disabilities Act (ADA)} serves as a foundational legal standard aimed at preventing discrimination and making digital content universally accessible.\footnote{Source: [1, 2]} Complementing this, \textbf{Section 508 Compliance} specifically mandates accessibility for U.S. government websites and digital content, frequently referencing Web Content Accessibility Guidelines (WCAG) and PDF/UA as the requisite standards.\footnote{Source: [1, 3, 2]} Across the Atlantic, the \textbf{European Accessibility Act (EAA)} promotes equal access to digital services and products within the European Union, while \textbf{EN 301 549} stands as the EU standard for Information and Communication Technology (ICT) accessibility, aligning closely with WCAG guidelines.\footnote{Source: [1, 4, 5]} In Canada, the \textbf{Accessibility for Ontarians with Disabilities Act (AODA)} mandates accessible digital content within Ontario, further underscoring the global commitment to digital inclusion.\footnote{Source: [1, 6]}
+
+Beyond legal imperatives, accessible PDFs are fundamental to fostering inclusivity and enhancing usability for individuals with disabilities. Users who rely on assistive technologies (AT) such as screen readers, speech recognition software, and eye-tracking systems depend on properly structured and tagged PDFs to navigate and comprehend digital information effectively.\footnote{Source: [7, 8, 2]} Without accessibility features, these documents become barriers, preventing equal access to information and hindering participation in an increasingly digital world.\footnote{Source: [9, 2]}
+
+Moreover, the benefits of accessible PDFs extend beyond direct compliance and inclusivity. Implementing proper document markup can significantly enhance the performance of Content Management Systems (CMS), improve search engine optimization (SEO), and facilitate cross-media publishing.\footnote{Source: [3, 2]} By expanding market reach to the approximately 25\% of the population reporting a disability, organizations can also boost their reputation and demonstrate corporate social responsibility.\footnote{Source: [10, 11]}
+
+\subsection{Understanding Core Standards: PDF/UA (ISO 14289-1) vs. WCAG (Web Content Accessibility Guidelines)}
+
+Two primary standards govern PDF accessibility: PDF/UA and WCAG. While both share the overarching goal of making digital content universally readable by computer and assistive technologies, their scope, specificity, and development pathways differ significantly.
+
+\textbf{PDF/UA (PDF/Universal Accessibility)}, formally recognized as ISO 14289-1, is an international standard specifically developed by the PDF Association to ensure universal accessibility in PDF documents.\footnote{Source: [7, 8, 12, 2]} This standard provides detailed technical requirements tailored to the unique structure and features of PDF files, making it the definitive technical specification for PDF accessibility.\footnote{Source: [7, 8, 2]}
+
+In contrast, \textbf{WCAG (Web Content Accessibility Guidelines)}, developed by the Web Accessibility Initiative (WAI) of the W3C, offers broader accessibility principles applicable to a wide range of web content and digital documents, including PDFs.\footnote{Source: [1, 8, 13]} Many national and international accessibility regulations, such as EN 301 549, use WCAG as their foundational framework.\footnote{Source: [4, 2]}
+
+The relationship between WCAG and PDF/UA is complementary. While WCAG provides general guidelines and overarching principles (Perceivable, Operable, Understandable, and Robust), PDF/UA sets the specific technological requirements necessary for achieving accessibility within the PDF format.\footnote{Source: [4, 13]} Document accessibility specialists often find it most effective to focus on PDF/UA for PDF-specific implementation, integrating WCAG principles as needed to ensure comprehensive compliance.\footnote{Source: [3, 13]} This approach is crucial because, despite their shared goals, WCAG's projection to PDF file format requirements can be vaguely defined, with only a limited number of PDF-specific techniques compared to its extensive guidelines for HTML and CSS.\footnote{Source: [13]} This disparity means that simply adhering to WCAG without a deep understanding of PDF/UA may result in technically non-compliant or poorly accessible PDFs, creating a false sense of compliance. A PDF/UA-first strategy ensures the document's internal structure meets the specific demands of PDF accessibility, which then inherently supports broader WCAG principles.
+
+Key differences and similarities between the two standards include\footnote{Source: [3, 13]}:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Goal:} Both aim to mark up content for universal readability by computer and assistive technologies.
+    \item \textbf{Tag Sets:} HTML5, the markup language for WCAG, features nearly 200 tags designed for web content presentation. The PDF standard, relevant to PDF/UA, has fewer than 30 tags, specifically designed to label and interpret PDF document content for assistive technologies.
+    \item \textbf{Guidelines/Checkpoints:} The WCAG standard encompasses over 50 checkpoints, success criteria, and guidelines. The PDF/UA standard, based on the Matterhorn Protocol, specifies 31 checkpoints.
+    \item \textbf{Development and Publication:} WCAG is developed by the WAI, a subcommittee of the W3C, and WCAG 2.0 was approved and published by ISO as ISO/IEC 40500:2012. The core of PDF/UA is developed and written by the PDF Association (PDFA), known as the Matterhorn Protocol, and PDF/UA-1 was approved and published by ISO as ISO 14289-1.
+    \item \textbf{Specific Tag Usage:} Headings (\texttt{<H1>}-\texttt{<H6>}) are consistently used in both standards. However, HTML uses \texttt{<UL>} for bullet lists and \texttt{<OL>} for numbered lists, while PDFs use a single \texttt{<L>} tag for both. Both use \texttt{<LI>} for individual list items, but only PDFs further divide \texttt{<LI>}s into sub-tags: \texttt{<Lbl>} for the bullet/number and \texttt{<LBody>} for the text. HTML includes a \texttt{summary} tag often used for tables, which is absent in PDFs. Cascading Stylesheets (CSS) are used for formatting with HTML and EPUBs but are not present in PDFs. Both standards require alternative text for graphics, but uniquely, PDF has the \texttt{Artifact} tag to denote insignificant graphics that assistive technologies should skip, whereas HTML uses a null tag (\texttt{""}).
+\end{itemize}
+
+The PDF/UA standard is continuously evolving. PDF 2.0 has formalized structure trees, and \textbf{PDF/UA-2}, based on PDF 2.0, is being developed (and was released in March 2024), promising improved accessibility compared to PDF/UA-1 (based on PDF 1.7).\footnote{Source: [13, 14]} This ongoing evolution highlights a maturing standard and underscores the importance of future-proofing accessibility efforts by staying updated with these advancements. Organizations and document creators should be aware of this progression, as anticipating and eventually adopting PDF/UA-2 will be crucial for maintaining optimal accessibility and avoiding technical debt.
+
+\subsection{Fundamental Elements of an Accessible PDF}
+
+Creating an accessible PDF involves addressing several key components that ensure the document's content is perceivable, operable, understandable, and robust for all users.
+
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Tagged PDF Structure:} The foundation of an accessible PDF is its tagged structure. Tags define the document's logical structure, such as headings, lists, and tables, and dictate the reading order for assistive technologies.\footnote{Source: [7, 8, 15, 2, 16]} An untagged PDF is inherently inaccessible, as assistive technologies cannot interpret its content meaningfully.\footnote{Source: [8, 17, 18]} Importantly, these tags have no impact on the visual layout of the document.\footnote{Source: [8, 19, 18]}
+    \item \textbf{Alternative Text for Images:} All meaningful images must include descriptive alternative text (alt text) to convey their content or purpose to users who cannot see them.\footnote{Source: [8, 17, 20, 21, 22, 23, 24, 25, 26, 2, 16]} Decorative images, which serve no informational purpose, should be marked as artifacts so that assistive technologies ignore them, preventing unnecessary clutter for screen reader users.\footnote{Source: [8, 15, 17, 27, 22, 26]} This specific use of the \texttt{Artifact} tag is a critical differentiator in PDF accessibility, allowing for precise management of non-essential content.
+    \item \textbf{Readable Text:} All text within a PDF must be selectable and not embedded as an image, enabling users to interact with it and assistive technologies to read it.\footnote{Source: [8, 17, 18]} A crucial aspect of readability is sufficient color contrast between text and its background. WCAG guidelines recommend a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large-scale text to ensure legibility for users with visual impairments.\footnote{Source: [6, 8, 28, 20, 21, 29, 30, 31]}
+    \item \textbf{Proper Navigation:} Accessible PDFs incorporate navigational aids such as bookmarks, a logical hierarchy of headings, and a consistent tab order. Bookmarks and headings allow users to quickly navigate through the document's structure, while a logical tab order ensures keyboard-only users can access content in a predictable sequence.\footnote{Source: [6, 8, 15, 11, 32, 24, 18]}
+    \item \textbf{Accessible Links and Forms:} Hyperlinks within the document should be descriptive, clearly indicating their destination or purpose rather than generic phrases like "click here" or raw URLs.\footnote{Source: [8, 17, 18]} Similarly, all form fields must be properly labeled and have associated tooltips to ensure users relying on screen readers can understand what information is required and how to input it.\footnote{Source: [3, 6, 8, 17, 20, 33, 32, 34, 18, 35]}
+    \item \textbf{Language Specification:} The document's primary language must be explicitly defined to enable screen readers to provide accurate pronunciation and intonation.\footnote{Source: [6, 8, 17, 20, 32, 24, 18]} For multilingual documents, language changes within specific passages or phrases should also be specified to prevent mispronunciations.\footnote{Source: [17]}
+    \item \textbf{No Reliance on Visuals Alone:} Information conveyed solely through visual means, such as color, position, or size, must have a text-based or structural alternative.\footnote{Source: [8, 17, 18]} For instance, if a chart uses color to distinguish data series, patterns or labels should also be used to convey the same information to users who are colorblind or have low vision.\footnote{Source: [17, 20]}
+\end{itemize}
+
+\section{Conducting a Full PDF Accessibility Audit}
+
+A comprehensive PDF accessibility audit is a multi-faceted process that combines automated checks with essential manual verification to ensure a document meets established accessibility standards and provides a truly usable experience for individuals with disabilities.
+
+\subsection{The Audit Process: Automated vs. Manual Verification}
+
+\textbf{Automated checkers} serve as a crucial first step in the audit process. These tools rapidly scan PDF documents to identify machine-detectable issues such as missing tags, unspecified document language, or basic color contrast violations.\footnote{Source: [3, 17, 32]} They provide a quick initial assessment, highlighting areas that require attention and streamlining the preliminary stages of remediation.\footnote{Source: [17]}
+
+However, it is imperative to understand the \textbf{limitations of automated checkers}. These tools can miss a significant percentage of accessibility errors, with some sources estimating they may overlook as much as 75-80\% of issues.\footnote{Source: [20]} This is because many accessibility requirements demand human judgment and semantic understanding that algorithms cannot replicate. For example, automated checkers can verify if an alt text field exists for an image, but they cannot determine if the alt text is accurate, complete, or effectively conveys the image's intended information.\footnote{Source: [20]} Similarly, while a checker can identify the presence of headings, it cannot assess if the heading structure is logically sufficient, if non-headings are incorrectly tagged as such, or if crucial headings are entirely missed.\footnote{Source: [20]} Other common issues automated tools frequently miss include the logical reading order of complex layouts (e.g., multi-column text), the context and descriptiveness of hyperlinks, the accuracy of language attributes in multilingual documents, the reliance on color as the sole means to convey information, the helpfulness and specificity of form field tooltips, and the precise accuracy of list and table structures (e.g., proper association of headers with data, handling of nested lists).\footnote{Source: [20]} This inherent limitation means that a "pass" from an automated checker alone does not guarantee full accessibility and can create a false sense of security.
+
+Therefore, \textbf{manual verification} is indispensable for achieving full PDF accessibility and usability.\footnote{Source: [10, 17, 20, 16]} This involves a meticulous human review of the document, including:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Visually reviewing the document for logical flow and semantic meaning, ensuring content makes sense in context.
+    \item Testing with various assistive technologies, particularly screen readers (e.g., NVDA, JAWS, VoiceOver), to experience the document as a user with a disability would.\footnote{Source: [10, 6, 17, 20]}
+    \item Performing keyboard navigation testing to ensure all interactive elements and content can be accessed and operated without a mouse.\footnote{Source: [6, 17]}
+    \item Checking text selectability to confirm that all text is actual text and not embedded as images.\footnote{Source: [17, 34]}
+    \item Thoroughly reviewing the tag tree and utilizing content highlighting features within PDF editors to verify that content is correctly tagged and in the proper reading order.\footnote{Source: [6, 17, 20, 27, 16]}
+\end{itemize}
+
+This comprehensive approach, integrating both automated and manual checks, ensures that both programmatic and semantic accessibility requirements are met, leading to a truly usable and compliant PDF.
+
+\subsection{Adobe Acrobat Pro: Step-by-Step Audit (macOS \& Windows)}
+
+Adobe Acrobat Pro is widely recognized for its robust, built-in Accessibility Checker, available on both macOS and Windows platforms.\footnote{Source: [3, 10, 6, 8, 17, 20, 33, 36, 27, 32, 37, 24]} The process for conducting an accessibility audit using this tool is systematic:
+
+\begin{enumerate}[noitemsep,topsep=0pt]
+    \item \textbf{Open Document:} Begin by opening the target PDF document within Adobe Acrobat Pro.\footnote{Source: [32]}
+    \item \textbf{Access Tools:} Navigate to the 'All Tools' tab, then scroll down and select 'Prepare for Accessibility'.\footnote{Source: [3, 36, 27, 32, 37]} This action will open a dedicated panel with accessibility-related options.
+    \item \textbf{Initiate Check:} From the 'Prepare for Accessibility' panel, choose the 'Check for accessibility' option.\footnote{Source: [3, 36, 32, 37]}
+    \item \textbf{Configure Options:} In the 'Accessibility Checker Options' dialog box that appears, ensure all categories and options are selected for a comprehensive scan. Users can also specify whether the accessibility report should be saved as an HTML file or attached directly to the PDF document, and define a specific page range if a partial audit is desired.\footnote{Source: [33, 36, 32, 37]}
+    \item \textbf{Start Checking:} Click the 'Start Checking' button to initiate the automated audit.\footnote{Source: [3, 33, 36, 32, 37]}
+    \item \textbf{Review Results:} Upon completion, the results will be displayed in a side panel, categorizing issues with clear statuses:
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item \textbf{Passed:} Indicates the item is accessible.
+        \item \textbf{Skipped By User:} Means the rule was not checked because the user deselected it.
+        \item \textbf{Needs Manual Check:} Signifies that the item could not be automatically verified and requires manual inspection.\footnote{Source: [3, 36, 37]}
+        \item \textbf{Failed:} Denotes that the item did not pass the accessibility check.\footnote{Source: [3, 36, 37]}
+    \end{itemize}
+    \item \textbf{Interpret and Fix:} Users can right-click over highlighted issues in the results panel to access 'explanation' or 'fix' options.\footnote{Source: [10, 33, 32, 35]} It is crucial to review all reported issues, as the automated checker does not distinguish between essential and nonessential content, meaning some reported items may not directly impact readability.\footnote{Source: [36]}
+    \item \textbf{View Report:} For a detailed summary of the audit findings, select 'Open accessibility report' from the left panel.\footnote{Source: [36, 37]} This report provides a comprehensive overview of the document's accessibility status.
+\end{enumerate}
+
+\subsection{Non-Adobe Audit Tools: Cross-Platform Solutions}
+
+Beyond Adobe Acrobat Pro, a variety of non-Adobe tools exist for conducting PDF accessibility audits, offering diverse features and cross-platform compatibility.
+
+\subsubsection{Free \& Online Checkers}
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{axesCheck (Web-based):} This is a completely free, web-based tool that requires no software download or installation.\footnote{Source: [38, 39]} Users can simply upload their PDF to the website to quickly check for compliance with machine-verifiable PDF/UA and WCAG requirements.\footnote{Source: [38, 39]} axesCheck offers results comparable to more established tools like PAC and can be utilized on any operating system or device, including macOS and smartphones, due to its web-based nature.\footnote{Source: [38, 39]}
+    \item \textbf{CommonLook PDF Validator (Windows-specific plugin):} Offered as a free plugin for Adobe Acrobat Pro (requiring Windows 8 or higher and Acrobat X or higher), this tool assists in testing and verifying PDF accessibility.\footnote{Source: [40, 41, 29, 42]} It performs checks on metadata, font embedding, Unicode character mapping, and various tag properties, including structure, nesting, headings, lists, links, forms, tables, alternative text, and tooltips.\footnote{Source: [40, 41, 29, 42]} A key strength is its ability to guide users through necessary manual tests and generate a certification report for each audited document.\footnote{Source: [40, 41, 29, 42]}
+    \item \textbf{PAVE (Web-based):} Developed by the ICT Accessibility Lab of the ZHAW School of Engineering, PAVE is a free web-based tool designed for personal use to validate and fix PDF accessibility issues.\footnote{Source: [17, 19]} It offers both automatic corrections and allows for manual adjustments directly within its interface, crucially without altering the visual layout of the PDF.\footnote{Source: [17, 19]} PAVE is optimized for desktop screens, ensuring a usable interface for remediation.\footnote{Source: [17, 19]}
+    \item \textbf{PAC (PDF Accessibility Checker) (Windows Desktop):} PAC is a globally utilized, free desktop application for Windows (Windows 10/11) that rigorously checks for PDF/UA and WCAG conformity.\footnote{Source: [9, 13, 43, 44]} It can assess technical accessibility in seconds and includes features to simplify manual testing by providing a screen reader and structure preview. PAC generates either summary or detailed reports, identifying specific errors for remediation.\footnote{Source: [9]}
+\end{itemize}
+
+\subsubsection{Commercial Desktop Alternatives}
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Foxit PDF Editor (Windows, macOS, Linux):} Foxit PDF Editor provides a "Full Check" command to verify documents against accessibility standards.\footnote{Source: [7, 8, 11, 23, 32]} It generates detailed reports (which can be saved as HTML files or attached to the PDF) and identifies common issues such as missing titles, unspecified language, lack of alternative text, incorrect reading order, untagged content, inconsistent tab order, and insufficient color contrast.\footnote{Source: [7, 11, 23, 32]} Foxit also includes auto-tagging capabilities, a Tag Editor for manual adjustments, and an Action Wizard to automate accessibility workflows.\footnote{Source: [7, 6, 8, 11, 45, 37, 46, 47]}
+    \item \textbf{PDFelement (Windows, macOS; Linux general editing):} PDFelement is an AI-powered PDF solution offering a wide range of features including Optical Character Recognition (OCR), editing, conversion, and signing.\footnote{Source: [3, 48, 49, 50, 51, 52, 53]} While it provides tools to "improve accessibility" by enabling users to add alt text, utilize table editors, apply OCR to scanned documents, and add form descriptions, specific comprehensive accessibility checker features for Linux are not explicitly detailed. However, its core PDF editing functionalities are available cross-platform.\footnote{Source: [3, 48, 32, 49, 50, 51, 52, 54, 55, 53]}
+    \item \textbf{Nitro Pro (Windows, macOS; Linux CLI):} Nitro Pro offers accessibility tools designed to create PDF documents compliant with WCAG 2.1 and PDF/UA standards.\footnote{Source: [56, 57, 58, 59, 60]} Its key features include auto-tagging for quick document structuring, role mapping, reading order management, artifact management, setting document language, and the ability to mark documents as PDF/UA compliant.\footnote{Source: [56, 57, 58, 60]} While Nitro PDF Pro is available for macOS, its presence for GUI-based accessibility features on Linux is less prominent, with a command-line interface (CLI) being the primary means for automation on Linux.\footnote{Source: [10, 12, 61, 48, 62, 32]}
+    \item \textbf{PDF Studio (Windows, macOS, Linux):} PDF Studio provides PDF/UA preflight and compliance verification capabilities.\footnote{Source: [41, 63, 64, 65, 66, 67]} It includes accessibility preferences for display, such as options for color contrast, inverting colors, and zooming, alongside navigation tools and a "Read Out Loud" (Text-to-Speech) feature for testing.\footnote{Source: [28, 23, 37, 68, 69, 70]} The software also features a Tag Explorer for viewing the document's tag tree and tools for manually creating document, content, and artifact tags.\footnote{Source: [23, 57, 71, 72]}
+    \item \textbf{CommonLook PDF (Windows, macOS, Linux - web-based/desktop):} CommonLook PDF is an AI-powered software suite that supports multiple accessibility standards, including PDF/UA, WCAG, Section 508, ADA, and the EAA.\footnote{Source: [6, 73]} It offers both advanced and simplified editors, AI-driven automated tagging, robust manual tagging support, a "Fix Wizard" to guide remediation, automated bookmark generation, multi-standards validation, structural validation, and comprehensive reporting.\footnote{Source: [6, 73]} The software is available both as a web-based application and a desktop download, offering deployment flexibility.\footnote{Source: [6, 73]}
+\end{itemize}
+
+\subsubsection{Linux-Specific Considerations}
+
+The landscape for dedicated GUI-based PDF accessibility tools on Linux presents a notable difference compared to Windows and macOS. While general PDF editors and readers are available, specialized accessibility auditing tools with comprehensive graphical interfaces are less common. This discrepancy often directs Linux users towards web-based solutions or command-line interfaces for robust accessibility workflows.
+
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Callas pdfToolbox CLI:} This is a powerful command-line interface available on Linux (as well as Windows and macOS) that offers extensive PDF manipulation capabilities, including preflight checks and report generation in PDF, HTML, or XML formats.\footnote{Source: [12, 74, 24]} It is an ideal solution for integrating PDF quality control and manipulation into automated workflows or document management systems.\footnote{Source: [12, 24]}
+    \item \textbf{Axe DevTools:} Primarily known for web accessibility, Axe DevTools Linter (a command-line interface or IDE plugin) runs on Linux for code analysis.\footnote{Source: [34, 75]} Axe Monitor, an enterprise solution within the Axe suite, can scan web pages and PDFs.\footnote{Source: [75]} However, it is important to note that while Axe DevTools Linter operates on Linux, its primary focus is code and web content, and Axe Monitor's PDF scanning is part of a broader enterprise offering rather than a direct desktop Linux tool for PDF auditing in the same vein as Adobe Acrobat or Foxit.
+    \item \textbf{General PDF Editors/Readers:} Linux users have access to general PDF editing tools such as PDF Arranger, LibreOffice Draw, Inkscape, Stirling-PDF, GIMP (GNU Image Manipulation Program), and Scribus.\footnote{Source: [76]} While these can perform various PDF manipulations, they are not specialized accessibility auditing tools. Similarly, PDF readers like Zathura, Sioyek, Okular, and Evince are available, but lack auditing functionalities.\footnote{Source: [76]}
+    \item \textbf{OS-level Accessibility Tools:} Many Linux distributions, including Debian, Fedora, Ubuntu, and ArchLinux, incorporate their own built-in accessibility tools (e.g., screen readers, magnifiers).\footnote{Source: [28, 69]} These operating system-level features can be invaluable for manual testing and verifying the user experience of accessible PDFs.
+\end{itemize}
+
+The market for comprehensive, GUI-based PDF accessibility tools is heavily concentrated on Windows and macOS. This means that Linux users, despite the OS's general flexibility, are often directed towards browser-based solutions for auditing or must rely on scripting with command-line tools to achieve similar functionality. This presents a potential barrier for organizations standardizing on Linux environments for document creation or remediation, implying a need for different workflow strategies, potentially involving more technical scripting expertise or reliance on external web services. This reliance on cloud-based processing for PDF accessibility features, as seen with Adobe Acrobat's "Cloud-based auto-tagging" \footnote{Source: [36]} and Microsoft Word's "Best for electronic distribution and accessibility" PDF export option utilizing a "Microsoft online service" \footnote{Source: [41]}, introduces new data governance and security considerations. While these services often claim robust security measures, the act of transmitting potentially sensitive documents to a third-party cloud service for processing necessitates careful evaluation of data privacy policies (e.g., GDPR, HIPAA) by organizations, particularly those in regulated industries. This trend may lead some organizations to prefer on-premise solutions or command-line tools for highly sensitive documents, even if it means sacrificing some of the ease of use or advanced AI features offered by cloud services.
+
+\subsection{Table: Comparative Overview of Key PDF Accessibility Audit Tools}
+
+This table provides a concise overview of the primary PDF accessibility audit tools discussed, highlighting their type, operating system compatibility, key accessibility features, supported standards, and general cost model. This comparison can assist organizations in selecting the most appropriate tool based on their specific needs and existing infrastructure.
+
+\begin{longtable}{|l|l|l|p{6cm}|l|l|}
+\hline
+\textbf{Tool Name} & \textbf{Type} & \textbf{OS Compatibility} & \textbf{Key Accessibility Features (Audit, Tagging, Remediation)} & \textbf{Supported Standards} & \textbf{Cost Model} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Tool Name} & \textbf{Type} & \textbf{OS Compatibility} & \textbf{Key Accessibility Features (Audit, Tagging, Remediation)} & \textbf{Supported Standards} & \textbf{Cost Model} \\
+\hline
+\endhead
+\hline
+\endfoot
+\endlastfoot
+\textbf{Adobe Acrobat Pro} & Commercial & Windows, macOS & Comprehensive Accessibility Checker, Auto-tagging, Manual Tagging (Tags Panel, Reading Order Tool), Alt Text, Reading Order Adjustment, Form Fields, Document Properties, Fix options, Accessibility Report. & PDF/UA, WCAG 2.0 & Paid Subscription \\
+\hline
+\textbf{Foxit PDF Editor} & Commercial & Windows, macOS, Linux & Full Accessibility Check, Auto-tagging, Tag Editor, Action Wizard, Reading Order Tool, Alt Text, Form Fields, Document Properties, Color Contrast. & WCAG, PDF/UA-1 & Paid \\
+\hline
+\textbf{PDF Studio} & Commercial & Windows, macOS, Linux & PDF/UA Preflight \& Validation, Tag Explorer, Manual Tag Creation (Document, Content, Artifact), Accessibility Display Preferences, Read Out Loud (TTS). & PDF/UA, WCAG & Paid \\
+\hline
+\textbf{CommonLook PDF} & Commercial & Windows, macOS, Linux (Web-based/Desktop) & AI-driven Automated Tagging, Manual Tagging Support, Fix Wizard, Automated Bookmark Generation, Multi-Standards Validation, Structural Validation, Comprehensive Reporting, Streamlined Table Remediation. & PDF/UA, WCAG, Section 508, ADA, EAA & Paid \\
+\hline
+\textbf{axesCheck} & Free/Online & Web-based (any OS, incl. macOS, smartphones) & Machine-verifiable PDF/UA \& WCAG checks, Instant Results, No Download/Installation. & PDF/UA, WCAG & Free \\
+\hline
+\textbf{CommonLook PDF Validator} & Free/Plugin & Windows (Acrobat Pro Plugin) & Metadata Examination, Font Embedding, Unicode Mapping, Tag Management (Nesting, Headings, Lists, Links, Forms, Tables), Alt Text, Tooltips, Certification Report, Guides Manual Tests. & WCAG, PDF/UA, Section 508, HHS & Free \\
+\hline
+\textbf{PAVE} & Free/Online & Web-based (Desktop optimized) & Automatic \& Manual Corrections, No Visual Layout Change, Tagging for Screen Readers. & PDF/UA & Free (Personal Use) \\
+\hline
+\textbf{PAC (PDF Accessibility Checker)} & Free/Desktop & Windows 10/11 & PDF/UA \& WCAG Conformity Check, Technical Accessibility Assessment, Screen Reader/Structure Preview, Summary/Detailed Reports. & PDF/UA, WCAG & Free \\
+\hline
+\textbf{Callas pdfToolbox CLI} & Commercial & Windows, macOS, Linux (CLI) & Command-line interface for automated preflight, fixing, report generation (PDF, HTML, XML), PDF manipulation. & (Supports profiles for various standards) & Paid \\
+\hline
+\textbf{Nitro Pro} & Commercial & Windows, macOS & Accessibility Tools for WCAG 2.1 \& PDF/UA, Auto-tagging, Role Mapping, Reading Order, Artifact Management, Language Setting. & WCAG 2.1, PDF/UA & Paid \\
+\hline
+\textbf{PDFelement} & Commercial & Windows, macOS, (Linux general editing) & OCR, Edit, Convert, Sign, Organize, Annotate; tools to "improve accessibility" (Alt Text, Table Editor, Form Descriptions). & (General accessibility features) & Paid \\
+\hline
+\end{longtable}
+
+\section{Comprehensive PDF Tagging Strategies}
+
+Effective PDF tagging is the cornerstone of accessibility, providing the underlying structure that assistive technologies rely on to interpret and navigate document content. Without proper tagging, a PDF remains largely inaccessible, regardless of its visual presentation.
+
+\subsection{The Critical Role of Tags}
+
+Tags are embedded metadata within a PDF that define its logical structure and reading order.\footnote{Source: [14, 77, 18, 78, 16]} They communicate to assistive technologies, such as screen readers, whether a piece of content is a heading, a paragraph, a list, a table, or an image, and in what sequence it should be read.\footnote{Source: [14, 18, 78, 16]} An untagged PDF is fundamentally inaccessible because it lacks this crucial structural information.\footnote{Source: [17, 18]} It is important to note that tags exist in a separate layer from the visual content and have no impact on how the document appears on screen.\footnote{Source: [19, 18]}
+
+\subsection{Automated Tagging from Source Documents}
+
+The most efficient and recommended approach to creating accessible PDFs is to build accessibility directly into the source document. This upstream effort significantly reduces the complexity and time required for downstream PDF remediation, as poor source document structure is a primary cause of PDF accessibility issues.
+
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Microsoft Word:} To ensure an accessible PDF output from Microsoft Word, it is critical to prepare the source document thoroughly. Users should run Word's built-in Accessibility Checker \textit{before} saving the file as a PDF.\footnote{Source: [41]} Addressing any issues identified at this stage ensures that Microsoft Word can leverage this information to create accurate accessibility tags in the resulting PDF. When saving, select \texttt{File > Save As} and choose PDF. In the \texttt{Options} dialog box, ensure the "Document structure tags for accessibility" checkbox is selected.\footnote{Source: [41]} For optimal tagging, especially with complex layouts, using the "Best for electronic distribution and accessibility" option (which utilizes a Microsoft online service for conversion) is recommended, as it ensures the PDF is tagged.\footnote{Source: [41]} The quality of the source Word document is paramount: consistently use styles for all content (e.g., proper heading styles, list styles) rather than direct formatting, avoid using carriage returns for spacing, and correctly assign table headers.\footnote{Source: [45, 75]} This proactive approach establishes a clear cause-and-effect: accessible source documents lead to significantly easier PDF accessibility, while inaccessible source documents can lead to a remediation "nightmare" in the PDF stage.\footnote{Source: [45, 76]}
+    \item \textbf{Adobe InDesign:} Creating accessible PDFs from Adobe InDesign requires a "design-for-accessibility-first" mindset. It is crucial not to defer accessibility considerations until the final export stage.\footnote{Source: [31]} Designers should ensure a logical layout where content reads from top-left to bottom-right, and explicitly set the reading order of stories using the \texttt{Articles} panel (\texttt{Window > Articles}).\footnote{Source: [30, 31]} Text should always be live (not converted to outlines) and optimized for readability, aiming for a simple, inclusive style (e.g., age 9 reading level).\footnote{Source: [31]} All text elements should utilize paragraph styles with defined export tags (e.g., \texttt{<p>} for body text, \texttt{<h1>}, \texttt{<h2>} for headings).\footnote{Source: [30, 31]} PDF bookmarks should be created, either manually or automatically via the table of contents feature, to serve as valuable navigation tools.\footnote{Source: [31]} For images, meaningful and concise alternative text should be added via \texttt{Object > Object Export Options > Alt text > Custom}, and non-essential graphics should be tagged as artifacts to be ignored by screen readers.\footnote{Source: [31]} Color contrast must be checked to meet WCAG guidelines (4.5:1 for normal text, 3:1 for large text).\footnote{Source: [30, 31]} Finally, document metadata (title, author, description) should be added via \texttt{File > File Info}.\footnote{Source: [30, 31]} When exporting to PDF, select \texttt{File > Export}, choose \texttt{Adobe PDF (Interactive)} format, and ensure "Create Tagged PDF," "Include Bookmarks and Hyperlinks," and "Use Structure For Tab Order" are checked.\footnote{Source: [30]}
+\end{itemize}
+
+\subsection{Tagging PDFs with LaTeX for Accessibility}
+
+Historically, PDFs generated with LaTeX were known to have accessibility issues, primarily because the system did not automatically produce the tagged PDFs required for assistive technologies.\footnote{Source: [77]} This often resulted in accessibility checkers flagging such documents. However, significant progress has been made through the "LaTeX Tagged PDF project," which is actively working towards enabling automatic PDF tagging.\footnote{Source: [77, 73, 79, 5]}
+
+The newest versions of LaTeX, notably the June 2023 release, have introduced improved accessibility functionality, including automatic tagging for additional LaTeX elements.\footnote{Source: [77]} This represents a substantial advancement, positioning LaTeX as a powerful tool for generating accessible scientific and technical documents, moving beyond its previous limitations. This development is particularly significant for academic and research communities, where LaTeX is widely used.
+
+Key components and practices for tagging PDFs with LaTeX for accessibility include:
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{\texttt{tagpdf} package:} This package is a core part of LaTeX's support for tagged PDF. It requires users to ensure that all related components, including the \texttt{latex-lab} bundle, \texttt{pdfmanagement-testphase} package, and the L3 programming layer, are up-to-date and synchronized.\footnote{Source: [18]}
+    \item \textbf{\texttt{\textbackslash DocumentMetadata} command:} This command is crucial for declaring document metadata, including the primary language (\texttt{lang}), PDF version (e.g., \texttt{2.0}), and PDF standard conformance (e.g., \texttt{ua-2}, \texttt{a-4}).\footnote{Source: [18, 80]}
+    \item \textbf{\texttt{accessibility} package:} For structured, tagged PDF output, users should include \texttt{\textbackslash usepackage[tagged, highstructure]\{accessibility\}} in their document preamble.\footnote{Source: [78]}
+    \item \textbf{\texttt{hyperref} package:} This package is vital for creating clickable cross-references and a clickable table of contents, which are highly beneficial for screen reader users. It also handles the language metadata of the PDF, allowing programs to determine the document's main language.\footnote{Source: [78]} An example command is \texttt{\textbackslash usepackage\{hyperref\}}.
+    \item \textbf{Examples and Conformance:} The LaTeX Project has released a collection of PDF/UA-2/WTPDF (Well-Tagged PDF) compliant example documents generated with LuaLaTeX.\footnote{Source: [14, 80]} These examples demonstrate advanced features such as associated files for mathematics (e.g., embedding MathML representations) and custom role maps, showcasing what is now achievable in producing accessible documents conforming to the new PDF/UA-2 and WTPDF standards.\footnote{Source: [14, 80]}
+\end{itemize}
+
+Despite these advancements, challenges remain, particularly concerning the strict parent-child rules defined in the PDF specification. While PDF 2.0 introduced a comprehensive matrix for these rules, the vagueness of PDF 1.7 rules and the complexity of combining tag sets (ISO 32005) can still pose difficulties.\footnote{Source: [5]} Nevertheless, LaTeX's progress in automated PDF tagging, especially for PDF/UA-2, represents a significant shift, making it a viable and advanced option for accessible PDF generation, particularly for content-rich, structured documents common in academia and research.
+
+\subsection{Manual Tagging in Adobe Acrobat Pro (macOS \& Windows)}
+
+For PDFs that were not created with accessibility in mind, or for fine-tuning automatically generated tags, manual tagging in Adobe Acrobat Pro is often necessary. This process involves directly manipulating the tag tree to ensure accuracy and logical structure.
+
+\begin{enumerate}[noitemsep,topsep=0pt]
+    \item \textbf{Open Tags Panel:} To begin, open the Tags Panel by navigating to \texttt{View > Show/Hide > Navigation Panes > Tags}.\footnote{Source: [6, 17, 20, 27, 16]} This panel displays the document's hierarchical tag structure.
+    \item \textbf{Auto-tagging (Initial Step):} For untagged PDFs, Acrobat Pro can attempt to auto-tag the document. Access this feature via \texttt{Tools > Accessibility > Autotag Document}.\footnote{Source: [3, 8, 20, 27, 24, 16, 81]} While auto-tagging can save significant time, it is crucial to understand that it is rarely perfect and requires thorough manual review and correction afterward.\footnote{Source: [16]}
+    \item \textbf{Manual Tag Creation:} If auto-tagging is insufficient or undesirable, tags can be created manually. Right-click within the Tags panel and select "Create Tags Root" to establish the document's main tag structure, then right-click again to select "New Tag" to add individual tags.\footnote{Source: [74, 75]}
+    \item \textbf{Applying Tags with Reading Order Tool:} The "Reading Order" tool (also known as "Touch Up Reading Order") is central to applying and adjusting tags. Access it via \texttt{Tools > Accessibility > Reading Order}.\footnote{Source: [8, 15, 22, 77]} This tool allows users to select content areas on the page and apply appropriate tags (e.g., Text/Paragraph, Figure, Form Field, Headings H1-H6, Table, Cell, Formula, Note, Reference, Background/Artifact).\footnote{Source: [15, 22, 77]}
+    \item \textbf{Changing Tag Type:} To correct an incorrectly assigned tag, right-click the tag in the Tags panel, select \texttt{Properties}, and then choose the appropriate tag type from the \texttt{Type} dropdown menu.\footnote{Source: [20, 27, 75, 16, 81]}
+    \item \textbf{Reading Order Adjustment:} The logical reading order is critical for screen reader users. In the \texttt{Reading Order} dialog box, select "Show Order Panel" to view the numbered regions representing the reading order.\footnote{Source: [15, 77]} Users can then drag and drop these numbered regions to rearrange the reading order as needed.\footnote{Source: [3, 15, 20, 77, 82]}
+    \item \textbf{Alternative Text (Alt Text):} To add or edit alt text for images, right-click the \texttt{<Figure>} tag in the Tags panel, select \texttt{Properties}, and enter a descriptive text in the "Alternate Text" field.\footnote{Source: [20, 16]} Alternatively, the "Set Alternate Text" tool under \texttt{Tools > Accessibility} can be used \footnote{Source: [23, 25]}, or by right-clicking the image directly within the \texttt{Reading Order} tool.\footnote{Source: [22, 26]} Decorative images should be marked as \texttt{Background/Artifact} to be skipped by assistive technologies.\footnote{Source: [15, 27, 22, 26, 77]}
+    \item \textbf{Lists:} Proper list tagging involves using \texttt{<L>} for the main list, \texttt{<LI>} for each list item, \texttt{<Lbl>} for the bullet or number character, and \texttt{<LBody>} for the list item's text.\footnote{Source: [14, 22, 80]} Corrections can be made in the Tags panel or using the Reading Order tool.\footnote{Source: [33, 77]}
+    \item \textbf{Tables:} Tables require specific tags: \texttt{<Table>} for the entire table, \texttt{<TR>} for each row, \texttt{<TH>} for header cells, and \texttt{<TD>} for data cells.\footnote{Source: [10, 14, 22, 16]} The "Table Editor" tool, accessible from the \texttt{Reading Order} dialog box or by right-clicking a table cell, is essential for defining header cells, associating headers with data cells, and specifying row or column spans.\footnote{Source: [10, 6, 38, 77, 16]}
+\end{enumerate}
+
+\subsection{Manual Tagging in Non-Adobe Software (macOS, Windows, Linux)}
+
+Several non-Adobe PDF editors offer robust manual tagging capabilities, providing alternatives for users across different operating systems.
+
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Foxit PDF Editor:} Foxit provides a comprehensive suite of tools for manual tagging and remediation. It features an \texttt{Autotag Document} function for initial tagging.\footnote{Source: [7, 8]} Following auto-tagging, the \texttt{Tag Editor} allows for manual correction of structural issues.\footnote{Source: [7]} The \texttt{Reading Order} tool (Touch Up Reading Order) is used to define area reading order and change tag types, similar to Adobe Acrobat.\footnote{Source: [8, 11, 81]} Users can create tags from a selection \footnote{Source: [11]} and edit role mappings for problematic tags.\footnote{Source: [45]} Foxit also offers specific functions for fixing alt text \footnote{Source: [11]} and correcting list and heading issues within the Tags panel \footnote{Source: [11]}, as well as combining separated tags.\footnote{Source: [81]}
+    \item \textbf{PDF Studio:} PDF Studio offers a \texttt{Tag Explorer} to view and navigate the document's tag tree.\footnote{Source: [57]} Users can create a new document-level tag using \texttt{Create Document Tag}.\footnote{Source: [57]} For content-specific tagging, the \texttt{Create Content Tags} tool allows users to select content (text or images) and then double-click or right-click to assign a tag type and title.\footnote{Source: [23, 72]} It also supports creating \texttt{Artifact Tags} to mark decorative content.\footnote{Source: [57]}
+    \item \textbf{CommonLook PDF:} This specialized remediation tool that significantly enhances the efficiency of manual tagging, particularly for complex or poorly structured PDFs. While it offers AI-driven automated tagging \footnote{Source: [73]}, its manual tagging support is highly refined with prompts and tooling to expedite the process.\footnote{Source: [73]} For tables, CommonLook PDF offers unique features like "Linearize table," which converts table cell tags to paragraph tags and automatically cleans up empty table tags, a process that is often time-consuming in other editors.\footnote{Source: [26]} The "Level up children of tag" feature allows users to easily move table row tags out of unnecessary \texttt{THead}, \texttt{TBody}, or \texttt{TFoot} tags, with automatic deletion of the empty parent tags.\footnote{Source: [26]} The integrated table editor facilitates verification and correction of cell spans, conversion to \texttt{TH} or \texttt{TD}, and assignment of correct scope to header cells.\footnote{Source: [26]} These specialized functionalities provide significant efficiency gains for complex or "trash" PDFs compared to general PDF editors like Adobe Acrobat Pro.
+\end{itemize}
+
+\subsection{Table: Essential PDF Tag Types and Their Semantic Purpose}
+
+This table provides a reference for common PDF tag types, their semantic purpose, and examples of their appropriate use. Understanding these tags is crucial for both manual tagging and for accurately interpreting automated audit reports.
+
+\begin{longtable}{|l|l|p{6cm}|}
+\hline
+\textbf{Tag Name} & \textbf{Semantic Purpose} & \textbf{Example Usage} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Tag Name} & \textbf{Semantic Purpose} & \textbf{Example Usage} \\
+\hline
+\endhead
+\hline
+\endfoot
+\endlastfoot
+\texttt{<Document>} & Root tag, contains all document content. & The top-level container for the entire PDF. \\
+\hline
+\texttt{<H1>} - \texttt{<H6>} & Headings, indicating hierarchical structure. & \texttt{<H1>Report Title</H1>}, \texttt{<H2>Section Heading</H2>} \\
+\hline
+\texttt{<P>} & Paragraph, for blocks of text. & \texttt{<P>This is a paragraph of text.</P>} \\
+\hline
+\texttt{<L>} & List, container for list items. & \texttt{<L><LI>Item 1</LI><LI>Item 2</LI></L>} \\
+\hline
+\texttt{<LI>} & List Item, individual item within a list. & \texttt{<LI><Lbl>$\bullet$</Lbl><LBody>List item content.</LBody></LI>} \\
+\hline
+\texttt{<Lbl>} & List Label, for bullet or number character. & \texttt{<LI><Lbl>1.</Lbl><LBody>First item.</LBody></LI>} \\
+\hline
+\texttt{<LBody>} & List Body, for the text content of a list item. & \texttt{<LI><Lbl>$\bullet$</Lbl><LBody>Main text of the item.</LBody></LI>} \\
+\hline
+\texttt{<Table>} & Table, container for table rows. & \texttt{<Table><TR><TH>Header</TH></TR><TR><TD>Data</TD></TR></Table>} \\
+\hline
+\texttt{<TR>} & Table Row, for each row in a table. & \texttt{<TR><TH>Column 1</TH><TH>Column 2</TH></TR>} \\
+\hline
+\texttt{<TH>} & Table Header Cell, for header cells in a table. & \texttt{<TH Scope="col">Product</TH>} \\
+\hline
+\texttt{<TD>} & Table Data Cell, for data cells in a table. & \texttt{<TD>Value A</TD>} \\
+\hline
+\texttt{<Figure>} & Figure or image. & \texttt{<Figure Alt="Description of image content">Image</Figure>} \\
+\hline
+\texttt{<Caption>} & Caption for a figure or table. & \texttt{<Figure><Caption>Figure 1: Diagram</Caption>...</Figure>} \\
+\hline
+\texttt{<Link>} & Hyperlink. & \texttt{<Link>Visit our \textbackslash Link-OBJR>website\textbackslash </Link-OBJR></Link>} \\
+\hline
+\texttt{<Form>} & Form control. & \texttt{<Form>Text Field</Form>} \\
+\hline
+\texttt{<TOC>} & Table of Contents. & \texttt{<TOC><TOCI>Chapter 1</TOCI></TOC>} \\
+\hline
+\texttt{<TOCI>} & Table of Contents Item. & \texttt{<TOCI><Reference>Introduction</Reference></TOCI>} \\
+\hline
+\texttt{<Artifact>} & Decorative or non-essential content to be ignored by AT. & Logo in header, decorative border, page numbers (if redundant). \\
+\hline
+\end{longtable}
+
+\section{Remediating Common PDF Accessibility Failures}
+
+Remediating PDF accessibility failures involves a targeted approach to correct issues identified during the auditing phase. This process requires a deep understanding of common pitfalls and the specific techniques and tools available to address them.
+
+\subsection{Understanding and Addressing Frequent Issues}
+
+Before diving into remediation, it is crucial to review the common accessibility pitfalls that frequently render PDFs inaccessible. These include missing or incorrect tags, illogical reading orders, absence of document titles or metadata, lack of descriptive alternative text for images, tables without proper headers or structure, and the omission of interactive elements.\footnote{Source: [1, 17]}
+
+It is important to reiterate that automated accessibility checkers, while valuable, often miss critical issues that require human judgment. These include the \textit{accuracy} and \textit{completeness} of alt text, the \textit{logical flow} of reading order in complex layouts, the \textit{sufficiency} of heading structures, the \textit{contextual relevance} of hyperlinks, the \textit{accurate reflection} of language changes, the \textit{meaning} conveyed solely by color, the \textit{helpfulness} of form tooltips, and the \textit{precise structural integrity} of lists and tables.\footnote{Source: [20]} Therefore, manual review and testing with assistive technologies remain indispensable for thorough remediation.\footnote{Source: [17, 20, 79]}
+
+\subsection{Remediation Techniques in Adobe Acrobat Pro (macOS \& Windows)}
+
+Adobe Acrobat Pro offers a comprehensive set of tools for remediating common PDF accessibility failures.
+
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{General Workflow:} The "Prepare for accessibility" Action Wizard provides a guided workflow that automates many initial remediation tasks and prompts users for manual fixes.\footnote{Source: [10, 20, 36, 27, 37, 24]} After running the Accessibility Checker, users can right-click on failed items in the report to access "Fix" or "Explain" options.\footnote{Source: [10, 33, 36, 32, 35]} It is important to note that some issues cannot be fixed automatically and require direct manual intervention.\footnote{Source: [36, 35]}
+    \item \textbf{Missing/Incorrect Alt Text:} To add or correct alt text, use the "Set Alternate Text" tool under the Accessibility panel.\footnote{Source: [3, 20, 27, 83, 84, 23, 24, 25, 26]} Alternatively, right-click the image and select "Edit Alternate Text".\footnote{Source: [25, 26]} Decorative images should be marked as decorative figures or background/artifact to be skipped by screen readers.\footnote{Source: [33, 27, 26]}
+    \item \textbf{Incorrect Reading Order:} The "Reading Order" tool (also known as "Touch Up Reading Order") is used to correct the logical flow of content. Access it via \texttt{Tools > Accessibility > Reading Order}.\footnote{Source: [3, 15, 20, 48, 77, 82, 85]} In the "Show Order Panel," users can drag and drop numbered regions to rearrange the reading sequence.\footnote{Source: [15, 48, 82, 85]} Content blocks should also be correctly labeled (e.g., text, heading, figure).\footnote{Source: [15, 20, 77]}
+    \item \textbf{Insufficient Color Contrast:} While automated checkers can identify contrast ratio issues, manual verification is often needed to assess the \textit{meaning} conveyed by color.\footnote{Source: [17]} To adjust contrast, users can go to \texttt{Edit > Preferences > Accessibility} and use the "Replace Document Colors" option.\footnote{Source: [84, 86, 87]} For precise checks, external contrast checkers are recommended.\footnote{Source: [20, 33, 24]}
+    \item \textbf{Inaccessible Forms:} Ensuring form accessibility involves verifying that interactive/fillable form fields exist.\footnote{Source: [88, 35]} The "Prepare Form" tool helps ensure each field has descriptive labels or tooltips.\footnote{Source: [20]} The tab order, which dictates keyboard navigation through form fields, should be set either by structure or manually.\footnote{Source: [20]} Acrobat's form field recognition can assist in identifying and creating fields \footnote{Source: [3, 35]}, and form tags should be validated.\footnote{Source: [40, 42]}
+    \item \textbf{Untagged/Poorly Structured Tables and Lists:}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item \textbf{Untagged PDF:} For documents lacking tags, the \texttt{Autotag Document} feature is a starting point.\footnote{Source: [3, 38, 20, 27, 75, 16]} Alternatively, users can manually add tags to the document via the Tags panel.\footnote{Source: [3, 16]}
+        \item \textbf{Tables:} The \texttt{Table Editor} tool is crucial for remediating tables.\footnote{Source: [10, 6, 38, 89, 77, 90, 16]} This tool allows users to define header cells (\texttt{<TH>}) and data cells (\texttt{<TD>}), associate headers with data cells, and specify row or column spans for complex tables.\footnote{Source: [10, 22, 89, 77, 16]}
+        \item \textbf{Lists:} Ensure that lists are correctly structured with \texttt{<L>} (list), \texttt{<LI>} (list item), \texttt{<Lbl>} (bullet/number), and \texttt{<LBody>} (list item text) tags.\footnote{Source: [14, 22]} The Tags panel can be used to correct list structures and nesting.\footnote{Source: [33]}
+    \end{itemize}
+    \item \textbf{Language Specification Errors:} The primary document language should be set via the "Set Reading Language" option in the Action Wizard \footnote{Source: [27, 45, 24]} or through \texttt{File > Properties > Advanced tab > Language}.\footnote{Source: [20]}
+    \item \textbf{Document Properties \& Security:} Essential metadata such as title, author, subject, and keywords should be filled in via \texttt{File > Properties > Description}.\footnote{Source: [6, 20, 27, 45, 24, 75]} Crucially, security settings must allow assistive technology access to the document content.\footnote{Source: [36, 35]}
+\end{itemize}
+
+\subsection{Remediation Techniques in Non-Adobe Software (macOS, Windows, Linux)}
+
+A range of non-Adobe software provides robust capabilities for remediating PDF accessibility issues across various operating systems.
+
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Foxit PDF Editor:} Foxit offers a "Make Accessible" Action Wizard that automates initial steps like setting metadata, language, and alt text.\footnote{Source: [45, 46]} For structural issues, users can leverage \texttt{Autotagging} and then refine tags using the \texttt{Tag Editor}.\footnote{Source: [7, 8, 11, 81]} The \texttt{Reading Order} tool allows for adjusting content flow and tag types.\footnote{Source: [11, 81]} Foxit also provides specific functions for fixing alt text \footnote{Source: [11]}, correcting list and heading issues directly in the Tags panel \footnote{Source: [11]}, and combining separated tags for logical flow.\footnote{Source: [81]}
+    \item \textbf{CommonLook PDF:} This specialized software is highly efficient for complex remediation tasks. It offers AI-driven automated tagging and remediation \footnote{Source: [73]}, alongside a "Fix Wizard" that provides system guidance for identified issues.\footnote{Source: [73]} CommonLook PDF excels in streamlined table remediation with features like "Linearize table," which converts table cell tags to paragraph tags and automatically cleans up empty table tags, and "Level up children of tag," which moves table row tags out of unnecessary parent tags (e.g., \texttt{THead}, \texttt{TBody}, \texttt{TFoot}).\footnote{Source: [26]} Its table editor allows for quick verification and correction of cell spans, conversion to \texttt{TH} or \texttt{TD}, and assignment of scope.\footnote{Source: [26]} Automated bookmark generation is also a feature.\footnote{Source: [73]}
+    \item \textbf{PDF Studio:} PDF Studio supports PDF/UA preflight and compliance verification.\footnote{Source: [66]} Its accessibility display preferences allow for adjusting color contrast and zoom levels.\footnote{Source: [28, 23]} Users can create and edit content and artifact tags manually.\footnote{Source: [23]} The "Read Out Loud" (Text-to-Speech) feature is valuable for testing the document's accessibility from a screen reader's perspective.\footnote{Source: [28, 37]}
+    \item \textbf{PAVE:} As an online tool, PAVE offers both automatic and manual corrections for PDF accessibility, making it accessible across platforms.\footnote{Source: [19]}
+    \item \textbf{Equidox:} Equidox is an automated PDF accessibility solution, particularly beneficial for high-volume documents, leveraging AI-powered features.\footnote{Source: [10, 9, 32, 79, 31]} It includes a Smart Zone Detector for identifying text, images, and links, an AI List Detector for efficient list remediation (including nested lists), and an AI Table Detector for automatically detecting rows and columns.\footnote{Source: [9, 31]} Equidox simplifies form remediation, offers an Image Pane for managing alt text, provides keyboard shortcuts for setting headings, and features "Zone Transfer" for efficient remediation of repetitive documents.\footnote{Source: [9, 31]}
+\end{itemize}
+
+\subsection{The Indispensable Role of Manual Review and Assistive Technology Testing}
+
+While automated tools are essential for identifying programmatic issues, they are not a "silver bullet" for achieving full accessibility.\footnote{Source: [45]} Many critical accessibility issues, particularly those requiring semantic understanding or human judgment (e.g., the \textit{correctness} of alt text, the \textit{logical} flow of reading order, the \textit{sufficiency} of heading structures), still necessitate manual intervention. This means that "full" accessibility is inherently a human-driven process, even with advanced tools.
+
+The repeated emphasis on "manual checks" and "testing with a screen reader" across various guidelines and tools underscores that compliance with technical standards (PDF/UA, WCAG) is only one part of the equation; true accessibility is ultimately validated by the user experience with assistive technologies.\footnote{Source: [17, 20, 79, 16]} Therefore, after any automated or manual remediation, the following steps are critical:
+
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Screen Reader Testing:} This is paramount. Testing with actual screen readers (e.g., NVDA, JAWS on Windows; VoiceOver on macOS; Orca on Linux) is crucial for verifying how content is presented to users with visual impairments.\footnote{Source: [6, 17, 20, 79]} This helps identify issues that automated checkers might miss, such as jumbled reading order in complex layouts or unclear alt text.
+    \item \textbf{Keyboard Navigation Testing:} Verify that all interactive elements (links, form fields) and navigable content can be accessed and operated using only the keyboard, ensuring a logical tab order.\footnote{Source: [6, 17]}
+    \item \textbf{Text Selectability Check:} Confirm that all text in the document is selectable, indicating it is not an image of text.\footnote{Source: [17, 34]}
+    \item \textbf{Tag Tree and Content Highlighting Review:} Visually inspect the tag tree within a PDF editor and use content highlighting features to ensure that every content block is correctly tagged and that the tag order matches the logical reading order.\footnote{Source: [6, 17, 20, 27, 16]}
+    \item \textbf{Usability Considerations:} Beyond technical compliance, consider the overall usability. This might involve simplifying complex tables by breaking them into smaller, more manageable units, or ensuring that alt text for complex images directs users to more detailed descriptions elsewhere in the document.\footnote{Source: [17]} Involving people with disabilities in the review process can provide invaluable feedback on the real-world usability of the document.\footnote{Source: [17]}
+\end{itemize}
+
+The choice between a general-purpose PDF editor with accessibility features (like Adobe Acrobat or Foxit) and specialized remediation software (like CommonLook or Equidox) often involves a trade-off between cost and efficiency, particularly for high-volume or complex documents. While general editors are versatile, specialized tools can offer significant efficiency gains for challenging remediation tasks, potentially justifying a higher investment for organizations with substantial accessibility needs.\footnote{Source: [9, 91, 76]}
+
+\section{Conclusion}
+
+Achieving comprehensive PDF accessibility is a multi-faceted and continuous endeavor that extends beyond mere technical compliance. It demands a strategic approach encompassing proactive design, diligent auditing, precise tagging, and meticulous remediation. This report has outlined the critical standards, diverse tools, and essential techniques available across macOS, Windows, and Linux environments to facilitate this process.
+
+\subsection{Key Takeaways for Creating and Maintaining Accessible PDFs}
+
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Proactive Design is Paramount:} The most effective strategy for PDF accessibility begins at the source. Optimizing original documents in authoring tools like Microsoft Word, Adobe InDesign, or LaTeX significantly reduces the complexity and time required for downstream PDF remediation. Poorly structured source files are the primary cause of accessibility issues in PDFs.
+    \item \textbf{Understand Complementary Standards:} While WCAG provides overarching accessibility principles, PDF/UA is the definitive technical standard for PDF documents. A PDF/UA-first approach ensures the document's internal structure meets the specific demands of PDF accessibility, which then inherently supports broader WCAG principles.
+    \item \textbf{Automated Tools are Necessary but Insufficient:} Automated accessibility checkers are invaluable for initial scans and identifying programmatic errors. However, they cannot replace thorough manual review and testing with assistive technologies. Critical issues related to semantic meaning, logical reading order, and the accuracy of descriptive content require human judgment.
+    \item \textbf{Leverage the "Artifact" Tag:} The PDF-specific \texttt{Artifact} tag is a crucial feature for managing decorative or repetitive content that should be ignored by assistive technologies. Understanding and correctly applying this tag is essential for a clean and usable experience for screen reader users, a nuance often missed by automated checkers.
+    \item \textbf{Invest Strategically in Tools:} The choice of PDF editor and remediation software should align with the volume and complexity of documents being processed. While general-purpose editors like Adobe Acrobat Pro and Foxit PDF Editor offer broad accessibility features, specialized remediation software like CommonLook PDF or Equidox can provide significant efficiency gains for high-volume or "trash" documents, albeit potentially at a higher cost.
+    \item \textbf{Accessibility is a Continuous Process:} PDF accessibility is not a one-time fix but an ongoing commitment. Regular audits, continuous training for content creators, and adaptation to evolving standards are vital for maintaining compliance and ensuring equitable access to information.
+\end{itemize}
+
+\subsection{Future Trends in PDF Accessibility}
+
+The field of PDF accessibility is dynamic, with several emerging trends shaping its future:
+
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item \textbf{Continued Evolution of PDF/UA:} The release of PDF/UA-2, based on PDF 2.0, signifies a maturing standard with improved capabilities. Organizations must anticipate and gradually adopt these newer versions to future-proof their accessibility efforts.
+    \item \textbf{Increased Integration of AI and Automation:} AI-powered features in tools like CommonLook PDF and Equidox are streamlining complex remediation tasks, particularly for high-volume documents. This trend is expected to continue, making remediation more efficient.
+    \item \textbf{Growing Emphasis on Cloud-Based Solutions:} Cloud-based auto-tagging and conversion services are becoming more prevalent due to their convenience and computational power. However, this trend necessitates careful consideration of data governance and security implications, especially for sensitive documents.
+    \item \textbf{Enhanced Capabilities in Source Document Creation Tools:} The significant advancements in LaTeX's automated PDF tagging, particularly for PDF/UA-2, highlight a broader trend where authoring tools are increasingly incorporating robust accessibility features, reducing the burden of downstream remediation.
+\end{itemize}
+
+By embracing these takeaways and staying attuned to future trends, organizations can build robust, efficient, and inclusive PDF workflows that serve all users effectively.
+
+\end{document}
