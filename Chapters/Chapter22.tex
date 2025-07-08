@@ -9,7 +9,7 @@ This chapter provides a comprehensive guide to conducting a full accessibility a
 A thorough accessibility audit begins with a strong understanding of the underlying principles and standards that govern digital accessibility. For office documents and web-based productivity tools, the following are paramount:
 
 \subsection{Web Content Accessibility Guidelines (WCAG)}
-WCAG\footnote{\url{https://www.w3.org/WAI/standards-guidelines/wcag/}} are developed by the World Wide Web Consortium (W3C) and provide a widely accepted international standard for web content accessibility. While primarily for web, its principles are broadly applied to digital documents and software. WCAG is structured around four core principles (POUR):
+WCAG\cite{WCAG} are developed by the World Wide Web Consortium (W3C) and provide a widely accepted international standard for web content accessibility. While primarily for web, its principles are broadly applied to digital documents and software. WCAG is structured around four core principles (POUR):
 \begin{itemize}
     \item \textbf{Perceivable}: Information and user interface components must be presentable to users in ways they can perceive. This includes providing text alternatives for non-text content (images, videos), ensuring content can be presented in different ways (e.g., simpler layout) without losing information, and making it easier for users to see and hear content (e.g., sufficient color contrast).
     \item \textbf{Operable}: User interface components and navigation must be operable. This covers keyboard accessibility for all functionality, providing users enough time to read and use content, avoiding content that causes seizures, and ensuring clear and consistent navigation.
@@ -27,10 +27,10 @@ Specific WCAG success criteria relevant to documents and screen reader accessibi
 \end{itemize}
 
 \subsection{Section 508 of the Rehabilitation Act}
-Section 508\footnote{\url{https://www.section508.gov/}} is a U.S. federal law that requires federal agencies to make their electronic and information technology (EIT) accessible to people with disabilities. The refreshed Section 508 standards (2017) harmonize with WCAG 2.0 Level AA, making WCAG the de facto standard for federal agencies. It applies directly to documents, spreadsheets, and presentations used by federal agencies, emphasizing compatibility with assistive technologies like screen readers.
+Section 508\cite{Section508} is a U.S. federal law that requires federal agencies to make their electronic and information technology (EIT) accessible to people with disabilities. The refreshed Section 508 standards (2017) harmonize with WCAG 2.0 Level AA, making WCAG the de facto standard for federal agencies. It applies directly to documents, spreadsheets, and presentations used by federal agencies, emphasizing compatibility with assistive technologies like screen readers.
 
 \subsection{Accessible Rich Internet Applications (ARIA)}
-ARIA\footnote{\url{https://www.w3.org/WAI/ARIA/}} is a set of attributes that can be added to HTML elements to improve the accessibility of web content, particularly dynamic content and custom user interface components that are not natively accessible. While ARIA is primarily for web applications, its concepts are crucial for understanding how screen readers interpret complex web-based interfaces like Google Workspace, which often rely on advanced JavaScript and custom controls. ARIA roles, states, and properties provide semantic meaning to elements that screen readers can then convey to users.
+ARIA\cite{ARIA} is a set of attributes that can be added to HTML elements to improve the accessibility of web content, particularly dynamic content and custom user interface components that are not natively accessible. While ARIA is primarily for web applications, its concepts are crucial for understanding how screen readers interpret complex web-based interfaces like Google Workspace, which often rely on advanced JavaScript and custom controls. ARIA roles, states, and properties provide semantic meaning to elements that screen readers can then convey to users.
 
 \section{Built-in Accessibility Features and Checkers}
 \label{sec:office-built-in-checkers}
@@ -38,7 +38,7 @@ ARIA\footnote{\url{https://www.w3.org/WAI/ARIA/}} is a set of attributes that ca
 Many modern office suites include built-in tools to assist users in creating accessible content. These are often the first line of defense in an accessibility audit.
 
 \subsection{Microsoft Office (Word, Excel, PowerPoint)}
-Microsoft Office applications include a robust \textbf{Accessibility Checker}\footnote{\url{https://support.microsoft.com/en-us/office/improve-accessibility-with-the-accessibility-checker-a78ab7ee-b363-4f7e-874d-b6a444954c6a}} that can identify common accessibility issues.
+Microsoft Office applications include a robust \textbf{Accessibility Checker}\cite{MSAccessibilityChecker} that can identify common accessibility issues.
 \begin{itemize}
     \item \textbf{Access}: Found under the "Review" tab in Word, Excel, PowerPoint, Outlook, and OneNote. Select "Check Accessibility."
     \item \textbf{Issues Detected}: It identifies errors (content difficult or impossible for people with disabilities to access), warnings (content that might be difficult to understand), and tips (content that could be presented better for accessibility). Specific checks include:
@@ -58,12 +58,12 @@ Microsoft Office applications include a robust \textbf{Accessibility Checker}\fo
 \subsection{Google Workspace (Docs, Sheets, Slides)}
 Google Workspace tools are web-based and are designed with screen reader compatibility in mind. While they emphasize best practices and collaboration with screen readers, they also offer some checking capabilities.
 \begin{itemize}
-    \item \textbf{Built-in Optimization}: Google Docs, Sheets, and Slides are optimized to work with popular screen readers (e.g., ChromeVox, NVDA, JAWS, VoiceOver). Features include extensive keyboard shortcuts\footnote{\url{https://support.google.com/docs/answer/179738}}, braille display support, and voice typing.
-    \item \textbf{Accessibility Checker for Sheets Add-on}\footnote{\url{https://workspace.google.com/marketplace/app/accessibility_checker_for_sheets/544321949511}}: A Google Workspace Marketplace add-on specifically for Google Sheets. This GUI tool checks for common issues within spreadsheets.
+    \item \textbf{Built-in Optimization}: Google Docs, Sheets, and Slides are optimized to work with popular screen readers (e.g., ChromeVox, NVDA, JAWS, VoiceOver). Features include extensive keyboard shortcuts\cite{GoogleShortcuts}, braille display support, and voice typing.
+    \item \textbf{Accessibility Checker for Sheets Add-on}\cite{SheetsChecker}: A Google Workspace Marketplace add-on specifically for Google Sheets. This GUI tool checks for common issues within spreadsheets.
     \item \textbf{General Best Practices}: Google's help documentation emphasizes creating accessible documents through proper use of:
         \begin{itemize}
             \item Headings and styles (Docs, Slides).
-            \item Alternative text for images\footnote{\url{https://support.google.com/docs/answer/6248388}}.
+            \item Alternative text for images\cite{GoogleAltText}.
             \item Accessible fonts and sufficient color contrast.
             \item Descriptive link text.
         \end{itemize}
@@ -73,8 +73,8 @@ Google Workspace tools are web-based and are designed with screen reader compati
 \subsection{LibreOffice (Writer, Calc, Impress)}
 LibreOffice, a free and open-source office suite, also offers accessibility features, though its built-in checking capabilities are less comprehensive than Microsoft Office.
 \begin{itemize}
-    \item \textbf{General Accessibility}: LibreOffice supports keyboard navigation\footnote{\url{https://help.libreoffice.org/latest/en-US/text/sbasic/shared/01040300.html}}, uses standard accessibility APIs where available (e.g., AT-SPI on Linux, MSAA/UIA on Windows), and allows for the use of styles and alt text.
-    \item \textbf{AccessODF Extension}\footnote{\url{https://extensions.libreoffice.org/en/extensions/show/accessodf}}: An extension for LibreOffice Writer (GUI, Java-based). It provides an "Accessibility Check" feature that can detect issues like insufficient color contrast, missing language identification, and improper use of headings (e.g., bolding text instead of applying heading styles). It also offers repair suggestions.
+    \item \textbf{General Accessibility}: LibreOffice supports keyboard navigation\cite{LibreOfficeKeyboard}, uses standard accessibility APIs where available (e.g., AT-SPI on Linux, MSAA/UIA on Windows), and allows for the use of styles and alt text.
+    \item \textbf{AccessODF Extension}\cite{AccessODF}: An extension for LibreOffice Writer (GUI, Java-based). It provides an "Accessibility Check" feature that can detect issues like insufficient color contrast, missing language identification, and improper use of headings (e.g., bolding text instead of applying heading styles). It also offers repair suggestions.
     \item \textbf{Linux Challenges}: A significant consideration for LibreOffice on Linux is the fragmentation and occasional instability of the Linux accessibility stack (GTK/QT updates, lack of a universal accessibility API). This can sometimes lead to screen reader compatibility issues that are beyond the control of the LibreOffice application itself.
     \item \textbf{Operating Systems}: Available on Windows, macOS, and Linux.
 \end{itemize}
@@ -90,14 +90,14 @@ For auditing the underlying accessibility of desktop applications and the docume
 
 \subsubsection{Commercial Tools}
 \begin{itemize}
-    \item \textbf{Accessibility Insights for Windows}\footnote{\url{https://accessibilityinsights.io/docs/windows/overview/}}:
+    \item \textbf{Accessibility Insights for Windows}\cite{InsightsWindows}:
         \begin{itemize}
             \item \textbf{Type}: GUI desktop application.
             \item \textbf{OS}: Windows.
             \item \textbf{Detected Issues}: Uses Windows UI Automation (UIA) to inspect applications. Offers "Live Inspect" to view UIA properties, "FastPass" (automated checks for 60+ common accessibility requirements, visual helper for keyboard tab stops, focus traps, and logical order), and a "Color Contrast Analyzer." It helps identify missing names/labels, incorrect roles, keyboard navigation issues, and insufficient contrast.
             \item \textbf{Usage}: Installs as a standard Windows application. Point it at the application or document you wish to inspect.
         \end{itemize}
-    \item \textbf{Apple's Accessibility Inspector (Xcode)}\footnote{\url{https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html}}:
+    \item \textbf{Apple's Accessibility Inspector (Xcode)}\cite{AppleInspector}:
         \begin{itemize}
             \item \textbf{Type}: GUI desktop application, part of Xcode (Apple's IDE).
             \item \textbf{OS}: macOS.
@@ -108,7 +108,7 @@ For auditing the underlying accessibility of desktop applications and the docume
 
 \subsubsection{Open-Source Tools}
 \begin{itemize}
-    \item \textbf{Color Contrast Analyzer (CCA)}\footnote{\url{https://www.tpgi.com/color-contrast-checker/}}:
+    \item \textbf{Color Contrast Analyzer (CCA)}\cite{CCA}:
         \begin{itemize}
             \item \textbf{Type}: GUI desktop application.
             \item \textbf{OS}: Windows, macOS.
@@ -123,14 +123,14 @@ Given that Google Workspace operates in a web browser, standard web accessibilit
 
 \subsubsection{Commercial Tools}
 \begin{itemize}
-    \item \textbf{Deque axe DevTools}\footnote{\url{https://www.deque.com/axe/}}:
+    \item \textbf{Deque axe DevTools}\cite{AxeDevTools}:
         \begin{itemize}
             \item \textbf{Type}: Browser Extension (GUI) and Command-Line Interface (CLI - `axe-core` library).
             \item \textbf{OS}: Cross-platform (runs in Chrome, Firefox, Edge browsers).
             \item \textbf{Detected Issues}: Widely regarded as a leading accessibility engine. Detects a wide range of WCAG 2.x Level A and AA violations related to screen reader accessibility, including missing alt text, invalid ARIA usage, insufficient color contrast, keyboard accessibility issues, improper heading structure, and missing form labels. Provides detailed explanations and links to remediation guidance.
             \item \textbf{Usage}: Browser extension integrates into developer tools. CLI version can be integrated into automated testing pipelines.
         \end{itemize}
-    \item \textbf{ARC Toolkit (TPGi)}\footnote{\url{https://www.tpgi.com/arc-toolkit/}}:
+    \item \textbf{ARC Toolkit (TPGi)}\cite{ARCToolkit}:
         \begin{itemize}
             \item \textbf{Type}: Browser Extension (GUI).
             \item \textbf{OS}: Cross-platform (Chrome).
@@ -141,35 +141,35 @@ Given that Google Workspace operates in a web browser, standard web accessibilit
 
 \subsubsection{Open-Source Tools}
 \begin{itemize}
-    \item \textbf{Lighthouse (Google)}\footnote{\url{https://developers.google.com/web/tools/lighthouse/}}:
+    \item \textbf{Lighthouse (Google)}\cite{Lighthouse}:
         \begin{itemize}
             \item \textbf{Type}: Built into Chrome DevTools (GUI) and CLI.
             \item \textbf{OS}: Cross-platform (runs within Chrome browser).
             \item \textbf{Detected Issues}: Provides an accessibility score and flags issues based on WCAG principles and ARIA best practices. Checks for alt text, discernible names for links/buttons, proper heading structure, language attributes, table headers, video captions, unique IDs, and contrast.
             \item \textbf{Usage}: Open Chrome DevTools, navigate to the "Lighthouse" tab, and generate a report. CLI version for automated testing.
         \end{itemize}
-    \item \textbf{WAVE (WebAIM)}\footnote{\url{https://wave.webaim.org/}}:
+    \item \textbf{WAVE (WebAIM)}\cite{WAVE}:
         \begin{itemize}
             \item \textbf{Type}: Browser Extension (GUI) and Online Tool.
             \item \textbf{OS}: Cross-platform (Chrome, Firefox, Edge browser extensions; online tool for any browser).
             \item \textbf{Detected Issues}: Provides visual feedback by injecting icons and indicators directly into the web page. Identifies errors, contrast errors, alerts, features, structural elements, and ARIA usage. Maps issues to WCAG 2.x and Section 508. Can detect issues in elements that might be hidden or complex for screen readers.
             \item \textbf{Usage}: Install the browser extension or paste a URL into the online tool.
         \end{itemize}
-    \item \textbf{Pa11y}\footnote{\url{https://pa11y.org/}}:
+    \item \textbf{Pa11y}\cite{Pa11y}:
         \begin{itemize}
             \item \textbf{Type}: CLI tool, also has dashboards and CI/CD integrations.
             \item \textbf{OS}: Cross-platform (Node.js).
             \item \textbf{Detected Issues}: Automates web accessibility testing. Uses HTML CodeSniffer and Axe to detect WCAG issues. Ideal for integrating into Continuous Integration/Continuous Deployment (CI/CD) pipelines to catch issues early.
             \item \textbf{Usage}: Run from the command line, specifying URLs to audit. Outputs in various formats (CLI, CSV, HTML, JSON).
         \end{itemize}
-    \item \textbf{ANDI (Accessible Name & Description Inspector)}\footnote{\url{https://www.ssa.gov/accessibility/andi/help/howtouse.html}}:
+    \item \textbf{ANDI (Accessible Name & Description Inspector)}\cite{ANDI}:
         \begin{itemize}
             \item \textbf{Type}: Browser Bookmarklet (GUI overlay).
             \item \textbf{OS}: Cross-platform (works in any modern browser).
             \item \textbf{Detected Issues}: Provides a visual overlay that highlights accessibility issues and information. Useful for manual inspection, revealing accessible names and descriptions of elements, checking heading hierarchy, links/buttons, images (alt text), contrast, and keyboard accessibility (tab key). Offers practical suggestions.
             \item \textbf{Usage}: Drag a bookmarklet to your browser's toolbar, then click it on any web page.
         \end{itemize}
-    \item \textbf{IBM Equal Access Accessibility Checker}\footnote{\url{https://www.ibm.com/able/toolkit/develop/checker/}}:
+    \item \textbf{IBM Equal Access Accessibility Checker}\cite{IBMChecker}:
         \begin{itemize}
             \item \textbf{Type}: Browser Extension (GUI) and Node.js package (CLI).
             \item \textbf{OS}: Cross-platform (Chrome, Firefox browser extensions; Node.js for CLI).
@@ -185,16 +185,16 @@ Automated tools catch many issues, but manual testing with screen readers is ind
 \begin{itemize}
     \item \textbf{Screen Readers (Assistive Technologies)}:
         \begin{itemize}
-            \item \textbf{JAWS (Job Access With Speech)}\footnote{\url{https://www.freedomscientific.com/products/software/jaws/}}: Commercial, Windows. A widely used and powerful screen reader.
-            \item \textbf{NVDA (NonVisual Desktop Access)}\footnote{\url{https://www.nvaccess.org/}}: Free, open-source, Windows. Excellent for comprehensive testing and very popular.
-            \item \textbf{VoiceOver}\footnote{\url{https://support.apple.com/en-us/HT206176}}: Built-in to macOS and iOS. Essential for testing accessibility on Apple platforms.
-            \item \textbf{Orca}\footnote{\url{https://help.gnome.org/users/orca/stable/}}: Free, open-source, Linux (primarily for GNOME desktop environment).
-            \item \textbf{ChromeVox}\footnote{\url{https://support.google.com/chromebooks/answer/7031755}}: Built-in to Chrome OS, also available as a Chrome browser extension for Windows/macOS. Useful for testing Google Workspace.
+            \item \textbf{JAWS (Job Access With Speech)}\cite{JAWS}: Commercial, Windows. A widely used and powerful screen reader.
+            \item \textbf{NVDA (NonVisual Desktop Access)}\cite{NVDA}: Free, open-source, Windows. Excellent for comprehensive testing and very popular.
+            \item \textbf{VoiceOver}\cite{VoiceOver}: Built-in to macOS and iOS. Essential for testing accessibility on Apple platforms.
+            \item \textbf{Orca}\cite{Orca}: Free, open-source, Linux (primarily for GNOME desktop environment).
+            \item \textbf{ChromeVox}\cite{ChromeVox}: Built-in to Chrome OS, also available as a Chrome browser extension for Windows/macOS. Useful for testing Google Workspace.
             \item \textbf{Usage}: Install and learn the basic commands. Use them to navigate and interact with documents and web applications as a screen reader user would, listening for clarity, context, and logical flow.
         \end{itemize}
     \item \textbf{Screen Reader Automation Drivers}:
         \begin{itemize}
-            \item \textbf{Guidepup}\footnote{\url{https://www.guidepup.dev/}}:
+            \item \textbf{Guidepup}\cite{Guidepup}:
                 \begin{itemize}
                     \item \textbf{Type}: JavaScript API (CLI/scriptable).
                     \item \textbf{OS}: macOS (VoiceOver), Windows (NVDA).
@@ -297,3 +297,57 @@ This section outlines prevalent accessibility issues found in office documents a
 \label{sec:office-conclusion}
 
 Conducting a comprehensive accessibility audit for Microsoft Office, LibreOffice, and Google Suite tools requires a multi-faceted approach. It involves a foundational understanding of WCAG, Section 508, and ARIA, leveraging the built-in accessibility checkers provided by the office suites, and employing a range of commercial and open-source audit tools. Crucially, automated checks must be complemented by manual screen reader testing to ensure a truly accessible user experience. By diligently addressing the common failures identified in this report, organizations and individuals can significantly enhance the accessibility of their digital documents, fostering inclusivity and providing equitable access to information for all users.
+
+\begin{thebibliography}{99}
+
+\bibitem{WCAG} World Wide Web Consortium (W3C). \textit{Web Content Accessibility Guidelines (WCAG)}. Available at: \url{https://www.w3.org/WAI/standards-guidelines/wcag/} [Accessed: July 4, 2025].
+
+\bibitem{Section508} U.S. General Services Administration. \textit{Section 508 of the Rehabilitation Act}. Available at: \url{https://www.section508.gov/} [Accessed: July 4, 2025].
+
+\bibitem{ARIA} World Wide Web Consortium (W3C). \textit{Accessible Rich Internet Applications (WAI-ARIA)}. Available at: \url{https://www.w3.org/WAI/ARIA/} [Accessed: July 4, 2025].
+
+\bibitem{MSAccessibilityChecker} Microsoft. \textit{Improve accessibility with the Accessibility Checker}. Available at: \url{https://support.microsoft.com/en-us/office/improve-accessibility-with-the-accessibility-checker-a78ab7ee-b363-4f7e-874d-b6a444954c6a} [Accessed: July 4, 2025].
+
+\bibitem{GoogleShortcuts} Google. \textit{Keyboard shortcuts for Google Docs, Sheets, and Slides}. Available at: \url{https://support.google.com/docs/answer/179738} [Accessed: July 4, 2025].
+
+\bibitem{SheetsChecker} Google Workspace Marketplace. \textit{Accessibility Checker for Sheets}. Available at: \url{https://workspace.google.com/marketplace/app/accessibility_checker_for_sheets/544321949511} [Accessed: July 4, 2025].
+
+\bibitem{GoogleAltText} Google. \textit{Add or edit alt text}. Available at: \url{https://support.google.com/docs/answer/6248388} [Accessed: July 4, 2025].
+
+\bibitem{LibreOfficeKeyboard} LibreOffice. \textit{Keyboard Shortcuts}. Available at: \url{https://help.libreoffice.org/latest/en-US/text/sbasic/shared/01040300.html} [Accessed: July 4, 2025].
+
+\bibitem{AccessODF} LibreOffice Extensions. \textit{AccessODF}. Available at: \url{https://extensions.libreoffice.org/en/extensions/show/accessodf} [Accessed: July 4, 2025].
+
+\bibitem{InsightsWindows} Microsoft. \textit{Accessibility Insights for Windows}. Available at: \url{https://accessibilityinsights.io/docs/windows/overview/} [Accessed: July 4, 2025].
+
+\bibitem{AppleInspector} Apple. \textit{Accessibility Inspector}. Available at: \url{https://developer.apple.com/library/archive/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html} [Accessed: July 4, 2025].
+
+\bibitem{CCA} TPGi. \textit{Color Contrast Analyzer}. Available at: \url{https://www.tpgi.com/color-contrast-checker/} [Accessed: July 4, 2025].
+
+\bibitem{AxeDevTools} Deque Systems. \textit{axe DevTools}. Available at: \url{https://www.deque.com/axe/} [Accessed: July 4, 2025].
+
+\bibitem{ARCToolkit} TPGi. \textit{ARC Toolkit}. Available at: \url{https://www.tpgi.com/arc-toolkit/} [Accessed: July 4, 2025].
+
+\bibitem{Lighthouse} Google. \textit{Lighthouse}. Available at: \url{https://developers.google.com/web/tools/lighthouse/} [Accessed: July 4, 2025].
+
+\bibitem{WAVE} WebAIM. \textit{WAVE Web Accessibility Evaluation Tool}. Available at: \url{https://wave.webaim.org/} [Accessed: July 4, 2025].
+
+\bibitem{Pa11y} Pa11y. \textit{Pa11y}. Available at: \url{https://pa11y.org/} [Accessed: July 4, 2025].
+
+\bibitem{ANDI} Social Security Administration. \textit{Accessible Name & Description Inspector (ANDI)}. Available at: \url{https://www.ssa.gov/accessibility/andi/help/howtouse.html} [Accessed: July 4, 2025].
+
+\bibitem{IBMChecker} IBM. \textit{Equal Access Accessibility Checker}. Available at: \url{https://www.ibm.com/able/toolkit/develop/checker/} [Accessed: July 4, 2025].
+
+\bibitem{JAWS} Freedom Scientific. \textit{JAWS Screen Reader}. Available at: \url{https://www.freedomscientific.com/products/software/jaws/} [Accessed: July 4, 2025].
+
+\bibitem{NVDA} NV Access. \textit{NVDA Screen Reader}. Available at: \url{https://www.nvaccess.org/} [Accessed: July 4, 2025].
+
+\bibitem{VoiceOver} Apple. \textit{VoiceOver for macOS and iOS}. Available at: \url{https://support.apple.com/en-us/HT206176} [Accessed: July 4, 2025].
+
+\bibitem{Orca} GNOME Project. \textit{Orca Screen Reader}. Available at: \url{https://help.gnome.org/users/orca/stable/} [Accessed: July 4, 2025].
+
+\bibitem{ChromeVox} Google. \textit{ChromeVox}. Available at: \url{https://support.google.com/chromebooks/answer/7031755} [Accessed: July 4, 2025].
+
+\bibitem{Guidepup} Guidepup. \textit{Guidepup: Automated Screen Reader Testing}. Available at: \url{https://www.guidepup.dev/} [Accessed: July 4, 2025].
+
+\end{thebibliography}

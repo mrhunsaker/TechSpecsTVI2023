@@ -1,224 +1,224 @@
 \chapter{Creating and Verifying PDF Accessibility with Adobe Acrobat}
 \label{chap:pdf-accessibility-acrobat}
 
-\section*{Overview}
-You can use Acrobat to make PDFs meet common accessibility standards, such as the latest version of the Web Content Accessibility Guidelines (WCAG) and PDF/UA (Universal Access, or ISO 14289)\footnote{Adobe HelpX. "Create and verify PDF accessibility." \url{https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html}. Accessed July 5, 2025.}. Acrobat provides the following accessibility tools:
+\section{Overview}
+You can use Acrobat to make PDFs meet common accessibility standards, such as the latest version of the Web Content Accessibility Guidelines (WCAG) and PDF/UA (Universal Access, or ISO 14289)\cite{AdobeHelpX}. Acrobat provides the following accessibility tools:
 \begin{itemize}
-    \item \textbf{Prepare for accessibility}: A predefined action that automates many tasks, checks accessibility, and provides instructions for items requiring manual fixes. It quickly identifies and helps fix problem areas.
-    \item \textbf{Check for accessibility}: Verifies whether the document conforms to accessibility standards, such as PDF/UA and WCAG 2.0.
-    \item \textbf{Open accessibility report}: Summarizes the findings of the accessibility check and contains links to tools and documentation that assist in fixing problems.
-    \item \textbf{Reading options}: Includes settings for available reading options.
-    \item \textbf{Fix reading order}: The Reading Order tool can examine the structure, reading order, and contents of a PDF.
-    \item \textbf{Save as accessible text}: Allows you to read the saved text file in a word-processing application and emulate the end-user experience of readers who use a braille printer to read the document.
+    \item \emph{Prepare for accessibility}: A predefined action that automates many tasks, checks accessibility, and provides instructions for items requiring manual fixes. It quickly identifies and helps fix problem areas.
+    \item \emph{Check for accessibility}: Verifies whether the document conforms to accessibility standards, such as PDF/UA and WCAG 2.0.
+    \item \emph{Open accessibility report}: Summarizes the findings of the accessibility check and contains links to tools and documentation that assist in fixing problems.
+    \item \emph{Reading options}: Includes settings for available reading options.
+    \item \emph{Fix reading order}: The Reading Order tool can examine the structure, reading order, and contents of a PDF.
+    \item \emph{Save as accessible text}: Allows you to read the saved text file in a word-processing application and emulate the end-user experience of readers who use a braille printer to read the document.
 \end{itemize}
 
 ---
 
-\section*{Check Accessibility of PDFs (Acrobat Pro)}
+\section{Check Accessibility of PDFs (Acrobat Pro)}
 You can use the Prepare for accessibility tool to check and make a PDF accessible. It prompts you to address accessibility issues, such as a missing document description or title. It looks for common elements that need further action, such as scanned text, form fields, tables, and images. You can run a Prepare for accessibility action on all PDFs except dynamic forms (XFA documents) or portfolios\footnotemark[1].
 
-\subsection*{Steps to Check for Accessibility}
+\subsection{Steps to Check for Accessibility}
 \begin{enumerate}
-    \item Open the PDF. From the global bar in the upper left, select \textbf{All tools}, select \textbf{View more}, and then select \textbf{Prepare for accessibility}. The Prepare for accessibility panel with a list of available actions appears on the left panel.
-    \item From the left panel, select \textbf{Check for accessibility}.
-    \item From the \textbf{Accessibility Checker Options} dialog, select the required options and then select \textbf{Start Checking}.
+    \item Open the PDF. From the global bar in the upper left, select \emph{All tools}, select \emph{View more}, and then select \emph{Prepare for accessibility}. The Prepare for accessibility panel with a list of available actions appears on the left panel.
+    \item From the left panel, select \emph{Check for accessibility}.
+    \item From the \emph{Accessibility Checker Options} dialog, select the required options and then select \emph{Start Checking}.
     \item Once the check is complete, a panel appears on the right that lists the accessibility issues. Select each issue type drop-down to view the details and make suggested fixes.
 \end{enumerate}
 
 Since the Accessibility Check feature does not distinguish between essential and nonessential content types, some reported issues may not affect readability. It is suggested that you review all issues to determine which ones need correction. The report displays one of the following statuses for each rule check\footnotemark[1]:
 \begin{itemize}
-    \item \textbf{Passed}: The item is accessible.
-    \item \textbf{Skipped By User}: Rule was not checked because it wasn't selected in the Accessibility Checker Options dialog box.
-    \item \textbf{Needs Manual Check}: The Full Check/Accessibility Check feature couldn't check the item automatically. Verify the item manually.
-    \item \textbf{Failed}: The item didn't pass the accessibility check.
+    \item \emph{Passed}: The item is accessible.
+    \item \emph{Skipped By User}: Rule was not checked because it wasn't selected in the Accessibility Checker Options dialog box.
+    \item \emph{Needs Manual Check}: The Full Check/Accessibility Check feature couldn't check the item automatically. Verify the item manually.
+    \item \emph{Failed}: The item didn't pass the accessibility check.
 \end{itemize}
-To view a complete report of the check, from the left panel, select \textbf{Open accessibility report}. A detailed report is displayed in the right panel.
+To view a complete report of the check, from the left panel, select \emph{Open accessibility report}. A detailed report is displayed in the right panel.
 
 ---
 
-\section*{Fix Accessibility Issues (Acrobat Pro)}
-To fix a failed check after running the Prepare for accessibility check, select the ellipsis in the Accessibility Checker panel on the right and select one of the following options from the context menu\footnotemark[1]:
+\section{Fix Accessibility Issues (Acrobat Pro)}
+To fix a failed check after running the Prepare for accessibility check, select the ellipsis in the Accessibility Checker panel on the right and select one of the following options from the context menu\cite{AdobeHelpX}:
 \begin{itemize}
-    \item \textbf{Fix}: Acrobat either fixes the item automatically or displays a dialog box prompting you to fix the item manually.
-    \item \textbf{Skip Rule}: Deselects this option in the Accessibility Checker Options dialog box for future checks of this document, and changes the item status to Skipped.
-    \item \textbf{Explain}: Opens the online Help where you can get more details about the accessibility issue.
-    \item \textbf{Check Again}: Runs the checker again on all items. Choose this option after modifying one or more items.
-    \item \textbf{Show Report}: Displays a report with links to tips on how to repair failed checks.
-    \item \textbf{Options}: Opens the Accessibility Checker Options dialog box, so you can select which checks are performed.
+    \item \emph{Fix}: Acrobat either fixes the item automatically or displays a dialog box prompting you to fix the item manually.
+    \item \emph{Skip Rule}: Deselects this option in the Accessibility Checker Options dialog box for future checks of this document, and changes the item status to Skipped.
+    \item \emph{Explain}: Opens the online Help where you can get more details about the accessibility issue.
+    \item \emph{Check Again}: Runs the checker again on all items. Choose this option after modifying one or more items.
+    \item \emph{Show Report}: Displays a report with links to tips on how to repair failed checks.
+    \item \emph{Options}: Opens the Accessibility Checker Options dialog box, so you can select which checks are performed.
 \end{itemize}
 
 ---
 
-\section*{Accessibility Issues}
+\section{Accessibility Issues}
 
-\subsection*{Document}
-\subsubsection*{Prevent security settings from interfering with screen readers}
-A document author can specify that no part of an accessible PDF is to be copied, printed, extracted, commented on, or edited. This setting could interfere with a screen reader's ability to read the document because screen readers must be able to copy or extract the document's text to convert it to speech. This flag reports whether it's necessary to turn on the security settings that allow accessibility\footnotemark[1].
+\subsection{Document}
+\subsubsection{Prevent security settings from interfering with screen readers}
+A document author can specify that no part of an accessible PDF is to be copied, printed, extracted, commented on, or edited. This setting could interfere with a screen reader's ability to read the document because screen readers must be able to copy or extract the document's text to convert it to speech. This flag reports whether it's necessary to turn on the security settings that allow accessibility\cite{AdobeHelpX}.
 
-To fix the rule automatically, go to \textbf{All tools} > \textbf{Prepare for accessibility} > \textbf{Check for accessibility} and ensure that the option \textbf{Accessibility permission flat is set} is selected before running the check. Then, select \textbf{Open accessibility report}, and from the right panel, right-click \textbf{Accessibility permission flag} and select \textbf{Fix}.
+To fix the rule automatically, go to \emph{All tools} > \emph{Prepare for accessibility} > \emph{Check for accessibility} and ensure that the option \emph{Accessibility permission flat is set} is selected before running the check. Then, select \emph{Open accessibility report}, and from the right panel, right-click \emph{Accessibility permission flag} and select \emph{Fix}.
 
 To manually fix the accessibility permissions:
 \begin{enumerate}
-    \item Select the hamburger menu (Windows) or the \textbf{File} menu (macOS) > \textbf{Document properties}.
-    \item In the \textbf{Document properties} dialog:
+    \item Select the hamburger menu (Windows) or the \emph{File} menu (macOS) > \emph{Document properties}.
+    \item In the \emph{Document properties} dialog:
     \begin{itemize}
-        \item Select the \textbf{Security} tab.
-        \item From the \textbf{Security Method} drop-down, select \textbf{No Security}.
-        \item Select \textbf{OK}.
+        \item Select the \emph{Security} tab.
+        \item From the \emph{Security Method} drop-down, select \emph{No Security}.
+        \item Select \emph{OK}.
     \end{itemize}
 \end{enumerate}
 If your assistive technology product is registered with Adobe as a Trusted Agent, you can read PDFs that might be inaccessible to another assistive technology product. Acrobat recognizes when a screen reader or other product is a Trusted Agent and overrides security settings that would typically limit access to the content for accessibility purposes. However, the security settings remain in effect for all other purposes, such as to prevent printing, copying, extracting, commenting, or editing text\footnotemark[1].
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG section: 1.1.1 Non-text Content (A), 4.1.2 Name, role, value\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG section: 1.1.1 Non-text Content (A), 4.1.2 Name, role, value\cite{WCAG}.
 
 ---
 
-\subsubsection*{Image-only PDF}
-This check reports whether the document contains non-text content that is not accessible. If the document appears to contain text, but doesn't contain fonts, it could be an image-only PDF file\footnotemark[1].
+\subsubsection{Image-only PDF}
+This check reports whether the document contains non-text content that is not accessible. If the document appears to contain text, but doesn't contain fonts, it could be an image-only PDF file\cite{AdobeHelpX}.
 
-To fix the rule automatically, go to \textbf{All tools} > \textbf{Prepare for accessibility} > \textbf{Check for accessibility}. Then, ensure that the option \textbf{Document is not-image only PDF} is deselected before running the check.
+To fix the rule automatically, go to \emph{All tools} > \emph{Prepare for accessibility} > \emph{Check for accessibility}. Then, ensure that the option \emph{Document is not-image only PDF} is deselected before running the check.
 To fix this rule check manually, use OCR to recognize text in scanned images:
 \begin{enumerate}
-    \item From the \textbf{All tools} menu, select \textbf{Scan \& OCR}.
-    \item From the \textbf{Scan \& OCR} panel, under \textbf{Recognize Text}, select \textbf{In this file}.
-    \item From the \textbf{Pages} dialog, select the pages you want to process, the document language, and then select \textbf{Recognize text}.
+    \item From the \emph{All tools} menu, select \emph{Scan \& OCR}.
+    \item From the \emph{Scan \& OCR} panel, under \emph{Recognize Text}, select \emph{In this file}.
+    \item From the \emph{Pages} dialog, select the pages you want to process, the document language, and then select \emph{Recognize text}.
 \end{enumerate}
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG section: 1.1.1. Non-text content (A)\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG section: 1.1.1. Non-text content (A)\cite{WCAG}.
 
 ---
 
-\subsubsection*{Tagged PDF}
-If this rule check fails, the document isn't tagged to specify the correct reading order\footnotemark[1].
-To fix the item automatically, go to \textbf{All tools} > \textbf{Prepare for accessibility} > \textbf{Check for accessibility}. Then, ensure that the option \textbf{Document is tagged PDF} is selected before running the check. Acrobat automatically adds tags to the PDF.
+\subsubsection{Tagged PDF}
+If this rule check fails, the document isn't tagged to specify the correct reading order\cite{AdobeHelpX}.
+To fix the item automatically, go to \emph{All tools} > \emph{Prepare for accessibility} > \emph{Check for accessibility}. Then, ensure that the option \emph{Document is tagged PDF} is selected before running the check. Acrobat automatically adds tags to the PDF.
 
 To specify tags manually, do one of the following:
 \begin{itemize}
     \item Enable tagging in the source application and re-create the PDF.
-    \item Select \textbf{All tools} > \textbf{Prepare for accessibility} > \textbf{Automatically tag PDF}. If there are any issues, the Add Tags Report appears in the navigation pane. It lists potential problems by page, provides a navigational link to each problem, and suggests ways to fix them.
-    \item Select \textbf{All tools} > \textbf{Prepare for Accessibility} > \textbf{Fix reading order} and create the tags tree. For more information, see \hyperref[sec:reading-order]{Reading Order}.
-    \item Open the \textbf{Tags} panel and create the tags tree manually. To display the Tags panel, select the hamburger menu (Windows) > \textbf{View} or select the \textbf{View} menu (macOS), and then select \textbf{Show/Hide} > \textbf{Side panels} > \textbf{Accessibility tags}. For more information, see the \hyperref[sec:edit-structure]{Edit document structure with the Content and Tags panel}.
+    \item Select \emph{All tools} > \emph{Prepare for accessibility} > \emph{Automatically tag PDF}. If there are any issues, the Add Tags Report appears in the navigation pane. It lists potential problems by page, provides a navigational link to each problem, and suggests ways to fix them.
+    \item Select \emph{All tools} > \emph{Prepare for Accessibility} > \emph{Fix reading order} and create the tags tree. For more information, see \hyperref[sec:reading-order]{Reading Order}.
+    \item Open the \emph{Tags} panel and create the tags tree manually. To display the Tags panel, select the hamburger menu (Windows) > \emph{View} or select the \emph{View} menu (macOS), and then select \emph{Show/Hide} > \emph{Side panels} > \emph{Accessibility tags}. For more information, see the \hyperref[sec:edit-structure]{Edit document structure with the Content and Tags panel}.
 \end{itemize}
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG section: 1.3.1 Info and Relationships, 1.3.2, 2.4.1, 2.4.4, 2.4.5, 2.4.6, 3.1.2, 3.3.2, 4.1.2 Name, role, value\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG section: 1.3.1 Info and Relationships, 1.3.2, 2.4.1, 2.4.4, 2.4.5, 2.4.6, 3.1.2, 3.3.2, 4.1.2 Name, role, value\cite{WCAG}.
 
 ---
 
-\subsubsection*{Logical reading order}
-Verify this rule check manually. Make sure that the reading order displayed in the Tags panel coincides with the logical reading order of the document\footnotemark[1].
+\subsubsection{Logical reading order}
+Verify this rule check manually. Make sure that the reading order displayed in the Tags panel coincides with the logical reading order of the document\cite{AdobeHelpX}.
 
 ---
 
-\subsubsection*{Document language}
+\subsubsection{Document language}
 Setting the document language in a PDF enables some screen readers to switch to the appropriate language. This check determines whether the primary text language for the PDF is specified. If the check fails, set the language\footnotemark[1].
-To set the language automatically, select \textbf{Primary Language} in the Accessibility Checker tab and then choose \textbf{Fix} from the \textbf{Options} menu. Choose a language in the \textbf{Set Reading Language} dialog box, and then select \textbf{OK}.
+To set the language automatically, select \emph{Primary Language} in the Accessibility Checker tab and then choose \emph{Fix} from the \emph{Options} menu. Choose a language in the \emph{Set Reading Language} dialog box, and then select \emph{OK}.
 
 To set the language manually, do one of the following:
 \begin{itemize}
-    \item Choose the hamburger menu (Windows) or the \textbf{File} menu (macOS) > \textbf{Properties} > \textbf{Advanced}, and then select a language from the drop-down list in the \textbf{Reading Options} section. (If the language doesn't appear in the drop-down list, you can enter the ISO 639 code for the language in the Language field.) This setting applies the primary language for the entire PDF.
-    \item Set the language for all text in a subtree of the tags tree. Open the \textbf{Tags} panel. Expand the Tags root and select an element. Then choose \textbf{Properties} from the \textbf{Options} menu. Choose a language from the \textbf{Language} drop-down list. (To display the Tags panel, select the hamburger menu (Windows) > \textbf{View} or select the \textbf{View} menu (macOS), and then select \textbf{Show/Hide} > \textbf{Side panels} > \textbf{Accessibility tags}.)
-    \item Set the language for a block of text by selecting the text element or container element in the \textbf{Content} panel. Then, right-click (Windows) or Ctrl-click (macOS) the text, choose \textbf{Properties} from the context menu, and choose a language from the \textbf{Language} drop-down list. (To display the Content panel, select the hamburger menu (Windows) > \textbf{View} or select the \textbf{View} menu (macOS), and then select \textbf{Show/Hide} > \textbf{Side panels} > \textbf{Content}.)
+    \item Choose the hamburger menu (Windows) or the \emph{File} menu (macOS) > \emph{Properties} > \emph{Advanced}, and then select a language from the drop-down list in the \emph{Reading Options} section. (If the language doesn't appear in the drop-down list, you can enter the ISO 639 code for the language in the Language field.) This setting applies the primary language for the entire PDF.
+    \item Set the language for all text in a subtree of the tags tree. Open the \emph{Tags} panel. Expand the Tags root and select an element. Then choose \emph{Properties} from the \emph{Options} menu. Choose a language from the \emph{Language} drop-down list. (To display the Tags panel, select the hamburger menu (Windows) > \emph{View} or select the \emph{View} menu (macOS), and then select \emph{Show/Hide} > \emph{Side panels} > \emph{Accessibility tags}.)
+    \item Set the language for a block of text by selecting the text element or container element in the \emph{Content} panel. Then, right-click (Windows) or Ctrl-click (macOS) the text, choose \emph{Properties} from the context menu, and choose a language from the \emph{Language} drop-down list. (To display the Content panel, select the hamburger menu (Windows) > \emph{View} or select the \emph{View} menu (macOS), and then select \emph{Show/Hide} > \emph{Side panels} > \emph{Content}.)
 \end{itemize}
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG section: Language of Page (Level A)\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG section: Language of Page (Level A)\cite{WCAG}.
 
 ---
 
-\subsubsection*{Title}
-This check reports whether there is a title in the Acrobat application title bar\footnotemark[1].
-To fix the title automatically, select \textbf{Title} in the Accessibility Checker tab, and choose \textbf{Fix} from the \textbf{Options} menu. Enter the document title in the \textbf{Description} dialog box (deselect \textbf{Leave As Is}, if necessary).
+\subsubsection{Title}
+This check reports whether there is a title in the Acrobat application title bar\cite{AdobeHelpX}.
+To fix the title automatically, select \emph{Title} in the Accessibility Checker tab, and choose \emph{Fix} from the \emph{Options} menu. Enter the document title in the \emph{Description} dialog box (deselect \emph{Leave As Is}, if necessary).
 
 To fix the title manually:
 \begin{enumerate}
-    \item Select the hamburger menu (Windows) or the \textbf{File} menu (macOS) > \textbf{Document properties}.
-    \item In the dialog that opens, under \textbf{Description}, enter a title in the \textbf{Title} text box.
-    \item Select \textbf{Initial View} and then from the \textbf{Show} drop-down, select \textbf{Document Title}.
-    \item Select \textbf{OK}.
+    \item Select the hamburger menu (Windows) or the \emph{File} menu (macOS) > \emph{Document properties}.
+    \item In the dialog that opens, under \emph{Description}, enter a title in the \emph{Title} text box.
+    \item Select \emph{Initial View} and then from the \emph{Show} drop-down, select \emph{Document Title}.
+    \item Select \emph{OK}.
 \end{enumerate}
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG section: 2.4 Page Titled (Level A)\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG section: 2.4 Page Titled (Level A)\cite{WCAG}.
 
 ---
 
-\subsubsection*{Bookmarks}
-This check fails when the document has 21 or more pages but doesn't have bookmarks that parallel the document structure\footnotemark[1].
-To add bookmarks to the document, select \textbf{Bookmarks} on the Accessibility Checker panel, and choose \textbf{Fix} from the \textbf{Options} menu. In the \textbf{Structure Elements} dialog box, select the elements that you want to use as bookmarks, and click \textbf{OK}. (You can also access the \textbf{Structure Elements} dialog box by clicking the \textbf{Options} menu on the Bookmark tab and selecting the \textbf{New Bookmarks From Structure} command.)
+\subsubsection{Bookmarks}
+This check fails when the document has 21 or more pages but doesn't have bookmarks that parallel the document structure\cite{AdobeHelpX}.
+To add bookmarks to the document, select \emph{Bookmarks} on the Accessibility Checker panel, and choose \emph{Fix} from the \emph{Options} menu. In the \emph{Structure Elements} dialog box, select the elements that you want to use as bookmarks, and click \emph{OK}. (You can also access the \emph{Structure Elements} dialog box by clicking the \emph{Options} menu on the Bookmark tab and selecting the \emph{New Bookmarks From Structure} command.)
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG sections: 2.4.1 Bypass Blocks (Level A), 2.4.5 Multiple Ways (Level AA)\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG sections: 2.4.1 Bypass Blocks (Level A), 2.4.5 Multiple Ways (Level AA)\cite{WCAG}.
 
 ---
 
-\subsubsection*{Color contrast}
-When this check fails, it's possible that the document contains content that isn't accessible to people who are color-blind\footnotemark[1].
+\subsubsection{Color contrast}
+When this check fails, it's possible that the document contains content that isn't accessible to people who are color-blind\cite{AdobeHelpX}.
 To fix this issue, make sure that the document's\vfill
-\subsection*{References}
+\subsection{References}
 \begin{enumerate}
     \item Adobe HelpX. "Create and verify PDF accessibility." \url{https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html}. Accessed July 5, 2025.
 \end{enumerate}
 
-\end{document} content adheres to the guidelines outlined in WCAG section 1.4.3. Or, include a recommendation that the PDF viewer use high-contrast colors:
+content adheres to the guidelines outlined in WCAG section 1.4.3. Or, include a recommendation that the PDF viewer use high-contrast colors:
 \begin{enumerate}
-    \item Select the hamburger menu (Windows) or the \textbf{Acrobat} menu (macOS) > \textbf{Preferences}.
-    \item In the dialog that opens, from the left panel, select \textbf{Accessibility}.
-    \item Select \textbf{Replace Document Colors} and then select \textbf{Use High-Contrast Colors}. From the \textbf{High-contrast color combination}, choose the color combination that you want and then select \textbf{OK}.
+    \item Select the hamburger menu (Windows) or the \emph{Acrobat} menu (macOS) > \emph{Preferences}.
+    \item In the dialog that opens, from the left panel, select \emph{Accessibility}.
+    \item Select \emph{Replace Document Colors} and then select \emph{Use High-Contrast Colors}. From the \emph{High-contrast color combination}, choose the color combination that you want and then select \emph{OK}.
 \end{enumerate}
 
 ---
 
-\subsection*{Page Content}
-\subsubsection*{Tagged content}
-This check reports whether all content in the document is tagged. Ensure that all content in the document is either included in the Tags tree or marked as an artifact\footnotemark[1].
+\subsection{Page Content}
+\subsubsection{Tagged content}
+This check reports whether all content in the document is tagged. Ensure that all content in the document is either included in the Tags tree or marked as an artifact\cite{AdobeHelpX}.
 Do one of the following to fix this rule check:
 \begin{itemize}
-    \item Open the \textbf{Content} panel and right-click (Windows) or Ctrl-click (macOS) the content that you want to mark as an artifact. Then, select \textbf{Create Artifact} from the context menu. (To display the Content tab, select the hamburger menu (Windows) > \textbf{View} or select the \textbf{View} menu (macOS), and then select \textbf{Show/Hide} > \textbf{Side panels} > \textbf{Content}.)
-    \item Tag the content by choosing \textbf{All tools} > \textbf{Prepare for accessibility} > \textbf{Fix reading order}. Select the content, and then apply tags as necessary.
-    \item Assign tags using the \textbf{Tags} panel. Right-click (Windows) or Ctrl-click (Mac OS) the element in the Tags tree, and choose \textbf{Create Tag From Selection}. Items such as comments, links, and annotations don't always appear in the Tags tree. To find these items, choose \textbf{Find} from the Options menu. (To display the Tags panel, select the hamburger menu (Windows) > \textbf{View} or select the \textbf{View} menu (macOS), and then select \textbf{Show/Hide} > \textbf{Side panels} > \textbf{Accessibility tags}.)
+    \item Open the \emph{Content} panel and right-click (Windows) or Ctrl-click (macOS) the content that you want to mark as an artifact. Then, select \emph{Create Artifact} from the context menu. (To display the Content tab, select the hamburger menu (Windows) > \emph{View} or select the \emph{View} menu (macOS), and then select \emph{Show/Hide} > \emph{Side panels} > \emph{Content}.)
+    \item Tag the content by choosing \emph{All tools} > \emph{Prepare for accessibility} > \emph{Fix reading order}. Select the content, and then apply tags as necessary.
+    \item Assign tags using the \emph{Tags} panel. Right-click (Windows) or Ctrl-click (Mac OS) the element in the Tags tree, and choose \emph{Create Tag From Selection}. Items such as comments, links, and annotations don't always appear in the Tags tree. To find these items, choose \emph{Find} from the Options menu. (To display the Tags panel, select the hamburger menu (Windows) > \emph{View} or select the \emph{View} menu (macOS), and then select \emph{Show/Hide} > \emph{Side panels} > \emph{Accessibility tags}.)
 \end{itemize}
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG sections: 1.1.1 Non-text content (A), 1.3.1 Info and Relationships (Level A), 1.3.2 Meaningful Sequence (Level A), 2.4.4 Link Purpose (In Context) (Level A), 3.1.2 Language of Parts (Level AA), 4.1.2 Name, role, value\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG sections: 1.1.1 Non-text content (A), 1.3.1 Info and Relationships (Level A), 1.3.2 Meaningful Sequence (Level A), 2.4.4 Link Purpose (In Context) (Level A), 3.1.2 Language of Parts (Level AA), 4.1.2 Name, role, value\cite{WCAG}.
 
 ---
 
-\subsubsection*{Tagged annotations}
-This rule checks whether all annotations are tagged. Ensure that annotations such as comments and editorial marks (insert and highlight) are either included in the Tags tree or marked as artifacts\footnotemark[1].
+\subsubsection{Tagged annotations}
+This rule checks whether all annotations are tagged. Ensure that annotations such as comments and editorial marks (insert and highlight) are either included in the Tags tree or marked as artifacts\cite{AdobeHelpX}.
 \begin{itemize}
-    \item Open the \textbf{Content} panel, and right-click (Windows) or Ctrl-click (Mac OS) the content you want to mark as an artifact. Then, select \textbf{Create Artifact} from the context menu. (To display the Content panel, select the hamburger menu (Windows) > \textbf{View} or select the \textbf{View} menu (macOS), and then select \textbf{Show/Hide} > \textbf{Side Panels} > \textbf{Content}).
-    \item To tag the content, select \textbf{All tools} > \textbf{Prepare for accessibility} > \textbf{Fix reading order}. Then, select the content and apply the tags as necessary.
-    \item Assign tags using the \textbf{Tags} panel. (To display the Tags panel, choose select the hamburger menu (Windows) > \textbf{View} or select the \textbf{View} menu (macOS), and then select \textbf{Show/Hide} > \textbf{Side Panels} > \textbf{Accessibility tags}).
-    \item To have Acrobat assign tags automatically to annotations as they're created, choose \textbf{Automatically tag form fields} from the \textbf{Options} (. . .) menu on the \textbf{Tags} panel.
+    \item Open the \emph{Content} panel, and right-click (Windows) or Ctrl-click (Mac OS) the content you want to mark as an artifact. Then, select \emph{Create Artifact} from the context menu. (To display the Content panel, select the hamburger menu (Windows) > \emph{View} or select the \emph{View} menu (macOS), and then select \emph{Show/Hide} > \emph{Side Panels} > \emph{Content}).
+    \item To tag the content, select \emph{All tools} > \emph{Prepare for accessibility} > \emph{Fix reading order}. Then, select the content and apply the tags as necessary.
+    \item Assign tags using the \emph{Tags} panel. (To display the Tags panel, choose select the hamburger menu (Windows) > \emph{View} or select the \emph{View} menu (macOS), and then select \emph{Show/Hide} > \emph{Side Panels} > \emph{Accessibility tags}).
+    \item To have Acrobat assign tags automatically to annotations as they're created, choose \emph{Automatically tag form fields} from the \emph{Options} (. . .) menu on the \emph{Tags} panel.
 \end{itemize}
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG section: 1.3.1 Info and Relationships (Level A), 4.1.2 Name, role, value\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG section: 1.3.1 Info and Relationships (Level A), 4.1.2 Name, role, value\cite{WCAG}.
 
 ---
 
-\subsubsection*{Tab order}
-Because tabs are often used to navigate a PDF, it's necessary that the tab order parallels the document structure\footnotemark[1].
-To fix the tab order automatically, select \textbf{Tab Order} on the Accessibility Checker panel, and choose \textbf{Fix} from the \textbf{Options} menu.
+\subsubsection{Tab order}
+Because tabs are often used to navigate a PDF, it's necessary that the tab order parallels the document structure\cite{AdobeHelpX}.
+To fix the tab order automatically, select \emph{Tab Order} on the Accessibility Checker panel, and choose \emph{Fix} from the \emph{Options} menu.
 
 To manually fix the tab order for links, form fields, comments, and other annotations:
 \begin{enumerate}
-    \item Click the \textbf{Page Thumbnails} panel on the navigation pane.
-    \item Click a page thumbnail, and then choose \textbf{Page Properties} from the \textbf{Options} menu.
-    \item In the \textbf{Page Properties} dialog box, choose \textbf{Tab Order}. Then, select \textbf{Use Document Structure}, and select \textbf{OK}.
+    \item Click the \emph{Page Thumbnails} panel on the navigation pane.
+    \item Click a page thumbnail, and then choose \emph{Page Properties} from the \emph{Options} menu.
+    \item In the \emph{Page Properties} dialog box, choose \emph{Tab Order}. Then, select \emph{Use Document Structure}, and select \emph{OK}.
     \item Repeat these steps for all thumbnails in the document.
 \end{enumerate}
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG section: 2.4.3, Focus Order (Level A)\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG section: 2.4.3, Focus Order (Level A)\cite{WCAG}.
 
 ---
 
-\subsubsection*{Character encoding}
-Specifying the encoding helps PDF viewers present users with readable text. However, some character-encoding issues aren't repairable within Acrobat\footnotemark[1].
+\subsubsection{Character encoding}
+Specifying the encoding helps PDF viewers present users with readable text. However, some character-encoding issues aren't repairable within Acrobat\cite{AdobeHelpX}.
 To ensure proper encoding, do the following:
 \begin{itemize}
     \item Verify that the necessary fonts are installed on your system.
@@ -228,123 +228,120 @@ To ensure proper encoding, do the following:
 \end{itemize}
 
 \vspace{0.5em}
-\noindent\textit{Note:} The WCAG doesn't address Unicode character mapping\footnotemark[1].
+\noindent\textit{Note:} The WCAG doesn't address Unicode character mapping\cite{WCAG}.
 
 ---
 
-\subsubsection*{Tagged multimedia}
-This rule checks whether all multimedia objects are tagged. Ensure that content is included in the Tags tree or marked as an artifact\footnotemark[1].
+\subsubsection{Tagged multimedia}
+This rule checks whether all multimedia objects are tagged. Ensure that content is included in the Tags tree or marked as an artifact\cite{AdobeHelpX}.
 \begin{itemize}
-    \item Open the \textbf{Content} panel and right-click (Windows) or Ctrl-click (Mac OS) the content that you want to mark as an artifact. Then, select \textbf{Create Artifact} from the context menu. (To display the Content panel, select the hamburger menu (Windows) > \textbf{View} or select the \textbf{View} menu (macOS), and then select \textbf{Show/Hide} > \textbf{Side Panels} > \textbf{Content}.)
-    \item Tag the content by choosing \textbf{All tools} > \textbf{Prepare for accessibility} > \textbf{Fix reading order}. Select the content, and then apply tags as necessary.
-    \item Assign tags using the \textbf{Tags} panel. Right-click (Windows) or Ctrl-click (Mac OS) the element in the Tags tree, and choose \textbf{Create Tag From Selection}. (To display the Tags panel, select the hamburger menu (Windows) > \textbf{View} or select the \textbf{View} menu (macOS), and then select \textbf{Show/Hide} > \textbf{Side Panels} > \textbf{Accessibility tags}.)
+    \item Open the \emph{Content} panel and right-click (Windows) or Ctrl-click (Mac OS) the content that you want to mark as an artifact. Then, select \emph{Create Artifact} from the context menu. (To display the Content panel, select the hamburger menu (Windows) > \emph{View} or select the \emph{View} menu (macOS), and then select \emph{Show/Hide} > \emph{Side Panels} > \emph{Content}.)
+    \item Tag the content by choosing \emph{All tools} > \emph{Prepare for accessibility} > \emph{Fix reading order}. Select the content, and then apply tags as necessary.
+    \item Assign tags using the \emph{Tags} panel. Right-click (Windows) or Ctrl-click (Mac OS) the element in the Tags tree, and choose \emph{Create Tag From Selection}. (To display the Tags panel, select the hamburger menu (Windows) > \emph{View} or select the \emph{View} menu (macOS), and then select \emph{Show/Hide} > \emph{Side Panels} > \emph{Accessibility tags}.)
 \end{itemize}
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG sections: 1.1.1 Non-text Content (A), 1.2.1 Audio- only and Video- only (Prerecorded) (A), 1.2.2 Captions (Prerecorded) (A), 1.2.3 Audio Description or Media Alternative (Prerecorded) (A), 1.2.5 Audio Description (Prerecorded) (AA)\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG sections: 1.1.1 Non-text Content (A), 1.2.1 Audio- only and Video- only (Prerecorded) (A), 1.2.2 Captions (Prerecorded) (A), 1.2.3 Audio Description or Media Alternative (Prerecorded) (A), 1.2.5 Audio Description (Prerecorded) (AA)\cite{WCAG}.
 
 ---
 
-\subsubsection*{Screen flicker}
-Elements that make the screen flicker, such as animations and scripts, can cause seizures in individuals who have photosensitive epilepsy. These elements can also be difficult to see when the screen is magnified\footnotemark[1].
+\subsubsection{Screen flicker}
+Elements that make the screen flicker, such as animations and scripts, can cause seizures in individuals who have photosensitive epilepsy. These elements can also be difficult to see when the screen is magnified\cite{AdobeHelpX}.
 If the Screen Flicker rule fails, manually remove or modify the script or content that causes screen flicker.
 
 \vspace{0.5em}
-\noindent\textit{Note:} See these related WCAG sections: 1.1.1 Non-text Content (A), 1.2.1 Audio- only and Video- only (Prerecorded) (A), 1.2.2 Captions (Prerecorded) (A), 1.2.3 Audio Description or Media Alternative (Prerecorded) (A), 2.3.1 Three Flashes or Below Threshold (Level A)\footnotemark[1].
+\noindent\textit{Note:} See these related WCAG sections: 1.1.1 Non-text Content (A), 1.2.1 Audio- only and Video- only (Prerecorded) (A), 1.2.2 Captions (Prerecorded) (A), 1.2.3 Audio Description or Media Alternative (Prerecorded) (A), 2.3.1 Three Flashes or Below Threshold (Level A)\cite{WCAG}.
 
 ---
 
-\subsubsection*{Scripts}
-Content cannot be script-dependent unless both content and functionality are accessible to assistive technologies. Make sure that scripting doesn't interfere with keyboard navigation or prevent the use of any input device\footnotemark[1].
+\subsubsection{Scripts}
+Content cannot be script-dependent unless both content and functionality are accessible to assistive technologies. Make sure that scripting doesn't interfere with keyboard navigation or prevent the use of any input device\cite{AdobeHelpX}.
 Check the scripts manually. Remove or modify any script or content that compromises accessibility.
 
 \vspace{0.5em}
-\noindent\textit{Note:} See these related WCAG sections: 1.1.1 Non-text Content (A), 2.2.2 Pause, Stop, Hide (Level A), 4.1.2 Name, role, value\footnotemark[1].
+\noindent\textit{Note:} See these related WCAG sections: 1.1.1 Non-text Content (A), 2.2.2 Pause, Stop, Hide (Level A), 4.1.2 Name, role, value\cite{WCAG}.
 
 ---
 
-\subsubsection*{Timed responses}
-This rule check applies to documents that contain forms with JavaScript. If the rule check fails, make sure that the page does not require timed responses. Edit or remove scripts that impose timely user response so that users have enough time to read and use the content\footnotemark[1].
+\subsubsection{Timed responses}
+This rule check applies to documents that contain forms with JavaScript. If the rule check fails, make sure that the page does not require timed responses. Edit or remove scripts that impose timely user response so that users have enough time to read and use the content\cite{AdobeHelpX}.
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG section: 2.2.1 Timing Adjustable (Level A)\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG section: 2.2.1 Timing Adjustable (Level A)\cite{WCAG}.
 
 ---
 
-\subsubsection*{Accessible links}
-For URLs to be accessible to screen readers, they must be active links that are correctly tagged in the PDF. (The best way to create accessible links is with the Create Link command, which adds all three links that screen readers require to recognize a link.) Make sure that navigation links are not repetitive and that there is a way for users to skip over repetitive links\footnotemark[1].
+\subsubsection{Accessible links}
+For URLs to be accessible to screen readers, they must be active links that are correctly tagged in the PDF. (The best way to create accessible links is with the Create Link command, which adds all three links that screen readers require to recognize a link.) Make sure that navigation links are not repetitive and that there is a way for users to skip over repetitive links\cite{AdobeHelpX}.
 If this rule check fails, check navigation links manually and verify that the content does not have too many identical links. Also, provide a way for users to skip over items that appear multiple times. For example, if the same links appear on each page of the document, also include a "Skip navigation" link.
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG section: 2.4.1 Bypass Blocks (Level A)\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG section: 2.4.1 Bypass Blocks (Level A)\cite{WCAG}.
 
 ---
 
-\subsection*{Forms}
-\subsubsection*{Tagged form fields}
-In an accessible PDF, all form fields are tagged and part of the document structure. In addition, you can use the tool tip form field property to provide the user with information or instructions\footnotemark[1].
-To tag form fields, choose \textbf{All tools} > \textbf{Prepare for accessibility} > \textbf{Automatically tag PDF}.
+\subsection{Forms}
+\subsubsection{Tagged form fields}
+In an accessible PDF, all form fields are tagged and part of the document structure. In addition, you can use the tool tip form field property to provide the user with information or instructions\cite{AdobeHelpX}.
+To tag form fields, choose \emph{All tools} > \emph{Prepare for accessibility} > \emph{Automatically tag PDF}.
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG sections: 1.3.1 Info and Relationships (Level A), 4.1.2 Name, role, value\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG sections: 1.3.1 Info and Relationships (Level A), 4.1.2 Name, role, value\cite{WCAG}.
 
 ---
 
-\subsubsection*{Field descriptions}
-For accessibility, all form fields need a text description (tool tip)\footnotemark[1].
+\subsubsection{Field descriptions}
+For accessibility, all form fields need a text description (tool tip)\cite{AdobeHelpX}.
 To add a text description to a form field:
 \begin{enumerate}
     \item Select one of the Form tools, and then right-click (Windows) or Ctrl-click (Mac OS) the form field.
-    \item Choose \textbf{Properties} from the context menu.
-    \item Click the \textbf{General properties} tab.
-    \item Enter a description of the form field in the \textbf{Tooltip} field.
+    \item Choose \emph{Properties} from the context menu.
+    \item Click the \emph{General properties} tab.
+    \item Enter a description of the form field in the \emph{Tooltip} field.
 \end{enumerate}
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG sections: 1.3.1 Info and Relationships (Level A), 3.3.2 Labels or Instructions (Level A), 4.1.2 Name, role, value\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG sections: 1.3.1 Info and Relationships (Level A), 3.3.2 Labels or Instructions (Level A), 4.1.2 Name, role, value\cite{WCAG}.
 
 ---
 
-\subsection*{Alternate Text}
-\subsubsection*{Figures alternate text}
-Make sure that images in the document either have alternate text or are marked as artifacts\footnotemark[1].
+\subsection{Alternate Text}
+\subsubsection{Figures alternate text}
+Make sure that images in the document either have alternate text or are marked as artifacts\cite{AdobeHelpX}.
 If this rule check fails, do one of the following:
 \begin{itemize}
-    \item Select \textbf{Figures Alternate Text} in the Accessibility Checker panel, and choose \textbf{Fix} from the \textbf{Options} menu. Add alternate text as prompted in the \textbf{Set Alternate Text} dialog box.
-    \item Use the \textbf{Tags} panel to add alternate text for images in the PDF.
-    \item Open the \textbf{Content} panel and right-click (Windows) or Ctrl-click (Mac OS) the content that you want to mark as an artifact. Then, select \textbf{Create Artifact} from the context menu. (To display the Content panel, select the hamburger menu (Windows) > \textbf{View} or select the \textbf{View} menu (macOS), and then select \textbf{Show/Hide} > \textbf{Side Panels} > \textbf{Content}.)
+    \item Select \emph{Figures Alternate Text} in the Accessibility Checker panel, and choose \emph{Fix} from the \emph{Options} menu. Add alternate text as prompted in the \emph{Set Alternate Text} dialog box.
+    \item Use the \emph{Tags} panel to add alternate text for images in the PDF.
+    \item Open the \emph{Content} panel and right-click (Windows) or Ctrl-click (Mac OS) the content that you want to mark as an artifact. Then, select \emph{Create Artifact} from the context menu. (To display the Content panel, select the hamburger menu (Windows) > \emph{View} or select the \emph{View} menu (macOS), and then select \emph{Show/Hide} > \emph{Side Panels} > \emph{Content}.)
 \end{itemize}
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG section: 1.1.1 Non-text Content (A)\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG section: 1.1.1 Non-text Content (A)\cite{WCAG}.
 
 ---
 
-\subsubsection*{Nested alternate text}
-Screen readers don't read the alternate text for nested elements. Therefore, don't apply alternate text to nested elements\footnotemark[1].
+\subsubsection{Nested alternate text}
+Screen readers don't read the alternate text for nested elements. Therefore, don't apply alternate text to nested elements\cite{AdobeHelpX}.
 To remove alternate text from nested elements, do the following:
 \begin{enumerate}
-    \item Select the hamburger menu (Windows) > \textbf{View} or select the \textbf{View} menu (macOS), and then select \textbf{Show/Hide} > \textbf{Side Panels} > \textbf{Accessibility tags}.
-    \item Right-click (Windows) or Ctrl-click (Mac OS) a nested element in the \textbf{Accessibility tags} panel and choose \textbf{Properties} from the context menu.
-    \item Remove the \textbf{Alternate Text} and the text to which it's applied from the \textbf{Object Properties} dialog box, then select \textbf{Close}.
+    \item Select the hamburger menu (Windows) > \emph{View} or select the \emph{View} menu (macOS), and then select \emph{Show/Hide} > \emph{Side Panels} > \emph{Accessibility tags}.
+    \item Right-click (Windows) or Ctrl-click (Mac OS) a nested element in the \emph{Accessibility tags} panel and choose \emph{Properties} from the context menu.
+    \item Remove the \emph{Alternate Text} and the text to which it's applied from the \emph{Object Properties} dialog box, then select \emph{Close}.
 \end{enumerate}
 
 \vspace{0.5em}
-\noindent\textit{Note:} See the related WCAG section: 1.1.1 Non-text Content (A)\footnotemark[1].
+\noindent\textit{Note:} See the related WCAG section: 1.1.1 Non-text Content (A)\cite{WCAG}.
 
 ---
 
-\subsubsection*{Associated with content}
-Make sure that alternate text is always an alternate representation of content on the page. If an element has alternate text but does not contain any page content, there is no way to determine which page it is on. If the Screen Reader Option in the Reading preferences is not set to read the entire document, then screen readers never read the alternate text\footnotemark[1].
+\subsubsection{Associated with content}
+Make sure that alternate text is always an alternate representation of content on the page. If an element has alternate text but does not contain any page content, there is no way to determine which page it is on. If the Screen Reader Option in the Reading preferences is not set to read the entire document, then screen readers never read the alternate text\cite{AdobeHelpX}.
 
 \vfill
-\subsection*{References}
-\begin{enumerate}
-    \item Adobe HelpX. "Create and verify PDF accessibility." \url{https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html}. Accessed July 5, 2025.
-\end{enumerate}
 
-\subsection*{Associated with Content}
-Make sure that alternate text is always an alternate representation of content on the page. If an element has alternate text but does not contain any page content, there is no way to determine which page it is on. If the Screen Reader Option in the Reading preferences is not set to read the entire document, then screen readers never read the alternate text.\footnote{See WCAG section 1.1.1 Non-text Content (Level A).}
+
+\subsection{Associated with Content}
+Make sure that alternate text is always an alternate representation of content on the page. If an element has alternate text but does not contain any page content, there is no way to determine which page it is on. If the Screen Reader Option in the Reading preferences is not set to read the entire document, then screen readers never read the alternate text.\cite{WCAG}
 
 \begin{enumerate}
     \item Right-click (Windows) or Ctrl-click (Mac OS) an item to check.
@@ -352,8 +349,8 @@ Make sure that alternate text is always an alternate representation of content o
     \item Remove the Alternate Text from the Tags panel for any nested item that has no page content.
 \end{enumerate}
 
-\subsubsection*{Hides Annotation}
-Alternate text cannot hide an annotation. If an annotation is nested under a parent element with alternate text, then screen readers do not see it.\footnote{See WCAG sections 1.3.1 Info and Relationships (Level A), 4.1.2 Name, role, value.}
+\subsubsection{Hides Annotation}
+Alternate text cannot hide an annotation. If an annotation is nested under a parent element with alternate text, then screen readers do not see it.\cite{WCAG}
 
 To remove alternate text from nested elements:
 \begin{enumerate}
@@ -362,8 +359,8 @@ To remove alternate text from nested elements:
     \item Remove the alternate text from the Object Properties dialog box and select OK.
 \end{enumerate}
 
-\subsubsection*{Other Elements Alternate Text}
-This report checks for content other than figures that require alternate text (such as multimedia, annotation, or 3D model). Make sure that alternate text is always an alternate representation of content on the page. If an element has alternate text but does not contain any page content, there is no way to determine which page it is on. If the Screen Reader Options in the Reading preferences are not set to read the entire document, then screen readers do not read the alternate text.\footnote{See WCAG section 1.1.1 Non-text Content (Level A).}
+\subsubsection{Other Elements Alternate Text}
+This report checks for content other than figures that require alternate text (such as multimedia, annotation, or 3D model). Make sure that alternate text is always an alternate representation of content on the page. If an element has alternate text but does not contain any page content, there is no way to determine which page it is on. If the Screen Reader Options in the Reading preferences are not set to read the entire document, then screen readers do not read the alternate text.\cite{WCAG}
 
 To remove alternate text from nested elements:
 \begin{enumerate}
@@ -371,3 +368,9 @@ To remove alternate text from nested elements:
     \item Right-click (Windows) or Ctrl-click (Mac OS) a nested element in the Accessibility tags panel and choose Properties from the context menu.
     \item Remove the alternate text from the Object Properties dialog box and select OK.
 \end{enumerate}
+
+% Bibliography
+\begin{thebibliography}{99}
+\bibitem{AdobeHelpX} Adobe HelpX. ``Create and verify PDF accessibility.'' \url{https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html}. Accessed July 5, 2025.
+\bibitem{WCAG} World Wide Web Consortium (W3C). ``Web Content Accessibility Guidelines (WCAG) 2.1.'' \url{https://www.w3.org/WAI/standards-guidelines/wcag/}. Accessed July 5, 2025.
+\end{thebibliography}

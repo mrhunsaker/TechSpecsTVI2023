@@ -294,11 +294,11 @@ Measuring the latency of a screenreader to respond to key presses reveals the ed
   stretch = 1.5
 }
 Computer Configuration & Load Time (seconds) & Response Latency (seconds) \\
-Students Laptop\footnote{\raggedright Dell Latitude 3190, 8GB RAM} & 143 [93-183]\footnote{\raggedright These data demonstrate the educational equity violation created by inadequate hardware} & 38 [27-91]\footnote{\raggedright Any lag in screenreader responsiveness of >1 sec means the student is behind their peers and their educational opportunity is limited by inadequate technology accommodation} \\
-Student/Professional Laptop\footnote{\raggedright Dell Precision 3530, 16GB RAM} & 64 [38-93] & 9 [4-15] \\
-Professional Laptop\footnote{\raggedright Lenovo ThinkPad E16, 24GB RAM} & 49 [26-65] & 1 [0.05-2.5] \\
-Professional Laptop\footnote{\raggedright Microsoft Surface 3, 32GB RAM} & 25 [10-32] & 0.5 [0.01-1]\footnote{\raggedright 0.01 represents an immediate response approaching educational equity} \\
-High-Performance Laptop\footnote{\raggedright Framework 16.0, 64GB RAM} & 15 [8-22] & 0.02 [0.01-0.05]\footnote{\raggedright Achieves true educational equity standard} \\
+Students Laptop\cite{DellLatitude3190} & 143 [93-183]\cite{EquityViolationData} & 38 [27-91]\cite{ScreenreaderLagImpact} \\
+Student/Professional Laptop\cite{DellPrecision3530} & 64 [38-93] & 9 [4-15] \\
+Professional Laptop\cite{LenovoThinkPadE16} & 49 [26-65] & 1 [0.05-2.5] \\
+Professional Laptop\cite{MicrosoftSurface3} & 25 [10-32] & 0.5 [0.01-1]\cite{ImmediateResponseEquity} \\
+High-Performance Laptop\cite{FrameworkLaptop16} & 15 [8-22] & 0.02 [0.01-0.05]\cite{TrueEquityStandard} \\
 \end{longtblr}
 
 \hypertarget{vision-specific-software-requirements}{}\section{Vision Specific Software Requirements}\label{vision-specific-software-requirements}
@@ -448,14 +448,14 @@ Table \ref{tab:student-software-needs} lists software used by students with visu
   stretch = 1.5
 }
 Program & Type of Program & Cost & Min RAM & Pref RAM & Processor \\
-JAWS & Screenreader & \$225/yr\footnote{\raggedright Typically purchased via APH quota funds} & 8GB & \textgreater24GB\footnote{\raggedright Revised based on equity analysis} & \textgreater11th Gen Intel® Core™ i5+ \\
-TypeAbility & Typing Instruction\footnote{\raggedright Requires JAWS or Fusion} & \$150 & 8GB & \textgreater24GB & \textgreater11th Gen Intel® Core™ i5+ \\
-Narrator & Screenreader\footnote{\raggedright Windows built-in screenreader} & \$0 & 4GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i5 \\
-NVDA & Screenreader\footnote{\raggedright Free, but premium voices cost \$70} & \$0 & 2GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i5 \\
+JAWS & Screenreader & \$225/yr\cite{APHQuotaFunds} & 8GB & \textgreater24GB\cite{EquityAnalysisRevision} & \textgreater11th Gen Intel® Core™ i5+ \\
+TypeAbility & Typing Instruction\cite{RequiresJAWSFusion} & \$150 & 8GB & \textgreater24GB & \textgreater11th Gen Intel® Core™ i5+ \\
+Narrator & Screenreader\cite{WindowsBuiltInScreenreader} & \$0 & 4GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i5 \\
+NVDA & Screenreader\cite{FreePremiumVoices} & \$0 & 2GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i5 \\
 ZDSR & Screenreader & \$232 & 2GB & \textgreater16GB & \textgreater11th Gen Intel® Core™ i7+ \\
 Dolphin Screenreader & Screenreader & \$1105/yr & 8GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\
-ZoomText & Magnification \& Speech\footnote{\raggedright Pricing changed October 2024} & \$85/yr & 16GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\
-Windows Magnifier & Magnification\footnote{\raggedright Windows built-in magnifier} & \$0 & 16GB & \textgreater24GB & \textgreater11th Gen Intel® Core™ i7+ \\
+ZoomText & Magnification \& Speech\cite{PricingChange2024} & \$85/yr & 16GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\
+Windows Magnifier & Magnification\cite{WindowsBuiltInMagnifier} & \$0 & 16GB & \textgreater24GB & \textgreater11th Gen Intel® Core™ i7+ \\
 Dolphin SuperNova & Magnification & \$545/yr & 16GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\
 Dolphin SuperNova + Speech & Magnification \& Speech & \$825/yr & 16GB & \textgreater32GB & \textgreater11th Gen Intel® Core™ i7+ \\
 \end{longtblr}
@@ -479,12 +479,12 @@ Analysis of current student and professional laptop configurations reveals syste
   stretch = 1.5
 }
 Device & Cost & Keyboard & RAM & Screen Size & Processor \\
-Dell Latitude 3190 & \$379 & QWERTY & 4GB\footnote{\raggedright EQUITY VIOLATION - Inadequate for accessibility} & 11.6" Touchscreen & Intel® Celeron Silver \\
-Lenovo 500w Gen 3 & \$358 & QWERTY & 4GB\footnote{\raggedright EQUITY VIOLATION - Inadequate for accessibility} & 11.6" Touchscreen & Intel® Pentium Silver \\
-Dell Precision 3530 & \$1751 & QWERTY & 16GB\footnote{\raggedright UNACCEPTABLY INADEQUATE - Violates equity standard} & 16.0" & 8th Gen Intel® Core™ i7 \\
-Dell Precision 7420 & \$1349 & QWERTY & 16GB\footnote{\raggedright UNACCEPTABLY INADEQUATE - Violates equity standard} & 16.0" & 8th Gen Intel® Core™ i7 \\
-Microsoft Surface Laptop 3 & \$1500 & QWERTY & 32GB\footnote{\raggedright APPROACHES EQUITY - Acceptable performance} & 15.0" Touchscreen & AMD® Ryzen™ 7 \\
-Framework Laptop 16 & \$2750 & QWERTY & 64GB\footnote{\raggedright ACHIEVES EQUITY - True accessibility compliance} & 16.0" & AMD® Ryzen™ 9 \\
+Dell Latitude 3190 & \$379 & QWERTY & 4GB\cite{EquityViolationAccessibility} & 11.6" Touchscreen & Intel® Celeron Silver \\
+Lenovo 500w Gen 3 & \$358 & QWERTY & 4GB\cite{EquityViolationAccessibility} & 11.6" Touchscreen & Intel® Pentium Silver \\
+Dell Precision 3530 & \$1751 & QWERTY & 16GB\cite{UnacceptableEquityViolation} & 16.0" & 8th Gen Intel® Core™ i7 \\
+Dell Precision 7420 & \$1349 & QWERTY & 16GB\cite{UnacceptableEquityViolation} & 16.0" & 8th Gen Intel® Core™ i7 \\
+Microsoft Surface Laptop 3 & \$1500 & QWERTY & 32GB\cite{ApproachesEquityAcceptable} & 15.0" Touchscreen & AMD® Ryzen™ 7 \\
+Framework Laptop 16 & \$2750 & QWERTY & 64GB\cite{AchievesEquityCompliance} & 16.0" & AMD® Ryzen™ 9 \\
 \end{longtblr}
 
 \hypertarget{the-educational-equity-crisis}{}\section{The Educational Equity Crisis: A Civil Rights Issue}\label{the-educational-equity-crisis}
@@ -816,6 +816,27 @@ Razer & Blade 18 (2025) & \$3,500+ & 32--64GB & Intel Core Ultra 9 275HX & 18" Q
 Acer & Aspire 16 & \$1,499+ & 32GB & Intel Core Ultra 7 155U & 16" 3200x2000 OLED & 400--500 & 1,000,000:1 (OLED) \\
 Framework & Framework 13 & \$1,499+ & 32GB--64GB & Ryzen AI 7 & 13" 2880x1920 OLED & >500 & 1,000,000:1 (OLED) \\
 Framework & Framework 16 & \$1,499+ & 32GB--64GB & Ryzen 9 & 16" 2560x1600 QHD+ & >500 & 1500:1 (IPS) \\
-
-
 \end{longtblr}
+
+\begin{thebibliography}{99}
+\bibitem{DellLatitude3190} Dell Latitude 3190, 8GB RAM.
+\bibitem{EquityViolationData} These data demonstrate the educational equity violation created by inadequate hardware.
+\bibitem{ScreenreaderLagImpact} Any lag in screenreader responsiveness of >1 sec means the student is behind their peers and their educational opportunity is limited by inadequate technology accommodation.
+\bibitem{DellPrecision3530} Dell Precision 3530, 16GB RAM.
+\bibitem{LenovoThinkPadE16} Lenovo ThinkPad E16, 24GB RAM.
+\bibitem{MicrosoftSurface3} Microsoft Surface 3, 32GB RAM.
+\bibitem{ImmediateResponseEquity} 0.01 represents an immediate response approaching educational equity.
+\bibitem{FrameworkLaptop16} Framework 16.0, 64GB RAM.
+\bibitem{TrueEquityStandard} Achieves true educational equity standard.
+\bibitem{APHQuotaFunds} Typically purchased via APH quota funds.
+\bibitem{EquityAnalysisRevision} Revised based on equity analysis.
+\bibitem{RequiresJAWSFusion} Requires JAWS or Fusion.
+\bibitem{WindowsBuiltInScreenreader} Windows built-in screenreader.
+\bibitem{FreePremiumVoices} Free, but premium voices cost \$70.
+\bibitem{PricingChange2024} Pricing changed October 2024.
+\bibitem{WindowsBuiltInMagnifier} Windows built-in magnifier.
+\bibitem{EquityViolationAccessibility} EQUITY VIOLATION - Inadequate for accessibility.
+\bibitem{UnacceptableEquityViolation} UNACCEPTABLY INADEQUATE - Violates equity standard.
+\bibitem{ApproachesEquityAcceptable} APPROACHES EQUITY - Acceptable performance.
+\bibitem{AchievesEquityCompliance} ACHIEVES EQUITY - True accessibility compliance.
+\end{thebibliography}

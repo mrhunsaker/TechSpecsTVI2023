@@ -5,10 +5,12 @@
 \label{sec:overview-principles}
 
 \subsection{Why Accessibility Matters}
-Screen reader accessibility ensures that people with visual impairments can effectively navigate, understand, and interact with digital documents. According to the World Health Organization, approximately 2.2 billion people worldwide have a vision impairment\footnote{World Health Organization. (2021). Blindness and vision impairment. \url{https://www.who.int/news-room/fact-sheets/detail/blindness-and-vision-impairment}}. Proper accessibility benefits everyone by creating clearer, more organized content that improves usability for all users.
+Screen reader accessibility ensures that people with visual impairments can effectively navigate, understand, and interact with digital documents. According to the World Health Organization, approximately 2.2 billion people worldwide have a vision impairment. Proper accessibility benefits everyone by creating clearer, more organized content that improves usability for all users.
+\cite{WHO2021}.
 
 \subsection{Core Accessibility Principles}
-The Web Content Accessibility Guidelines (WCAG) 2.1 establish four fundamental principles\footnote{W3C Web Accessibility Initiative. (2018). Web Content Accessibility Guidelines (WCAG) 2.1. \url{https://www.w3.org/WAI/WCAG21/Understanding/intro}}:
+The Web Content Accessibility Guidelines (WCAG) 2.1 establish four fundamental principles:
+\cite{WCAG2018}.
 
 \begin{itemize}
 \item \emph{Perceivable}: Information must be presentable in ways users can perceive
@@ -18,7 +20,8 @@ The Web Content Accessibility Guidelines (WCAG) 2.1 establish four fundamental p
 \end{itemize}
 
 \subsection{Screen Reader Basics}
-Screen readers convert digital text to speech or braille, navigating documents through structured elements. Popular screen readers include NVDA\footnote{NV Access. (2023). NVDA Screen Reader. \url{https://www.nvaccess.org/}}, JAWS\footnote{Freedom Scientific. (2023). JAWS Screen Reading Software. \url{https://www.freedomscientific.com/products/software/jaws/}}, and VoiceOver\footnote{Apple Inc. (2023). VoiceOver User Guide. \url{https://support.apple.com/guide/voiceover/welcome/mac}}. These tools navigate documents using:
+Screen readers convert digital text to speech or braille, navigating documents through structured elements. Popular screen readers include NVDA, JAWS, and VoiceOver. These tools navigate documents using:
+\cite{NVDA2023, JAWS2023, VoiceOver2023}.
 
 \begin{itemize}
 \item Headings and structure
@@ -34,7 +37,8 @@ Screen readers convert digital text to speech or braille, navigating documents t
 \subsection{Document Structure}
 
 \subsubsection{Headings}
-Proper heading structure is crucial for screen reader navigation. Microsoft's accessibility guidelines emphasize using built-in heading styles rather than manual formatting\footnote{Microsoft Corporation. (2023). Make your Word documents accessible to people with disabilities. \url{https://support.microsoft.com/en-us/office/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d}}.
+Proper heading structure is crucial for screen reader navigation. Microsoft's accessibility guidelines emphasize using built-in heading styles rather than manual formatting.
+\cite{MicrosoftWord2023}.
 
 \emph{Microsoft Word:}
 \begin{itemize}
@@ -54,7 +58,8 @@ Proper heading structure is crucial for screen reader navigation. Microsoft's ac
 Google's accessibility documentation stresses the importance of semantic markup for assistive technologies\footnote{Google LLC. (2023). Create accessible documents in Google Docs. \url{https://support.google.com/docs/answer/6199477}}.
 
 \subsubsection{Lists}
-Lists provide structure that screen readers can navigate efficiently. The Section 508 guidelines require proper list markup\footnote{U.S. General Services Administration. (2018). Section 508 ICT Standards and Guidelines. \url{https://www.section508.gov/manage/laws-and-policies/}}.
+Lists provide structure that screen readers can navigate efficiently. The Section 508 guidelines require proper list markup.
+\cite{Section5082018}.
 
 \emph{Microsoft Word:}
 \begin{itemize}
@@ -71,7 +76,8 @@ Lists provide structure that screen readers can navigate efficiently. The Sectio
 \end{itemize}
 
 \subsubsection{Page Layout}
-Complex layouts can confuse screen readers. WebAIM recommends simple, linear layouts\footnote{WebAIM. (2023). Screen Reader Testing. \url{https://webaim.org/articles/screenreader_testing/}}.
+Complex layouts can confuse screen readers. WebAIM recommends simple, linear layouts.
+\cite{WebAIM2023}.
 
 \emph{Both platforms:}
 \begin{itemize}
@@ -804,3 +810,14 @@ The benefits of accessible document creation extend far beyond compliance with l
 Regular testing, user feedback, and continuous improvement will help maintain and enhance accessibility over time. The goal is not just to meet minimum standards but to create documents that provide an excellent user experience for all people, including those who rely on screen readers and other assistive technologies.
 
 Remember that accessibility is ultimately about people – ensuring that everyone can access, understand, and use the information contained in documents regardless of their abilities or the technologies they rely on. This human-centered approach to accessibility will guide the development of better, more inclusive documents that serve the needs of all users effectively.
+
+\begin{thebibliography}{99}
+\bibitem{WHO2021} World Health Organization. (2021). Blindness and vision impairment. Available at: \url{https://www.who.int/news-room/fact-sheets/detail/blindness-and-vision-impairment}.
+\bibitem{WCAG2018} W3C Web Accessibility Initiative. (2018). Web Content Accessibility Guidelines (WCAG) 2.1. Available at: \url{https://www.w3.org/WAI/WCAG21/Understanding/intro}.
+\bibitem{NVDA2023} NV Access. (2023). NVDA Screen Reader. Available at: \url{https://www.nvaccess.org/}.
+\bibitem{JAWS2023} Freedom Scientific. (2023). JAWS Screen Reading Software. Available at: \url{https://www.freedomscientific.com/products/software/jaws/}.
+\bibitem{VoiceOver2023} Apple Inc. (2023). VoiceOver User Guide. Available at: \url{https://support.apple.com/guide/voiceover/welcome/mac}.
+\bibitem{MicrosoftWord2023} Microsoft Corporation. (2023). Make your Word documents accessible to people with disabilities. Available at: \url{https://support.microsoft.com/en-us/office/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d}.
+\bibitem{Section5082018} U.S. General Services Administration. (2018). Section 508 ICT Standards and Guidelines. Available at: \url{https://www.section508.gov/manage/laws-and-policies/}.
+\bibitem{WebAIM2023} WebAIM. (2023). Screen Reader Testing. Available at: \url{https://webaim.org/articles/screenreader_testing/}.
+\end{thebibliography}

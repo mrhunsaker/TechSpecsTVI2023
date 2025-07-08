@@ -13,11 +13,11 @@ PDF accessibility is primarily governed by two key standards: the Web Content Ac
 
 \subsection{Web Content Accessibility Guidelines (WCAG)}
 \label{subsec:wcag}
-WCAG, developed by the World Wide Web Consortium (W3C), is a globally recognized standard for digital accessibility. It is organized around four main principles: perceivable, operable, understandable, and robust. Many countries and organizations adopt WCAG as a legal requirement or best practice for digital content, including PDFs.\footnote{W3C. "Web Content Accessibility Guidelines (WCAG) 2.2." \url{[https://www.w3.org/WAI/WCAG22/](https://www.google.com/search?q=https://www.w3.org/WAI/WCAG22/)}} For PDFs, WCAG techniques address aspects like alternative text for images, proper heading structure, logical reading order, color contrast, and keyboard navigation.\footnote{W3C. "Techniques for WCAG 2.2." \url{[https://www.w3.org/WAI/WCAG22/Techniques/](https://www.w3.org/WAI/WCAG22/Techniques/)}}
+WCAG, developed by the World Wide Web Consortium (W3C), is a globally recognized standard for digital accessibility. It is organized around four main principles: perceivable, operable, understandable, and robust. Many countries and organizations adopt WCAG as a legal requirement or best practice for digital content, including PDFs.\cite{WCAG22} For PDFs, WCAG techniques address aspects like alternative text for images, proper heading structure, logical reading order, color contrast, and keyboard navigation.\cite{WCAG22Tech}
 
 \subsection{PDF/UA (ISO 14289-1)}
 \label{subsec:pdfua}
-PDF/UA, or Universal Accessibility, is a highly technical standard that specifies how to create accessible PDF files. It dictates the inclusion of specific structural elements (tags) within the PDF to convey meaning and reading order to assistive technologies. Think of PDF/UA as the technical implementation that helps a PDF meet WCAG requirements.\footnote{Adobe. "PDF/UA (Universal Accessibility)." \url{[https://www.adobe.com/uk/acrobat/resources/document-files/pdf-types/pdf-ua.html](https://www.adobe.com/uk/acrobat/resources/document-files/pdf-types/pdf-ua.html)}} Key requirements of PDF/UA include:
+PDF/UA, or Universal Accessibility, is a highly technical standard that specifies how to create accessible PDF files. It dictates the inclusion of specific structural elements (tags) within the PDF to convey meaning and reading order to assistive technologies. Think of PDF/UA as the technical implementation that helps a PDF meet WCAG requirements.\cite{AdobePDFUA} Key requirements of PDF/UA include:
 \begin{itemize}
 \item \emph{Tags:} All meaningful content must be tagged with a semantic structure (e.g., headings, paragraphs, lists, tables).
 \item \emph{Reading Order:} The logical reading order of content must be defined.
@@ -26,7 +26,7 @@ PDF/UA, or Universal Accessibility, is a highly technical standard that specifie
 \item \emph{Metadata:} The document must contain appropriate title and language metadata.
 \item \emph{Accessibility Permissions:} Security settings should not restrict accessibility features.
 \end{itemize}
-While WCAG offers broader principles, PDF/UA provides the detailed technical specifications for achieving those principles within a PDF document. Achieving PDF/UA compliance generally means a PDF will also meet relevant WCAG success criteria.\footnote{PubCom. "WCAG vs. PDF/UA: What's the Difference and Which One Do I Use?" \url{[https://www.pubcom.com/blog/standards/wcag-pdf/index.shtml](https://www.pubcom.com/blog/standards/wcag-pdf/index.shtml)}}
+While WCAG offers broader principles, PDF/UA provides the detailed technical specifications for achieving those principles within a PDF document. Achieving PDF/UA compliance generally means a PDF will also meet relevant WCAG success criteria.\cite{PubComWCAGvsPDFUA}
 
 -----
 
@@ -40,7 +40,7 @@ A thorough accessibility audit is the first step in ensuring a PDF is accessible
 \label{subsubsec:acrobat-pro}
 \emph{Adobe Acrobat Pro} is the industry standard for PDF creation, editing, and accessibility auditing. Its built-in \emph{Accessibility Checker} is comprehensive, evaluating documents against a wide range of WCAG and PDF/UA criteria.
 \begin{itemize}
-\item \emph{Auditing Features:} Checks for missing title, language, alternative text, incorrect reading order, untagged content, inconsistent tab order for forms, and insufficient color contrast.\footnote{Adobe. "Create and verify PDF accessibility." \url{[https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html](https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html)}} It also includes tools for auto-tagging, fixing reading order, and setting document properties.
+\item \emph{Auditing Features:} Checks for missing title, language, alternative text, incorrect reading order, untagged content, inconsistent tab order for forms, and insufficient color contrast.\cite{AdobeAccessGuide} It also includes tools for auto-tagging, fixing reading order, and setting document properties.
 \item \emph{OS Compatibility:} Available on Windows and macOS.
 \end{itemize}
 
@@ -49,27 +49,27 @@ A thorough accessibility audit is the first step in ensuring a PDF is accessible
 \subsubsection{Desktop Applications}
 \label{subsubsec:desktop-apps}
 \begin{itemize}
-\item \emph{Foxit PDF Editor (Windows, macOS)}\footnote{Foxit. "Accessibility - Foxit PDF Editor for Mac User Manual." \url{[https://help.foxit.com/manuals/pdf-editor/mac/en-us/v13/Accessibility.html](https://help.foxit.com/manuals/pdf-editor/mac/en-us/v13/Accessibility.html)}}
+\item \emph{Foxit PDF Editor (Windows, macOS)}\cite{FoxitManual}
 \begin{itemize}
 \item \emph{Auditing Features:} Offers a "Full Check" command for accessibility, generates detailed reports against WCAG standards, includes an "Autotag" feature, and a "Tag Editor" for manual fixes.
 \item \emph{OS Compatibility:} Available for Windows and macOS. While Foxit has a Linux Reader, the full Editor's accessibility auditing features are primarily confirmed for Windows/macOS versions.
 \end{itemize}
-\item \emph{CommonLook PDF (Windows, macOS, Linux - Desktop \& Web-based)}\footnote{Allyant. "CommonLook PDF." \url{[https://allyant.com/commonlook-accessibility-suite/cl-pdf/](https://allyant.com/commonlook-accessibility-suite/cl-pdf/)}}
+\item \emph{CommonLook PDF (Windows, macOS, Linux - Desktop \& Web-based)}\cite{AllyantCommonLook}
 \begin{itemize}
 \item \emph{Auditing Features:} A comprehensive accessibility software supporting WCAG, PDF/UA, and Section 508 compliance. It features AI-driven automated tagging and remediation, manual tagging support, and comprehensive reporting.
 \item \emph{OS Compatibility:} Available as a desktop application for Windows, macOS, and Linux, and also as a web-based solution.
 \end{itemize}
-\item \emph{PDF Studio Pro (Windows, macOS, Linux)}\footnote{Qoppa Software. "PDF Studio User Guide." \url{[https://www.qoppa.com/pdfstudio/guide/accessibility.html](https://www.google.com/search?q=https://www.qoppa.com/pdfstudio/guide/accessibility.html)}}
+\item \emph{PDF Studio Pro (Windows, macOS, Linux)}\cite{QoppaPDFStudio}
 \begin{itemize}
 \item \emph{Auditing Features:} Provides "PDF/UA (PDF User Accessibility) preflight and compliance verification," capable of generating detailed reports (text, XML, PDF) on non-compliant content.
 \item \emph{OS Compatibility:} Available for Windows, macOS, and Linux, making it a strong cross-platform option for PDF/UA validation.
 \end{itemize}
-\item \emph{CommonLook PDF Validator (Windows - Adobe Acrobat Plugin)}\footnote{Allyant. "CommonLook PDF Validator." \url{[https://allyant.com/commonlook-accessibility-suite/cl-pdf-validator/](https://allyant.com/commonlook-accessibility-suite/cl-pdf-validator/)}}
+\item \emph{CommonLook PDF Validator (Windows - Adobe Acrobat Plugin)}\cite{AllyantValidator}
 \begin{itemize}
 \item \emph{Auditing Features:} An Adobe Acrobat Pro plugin offering extensive checks beyond Acrobat's built-in checker, including metadata, font embedding, Unicode mapping, precise tag management, and content highlighting. Guides manual testing effectively.
 \item \emph{OS Compatibility:} Requires Adobe Acrobat Standard or Pro (Acrobat X or higher) on Windows 8 or higher.
 \end{itemize}
-\item \emph{callas pdfToolbox CLI (Windows, macOS, Linux - Command-Line)}\footnote{Callas Software. "callas pdfToolbox." \url{[https://www.callassoftware.com/en/products/pdftoolbox](https://www.callassoftware.com/en/products/pdftoolbox)}}
+\item \emph{callas pdfToolbox CLI (Windows, macOS, Linux - Command-Line)}\cite{CallasPDFToolbox}
 \begin{itemize}
 \item \emph{Auditing Features:} A powerful command-line tool capable of running "preflight profiles" for accessibility checks (including PDF/UA) and generating reports. Requires technical expertise.
 \item \emph{OS Compatibility:} Available on Windows, macOS, and Linux, ideal for automated workflows.
@@ -79,17 +79,17 @@ A thorough accessibility audit is the first step in ensuring a PDF is accessible
 \subsubsection{Online Tools (Cross-Platform)}
 \label{subsubsec:online-tools}
 \begin{itemize}
-\item \emph{axesCheck (Web-based)}\footnote{axesCheck. "PDF Accessibility Checker." \url{[https://axescheck.com/](https://www.google.com/search?q=https://axescheck.com/)}}
+\item \emph{axesCheck (Web-based)}\cite{AxesCheck}
 \begin{itemize}
 \item \emph{Auditing Features:} A free, web-based checker that validates against machine-verifiable PDF/UA and WCAG requirements. Provides quick, comparable results to desktop checkers.
 \item \emph{OS Compatibility:} Web-based, so compatible with any OS (Mac, Windows, Linux, mobile).
 \end{itemize}
-\item \emph{PAVE (Web-based)}\footnote{PAVE. "PDF Accessibility Converter." \url{[https://pave.adhoctranslations.com/](https://www.google.com/search?q=https://pave.adhoctranslations.com/)}}
+\item \emph{PAVE (Web-based)}\cite{PAVE}
 \begin{itemize}
 \item \emph{Auditing Features:} A free (for personal use), web-based tool that performs automatic corrections and allows manual adjustments. Focuses on proper tagging for screen readers.
 \item \emph{OS Compatibility:} Web-based, optimized for desktop screens.
 \end{itemize}
-\item \emph{Equidox (SaaS)}\footnote{Equidox. "PDF Accessibility Solutions." \url{[https://equidox.co/](https://equidox.co/)}}
+\item \emph{Equidox (SaaS)}\cite{Equidox}
 \begin{itemize}
 \item \emph{Auditing Features:} A Software-as-a-Service (SaaS) solution with AI-powered smart detection for text, headings, lists, tables, forms, and images, ensuring compliance with WCAG, ADA, and Section 508. Includes HTML preview for verification.
 \item \emph{OS Compatibility:} Cloud-based, accessible via any modern web browser on PC or Mac.
@@ -128,7 +128,7 @@ A comprehensive audit involves both automated checks and crucial manual verifica
     \item \emph{Alternatives Text:} Missing or improper alternative text.
     \item \emph{Contrast:} Insufficient color contrast (this is a \texttt{Needs Manual Check} item).
     \end{itemize}
-    Each issue will have one of four statuses:\footnote{Adobe. "Create and verify PDF accessibility." \url{[https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html](https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html)}}
+    Each issue will have one of four statuses:\cite{AdobeAccessGuide}
     \begin{itemize}
     \item \emph{Passed:} The item meets the accessibility rule.
     \item \emph{Skipped:} The item wasn't checked (e.g., if you deselected an option).
@@ -155,20 +155,20 @@ The most efficient way to ensure PDF accessibility is to start with an accessibl
 
 \subsection{Generating Tagged PDFs with LaTeX}
 \label{subsec:tagged-pdfs-latex}
-LaTeX is a powerful typesetting system, and with the right packages, it can produce highly structured and accessible PDFs. The LaTeX Project is actively working towards improved PDF/UA and WTPDF (Web-accessible TeX PDF) compliance.\footnote{The LaTeX Project. "Tagged PDF for Accessibility." \url{[https://www.latex-project.org/news/2021/08/17/tagged-pdf-status/](https://www.google.com/search?q=https://www.latex-project.org/news/2021/08/17/tagged-pdf-status/)}}
+LaTeX is a powerful typesetting system, and with the right packages, it can produce highly structured and accessible PDFs. The LaTeX Project is actively working towards improved PDF/UA and WTPDF (Web-accessible TeX PDF) compliance.\cite{LaTeXTaggedPDF}
 \begin{itemize}
 \item \emph{Recent LaTeX Versions:} Ensure you are using a modern TeX distribution (e.g., TeX Live 2020 or newer).
-\item \emph{`\DocumentMetadata` Command:} The core of tagged PDF generation in LaTeX involves the `\DocumentMetadata` command, often used with the `pdfstandard=UA-1` option, which indicates PDF/UA-1 compliance. This command typically needs to be placed after `\documentclass`.\footnote{LaTeX-Access. "Generating Accessible PDFs with LuaLaTeX and ConTeXt." \url{[https://www.latex-access.com/blog/2023/10/generating-accessible-pdfs-with-lualatex-and-context](https://www.google.com/search?q=https://www.latex-access.com/blog/2023/10/generating-accessible-pdfs-with-lualatex-and-context)}}
-\item \emph{`tagpdf` Package:} The `tagpdf` package is crucial for fine-tuning PDF tags, allowing you to explicitly mark content elements (e.g., `\tagstructure{H1}{My Heading}`). It provides commands to control the tagging of headings, lists, tables, figures, and other content types.
+\item \emph{`\textbackslash{}DocumentMetadata` Command:} The core of tagged PDF generation in LaTeX involves the `\textbackslash{}DocumentMetadata` command, often used with the `pdfstandard=UA-1` option, which indicates PDF/UA-1 compliance. This command typically needs to be placed after `\textbackslash{}documentclass`.\cite{LaTeXAccessBlog}
+\item \emph{`tagpdf` Package:} The `tagpdf` package is crucial for fine-tuning PDF tags, allowing you to explicitly mark content elements (e.g., `tagstructure{H1}{My Heading}`). It provides commands to control the tagging of headings, lists, tables, figures, and other content types.
 \item \emph{Semantic Markup:} Use standard LaTeX commands for semantic structure:
 \begin{itemize}
-\item Headings: `\section`, `\subsection`, etc.
-\item Lists: `\begin{itemize}`, `\begin{enumerate}`, `\begin{description}`.
-\item Tables: `\begin{tabular}`, use `\caption` for table titles.
-\item Figures: `\begin{figure}`, use `\caption` and potentially `\alttext` (if supported by packages like `accsupp`) for alternative text.
-\item Links: `\url`, `\href` (from `hyperref` package) for proper link tagging.
+\item Headings: `\textbackslash{}section`, `\textbackslash{}subsection`, etc.
+\item Lists: `\textbackslash{}begin{itemize}`, `\textbackslash{}begin{enumerate}`, `\textbackslash{}begin{description}`.
+\item Tables: `\textbackslash{}begin{tabular}`, use `\textbackslash{}caption` for table titles.
+\item Figures: `\textbackslash{}begin{figure}`, use `\textbackslash{}caption` and potentially `alttext` (if supported by packages like `accsupp`) for alternative text.
+\item Links: `\textbackslash{}url`, `\textbackslash{}href` (from `hyperref` package) for proper link tagging.
 \end{itemize}
-\item \emph{`hyperref` Package:} Essential for creating accessible links and bookmarks in your PDF. Ensure it's loaded with accessibility-related options.
+\item \emph{`\textbackslash{}hyperref` Package:} Essential for creating accessible links and bookmarks in your PDF. Ensure it's loaded with accessibility-related options.
 \item \emph{Compiling with `lualatex` or `pdflatex`:} Both compilers can generate tagged PDFs, but `lualatex` often provides more advanced features for modern LaTeX documents and accessibility.
 \end{itemize}
 While LaTeX's capabilities for tagged PDFs are evolving, following semantic markup best practices and using the `tagpdf` and `hyperref` packages are key steps.
@@ -179,7 +179,7 @@ While LaTeX's capabilities for tagged PDFs are evolving, following semantic mark
 \label{subsubsec:word}
 Microsoft Word is a common starting point for many PDFs. By following these best practices, you can significantly improve the accessibility of the exported PDF:
 \begin{itemize}
-\item \emph{Use Styles:} Apply built-in heading styles (Heading 1, Heading 2, etc.) for logical document structure.\footnote{Microsoft. "Create accessible PDFs from Word documents." \url{[https://support.microsoft.com/en-us/topic/create-accessible-pdfs-from-word-documents-0f09a13b-17ce-4522-a7d2-35f11181a2f6](https://www.google.com/search?q=https://support.microsoft.com/en-us/topic/create-accessible-pdfs-from-word-documents-0f09a13b-17ce-4522-a7d2-35f11181a2f6)}}
+\item \emph{Use Styles:} Apply built-in heading styles (Heading 1, Heading 2, etc.) for logical document structure.\cite{MSWordPDF}
 \item \emph{Alternative Text:} Add descriptive alt text to all images, charts, and other non-text content.
 \item \emph{Descriptive Links:} Use meaningful link text instead of generic "click here."
 \item \emph{Table Structure:} Create simple data tables. Use Word's table tools to designate header rows. Avoid merged cells or complex layouts.
@@ -195,7 +195,7 @@ InDesign is a powerful tool for creating complex layouts that can be exported as
 \begin{itemize}
 \item \emph{Logical Layout and Reading Order:} Design your layout with a logical reading order in mind. Use the \texttt{Articles} panel to define the content flow for export.
 \item \emph{Live Text:} Keep text as live text rather than outlines or flattened images.
-\item \emph{Paragraph Styles with Export Tags:} Map paragraph styles to appropriate PDF tags (e.g., \texttt{H1}, \texttt{P}, \texttt{L}). This is done in \texttt{Paragraph Style Options} $\>$ \texttt{Export Tagging}.\footnote{Adobe. "Create accessible PDF files from InDesign." \url{[https://helpx.adobe.com/indesign/using/creating-accessible-pdfs.html](https://helpx.adobe.com/indesign/using/creating-accessible-pdfs.html)}}
+\item \emph{Paragraph Styles with Export Tags:} Map paragraph styles to appropriate PDF tags (e.g., \texttt{H1}, \texttt{P}, \texttt{L}). This is done in \texttt{Paragraph Style Options} $\>$ \texttt{Export Tagging}.\cite{AdobeInDesignPDF}
 \item \emph{Images and Graphics:} Place images in their own frames. Provide alt text in \texttt{Object Export Options} (\texttt{Alt Text} tab). For decorative images, choose \texttt{Artifact} from the \texttt{Tagged PDF} dropdown.
 \item \emph{Color Contrast:} Ensure sufficient color contrast for text and important graphics.
 \item \emph{Metadata:} Add document title, author, and language in \texttt{File} $\>$ \texttt{File Info}.
@@ -281,7 +281,7 @@ After identifying failures in an audit, the next critical step is remediation. T
 \subsection{Common Accessibility Audit Failures}
 \label{subsec:common-failures}
 
-1.  \emph{Untagged Document:} The PDF lacks any structural tags, rendering it inaccessible to screen readers.\footnote{Equidox. "10 Errors PDF Accessibility Checkers Miss." \url{[https://equidox.co/blog/10-errors-pdf-accessibility-checkers-miss/](https://equidox.co/blog/10-errors-pdf-accessibility-checkers-miss/)}}
+1.  \emph{Untagged Document:} The PDF lacks any structural tags, rendering it inaccessible to screen readers.\cite{EquidoxBlog}
 2.  \emph{Missing/Incorrect Document Title or Language:} Crucial metadata for screen readers.
 3.  \emph{Missing Alternative Text for Figures/Images:} Visual content without textual descriptions.
 4.  \emph{Incorrect Reading Order:} The logical flow of content doesn't match the visual presentation, confusing screen readers.
@@ -344,9 +344,9 @@ Acrobat Pro offers various tools to fix the identified issues:
 
 \subsubsection{List Remediation}
 \label{subsubsec:list-remediation}
-
+\begin{itemize}
 \item \emph{Tag Lists:} Use the \texttt{Reading Order} tool. Select the list and apply the \texttt{List} tag. Then, fine-tune the nested \texttt{<LI>}, \texttt{<LBody>}, and \texttt{<Lbl>} tags in the \texttt{Tags} panel.
-
+\end{itemize}
 \subsubsection{Low Color Contrast}
 
 \begin{itemize}
@@ -371,3 +371,24 @@ Non-Adobe tools offer varying degrees of remediation capabilities:
 \section{Conclusion}
 \label{sec:conclusion}
 Achieving full PDF accessibility is an ongoing process that requires a combination of proactive source document preparation, diligent auditing, and targeted remediation. While Adobe Acrobat Pro remains a dominant tool in the accessibility workflow, a growing ecosystem of non-Adobe solutions offers powerful alternatives across macOS, Windows, and Linux. By leveraging these tools and adhering to WCAG and PDF/UA standards, organizations can ensure their digital documents are inclusive and accessible to all users.
+
+\begin{thebibliography}{99}
+\bibitem{WCAG22} W3C. \textit{Web Content Accessibility Guidelines (WCAG) 2.2}. \url{https://www.w3.org/WAI/WCAG22/}
+\bibitem{WCAG22Tech} W3C. \textit{Techniques for WCAG 2.2}. \url{https://www.w3.org/WAI/WCAG22/Techniques/}
+\bibitem{AdobePDFUA} Adobe. \textit{PDF/UA (Universal Accessibility)}. \url{https://www.adobe.com/uk/acrobat/resources/document-files/pdf-types/pdf-ua.html}
+\bibitem{PubComWCAGvsPDFUA} PubCom. \textit{WCAG vs. PDF/UA: What's the Difference and Which One Do I Use?} \url{https://www.pubcom.com/blog/standards/wcag-pdf/index.shtml}
+\bibitem{AdobeAccessGuide} Adobe. \textit{Create and verify PDF accessibility}. \url{https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html}
+\bibitem{FoxitManual} Foxit. \textit{Accessibility - Foxit PDF Editor for Mac User Manual}. \url{https://help.foxit.com/manuals/pdf-editor/mac/en-us/v13/Accessibility.html}
+\bibitem{AllyantCommonLook} Allyant. \textit{CommonLook PDF}. \url{https://allyant.com/commonlook-accessibility-suite/cl-pdf/}
+\bibitem{QoppaPDFStudio} Qoppa Software. \textit{PDF Studio User Guide}. \url{https://www.qoppa.com/pdfstudio/guide/accessibility.html}
+\bibitem{AllyantValidator} Allyant. \textit{CommonLook PDF Validator}. \url{https://allyant.com/commonlook-accessibility-suite/cl-pdf-validator/}
+\bibitem{CallasPDFToolbox} Callas Software. \textit{callas pdfToolbox}. \url{https://www.callassoftware.com/en/products/pdftoolbox}
+\bibitem{AxesCheck} axesCheck. \textit{PDF Accessibility Checker}. \url{https://axescheck.com/}
+\bibitem{PAVE} PAVE. \textit{PDF Accessibility Converter}. \url{https://pave.adhoctranslations.com/}
+\bibitem{Equidox} Equidox. \textit{PDF Accessibility Solutions}. \url{https://equidox.co/}
+\bibitem{LaTeXTaggedPDF} The LaTeX Project. \textit{Tagged PDF for Accessibility}. \url{https://www.latex-project.org/news/2021/08/17/tagged-pdf-status/}
+\bibitem{LaTeXAccessBlog} LaTeX-Access. \textit{Generating Accessible PDFs with LuaLaTeX and ConTeXt}. \url{https://www.latex-access.com/blog/2023/10/generating-accessible-pdfs-with-lualatex-and-context}
+\bibitem{MSWordPDF} Microsoft. \textit{Create accessible PDFs from Word documents}. \url{https://support.microsoft.com/en-us/topic/create-accessible-pdfs-from-word-documents-0f09a13b-17ce-4522-a7d2-35f11181a2f6}
+\bibitem{AdobeInDesignPDF} Adobe. \textit{Create accessible PDF files from InDesign}. \url{https://helpx.adobe.com/indesign/using/creating-accessible-pdfs.html}
+\bibitem{EquidoxBlog} Equidox. \textit{10 Errors PDF Accessibility Checkers Miss}. \url{https://equidox.co/blog/10-errors-pdf-accessibility-checkers-miss/}
+\end{thebibliography}

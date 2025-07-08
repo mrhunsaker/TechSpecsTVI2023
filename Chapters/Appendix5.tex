@@ -1,9 +1,9 @@
 \chapter{Accessible Fonts}\label{appx66}
 \begin{raggedright}
-Accessible typography is crucial for individuals with visual impairments, such as low vision or reading disabilities like dyslexia. Accessible fonts are designed to be easy to read by a diverse audience, including people with visual impairments. The use of accessible typefaces like Atkinson Hyperlegible and APHont can significantly improve the legibility and readability of text for people with visual impairments. These typefaces have features like increased letter spacing, bold outlines, higher contrast ratios, and wider characters, which make them easier to read. The Section 508 Standards\footnote{\raggedright \href{https://blog.hubspot.com/website/accessibility-fonts}{Section508.gov. (n.d.). Understanding Accessible Fonts and Typography for Section 508 Compliance. Retrieved January 12, 2024}} and other regulations require sans-serif fonts in certain places, and typography choices have a huge impact on accessibility\footnote{\raggedright \href{https://accessibe.com/blog/knowledgebase/ada-compliant-fonts}{accessiBe. (2023, May 14). How to Choose ADA-Compliant Fonts in 2024: A Complete Guide. accessiBe BLOG}}. By using accessible typography, textual information can be made accessible to all users, irrespective of their abilities or disabilities\footnote{\raggedright \href{https://medium.com/the-readability-group/a-guide-to-understanding-what-makes-a-typeface-accessible-and-how-to-make-informed-decisions-9e5c0b9040a0}{The Readability Group. (2020, August 14). A Guide to Understanding What Makes a Typeface Accessible and How to Make Informed Decisions. Medium. Retrieved January 12, 2024}}\footnote{\raggedright \href{https://blog.hubspot.com/website/accessibility-fonts}{HubSpot. (n.d.). Accessibility Fonts: How to Choose the Right Typeface for Your Website. Retrieved January 12, 2024}}.
+Accessible typography is crucial for individuals with visual impairments, such as low vision or reading disabilities like dyslexia. Accessible fonts are designed to be easy to read by a diverse audience, including people with visual impairments. The use of accessible typefaces like Atkinson Hyperlegible and APHont can significantly improve the legibility and readability of text for people with visual impairments. These typefaces have features like increased letter spacing, bold outlines, higher contrast ratios, and wider characters, which make them easier to read. The Section 508 Standards\cite{Section508} and other regulations require sans-serif fonts in certain places, and typography choices have a huge impact on accessibility\cite{AccessiBe}. By using accessible typography, textual information can be made accessible to all users, irrespective of their abilities or disabilities\cite{ReadabilityGroup}\cite{HubSpot}.
 
-There are a number of options available for accessible fonts. These are presented with font information and then followed by a thorough demonstration of the font readability\footnote{\raggedright Empty box characters mean a particular font does not contain that type of character. This is seen for all of the fonts below except JetBrains Mono with subscript characters}
-\end{raggedright}
+There are a number of options available for accessible fonts. These are presented with font information and then followed by a thorough demonstration of the font readability\cite{EmptyBoxNote}
+\end{raggedright>
 
 
 \section{Atkinson Hyperlegible Font}\label{trouble6}
@@ -80,7 +80,7 @@ There are a number of options available for accessible fonts. These are presente
 
 
 \pagebreak
-\hypertarget{trouble10}{}\section[JetBrains Mono]{JetBrains Mono\footnote{\href{https://www.jetbrains.com/lp/mono/}{Font created for monospace/coding needs}}}\label{trouble10}
+\hypertarget{trouble10}{}\section[JetBrains Mono]{JetBrains Mono\cite{JetBrainsMono}}\label{trouble10}
 \begin{raggedright}
 \emph{Strengths:} Excellent for code readability due to clear differentiation of similar characters (e.g., '0' and 'O', 'l', 'I', '1'). Good open apertures and designed for extended screen reading. Excellent ligature support for programming.
 \emph{Weaknesses:} As a monospaced font, it's not ideal for long blocks of prose due to its uniform character width, which can make reading less fluid. Subscript characters might appear as empty boxes if the font isn't fully supported by your LaTeX setup for these symbols.
@@ -91,6 +91,8 @@ There are a number of options available for accessible fonts. These are presente
 \subsection{Italic}
 \FontSample{{\jetbrainsmonofont\itshape}}
 \end{raggedright}
+
+
 
 
 \pagebreak
@@ -138,6 +140,8 @@ There are a number of options available for accessible fonts. These are presente
 \end{raggedright}
 
 
+
+
 \pagebreak
 \section{Arial / Arial Unicode MS}\label{sec:arial}
 \emph{Commonly recommended for accessibility due to clarity and sans-serif design. Pre-installed on many systems.}
@@ -181,3 +185,13 @@ There are a number of options available for accessible fonts. These are presente
 \subsection{Italic}
 \FontSample{{\centurygothicfont\itshape}}
 \end{raggedright}
+
+% Bibliography
+\begin{thebibliography}{99}
+\bibitem{Section508} Section508.gov. (n.d.). Understanding Accessible Fonts and Typography for Section 508 Compliance. \url{https://blog.hubspot.com/website/accessibility-fonts}. Retrieved January 12, 2024.
+\bibitem{AccessiBe} accessiBe. (2023, May 14). How to Choose ADA-Compliant Fonts in 2024: A Complete Guide. accessiBe BLOG. \url{https://accessibe.com/blog/knowledgebase/ada-compliant-fonts}.
+\bibitem{ReadabilityGroup} The Readability Group. (2020, August 14). A Guide to Understanding What Makes a Typeface Accessible and How to Make Informed Decisions. Medium. \url{https://medium.com/the-readability-group/a-guide-to-understanding-what-makes-a-typeface-accessible-and-how-to-make-informed-decisions-9e5c0b9040a0}. Retrieved January 12, 2024.
+\bibitem{HubSpot} HubSpot. (n.d.). Accessibility Fonts: How to Choose the Right Typeface for Your Website. \url{https://blog.hubspot.com/website/accessibility-fonts}. Retrieved January 12, 2024.
+\bibitem{EmptyBoxNote} Empty box characters mean a particular font does not contain that type of character. This is seen for all of the fonts below except JetBrains Mono with subscript characters.
+\bibitem{JetBrainsMono} JetBrains. Font created for monospace/coding needs. \url{https://www.jetbrains.com/lp/mono/}.
+\end{thebibliography}
