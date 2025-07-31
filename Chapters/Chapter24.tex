@@ -1,70 +1,86 @@
 \chapter{Screen Reader Interaction with Windows Environment and User Data Processing}
 \label{chap:screenreader-windows}
 
-This report provides a comprehensive description of how **JAWS**, **NVDA**, **Windows Narrator**, and **Dolphin Supernova** interact with the Windows environment, process user data, and differ in their basic navigation commands and unique features.
+\begin{raggedright}
+This chapter provides a comprehensive and accessible overview of how \emph{JAWS}, \emph{NVDA}, \emph{Windows Narrator}, and \emph{Dolphin Supernova} interact with the Windows environment, process user data, and differ in their basic navigation commands and unique features. The structure and formatting have been enhanced for improved accessibility, including screen reader navigation, semantic markup, and logical organization.
+\end{raggedright}
 
 \section{Interaction with Windows Environment: Utilizing Accessibility APIs}
 \label{sec:interaction-apis}
 
-Screen readers act as intermediaries between the user and the operating system, translating visual information into audible or tactile formats. They achieve this by leveraging Windows' built-in accessibility Application Programming Interfaces (APIs). The primary APIs used are **Microsoft Active Accessibility (MSAA)** and **UI Automation (UIA)**, with **IAccessible2** playing a crucial role, especially for web content.
+Screen readers act as intermediaries between the user and the operating system, translating visual information into audible or tactile formats. They achieve this by leveraging Windows' built-in accessibility Application Programming Interfaces (APIs). The primary APIs used are \textbf{Microsoft Active Accessibility (MSAA)}, \textbf{UI Automation (UIA)}, and \textbf{IAccessible2}, each of which plays a crucial role, especially for web content.
 
-\begin{itemize}
-    \item \emph{Microsoft Active Accessibility (MSAA):} Introduced with Windows 95, MSAA is a Component Object Model (COM)-based API that allows applications to expose basic UI element information (name, role, state, location) in a hierarchical tree structure. While foundational, MSAA has limitations, particularly in handling complex UI elements, rich text, and modern web content.\cite{MSAAWiki}
-    \item \emph{UI Automation (UIA):} UIA is Microsoft's newer and more robust accessibility framework, designed to overcome MSAA's limitations. It offers a richer object model, a broader set of properties, and "control patterns" that allow for more granular interaction and information retrieval from UI elements.\cite{UIAutomationOverview}
-    \item \emph{IAccessible2:} An open-source API based on MSAA, IAccessible2 was developed to address critical accessibility gaps in MSAA, particularly for rich document applications and web browsers. It complements MSAA by providing enhanced semantics and support for complex web technologies (like ARIA).\cite{JantridIAccessible2}
-\end{itemize}
 
-\subsection*{How Each Screen Reader Utilizes APIs:}
-\begin{itemize}
-    \item \emph{JAWS (Job Access With Speech):} Utilizes both **UI Automation (UIA)** and **IAccessible2**. For web content, JAWS, like NVDA, continues to heavily rely on IAccessible2 due to UIA's historical and ongoing insufficiencies in fully representing web semantics.\cite{JantridIAccessible2}\cite{JAWSUIAScriptAPI}
-    \item \emph{NVDA (NonVisual Desktop Access):} Employs a comprehensive approach, utilizing **Microsoft Active Accessibility (MSAA), IAccessible2, Java Access Bridge, and UI Automation**.\cite{NVDAAPIsClym}\cite{AssistivLabsNVDAArch} NVDA's architecture includes specific **API handlers** (e.g., \texttt{IAccessibleHandler}, \texttt{JABHandler}, \texttt{UIAHandler}) that abstract API complexities, allowing the core of NVDA to work with a unified, abstract representation of UI elements called "NVDA Objects."
-    \item \emph{Windows Narrator:} As a built-in Windows screen reader, Narrator is deeply integrated with the operating system and primarily relies on the **Microsoft UI Automation framework**.\cite{NarratorTechDetails}
-    \item \emph{Dolphin Supernova:} While explicit technical documentation detailing its precise API usage is less publicly available, Supernova, as a comprehensive screen reader for Windows, is understood to leverage the standard Windows accessibility APIs, including **UI Automation** and **Microsoft Active Accessibility**.\cite{SuperNovaMagnifierScreenReader} Its ability to announce detailed information about UI elements, formatting, and on-screen changes strongly implies its reliance on these underlying system interfaces. It also likely uses IAccessible2 for robust web accessibility, similar to JAWS and NVDA.
-\end{itemize}
+\begin{description}
+    \item[Microsoft Active Accessibility (MSAA):] Introduced with Windows 95, MSAA is a Component Object Model (COM)-based API that allows applications to expose basic UI element information (name, role, state, location) in a hierarchical tree structure. While foundational, MSAA has limitations, particularly in handling complex UI elements, rich text, and modern web content. \cite{MSAAWiki}
+    \item[UI Automation (UIA):] UIA is Microsoft's newer and more robust accessibility framework, designed to overcome MSAA's limitations. It offers a richer object model, a broader set of properties, and "control patterns" that allow for more granular interaction and information retrieval from UI elements. \cite{UIAutomationOverview}
+    \item[IAccessible2:] An open-source API based on MSAA, IAccessible2 was developed to address critical accessibility gaps in MSAA, particularly for rich document applications and web browsers. It complements MSAA by providing enhanced semantics and support for complex web technologies (like ARIA). \cite{JantridIAccessible2}
+\end{description}
+
+\subsection{How Each Screen Reader Utilizes APIs}
+\label{subsec:screenreader-api-usage}
+For improved accessibility, the following list explains how each major screen reader leverages these APIs. This context helps users and developers understand compatibility and expected behaviors:
+
+\begin{description}
+    \item[JAWS (Job Access With Speech):] Utilizes both \textbf{UI Automation (UIA)} and \textbf{IAccessible2}. For web content, JAWS, like NVDA, continues to heavily rely on IAccessible2 due to UIA's historical and ongoing insufficiencies in fully representing web semantics. \cite{JantridIAccessible2, JAWSUIAScriptAPI}
+    \item[NVDA (NonVisual Desktop Access):] Employs a comprehensive approach, utilizing \textbf{Microsoft Active Accessibility (MSAA)}, \textbf{IAccessible2}, \textbf{Java Access Bridge}, and \textbf{UI Automation}. \cite{NVDAAPIsClym, AssistivLabsNVDAArch} NVDA's architecture includes specific API handlers (e.g., \texttt{IAccessibleHandler}, \texttt{JABHandler}, \texttt{UIAHandler}) that abstract API complexities, allowing the core of NVDA to work with a unified, abstract representation of UI elements called "NVDA Objects."
+    \item[Windows Narrator:] As a built-in Windows screen reader, Narrator is deeply integrated with the operating system and primarily relies on the \textbf{Microsoft UI Automation framework}. \cite{NarratorTechDetails}
+    \item[Dolphin Supernova:] While explicit technical documentation detailing its precise API usage is less publicly available, Supernova, as a comprehensive screen reader for Windows, is understood to leverage the standard Windows accessibility APIs, including \textbf{UI Automation} and \textbf{Microsoft Active Accessibility}. \cite{SuperNovaMagnifierScreenReader} Its ability to announce detailed information about UI elements, formatting, and on-screen changes strongly implies its reliance on these underlying system interfaces. It also likely uses IAccessible2 for robust web accessibility, similar to JAWS and NVDA.
+\end{description}
 
 ---
 
 \section{Intercepting and Processing User Inputs}
 \label{sec:intercepting-inputs}
 
-Screen readers intercept user inputs, primarily keyboard commands and sometimes touch gestures, to navigate the Windows environment and trigger specific actions or information retrieval. They often employ a "modifier key" (e.g., Insert key, Caps Lock) in combination with other keys to differentiate screen reader commands from standard application commands.
+Screen readers intercept user inputs, primarily keyboard commands and sometimes touch gestures, to navigate the Windows environment and trigger specific actions or information retrieval. For accessibility, it is important to understand the modifier keys and input paradigms used by each screen reader.
 
-\begin{itemize}
-    \item \emph{JAWS:} Intercepts keyboard commands extensively, using the \emph{Insert key} (or Caps Lock) as its primary modifier key.\cite{JAWSBasicCommands} Features a \emph{Virtual Cursor} for web Browse and document reading, which allows navigation without moving the actual system focus. When interacting with forms or editable content, it automatically or manually switches to \emph{Forms Mode}, passing keystrokes directly to the application.\cite{JAWSKeyboardGestures}
-    \item \emph{NVDA:} Processes keyboard commands, often using the \emph{NVDA key} (Insert or Caps Lock by default) as a modifier.\cite{NVDAKeyboardCommands} Employs distinct \emph{Browse Mode} and \emph{Focus Mode}. In Browse Mode (default for web pages and documents), NVDA intercepts most keystrokes for navigation. In Focus Mode, keystrokes are passed directly to the application. Supports touch gestures for Windows tablets.\cite{NVDAKeyboardCommands}
-    \item \emph{Windows Narrator:} Intercepts keyboard commands using the \emph{Narrator key} (Caps Lock or Insert by default).\cite{NarratorKeyboardCommands} Features a \emph{Scan mode} (Narrator key + Spacebar) for navigating web pages and documents, similar to browse mode in other screen readers. Supports touch gestures for navigation, particularly useful on touch-enabled devices.\cite{NarratorGuide}
-    \item \emph{Dolphin Supernova:} Utilizes a range of \emph{hotkeys}, often involving the \emph{Caps Lock key} as a modifier, though it can be customized.\cite{SuperNovaHotkeys} Features a \emph{Dolphin Cursor} for exploring the screen and includes a \emph{Forms Mode} that automatically activates when navigating to editable fields.\cite{SuperNovaHotkeys}
-\end{itemize}
+\paragraph{Screen Reader Input Methods}
+The following list summarizes how each screen reader processes user input, with emphasis on modifier keys and navigation modes:
+
+\begin{description}
+    \item[JAWS:] Intercepts keyboard commands extensively, using the \emph{Insert key} (or Caps Lock) as its primary modifier key. \cite{JAWSBasicCommands} Features a \emph{Virtual Cursor} for web Browse and document reading, which allows navigation without moving the actual system focus. When interacting with forms or editable content, it automatically or manually switches to \emph{Forms Mode}, passing keystrokes directly to the application. \cite{JAWSKeyboardGestures}
+    \item[NVDA:] Processes keyboard commands, often using the \emph{NVDA key} (Insert or Caps Lock by default) as a modifier. \cite{NVDAKeyboardCommands} Employs distinct \emph{Browse Mode} and \emph{Focus Mode}. In Browse Mode (default for web pages and documents), NVDA intercepts most keystrokes for navigation. In Focus Mode, keystrokes are passed directly to the application. Supports touch gestures for Windows tablets. \cite{NVDAKeyboardCommands}
+    \item[Windows Narrator:] Intercepts keyboard commands using the \emph{Narrator key} (Caps Lock or Insert by default). \cite{NarratorKeyboardCommands} Features a \emph{Scan mode} (Narrator key + Spacebar) for navigating web pages and documents, similar to browse mode in other screen readers. Supports touch gestures for navigation, particularly useful on touch-enabled devices. \cite{NarratorGuide}
+    \item[Dolphin Supernova:] Utilizes a range of \emph{hotkeys}, often involving the \emph{Caps Lock key} as a modifier, though it can be customized. \cite{SuperNovaHotkeys} Features a \emph{Dolphin Cursor} for exploring the screen and includes a \emph{Forms Mode} that automatically activates when navigating to editable fields. \cite{SuperNovaHotkeys}
+\end{description}
 
 ---
 
 \section{Generating Screen Reader Outputs}
 \label{sec:generating-outputs}
 
-All four screen readers generate output primarily through synthesized speech and refreshable braille displays, often supplemented by auditory cues.
+All four screen readers generate output primarily through synthesized speech and refreshable braille displays, often supplemented by auditory cues. The following subsections provide accessible summaries of each output modality.
 
-\subsection*{Speech Synthesis:}
-\begin{itemize}
-    \item \emph{JAWS:} Supports a variety of speech synthesizers, including its proprietary Eloquence synthesizer, and can automatically detect and switch languages based on content.\cite{JAWSWhatsNew}
-    \item \emph{NVDA:} Bundles the open-source eSpeak NG synthesizer and supports Microsoft SAPI 4/5, Microsoft Speech Platform, and Windows OneCore Voices. Offers extensive customization and supports automatic language switching.\cite{NVDASpeech}
-    \item \emph{Windows Narrator:} Uses built-in Windows voices. Recent updates include "Speech recap" and "Live transcription" (real-time transcription of Narrator's speech), enhancing its output capabilities.\cite{NarratorWhatsNew}
-    \item \emph{Dolphin Supernova:} Offers "human-sounding voices" with customizable options for character/word echo, and a "Read From Here" mode. Features "Sound Splitting" and "Audio Ducking" for managing audio output.\cite{SuperNovaSpeech}
-\end{itemize}
+\subsection{Speech Synthesis}
+\label{subsec:speech-synthesis}
+The following list summarizes speech synthesis features for each screen reader:
 
-\subsection*{Braille Display Output:}
-\begin{itemize}
-    \item All four support a wide range of refreshable braille displays, converting on-screen text into tactile braille.
-    \item \emph{JAWS:} Supports contracted and uncontracted braille, with customization options. Features updated Liblouis braille translator and supports Braille Font Attribute Marks.\cite{JAWSBraille}
-    \item \emph{NVDA:} Uses the open-source LibLouis braille translator. Supports both uncontracted and contracted braille input via braille keyboards and can automatically detect many displays. Provides a "Braille Viewer" for sighted users.\cite{NVDABraille}
-    \item \emph{Windows Narrator:} Requires installation of braille support in Windows. Once enabled, it can output to compatible braille displays.\cite{NarratorBraille}
-    \item \emph{Dolphin Supernova:} Supports over 60 braille displays and more than 50 literary and computer braille codes, including Unified English Braille. Allows braille input via the display's keyboard and offers a "Show Braille On Screen" feature.\cite{SuperNovaBraille}
-\end{itemize}
+\begin{description}
+    \item[JAWS:] Supports a variety of speech synthesizers, including its proprietary Eloquence synthesizer, and can automatically detect and switch languages based on content. \cite{JAWSWhatsNew}
+    \item[NVDA:] Bundles the open-source eSpeak NG synthesizer and supports Microsoft SAPI 4/5, Microsoft Speech Platform, and Windows OneCore Voices. Offers extensive customization and supports automatic language switching. \cite{NVDASpeech}
+    \item[Windows Narrator:] Uses built-in Windows voices. Recent updates include "Speech recap" and "Live transcription" (real-time transcription of Narrator's speech), enhancing its output capabilities. \cite{NarratorWhatsNew}
+    \item[Dolphin Supernova:] Offers "human-sounding voices" with customizable options for character/word echo, and a "Read From Here" mode. Features "Sound Splitting" and "Audio Ducking" for managing audio output. \cite{SuperNovaSpeech}
+\end{description}
 
-\subsection*{Auditory Cues:}
+\subsection{Braille Display Output}
+\label{subsec:braille-output}
+All four screen readers support a wide range of refreshable braille displays, converting on-screen text into tactile braille. Key features include:
+
+\begin{description}
+    \item[JAWS:] Supports contracted and uncontracted braille, with customization options. Features updated Liblouis braille translator and supports Braille Font Attribute Marks. \cite{JAWSBraille}
+    \item[NVDA:] Uses the open-source LibLouis braille translator. Supports both uncontracted and contracted braille input via braille keyboards and can automatically detect many displays. Provides a "Braille Viewer" for sighted users. \cite{NVDABraille}
+    \item[Windows Narrator:] Requires installation of braille support in Windows. Once enabled, it can output to compatible braille displays. \cite{NarratorBraille}
+    \item[Dolphin Supernova:] Supports over 60 braille displays and more than 50 literary and computer braille codes, including Unified English Braille. Allows braille input via the display's keyboard and offers a "Show Braille On Screen" feature. \cite{SuperNovaBraille}
+\end{description}
+
+\subsection{Auditory Cues}
+\label{subsec:auditory-cues}
+Beyond speech, screen readers use non-speech sounds to convey information, such as beeps for progress, changes in focus, or specific events. Examples include:
+
 \begin{itemize}
-    \item Beyond speech, screen readers use non-speech sounds to convey information, such as beeps for progress, changes in focus, or specific events.
-    \item \emph{NVDA} can provide audible indication of the mouse position.\cite{NVDASpeech}
-    \item \emph{Dolphin Supernova} uses "Monitor markers" to announce on-screen changes like security notifications or download progress.\cite{SuperNovaFeatures}
+    \item \textbf{NVDA:} Can provide audible indication of the mouse position. \cite{NVDASpeech}
+    \item \textbf{Dolphin Supernova:} Uses "Monitor markers" to announce on-screen changes like security notifications or download progress. \cite{SuperNovaFeatures}
 \end{itemize}
 
 ---
@@ -74,86 +90,89 @@ All four screen readers generate output primarily through synthesized speech and
 
 The core of a screen reader's functionality lies in how it interprets raw accessibility data from the Windows environment and transforms it into meaningful output. This involves building an internal representation of the UI and applying rendering logic to determine what information to present and how.
 
-\begin{itemize}
-    \item \emph{JAWS:} Interprets accessibility data to construct a logical representation of the screen. Its "JAWS Inspect" tool provides a visual, text-based view of how JAWS interprets digital content, including reading order, hierarchy of headings, labels, roles, and states of controls.\cite{JAWSInspect} Features like "AI Labeler" demonstrate its ability to process visual information (screenshots) using AI to generate accessible names for unlabeled elements.\cite{JAWSAILabeler} Its "Text Processing" and "Language Processing" groups show a focus on intelligent content analysis.\cite{JAWSWhatsNew}
-    \item \emph{NVDA:} Builds an internal object model using "NVDA Objects," which are abstract representations of UI widgets.\cite{AssistivLabsNVDAArch} These objects contain properties like name, role, states, value, description, location, and relational properties. Uses "TextInfo objects" to handle text navigation and formatting. Its rendering logic involves processing symbol pronunciation and providing contextual properties.\cite{NVDASpeech}
-    \item \emph{Windows Narrator:} Leverages the UI Automation framework to build its understanding of the UI. Its rendering logic determines whether text should be read as part of a tab-sequence traversal or as part of an overall document representation.\cite{NarratorTechDetails} Recent advancements include AI-driven image descriptions\cite{NarratorImageDescriptions}
-    \item \emph{Dolphin Supernova:} Employs "True Fonts" technology to ensure text clarity at high magnification levels.\cite{SuperNovaFeatures} Its "Monitor markers" feature suggests an internal mechanism for detecting and announcing dynamic changes on the screen. Improved speech announcements for specific contexts, such as Excel cell coordinates, show a refined rendering logic. "Doc Reader" and "Line View" are dedicated reading modes that reflow and present text in optimized ways.\cite{SuperNovaFeatures}
-\end{itemize}
+\paragraph{Screen Reader Data Processing Approaches}
+The following list summarizes the internal data processing and rendering logic for each screen reader:
+
+\begin{description}
+    \item[JAWS:] Interprets accessibility data to construct a logical representation of the screen. Its "JAWS Inspect" tool provides a visual, text-based view of how JAWS interprets digital content, including reading order, hierarchy of headings, labels, roles, and states of controls. \cite{JAWSInspect} Features like "AI Labeler" demonstrate its ability to process visual information (screenshots) using AI to generate accessible names for unlabeled elements. \cite{JAWSAILabeler} Its "Text Processing" and "Language Processing" groups show a focus on intelligent content analysis. \cite{JAWSWhatsNew}
+    \item[NVDA:] Builds an internal object model using "NVDA Objects," which are abstract representations of UI widgets. \cite{AssistivLabsNVDAArch} These objects contain properties like name, role, states, value, description, location, and relational properties. Uses "TextInfo objects" to handle text navigation and formatting. Its rendering logic involves processing symbol pronunciation and providing contextual properties. \cite{NVDASpeech}
+    \item[Windows Narrator:] Leverages the UI Automation framework to build its understanding of the UI. Its rendering logic determines whether text should be read as part of a tab-sequence traversal or as part of an overall document representation. \cite{NarratorTechDetails} Recent advancements include AI-driven image descriptions \cite{NarratorImageDescriptions}
+    \item[Dolphin Supernova:] Employs "True Fonts" technology to ensure text clarity at high magnification levels. \cite{SuperNovaFeatures} Its "Monitor markers" feature suggests an internal mechanism for detecting and announcing dynamic changes on the screen. Improved speech announcements for specific contexts, such as Excel cell coordinates, show a refined rendering logic. "Doc Reader" and "Line View" are dedicated reading modes that reflow and present text in optimized ways. \cite{SuperNovaFeatures}
+\end{description}
 
 ---
 
 \section{Architectural Approaches and Unique Methods}
 \label{sec:architectural-approaches}
 
-Each screen reader has distinct architectural philosophies and unique features that differentiate its approach to interacting with Windows.
+Each screen reader has distinct architectural philosophies and unique features that differentiate its approach to interacting with Windows. The following list summarizes these approaches for accessibility:
 
-\begin{itemize}
-    \item \emph{JAWS:}
+\begin{description}
+    \item[JAWS:]
     \begin{itemize}
         \item \emph{Proprietary and Commercial:} A long-standing, feature-rich commercial product.
-        \item \emph{Extensive Scripting:} Offers a powerful scripting language for highly customized interactions with non-standard applications.\cite{JAWSScripting}
-        \item \emph{Virtual Cursor:} A core architectural component for consistent navigation across diverse applications and web content.\cite{JAWSKeyboardGestures}
-        \item \emph{AI Labeler \& Convenient OCR:} Uses AI and OCR to make inaccessible content (unlabeled elements, images, PDFs, even live video streams) accessible.\cite{JAWSAILabeler}\cite{JAWSOCR}
+        \item \emph{Extensive Scripting:} Offers a powerful scripting language for highly customized interactions with non-standard applications. \cite{JAWSScripting}
+        \item \emph{Virtual Cursor:} A core architectural component for consistent navigation across diverse applications and web content. \cite{JAWSKeyboardGestures}
+        \item \emph{AI Labeler \& Convenient OCR:} Uses AI and OCR to make inaccessible content (unlabeled elements, images, PDFs, even live video streams) accessible. \cite{JAWSAILabeler, JAWSOCR}
     \end{itemize}
-    \item \emph{NVDA:}
+    \item[NVDA:]
     \begin{itemize}
-        \item \emph{Open-Source and Community-Driven:} Cost-free availability, fosters rapid development and widespread adoption.\cite{NVAccess}
-        \item \emph{Portable:} Can run directly from a USB drive without installation.\cite{NVAccess}
-        \item \emph{Modular Architecture:} Written primarily in Python with C++ for performance-critical parts.\cite{AssistivLabsNVDAArch}
-        \item \emph{Browse Mode/Focus Mode:} A fundamental interaction paradigm that intelligently adapts navigation based on content type.\cite{NVDAKeyboardCommands}
-        \item \emph{Speech and Braille Viewers:} Built-in tools for sighted users to visualize output.\cite{NVDASpeech}\cite{NVDABraille}
+        \item \emph{Open-Source and Community-Driven:} Cost-free availability, fosters rapid development and widespread adoption. \cite{NVAccess}
+        \item \emph{Portable:} Can run directly from a USB drive without installation. \cite{NVAccess}
+        \item \emph{Modular Architecture:} Written primarily in Python with C++ for performance-critical parts. \cite{AssistivLabsNVDAArch}
+        \item \emph{Browse Mode/Focus Mode:} A fundamental interaction paradigm that intelligently adapts navigation based on content type. \cite{NVDAKeyboardCommands}
+        \item \emph{Speech and Braille Viewers:} Built-in tools for sighted users to visualize output. \cite{NVDASpeech, NVDABraille}
     \end{itemize}
-    \item \emph{Windows Narrator:}
+    \item[Windows Narrator:]
     \begin{itemize}
-        \item \emph{Operating System Integration:} Built directly into Windows, ensuring deep system-level access and tight integration with Microsoft's accessibility initiatives.\cite{NarratorGuide}
-        \item \emph{AI-Powered Features:} Leveraging AI for image descriptions and live transcription.\cite{NarratorImageDescriptions}\cite{NarratorWhatsNew}
+        \item \emph{Operating System Integration:} Built directly into Windows, ensuring deep system-level access and tight integration with Microsoft's accessibility initiatives. \cite{NarratorGuide}
+        \item \emph{AI-Powered Features:} Leveraging AI for image descriptions and live transcription. \cite{NarratorImageDescriptions, NarratorWhatsNew}
     \end{itemize}
-    \item \emph{Dolphin Supernova:}
+    \item[Dolphin Supernova:]
     \begin{itemize}
-        \item \emph{Combined Magnification and Screen Reading:} Robust integration of screen magnification with screen reading and braille support.\cite{SuperNovaFeatures}
-        \item \emph{True Fonts Technology:} Ensures magnified text remains sharp and clear.\cite{SuperNovaFeatures}
-        \item \emph{Connect \& View:} Allows connection to cameras and interactive whiteboards.\cite{SuperNovaFeatures}
-        \item \emph{Privacy Screen:} Hides screen content while still providing speech and braille output.\cite{SuperNovaFeatures}
+        \item \emph{Combined Magnification and Screen Reading:} Robust integration of screen magnification with screen reading and braille support. \cite{SuperNovaFeatures}
+        \item \emph{True Fonts Technology:} Ensures magnified text remains sharp and clear. \cite{SuperNovaFeatures}
+        \item \emph{Connect \& View:} Allows connection to cameras and interactive whiteboards. \cite{SuperNovaFeatures}
+        \item \emph{Privacy Screen:} Hides screen content while still providing speech and braille output. \cite{SuperNovaFeatures}
     \end{itemize}
-\end{itemize}
+\end{description}
 
 ---
 
 \section{Comparison of Methodologies for Processing and Rendering UI Elements}
 \label{sec:comparison-methodologies}
 
-The methodologies for processing and rendering UI elements vary in their underlying architecture, flexibility, and focus.
+The methodologies for processing and rendering UI elements vary in their underlying architecture, flexibility, and focus. The following list provides an accessible comparison:
 
-\begin{itemize}
-    \item \emph{JAWS:}
+\begin{description}
+    \item[JAWS:]
     \begin{itemize}
-        \item \emph{Processing:} Employs a sophisticated internal model that interprets raw API data (UIA, IAccessible2) into a semantic understanding of the UI. Scripting engine allows for highly customized interpretation rules.\cite{JAWSInspect}
-        \item \emph{Rendering:} Prioritizes a comprehensive and customizable verbalization of UI elements. Its "Virtual Cursor" creates a consistent reading experience across diverse content.\cite{JAWSKeyboardGestures}
+        \item \emph{Processing:} Employs a sophisticated internal model that interprets raw API data (UIA, IAccessible2) into a semantic understanding of the UI. Scripting engine allows for highly customized interpretation rules. \cite{JAWSInspect}
+        \item \emph{Rendering:} Prioritizes a comprehensive and customizable verbalization of UI elements. Its "Virtual Cursor" creates a consistent reading experience across diverse content. \cite{JAWSKeyboardGestures}
     \end{itemize}
-    \item \emph{NVDA:}
+    \item[NVDA:]
     \begin{itemize}
-        \item \emph{Processing:} Uses a modular, object-oriented approach with "NVDA Objects" that abstract API-specific details into a unified representation.\cite{AssistivLabsNVDAArch}
-        \item \emph{Rendering:} Offers distinct "Browse Mode" and "Focus Mode" for web content and documents, providing a flexible rendering strategy.\cite{NVDAKeyboardCommands} Provides detailed textual formatting information.
+        \item \emph{Processing:} Uses a modular, object-oriented approach with "NVDA Objects" that abstract API-specific details into a unified representation. \cite{AssistivLabsNVDAArch}
+        \item \emph{Rendering:} Offers distinct "Browse Mode" and "Focus Mode" for web content and documents, providing a flexible rendering strategy. \cite{NVDAKeyboardCommands} Provides detailed textual formatting information.
     \end{itemize}
-    \item \emph{Windows Narrator:}
+    \item[Windows Narrator:]
     \begin{itemize}
-        \item \emph{Processing:} Deeply integrated with the Windows UI Automation framework. Its processing is optimized for the Windows ecosystem.\cite{NarratorTechDetails} AI capabilities for image description signify advanced non-textual content interpretation.\cite{NarratorImageDescriptions}
-        \item \emph{Rendering:} Aims for a streamlined and integrated experience within Windows. Adapts reading behavior (tab-sequence vs. document reading) based on UI element purpose.\cite{NarratorTechDetails}
+        \item \emph{Processing:} Deeply integrated with the Windows UI Automation framework. Its processing is optimized for the Windows ecosystem. \cite{NarratorTechDetails} AI capabilities for image description signify advanced non-textual content interpretation. \cite{NarratorImageDescriptions}
+        \item \emph{Rendering:} Aims for a streamlined and integrated experience within Windows. Adapts reading behavior (tab-sequence vs. document reading) based on UI element purpose. \cite{NarratorTechDetails}
     \end{itemize}
-    \item \emph{Dolphin Supernova:}
+    \item[Dolphin Supernova:]
     \begin{itemize}
-        \item \emph{Processing:} Combines visual processing (for magnification) with accessibility API data interpretation.\cite{SuperNovaFeatures} Its ability to announce "Monitor markers" suggests continuous monitoring and interpretation of UI state changes.
-        \item \emph{Rendering:} Offers a blend of visual and auditory/tactile output. For low-vision users, rendering prioritizes clear, magnified visuals. "Doc Reader" and "Line View" are specialized rendering modes that reflow content for optimal reading.\cite{SuperNovaFeatures}
+        \item \emph{Processing:} Combines visual processing (for magnification) with accessibility API data interpretation. \cite{SuperNovaFeatures} Its ability to announce "Monitor markers" suggests continuous monitoring and interpretation of UI state changes.
+        \item \emph{Rendering:} Offers a blend of visual and auditory/tactile output. For low-vision users, rendering prioritizes clear, magnified visuals. "Doc Reader" and "Line View" are specialized rendering modes that reflow content for optimal reading. \cite{SuperNovaFeatures}
     \end{itemize}
-\end{itemize}
+\end{description}
 
 ---
 
 \section{Summary of Basic Navigation Commands}
 \label{sec:summary-navigation}
 
-While specific key combinations can vary slightly or be customized, here's a summary of fundamental navigation commands for common actions across the four screen readers. The "modifier key" is typically Insert or Caps Lock.
+For accessibility and quick reference, Table~\ref{tab:screenreader-navigation-commands} summarizes fundamental navigation commands for common actions across the four screen readers. The "modifier key" is typically Insert or Caps Lock. This table is referenced throughout the chapter for ease of navigation.
 
 \begin{longtblr}[
   caption = {Summary of Basic Navigation Commands for Major Screen Readers},
@@ -194,6 +213,8 @@ Toggle Forms/Browse Mode & Insert + Z (Virtual Cursor) & NVDA + Spacebar & Narra
 % ---------------------------
 % Bibliography
 % ---------------------------
+\section{References}
+\addcontentsline{toc}{section}{References}
 \begin{thebibliography}{99}
 
 \bibitem{MSAAWiki} Microsoft Active Accessibility. Wikipedia. Available at: \url{https://en.wikipedia.org/wiki/Microsoft_Active_Accessibility} [Accessed: July 4, 2025].

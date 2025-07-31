@@ -13,20 +13,30 @@ PDF accessibility is primarily governed by two key standards: the Web Content Ac
 
 \subsection{Web Content Accessibility Guidelines (WCAG)}
 \label{subsec:wcag}
-WCAG, developed by the World Wide Web Consortium (W3C), is a globally recognized standard for digital accessibility. It is organized around four main principles: perceivable, operable, understandable, and robust. Many countries and organizations adopt WCAG as a legal requirement or best practice for digital content, including PDFs.\cite{WCAG22} For PDFs, WCAG techniques address aspects like alternative text for images, proper heading structure, logical reading order, color contrast, and keyboard navigation.\cite{WCAG22Tech}
+
+\subsubsection{Overview}
+
+WCAG, developed by the World Wide Web Consortium (W3C), is a globally recognized standard for digital accessibility. It is organized around four main principles: perceivable, operable, understandable, and robust. Many countries and organizations adopt WCAG as a legal requirement or best practice for digital content, including PDFs. \cite{WCAG22} For PDFs, WCAG techniques address aspects like alternative text for images, proper heading structure, logical reading order, color contrast, and keyboard navigation. \cite{WCAG22Tech}
 
 \subsection{PDF/UA (ISO 14289-1)}
 \label{subsec:pdfua}
-PDF/UA, or Universal Accessibility, is a highly technical standard that specifies how to create accessible PDF files. It dictates the inclusion of specific structural elements (tags) within the PDF to convey meaning and reading order to assistive technologies. Think of PDF/UA as the technical implementation that helps a PDF meet WCAG requirements.\cite{AdobePDFUA} Key requirements of PDF/UA include:
+
+\subsubsection{Overview}
+
+PDF/UA, or Universal Accessibility, is a highly technical standard that specifies how to create accessible PDF files. It dictates the inclusion of specific structural elements (tags) within the PDF to convey meaning and reading order to assistive technologies. Think of PDF/UA as the technical implementation that helps a PDF meet WCAG requirements. \cite{AdobePDFUA} Key requirements of PDF/UA include:
+
 \begin{itemize}
-\item \emph{Tags:} All meaningful content must be tagged with a semantic structure (e.g., headings, paragraphs, lists, tables).
-\item \emph{Reading Order:} The logical reading order of content must be defined.
-\item \emph{Alternative Text:} All non-text content (images, charts) must have appropriate alternative text.
-\item \emph{Language:} The natural language of the document and any changes in language must be specified.
-\item \emph{Metadata:} The document must contain appropriate title and language metadata.
-\item \emph{Accessibility Permissions:} Security settings should not restrict accessibility features.
+
+\item \textbf{Tags:} All meaningful content must be tagged with a semantic structure (e.g., headings, paragraphs, lists, tables).
+\item \textbf{Reading Order:} The logical reading order of content must be defined.
+\item \textbf{Alternative Text:} All non-text content (images, charts) must have appropriate alternative text.
+\item \textbf{Language:} The natural language of the document and any changes in language must be specified.
+\item \textbf{Metadata:} The document must contain appropriate title and language metadata.
+\item \textbf{Accessibility Permissions:} Security settings should not restrict accessibility features.
+
 \end{itemize}
-While WCAG offers broader principles, PDF/UA provides the detailed technical specifications for achieving those principles within a PDF document. Achieving PDF/UA compliance generally means a PDF will also meet relevant WCAG success criteria.\cite{PubComWCAGvsPDFUA}
+
+While WCAG offers broader principles, PDF/UA provides the detailed technical specifications for achieving those principles within a PDF document. Achieving PDF/UA compliance generally means a PDF will also meet relevant WCAG success criteria. \cite{PubComWCAGvsPDFUA}
 
 -----
 
@@ -36,64 +46,82 @@ A thorough accessibility audit is the first step in ensuring a PDF is accessible
 
 \subsection{Adobe Tools}
 \label{subsec:adobe-tools}
+
 \subsubsection{Adobe Acrobat Pro (Windows, macOS)}
 \label{subsubsec:acrobat-pro}
+
 \emph{Adobe Acrobat Pro} is the industry standard for PDF creation, editing, and accessibility auditing. Its built-in \emph{Accessibility Checker} is comprehensive, evaluating documents against a wide range of WCAG and PDF/UA criteria.
+
 \begin{itemize}
-\item \emph{Auditing Features:} Checks for missing title, language, alternative text, incorrect reading order, untagged content, inconsistent tab order for forms, and insufficient color contrast.\cite{AdobeAccessGuide} It also includes tools for auto-tagging, fixing reading order, and setting document properties.
-\item \emph{OS Compatibility:} Available on Windows and macOS.
+
+\item \textbf{Auditing Features:} Checks for missing title, language, alternative text, incorrect reading order, untagged content, inconsistent tab order for forms, and insufficient color contrast. \cite{AdobeAccessGuide} It also includes tools for auto-tagging, fixing reading order, and setting document properties.
+\item \textbf{OS Compatibility:} Available on Windows and macOS.
+
 \end{itemize}
 
 \subsection{Non-Adobe Tools}
 \label{subsec:non-adobe-tools}
+
 \subsubsection{Desktop Applications}
 \label{subsubsec:desktop-apps}
+
 \begin{itemize}
-\item \emph{Foxit PDF Editor (Windows, macOS)}\cite{FoxitManual}
-\begin{itemize}
-\item \emph{Auditing Features:} Offers a "Full Check" command for accessibility, generates detailed reports against WCAG standards, includes an "Autotag" feature, and a "Tag Editor" for manual fixes.
-\item \emph{OS Compatibility:} Available for Windows and macOS. While Foxit has a Linux Reader, the full Editor's accessibility auditing features are primarily confirmed for Windows/macOS versions.
-\end{itemize}
-\item \emph{CommonLook PDF (Windows, macOS, Linux - Desktop \& Web-based)}\cite{AllyantCommonLook}
-\begin{itemize}
-\item \emph{Auditing Features:} A comprehensive accessibility software supporting WCAG, PDF/UA, and Section 508 compliance. It features AI-driven automated tagging and remediation, manual tagging support, and comprehensive reporting.
-\item \emph{OS Compatibility:} Available as a desktop application for Windows, macOS, and Linux, and also as a web-based solution.
-\end{itemize}
-\item \emph{PDF Studio Pro (Windows, macOS, Linux)}\cite{QoppaPDFStudio}
-\begin{itemize}
-\item \emph{Auditing Features:} Provides "PDF/UA (PDF User Accessibility) preflight and compliance verification," capable of generating detailed reports (text, XML, PDF) on non-compliant content.
-\item \emph{OS Compatibility:} Available for Windows, macOS, and Linux, making it a strong cross-platform option for PDF/UA validation.
-\end{itemize}
-\item \emph{CommonLook PDF Validator (Windows - Adobe Acrobat Plugin)}\cite{AllyantValidator}
-\begin{itemize}
-\item \emph{Auditing Features:} An Adobe Acrobat Pro plugin offering extensive checks beyond Acrobat's built-in checker, including metadata, font embedding, Unicode mapping, precise tag management, and content highlighting. Guides manual testing effectively.
-\item \emph{OS Compatibility:} Requires Adobe Acrobat Standard or Pro (Acrobat X or higher) on Windows 8 or higher.
-\end{itemize}
-\item \emph{callas pdfToolbox CLI (Windows, macOS, Linux - Command-Line)}\cite{CallasPDFToolbox}
-\begin{itemize}
-\item \emph{Auditing Features:} A powerful command-line tool capable of running "preflight profiles" for accessibility checks (including PDF/UA) and generating reports. Requires technical expertise.
-\item \emph{OS Compatibility:} Available on Windows, macOS, and Linux, ideal for automated workflows.
-\end{itemize}
+
+\item \textbf{Foxit PDF Editor (Windows, macOS)} \cite{FoxitManual}
+    \begin{itemize}
+    \item \textbf{Auditing Features:} Offers a "Full Check" command for accessibility, generates detailed reports against WCAG standards, includes an "Autotag" feature, and a "Tag Editor" for manual fixes.
+    \item \textbf{OS Compatibility:} Available for Windows and macOS. While Foxit has a Linux Reader, the full Editor's accessibility auditing features are primarily confirmed for Windows/macOS versions.
+    \end{itemize}
+
+\item \textbf{CommonLook PDF (Windows, macOS, Linux - Desktop \& Web-based)} \cite{AllyantCommonLook}
+    \begin{itemize}
+    \item \textbf{Auditing Features:} A comprehensive accessibility software supporting WCAG, PDF/UA, and Section 508 compliance. It features AI-driven automated tagging and remediation, manual tagging support, and comprehensive reporting.
+    \item \textbf{OS Compatibility:} Available as a desktop application for Windows, macOS, and Linux, and also as a web-based solution.
+    \end{itemize}
+
+\item \textbf{PDF Studio Pro (Windows, macOS, Linux)} \cite{QoppaPDFStudio}
+    \begin{itemize}
+    \item \textbf{Auditing Features:} Provides "PDF/UA (PDF User Accessibility) preflight and compliance verification," capable of generating detailed reports (text, XML, PDF) on non-compliant content.
+    \item \textbf{OS Compatibility:} Available for Windows, macOS, and Linux, making it a strong cross-platform option for PDF/UA validation.
+    \end{itemize}
+
+\item \textbf{CommonLook PDF Validator (Windows - Adobe Acrobat Plugin)} \cite{AllyantValidator}
+    \begin{itemize}
+    \item \textbf{Auditing Features:} An Adobe Acrobat Pro plugin offering extensive checks beyond Acrobat's built-in checker, including metadata, font embedding, Unicode mapping, precise tag management, and content highlighting. Guides manual testing effectively.
+    \item \textbf{OS Compatibility:} Requires Adobe Acrobat Standard or Pro (Acrobat X or higher) on Windows 8 or higher.
+    \end{itemize}
+
+\item \textbf{callas pdfToolbox CLI (Windows, macOS, Linux - Command-Line)} \cite{CallasPDFToolbox}
+    \begin{itemize}
+    \item \textbf{Auditing Features:} A powerful command-line tool capable of running "preflight profiles" for accessibility checks (including PDF/UA) and generating reports. Requires technical expertise.
+    \item \textbf{OS Compatibility:} Available on Windows, macOS, and Linux, ideal for automated workflows.
+    \end{itemize}
+
 \end{itemize}
 
 \subsubsection{Online Tools (Cross-Platform)}
 \label{subsubsec:online-tools}
+
 \begin{itemize}
-\item \emph{axesCheck (Web-based)}\cite{AxesCheck}
-\begin{itemize}
-\item \emph{Auditing Features:} A free, web-based checker that validates against machine-verifiable PDF/UA and WCAG requirements. Provides quick, comparable results to desktop checkers.
-\item \emph{OS Compatibility:} Web-based, so compatible with any OS (Mac, Windows, Linux, mobile).
-\end{itemize}
-\item \emph{PAVE (Web-based)}\cite{PAVE}
-\begin{itemize}
-\item \emph{Auditing Features:} A free (for personal use), web-based tool that performs automatic corrections and allows manual adjustments. Focuses on proper tagging for screen readers.
-\item \emph{OS Compatibility:} Web-based, optimized for desktop screens.
-\end{itemize}
-\item \emph{Equidox (SaaS)}\cite{Equidox}
-\begin{itemize}
-\item \emph{Auditing Features:} A Software-as-a-Service (SaaS) solution with AI-powered smart detection for text, headings, lists, tables, forms, and images, ensuring compliance with WCAG, ADA, and Section 508. Includes HTML preview for verification.
-\item \emph{OS Compatibility:} Cloud-based, accessible via any modern web browser on PC or Mac.
-\end{itemize}
+
+\item \textbf{axesCheck (Web-based)} \cite{AxesCheck}
+    \begin{itemize}
+    \item \textbf{Auditing Features:} A free, web-based checker that validates against machine-verifiable PDF/UA and WCAG requirements. Provides quick, comparable results to desktop checkers.
+    \item \textbf{OS Compatibility:} Web-based, so compatible with any OS (Mac, Windows, Linux, mobile).
+    \end{itemize}
+
+\item \textbf{PAVE (Web-based)} \cite{PAVE}
+    \begin{itemize}
+    \item \textbf{Auditing Features:} A free (for personal use), web-based tool that performs automatic corrections and allows manual adjustments. Focuses on proper tagging for screen readers.
+    \item \textbf{OS Compatibility:} Web-based, optimized for desktop screens.
+    \end{itemize}
+
+\item \textbf{Equidox (SaaS)} \cite{Equidox}
+    \begin{itemize}
+    \item \textbf{Auditing Features:} A Software-as-a-Service (SaaS) solution with AI-powered smart detection for text, headings, lists, tables, forms, and images, ensuring compliance with WCAG, ADA, and Section 508. Includes HTML preview for verification.
+    \item \textbf{OS Compatibility:} Cloud-based, accessible via any modern web browser on PC or Mac.
+    \end{itemize}
+
 \end{itemize}
 
 -----
@@ -106,45 +134,61 @@ A comprehensive audit involves both automated checks and crucial manual verifica
 \label{subsec:general-audit-steps}
 
 \begin{enumerate}
-\item \emph{Run Automated Checkers:} Use a robust tool (like Adobe Acrobat Pro's Accessibility Checker or CommonLook PDF Validator) to identify obvious errors.
-\item \emph{Review Audit Report:} Understand what each flagged issue means and distinguish between "Passed," "Skipped," "Needs Manual Check," and "Failed."
-\item \emph{Perform Manual Checks:} Automated tools can't catch everything. Manual checks are critical for verifying logical reading order, meaningful alternative text, correct heading hierarchy, and proper table structure.
-\item \emph{Remediate Identified Issues:} Address each failure point using the appropriate tools and techniques.
-\item \emph{Re-audit and Verify:} After remediation, re-run the checker and perform manual checks to confirm all issues are resolved.
+
+\item \textbf{Run Automated Checkers:} Use a robust tool (like Adobe Acrobat Pro's Accessibility Checker or CommonLook PDF Validator) to identify obvious errors.
+
+\item \textbf{Review Audit Report:} Understand what each flagged issue means and distinguish between "Passed," "Skipped," "Needs Manual Check," and "Failed."
+
+\item \textbf{Perform Manual Checks:} Automated tools can't catch everything. Manual checks are critical for verifying logical reading order, meaningful alternative text, correct heading hierarchy, and proper table structure.
+
+\item \textbf{Remediate Identified Issues:} Address each failure point using the appropriate tools and techniques.
+
+\item \textbf{Re-audit and Verify:} After remediation, re-run the checker and perform manual checks to confirm all issues are resolved.
+
 \end{enumerate}
 
 \subsection{Step-by-Step Audit in Adobe Acrobat Pro (Windows/macOS)}
 \label{subsec:step-by-step-acrobat}
 
 \begin{enumerate}
-\item \emph{Open the Accessibility Tool:} Go to \texttt{Tools} $\>$ \texttt{Accessibility}.
-\item \emph{Run Full Check:} Click \texttt{Full Check} (or \texttt{Accessibility Check} in newer versions).
-\item \emph{Configure Options:} In the Accessibility Checker Options dialog, ensure all \texttt{Checking Options} are selected. You can choose to create an \texttt{Accessibility Report} in HTML. Click \texttt{Start Checking}.
-\item \emph{Interpret the Report:} The Accessibility Checker panel opens on the left, displaying a tree view of issues categorized by:
+
+\item \textbf{Open the Accessibility Tool:} Go to \texttt{Tools} $>$ \texttt{Accessibility}.
+
+\item \textbf{Run Full Check:} Click \texttt{Full Check} (or \texttt{Accessibility Check} in newer versions).
+
+\item \textbf{Configure Options:} In the Accessibility Checker Options dialog, ensure all \texttt{Checking Options} are selected. You can choose to create an \texttt{Accessibility Report} in HTML. Click \texttt{Start Checking}.
+
+\item \textbf{Interpret the Report:} The Accessibility Checker panel opens on the left, displaying a tree view of issues categorized by:
     \begin{itemize}
-    \item \emph{Document:} Issues related to the overall document (e.g., \texttt{Document Title}, \texttt{Language}).
-    \item \emph{Page Content:} Problems with the content on pages (e.g., \texttt{Tagged PDF}, \texttt{Tab Order}).
-    \item \emph{Forms, Tables, and Lists:} Specific issues with these elements (e.g., \texttt{Table Headers}, \texttt{List Items}).
-    \item \emph{Alternatives Text:} Missing or improper alternative text.
-    \item \emph{Contrast:} Insufficient color contrast (this is a \texttt{Needs Manual Check} item).
+    \item \textbf{Document:} Issues related to the overall document (e.g., \texttt{Document Title}, \texttt{Language}).
+    \item \textbf{Page Content:} Problems with the content on pages (e.g., \texttt{Tagged PDF}, \texttt{Tab Order}).
+    \item \textbf{Forms, Tables, and Lists:} Specific issues with these elements (e.g., \texttt{Table Headers}, \texttt{List Items}).
+    \item \textbf{Alternatives Text:} Missing or improper alternative text.
+    \item \textbf{Contrast:} Insufficient color contrast (this is a \texttt{Needs Manual Check} item).
     \end{itemize}
-    Each issue will have one of four statuses:\cite{AdobeAccessGuide}
+    Each issue will have one of four statuses: \cite{AdobeAccessGuide}
     \begin{itemize}
-    \item \emph{Passed:} The item meets the accessibility rule.
-    \item \emph{Skipped:} The item wasn't checked (e.g., if you deselected an option).
-    \item \emph{Needs manual check:} The tool cannot automatically verify this and requires human review (e.g., \texttt{Logical Reading Order}, \texttt{Color Contrast}).
-    \item \emph{Failed:} The item doesn't meet the accessibility rule.
+    \item \textbf{Passed:} The item meets the accessibility rule.
+    \item \textbf{Skipped:} The item wasn't checked (e.g., if you deselected an option).
+    \item \textbf{Needs manual check:} The tool cannot automatically verify this and requires human review (e.g., \texttt{Logical Reading Order}, \texttt{Color Contrast}).
+    \item \textbf{Failed:} The item doesn't meet the accessibility rule.
     \end{itemize}
-\item \emph{Address Failed Items:} Right-click a \texttt{Failed} item in the report. Acrobat often provides options like \texttt{Fix}, \texttt{Skip Rule}, or \texttt{Explain}. Choosing \texttt{Fix} will automatically attempt to resolve the issue. If \texttt{Fix} is not available, you'll need to manually address it using the other tools in the Accessibility panel or Tags panel.
+
+\item \textbf{Address Failed Items:} Right-click a \texttt{Failed} item in the report. Acrobat often provides options like \texttt{Fix}, \texttt{Skip Rule}, or \texttt{Explain}. Choosing \texttt{Fix} will automatically attempt to resolve the issue. If \texttt{Fix} is not available, you'll need to manually address it using the other tools in the Accessibility panel or Tags panel.
+
 \end{enumerate}
 
 \subsection{Auditing with Non-Adobe Tools}
 \label{subsec:auditing-non-adobe}
 
 \begin{itemize}
-\item \emph{Foxit PDF Editor (Windows/macOS):} Offers a "Full Check" command similar to Acrobat Pro. Navigate to \texttt{Accessibility} tab $\>$ \texttt{Full Check}. It generates a detailed report and provides tools for auto-tagging, manual tagging, and reading order adjustments.
-\item \emph{CommonLook PDF (Windows/macOS/Linux):} Provides robust audit reports against WCAG, PDF/UA, and Section 508. Its interface guides users through identified issues and offers integrated remediation tools. The \texttt{CommonLook PDF Validator} plugin for Acrobat offers even more granular checks.
-\item \emph{PDF Studio Pro (Windows/macOS/Linux):} Utilizes a "PDF/UA preflight" feature (\texttt{Document} $\>$ \texttt{Preflight} $\>$ \texttt{PDF/UA}). It can validate compliance and generate reports highlighting areas that need attention, particularly for PDF/UA adherence.
+
+\item \textbf{Foxit PDF Editor (Windows/macOS):} Offers a "Full Check" command similar to Acrobat Pro. Navigate to \texttt{Accessibility} tab $>$ \texttt{Full Check}. It generates a detailed report and provides tools for auto-tagging, manual tagging, and reading order adjustments.
+
+\item \textbf{CommonLook PDF (Windows/macOS/Linux):} Provides robust audit reports against WCAG, PDF/UA, and Section 508. Its interface guides users through identified issues and offers integrated remediation tools. The \texttt{CommonLook PDF Validator} plugin for Acrobat offers even more granular checks.
+
+\item \textbf{PDF Studio Pro (Windows/macOS/Linux):} Utilizes a "PDF/UA preflight" feature (\texttt{Document} $>$ \texttt{Preflight} $>$ \texttt{PDF/UA}). It can validate compliance and generate reports highlighting areas that need attention, particularly for PDF/UA adherence.
+
 \end{itemize}
 
 -----
@@ -155,52 +199,68 @@ The most efficient way to ensure PDF accessibility is to start with an accessibl
 
 \subsection{Generating Tagged PDFs with LaTeX}
 \label{subsec:tagged-pdfs-latex}
-LaTeX is a powerful typesetting system, and with the right packages, it can produce highly structured and accessible PDFs. The LaTeX Project is actively working towards improved PDF/UA and WTPDF (Web-accessible TeX PDF) compliance.\cite{LaTeXTaggedPDF}
+
+\subsubsection{Best Practices for Accessible LaTeX PDFs}
+
+LaTeX is a powerful typesetting system, and with the right packages, it can produce highly structured and accessible PDFs. The LaTeX Project is actively working towards improved PDF/UA and WTPDF (Web-accessible TeX PDF) compliance. \cite{LaTeXTaggedPDF}
+
 \begin{itemize}
-\item \emph{Recent LaTeX Versions:} Ensure you are using a modern TeX distribution (e.g., TeX Live 2020 or newer).
-\item \emph{`\textbackslash{}DocumentMetadata` Command:} The core of tagged PDF generation in LaTeX involves the `\textbackslash{}DocumentMetadata` command, often used with the `pdfstandard=UA-1` option, which indicates PDF/UA-1 compliance. This command typically needs to be placed after `\textbackslash{}documentclass`.\cite{LaTeXAccessBlog}
-\item \emph{`tagpdf` Package:} The `tagpdf` package is crucial for fine-tuning PDF tags, allowing you to explicitly mark content elements (e.g., `tagstructure{H1}{My Heading}`). It provides commands to control the tagging of headings, lists, tables, figures, and other content types.
-\item \emph{Semantic Markup:} Use standard LaTeX commands for semantic structure:
+\item \textbf{Recent LaTeX Versions:} Ensure you are using a modern TeX distribution (e.g., TeX Live 2020 or newer).
+
+\item \textbf{\texttt{\textbackslash{}DocumentMetadata} Command:} The core of tagged PDF generation in LaTeX involves the \texttt{\textbackslash{}DocumentMetadata} command, often used with the \texttt{pdfstandard=UA-1} option, which indicates PDF/UA-1 compliance. This command typically needs to be placed after \texttt{\textbackslash{}documentclass}. \cite{LaTeXAccessBlog}
+
+\item \textbf{\texttt{tagpdf} Package:} The \texttt{tagpdf} package is crucial for fine-tuning PDF tags, allowing you to explicitly mark content elements (e.g., \texttt{tagstructure\{H1\}\{My Heading\}}). It provides commands to control the tagging of headings, lists, tables, figures, and other content types.
+
+\item \textbf{Semantic Markup:} Use standard LaTeX commands for semantic structure:
+
 \begin{itemize}
-\item Headings: `\textbackslash{}section`, `\textbackslash{}subsection`, etc.
-\item Lists: `\textbackslash{}begin{itemize}`, `\textbackslash{}begin{enumerate}`, `\textbackslash{}begin{description}`.
-\item Tables: `\textbackslash{}begin{tabular}`, use `\textbackslash{}caption` for table titles.
-\item Figures: `\textbackslash{}begin{figure}`, use `\textbackslash{}caption` and potentially `alttext` (if supported by packages like `accsupp`) for alternative text.
-\item Links: `\textbackslash{}url`, `\textbackslash{}href` (from `hyperref` package) for proper link tagging.
+\item Headings: \texttt{\textbackslash{}section}, \texttt{\textbackslash{}subsection}, etc.
+\item Lists: \texttt{\textbackslash{}begin\{itemize\}}, \texttt{\textbackslash{}begin\{enumerate\}}, \texttt{\textbackslash{}begin\{description\}}.
+\item Tables: \texttt{\textbackslash{}begin\{tabular\}}, use \texttt{\textbackslash{}caption} for table titles.
+\item Figures: \texttt{\textbackslash{}begin\{figure\}}, use \texttt{\textbackslash{}caption} and potentially \texttt{alttext} (if supported by packages like \texttt{accsupp}) for alternative text.
+\item Links: \texttt{\textbackslash{}url}, \texttt{\textbackslash{}href} (from \texttt{hyperref} package) for proper link tagging.
 \end{itemize}
-\item \emph{`\textbackslash{}hyperref` Package:} Essential for creating accessible links and bookmarks in your PDF. Ensure it's loaded with accessibility-related options.
-\item \emph{Compiling with `lualatex` or `pdflatex`:} Both compilers can generate tagged PDFs, but `lualatex` often provides more advanced features for modern LaTeX documents and accessibility.
+
+\item \textbf{\texttt{\textbackslash{}hyperref} Package:} Essential for creating accessible links and bookmarks in your PDF. Ensure it's loaded with accessibility-related options.
+
+\item \textbf{Compiling with \texttt{lualatex} or \texttt{pdflatex}:} Both compilers can generate tagged PDFs, but \texttt{lualatex} often provides more advanced features for modern LaTeX documents and accessibility.
 \end{itemize}
-While LaTeX's capabilities for tagged PDFs are evolving, following semantic markup best practices and using the `tagpdf` and `hyperref` packages are key steps.
+
+While LaTeX's capabilities for tagged PDFs are evolving, following semantic markup best practices and using the \texttt{tagpdf} and \texttt{hyperref} packages are key steps.
 
 \subsection{Best Practices for Source Documents (Microsoft Word, Adobe InDesign)}
 \label{subsec:best-practices-source}
+
 \subsubsection{Microsoft Word}
 \label{subsubsec:word}
+
 Microsoft Word is a common starting point for many PDFs. By following these best practices, you can significantly improve the accessibility of the exported PDF:
+
 \begin{itemize}
-\item \emph{Use Styles:} Apply built-in heading styles (Heading 1, Heading 2, etc.) for logical document structure.\cite{MSWordPDF}
-\item \emph{Alternative Text:} Add descriptive alt text to all images, charts, and other non-text content.
-\item \emph{Descriptive Links:} Use meaningful link text instead of generic "click here."
-\item \emph{Table Structure:} Create simple data tables. Use Word's table tools to designate header rows. Avoid merged cells or complex layouts.
-\item \emph{Lists:} Use Word's built-in list features (bulleted, numbered) for proper list tagging.
-\item \emph{Language:} Specify the document language (\texttt{Review} tab $\>$ \texttt{Language} $\>$ \texttt{Set Proofing Language}).
-\item \emph{Accessibility Checker:} Use Word's built-in \texttt{Accessibility Checker} (\texttt{Review} tab $\>$ \texttt{Check Accessibility}) before exporting.
-\item \emph{Save as PDF:} When saving, choose \texttt{File} $\>$ \texttt{Save As} $\>$ \texttt{PDF}. Crucially, select \texttt{Options...} and ensure \texttt{Document structure tags for accessibility} is checked.
+\item \textbf{Use Styles:} Apply built-in heading styles (Heading 1, Heading 2, etc.) for logical document structure. \cite{MSWordPDF}
+\item \textbf{Alternative Text:} Add descriptive alt text to all images, charts, and other non-text content.
+\item \textbf{Descriptive Links:} Use meaningful link text instead of generic "click here."
+\item \textbf{Table Structure:} Create simple data tables. Use Word's table tools to designate header rows. Avoid merged cells or complex layouts.
+\item \textbf{Lists:} Use Word's built-in list features (bulleted, numbered) for proper list tagging.
+\item \textbf{Language:} Specify the document language (\texttt{Review} tab $>$ \texttt{Language} $>$ \texttt{Set Proofing Language}).
+\item \textbf{Accessibility Checker:} Use Word's built-in \texttt{Accessibility Checker} (\texttt{Review} tab $>$ \texttt{Check Accessibility}) before exporting.
+\item \textbf{Save as PDF:} When saving, choose \texttt{File} $>$ \texttt{Save As} $>$ \texttt{PDF}. Crucially, select \texttt{Options...} and ensure \texttt{Document structure tags for accessibility} is checked.
 \end{itemize}
 
 \subsubsection{Adobe InDesign}
 \label{subsubsec:indesign}
+
 InDesign is a powerful tool for creating complex layouts that can be exported as accessible PDFs:
+
 \begin{itemize}
-\item \emph{Logical Layout and Reading Order:} Design your layout with a logical reading order in mind. Use the \texttt{Articles} panel to define the content flow for export.
-\item \emph{Live Text:} Keep text as live text rather than outlines or flattened images.
-\item \emph{Paragraph Styles with Export Tags:} Map paragraph styles to appropriate PDF tags (e.g., \texttt{H1}, \texttt{P}, \texttt{L}). This is done in \texttt{Paragraph Style Options} $\>$ \texttt{Export Tagging}.\cite{AdobeInDesignPDF}
-\item \emph{Images and Graphics:} Place images in their own frames. Provide alt text in \texttt{Object Export Options} (\texttt{Alt Text} tab). For decorative images, choose \texttt{Artifact} from the \texttt{Tagged PDF} dropdown.
-\item \emph{Color Contrast:} Ensure sufficient color contrast for text and important graphics.
-\item \emph{Metadata:} Add document title, author, and language in \texttt{File} $\>$ \texttt{File Info}.
-\item \emph{Bookmarks:} Create bookmarks for easy navigation (\texttt{Window} $\>$ \texttt{Interactive} $\>$ \texttt{Bookmarks}).
-\item \emph{Export Settings:} When exporting to PDF (\texttt{File} $\>$ \texttt{Export} $\>$ \texttt{Adobe PDF (Interactive)} or \texttt{Print}), ensure:
+\item \textbf{Logical Layout and Reading Order:} Design your layout with a logical reading order in mind. Use the \texttt{Articles} panel to define the content flow for export.
+\item \textbf{Live Text:} Keep text as live text rather than outlines or flattened images.
+\item \textbf{Paragraph Styles with Export Tags:} Map paragraph styles to appropriate PDF tags (e.g., \texttt{H1}, \texttt{P}, \texttt{L}). This is done in \texttt{Paragraph Style Options} $>$ \texttt{Export Tagging}. \cite{AdobeInDesignPDF}
+\item \textbf{Images and Graphics:} Place images in their own frames. Provide alt text in \texttt{Object Export Options} (\texttt{Alt Text} tab). For decorative images, choose \texttt{Artifact} from the \texttt{Tagged PDF} dropdown.
+\item \textbf{Color Contrast:} Ensure sufficient color contrast for text and important graphics.
+\item \textbf{Metadata:} Add document title, author, and language in \texttt{File} $>$ \texttt{File Info}.
+\item \textbf{Bookmarks:} Create bookmarks for easy navigation (\texttt{Window} $>$ \texttt{Interactive} $>$ \texttt{Bookmarks}).
+\item \textbf{Export Settings:} When exporting to PDF (\texttt{File} $>$ \texttt{Export} $>$ \texttt{Adobe PDF (Interactive)} or \texttt{Print}), ensure:
 \begin{itemize}
 \item \texttt{Create Tagged PDF} is checked.
 \item \texttt{Use Structure For Tab Order} is checked in the \texttt{Advanced} tab.
@@ -215,12 +275,17 @@ Even with best practices in source document preparation, manual tagging may be n
 
 \subsection{Manual Tagging in Adobe Acrobat Pro (Windows/macOS)}
 \label{subsec:manual-tagging-acrobat}
+
+\subsubsection{Manual Tagging Steps}
+
 Acrobat Pro provides robust tools for manually inspecting and editing PDF tags.
 
 \begin{enumerate}
-\item \emph{Open the Tags Panel:} Navigate to \texttt{View} $\>$ \texttt{Show/Hide} $\>$ \texttt{Navigation Panes} $\>$ \texttt{Tags}. This panel displays the logical structure tree of the PDF.
-\item \emph{Auto-Tag Document (Initial Step):} For untagged PDFs, you can try \texttt{Tools} $\>$ \texttt{Accessibility} $\>$ \texttt{Autotag Document}. This provides a starting point, but manual review is always required.
-\item \emph{Understanding Tag Types:}
+\item \textbf{Open the Tags Panel:} Navigate to \texttt{View} $>$ \texttt{Show/Hide} $>$ \texttt{Navigation Panes} $>$ \texttt{Tags}. This panel displays the logical structure tree of the PDF.
+
+\item \textbf{Auto-Tag Document (Initial Step):} For untagged PDFs, you can try \texttt{Tools} $>$ \texttt{Accessibility} $>$ \texttt{Autotag Document}. This provides a starting point, but manual review is always required.
+
+\item \textbf{Understanding Tag Types:}
     \begin{itemize}
     \item \texttt{<H1>}, \texttt{<H2>}, etc.: Headings.
     \item \texttt{<P>}: Paragraphs.
@@ -231,33 +296,38 @@ Acrobat Pro provides robust tools for manually inspecting and editing PDF tags.
     \item \texttt{<Link>}: Hyperlinks.
     \item \texttt{<Artifact>}: Content that should be ignored by screen readers (e.g., page numbers, decorative lines).
     \end{itemize}
-\item \emph{Viewing and Editing Tags:}
+
+\item \textbf{Viewing and Editing Tags:}
     \begin{itemize}
-    \item \emph{Right-click on a tag in the Tags panel:} Options include \texttt{Properties} (for alt text, language), \texttt{Change Tag}, \texttt{Find Tag From Selection}, \texttt{Create Tag From Selection}, \texttt{New Tag}, \texttt{Delete Tag}.
-    \item \emph{Drag and Drop:} Reorder tags by dragging them in the Tags panel to fix reading order.
+    \item \textbf{Right-click on a tag in the Tags panel:} Options include \texttt{Properties} (for alt text, language), \texttt{Change Tag}, \texttt{Find Tag From Selection}, \texttt{Create Tag From Selection}, \texttt{New Tag}, \texttt{Delete Tag}.
+    \item \textbf{Drag and Drop:} Reorder tags by dragging them in the Tags panel to fix reading order.
     \end{itemize}
-\item \emph{Adding Alternative Text to Figures:}
+
+\item \textbf{Adding Alternative Text to Figures:}
     \begin{itemize}
     \item In the \texttt{Tags} panel, find the \texttt{<Figure>} tag.
     \item Right-click the \texttt{<Figure>} tag and select \texttt{Properties}.
     \item In the \texttt{Object Properties} dialog, go to the \texttt{Tag} tab.
     \item Enter the descriptive alternative text in the \texttt{Alternative Text} field. Click \texttt{Close}.
     \end{itemize}
-\item \emph{Fixing Reading Order with the Reading Order Tool:}
+
+\item \textbf{Fixing Reading Order with the Reading Order Tool:}
     \begin{itemize}
-    \item Go to \texttt{Tools} $\>$ \texttt{Accessibility} $\>$ \texttt{Reading Order}.
+    \item Go to \texttt{Tools} $>$ \texttt{Accessibility} $>$ \texttt{Reading Order}.
     \item This opens a panel with various tagging options (Text, Figure, Form Control, Background, etc.).
     \item Click and drag a box around content to select it. Then, click the appropriate tag type in the Reading Order panel (e.g., \texttt{Text}, \texttt{Figure}).
     \item To change the reading order, click \texttt{Show Order Panel} (or use the \texttt{Order} panel). Drag and drop elements to rearrange their numerical order.
     \end{itemize}
-\item \emph{Tagging Tables:}
+
+\item \textbf{Tagging Tables:}
     \begin{itemize}
     \item Use the \texttt{Reading Order} tool. Select the entire table. Click \texttt{Table}.
     \item Right-click the table in the \texttt{Tags} panel and select \texttt{Table Editor}.
     \item In the \texttt{Table Editor}, highlight header cells and click \texttt{Table Header Cells} (\texttt{TH}) from the \texttt{Table} toolbar. Highlight data cells and click \texttt{Table Data Cells} (\texttt{TD}).
     \item You can also specify \texttt{Row Span} and \texttt{Column Span} for complex tables.
     \end{itemize}
-\item \emph{Creating List Tags:}
+
+\item \textbf{Creating List Tags:}
     \begin{itemize}
     \item Use the \texttt{Reading Order} tool to select the entire list. Click \texttt{List}.
     \item In the \texttt{Tags} panel, expand the \texttt{<List>} tag. You may need to manually adjust the nested \texttt{<LI>} (List Item), \texttt{<LBody>} (List Body), and \texttt{<Lbl>} (List Label/Bullet) tags.
@@ -266,10 +336,15 @@ Acrobat Pro provides robust tools for manually inspecting and editing PDF tags.
 
 \subsection{Manual Tagging in Non-Adobe Software}
 \label{subsec:manual-tagging-non-adobe}
+
+\subsubsection{Manual Tagging in Other Tools}
+
 \begin{itemize}
-\item \emph{Foxit PDF Editor (Windows/macOS):} Provides a \texttt{Tag Editor} that functions similarly to Acrobat's Tags panel. Users can view, create, modify, and delete tags, assign alternative text, and manage the reading order using the \texttt{Touch Up Reading Order} tool.
-\item \emph{CommonLook PDF (Windows/macOS/Linux):} Offers comprehensive manual tagging support through its "Advanced Editor" or "Simplified Editor." It features efficient workflows for table tagging (e.g., \texttt{Linearize table} for complex structures), heading management, and list tagging, often with prompts to guide the user.
-\item \emph{PDF Studio Pro (Windows/macOS/Linux):} Includes a \texttt{Tags Panel Explorer} (\texttt{View} $\>$ \texttt{Navigation Panels} $\>$ \texttt{Tags}). Users can \texttt{Create Document Tag}, \texttt{Create Content Tags}, and edit existing tag properties, allowing for manual correction of structural elements and alternative text.
+\item \textbf{Foxit PDF Editor (Windows/macOS):} Provides a \texttt{Tag Editor} that functions similarly to Acrobat's Tags panel. Users can view, create, modify, and delete tags, assign alternative text, and manage the reading order using the \texttt{Touch Up Reading Order} tool.
+
+\item \textbf{CommonLook PDF (Windows/macOS/Linux):} Offers comprehensive manual tagging support through its "Advanced Editor" or "Simplified Editor." It features efficient workflows for table tagging (e.g., \texttt{Linearize table} for complex structures), heading management, and list tagging, often with prompts to guide the user.
+
+\item \textbf{PDF Studio Pro (Windows/macOS/Linux):} Includes a \texttt{Tags Panel Explorer} (\texttt{View} $>$ \texttt{Navigation Panels} $>$ \texttt{Tags}). Users can \texttt{Create Document Tag}, \texttt{Create Content Tags}, and edit existing tag properties, allowing for manual correction of structural elements and alternative text.
 \end{itemize}
 
 -----
@@ -281,16 +356,18 @@ After identifying failures in an audit, the next critical step is remediation. T
 \subsection{Common Accessibility Audit Failures}
 \label{subsec:common-failures}
 
-1.  \emph{Untagged Document:} The PDF lacks any structural tags, rendering it inaccessible to screen readers.\cite{EquidoxBlog}
-2.  \emph{Missing/Incorrect Document Title or Language:} Crucial metadata for screen readers.
-3.  \emph{Missing Alternative Text for Figures/Images:} Visual content without textual descriptions.
-4.  \emph{Incorrect Reading Order:} The logical flow of content doesn't match the visual presentation, confusing screen readers.
-5.  \emph{Missing or Improper Heading Structure:} Headings are not semantically marked or follow an illogical hierarchy.
-6.  \emph{Inaccessible Tables:} Tables lack proper row/column headers, making data relationships unclear.
-7.  \emph{Inaccessible Forms:} Form fields lack descriptions, tooltips, or a logical tab order.
-8.  \emph{Untagged Lists:} Lists are formatted visually but not semantically marked as lists.
-9.  \emph{Low Color Contrast:} Text or graphics have insufficient contrast, making them difficult to read for users with low vision or color blindness.
-10. \emph{Missing Language Changes:} If parts of the document are in a different language, it's not indicated.
+\begin{enumerate}
+\item \textbf{Untagged Document:} The PDF lacks any structural tags, rendering it inaccessible to screen readers. \cite{EquidoxBlog}
+\item \textbf{Missing/Incorrect Document Title or Language:} Crucial metadata for screen readers.
+\item \textbf{Missing Alternative Text for Figures/Images:} Visual content without textual descriptions.
+\item \textbf{Incorrect Reading Order:} The logical flow of content doesn't match the visual presentation, confusing screen readers.
+\item \textbf{Missing or Improper Heading Structure:} Headings are not semantically marked or follow an illogical hierarchy.
+\item \textbf{Inaccessible Tables:} Tables lack proper row/column headers, making data relationships unclear.
+\item \textbf{Inaccessible Forms:} Form fields lack descriptions, tooltips, or a logical tab order.
+\item \textbf{Untagged Lists:} Lists are formatted visually but not semantically marked as lists.
+\item \textbf{Low Color Contrast:} Text or graphics have insufficient contrast, making them difficult to read for users with low vision or color blindness.
+\item \textbf{Missing Language Changes:} If parts of the document are in a different language, it's not indicated.
+\end{enumerate}
 
 \subsection{Remediation in Adobe Acrobat Pro (Windows/macOS)}
 \label{subsec:remediation-acrobat}
@@ -357,13 +434,16 @@ Acrobat Pro offers various tools to fix the identified issues:
 
 \subsection{Remediation in Non-Adobe Software}
 \label{subsec:remediation-non-adobe}
+
+\subsubsection{Remediation in Other Tools}
+
 Non-Adobe tools offer varying degrees of remediation capabilities:
 \begin{itemize}
-\item \emph{Foxit PDF Editor (Windows/macOS):} Provides \texttt{Autotag}, \texttt{Tag Editor}, and \texttt{Touch Up Reading Order} tools that enable users to fix missing tags, correct reading order, add alt text, and adjust form field properties, similar to Acrobat Pro. Its "Action Wizard" can also automate some remediation tasks.
-\item \emph{CommonLook PDF (Windows/macOS/Linux):} Known for its powerful remediation features. It offers AI-driven automated remediation for many issues, combined with robust manual editing capabilities through its "Fix Wizard." It excels in complex table remediation with features like "Linearize Table" and advanced tag manipulation. It also validates against multiple standards simultaneously during remediation.
-\item \emph{PDF Studio Pro (Windows/macOS/Linux):} Allows users to edit the tag tree via its \texttt{Tags Panel Explorer}. This enables manual adjustments to the document structure, adding alt text, and modifying tag properties to resolve PDF/UA validation issues. While it doesn't have the extensive "Fix" wizards of CommonLook or Acrobat's automated fixes, it provides the necessary tools for manual tag-based remediation.
-\item \emph{PAVE (Web-based):} Offers a mix of "automatic corrections" and options for "manual corrections" for tagging, alt text, and reading order. It can be a quick and easy way to remediate simpler documents online, especially for personal use.
-\item \emph{callas pdfToolbox CLI (Windows/macOS/Linux):} This command-line tool can execute preflight profiles that include "fixups" for common accessibility issues. For instance, it can add missing tags, flatten certain elements, or restructure content based on predefined rules. This is highly effective for batch processing and automated remediation workflows but requires strong technical knowledge.
+\item \textbf{Foxit PDF Editor (Windows/macOS):} Provides \texttt{Autotag}, \texttt{Tag Editor}, and \texttt{Touch Up Reading Order} tools that enable users to fix missing tags, correct reading order, add alt text, and adjust form field properties, similar to Acrobat Pro. Its "Action Wizard" can also automate some remediation tasks.
+\item \textbf{CommonLook PDF (Windows/macOS/Linux):} Known for its powerful remediation features. It offers AI-driven automated remediation for many issues, combined with robust manual editing capabilities through its "Fix Wizard." It excels in complex table remediation with features like "Linearize Table" and advanced tag manipulation. It also validates against multiple standards simultaneously during remediation.
+\item \textbf{PDF Studio Pro (Windows/macOS/Linux):} Allows users to edit the tag tree via its \texttt{Tags Panel Explorer}. This enables manual adjustments to the document structure, adding alt text, and modifying tag properties to resolve PDF/UA validation issues. While it doesn't have the extensive "Fix" wizards of CommonLook or Acrobat's automated fixes, it provides the necessary tools for manual tag-based remediation.
+\item \textbf{PAVE (Web-based):} Offers a mix of "automatic corrections" and options for "manual corrections" for tagging, alt text, and reading order. It can be a quick and easy way to remediate simpler documents online, especially for personal use.
+\item \textbf{callas pdfToolbox CLI (Windows/macOS/Linux):} This command-line tool can execute preflight profiles that include "fixups" for common accessibility issues. For instance, it can add missing tags, flatten certain elements, or restructure content based on predefined rules. This is highly effective for batch processing and automated remediation workflows but requires strong technical knowledge.
 \end{itemize}
 
 -----

@@ -6,29 +6,29 @@
 
 \subsection{Why Accessibility Matters}
 Screen reader accessibility ensures that people with visual impairments can effectively navigate, understand, and interact with digital documents. According to the World Health Organization, approximately 2.2 billion people worldwide have a vision impairment. Proper accessibility benefits everyone by creating clearer, more organized content that improves usability for all users.
-\cite{WHO2021}.
+ \cite{WHO2021}.
 
 \subsection{Core Accessibility Principles}
 The Web Content Accessibility Guidelines (WCAG) 2.1 establish four fundamental principles:
-\cite{WCAG2018}.
+ \cite{WCAG2018}.
 
 \begin{itemize}
-\item \emph{Perceivable}: Information must be presentable in ways users can perceive
-\item \emph{Operable}: Interface components must be operable by all users
-\item \emph{Understandable}: Information and UI operation must be understandable
-\item \emph{Robust}: Content must be robust enough to work with assistive technologies
+\item \textbf{Perceivable}: Information must be presentable in ways users can perceive
+\item \textbf{Operable}: Interface components must be operable by all users
+\item \textbf{Understandable}: Information and UI operation must be understandable
+\item \textbf{Robust}: Content must be robust enough to work with assistive technologies
 \end{itemize}
 
 \subsection{Screen Reader Basics}
 Screen readers convert digital text to speech or braille, navigating documents through structured elements. Popular screen readers include NVDA, JAWS, and VoiceOver. These tools navigate documents using:
-\cite{NVDA2023, JAWS2023, VoiceOver2023}.
+ \cite{NVDA2023, JAWS2023, VoiceOver2023}.
 
 \begin{itemize}
-\item Headings and structure
-\item Lists and tables
-\item Links and form controls
-\item Alternative text for images
-\item Keyboard navigation
+\item \textbf{Headings and structure}
+\item \textbf{Lists and tables}
+\item \textbf{Links and form controls}
+\item \textbf{Alternative text for images}
+\item \textbf{Keyboard navigation}
 \end{itemize}
 
 \section{Microsoft Word and Google Docs}
@@ -38,181 +38,217 @@ Screen readers convert digital text to speech or braille, navigating documents t
 
 \subsubsection{Headings}
 Proper heading structure is crucial for screen reader navigation. Microsoft's accessibility guidelines emphasize using built-in heading styles rather than manual formatting.
-\cite{MicrosoftWord2023}.
+ \cite{MicrosoftWord2023}.
 
-\emph{Microsoft Word:}
+\subsubsection{Microsoft Word}
+\vspace{1em}
 \begin{itemize}
-\item Use built-in heading styles (Heading 1, Heading 2, etc.)
-\item Access via Home tab → Styles gallery
-\item Avoid manual formatting (bold, large text) to create pseudo-headings
-\item Create logical hierarchy: H1 for main topics, H2 for subtopics, H3 for sub-subtopics
+\item \textbf{Use built-in heading styles (Heading 1, Heading 2, etc.)}
+\item \textbf{Access via Home tab → Styles gallery}
+\item \textbf{Avoid manual formatting (bold, large text) to create pseudo-headings}
+\item \textbf{Create logical hierarchy: H1 for main topics, H2 for subtopics, H3 for sub-subtopics}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Docs:}
+\subsubsection{Google Docs}
+\vspace{1em}
 \begin{itemize}
-\item Use Format → Paragraph styles → Heading 1, 2, 3, etc.
-\item Available in toolbar dropdown showing "Normal text"
-\item Maintain consistent heading hierarchy
+\item \textbf{Use Format → Paragraph styles → Heading 1, 2, 3, etc.}
+\item \textbf{Available in toolbar dropdown showing "Normal text"}
+\item \textbf{Maintain consistent heading hierarchy}
 \end{itemize}
+\vspace{1em}
 
 Google's accessibility documentation stresses the importance of semantic markup for assistive technologies\footnote{Google LLC. (2023). Create accessible documents in Google Docs. \url{https://support.google.com/docs/answer/6199477}}.
 
 \subsubsection{Lists}
 Lists provide structure that screen readers can navigate efficiently. The Section 508 guidelines require proper list markup.
-\cite{Section5082018}.
+ \cite{Section5082018}.
 
-\emph{Microsoft Word:}
+\subsubsection{Microsoft Word}
+\vspace{1em}
 \begin{itemize}
-\item Use Home tab → Bullets or Numbering buttons
-\item Avoid creating fake lists with dashes or asterisks
-\item Use nested lists appropriately (indent/outdent buttons)
+\item \textbf{Use Home tab → Bullets or Numbering buttons}
+\item \textbf{Avoid creating fake lists with dashes or asterisks}
+\item \textbf{Use nested lists appropriately (indent/outdent buttons)}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Docs:}
+\subsubsection{Google Docs}
+\vspace{1em}
 \begin{itemize}
-\item Use Format → Bullets \& numbering
-\item Or toolbar buttons for bulleted/numbered lists
-\item Use increase/decrease indent for nested lists
+\item \textbf{Use Format → Bullets \& numbering}
+\item \textbf{Or toolbar buttons for bulleted/numbered lists}
+\item \textbf{Use increase/decrease indent for nested lists}
 \end{itemize}
+\vspace{1em}
 
 \subsubsection{Page Layout}
 Complex layouts can confuse screen readers. WebAIM recommends simple, linear layouts.
-\cite{WebAIM2023}.
+ \cite{WebAIM2023}.
 
-\emph{Both platforms:}
+\subsubsection{Both platforms}
+\vspace{1em}
 \begin{itemize}
-\item Use single-column layouts when possible
-\item Avoid complex multi-column layouts
-\item Use page breaks instead of multiple line breaks
-\item Maintain consistent margins and spacing
+\item \textbf{Use single-column layouts when possible}
+\item \textbf{Avoid complex multi-column layouts}
+\item \textbf{Use page breaks instead of multiple line breaks}
+\item \textbf{Maintain consistent margins and spacing}
 \end{itemize}
+\vspace{1em}
 
 \subsection{Text Formatting}
 
 \subsubsection{Font and Color}
 The WCAG 2.1 guidelines specify minimum contrast ratios for text accessibility\footnote{W3C Web Accessibility Initiative. (2018). Understanding SC 1.4.3: Contrast (Minimum). \url{https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html}}.
 
-\emph{Best practices for both platforms:}
+\subsubsection{Best practices for both platforms}
+\vspace{1em}
 \begin{itemize}
-\item Use sans-serif fonts (Arial, Calibri, Helvetica)
-\item Minimum 12pt font size
-\item Maintain high contrast ratios (4.5:1 for normal text, 3:1 for large text)
-\item Never rely on color alone to convey information
-\item Use bold/italic sparingly for emphasis
+\item \textbf{Use sans-serif fonts (Arial, Calibri, Helvetica)}
+\item \textbf{Minimum 12pt font size}
+\item \textbf{Maintain high contrast ratios (4.5:1 for normal text, 3:1 for large text)}
+\item \textbf{Never rely on color alone to convey information}
+\item \textbf{Use bold/italic sparingly for emphasis}
 \end{itemize}
+\vspace{1em}
 
 \subsubsection{Links}
 Descriptive link text is essential for screen reader users who navigate by links\footnote{WebAIM. (2023). Links and Hypertext. \url{https://webaim.org/techniques/hypertext/}}.
 
-\emph{Microsoft Word:}
+\subsubsection{Microsoft Word}
+\vspace{1em}
 \begin{itemize}
-\item Use descriptive link text (not "click here" or URLs)
-\item Insert via Insert tab → Links
-\item Test that links work and point to correct destinations
+\item \textbf{Use descriptive link text (not "click here" or URLs)}
+\item \textbf{Insert via Insert tab → Links}
+\item \textbf{Test that links work and point to correct destinations}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Docs:}
+\subsubsection{Google Docs}
+\vspace{1em}
 \begin{itemize}
-\item Use Insert → Link or Ctrl+K
-\item Provide meaningful link text
-\item Consider adding context if link purpose isn't clear
+\item \textbf{Use Insert → Link or Ctrl+K}
+\item \textbf{Provide meaningful link text}
+\item \textbf{Consider adding context if link purpose isn't clear}
 \end{itemize}
+\vspace{1em}
 
 \subsection{Images and Media}
 
 \subsubsection{Alternative Text}
 Alternative text is required by WCAG 2.1 for all informative images\footnote{W3C Web Accessibility Initiative. (2018). Understanding SC 1.1.1: Non-text Content. \url{https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html}}.
 
-\emph{Microsoft Word:}
+\subsubsection{Microsoft Word}
+\vspace{1em}
 \begin{itemize}
-\item Right-click image → Edit Alt Text
-\item Write concise, descriptive alt text
-\item For decorative images, mark as decorative
-\item Avoid "image of" or "picture of" prefixes
+\item \textbf{Right-click image → Edit Alt Text}
+\item \textbf{Write concise, descriptive alt text}
+\item \textbf{For decorative images, mark as decorative}
+\item \textbf{Avoid "image of" or "picture of" prefixes}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Docs:}
+\subsubsection{Google Docs}
+\vspace{1em}
 \begin{itemize}
-\item Right-click image → Alt text
-\item Provide clear, contextual descriptions
-\item Leave empty for purely decorative images
+\item \textbf{Right-click image → Alt text}
+\item \textbf{Provide clear, contextual descriptions}
+\item \textbf{Leave empty for purely decorative images}
 \end{itemize}
+\vspace{1em}
 
 \subsubsection{Complex Images}
 The W3C provides specific guidance for complex images like charts and diagrams\footnote{W3C Web Accessibility Initiative. (2023). Complex Images. \url{https://www.w3.org/WAI/tutorials/images/complex/}}.
 
-\emph{For charts, graphs, or detailed images:}
+\subsubsection{For charts, graphs, or detailed images}
+\vspace{1em}
 \begin{itemize}
-\item Provide detailed description in document text
-\item Consider data tables for chart information
-\item Use captions when appropriate
+\item \textbf{Provide detailed description in document text}
+\item \textbf{Consider data tables for chart information}
+\item \textbf{Use captions when appropriate}
 \end{itemize}
+\vspace{1em}
 
 \subsection{Tables}
 
 \subsubsection{Table Structure}
 Proper table structure is crucial for screen reader navigation. The HTML specification requires table headers for accessibility\footnote{W3C. (2021). HTML Living Standard: The table element. \url{https://html.spec.whatwg.org/multipage/tables.html}}.
 
-\emph{Microsoft Word:}
+\subsubsection{Microsoft Word}
+\vspace{1em}
 \begin{itemize}
-\item Use Insert tab → Table
-\item Designate header rows: Table Design → Header Row
-\item Avoid merged cells when possible
-\item Use simple table layouts
+\item \textbf{Use Insert tab → Table}
+\item \textbf{Designate header rows: Table Design → Header Row}
+\item \textbf{Avoid merged cells when possible}
+\item \textbf{Use simple table layouts}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Docs:}
+\subsubsection{Google Docs}
+\vspace{1em}
 \begin{itemize}
-\item Use Insert → Table
-\item Format → Table → Table headers
-\item Keep tables simple and logical
-\item Avoid using tables for layout purposes
+\item \textbf{Use Insert → Table}
+\item \textbf{Format → Table → Table headers}
+\item \textbf{Keep tables simple and logical}
+\item \textbf{Avoid using tables for layout purposes}
 \end{itemize}
+\vspace{1em}
 
 \subsubsection{Table Accessibility}
 WebAIM provides comprehensive guidance on table accessibility\footnote{WebAIM. (2023). Creating Accessible Tables. \url{https://webaim.org/techniques/tables/}}.
 
-\emph{Both platforms:}
+\subsubsection{Both platforms}
+\vspace{1em}
 \begin{itemize}
-\item Include column headers
-\item Use row headers for complex tables
-\item Provide table captions/summaries for complex data
-\item Ensure logical reading order
+\item \textbf{Include column headers}
+\item \textbf{Use row headers for complex tables}
+\item \textbf{Provide table captions/summaries for complex data}
+\item \textbf{Ensure logical reading order}
 \end{itemize}
+\vspace{1em}
 
 \subsection{Navigation Features}
 
 \subsubsection{Table of Contents}
 Automatic table of contents generation improves navigation for screen reader users\footnote{Microsoft Corporation. (2023). Insert a table of contents. \url{https://support.microsoft.com/en-us/office/insert-a-table-of-contents-882e8564-0edb-435e-84b5-1d8552ccf0c0}}.
 
-\emph{Microsoft Word:}
+\subsubsection{Microsoft Word}
+\vspace{1em}
 \begin{itemize}
-\item Use References tab → Table of Contents
-\item Automatically generates from heading styles
-\item Update regularly as document changes
+\item \textbf{Use References tab → Table of Contents}
+\item \textbf{Automatically generates from heading styles}
+\item \textbf{Update regularly as document changes}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Docs:}
+\subsubsection{Google Docs}
+\vspace{1em}
 \begin{itemize}
-\item Use Insert → Table of contents
-\item Updates automatically with proper heading styles
-\item Provides navigational structure
+\item \textbf{Use Insert → Table of contents}
+\item \textbf{Updates automatically with proper heading styles}
+\item \textbf{Provides navigational structure}
 \end{itemize}
+\vspace{1em}
 
 \subsubsection{Bookmarks and Cross-References}
 Internal navigation aids are particularly important for long documents\footnote{Google LLC. (2023). Use bookmarks and cross-references. \url{https://support.google.com/docs/answer/45893}}.
 
-\emph{Microsoft Word:}
+\subsubsection{Microsoft Word}
+\vspace{1em}
 \begin{itemize}
-\item Insert tab → Bookmark for internal navigation
-\item References tab → Cross-reference for internal links
+\item \textbf{Insert tab → Bookmark for internal navigation}
+\item \textbf{References tab → Cross-reference for internal links}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Docs:}
+\subsubsection{Google Docs}
+\vspace{1em}
 \begin{itemize}
-\item Insert → Bookmark
-\item Use for internal document navigation
+\item \textbf{Insert → Bookmark}
+\item \textbf{Use for internal document navigation}
 \end{itemize}
+\vspace{1em}
 
 \section{Microsoft Excel and Google Sheets}
 \label{sec:excel-google-sheets}
@@ -222,115 +258,139 @@ Internal navigation aids are particularly important for long documents\footnote{
 \subsubsection{Sheet Structure}
 Proper worksheet organization is essential for screen reader navigation. Microsoft's Excel accessibility guidelines emphasize clear structure\footnote{Microsoft Corporation. (2023). Make your Excel spreadsheets accessible to people with disabilities. \url{https://support.microsoft.com/en-us/office/make-your-excel-spreadsheets-accessible-to-people-with-disabilities-6cc05fc5-1314-48b5-8eb3-683e49b3e593}}.
 
-\emph{Microsoft Excel:}
+\subsubsection{Microsoft Excel}
+\vspace{1em}
 \begin{itemize}
-\item Use meaningful sheet names (right-click tab → Rename)
-\item Organize data in logical, consistent manner
-\item Use freeze panes for headers (View tab → Freeze Panes)
+\item \textbf{Use meaningful sheet names (right-click tab → Rename)}
+\item \textbf{Organize data in logical, consistent manner}
+\item \textbf{Use freeze panes for headers (View tab → Freeze Panes)}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Sheets:}
+\subsubsection{Google Sheets}
+\vspace{1em}
 \begin{itemize}
-\item Right-click sheet tab → Rename
-\item Use Sheet → Freeze for header rows/columns
-\item Maintain consistent data organization
+\item \textbf{Right-click sheet tab → Rename}
+\item \textbf{Use Sheet → Freeze for header rows/columns}
+\item \textbf{Maintain consistent data organization}
 \end{itemize}
+\vspace{1em}
 
 \subsubsection{Cell Organization}
 Screen readers navigate spreadsheets cell by cell, making organization crucial\footnote{Google LLC. (2023). Make your Google Sheets accessible. \url{https://support.google.com/docs/answer/6282736}}.
 
-\emph{Both platforms:}
+\subsubsection{Both platforms}
+\vspace{1em}
 \begin{itemize}
-\item Use row 1 for column headers
-\item Use column A for row labels when appropriate
-\item Avoid merged cells
-\item Keep data types consistent within columns
+\item \textbf{Use row 1 for column headers}
+\item \textbf{Use column A for row labels when appropriate}
+\item \textbf{Avoid merged cells}
+\item \textbf{Keep data types consistent within columns}
 \end{itemize}
+\vspace{1em}
 
 \subsection{Data Tables}
 
 \subsubsection{Headers and Labels}
 Proper headers are required for table accessibility under Section 508 guidelines\footnote{U.S. General Services Administration. (2018). Section 508 Standards: Tables. \url{https://www.section508.gov/create/tables/}}.
 
-\emph{Microsoft Excel:}
+\subsubsection{Microsoft Excel}
+\vspace{1em}
 \begin{itemize}
-\item Format cells as headers using Home tab → Styles
-\item Use Data tab → Create Table for proper table structure
-\item Ensure headers are descriptive and unique
+\item \textbf{Format cells as headers using Home tab → Styles}
+\item \textbf{Use Data tab → Create Table for proper table structure}
+\item \textbf{Ensure headers are descriptive and unique}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Sheets:}
+\subsubsection{Google Sheets}
+\vspace{1em}
 \begin{itemize}
-\item Use Format → Number → Plain text for headers
-\item Apply bold formatting to header row
-\item Use Insert → Table for structured data
+\item \textbf{Use Format → Number → Plain text for headers}
+\item \textbf{Apply bold formatting to header row}
+\item \textbf{Use Insert → Table for structured data}
 \end{itemize}
+\vspace{1em}
 
 \subsubsection{Data Organization}
 Consistent data organization improves screen reader comprehension\footnote{WebAIM. (2023). Spreadsheet Accessibility. \url{https://webaim.org/techniques/spreadsheets/}}.
 
-\emph{Best practices:}
+\subsubsection{Best practices}
+\vspace{1em}
 \begin{itemize}
-\item One data type per column
-\item Avoid blank rows/columns in data ranges
-\item Use consistent formatting within columns
-\item Provide totals/summaries where appropriate
+\item \textbf{One data type per column}
+\item \textbf{Avoid blank rows/columns in data ranges}
+\item \textbf{Use consistent formatting within columns}
+\item \textbf{Provide totals/summaries where appropriate}
 \end{itemize}
+\vspace{1em}
 
 \subsection{Formulas and Functions}
 
 \subsubsection{Formula Accessibility}
 Clear formula documentation aids understanding for all users\footnote{Microsoft Corporation. (2023). Excel accessibility: Best practices for creating accessible workbooks. \url{https://support.microsoft.com/en-us/office/excel-accessibility-best-practices-for-creating-accessible-workbooks-6aaa3ac5-0b7d-4a2b-9c8e-5e7c8d5e3b2a}}.
 
-\emph{Both platforms:}
+\subsubsection{Both platforms}
+\vspace{1em}
 \begin{itemize}
-\item Use descriptive range names instead of cell references
-\item Add comments to explain complex formulas
-\item Use structured references in tables
+\item \textbf{Use descriptive range names instead of cell references}
+\item \textbf{Add comments to explain complex formulas}
+\item \textbf{Use structured references in tables}
 \end{itemize}
+\vspace{1em}
 
-\emph{Microsoft Excel:}
+\subsubsection{Microsoft Excel}
+\vspace{1em}
 \begin{itemize}
-\item Formulas tab → Define Name for range naming
-\item Review tab → New Comment for cell explanations
+\item \textbf{Formulas tab → Define Name for range naming}
+\item \textbf{Review tab → New Comment for cell explanations}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Sheets:}
+\subsubsection{Google Sheets}
+\vspace{1em}
 \begin{itemize}
-\item Data → Named ranges
-\item Right-click → Insert comment for explanations
+\item \textbf{Data → Named ranges}
+\item \textbf{Right-click → Insert comment for explanations}
 \end{itemize}
+\vspace{1em}
 
 \subsection{Charts and Graphs}
 
 \subsubsection{Chart Accessibility}
 Charts require alternative formats for screen reader users\footnote{W3C Web Accessibility Initiative. (2023). Charts and Graphs. \url{https://www.w3.org/WAI/tutorials/images/complex/}}.
 
-\emph{Microsoft Excel:}
+\subsubsection{Microsoft Excel}
+\vspace{1em}
 \begin{itemize}
-\item Use Insert tab → Charts
-\item Add descriptive chart titles
-\item Include axis labels and legends
-\item Provide alt text: right-click chart → Edit Alt Text
+\item \textbf{Use Insert tab → Charts}
+\item \textbf{Add descriptive chart titles}
+\item \textbf{Include axis labels and legends}
+\item \textbf{Provide alt text: right-click chart → Edit Alt Text}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Sheets:}
+\subsubsection{Google Sheets}
+\vspace{1em}
 \begin{itemize}
-\item Insert → Chart
-\item Add clear titles and labels
-\item Use high-contrast colors
-\item Consider providing data table alongside chart
+\item \textbf{Insert → Chart}
+\item \textbf{Add clear titles and labels}
+\item \textbf{Use high-contrast colors}
+\item \textbf{Consider providing data table alongside chart}
 \end{itemize}
+\vspace{1em}
 
 \subsubsection{Alternative Formats}
 The National Institute of Standards and Technology recommends multiple formats for complex data\footnote{National Institute of Standards and Technology. (2018). Guidance on Alternative Formats for Data Tables. \url{https://www.nist.gov/itl/iad/mig/guidance-alternative-formats-data-tables}}.
 
-\emph{For complex charts:}
+\subsubsection{For complex charts}
+\vspace{1em}
 \begin{itemize}
-\item Include data table with chart values
-\item Provide written summary of key findings
-\item Use clear, descriptive titles and labels
+\item \textbf{Include data table with chart values}
+\item \textbf{Provide written summary of key findings}
+\item \textbf{Use clear, descriptive titles and labels}
 \end{itemize}
+\vspace{1em}
 
 \section{Microsoft PowerPoint and Google Slides}
 \label{sec:ppt-google-slides}
@@ -340,121 +400,145 @@ The National Institute of Standards and Technology recommends multiple formats f
 \subsubsection{Slide Layouts}
 Proper slide layouts ensure screen reader accessibility. Microsoft's PowerPoint accessibility guidelines emphasize using built-in layouts\footnote{Microsoft Corporation. (2023). Make your PowerPoint presentations accessible to people with disabilities. \url{https://support.microsoft.com/en-us/office/make-your-powerpoint-presentations-accessible-to-people-with-disabilities-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25}}.
 
-\emph{Microsoft PowerPoint:}
+\subsubsection{Microsoft PowerPoint}
+\vspace{1em}
 \begin{itemize}
-\item Use Design tab → Slide layouts
-\item Don't create blank slides and add text boxes
-\item Use title slide layout for title slides
-\item Maintain consistent layout structure
+\item \textbf{Use Design tab → Slide layouts}
+\item \textbf{Don't create blank slides and add text boxes}
+\item \textbf{Use title slide layout for title slides}
+\item \textbf{Maintain consistent layout structure}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Slides:}
+\subsubsection{Google Slides}
+\vspace{1em}
 \begin{itemize}
-\item Use Layout button in toolbar
-\item Choose appropriate predefined layouts
-\item Maintain slide structure consistency
+\item \textbf{Use Layout button in toolbar}
+\item \textbf{Choose appropriate predefined layouts}
+\item \textbf{Maintain slide structure consistency}
 \end{itemize}
+\vspace{1em}
 
 \subsubsection{Reading Order}
 Screen readers follow the reading order defined by slide layouts\footnote{Google LLC. (2023). Make your Google Slides accessible. \url{https://support.google.com/docs/answer/6282736}}.
 
-\emph{Both platforms:}
+\subsubsection{Both platforms}
+\vspace{1em}
 \begin{itemize}
-\item Ensure logical reading order of content
-\item Use slide layouts to maintain proper structure
-\item Avoid complex layering of text boxes
+\item \textbf{Ensure logical reading order of content}
+\item \textbf{Use slide layouts to maintain proper structure}
+\item \textbf{Avoid complex layering of text boxes}
 \end{itemize}
+\vspace{1em}
 
 \subsection{Content Organization}
 
 \subsubsection{Slide Titles}
 Every slide must have a unique title for screen reader navigation\footnote{WebAIM. (2023). PowerPoint Accessibility. \url{https://webaim.org/techniques/powerpoint/}}.
 
-\emph{Microsoft PowerPoint:}
+\subsubsection{Microsoft PowerPoint}
+\vspace{1em}
 \begin{itemize}
-\item Every slide needs a unique, descriptive title
-\item Use slide layout title placeholders
-\item Avoid generic titles like "Slide 1"
+\item \textbf{Every slide needs a unique, descriptive title}
+\item \textbf{Use slide layout title placeholders}
+\item \textbf{Avoid generic titles like "Slide 1"}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Slides:}
+\subsubsection{Google Slides}
+\vspace{1em}
 \begin{itemize}
-\item Use title placeholders in layouts
-\item Ensure each slide has meaningful title
-\item Titles should describe slide content
+\item \textbf{Use title placeholders in layouts}
+\item \textbf{Ensure each slide has meaningful title}
+\item \textbf{Titles should describe slide content}
 \end{itemize}
+\vspace{1em}
 
 \subsubsection{Text Content}
 Readable text is essential for all users, with specific requirements for presentations\footnote{U.S. Department of Education. (2020). Accessible Presentation Guidelines. \url{https://www2.ed.gov/about/offices/list/ocr/docs/accessibility-guidance.pdf}}.
 
-\emph{Best practices:}
+\subsubsection{Best practices}
+\vspace{1em}
 \begin{itemize}
-\item Use bullet points for lists
-\item Limit text per slide
-\item Use large, readable fonts (minimum 24pt)
-\item Maintain high contrast
+\item \textbf{Use bullet points for lists}
+\item \textbf{Limit text per slide}
+\item \textbf{Use large, readable fonts (minimum 24pt)}
+\item \textbf{Maintain high contrast}
 \end{itemize}
+\vspace{1em}
 
 \subsection{Images and Media}
 
 \subsubsection{Alternative Text}
 All presentation images require alternative text for accessibility compliance\footnote{Section 508.gov. (2018). Presentation Software Accessibility. \url{https://www.section508.gov/create/presentations/}}.
 
-\emph{Microsoft PowerPoint:}
+\subsubsection{Microsoft PowerPoint}
+\vspace{1em}
 \begin{itemize}
-\item Right-click image → Edit Alt Text
-\item Provide context-specific descriptions
-\item Mark decorative images appropriately
+\item \textbf{Right-click image → Edit Alt Text}
+\item \textbf{Provide context-specific descriptions}
+\item \textbf{Mark decorative images appropriately}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Slides:}
+\subsubsection{Google Slides}
+\vspace{1em}
 \begin{itemize}
-\item Right-click image → Alt text
-\item Write meaningful descriptions
-\item Consider slide context in descriptions
+\item \textbf{Right-click image → Alt text}
+\item \textbf{Write meaningful descriptions}
+\item \textbf{Consider slide context in descriptions}
 \end{itemize}
+\vspace{1em}
 
 \subsubsection{Video and Audio}
 Multimedia content requires additional accessibility considerations\footnote{W3C Web Accessibility Initiative. (2023). Making Audio and Video Media Accessible. \url{https://www.w3.org/WAI/media/av/}}.
 
-\emph{Accessibility considerations:}
+\subsubsection{Accessibility considerations}
+\vspace{1em}
 \begin{itemize}
-\item Provide captions for videos
-\item Include transcripts for audio content
-\item Test media controls accessibility
+\item \textbf{Provide captions for videos}
+\item \textbf{Include transcripts for audio content}
+\item \textbf{Test media controls accessibility}
 \end{itemize}
+\vspace{1em}
 
 \subsection{Animations and Transitions}
 
 \subsubsection{Animation Guidelines}
 Animations can cause accessibility issues, particularly for users with vestibular disorders\footnote{Vestibular Disorders Association. (2023). Vestibular Disorders and Digital Accessibility. \url{https://vestibular.org/article/what-is-vestibular/about-vestibular-disorders/}}.
 
-\emph{Both platforms:}
+\subsubsection{Both platforms}
+\vspace{1em}
 \begin{itemize}
-\item Use animations sparingly
-\item Ensure content is accessible without animations
-\item Avoid animations that flash or strobe
-\item Consider users with vestibular disorders
+\item \textbf{Use animations sparingly}
+\item \textbf{Ensure content is accessible without animations}
+\item \textbf{Avoid animations that flash or strobe}
+\item \textbf{Consider users with vestibular disorders}
 \end{itemize}
+\vspace{1em}
 
 \subsection{Speaker Notes}
 
 \subsubsection{Comprehensive Notes}
 Speaker notes provide additional context for screen reader users\footnote{Microsoft Corporation. (2023). Add speaker notes to your slides. \url{https://support.microsoft.com/en-us/office/add-speaker-notes-to-your-slides-26985155-35f5-45ba-812b-e1bd3c48928e}}.
 
-\emph{Microsoft PowerPoint:}
+\subsubsection{Microsoft PowerPoint}
+\vspace{1em}
 \begin{itemize}
-\item Use Notes pane for detailed speaker notes
-\item Include slide descriptions for screen reader users
-\item Provide context for visual elements
+\item \textbf{Use Notes pane for detailed speaker notes}
+\item \textbf{Include slide descriptions for screen reader users}
+\item \textbf{Provide context for visual elements}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Slides:}
+\subsubsection{Google Slides}
+\vspace{1em}
 \begin{itemize}
-\item Use speaker notes section
-\item Include detailed explanations
-\item Describe visual content thoroughly
+\item \textbf{Use speaker notes section}
+\item \textbf{Include detailed explanations}
+\item \textbf{Describe visual content thoroughly}
 \end{itemize}
+\vspace{1em}
 
 \section{General Best Practices}
 \label{sec:general-best-practices}
@@ -465,28 +549,32 @@ Speaker notes provide additional context for screen reader users\footnote{Micros
 Plain language principles improve accessibility for all users\footnote{Plain Language Action and Information Network. (2023). Federal Plain Language Guidelines. \url{https://www.plainlanguage.gov/guidelines/}}.
 
 \begin{itemize}
-\item Use plain language when possible
-\item Define technical terms and acronyms
-\item Write concise, descriptive headings
-\item Use active voice
+\item \textbf{Use plain language when possible}
+\item \textbf{Define technical terms and acronyms}
+\item \textbf{Write concise, descriptive headings}
+\item \textbf{Use active voice}
 \end{itemize}
 
 \subsubsection{Document Properties}
 Proper document metadata aids navigation and understanding\footnote{Dublin Core Metadata Initiative. (2020). Dublin Core Metadata Element Set. \url{https://www.dublincore.org/specifications/dublin-core/dces/}}.
 
-\emph{Microsoft Office:}
+\subsubsection{Microsoft Office}
+\vspace{1em}
 \begin{itemize}
-\item File → Info → Properties
-\item Add title, author, subject, keywords
-\item Include document language setting
+\item \textbf{File → Info → Properties}
+\item \textbf{Add title, author, subject, keywords}
+\item \textbf{Include document language setting}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Workspace:}
+\subsubsection{Google Workspace}
+\vspace{1em}
 \begin{itemize}
-\item File → Document details
-\item Add relevant metadata
-\item Set appropriate sharing permissions
+\item \textbf{File → Document details}
+\item \textbf{Add relevant metadata}
+\item \textbf{Set appropriate sharing permissions}
 \end{itemize}
+\vspace{1em}
 
 \subsection{File Management}
 
@@ -494,19 +582,19 @@ Proper document metadata aids navigation and understanding\footnote{Dublin Core 
 Descriptive file names improve accessibility and organization\footnote{National Archives and Records Administration. (2019). File Naming Guidelines. \url{https://www.archives.gov/records-mgmt/policy/transfer-guidance-tables.html}}.
 
 \begin{itemize}
-\item Use descriptive file names
-\item Include version numbers when appropriate
-\item Avoid special characters in file names
-\item Use consistent naming conventions
+\item \textbf{Use descriptive file names}
+\item \textbf{Include version numbers when appropriate}
+\item \textbf{Avoid special characters in file names}
+\item \textbf{Use consistent naming conventions}
 \end{itemize}
 
 \subsubsection{File Formats}
 Accessible file formats ensure compatibility with assistive technologies\footnote{ISO/IEC 40500:2012. (2012). Information technology -- W3C Web Content Accessibility Guidelines (WCAG) 2.0. \url{https://www.iso.org/standard/58625.html}}.
 
 \begin{itemize}
-\item Save in accessible formats (DOCX, XLSX, PPTX)
-\item Consider PDF/A for final documents
-\item Test accessibility before sharing
+\item \textbf{Save in accessible formats (DOCX, XLSX, PPTX)}
+\item \textbf{Consider PDF/A for final documents}
+\item \textbf{Test accessibility before sharing}
 \end{itemize}
 
 \subsection{Collaboration}
@@ -514,19 +602,23 @@ Accessible file formats ensure compatibility with assistive technologies\footnot
 \subsubsection{Comments and Reviews}
 Collaborative features should maintain accessibility standards\footnote{W3C Web Accessibility Initiative. (2023). Collaborative Editing and Accessibility. \url{https://www.w3.org/WAI/GL/wiki/Collaborative_Editing_and_Accessibility}}.
 
-\emph{Microsoft Office:}
+\subsubsection{Microsoft Office}
+\vspace{1em}
 \begin{itemize}
-\item Use Review tab → Comments for feedback
-\item Provide clear, constructive comments
-\item Resolve comments when addressed
+\item \textbf{Use Review tab → Comments for feedback}
+\item \textbf{Provide clear, constructive comments}
+\item \textbf{Resolve comments when addressed}
 \end{itemize}
+\vspace{1em}
 
-\emph{Google Workspace:}
+\subsubsection{Google Workspace}
+\vspace{1em}
 \begin{itemize}
-\item Use comment feature for collaboration
-\item Provide specific, actionable feedback
-\item Address accessibility issues in reviews
+\item \textbf{Use comment feature for collaboration}
+\item \textbf{Provide specific, actionable feedback}
+\item \textbf{Address accessibility issues in reviews}
 \end{itemize}
+\vspace{1em}
 
 \section{Testing and Validation}
 \label{sec:testing-validation}
@@ -538,18 +630,18 @@ Microsoft's built-in accessibility checker identifies common issues\footnote{Mic
 
 \emph{How to use:}
 \begin{itemize}
-\item Review tab → Check Accessibility
-\item Address all errors and warnings
-\item Understand recommendations provided
-\item Re-run checker after making changes
+\item \textbf{Review tab → Check Accessibility}
+\item \textbf{Address all errors and warnings}
+\item \textbf{Understand recommendations provided}
+\item \textbf{Re-run checker after making changes}
 \end{itemize}
 
 \emph{Common issues flagged:}
 \begin{itemize}
-\item Missing alt text
-\item Poor color contrast
-\item Missing table headers
-\item Improper heading structure
+\item \textbf{Missing alt text}
+\item \textbf{Poor color contrast}
+\item \textbf{Missing table headers}
+\item \textbf{Improper heading structure}
 \end{itemize}
 
 \subsubsection{Google Workspace Accessibility}
@@ -557,9 +649,9 @@ Google Workspace has limited built-in accessibility checking\footnote{Google LLC
 
 \emph{Google Docs/Sheets/Slides:}
 \begin{itemize}
-\item Tools → Accessibility (in some versions)
-\item Limited built-in checking
-\item Focus on manual testing methods
+\item \textbf{Tools → Accessibility (in some versions)}
+\item \textbf{Limited built-in checking}
+\item \textbf{Focus on manual testing methods}
 \end{itemize}
 
 \subsection{Manual Testing Methods}
@@ -568,10 +660,10 @@ Google Workspace has limited built-in accessibility checking\footnote{Google LLC
 Keyboard accessibility is fundamental for many assistive technologies\footnote{WebAIM. (2023). Keyboard Accessibility. \url{https://webaim.org/techniques/keyboard/}}.
 
 \begin{itemize}
-\item Navigate using only keyboard (Tab, arrow keys)
-\item Ensure all interactive elements are reachable
-\item Test logical tab order
-\item Verify keyboard shortcuts work
+\item \textbf{Navigate using only keyboard (Tab, arrow keys)}
+\item \textbf{Ensure all interactive elements are reachable}
+\item \textbf{Test logical tab order}
+\item \textbf{Verify keyboard shortcuts work}
 \end{itemize}
 
 \subsubsection{Screen Reader Testing}
@@ -579,10 +671,10 @@ Direct testing with screen readers provides the most accurate assessment\footnot
 
 \emph{Free screen readers for testing:}
 \begin{itemize}
-\item NVDA (Windows) - free, open source\footnote{NV Access. (2023). NVDA User Guide. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html}}
-\item JAWS (Windows) - commercial, free demo\footnote{Freedom Scientific. (2023). JAWS User Guide. \url{https://www.freedomscientific.com/training/jaws/}}
-\item VoiceOver (Mac) - built into macOS\footnote{Apple Inc. (2023). VoiceOver User Guide. \url{https://support.apple.com/guide/voiceover/welcome/mac}}
-\item TalkBack (Android) - built into Android\footnote{Google LLC. (2023). TalkBack User Guide. \url{https://support.google.com/accessibility/android/answer/6283677}}
+\item \textbf{NVDA (Windows) - free, open source}\footnote{NV Access. (2023). NVDA User Guide. \url{https://www.nvaccess.org/files/nvda/documentation/userGuide.html}}
+\item \textbf{JAWS (Windows) - commercial, free demo}\footnote{Freedom Scientific. (2023). JAWS User Guide. \url{https://www.freedomscientific.com/training/jaws/}}
+\item \textbf{VoiceOver (Mac) - built into macOS}\footnote{Apple Inc. (2023). VoiceOver User Guide. \url{https://support.apple.com/guide/voiceover/welcome/mac}}
+\item \textbf{TalkBack (Android) - built into Android}\footnote{Google LLC. (2023). TalkBack User Guide. \url{https://support.google.com/accessibility/android/answer/6283677}}
 \end{itemize}
 
 \subsubsection{Color and Contrast Testing}
@@ -590,45 +682,45 @@ Color contrast testing ensures readability for users with visual impairments\foo
 
 \emph{Tools for testing:}
 \begin{itemize}
-\item WebAIM Color Contrast Checker\footnote{WebAIM. (2023). Color Contrast Checker. \url{https://webaim.org/resources/contrastchecker/}}
-\item Colour Contrast Analyser\footnote{TPGi. (2023). Colour Contrast Analyser. \url{https://www.tpgi.com/color-contrast-checker/}}
-\item Built-in Windows High Contrast mode
-\item Test with various color vision deficiencies
+\item \textbf{WebAIM Color Contrast Checker}\footnote{WebAIM. (2023). Color Contrast Checker. \url{https://webaim.org/resources/contrastchecker/}}
+\item \textbf{Colour Contrast Analyser}\footnote{TPGi. (2023). Colour Contrast Analyser. \url{https://www.tpgi.com/color-contrast-checker/}}
+\item \textbf{Built-in Windows High Contrast mode}
+\item \textbf{Test with various color vision deficiencies}
 \end{itemize}
 
 \subsection{Testing Checklist}
 
 \subsubsection{Document Structure}
 \begin{itemize}
-\item[\checkmark] Headings use proper heading styles
-\item[\checkmark] Heading hierarchy is logical
-\item[\checkmark] Lists use proper list formatting
-\item[\checkmark] Tables have appropriate headers
-\item[\checkmark] Reading order is logical
+\item[\checkmark] \textbf{Headings use proper heading styles}
+\item[\checkmark] \textbf{Heading hierarchy is logical}
+\item[\checkmark] \textbf{Lists use proper list formatting}
+\item[\checkmark] \textbf{Tables have appropriate headers}
+\item[\checkmark] \textbf{Reading order is logical}
 \end{itemize}
 
 \subsubsection{Images and Media}
 \begin{itemize}
-\item[\checkmark] All images have appropriate alt text
-\item[\checkmark] Decorative images are marked as decorative
-\item[\checkmark] Complex images have detailed descriptions
-\item[\checkmark] Charts include data tables or summaries
+\item[\checkmark] \textbf{All images have appropriate alt text}
+\item[\checkmark] \textbf{Decorative images are marked as decorative}
+\item[\checkmark] \textbf{Complex images have detailed descriptions}
+\item[\checkmark] \textbf{Charts include data tables or summaries}
 \end{itemize}
 
 \subsubsection{Text and Formatting}
 \begin{itemize}
-\item[\checkmark] Font size is minimum 12pt
-\item[\checkmark] Color contrast meets requirements
-\item[\checkmark] Information isn't conveyed by color alone
-\item[\checkmark] Links have descriptive text
+\item[\checkmark] \textbf{Font size is minimum 12pt}
+\item[\checkmark] \textbf{Color contrast meets requirements}
+\item[\checkmark] \textbf{Information isn't conveyed by color alone}
+\item[\checkmark] \textbf{Links have descriptive text}
 \end{itemize}
 
 \subsubsection{Navigation}
 \begin{itemize}
-\item[\checkmark] Table of contents is included (long documents)
-\item[\checkmark] Bookmarks are used appropriately
-\item[\checkmark] Cross-references work correctly
-\item[\checkmark] Slide titles are unique and descriptive
+\item[\checkmark] \textbf{Table of contents is included (long documents)}
+\item[\checkmark] \textbf{Bookmarks are used appropriately}
+\item[\checkmark] \textbf{Cross-references work correctly}
+\item[\checkmark] \textbf{Slide titles are unique and descriptive}
 \end{itemize}
 
 \section{Additional Resources}
