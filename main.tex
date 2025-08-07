@@ -26,8 +26,6 @@
 \usepackage{fontspec}
 \usepackage{geometry}
 \usepackage[export]{adjustbox}
-
-
 \usepackage[
   style=numeric-comp,
   backend=biber,
@@ -40,56 +38,7 @@
 
 \addbibresource{global_bibliography.bib}
 \AtBeginDocument{\raggedright}
-
-% TOC Formatting
-% Add these commands to your preamble (after \usepackage{hyperref})
-% RECOMMENDED: titletoc works better with tagpdf for accessible PDFs
-
-% Load titletoc package for advanced TOC formatting
-\usepackage{titletoc}
-
-% Custom TOC formatting for parts
-\titlecontents{part}%
-[0pt]% left margin
-{\addvspace{2ex}\large\bfseries}% above code
-{\contentslabel[\thecontentslabel]{5em}}% numbered entry format
-{\hspace*{5em}}% numberless entry format
-{\hfill\contentspage}% filler and page format
-[\addvspace{.5ex}]% below code
-
-% Custom TOC formatting for chapters
-\titlecontents{chapter}%
-[0pt]% left margin
-{\addvspace{1ex}\normalsize}% above code
-{\contentslabel[\thecontentslabel]{5em}}% numbered entry format
-{\hspace*{5em}}% numberless entry format
-{\hspace{5em}\titlerule*[.5pc]{.}\contentspage}% filler and page format
-[\addvspace{.2ex}]% below code
-
-% Custom TOC formatting for sections
-\titlecontents{section}%
-[5em]% left margin (indent from chapter level)
-{\normalsize}% above code
-{\contentslabel[\thecontentslabel]{5em}}% numbered entry format
-{\hspace*{5em}}% numberless entry format
-{\hspace{5em}\titlerule*[.5pc]{.}\contentspage}% filler and page format
-
-% Custom TOC formatting for subsections
-\titlecontents{subsection}%
-[10em]% left margin (indent from section level)
-{\normalsize}% above code
-{\contentslabel[\thecontentslabel]{5em}}% numbered entry format
-{\hspace*{5em}}% numberless entry format
-{\hspace{5em}\titlerule*[.5pc]{.}\contentspage}% filler and page format
-
-% Ensure TOC gets proper accessibility tags
-\AddToHook{cmd/tableofcontents/before}{%
-  \tagstructbegin{tag=TOC}%
-}
-\AddToHook{cmd/tableofcontents/after}{%
-  \tagstructend%
-}
-
+\AtBeginDocument{\raggedbottom}
 % --- Custom font families for Atkinson Hyperlegible Mono and Next ---
 % Usage: \AtkinsonMonoText{your text} or \AtkinsonNextText{your text}
 \newfontfamily\AtkinsonMono[
@@ -211,6 +160,7 @@
 \usepackage{makeidx}
 \usepackage{xcolor}
 \usepackage{chngcntr}
+\usepackage{glossaries-extra}
 \tagpdfsetup{
   activate-all,
   uncompress,
@@ -218,7 +168,7 @@
   table/tagging=true,
   table/header-rows=1,
 }
-
+\AtBeginEnvironment{longtblr}{\small}
 % Configure table and structure tagging
 \ExplSyntaxOn
 \bool_set_true:N \l_tagpdf_table_detection_bool
@@ -267,26 +217,18 @@
 
 \appendixtitletocon
 \makeindex
-\usepackage[acronym,toc]{glossaries}
+%\usepackage{glossaries}% TOC Formatting
 \makeglossaries
 \input{glossary_preamble.tex}
 
-\title{\Huge ENHANCING EDUCATIONAL EQUITY \vskip1em \Large A Comprehensive Exploration of Technology Needs for Students with Visual Impairments}
+\title{Assistive Technology Needs for Students with Visual Impairments}
 \author{Michael Ryan Hunsaker, M.Ed., Ph.D.}
-\date{\vfill \emph{Last Updated: {\today}}}
+\date{\vfill Last Updated: {\today}}
 \raggedbottom
 \begin{document}
 
 \maketitle
-\abstract{
-	In the dynamic landscape of education, technology stands as a powerful enabler, breaking down barriers and creating pathways for inclusivity. Nowhere is this more evident than in the realm of assistive technology designed for visually impaired students. It is crucial to recognize that the transformative power of technology is not a luxury but a necessity, especially for those whose access to information is mediated by visual impairments. Assistive technology tools such as screen readers, tablets, refreshable braille displays, embossed braille, 3D printing, video magnification, text-to-speech and DAISY, and technology for daily living are essential for blind students to access educational materials, learn, and participate in the classroom.
-
-	Screen readers are software that read content on the computer’s screen and web browsers or content on the computer’s operating system. Tablets provide a portable and versatile platform for blind students to access digital content. Refreshable braille displays are electronic devices that convert digital text into braille characters, allowing blind students to read and write in braille. Embossed braille is a tactile writing system that uses raised dots to represent letters and numbers, enabling blind students to read and read braille. 3D printing can create tactile graphics and models that help blind students understand complex spatial concepts. Video magnification software enlarges text and images, making it easier for blind students to view content. Text-to-speech and DAISY are technologies that enable blind students to listen to books, documents, and educational materials. Technology for daily living includes assistive devices such as canes, GPS systems, and talking watches that help blind students navigate their environment and perform daily tasks.
-
-	Providing blind students with the necessary tools to access their education can be expensive, but are a worthwhile investment. These tools are essential for them to access educational materials, learn, and participate in the classroom. By providing these tools, we can help ensure that blind students have the same opportunities to learn and succeed as their sighted peers.  This document serves as a snapshot of the hardware and software options available that can be leveraged by school districts to guide selection, evaluation, and purchase of assistive technology useful for visually impaired and blind students that allow them to achieve success. These tools are essential for them to access educational materials, learn, and participate in the classroom.
-	\vfill
-}
-\clearpage
+\cleardoublepage
 \hypersetup{
 	pdfborderstyle={/S/U/W 1},
 	linkbordercolor=magenta,
@@ -302,9 +244,9 @@
 }
 \setcounter{tocdepth}{1}
 \pagenumbering{roman}
-\tableofcontents
-\listoftables
-\listoffigures
+\small{\tableofcontents}
+\small{\listoftables}
+\small{\listoffigures}
 \newpage{}
 \interfootnotelinepenalty=10000
 \include{Chapters/Introduction}
