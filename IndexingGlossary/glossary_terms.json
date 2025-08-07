@@ -1,0 +1,941 @@
+{
+  "3dprinter": {
+    "definition": "A device that creates three-dimensional objects from digital files, used in assistive technology to create tactile models and adaptive devices",
+    "variants": [
+      "3D printer",
+      "3D printer!3D printer",
+      "3D printer!Bambu Lab",
+      "3D printer!Creality",
+      "3D printer!Prusa"
+    ]
+  },
+  "3dprinting": {
+    "definition": "The process of creating three-dimensional objects from digital files, widely used in assistive technology for creating tactile learning materials",
+    "variants": [
+      "3D printing",
+      "3D printing!3D printing",
+      "3D printing!3D printing repositories",
+      "3D printing!American Filament",
+      "3D printing!Atomic Filament",
+      "3D printing!Hatchbox",
+      "3D printing!IC3D",
+      "3D printing!Keene Village Plastics",
+      "3D printing!MatterHackers",
+      "3D printing!Polymaker",
+      "3D printing!Printed Solid",
+      "3D printing!ProtoPasta",
+      "3D printing!Push Plastic",
+      "3D printing!filament",
+      "3D printing!resources",
+      "3D printing!slicing software"
+    ]
+  },
+  "accessibility": {
+    "definition": "The design of products, devices, services, or environments to be usable by people with disabilities",
+    "variants": [
+      "accessibility",
+      "accessibility!ARIA",
+      "accessibility!MSAA",
+      "accessibility!Manual Testing",
+      "accessibility!NVDA",
+      "accessibility!QA",
+      "accessibility!Quality Assurance",
+      "accessibility!UIA",
+      "accessibility!User Testing",
+      "accessibility!accessibility",
+      "accessibility!accessibility API",
+      "accessibility!accessibility principles",
+      "accessibility!accessibility testing",
+      "accessibility!accessible links",
+      "accessibility!common accessibility failures",
+      "accessibility!failures",
+      "accessibility!governance",
+      "accessibility!improperly formatted lists",
+      "accessibility!insufficient color contrast",
+      "accessibility!legal",
+      "accessibility!legal accessibility",
+      "accessibility!links",
+      "accessibility!missing or low-quality alternative text",
+      "accessibility!office document accessibility",
+      "accessibility!office documents",
+      "accessibility!principles",
+      "accessibility!remediation",
+      "accessibility!remediation strategies",
+      "accessibility!screen flicker",
+      "accessibility!standards",
+      "accessibility!testing",
+      "accessibility!timed responses"
+    ]
+  },
+  "accessiblematerials": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "accessible materials!accessible materials"
+    ]
+  },
+  "accessiblemath": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "accessible math"
+    ]
+  },
+  "ada": {
+    "definition": "Americans with Disabilities Act - US civil rights law prohibiting discrimination based on disability",
+    "variants": [
+      "ada"
+    ]
+  },
+  "ai": {
+    "definition": "Artificial Intelligence - computer systems that perform tasks typically requiring human intelligence, increasingly used in accessibility applications",
+    "variants": [
+      "AI",
+      "AI!AI",
+      "AI!AI and accessibility",
+      "AI!accessibility",
+      "AI!daily living"
+    ]
+  },
+  "alttext": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "alt text"
+    ]
+  },
+  "api": {
+    "definition": "Application Programming Interface - protocols that enable software accessibility features",
+    "variants": [
+      "api"
+    ]
+  },
+  "apps": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "apps",
+      "apps!Seeing AI",
+      "apps!apps"
+    ]
+  },
+  "artificialintelligence": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "artificial intelligence"
+    ]
+  },
+  "assistivetechnology": {
+    "definition": "Any item, piece of equipment, or system used to increase, maintain, or improve functional capabilities of individuals with disabilities",
+    "variants": [
+      "assistive technology",
+      "assistive technology!assessment",
+      "assistive technology!assistive technology"
+    ]
+  },
+  "audio": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "audio"
+    ]
+  },
+  "audiobook": {
+    "definition": "Digital audio recordings of books, providing accessible reading alternatives",
+    "variants": [
+      "audiobook",
+      "audiobook!Audible"
+    ]
+  },
+  "auditoryfeedback": {
+    "definition": "Sound-based responses that provide information about system status and user actions",
+    "variants": [
+      "auditory feedback",
+      "auditory feedback!auditory feedback"
+    ]
+  },
+  "bana": {
+    "definition": "Braille Authority of North America - organization that promotes braille literacy and standardization",
+    "variants": [
+      "BANA",
+      "BANA!BANA"
+    ]
+  },
+  "bluetooth": {
+    "definition": "Wireless communication technology for short-range connections",
+    "variants": [
+      "bluetooth"
+    ]
+  },
+  "bmml": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "BMML",
+      "BMML!BMML"
+    ]
+  },
+  "bookshare": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "Bookshare"
+    ]
+  },
+  "braille": {
+    "definition": "A tactile writing system using raised dots that allows people who are blind to read and write through touch",
+    "variants": [
+      "braille",
+      "braille!Biblos",
+      "braille!Braille2000",
+      "braille!BrailleBlaster",
+      "braille!Dotify",
+      "braille!Duxbury Braille Translator",
+      "braille!Duxbury DBT",
+      "braille!Liblouis",
+      "braille!Nemeth Code",
+      "braille!Sao Mai Braille",
+      "braille!UEB",
+      "braille!braille",
+      "braille!braille math codes",
+      "braille!braille math software",
+      "braille!braille transcription software",
+      "braille!technical",
+      "braille!transcription software"
+    ]
+  },
+  "brailledisplay": {
+    "definition": "A tactile electronic device that displays braille characters by raising and lowering pins, allowing blind users to read screen content",
+    "variants": [
+      "braille display",
+      "braille display!braille display"
+    ]
+  },
+  "brailleeducation": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "braille education!Code Jumper"
+    ]
+  },
+  "brailleembosser": {
+    "definition": "A printer that creates braille text on paper by embossing raised dots, essential for producing hard-copy braille materials",
+    "variants": [
+      "braille embosser",
+      "braille embosser!APH",
+      "braille embosser!Index Braille",
+      "braille embosser!Irie-AT",
+      "braille embosser!ViewPlus",
+      "braille embosser!braille embosser"
+    ]
+  },
+  "brailleliteracy": {
+    "definition": "The ability to read and write braille, essential for academic success of blind students",
+    "variants": [
+      "braille literacy!braille literacy"
+    ]
+  },
+  "charts": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "charts"
+    ]
+  },
+  "cognitiveload": {
+    "definition": "The amount of mental effort required to complete a task, which can be increased by poorly designed interfaces",
+    "variants": [
+      "cognitive load"
+    ]
+  },
+  "communication": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "communication"
+    ]
+  },
+  "cpu": {
+    "definition": "Central Processing Unit - the main processor of a computer, critical for smooth assistive technology operation",
+    "variants": [
+      "CPU"
+    ]
+  },
+  "cvi": {
+    "definition": "Cortical Visual Impairment - a visual impairment caused by damage to the visual pathways in the brain",
+    "variants": [
+      "CVI",
+      "CVI!CVI"
+    ]
+  },
+  "dailylivingaids": {
+    "definition": "Assistive devices that help people with disabilities perform everyday tasks independently",
+    "variants": [
+      "daily living aids!general"
+    ]
+  },
+  "daisy": {
+    "definition": "Digital Accessible Information System - a standard for creating accessible digital talking books",
+    "variants": [
+      "DAISY",
+      "DAISY!DAISY reader",
+      "DAISY!Orbit Research",
+      "DAISY!music"
+    ]
+  },
+  "datavisualization": {
+    "definition": "The presentation of data in visual formats, requiring alternative accessible representations",
+    "variants": [
+      "data visualization!accessible",
+      "data visualization!accessible data visualization"
+    ]
+  },
+  "digitalaccessibility": {
+    "definition": "The design of digital technology to be usable by people with disabilities",
+    "variants": [
+      "digital accessibility",
+      "digital accessibility!digital accessibility"
+    ]
+  },
+  "digitalliteracy": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "digital literacy"
+    ]
+  },
+  "documentstructure": {
+    "definition": "The organization and markup of documents to ensure they are navigable by assistive technology",
+    "variants": [
+      "document structure",
+      "document structure!document structure"
+    ]
+  },
+  "ebooks": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "e-books",
+      "e-books!accessible",
+      "e-books!accessible e-books"
+    ]
+  },
+  "educationalequity": {
+    "definition": "The principle that all students, including those with disabilities, should have equal access to educational opportunities and resources",
+    "variants": [
+      "educational equity",
+      "educational equity!educational equity"
+    ]
+  },
+  "equitableaccess": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "equitable access",
+      "equitable access!equitable access"
+    ]
+  },
+  "fileformats": {
+    "definition": "Different ways of encoding and storing digital information, with varying levels of accessibility",
+    "variants": [
+      "file formats",
+      "file formats!SVG"
+    ]
+  },
+  "fonts": {
+    "definition": "Typeface designs that affect readability for users with visual impairments",
+    "variants": [
+      "fonts",
+      "fonts!accessible fonts",
+      "fonts!fonts"
+    ]
+  },
+  "formulas": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "formulas"
+    ]
+  },
+  "gps": {
+    "definition": "Global Positioning System - satellite-based navigation technology adapted for use by people with visual impairments",
+    "variants": [
+      "GPS",
+      "GPS!AI-powered",
+      "GPS!American Printing House",
+      "GPS!GPS",
+      "GPS!Humanware",
+      "GPS!Lazarillo"
+    ]
+  },
+  "graphingcalculator": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "graphing calculator!accessible graphing calculator"
+    ]
+  },
+  "haptic": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "haptic"
+    ]
+  },
+  "hapticfeedback": {
+    "definition": "Touch-based feedback through vibration or force, providing non-visual information to users",
+    "variants": [
+      "haptic feedback",
+      "haptic feedback!data exploration",
+      "haptic feedback!haptic feedback"
+    ]
+  },
+  "hardware": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "hardware",
+      "hardware!hardware"
+    ]
+  },
+  "html": {
+    "definition": "HyperText Markup Language - the standard markup language for creating accessible web pages",
+    "variants": [
+      "html"
+    ]
+  },
+  "imagesandmedia": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "images and media",
+      "images and media!alt text",
+      "images and media!alternative text"
+    ]
+  },
+  "inclusivedesign": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "inclusive design"
+    ]
+  },
+  "independence": {
+    "definition": "The ability to perform tasks and make decisions without assistance, supported by appropriate assistive technology",
+    "variants": [
+      "independence",
+      "independence!independence"
+    ]
+  },
+  "independentlivingskills": {
+    "definition": "Abilities needed to live independently, often supported by assistive technology",
+    "variants": [
+      "independent living skills"
+    ]
+  },
+  "indoornavigation": {
+    "definition": "Technology systems that provide navigation assistance inside buildings where GPS is not available",
+    "variants": [
+      "indoor navigation"
+    ]
+  },
+  "instructionalmaterials": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "instructional materials",
+      "instructional materials!audio",
+      "instructional materials!gestures"
+    ]
+  },
+  "interactivegraphingenvironments": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "interactive graphing environments",
+      "interactive graphing environments!interactive graphing environments"
+    ]
+  },
+  "jaws": {
+    "definition": "Job Access With Speech - a commercial screen reader software developed by Freedom Scientific",
+    "variants": [
+      "jaws"
+    ]
+  },
+  "laptop": {
+    "definition": "A portable computer that, when properly configured, serves as the primary computing platform for students using assistive technology",
+    "variants": [
+      "laptop",
+      "laptop!Dell",
+      "laptop!Framework",
+      "laptop!laptop"
+    ]
+  },
+  "latency": {
+    "definition": "The delay between user input and system response, particularly critical for screen reader users who rely on immediate audio feedback",
+    "variants": [
+      "latency",
+      "latency!latency"
+    ]
+  },
+  "latex": {
+    "definition": "A document preparation system used for high-quality typesetting, particularly useful for mathematical and scientific documents",
+    "variants": [
+      "LaTeX",
+      "LaTeX!LaTeX",
+      "LaTeX!LaTeX math",
+      "latex"
+    ]
+  },
+  "llm": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "LLM",
+      "LLM!local"
+    ]
+  },
+  "machinelearning": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "machine learning"
+    ]
+  },
+  "magnification": {
+    "definition": "Technology that enlarges visual content for users with low vision",
+    "variants": [
+      "magnification",
+      "magnification!Fusion",
+      "magnification!Windows Magnifier",
+      "magnification!Zoom",
+      "magnification!ZoomText",
+      "magnification!magnification"
+    ]
+  },
+  "markdown": {
+    "definition": "A lightweight markup language that can be easily converted to accessible formats including braille",
+    "variants": [
+      "Markdown",
+      "Markdown!HTML",
+      "Markdown!Markdown",
+      "Markdown!Markdown to Braille",
+      "Markdown!accessible Markdown",
+      "Markdown!accessible tables",
+      "Markdown!blockquotes",
+      "Markdown!formatting",
+      "Markdown!headings",
+      "Markdown!horizontal rules",
+      "Markdown!lists",
+      "Markdown!note-taking",
+      "Markdown!text emphasis"
+    ]
+  },
+  "mathml": {
+    "definition": "Mathematical Markup Language - a markup language for describing mathematical notation in a screen reader accessible way",
+    "variants": [
+      "MathML",
+      "MathML!MathML",
+      "mathml"
+    ]
+  },
+  "mathocr": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "math OCR",
+      "math OCR!math OCR"
+    ]
+  },
+  "mobility": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "mobility"
+    ]
+  },
+  "music": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "music"
+    ]
+  },
+  "musicbraille": {
+    "definition": "A braille code system for representing musical notation tactilely",
+    "variants": [
+      "music braille",
+      "music braille!music braille",
+      "music braille!music braille pipeline"
+    ]
+  },
+  "musicxml": {
+    "definition": "A digital format for representing musical notation that can be converted to accessible formats",
+    "variants": [
+      "MusicXML",
+      "MusicXML!MusicXML"
+    ]
+  },
+  "narrator": {
+    "definition": "Microsoft's built-in screen reader for Windows operating systems",
+    "variants": [
+      "narrator"
+    ]
+  },
+  "navigation": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "navigation"
+    ]
+  },
+  "neuralnetwork": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "neural network"
+    ]
+  },
+  "nimac": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "NIMAC"
+    ]
+  },
+  "nimas": {
+    "definition": "National Instructional Materials Accessibility Standard - a US standard for creating accessible instructional materials",
+    "variants": [
+      "NIMAS",
+      "NIMAS!NIMAS"
+    ]
+  },
+  "nlg": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "NLG",
+      "NLG!NLG",
+      "NLG!data interpretation"
+    ]
+  },
+  "notetaker": {
+    "definition": "Braille notetaker device combining braille display with note-taking and computing functions",
+    "variants": [
+      "notetaker",
+      "notetaker!braille notetaker",
+      "notetaker!notetaker"
+    ]
+  },
+  "nvda": {
+    "definition": "NonVisual Desktop Access - a free, open-source screen reader for Windows",
+    "variants": [
+      "nvda"
+    ]
+  },
+  "ocr": {
+    "definition": "Optical Character Recognition - technology that converts images of text into machine-readable and screen reader accessible text",
+    "variants": [
+      "OCR",
+      "OCR!ABBYY FineReader",
+      "OCR!AI-leveraged OCR",
+      "OCR!OCR",
+      "OCR!Tesseract",
+      "OCR!challenges",
+      "OCR!open-source",
+      "Optical Character Recognition",
+      "ocr"
+    ]
+  },
+  "officesuite": {
+    "definition": "Microsoft Office suite applications with accessibility features for document creation and editing",
+    "variants": [
+      "office suite!Google",
+      "office suite!Google Workspace",
+      "office suite!LibreOffice",
+      "office suite!Microsoft",
+      "office suite!Microsoft Office"
+    ]
+  },
+  "omr": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "OMR",
+      "OMR!OMR",
+      "OMR!OMR software"
+    ]
+  },
+  "opensource": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "open source!open source"
+    ]
+  },
+  "operatingsystem": {
+    "definition": "System software that manages computer hardware and provides services for applications, with built-in accessibility features",
+    "variants": [
+      "operating system",
+      "operating system!Android",
+      "operating system!ChromeOS",
+      "operating system!Linux",
+      "operating system!Windows",
+      "operating system!iOS",
+      "operating system!operating system"
+    ]
+  },
+  "opticalcharacterrecognition": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "optical character recognition"
+    ]
+  },
+  "orientation": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "orientation"
+    ]
+  },
+  "orientationmobility": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "orientation & mobility!orientation and mobility"
+    ]
+  },
+  "pdf": {
+    "definition": "Portable Document Format - a file format that can be made accessible through proper tagging and structure",
+    "variants": [
+      "PDF",
+      "PDF!Adobe Acrobat",
+      "PDF!Microsoft Word",
+      "PDF!PDF",
+      "PDF!PDF accessibility",
+      "PDF!PDF remediation",
+      "PDF!PDF/UA",
+      "PDF!UA",
+      "PDF!accessibility report",
+      "PDF!character encoding",
+      "PDF!desktop applications",
+      "PDF!document language",
+      "PDF!field descriptions",
+      "PDF!reading order",
+      "PDF!scripts",
+      "PDF!source documents",
+      "PDF!tab order",
+      "PDF!table remediation",
+      "PDF!tagged PDF",
+      "pdf"
+    ]
+  },
+  "presentations": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "presentations!accessible",
+      "presentations!accessible presentations"
+    ]
+  },
+  "processor": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "processor!AI processor"
+    ]
+  },
+  "programminglanguages": {
+    "definition": "Computer languages used to create software, including accessibility-focused applications",
+    "variants": [
+      "programming languages"
+    ]
+  },
+  "ram": {
+    "definition": "Random Access Memory - computer memory that significantly impacts screen reader performance and responsiveness",
+    "variants": [
+      "RAM",
+      "RAM!RAM"
+    ]
+  },
+  "safety": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "safety"
+    ]
+  },
+  "screenreader": {
+    "definition": "Software that reads screen content aloud and provides keyboard navigation for users who are blind or have low vision",
+    "variants": [
+      "auditory access tool",
+      "screen reader",
+      "screen reader!Dolphin Screenreader",
+      "screen reader!JAWS",
+      "screen reader!NVDA",
+      "screen reader!Narrator",
+      "screen reader!TalkBack",
+      "screen reader!VoiceOver",
+      "screen reader!navigation",
+      "screen reader!output",
+      "screen reader!primary screen reader",
+      "screen reader!screen reader",
+      "screen reader!screen reader architecture",
+      "screen reader!screen reader output",
+      "screen reader!screen reader proficiency",
+      "screen reader!user input",
+      "screen readers"
+    ]
+  },
+  "section508": {
+    "definition": "A US law requiring federal agencies to make electronic and information technology accessible",
+    "variants": [
+      "section 508"
+    ]
+  },
+  "settframework": {
+    "definition": "Student, Environment, Tasks, and Tools - a framework for assistive technology assessment and selection",
+    "variants": [
+      "SETT framework",
+      "SETT framework!SETT framework"
+    ]
+  },
+  "situationalawareness": {
+    "definition": "The perception and understanding of one's environment, supported by assistive technology for users with visual impairments",
+    "variants": [
+      "situational awareness",
+      "situational awareness!situational awareness"
+    ]
+  },
+  "software": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "software",
+      "software!TIGER",
+      "software!software"
+    ]
+  },
+  "sonification": {
+    "definition": "The use of sound to convey information, particularly useful for representing data to users who are blind",
+    "variants": [
+      "sonification",
+      "sonification!sonification",
+      "sonification!tools"
+    ]
+  },
+  "speechsynthesis": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "speech synthesis"
+    ]
+  },
+  "stem": {
+    "definition": "Science, Technology, Engineering, and Mathematics - educational disciplines that require specialized accessibility considerations",
+    "variants": [
+      "STEM",
+      "STEM!STEM"
+    ]
+  },
+  "tablet": {
+    "definition": "A portable touchscreen computing device that offers accessible interfaces and specialized apps for users with visual impairments",
+    "variants": [
+      "tablet",
+      "tablet!Apple",
+      "tablet!Google",
+      "tablet!HP",
+      "tablet!Lenovo",
+      "tablet!Microsoft",
+      "tablet!Samsung",
+      "tablet!tablet"
+    ]
+  },
+  "tactile": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "tactile"
+    ]
+  },
+  "tactilegraphics": {
+    "definition": "Raised images and diagrams that can be read through touch, providing visual information to users who are blind",
+    "variants": [
+      "tactile graphics",
+      "tactile graphics!Inkscape",
+      "tactile graphics!capsule paper",
+      "tactile graphics!high-resolution tactile graphics",
+      "tactile graphics!interactive",
+      "tactile graphics!production",
+      "tactile graphics!swell paper",
+      "tactile graphics!tactile graphics",
+      "tactile graphics!tactile graphics production"
+    ]
+  },
+  "technology": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "technology",
+      "technology!technology"
+    ]
+  },
+  "textformatting": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "text formatting",
+      "text formatting!text formatting"
+    ]
+  },
+  "texttospeech": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "text-to-speech",
+      "text-to-speech!Voice Dream",
+      "text-to-speech!text-to-speech"
+    ]
+  },
+  "troubleshooting": {
+    "definition": "The process of identifying and resolving problems with assistive technology",
+    "variants": [
+      "troubleshooting",
+      "troubleshooting!clearing cache",
+      "troubleshooting!official support",
+      "troubleshooting!performance",
+      "troubleshooting!screenreader performance",
+      "troubleshooting!support",
+      "troubleshooting!troubleshooting"
+    ]
+  },
+  "tts": {
+    "definition": "Text-to-Speech - technology that converts written text into spoken audio output",
+    "variants": [
+      "tts"
+    ]
+  },
+  "typography": {
+    "definition": "The art and technique of arranging type to make written language legible and appealing",
+    "variants": [
+      "typography",
+      "typography!typography"
+    ]
+  },
+  "usb": {
+    "definition": "Universal Serial Bus - standard for connecting devices to computers",
+    "variants": [
+      "usb"
+    ]
+  },
+  "videomagnifier": {
+    "definition": "A device that uses a camera and display to magnify text and objects for users with low vision",
+    "variants": [
+      "video magnifier",
+      "video magnifier!Freedom Scientific",
+      "video magnifier!OrCam"
+    ]
+  },
+  "visualimpairment": {
+    "definition": "A condition affecting vision that requires adaptive techniques or assistive technology for accessing information",
+    "variants": [
+      "visual impairment",
+      "visual impairment!visual impairment"
+    ]
+  },
+  "wcag": {
+    "definition": "Web Content Accessibility Guidelines - international standards for making web content accessible to people with disabilities",
+    "variants": [
+      "WCAG",
+      "WCAG!3.0",
+      "WCAG!WCAG",
+      "wcag"
+    ]
+  },
+  "webaccessibility": {
+    "definition": "The practice of making websites usable by people with disabilities",
+    "variants": [
+      "web accessibility!heading levels",
+      "web accessibility!landmarks",
+      "web accessibility!problematic items",
+      "web accessibility!web accessibility progress"
+    ]
+  },
+  "webaim": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "WebAIM",
+      "WebAIM!Screen Reader User Survey",
+      "WebAIM!WebAIM"
+    ]
+  },
+  "xml": {
+    "definition": "eXtensible Markup Language - markup language for encoding documents",
+    "variants": [
+      "xml"
+    ]
+  },
+  "zoom": {
+    "definition": "A specialized term in assistive technology and accessibility",
+    "variants": [
+      "zoom"
+    ]
+  }
+}

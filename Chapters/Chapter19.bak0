@@ -1,0 +1,373 @@
+\chapter{Creating Fully Accessible Documents with Markdown and its Derivatives for Individuals Who Are Blind or Visually Impaired}
+\label{chap:markdown-accessibility}
+
+\section{Introduction to Accessible Markdown}
+\label{sec:intro-accessible-markdown}
+This chapter explores how Markdown\index{Markdown} and its various derivatives can be used to create fully accessible documents, with a particular focus on the needs of individuals who are blind or visually impaired.
+
+\subsection{Understanding Digital Accessibility for Visually Impaired Users}
+\label{subsec:digital-accessibility-vi}
+For users who are blind or have low vision, digital accessibility\index{digital accessibility} means that documents are structured in a way that can be easily navigated and understood by assistive technologies\index{assistive technology}, primarily screen readers\index{screen reader}. This requires semantic structure, alternative text\index{images and media!alternative text} for images, and logical reading order.
+
+\subsection{Why Markdown for Accessibility? Benefits and Core Principles}
+\label{subsec:why-markdown-for-accessibility}
+Markdown is a lightweight markup language that uses plain text formatting\index{text formatting} syntax. Its simplicity and human-readability make it an excellent choice for creating accessible documents. The core benefit is that Markdown focuses on the semantic meaning of content (e.g., this is a heading, this is a list) rather than its visual presentation.
+
+\section{Basic Markdown Formatting for Accessibility}
+\label{sec:basic-markdown-formatting}
+The fundamental elements of \gls{markdown} are inherently accessible when used correctly. This section covers the basics.
+
+\subsection{Headings: Creating a Logical Document Structure}
+\label{subsec:markdown-headings}
+\subsubsection{Headings are Critical for Navigation}
+\label{ssubsec:headings-for-navigation}
+Headings are one of the most important accessibility\index{accessibility} features. They create a navigable outline of the document, allowing screen reader\index{screen reader} users to quickly jump between sections.
+\begin{verbatim}
+\# Heading Level 1
+\#\# Heading Level 2
+\#\#\# Heading Level 3
+\end{verbatim}
+It is crucial to use headings\index{Markdown!headings} in a logical, hierarchical order. Do not skip heading levels\index{web accessibility!heading levels} (e.g., jumping from an `<h1>` to an `<h3>`) as this can be confusing for screen reader\index{screen reader} users.
+
+\subsection{Text Emphasis: Bold, Italic, and Strikethrough}
+\label{subsec:markdown-text-emphasis}
+\subsubsection{Text Emphasis: Bold, Italic, and Strikethrough}
+\label{ssubsec:markdown-emphasis-details}
+Screen readers can announce changes in emphasis, such as bold or italic\index{Markdown!text emphasis} text. Use them to convey meaning, not just for visual styling.
+\begin{verbatim}
+*This text will be italic.*
+**This text will be bold.**
+~~This text will be strikethrough.~~
+\end{verbatim}
+
+\subsection{Lists: Ordered and Unordered}
+\label{subsec:markdown-lists}
+\subsubsection{Lists: Ordered and Unordered}
+\label{ssubsec:markdown-list-details}
+Using Markdown's list syntax ensures that \gls{screenreader} announce the list and the number of items it contains.
+\begin{verbatim}
+* Unordered list item 1
+* Unordered list item 2
+
+1. Ordered list item 1
+2. Ordered list item 2
+\end{verbatim}
+
+\subsection{Blockquotes and Horizontal Rules}
+\label{subsec:markdown-blockquotes-rules}
+\subsubsection{Blockquotes and Horizontal Rules}
+\label{ssubsec:markdown-blockquotes-rules-details}
+Blockquotes\index{Markdown!blockquotes} are used to indicate quoted text, and screen readers will announce them as such. Horizontal rules\index{Markdown!horizontal rules} create a thematic break.
+\begin{verbatim}
+> This is a blockquote.
+
+---
+\end{verbatim}
+
+\section{Creating Accessible Tables in Markdown}
+\label{sec:accessible-markdown-tables}
+Tablescan be challenging for accessibility\index{accessibility}, but Markdown\index{Markdown} provides a way to create simple, accessible tables\index{Markdown!accessible tables}.
+
+\subsection{Basic Table Syntax: Pipes and Hyphens}
+\label{subsec:markdown-table-syntax}
+\subsubsection{Basic Table Syntax: Pipes and Hyphens}
+\label{ssubsec:markdown-table-syntax-details}
+The basic syntax uses pipes (`|`) to define columns and hyphens (`-`) to create the header row separator.
+\begin{verbatim}
+| Header 1 | Header 2 |
+|----------|----------|
+| Cell 1   | Cell 2   |
+| Cell 3   | Cell 4   |
+\end{verbatim}
+
+\subsection{Ensuring Table Accessibility: Headers, Captions, and Avoiding Merged/Blank Cells}
+\label{subsec:markdown-table-accessibility}
+\subsubsection{Ensuring Table Accessibility: Headers, Captions, and Avoiding Merged/Blank Cells}
+\label{ssubsec:markdown-table-accessibility-details}
+For a table to be accessible, it must have clearly defined headers. The Markdown syntax above automatically designates the first row as headers. For more complex tables, such as those needing captions or more complex header structures, you may need to use raw HTML\index{Markdown!HTML}. Avoid using merged cells or leaving cells blank for formatting, as this can confuse screen readers\index{screen reader}.
+
+\subsection{Advanced Table Structuring: Leveraging HTML for Enhanced Accessibility}
+\label{subsec:markdown-html-tables}
+\subsubsection{Advanced Table Structuring: Leveraging HTML for Enhanced Accessibility}
+\label{ssubsec:markdown-html-tables-details}
+When Markdown's native table syntax is insufficient, you can embed \gls{html} directly into your Markdown file. This allows for captions, column/row scopes, and more complex structures.
+\begin{verbatim}
+<table>
+  <caption>Table Caption</caption>
+  <thead>
+    <tr>
+      <th scope="col">Header 1</th>
+      <th scope="col">Header 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+    </tr>
+  </tbody>
+</table>
+\end{verbatim}
+
+\subsection{Limitations of Native Markdown Tables for Complex Data}
+\label{subsec:markdown-table-limitations}
+\subsubsection{Limitations of Native Markdown Tables for Complex Data}
+\label{ssubsec:markdown-table-limitations-details}
+Native Markdown tables do not support\index{troubleshooting!support}:
+\begin{itemize}
+	\item Row headers
+	\item Merged cells (rowspan or colspan)
+	\item Table captions\index{Markdown!accessible tables}
+	\item Multiple header rows
+\end{itemize}
+For these features, you must use embedded HTML as shown above. For very complex data, it may be better to present it as a list or a series of smaller tables rather than one large, complex table.
+
+\section{Optimizing Markdown for Note-Taking}
+\label{sec:markdown-for-notetaking}
+Markdown\index{Markdown} is an excellent tool for note-taking, especially for individuals who are blind or visually impaired, because its plain-text nature makes it fast, efficient, and compatible with a wide range of devices and software\index{software}.
+
+\subsection{Benefits for Blind/Visually Impaired Individuals}
+\label{subsec:notetaking-benefits-vi}
+\subsubsection{Benefits for Blind/Visually Impaired Individuals}
+\label{ssubsec:notetaking-benefits-vi-details}
+The plain-text nature of Markdown means that there are no complex menus or formatting!formatting toolbars to navigate. The focus is entirely on the text, which can be easily read and edited with a screen reader\index{screen reader} and a text editor.
+
+\subsection{Strategies for Accessible Note-Taking in Markdown}
+\label{subsec:accessible-notetaking-strategies}
+\subsubsection{Strategies for Accessible Note-Taking in Markdown}
+\label{ssubsec:accessible-notetaking-strategies-details}
+\begin{itemize}
+	\item \textbf{Use Headings} for Topics: Start each new topic or meeting with a heading. This makes it easy to navigate your notes later.
+	\item \textbf{Use Lists\index{Markdown!lists} for Action Items}: Use unordered lists for bullet points and ordered lists for action items or steps.
+	\item \textbf{Use Links\index{accessibility!links} for References}: If you are taking notes from a web page or document, include a link to the source.
+	\item \textbf{Keep it Simple}: The beauty of Markdown is its simplicity. Don't overcomplicate your notes with unnecessary formatting.
+\end{itemize}
+
+\subsection{Accessible Markdown Editors}
+\label{subsec:accessible-markdown-editors}
+\subsubsection{Accessible Markdown Editors}
+\label{ssubsec:accessible-markdown-editors-details}
+Many text editors work well with Markdown\index{Markdown} and are accessible.
+\begin{itemize}
+	\item \textbf{Visual Studio Code (VS Code)}: A popular, free code editor from Microsoft\index{tablet!Microsoft} that is highly accessible and has excellent Markdown support\index{troubleshooting!support}. It is available on Windows\index{operating system!Windows}, macOS, and Linux\index{operating system!Linux}.
+	\item \textbf{Obsidian}: A powerful note-taking app\index{apps} that uses Markdown. It is designed for building a personal knowledge base and is accessible.
+	\item \textbf{Typora}: A minimalist Markdown editor that provides a live preview. It has good accessibility\index{accessibility} support.
+	\item \textbf{Notepad++ (Windows)}: A free, open-source text editor that is very accessible and can be used for Markdown editing.
+	\item \textbf{BBEdit (macOS)}: A professional text and HTML\index{Markdown!HTML} editor for macOS with strong accessibility features.
+\end{itemize}
+
+\section{Conversion to and from Braille}
+\label{sec:markdown-braille-conversion}
+Markdown's plain-text, structured nature makes it a good candidate for conversion to and from braille\index{braille}.
+
+\subsection{Process Overview for Markdown to Braille}
+\label{subsec:markdown-to-braille}
+The general process involves converting the Markdown file to a format that a \gls{braille} embosser can understand, such as a \gls{Braille Ready Format} (.brf) file.
+\begin{enumerate}
+	\item \textbf{Convert Markdown to HTML}: Use a tool like Pandoc to convert the Markdown file to HTML.
+	\item \textbf{Use a Braille Translation Program}: Software\index{software} like Duxbury Braille Translator (DBT) or Liblouis\index{braille!Liblouis} can import the HTML file and convert it to a braille format.
+	\item \textbf{Emboss the Document}: Send the resulting .brf file to a braille embosser.
+\end{enumerate}
+
+\subsection{Formatting Considerations for Braille}
+\label{subsec:braille-formatting-considerations}
+When writing Markdown\index{Markdown} that will be converted to braille, there are a few things to keep in mind:
+\begin{itemize}
+	\item \textbf{Page Breaks}: Braille pages are much smaller than print pages. Be mindful of where page breaks might occur.
+	\item \textbf{Tables}: Complex tables are very difficult to represent in braille. It is often better to linearize the table into a list or a series of headings\index{Markdown!headings} and paragraphs.
+	\item \textbf{Emphasis}: Braille has its own indicators for emphasis. The braille translation software should handle the conversion of bold and italic\index{Markdown!text emphasis} text automatically.
+\end{itemize}
+
+\subsection{Challenges in Braille Conversion}
+\label{subsec:braille-conversion-challenges}
+The biggest challenge in converting Markdown to braille is handling complex layouts and non-textual elements.
+\begin{itemize}
+	\item \textbf{Images}: Images cannot be directly represented in braille. The alt text\index{images and media!alternative text} is crucial, but for complex images like charts\index{charts} and graphs, a longer description may be needed. Tactile graphics\index{tactile graphics} are an alternative but require specialized creation and cannot be generated from Markdown alone.
+	\item \textbf{Complex Tables}: As mentioned, complex tables do not translate well to braille\index{braille}.
+	\item \textbf{Mathematical Content}: While MathML and LaTeX\index{LaTeX} math can be converted to Nemeth Braille Code, this requires specialized tools\index{sonification!tools} and is a complex process.
+\end{itemize}
+
+\section{Conversion to and from Word Files}
+\label{sec:markdown-word-conversion}
+It is often necessary to convert Markdown documents to Microsoft Word format and vice versa. The tool of choice for this is Pandoc.
+
+\subsection{Markdown to Word Conversion}
+\label{subsec:markdown-to-word}
+Pandoc can convert a Markdown\index{Markdown} file to a .docx file, preserving the structure.
+\begin{verbatim}
+pandoc mydocument.md -o mydocument.docx
+\end{verbatim}
+The resulting Word document will have its headings\index{Markdown!headings} formatted with Word's heading styles, lists\index{Markdown!lists} will be proper Word lists, etc.
+
+\subsection{Word to Markdown Conversion}
+\label{subsec:word-to-markdown}
+Pandoc can also convert from .docx to Markdown.
+\begin{verbatim}
+pandoc mydocument.docx -o mydocument.md
+\end{verbatim}
+
+\subsection{Accessibility Optimization in Word Files}
+\label{subsec:word-accessibility-optimization}
+After converting from Markdown to Word, you should always run the Microsoft Word Accessibility\index{accessibility} Checker.
+\begin{enumerate}
+	\item Go to \textbf{File} > \textbf{Info}.
+	\item Click the \textbf{Check for Issues} button.
+	\item Select \textbf{Check Accessibility}.
+\end{enumerate}
+This will identify any remaining accessibility issues, such as missing alt text\index{images and media!alternative text} (if it wasn't provided in the Markdown) or color contrast\index{accessibility!Manual Testing} issues.
+
+\section{Alternative Options and Languages for Accessibility}
+\label{sec:alt-options-accessibility}
+
+While Markdown and its derivatives offer compelling advantages for creating accessible documents, a comprehensive approach requires understanding other formats and languages that can also optimize accessibility. Each option presents a unique set of pros and cons, influencing its suitability for different content types and user needs.
+
+\subsection{CommonMark}
+CommonMark is a rigorously specified, unambiguous syntax for Markdown, serving as a foundational standard that many Markdown processors adhere to. \supercite{MarkdownGuideExtended, DocsToMarkdown, QuartoCommonMark}
+\begin{itemize}
+	\item \emph{Pros}: Its standardization ensures broad compatibility across various platforms and renderers, making it a safe choice for maximum portability. \supercite{QuartoCommonMark, MConverter} It generates simple HTML markup, which is inherently easy for assistive technologies to read. \supercite{SmashingMagazine}
+	\item \emph{Cons}: CommonMark's simplicity means it lacks advanced features found in more extended Markdown flavors, such as native support for merged cells in tables. \supercite{DocsToMarkdown} For complex accessibility requirements, direct HTML embedding or reliance on post-processing tools is often necessary. \supercite{DocsToMarkdown}
+\end{itemize}
+
+\subsection{RMarkdown / Quarto}
+RMarkdown and its successor, Quarto, are powerful tools primarily used in academic and technical contexts for creating dynamic documents that integrate code, narrative text, and mathematical expressions. \supercite{RMarkdownMassey, QuartoCommonMark}
+\begin{itemize}
+	\item \emph{Pros}: They excel at producing accessible HTML, Word, and even PDF documents (often via Word conversion) from a single source file, streamlining the multi-format output process. \supercite{QuartoCommonMark, AccessR} RMarkdown/Quarto support explicit alternative text (\texttt{fig.alt}) and captions (\texttt{fig.cap}) for figures, crucial for image accessibility. \supercite{RMarkdownMassey, AccessR} Integration with MathJax ensures mathematical content is rendered in an accessible format that screen readers can interpret. \supercite{CreateUW, RMarkdownMassey} They also allow for structural adjustments like shifting heading levels. \supercite{QuartoCommonMark}
+	\item \emph{Cons}: The learning curve can be steeper for users unfamiliar with R or Python environments. While they can produce PDFs, achieving fully accessible PDFs remains challenging and often requires specific configurations or intermediate steps. \supercite{CreateUW, QuartoCommonMark}
+\end{itemize}
+
+\subsection{GitHub Flavored Markdown (GFM)}
+GFM is a widely adopted variant of Markdown used extensively on GitHub, extending CommonMark with additional features. \supercite{GitHubDocs}
+\begin{itemize}
+	\item \emph{Pros}: Its widespread use in development communities means many users are familiar with it. GFM supports semantic \texttt{<img>} elements, allowing for the provision of alternative text directly. \supercite{GitHubDocs, TestPros} It automatically generates IDs for headings, facilitating internal linking and navigation. \supercite{GitLabDocs} GFM also encourages accessible practices for tables, such as avoiding empty cells by suggesting "N/A" or "None". \supercite{GitLabDocs} It is compliant with CommonMark, ensuring a baseline of accessibility. \supercite{GitHubDocs}
+	\item \emph{Cons}: Despite its extensions, GFM still has limitations for complex tables, lacking native support for features like merged cells. \supercite{DocsToMarkdown} Its accessibility features are often optimized for rendering within the GitHub platform, and may not translate perfectly to other environments.
+\end{itemize}
+
+\subsection{HTML (Direct)}
+Direct HTML authoring offers the highest degree of control over document structure and accessibility attributes.
+\begin{itemize}
+	\item \emph{Pros}: Provides ultimate control over semantic markup and the inclusion of advanced accessibility attributes like WAI-ARIA roles, \texttt{scope} attributes for tables, and \texttt{id}/\texttt{headers} for complex data relationships. \supercite{MDNHTML, UniversalDesign, MDNTableAccess} When coded correctly, HTML is highly compatible with screen readers and other assistive technologies. \supercite{ReciteMe} It allows for adaptive or responsive layouts and explicit language declarations. \supercite{UniversalDesign, QuartoCommonMark}
+	\item \emph{Cons}: Requires a higher learning curve compared to Markdown, as authors must understand HTML syntax and accessibility best practices in detail. \supercite{UniversalDesign} It is also easier to inadvertently introduce accessibility errors if semantic markup is misused or omitted. \supercite{UniversalDesign}
+\end{itemize}
+
+\subsection{LaTeX}
+LaTeX is a powerful typesetting system widely used in academia and scientific publishing, particularly for its robust handling of complex mathematical equations. \supercite{CreateUW}
+\begin{itemize}
+	\item \emph{Pros}: It is the de facto standard for scientific documents, offering unparalleled control over typography and layout. It handles complex mathematical content exceptionally well, which can be converted to accessible math formats like MathJax. \supercite{CreateUW, LaTeXAccessibility} LaTeX supports the use of sectioning commands (\texttt{\textbackslash section\{\}}) to create a structured document with headings, which are understood by screen readers when converted to PDF. \supercite{LancasterLatex} It also allows for sans-serif fonts and adjustable line spacing for improved readability. \supercite{LancasterLatex}
+	\item \emph{Cons}: LaTeX has a steep learning curve, requiring users to learn a complex markup language. Native PDF output from LaTeX is often not fully accessible and may require additional tools like Pandoc or PreTeXt for proper tagging and accessibility features. \supercite{CreateUW, LaTeXAccessibility} Using italic text, which is common in academic writing, can be difficult to read for some individuals. \supercite{LancasterLatex}
+\end{itemize}
+
+\subsection{DAISY (Digital Accessible Information System)}
+DAISY is a technical standard specifically designed for digital audiobooks, periodicals, and computerized text for people with print disabilities, including blindness, impaired vision, and dyslexia. \supercite{DAISYWiki}
+\begin{itemize}
+	\item \emph{Pros}: It offers advanced navigation features beyond traditional audiobooks, allowing users to search, place bookmarks, navigate line by line, and control speaking speed without distortion. \supercite{DAISYWiki, SnowDAISY} DAISY supports synchronized text and audio, as well as refreshable braille displays. \supercite{DAISYWiki, SnowDAISY} It is ideal for complex materials like textbooks and encyclopedias due to its ability to provide aurally accessible tables, references, and multi-level navigation. \supercite{DAISYWiki}
+	\item \emph{Cons}: DAISY is a specialized format not intended for general document creation. It requires specific production tools and playback software, limiting its widespread adoption for everyday content. \supercite{DAISYWiki, SnowDAISY}
+\end{itemize}
+
+\subsection{EPUB 3}
+EPUB 3 is the latest version of the open ebook standard, with a strong emphasis on accessibility features. \supercite{ElsevierEPUB3, CNIBEPUB}
+\begin{itemize}
+	\item \emph{Pros}: It is an industry standard for digital publications, offering enhanced reading experiences for individuals with print disabilities. \supercite{ElsevierEPUB3} EPUB 3 supports features such as high contrast, enlarged text adjustments, text-to-speech functionality, keyboard-only navigation, chapter and page navigation, full-text search, and properly marked tables. \supercite{ElsevierEPUB3} It allows for content magnification without loss of functionality and adjustable text spacing/margins. \supercite{ElsevierEPUB3}
+	\item \emph{Cons}: Primarily designed for ebooks, it may not be suitable for all types of general document creation. Creating accessible EPUB 3 files requires specific authoring tools and adherence to EPUB specifications, including validation with tools like EPUBCheck. \supercite{CNIBEPUB}
+\end{itemize}
+The choice among these options depends heavily on the content's complexity, the target audience's needs, and the author's technical proficiency. While Markdown offers a strong starting point for accessible plain text, more specialized formats like DAISY and EPUB 3 provide comprehensive solutions for complex publications tailored for print disabilities.
+
+\newpage
+\begin{landscape}
+	\begin{longtblr}[
+			caption={Table 2: Comparison of Markdown Flavors and Alternative Formats for Accessibility},
+			label={tab:markdown-flavors-comparison}
+		]{colspec={X[l,m] X[l.m] X[l,m] X[l,m]}, width=\linewidth}
+		\toprule
+		Format/Language                       & Pros for Accessibility                                                                                                                                                                                                 & Cons for Accessibility                                                                                                                                      & Best Use Case                                                                                                         \\
+		\midrule
+		\emph{CommonMark}                     & Standardized, high compatibility, simple HTML output easily read by AT. \supercite{SmashingMagazine,QuartoCommonMark}                                                                                                  & Basic features, limited native support for complex elements like merged tables. \supercite{DocsToMarkdown}                                                  & Simple documentation, READMEs, web content where basic accessibility is sufficient.                                   \\
+		\addlinespace
+		\emph{RMarkdown / Quarto}             & Single-source publishing to accessible HTML, Word, PDF (via Word); excellent for code/math; supports alt text/captions for figures; MathJax for accessible math. \supercite{CreateUW,RMarkdownMassey,QuartoCommonMark} & Steeper learning curve for non-programmers; PDF accessibility can be challenging. \supercite{CreateUW}                                                      & Academic papers, technical reports, data science notebooks with code, math, and figures.                              \\
+		\addlinespace
+		\emph{GitHub Flavored Markdown (GFM)} & Widely used, extends CommonMark; supports semantic \texttt{<img>} for alt text; automatic heading IDs; encourages accessible table practices. \supercite{GitHubDocs,GitLabDocs,TestPros}                               & Still limited for complex tables (no merged cells); accessibility often tied to GitHub platform rendering. \supercite{DocsToMarkdown}                       & Collaborative documentation, project READMEs on GitHub, simple web content.                                           \\
+		\addlinespace
+		\emph{HTML (Direct)}                  & Ultimate control over semantic structure and ARIA attributes; highly compatible with screen readers when coded correctly. \supercite{MDNHTML,UniversalDesign}                                                          & Higher learning curve; more verbose; easier to introduce errors if not careful. \supercite{UniversalDesign}                                                 & Highly custom web applications, complex interactive content, situations requiring fine-grained accessibility control. \\
+		\addlinespace
+		\emph{LaTeX}                          & Standard for scientific publishing; excellent for complex math; structured documents via sectioning commands. \supercite{CreateUW,LancasterLatex}                                                                      & Steepest learning curve; native PDF output often not fully accessible; requires additional tools for accessibility. \supercite{CreateUW,LaTeXAccessibility} & Scientific papers, academic textbooks, documents with extensive mathematical notation.                                \\
+		\addlinespace
+		\emph{DAISY}                          & Designed for print disabilities; advanced navigation (line, page, bookmarks); synchronized text/audio; supports refreshable braille displays. \supercite{DAISYWiki,SnowDAISY}                                          & Specialized format, not for general document creation; requires specific production and playback tools. \supercite{DAISYWiki,SnowDAISY}                     & Digital talking books, accessible textbooks, complex periodicals for print-disabled users.                            \\
+		\addlinespace
+		\emph{EPUB 3}                         & Industry standard for ebooks with strong accessibility features; high contrast, enlarged text, text-to-speech, keyboard navigation, accessible tables. \supercite{ElsevierEPUB3}                                       & Primarily for ebooks; requires specific authoring tools and validation. \supercite{CNIBEPUB}                                                                & Accessible ebooks, digital publications, and long-form content.                                                       \\
+		\bottomrule
+	\end{longtblr}
+\end{landscape}
+\newpage
+
+
+\section{Conclusions and Recommendations}
+\label{sec:conclusions-markdown}
+
+The analysis demonstrates that Markdown, with its inherent simplicity and direct mapping to semantic HTML, serves as an excellent foundation for creating accessible documents for individuals who are blind or visually impaired. Its plain-text nature encourages practices that naturally align with screen reader functionality, such as logical heading structures and properly formatted lists. This makes Markdown a powerful tool for content creators who may not have deep expertise in HTML or accessibility standards, enabling them to produce content that is more readily consumable by assistive technologies from the outset.
+
+However, the report also highlights that Markdown is not a complete solution for all accessibility challenges. Its simplicity introduces limitations, particularly concerning complex elements like tables, where native Markdown syntax lacks the rich semantic attributes (e.g., merged cells, explicit header-cell associations) crucial for comprehensive screen reader interpretation. In such cases, a hybrid approach, involving the embedding of raw HTML within Markdown, or the reliance on robust conversion tools like Pandoc, becomes indispensable. These tools act as vital bridges, preserving and enhancing the semantic fidelity of the document as it transforms into various accessible formats.
+
+To maximize the accessibility of documents created with Markdown, the following recommendations are provided:
+
+\begin{itemize}
+	\item \emph{Prioritize Semantic Markup}: Always use Markdown syntax for its intended semantic purpose. Headings should strictly define document structure, lists should be used for enumerated or bulleted items, and emphasis should convey meaning, not just visual style. Avoid using visual formatting (e.g., bolding without proper heading syntax) to convey structural meaning, as this renders content inaccessible to screen readers.
+	\item \emph{Provide Comprehensive Alternative Text and Captions}: Meticulously add concise and descriptive alternative text for all images. For tables, always include a clear caption that summarizes the table's content, and ensure all header cells are correctly identified. This provides crucial context for users who cannot visually perceive the content.
+	\item \emph{Master Table Accessibility}: For simple tables, ensure proper header rows are defined. For more complex tabular data, be prepared to leverage embedded HTML with attributes such as \texttt{scope}, \texttt{id}, and \texttt{headers}, in addition to the \texttt{<caption>} element. Avoid merged or blank cells, as these significantly hinder linear screen reader navigation.
+	\item \emph{Utilize Robust Conversion Tools}: Employ powerful document converters like Pandoc for reliable and semantically faithful conversion of Markdown files to other accessible formats such as Word, HTML, or intermediate formats required for Braille production. This ensures that the accessibility features embedded in the Markdown source are preserved in the output.
+	\item \emph{Choose Flavors and Editors Wisely}: Select Markdown flavors (e.g., RMarkdown/Quarto for academic or data-driven content, GitHub Flavored Markdown for collaborative development) and accessible Markdown editors that best suit the content creation workflow and offer enhanced accessibility features. Editors with strong screen reader compatibility, customizable keyboards, and visual adjustments are paramount for visually impaired users.
+	\item \emph{Test with Assistive Technologies}: Regular testing of the final rendered documents with various screen readers (e.g., JAWS, NVDA, VoiceOver) is critical. This practical verification helps identify and rectify any accessibility barriers that automated checks might miss, ensuring a truly usable experience.
+	\item \emph{Consider Specialized Formats for Specific Needs}: For highly structured, interactive, or long-form content specifically intended for print-disabled users (e.g., textbooks, complex publications), investigate specialized accessible formats like DAISY (Digital Accessible Information System) or EPUB 3. These formats are designed from the ground up to provide advanced navigation and accessibility features.
+	\item \emph{Embrace Continuous Learning}: Accessibility standards and assistive technologies are constantly evolving. Staying informed about the latest best practices, tool capabilities, and user feedback is crucial for consistently producing high-quality, accessible digital content.
+\end{itemize}
+
+\begin{thebibliography}{99}
+	\bibitem{ReciteMe} ReciteMe. "Blind Accessibility." Available at: \url{https://reciteme.com/news/blind-accessibility/} [Accessed: July 4, 2025].
+	\bibitem{TextToBraille} ResearchGate. "Text to Braille Conversion System." Available at: \url{https://www.researchgate.net/publication/357113200_Text_to_Braille_Conversion_System} [Accessed: July 4, 2025].
+	\bibitem{TestDevLab} TestDevLab. "A Screen Reader’s Guide to Accessibility." Available at: \url{https://www.testdevlab.com/blog/screen-reader-guide-to-accessibility} [Accessed: July 4, 2025].
+	\bibitem{DSU} Dakota State University. "Provide an Accessible Page Structure and Layout." Available at: \url{https://support.dsu.edu/TDClient/1796/Portal/KB/ArticleDet?ID=148297} [Accessed: July 4, 2025].
+	\bibitem{SmashingMagazine} Smashing Magazine. "Improving The Accessibility Of Markdown." Available at: \url{https://www.smashingmagazine.com/2021/09/improving-accessibility-of-markdown/} [Accessed: July 4, 2025].
+	\bibitem{MDNHTML} MDN Web Docs. "Accessibility: HTML." Available at: \url{https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML} [Accessed: July 4, 2025].
+	\bibitem{UniversalDesign} Centre for Excellence in Universal Design. "Do Not Misuse Semantic Markup." Available at: \url{https://universaldesign.ie/communications-digital/web-and-mobile-accessibility/web-accessibility-techniques/developers-introduction-and-index/provide-an-accessible-page-structure-and-layout/do-not-misuse-semantic-markup} [Accessed: July 4, 2025].
+	\bibitem{UNIWeb} University of Northern Iowa. "Web Guidelines: Web Accessibility." Available at: \url{https://ur.uni.edu/uni-brand/web-guidelines/web-accessibility} [Accessed: July 4, 2025].
+	\bibitem{GitLabDocs} GitLab Docs. "Markdown Guide." Available at: \url{https://docs.gitlab.com/user/markdown/} [Accessed: July 4, 2025].
+	\bibitem{MarkdownToolbox} Markdown Toolbox. "Markdown Best Practices for Documentation." Available at: \url{https://www.markdowntoolbox.com/blog/markdown-best-practices-for-documentation/} [Accessed: July 4, 2025].
+	\bibitem{TestPros} TestPros. "Accessibility in GitHub with Git Flavored Markdown." Available at: \url{https://testpros.com/accessibility/accessibility-in-github-with-git-flavored-markdown/} [Accessed: July 4, 2025].
+	\bibitem{LancasterLatex} Lancaster University. "Checklist for LaTeX Accessibility." Available at: \url{https://portal.lancaster.ac.uk/ask/checklist-latex} [Accessed: July 4, 2025].
+	\bibitem{MarkdownGuide} Markdown Guide. "Basic Syntax." Available at: \url{https://www.markdownguide.org/basic-syntax/} [Accessed: July 4, 2025].
+	\bibitem{MarkdownGuideExtended} Markdown Guide. "Extended Syntax." Available at: \url{https://www.markdownguide.org/extended-syntax/} [Accessed: July 4, 2025].
+	\bibitem{RMarkdownMassey} Massey University. "RMarkdown." Available at: \url{https://r-resources.massey.ac.nz/rmarkdown/} [Accessed: July 4, 2025].
+	\bibitem{MSPowerShellMarkdown} Microsoft Docs. "General Markdown Guidance." Available at: \url{https://learn.microsoft.com/en-us/powershell/scripting/community/contributing/general-markdown?view=powershell-7.5} [Accessed: July 4, 2025].
+	\bibitem{DocsToMarkdown} Docs to Markdown. "Tables in Markdown." Available at: \url{https://www.docstomarkdown.pro/tables-in-markdown/} [Accessed: July 4, 2025].
+	\bibitem{MDNTableAccess} MDN Web Docs. "Table Accessibility." Available at: \url{https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility} [Accessed: July 4, 2025].
+	\bibitem{OSUDigitalAccess} Oregon State University. "Digital Accessibility: Tables." Available at: \url{https://accessibility.oregonstate.edu/digital-accessibility/tables} [Accessed: July 4, 2025].
+	\bibitem{PerkinsNoteTaking} Perkins School for the Blind. "Tips and Models for Effective Note-Taking." Available at: \url{https://www.perkins.org/resource/tips-and-models-for-effective-note-taking/} [Accessed: July 4, 2025].
+	\bibitem{TeachingVI} TeachingVisuallyImpaired.com. "Braille Notetakers." Available at: \url{https://www.teachingvisuallyimpaired.com/braille-notetakers.html} [Accessed: July 4, 2025].
+	\bibitem{PerkinsMonsterNote} Perkins School for the Blind. "Monster Note-Taking Skills." Available at: \url{https://www.perkins.org/resource/monster-note-taking-skills/} [Accessed: July 4, 2025].
+	\bibitem{Inkdrop} Inkdrop. "A Markdown Note-Taking App." Available at: \url{https://www.inkdrop.app/} [Accessed: July 4, 2025].
+	\bibitem{Bear} Bear. "Bear App." Available at: \url{https://bear.app/} [Accessed: July 4, 2025].
+	\bibitem{CreateUW} University of Washington. "Making Homework Write-Up Accessible." Available at: \url{https://create.uw.edu/a11y-in-action/accessible-courses/making-homework-write-up-accessible/} [Accessed: July 4, 2025].
+	\bibitem{DailyDevEditors} daily.dev. "10 Best Code Editors with Accessibility Features." Available at: \url{https://daily.dev/blog/10-best-code-editors-with-accessibility-features} [Accessed: July 4, 2025].
+	\bibitem{TinyMCE} TinyMCE Blog. "Accessible Rich Text Editor." Available at: \url{https://www.tiny.cloud/blog/accessible-rich-text-editor/} [Accessed: July 4, 2025].
+	\bibitem{EasyMDE} EasyMDE. "Easy Markdown Editor." Available at: \url{https://github.com/Ionaru/easy-markdown-editor} [Accessed: July 4, 2025].
+	\bibitem{QuartoCommonMark} Quarto. "CommonMark Reference." Available at: \url{https://quarto.org/docs/reference/formats/markdown/commonmark.html} [Accessed: July 4, 2025].
+	\bibitem{AccessR} Paul Northrop. "accessr: Accessible R Markdown Documents." Available at: \url{https://paulnorthrop.github.io/accessr/} [Accessed: July 4, 2025].
+	\bibitem{GitHubDocs} GitHub Docs. "Using Markdown and Liquid in GitHub Docs." Available at: \url{https://docs.github.com/en/contributing/writing-for-github-docs/using-markdown-and-liquid-in-github-docs} [Accessed: July 4, 2025].
+	\bibitem{LaTeXAccessibility} University of Wisconsin. "LaTeX Accessibility." Available at: \url{https://researchguides.library.wisc.edu/latex/accessibility} [Accessed: July 4, 2025].
+	\bibitem{DAISYWiki} Wikipedia. "Digital Accessible Information System." Available at: \url{https://en.wikipedia.org/wiki/Digital_Accessible_Information_System} [Accessed: July 4, 2025].
+	\bibitem{SnowDAISY} SNOW. "DAISY Audio Format." Available at: \url{https://snow.idrc.ocadu.ca/4b-0-alternative-formats/what-are-alternative-formats/audio/daisy/} [Accessed: July 4, 2025].
+	\bibitem{ElsevierEPUB3} Elsevier. "Flexible eBook Solutions: EPUB3." Available at: \url{https://shop.elsevier.com/flexible-ebook-solutions/epub3} [Accessed: July 4, 2025].
+	\bibitem{CNIBEPUB} CNIB Beyond Print. "Making an Accessible EPUB." Available at: \url{https://cnib-beyondprint.ca/making-an-accessible-epub/} [Accessed: July 4, 2025].
+	\bibitem{BrailleProcess} Accessible Print Shop. "The Braille Transcription Process." Available at: \url{https://accessibleprintshop.com/the-braille-transcription-process/} [Accessed: July 4, 2025].
+	\bibitem{Liblouis} American Printing House for the Blind. "Liblouis Braille Translator." Available at: \url{https://tech.aph.org/lt/} [Accessed: July 4, 2025].
+	\bibitem{DAISYPipeline} DAISY Consortium. "DAISY Pipeline Braille User Guide." Available at: \url{http://daisy.github.io/pipeline/Get-Help/User-Guide/Braille/} [Accessed: July 4, 2025].
+	\bibitem{BrailleBlaster} American Printing House for the Blind. "BrailleBlaster." Available at: \url{https://www.aph.org/product/brailleblaster/} [Accessed: July 4, 2025].
+	\bibitem{InclusiveASL} Inclusive ASL. "Accessible Media Services: Braille Transcription." Available at: \url{https://inclusiveasl.com/services/accessible-media-services/braille-transcription/} [Accessed: July 4, 2025].
+	\bibitem{YouTubeBraille} YouTube. "How Braille is Made." Available at: \url{https://www.youtube.com/watch?v=_mnitvxt8zk} [Accessed: July 4, 2025].
+	\bibitem{BrailleTranslatorGH} Sebdababo. "Braille Translator." GitHub Repository. Available at: \url{https://github.com/Sebdababo/Braille-Translator} [Accessed: July 4, 2025].
+	\bibitem{ATAEMBrailleFormatting} ATAEM. "Braille Formatting." Available at: \url{https://ataem.org/Braille-Formatting} [Accessed: July 4, 2025].
+	\bibitem{BRLFormat} BRL.org. "Braille Transcribers: Session 03 - Format." Available at: \url{http://www.brl.org/transcribers/session03/format.html} [Accessed: July 4, 2025].
+	\bibitem{AllThingsOpenPandoc} All Things Open. "Pandoc: Convert Markdown Documents to Office Formats." Available at: \url{https://allthingsopen.org/articles/pandoc-convert-markdown-documents-office-formats/} [Accessed: July 4, 2025].
+	\bibitem{PandocManual} Pandoc. "Pandoc User’s Guide." Available at: \url{https://pandoc.org/MANUAL.html} [Accessed: July 4, 2025].
+	\bibitem{MConverter} MConverter. "Convert Markdown to DOCX." Available at: \url{https://mconverter.eu/convert/markdown/docx/} [Accessed: July 4, 2025].
+	\bibitem{CloudConvert} CloudConvert. "MD to DOCX Converter." Available at: \url{https://cloudconvert.com/md-to-docx} [Accessed: July 4, 2025].
+	\bibitem{PandocLuaFilters} Pandoc. "Lua Filters." Available at: \url{https://pandoc.org/lua-filters.html} [Accessed: July 4, 2025].
+\end{thebibliography}

@@ -1,8 +1,8 @@
-\chapter{Impact of Hardware Limitations on Screen Reader Response Latency and Student Academic Performance}\label{vision-assistive-technology-laptop-computer-requirements}
-
+\chapter{Hardware Limitations on Screen Reader/Magnifier Latency}\label{vision-assistive-technology-laptop-computer-requirements}
+\raggedright
 \section{Executive Summary}\label{executive-summary}
 
-Screen reader response latency—the delay between user input and audio feedback—creates significant barriers to academic success for students using assistive technology on underpowered computers. Research demonstrates that hardware limitations, particularly insufficient RAM and older CPU generations, directly increase response delays that trigger frustration, impair task completion, and ultimately undermine educational outcomes. Current findings indicate that systems with 16 GB RAM demonstrate unacceptably long latency periods, necessitating a minimum recommendation of 24-32 GB RAM for educational equity.
+Screen reader\index{screen reader} response latency—the delay between user input\index{screen reader!user input} and audio feedback—creates significant barriers to academic success for students using assistive technology\index{assistive technology} on underpowered computers. Research demonstrates that hardware\index{hardware} limitations, particularly insufficient RAM\index{RAM} and older CPU generations, directly increase response delays that trigger frustration, impair task completion, and ultimately undermine educational outcomes. Current findings indicate that systems with 16 GB RAM\index{RAM} demonstrate unacceptably long latency\index{latency} periods, necessitating a minimum recommendation of 24-32 GB RAM for educational equity\index{educational equity}.
 
 \section{The Latency Problem}\label{the-latency-problem}
 
@@ -10,69 +10,69 @@ Screen reader response latency—the delay between user input and audio feedback
 
 \subsubsection{Equivalent Response Times}
 
-Students using screen readers must achieve equivalent response times to their sighted peers to ensure educational equity. Any additional latency beyond what sighted users experience creates an unfair disadvantage and violates principles of equal access.
+Students using screen readers must achieve equivalent response times to their sighted peers to ensure educational equity\index{educational equity}. Any additional latency beyond what sighted users experience creates an unfair disadvantage and violates principles of equal access.
 
 \subsection{Critical Response Time Thresholds}\label{critical-response-time-thresholds}
 
 \subsubsection{Perceptibility Thresholds:}
 
 \begin{itemize}
-\item \textbf{<10 ms}: Imperceptible, maintaining illusion of instantaneous response (TARGET RANGE) \cite{Nielsen1993UsabilityEngineering}
-\item \textbf{10-100 ms}: Noticeable delay disrupts user flow, causes mild frustration \cite{Miller1968ReactionTime}
-\item \textbf{>100 ms}: Consistently interrupts interaction flow, prompts repeated inputs \cite{Shneiderman1998DesigningTheUserInterface}
+	\item \textbf{<10 ms}: Imperceptible, maintaining illusion of instantaneous response (TARGET RANGE) \supercite{Nielsen1993UsabilityEngineering}
+	\item \textbf{10-100 ms}: Noticeable delay disrupts user flow, causes mild frustration \supercite{Miller1968ReactionTime}
+	\item \textbf{>100 ms}: Consistently interrupts interaction flow, prompts repeated inputs \supercite{Shneiderman1998DesigningTheUserInterface}
 \end{itemize}
 
 
 \subsubsection{Frustration Thresholds:}
 
 \begin{itemize}
-\item \textbf{100-500 ms}: Significant frustration in direct manipulation tasks, degrades efficiency and increases errors \cite{Card1983ThePsychologyOfHumanComputerInteraction}
-\item \textbf{>500 ms}: Unacceptable for educational use—users abandon tasks due to perceived system freezes \cite{Sears1993TheEffectOfResponseTime}
-\item \textbf{>1 second}: Severely disrupts attention and learning flow \cite{Dix2004HumanComputerInteraction}
+	\item \textbf{100-500 ms}: Significant frustration in direct manipulation tasks, degrades efficiency and increases errors \supercite{Card1983ThePsychologyOfHumanComputerInteraction}
+	\item \textbf{>500 ms}: Unacceptable for educational use—users abandon tasks due to perceived system freezes \supercite{Sears1993TheEffectOfResponseTime}
+	\item \textbf{>1 second}: Severely disrupts attention and learning flow \supercite{Dix2004HumanComputerInteraction}
 \end{itemize}
 
 
 \subsubsection{Audio-Specific Critical Factors:}
 
 \begin{itemize}
-\item \textbf{20 ms}: Lower threshold for audible delay perception in screen reader audio feedback \cite{Grunwald1999AuditoryLatency}
-\item \textbf{25 ms}: Performance degradation threshold—beyond this point, measurable efficiency loss occurs \cite{Fowler2011ScreenReaderLatency}
-\item \textbf{100-800 ms}: Critical danger zone where speech truncation occurs, causing navigation errors and forcing workflow adjustments \cite{Bigham2014UnderstandingScreenReaderUsage}
+	\item \textbf{20 ms}: Lower threshold for audible delay perception in screen reader\index{screen reader} audio feedback \supercite{Grunwald1999AuditoryLatency}
+	\item \textbf{25 ms}: Performance degradation threshold—beyond this point, measurable efficiency loss occurs \supercite{Fowler2011ScreenReaderLatency}
+	\item \textbf{100-800 ms}: Critical danger zone where speech truncation occurs, causing navigation errors and forcing workflow adjustments \supercite{Bigham2014UnderstandingScreenReaderUsage}
 \end{itemize}
 
 
 \subsubsection{Educational Equity Standard:}
 
-For true accessibility, screen reader response times must remain \textbf{under 25 ms} to match the responsiveness sighted students experience with visual interfaces \cite{W3C2018WCAG21}.
+For true accessibility, screen reader response times must remain \textbf{under 25 ms} to match the responsiveness sighted students experience with visual interfaces \supercite{W3C2018WCAG21}.
 
 \subsection{Hardware Impact on Response Times}\label{hardware-impact-on-response-times}
 
-Older processors and limited system RAM substantially increase keypress-to-audio output delays through several mechanisms:
+Older processors and limited system RAM\index{RAM} substantially increase keypress-to-audio output delays through several mechanisms:
 
 \subsubsection{Memory Constraints:}
 
 \begin{itemize}
-\item Insufficient RAM forces reliance on slower storage (page files) \cite{Microsoft2023WindowsPerformance}
-\item Creates noticeable lags during multitasking \cite{Intel2024ProcessorMemory}
-\item Causes audio stuttering when memory-intensive applications run \cite{Realtek2023AudioDriverPerformance}
+	\item Insufficient \gls{ram} forces reliance on slower storage (page files) \supercite{Microsoft2023WindowsPerformance}
+	\item Creates noticeable lags during multitasking \supercite{Intel2024ProcessorMemory}
+	\item Causes \gls{audio} stuttering when memory-intensive applications run \supercite{Realtek2023AudioDriverPerformance}
 \end{itemize}
 
 
 \subsubsection{Processor Limitations:}
 
 \begin{itemize}
-\item Older CPUs have slower data processing speeds \cite{AMD2024RyzenPerformance}
-\item Less efficient memory controllers delay data transfer \cite{AnandTech2023MemoryControllers}
-\item Higher CAS latency in older RAM configurations compounds delays \cite{TechSpot2023RAMTimings}
+	\item Older CPUs have slower data processing speeds \supercite{AMD2024RyzenPerformance}
+	\item Less efficient memory controllers delay data transfer \supercite{AnandTech2023MemoryControllers}
+	\item Higher CAS latency\index{latency} in older RAM configurations compounds delays \supercite{TechSpot2023RAMTimings}
 \end{itemize}
 
 
 \subsubsection{Audio System Factors:}
 
 \begin{itemize}
-\item Generic audio drivers introduce additional latency \cite{ASIO4ALL2023Latency}
-\item OS-level buffering creates inherent delays \cite{LinuxAudioLatency}
-\item Power-saving modes cause inconsistent response times \cite{WindowsPowerManagement}
+	\item Generic audio drivers introduce additional \gls{latency} \supercite{ASIO4ALL2023Latency}
+	\item OS-level buffering creates inherent delays \supercite{LinuxAudioLatency}
+	\item Power-saving modes cause inconsistent response times \supercite{WindowsPowerManagement}
 \end{itemize}
 
 
@@ -80,156 +80,161 @@ Older processors and limited system RAM substantially increase keypress-to-audio
 
 \subsection{Academic Performance Degradation}\label{academic-performance-degradation}
 
-The combination of hardware limitations and increased latency creates cascading effects on student learning:
+The combination of hardware\index{hardware} limitations and increased latency creates cascading effects on student learning:
 
 \subsubsection{Cognitive Load Increase:}
 \begin{itemize}
-\item Students must wait for audio feedback before proceeding \cite{Sweller1988CognitiveLoadTheory}
-\item Disrupted information flow breaks concentration \cite{Parasuraman2008CognitiveWorkload}
-\item Increased mental effort required for basic navigation tasks \cite{Wickens2008MultipleResourceTheory}
+	\item Students must wait for audio feedback before proceeding \supercite{Sweller1988CognitiveLoadTheory}
+	\item Disrupted information flow breaks concentration \supercite{Parasuraman2008CognitiveWorkload}
+	\item Increased mental effort required for basic \gls{navigation} tasks \supercite{Wickens2008MultipleResourceTheory}
 \end{itemize}
 
 \subsubsection{Task Completion Barriers:}
 
 \begin{itemize}
-\item Time-pressured assignments become difficult or impossible \cite{Adams2000ImpactOfTechnology}
-\item Complex multi-step tasks are abandoned due to lag \cite{Kirschner2006WhyMinimalGuidance}
-\item Workflow interruptions prevent deep engagement with content \cite{Pashler1994DualTaskInterference}
+	\item Time-pressured assignments become difficult or impossible \supercite{Adams2000ImpactOfTechnology}
+	\item Complex multi-step tasks are abandoned due to lag \supercite{Kirschner2006WhyMinimalGuidance}
+	\item Workflow interruptions prevent deep engagement with content \supercite{Pashler1994DualTaskInterference}
 \end{itemize}
 
 \subsubsection{Comprehension Challenges:}
 
 \begin{itemize}
-\item Broken information flow leads to shallow processing \cite{Craik1972LevelsOfProcessing}
-\item Reduced attention and increased mind-wandering \cite{Smallwood2011MindWandering}
-\item Lower retention compared to smooth, responsive interactions \cite{Kintsch1998Comprehension}
+	\item Broken information flow leads to shallow processing \supercite{Craik1972LevelsOfProcessing}
+	\item Reduced attention and increased mind-wandering \supercite{Smallwood2011MindWandering}
+	\item Lower retention compared to smooth, responsive interactions \supercite{Kintsch1998Comprehension}
 \end{itemize}
 
 \subsection{Emotional and Psychological Consequences}\label{emotional-and-psychological-consequences}
 
-Students experiencing screen reader latency report specific negative emotional reactions:
+Students experiencing screen reader\index{screen reader} latency report specific negative emotional reactions:
 
 \subsubsection{Immediate Responses:}
 
 \begin{itemize}
-\item \textbf{Frustration}: Escalating as delays persist and disrupt workflow \cite{Lazarus1991EmotionAndAdaptation}
-\item \textbf{Anger}: When perceiving latency as unfair obstacle to achievement \cite{Fogg2003PersuasiveTechnology}
-\item \textbf{Anxiety}: Fear of missing deadlines or failing to complete work \cite{Zeidner1998TestAnxiety}
+	\item \textbf{Frustration}: Escalating as delays persist and disrupt workflow \supercite{Lazarus1991EmotionAndAdaptation}
+	\item \textbf{Anger}: When perceiving latency as unfair obstacle to achievement \supercite{Fogg2003PersuasiveTechnology}
+	\item \textbf{Anxiety}: Fear of missing deadlines or failing to complete work \supercite{Zeidner1998TestAnxiety}
 \end{itemize}
 
 
 \subsubsection{Sustained Impact:}
 
 \begin{itemize}
-\item \textbf{Stress}: Elevated levels impairing cognitive function \cite{Sapolsky2004WhyZebrasDontGetUlcers}
-\item \textbf{Helplessness}: Feeling unable to control technical barriers \cite{Seligman1975Helplessness}
-\item \textbf{Shame}: Particularly when singled out or falling behind peers \cite{Brown2010TheGiftsOfImperfection}
+	\item \textbf{Stress}: Elevated levels impairing cognitive function \supercite{Sapolsky2004WhyZebrasDontGetUlcers}
+	\item \textbf{Helplessness}: Feeling unable to control technical barriers \supercite{Seligman1975Helplessness}
+	\item \textbf{Shame}: Particularly when singled out or falling behind peers \supercite{Brown2010TheGiftsOfImperfection}
 \end{itemize}
 
 
-These emotional responses create additional barriers to learning, as stress and anxiety further impair working memory and concentration \cite{Eysenck2007AnxietyAndCognition}.
+These emotional responses create additional barriers to learning, as stress and anxiety further impair working memory and concentration \supercite{Eysenck2007AnxietyAndCognition}.
 
 \section{The Digital Divide Effect}\label{the-digital-divide-effect}
 
-Hardware-induced latency disproportionately affects students with limited resources:
+Hardware\index{hardware}-induced latency disproportionately affects students with limited resources:
 
 \begin{itemize}
-\item Students using older or cheaper devices experience higher latency \cite{Attewell2001TheDigitalDivide}
-\item Cannot afford hardware upgrades to improve performance \cite{Warschauer2003TechnologyAndSocialInclusion}
-\item Fall further behind academically due to technical barriers \cite{DiMaggio2001FromUnequalAccess}
-\item May abandon computer-based tasks or courses entirely \cite{Compaine2001TheDigitalDivide}
+	\item Students using older or cheaper devices experience higher latency\index{latency} \supercite{Attewell2001TheDigitalDivide}
+	\item Cannot afford hardware\index{hardware} upgrades to improve performance \supercite{Warschauer2003TechnologyAndSocialInclusion}
+	\item Fall further behind academically due to technical barriers \supercite{DiMaggio2001FromUnequalAccess}
+	\item May abandon computer-based tasks or courses entirely \supercite{Compaine2001TheDigitalDivide}
 \end{itemize}
 
 \section{RAM-Specific Impact Analysis}\label{ram-specific-impact-analysis}
 
 \subsection{RAM-Specific Performance Against Zero-Frustration Standard}\label{ram-specific-performance-against-zero-frustration-standard}
 
-Screen readers require consistent sub-25ms response times to achieve parity with sighted user experiences. Current RAM configurations perform as follows against this critical standard:
+Screen readers require consistent sub-25ms response times to achieve parity with sighted user experiences. Current RAM\index{RAM} configurations perform as follows against this critical standard:
 
 \subsubsection{8GB RAM Systems - FAILS EQUITY STANDARD:}
 
 \begin{itemize}
-\item \textbf{Typical Latency}: 150-400ms during educational multitasking \cite{InternalTestingData2024}
-\item \textbf{Peak Latency}: Up to 800ms when memory saturated \cite{InternalTestingData2024}
-\item \textbf{Equity Gap}: 6-32x slower than acceptable threshold \cite{EquityAnalysisRevision}
-\item \textbf{Educational Impact}: Creates insurmountable barrier to equal participation \cite{EducationalEquityReport2024}
+	\item \textbf{Typical Latency}: 150-400ms during educational multitasking \supercite{InternalTestingData2024}
+	\item \textbf{Peak Latency}: Up to 800ms when memory saturated \supercite{InternalTestingData2024}
+	\item \textbf{Equity Gap}: 6-32x slower than acceptable threshold \supercite{EquityAnalysisRevision}
+	\item \textbf{Educational Impact}: Creates insurmountable barrier to equal participation \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 
 \subsubsection{16GB RAM Systems - UNACCEPTABLY INADEQUATE:}
 
 \begin{itemize}
-\item \textbf{Typical Latency}: 125-300ms under normal educational workloads \cite{InternalTestingData2024}
-\item \textbf{Peak Latency}: 450ms during intensive multitasking \cite{InternalTestingData2024}
-\item \textbf{Equity Gap}: 5-12x slower than equity standard \cite{EquityAnalysisRevision}
-\item \textbf{Educational Impact}: Demonstrates unacceptably long latency that severely impairs educational performance and violates accessibility standards \cite{EducationalEquityReport2024}
+	\item \textbf{Typical Latency}: 125-300ms under normal educational workloads \supercite{InternalTestingData2024}
+	\item \textbf{Peak Latency}: 450ms during intensive multitasking \supercite{InternalTestingData2024}
+	\item \textbf{Equity Gap}: 5-12x slower than equity standard \supercite{EquityAnalysisRevision}
+	\item \textbf{Educational Impact}: Demonstrates unacceptably long latency\index{latency} that severely impairs educational performance and violates accessibility\index{accessibility} standards \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 
 \subsubsection{24GB RAM Systems - MINIMUM THRESHOLD:}
 
 \begin{itemize}
-\item \textbf{Typical Latency}: 75-150ms consistently \cite{InternalTestingData2024}
-\item \textbf{Peak Latency}: 200ms under moderate load \cite{InternalTestingData2024}
-\item \textbf{Equity Gap}: 3-6x slower than ideal, approaching minimum acceptable \cite{EquityAnalysisRevision}
-\item \textbf{Educational Impact}: Represents minimum viable configuration for educational equity \cite{EducationalEquityReport2024}
+	\item \textbf{Typical Latency}: 75-150ms consistently \supercite{InternalTestingData2024}
+	\item \textbf{Peak Latency}: 200ms under moderate load \supercite{InternalTestingData2024}
+	\item \textbf{Equity Gap}: 3-6x slower than ideal, approaching minimum acceptable \supercite{EquityAnalysisRevision}
+	\item \textbf{Educational Impact}: Represents minimum viable configuration for educational equity\index{educational equity} \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 
 \subsubsection{32GB RAM Systems - APPROACHES EQUITY:}
 
 \begin{itemize}
-\item \textbf{Typical Latency}: 50-100ms consistently \cite{InternalTestingData2024}
-\item \textbf{Peak Latency}: 150ms under extreme load \cite{InternalTestingData2024}
-\item \textbf{Equity Gap}: 2-4x slower than ideal, within reasonable tolerance \cite{EquityAnalysisRevision}
-\item \textbf{Educational Impact}: Minor but measurable disadvantage, approaching acceptable performance \cite{EducationalEquityReport2024}
+	\item \textbf{Typical Latency}: 50-100ms consistently \supercite{InternalTestingData2024}
+	\item \textbf{Peak Latency}: 150ms under extreme load \supercite{InternalTestingData2024}
+	\item \textbf{Equity Gap}: 2-4x slower than ideal, within reasonable tolerance \supercite{EquityAnalysisRevision}
+	\item \textbf{Educational Impact}: Minor but measurable disadvantage, approaching acceptable performance \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 
 \subsubsection{64GB RAM Systems - ACHIEVES EQUITY STANDARD:}
 
 \begin{itemize}
-\item \textbf{Typical Latency}: 40-75ms (primarily limited by CPU/storage) \cite{InternalTestingData2024}
-\item \textbf{Peak Latency}: Under 100ms even under heavy load \cite{InternalTestingData2024}
-\item \textbf{Equity Gap}: 1.5-3x slower, within reasonable tolerance \cite{EquityAnalysisRevision}
-\item \textbf{Educational Impact}: Essentially equivalent to sighted user experience \cite{EducationalEquityReport2024}
+	\item \textbf{Typical Latency}: 40-75ms (primarily limited by CPU\index{CPU}/storage) \supercite{InternalTestingData2024}
+	\item \textbf{Peak Latency}: Under 100ms even under heavy load \supercite{InternalTestingData2024}
+	\item \textbf{Equity Gap}: 1.5-3x slower, within reasonable tolerance \supercite{EquityAnalysisRevision}
+	\item \textbf{Educational Impact}: Essentially equivalent to sighted user experience \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 
 \subsection{The Equity Crisis Revealed}\label{the-equity-crisis-revealed}
 
-Using the zero-frustration standard exposes the severity of the educational equity problem:
+Using the zero-frustration standard exposes the severity of the \gls{educationalequity} problem:
 
 \begin{itemize}
-\item \textbf{Students with 8GB systems}: Experience 6-32x longer response times than necessary for equal access \cite{EducationalEquityReport2024}
-\item \textbf{Students with 16GB systems}: Still face unacceptably long latency with 5-12x disadvantage compared to equity standard \cite{EducationalEquityReport2024}
-\item \textbf{Students require 24-32GB systems minimum}: To begin approaching true educational equity for screen reader users \cite{EducationalEquityReport2024}
-\item \textbf{Only 32GB+ systems}: Achieve performance levels that approach acceptable educational equity standards \cite{EducationalEquityReport2024}
+	\item \textbf{Students with 8GB systems}: Experience 6-32x longer response times than necessary for equal access \supercite{EducationalEquityReport2024}
+	\item \textbf{Students with 16GB systems}: Still face unacceptably long latency with 5-12x disadvantage compared to equity standard \supercite{EducationalEquityReport2024}
+	\item \textbf{Students require 24-32GB systems minimum}: To begin approaching true educational equity\index{educational equity} for screen reader\index{screen reader} users \supercite{EducationalEquityReport2024}
+	\item \textbf{Only 32GB+ systems}: Achieve performance levels that approach acceptable educational equity standards \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 
-\hypertarget{hardware-configuration-analysis}{}\section{Hardware Configuration Analysis}\label{hardware-configuration-analysis}
+\hypertarget{hardware\index{hardware}-configuration-analysis}{}\section{Hardware Configuration Analysis}\label{hardware-configuration-analysis}
 \subsection{Comprehensive System Performance Against Equity Standard}\label{comprehensive-system-performance-against-equity-standard}
 
+%\newpage
+%\begin{landscape}
 \begin{longtblr}[
-caption = {Comprehensive system performance against equity standard},
-label = {tab:chapter1:system-performance},
-note = {This table compares various system types and hardware configurations against the equity standard for educational technology. It highlights how RAM, CPU generation, and latency impact compliance with accessibility standards and educational viability, providing a detailed overview of which configurations meet or violate equity requirements.},
-]{
-colspec = {X[l,m] X[l,m] X[l,m] X[l,m] X[l,m] X[l,m]},
-rowhead = 1,
-row{1} = {font=\normalfont},
-hlines,
-stretch = 1.5
-}
-System Type & RAM Level & CPU Generation & Typical Latency & Equity Compliance & Educational Viability \\
-Budget Systems & 4-8GB & 2nd-4th Gen Intel/AMD FX & 300-1000+ ms & FAILS (12-40x slower) \cite{InternalTestingData2024} & Violates accessibility standards \cite{EducationalEquityReport2024} \\
-Entry Educational & 8GB & 6th-8th Gen Intel/Ryzen 2 & 150-400 ms & FAILS (6-16x slower) \cite{InternalTestingData2024} & Creates substantial educational barrier \cite{EducationalEquityReport2024} \\
-Standard Educational & 16GB & 8th-10th Gen Intel/Ryzen 3 & 125-300 ms & UNACCEPTABLE (5-12x slower) \cite{InternalTestingData2024} & Demonstrates unacceptably long latency \cite{EducationalEquityReport2024} \\
-Minimum Viable & 24GB & 10th+ Gen Intel/Ryzen 5 & 75-150 ms & THRESHOLD (3-6x slower) \cite{InternalTestingData2024} & Minimum acceptable for educational equity \cite{EducationalEquityReport2024} \\
-Enhanced Educational & 32GB & 10th+ Gen Intel/Ryzen 5+ & 50-100 ms & APPROACHING (2-4x slower) \cite{InternalTestingData2024} & Minor but measurable disadvantage \cite{EducationalEquityReport2024} \\
-Equity-Compliant & 64GB & Latest Gen High-Performance & 15-50 ms & ACHIEVES (≤2x slower) \cite{InternalTestingData2024} & True educational equity \cite{EducationalEquityReport2024} \\
+		caption = {Comprehensive system performance against equity standard},
+		label = {tab:chapter1:system-performance},
+		note = {This table compares various system types and hardware configurations against the equity standard for educational technology. It highlights how RAM, CPU generation, and latency impact compliance with accessibility\index{accessibility} standards and educational viability, providing a detailed overview of which configurations meet or violate equity requirements.},
+	]{
+		colspec = {X[l,m] X[l,m] X[l,m] X[l,m] X[l,m] X[l,m]},
+		rowhead = 1,
+		row{1} = {font=\normalfont},
+		hlines,
+		stretch = 1.5
+	}
+	System Type          & RAM\index{RAM} Level & CPU Generation              & Typical Latency & Equity Compliance\index{accessibility!legal accessibility}      & Educational Viability                                                                                       \\
+	Budget Systems       & 4-8GB                & 2nd-4th Gen Intel/AMD FX    & 300-1000+ ms    & FAILS (12-40x slower) \supercite{InternalTestingData2024}       & Violates accessibility\index{accessibility} standards \supercite{EducationalEquityReport2024}               \\
+	Entry Educational    & 8GB                  & 6th-8th Gen Intel/Ryzen 2   & 150-400 ms      & FAILS (6-16x slower) \supercite{InternalTestingData2024}        & Creates substantial educational barrier \supercite{EducationalEquityReport2024}                             \\
+	Standard Educational & 16GB                 & 8th-10th Gen Intel/Ryzen 3  & 125-300 ms      & UNACCEPTABLE (5-12x slower) \supercite{InternalTestingData2024} & Demonstrates unacceptably long latency\index{latency} \supercite{EducationalEquityReport2024}               \\
+	Minimum Viable       & 24GB                 & 10th+ Gen Intel/Ryzen 5     & 75-150 ms       & THRESHOLD (3-6x slower) \supercite{InternalTestingData2024}     & Minimum acceptable for educational equity\index{educational equity} \supercite{EducationalEquityReport2024} \\
+	Enhanced Educational & 32GB                 & 10th+ Gen Intel/Ryzen 5+    & 50-100 ms       & APPROACHING (2-4x slower) \supercite{InternalTestingData2024}   & Minor but measurable disadvantage \supercite{EducationalEquityReport2024}                                   \\
+	Equity-Compliant     & 64GB                 & Latest Gen High-Performance & 15-50 ms        & ACHIEVES (≤2x slower) \supercite{InternalTestingData2024}       & True educational equity\index{educational equity} \supercite{EducationalEquityReport2024}                   \\
 \end{longtblr}
+%\end{landscape}
+%\newpage
+
 
 \subsection{Zero-Frustration Performance Benchmarks}\label{zero-frustration-performance-benchmarks}
 
@@ -238,11 +243,11 @@ To achieve educational equity, systems must consistently deliver:
 \subsubsection{Target Performance Metrics:}
 
 \begin{itemize}
-\item \textbf{Keystroke Response}: <25ms from keypress to audio feedback \cite{W3C2018WCAG21}
-\item \textbf{Navigation Commands}: <20ms for arrow key/tab navigation \cite{Fowler2011ScreenReaderLatency}
-\item \textbf{Application Switching}: <50ms maximum delay \cite{Nielsen1993UsabilityEngineering}
-\item \textbf{Document Loading}: <100ms for typical educational documents \cite{Shneiderman1998DesigningTheUserInterface}
-\item \textbf{Web Page Reading}: <30ms between elements during continuous reading \cite{Bigham2014UnderstandingScreenReaderUsage}
+	\item \textbf{Keystroke Response}: <25ms from keypress to audio feedback \supercite{W3C2018WCAG21}
+	\item \textbf{Navigation Commands}: <20ms for arrow key/tab navigation \supercite{Fowler2011ScreenReaderLatency}
+	\item \textbf{Application Switching}: <50ms maximum delay \supercite{Nielsen1993UsabilityEngineering}
+	\item \textbf{Document Loading}: <100ms for typical educational documents \supercite{Shneiderman1998DesigningTheUserInterface}
+	\item \textbf{Web Page Reading}: <30ms between elements during continuous reading \supercite{Bigham2014UnderstandingScreenReaderUsage}
 \end{itemize}
 
 
@@ -251,40 +256,40 @@ To achieve educational equity, systems must consistently deliver:
 \subsubsection{8GB Systems - EDUCATIONAL EQUITY VIOLATION:}
 
 \begin{itemize}
-\item Keystroke response: 150-400ms (\textbf{6-16x too slow}) \cite{InternalTestingData2024}
-\item Navigation: 200-500ms (\textbf{8-20x too slow}) \cite{InternalTestingData2024}
-\item App switching: 300-800ms (\textbf{6-16x too slow}) \cite{InternalTestingData2024}
-\item \textbf{Result}: Creates insurmountable educational disadvantage \cite{EducationalEquityReport2024}
+	\item Keystroke response: 150-400ms (\textbf{6-16x too slow}) \supercite{InternalTestingData2024}
+	\item Navigation: 200-500ms (\textbf{8-20x too slow}) \supercite{InternalTestingData2024}
+	\item App\index{apps} switching: 300-800ms (\textbf{6-16x too slow}) \supercite{InternalTestingData2024}
+	\item \textbf{Result}: Creates insurmountable educational disadvantage \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 
 \subsubsection{16GB Systems - UNACCEPTABLY INADEQUATE:}
 
 \begin{itemize}
-\item Keystroke response: 125-300ms (\textbf{5-12x too slow}) \cite{InternalTestingData2024}
-\item Navigation: 150-350ms (\textbf{6-14x too slow}) \cite{InternalTestingData2024}
-\item App switching: 200-450ms (\textbf{4-9x too slow}) \cite{InternalTestingData2024}
-\item \textbf{Result}: Demonstrates unacceptably long latency that prevents educational equity \cite{EducationalEquityReport2024}
+	\item Keystroke response: 125-300ms (\textbf{5-12x too slow}) \supercite{InternalTestingData2024}
+	\item Navigation: 150-350ms (\textbf{6-14x too slow}) \supercite{InternalTestingData2024}
+	\item App switching: 200-450ms (\textbf{4-9x too slow}) \supercite{InternalTestingData2024}
+	\item \textbf{Result}: Demonstrates unacceptably long latency that prevents educational equity \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 
 \subsubsection{24GB Systems - MINIMUM THRESHOLD:}
 
 \begin{itemize}
-\item Keystroke response: 75-150ms (\textbf{3-6x too slow}) \cite{InternalTestingData2024}
-\item Navigation: 90-200ms (\textbf{3.6-8x too slow}) \cite{InternalTestingData2024}
-\item App switching: 100-200ms (\textbf{2-4x too slow}) \cite{InternalTestingData2024}
-\item \textbf{Result}: Represents minimum viable performance for educational settings \cite{EducationalEquityReport2024}
+	\item Keystroke response: 75-150ms (\textbf{3-6x too slow}) \supercite{InternalTestingData2024}
+	\item Navigation: 90-200ms (\textbf{3.6-8x too slow}) \supercite{InternalTestingData2024}
+	\item App switching: 100-200ms (\textbf{2-4x too slow}) \supercite{InternalTestingData2024}
+	\item \textbf{Result}: Represents minimum viable performance for educational settings \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 
 \subsubsection{32GB+ Systems - APPROACHES EQUITY:}
 
 \begin{itemize}
-\item Keystroke response: 30-75ms (\textbf{1.2-3x slower than ideal}) \cite{InternalTestingData2024}
-\item Navigation: 25-60ms (\textbf{1.2-2.4x slower than ideal}) \cite{InternalTestingData2024}
-\item App switching: 50-120ms (\textbf{1-2.4x slower than ideal}) \cite{InternalTestingData2024}
-\item \textbf{Result}: Minor efficiency loss, approaching true equity \cite{EducationalEquityReport2024}
+	\item Keystroke response: 30-75ms (\textbf{1.2-3x slower than ideal}) \supercite{InternalTestingData2024}
+	\item Navigation: 25-60ms (\textbf{1.2-2.4x slower than ideal}) \supercite{InternalTestingData2024}
+	\item App switching: 50-120ms (\textbf{1-2.4x slower than ideal}) \supercite{InternalTestingData2024}
+	\item \textbf{Result}: Minor efficiency loss, approaching true equity \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 
@@ -292,48 +297,52 @@ To achieve educational equity, systems must consistently deliver:
 
 \subsection{Screenreader Loading Latency}\label{screenreader-loading-latency}
 
-The latency of a screenreader is the time it takes for the software to load and start functioning. Insufficient RAM can cause the screenreader to load slowly, leading to delays in the user's workflow and violating educational equity principles.
+The latency of a screenreader\index{screen reader} is the time it takes for the software\index{software} to load and start functioning. Insufficient RAM can cause the screenreader to load slowly, leading to delays in the user's workflow and violating educational equity\index{educational equity} principles.
 
-Figure~\ref{fig:figure1} shows a boxplot of the latency to load JAWS measured across various student and professional computers. The student laptop generally took >2 minutes for JAWS to load, demonstrating the severe educational impact of inadequate hardware specifications.
+Figure~\ref{fig:figure1} shows a boxplot of the latency\index{latency} to load JAWS measured across various student and professional computers. The student laptop\index{laptop} generally took >2 minutes for JAWS\index{screen reader!JAWS} to load, demonstrating the severe educational impact of inadequate hardware\index{hardware} specifications.
 
 \begin{figure}[htbp]
-\centering
-\tagstructbegin{tag=Figure}
-%\imgalt{Screen reader load times by RAM configuration showing: 8GB RAM averaging 143 seconds, 16GB RAM averaging 64 seconds, 24GB RAM averaging 49 seconds, and 32GB RAM averaging 25 seconds. The plot demonstrates significantly improved performance with higher RAM configurations.}
-\includegraphics[alt={Screen reader load times by RAM configuration showing: 8GB RAM averaging 143 seconds, 16GB RAM averaging 64 seconds, 24GB RAM averaging 49 seconds, and 32GB RAM averaging 25 seconds. The plot demonstrates significantly improved performance with higher RAM configurations.}]{images/ComputerRBDisplaySpecsTVIFig1.png}
-\caption[Latency to Load JAWS]{Plot showing Latency to Load JAWS while Microsoft Word is open across a typical student laptop (Dell Latitude 3190 with 8GB RAM), a high quality student laptop (Dell Precision 3530 with 16GB RAM), a professional laptop (Lenovo ThinkPad E16 with 24GB RAM), and a high power laptop (Microsoft Surface Laptop 3 with 32GB RAM).}\label{fig:figure1}
-\tagstructend
+
+	\tagstructbegin{tag=Figure}
+	%\imgalt{Screen reader\index{screen reader} load times by RAM configuration showing: 8GB RAM averaging 143 seconds, 16GB RAM\index{RAM} averaging 64 seconds, 24GB RAM averaging 49 seconds, and 32GB RAM averaging 25 seconds. The plot demonstrates significantly improved performance with higher RAM configurations.}
+	\includegraphics[alt={Screen reader load times by RAM configuration showing: 8GB RAM averaging 143 seconds, 16GB RAM averaging 64 seconds, 24GB RAM averaging 49 seconds, and 32GB RAM averaging 25 seconds. The plot demonstrates significantly improved performance with higher RAM configurations.}]{images/ComputerRBDisplaySpecsTVIFig1.png}
+	\caption[Latency to Load JAWS]{Plot showing Latency\index{latency} to Load JAWS while Microsoft Word\index{PDF!Microsoft Word} is open across a typical student laptop\index{laptop} (Dell Latitude 3190 with 8GB RAM), a high quality student laptop (Dell Precision 3530 with 16GB RAM), a professional laptop (Lenovo ThinkPad E16 with 24GB RAM), and a high power laptop (Microsoft\index{tablet!Microsoft} Surface Laptop 3 with 32GB RAM).}\label{fig:figure1}
+	\tagstructend
 \end{figure}
 
 \subsection{Screenreader Responsiveness}\label{screenreader-responsiveness}
 
-Measuring the latency of a screenreader to respond to key presses reveals the educational equity crisis. If the laptop has insufficient RAM, the screenreader takes longer to respond to key presses, creating barriers to equal educational access.
+Measuring the latency of a screenreader\index{screen reader} to respond to key presses reveals the educational equity\index{educational equity} crisis. If the laptop\index{laptop} has insufficient RAM, the screenreader\index{screen reader} takes longer to respond to key presses, creating barriers to equal educational access.
 
+%\newpage
+%\begin{landscape}
 \tagpdfsetup{table/header-rows={1}}
-\centering
 \begin{longtblr}[
-caption = {Screenreader responsiveness and load times across hardware configurations},
-label = {tab:chapter1:screenreader-responsiveness},
-note = {This table presents measured load times and response latency for screen readers across a range of student and professional laptop configurations. It demonstrates the impact of hardware limitations on accessibility, showing how increased RAM and better processors reduce latency and improve user experience for students with disabilities.}
-]{
-colspec = {X[l] X[l] X[l]},
-rowhead = 1,
-row{1} = {font=\bfseries},
-hlines,
-stretch = 1.5
-}
-Computer Configuration & Load Time (seconds) & Response Latency (seconds) \\
-Students Laptop \cite{DellLatitude3190} & 143 [93-183] \cite{EquityViolationData} & 38 [27-91] \cite{ScreenreaderLagImpact} \\
-Student/Professional Laptop \cite{DellPrecision3530} & 64 [38-93] \cite{InternalTestingData2024} & 9 [4-15] \cite{InternalTestingData2024} \\
-Professional Laptop \cite{LenovoThinkPadE16} & 49 [26-65] \cite{InternalTestingData2024} & 1 [0.05-2.5] \cite{InternalTestingData2024} \\
-Professional Laptop \cite{MicrosoftSurface3} & 25 [10-32] \cite{InternalTestingData2024} & 0.5 [0.01-1] \cite{ImmediateResponseEquity} \\
-High-Performance Laptop \cite{FrameworkLaptop16} & 15 [8-22] \cite{InternalTestingData2024} & 0.02 [0.01-0.05] \cite{TrueEquityStandard} \\
+		caption = {Screenreader responsiveness and load times across \gls{hardware} configurations},
+		label = {tab:chapter1:screenreader-responsiveness},
+		note = {This table presents measured load times and response latency for \gls{screenreader} across a range of student and professional \gls{laptop} configurations. It demonstrates the impact of hardware limitations on \gls{accessibility}, showing how increased RAM and better processors reduce latency and improve user experience for students with disabilities.}
+	]{
+		colspec = {X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\bfseries},
+		hlines,
+		stretch = 1.5
+	}
+	Computer Configuration                                                  & Load Time (seconds)                            & Response Latency\index{latency} (seconds)        \\
+	Students Laptop \supercite{DellLatitude3190}                            & 143 [93-183] \supercite{EquityViolationData}   & 38 [27-91] \supercite{ScreenreaderLagImpact}     \\
+	Student/Professional Laptop\index{laptop} \supercite{DellPrecision3530} & 64 [38-93] \supercite{InternalTestingData2024} & 9 [4-15] \supercite{InternalTestingData2024}     \\
+	Professional Laptop \supercite{LenovoThinkPadE16}                       & 49 [26-65] \supercite{InternalTestingData2024} & 1 [0.05-2.5] \supercite{InternalTestingData2024} \\
+	Professional Laptop \supercite{MicrosoftSurface3}                       & 25 [10-32] \supercite{InternalTestingData2024} & 0.5 [0.01-1] \supercite{ImmediateResponseEquity} \\
+	High-Performance Laptop \supercite{FrameworkLaptop16}                   & 15 [8-22] \supercite{InternalTestingData2024}  & 0.02 [0.01-0.05] \supercite{TrueEquityStandard}  \\
 \end{longtblr}
+%\end{landscape}
+%\newpage
+
 
 
 \hypertarget{vision-specific-software-requirements}{}\section{Vision Specific Software Requirements}\label{vision-specific-software-requirements}
 
-Students with visual impairments require specialized software to access educational content. The performance of this software is directly impacted by hardware specifications, particularly RAM and processor capabilities.
+Students with visual impairments\index{visual impairment} require specialized software\index{software} to access educational content. The performance of this software is directly impacted by hardware\index{hardware} specifications, particularly RAM and processor capabilities.
 
 \subsection{Hardware Requirements for Assistive Technology Workload}\label{hardware-justification-ai-ram}
 
@@ -342,17 +351,17 @@ Students with visual impairments require specialized software to access educatio
 \subsubsection{Baseline Software Memory Requirements}
 
 \begin{itemize}
-\item \emph{Freedom Scientific JAWS:} Minimum 4--6~GB RAM \cite{FreedomScientificJAWSRequirements}
-\item \emph{Freedom Scientific ZoomText:} 16~GB RAM \cite{FreedomScientificZoomTextRequirements}
-\item \emph{Freedom Scientific Fusion (combined screen reader and magnification):} 16~GB RAM \cite{FreedomScientificFusionRequirements}
-\item \emph{Windows Magnifier:} Approximately 8~GB RAM \cite{MicrosoftWindowsAccessibility}
-\item \emph{Microsoft Office Suite (PPT, Excel, Word concurrently):} \cite{MicrosoftOfficeSystemRequirements}
+	\item \emph{Freedom Scientific JAWS:} Minimum 4--6~GB RAM\index{RAM} \supercite{FreedomScientificJAWSRequirements}
+	\item \emph{Freedom Scientific ZoomText:} 16~GB RAM \supercite{FreedomScientificZoomTextRequirements}
+	\item \emph{Freedom Scientific Fusion (combined screen reader and magnification):} 16~GB RAM \supercite{FreedomScientificFusionRequirements}
+	\item \emph{Windows Magnifier:} Approximately 8~GB RAM \supercite{MicrosoftWindowsAccessibility}
+	\item \emph{Microsoft Office\index{office suite!Microsoft Office} Suite (PPT, Excel, Word concurrently):} \supercite{MicrosoftOfficeSystemRequirements}
 
-\begin{itemize}
-\item PowerPoint: 2--3~GB
-\item Excel: 2--4~GB (especially with large spreadsheets)
-\item Word: 1--2~GB
-\end{itemize}
+	      \begin{itemize}
+		      \item PowerPoint: 2--3~GB
+		      \item Excel: 2--4~GB (especially with large spreadsheets)
+		      \item Word: 1--2~GB
+	      \end{itemize}
 
 \end{itemize}
 
@@ -363,41 +372,41 @@ Students with visual impairments require specialized software to access educatio
 
 \begin{enumerate}
 
-\item \textbf{AI-Optimized Processors}
+	\item \textbf{AI-Optimized Processors}
 
-\begin{itemize}
-\item Latest Intel Core Ultra (Meteor Lake) processors \cite{IntelMeteorLake}
-\item Dedicated Neural Processing Unit (NPU) \cite{IntelNPU}
-\item Integrated AI acceleration capabilities \cite{IntelAIAcceleration}
-\item Improved energy efficiency \cite{IntelPowerEfficiency}
-\item Enhanced performance for AI-driven assistive technologies \cite{AIinAccessibility}
-\end{itemize}
+	      \begin{itemize}
+		      \item Latest Intel Core Ultra (Meteor Lake) processors \supercite{IntelMeteorLake}
+		      \item Dedicated Neural Processing Unit\index{processor!AI processor} (NPU) \supercite{IntelNPU}
+		      \item Integrated \gls{AI} acceleration capabilities \supercite{IntelAIAcceleration}
+		      \item Improved energy efficiency \supercite{IntelPowerEfficiency}
+		      \item Enhanced performance for AI\index{AI}-driven assistive technologies \supercite{AIinAccessibility}
+	      \end{itemize}
 
-\item \textbf{AMD Ryzen AI Processors}
+	\item \textbf{AMD Ryzen AI Processors}
 
-\begin{itemize}
-\item Ryzen AI 300 Series \cite{AMDRyzenAI300}
-\item Dedicated AI processing cores \cite{AMDAIProcessing}
-\item Improved machine learning capabilities \cite{AMDMachineLearning}
-\item Better handling of complex computational tasks \cite{AMDRyzenPerformance}
-\item Enhanced voice recognition and screen reader performance \cite{AIinAccessibility}
-\end{itemize}
+	      \begin{itemize}
+		      \item Ryzen AI 300 Series \supercite{AMDRyzenAI300}
+		      \item Dedicated AI processing cores \supercite{AMDAIProcessing}
+		      \item Improved \gls{machinelearning} capabilities \supercite{AMDMachineLearning}
+		      \item Better handling of complex computational tasks \supercite{AMDRyzenPerformance}
+		      \item Enhanced voice recognition and screen reader\index{screen reader} performance \supercite{AIinAccessibility}
+	      \end{itemize}
 
-\item \textbf{Key Processor Considerations for Assistive Technology}
+	\item \textbf{Key Processor Considerations for Assistive Technology\index{assistive technology}}
 
-\begin{itemize}
-\item Minimum: 12th or 13th Generation Intel Core i5/i7 \cite{IntelCoreRequirements}
-\item Preferred: 14th Generation Intel Core Ultra or AMD Ryzen AI or Qualcomm Snapdragon X (Plus or Elite) \cite{IntelMeteorLake, AMDRyzenAI, QualcommSnapdragonX}
-\item Focus on processors with:
+	      \begin{itemize}
+		      \item Minimum: 12th or 13th Generation Intel Core i5/i7 \supercite{IntelCoreRequirements}
+		      \item Preferred: 14th Generation Intel Core Ultra or AMD Ryzen AI or Qualcomm Snapdragon X (Plus or Elite) \supercite{IntelMeteorLake, AMDRyzenAI, QualcommSnapdragonX}
+		      \item Focus on processors with:
 
-\begin{itemize}
-\item Multiple performance and efficiency cores \cite{IntelHybridArchitecture}
-\item Integrated NPU (Neural Processing Unit) \cite{IntelNPU, AMDAIProcessing}
-\item Advanced thermal and power management \cite{IntelThermalManagement}
-\item Support for hardware-accelerated AI tasks \cite{IntelAIAcceleration, AMDAIAcceleration}
-\end{itemize}
+		            \begin{itemize}
+			            \item Multiple performance and efficiency cores \supercite{IntelHybridArchitecture}
+			            \item Integrated NPU (Neural Processing Unit) \supercite{IntelNPU, AMDAIProcessing}
+			            \item Advanced thermal and power management \supercite{IntelThermalManagement}
+			            \item Support for hardware\index{hardware}-accelerated AI tasks \supercite{IntelAIAcceleration, AMDAIAcceleration}
+		            \end{itemize}
 
-\end{itemize}
+	      \end{itemize}
 
 \end{enumerate}
 
@@ -405,15 +414,15 @@ Students with visual impairments require specialized software to access educatio
 \subsubsection{Significance for Assistive Technology}
 
 \begin{itemize}
-\item AI-enhanced processors provide:
+	\item AI-enhanced processors provide:
 
-\begin{itemize}
-\item Faster text-to-speech conversion \cite{AIinAccessibility}
-\item Improved screen reader responsiveness \cite{AIinAccessibility}
-\item Real-time language processing \cite{AIinAccessibility}
-\item Enhanced voice recognition accuracy \cite{AIinAccessibility}
-\item Reduced computational overhead \cite{AIinAccessibility}
-\end{itemize}
+	      \begin{itemize}
+		      \item Faster text-to-speech\index{text-to-speech} conversion \supercite{AIinAccessibility}
+		      \item Improved screen reader\index{screen reader} responsiveness \supercite{AIinAccessibility}
+		      \item Real-time language processing \supercite{AIinAccessibility}
+		      \item Enhanced voice recognition accuracy \supercite{AIinAccessibility}
+		      \item Reduced computational overhead \supercite{AIinAccessibility}
+	      \end{itemize}
 
 \end{itemize}
 
@@ -421,38 +430,38 @@ Students with visual impairments require specialized software to access educatio
 \subsubsection{RAM Configuration Revisited}
 
 \begin{itemize}
-\item \textbf{24~GB RAM}: Minimum recommended for smooth operation \cite{EducationalEquityReport2024}
-\item \textbf{32~GB RAM}: Ideal configuration for robust performance \cite{EducationalEquityReport2024}
+	\item \textbf{24~GB RAM}: Minimum recommended for smooth operation \supercite{EducationalEquityReport2024}
+	\item \textbf{32~GB RAM}: Ideal configuration for robust\index{accessibility!accessibility principles} performance \supercite{EducationalEquityReport2024}
 
-\begin{itemize}
-\item Provides substantial buffer for AI-driven software \cite{AIinAccessibility}
-\item Ensures responsive user experience \cite{EducationalEquityReport2024}
-\item Supports complex assistive technology algorithms \cite{AIinAccessibility}
+	      \begin{itemize}
+		      \item Provides substantial buffer for AI-driven software\index{software} \supercite{AIinAccessibility}
+		      \item Ensures responsive user experience \supercite{EducationalEquityReport2024}
+		      \item Supports complex assistive technology\index{assistive technology} algorithms \supercite{AIinAccessibility}
+	      \end{itemize}
+
 \end{itemize}
 
-\end{itemize}
 
 
-
-\subsubsection{AI and Accessibility Innovations}
+\subsubsection{AI and Accessibility\index{accessibility} Innovations}
 
 \begin{enumerate}
-\item \textbf{Microsoft Copilot Integration}
+	\item \textbf{Microsoft Copilot Integration}
 
-\begin{itemize}
-\item Processor requirements for smooth Copilot operation \cite{MicrosoftCopilotRequirements}
-\item Background AI assistance demands additional computational resources \cite{MicrosoftCopilotTech}
-\item Improved contextual understanding and support \cite{MicrosoftCopilotFeatures}
-\end{itemize}
+	      \begin{itemize}
+		      \item \gls{processor} requirements for smooth Copilot operation \supercite{MicrosoftCopilotRequirements}
+		      \item Background AI assistance demands additional computational resources \supercite{MicrosoftCopilotTech}
+		      \item Improved contextual understanding and support \supercite{MicrosoftCopilotFeatures}
+	      \end{itemize}
 
-\item \textbf{Advanced Accessibility Features}
+	\item \textbf{Advanced Accessibility Features}
 
-\begin{itemize}
-\item Real-time language translation \cite{GoogleTranslateRealtime}
-\item Contextual screen reader enhancements \cite{AIinAccessibility}
-\item Predictive text and interaction suggestions \cite{PredictiveTextAccessibility}
-\item Requires significant computational power \cite{AIComputationalRequirements}
-\end{itemize}
+	      \begin{itemize}
+		      \item Real-time language translation \supercite{GoogleTranslateRealtime}
+		      \item Contextual screen reader enhancements \supercite{AIinAccessibility}
+		      \item Predictive text and interaction suggestions \supercite{PredictiveTextAccessibility}
+		      \item Requires significant computational power \supercite{AIComputationalRequirements}
+	      \end{itemize}
 
 \end{enumerate}
 
@@ -461,149 +470,155 @@ Students with visual impairments require specialized software to access educatio
 \subsubsection{Processor Selection Criteria}
 
 \begin{itemize}
-\item \textbf{Integrated GPU Considerations}
+	\item \textbf{Integrated GPU Considerations}
 
-\begin{itemize}
-\item Processors without internal GPU units may limit:
+	      \begin{itemize}
+		      \item Processors without internal GPU units may limit:
 
-\begin{itemize}
-\item Graphics-intensive assistive technologies \cite{GPUforAssistiveTech}
-\item Complex visual rendering \cite{GPUforAssistiveTech}
-\item Magnification tool performance \cite{GPUforAssistiveTech}
+		            \begin{itemize}
+			            \item Graphics-intensive assistive technologies \supercite{GPUforAssistiveTech}
+			            \item Complex visual rendering \supercite{GPUforAssistiveTech}
+			            \item Magnification\index{magnification} tool performance \supercite{GPUforAssistiveTech}
+		            \end{itemize}
+
+	      \end{itemize}
+
 \end{itemize}
 
-\end{itemize}
-
-\end{itemize}
-
 \begin{itemize}
-\item \textbf{Recommendation}: Prefer processors with integrated graphics \cite{IntelIntegratedGraphics}
-\item \textbf{Alternative}: Dedicated external GPU for comprehensive visual support \cite{ExternalGPUAssistiveTech}
+	\item \textbf{Recommendation}: Prefer processors with integrated graphics \supercite{IntelIntegratedGraphics}
+	\item \textbf{Alternative}: Dedicated external GPU for comprehensive visual support \supercite{ExternalGPUAssistiveTech}
 \end{itemize}
 
 
 \subsubsection{Cost-Benefit Analysis}
 
 \begin{itemize}
-\item Investment in modern processors provides:
-\begin{itemize}
-\item Future-proofing assistive technology infrastructure \cite{FutureProofingTech}
-\item Enhanced performance and reliability \cite{ModernProcessorBenefits}
-\item Support for emerging AI-driven accessibility tools \cite{AIinAccessibility}
-\item Improved overall user experience \cite{UserExperienceImprovements}
-\end{itemize}
+	\item Investment in modern processors provides:
+	      \begin{itemize}
+		      \item Future-proofing \gls{assistivetechnology} infrastructure \supercite{FutureProofingTech}
+		      \item Enhanced performance and reliability \supercite{ModernProcessorBenefits}
+		      \item Support for emerging AI-driven accessibility\index{accessibility} tools \supercite{AIinAccessibility}
+		      \item Improved overall user experience \supercite{UserExperienceImprovements}
+	      \end{itemize}
 \end{itemize}
 
 
 \subsubsection{Latency: The Critical Barrier in Assistive Technology Performance}
 
-For individuals relying on screen readers and magnification technologies, latency represents more than a technical inconvenience---it's a fundamental barrier to equal access and communication. Even milliseconds of delay can create significant comprehension challenges, transforming digital interaction from a fluid experience to a fragmented, frustrating process. Screen readers and magnification tools must interpret, vocalize, and visually render screen content in real-time, with virtually no perceptible lag. Any delay disrupts cognitive processing, comprehension, and the natural flow of information, effectively creating an unequal technological experience \cite{Fowler2011ScreenReaderLatency, Nielsen1993UsabilityEngineering}. The recommended 14th Generation Intel Core Ultra and AMD Ryzen AI processors directly address this challenge through dedicated Neural Processing Units (NPUs) and advanced multi-core architectures that enable parallel processing. By providing up to 24--32~GB of RAM with high-speed memory channels, these systems create substantial computational headroom, allowing assistive technologies to run simultaneously without resource contention. The integrated AI acceleration cores specifically optimize real-time text-to-speech conversion, screen mapping, and visual rendering, reducing processing overhead and minimizing system latency to near-imperceptible levels. Dedicated efficiency cores handle background assistive technology tasks, while performance cores manage primary user interactions, creating a computational environment that responds so instantaneously that the assistive technology becomes invisible---seamlessly extending the user's perception and interaction with digital content, just as a person without accessibility needs would experience technology \cite{AIinAccessibility, EducationalEquityReport2024}.
+For individuals relying on screen readers and magnification technologies, latency\index{latency} represents more than a technical inconvenience---it's a fundamental barrier to equal access and communication. Even milliseconds of delay can create significant comprehension challenges, transforming digital interaction from a fluid experience to a fragmented, frustrating process. Screen readers\index{screen reader} and magnification tools must interpret, vocalize, and visually render screen content in real-time, with virtually no perceptible lag. Any delay disrupts cognitive processing, comprehension, and the natural flow of information, effectively creating an unequal technological experience \supercite{Fowler2011ScreenReaderLatency, Nielsen1993UsabilityEngineering}. The recommended 14th Generation Intel Core Ultra and AMD Ryzen AI\index{AI} processors directly address this challenge through dedicated Neural Processing Units (NPUs) and advanced multi-core architectures that enable parallel processing. By providing up to 24--32~GB of RAM\index{RAM} with high-speed memory channels, these systems create substantial computational headroom, allowing assistive technologies\index{assistive technology} to run simultaneously without resource contention. The integrated AI acceleration cores specifically optimize real-time text-to-speech\index{text-to-speech} conversion, screen mapping, and visual rendering, reducing processing overhead and minimizing system latency\index{latency} to near-imperceptible levels. Dedicated efficiency cores handle background assistive technology\index{assistive technology} tasks, while performance cores manage primary user interactions, creating a computational environment that responds so instantaneously that the assistive technology becomes invisible---seamlessly extending the user's perception and interaction with digital content, just as a person without accessibility\index{accessibility} needs would experience technology\index{technology} \supercite{AIinAccessibility, EducationalEquityReport2024}.
 
 
 \subsubsection{Educational Technology Infrastructure for Assistive Learning}
 
-For students relying on assistive technologies, the computational infrastructure goes far beyond basic hardware specifications---it represents a critical foundation for educational accessibility and technological empowerment. Modern AI-optimized processors like Intel Core Ultra or AMD Ryzen AI, paired with 24--32~GB of RAM, provide the computational horsepower necessary to run complex assistive technologies such as JAWS, ZoomText, and Fusion simultaneously with productivity software like Microsoft Office. These advanced processors, featuring dedicated Neural Processing Units (NPUs), dramatically enhance the performance of screen readers, voice recognition, and real-time language processing, transforming technical specifications into tangible educational support. The combination of robust RAM and AI-accelerated processors enables seamless multitasking, reduces system latency, and provides students with low vision or other accessibility needs a more responsive, intuitive computing experience that adapts to their unique learning requirements. By investing in high-performance hardware with AI capabilities, educational institutions can create a more inclusive technological ecosystem that empowers students to navigate digital learning environments with greater independence, efficiency, and confidence \cite{EducationalEquityReport2024, AIinAccessibility}.
+For students relying on assistive technologies, the computational infrastructure goes far beyond basic hardware\index{hardware} specifications---it represents a critical foundation for educational accessibility\index{accessibility} and technological empowerment. Modern AI-optimized processors like Intel Core Ultra or AMD Ryzen AI, paired with 24--32~GB of RAM\index{RAM}, provide the computational horsepower necessary to run complex assistive technologies such as JAWS, ZoomText\index{magnification!ZoomText}, and Fusion simultaneously with productivity software\index{software} like Microsoft Office\index{office suite!Microsoft Office}. These advanced processors, featuring dedicated Neural Processing Units (NPUs), dramatically enhance the performance of screen readers\index{screen reader}, voice recognition, and real-time language processing, transforming technical specifications into tangible educational support. The combination of robust\index{accessibility!accessibility principles} RAM and AI\index{AI}-accelerated processors enables seamless multitasking, reduces system latency\index{latency}, and provides students with low vision or other accessibility needs a more responsive, intuitive computing experience that adapts to their unique learning requirements. By investing in high-performance hardware\index{hardware} with AI capabilities, educational institutions can create a more inclusive technological ecosystem that empowers students to navigate digital learning environments with greater independence\index{independence}, efficiency, and confidence \supercite{EducationalEquityReport2024, AIinAccessibility}.
 
 
 \subsection{Student Software Needs}\label{student-software-needs}
 
-Table \ref{tab:student-software-needs} lists software used by students with visual impairments, along with minimum and preferred RAM requirements. This data reveals the inadequacy of current standard configurations.
+Table \ref{tab:student-software-needs} lists software used by students with visual impairments\index{visual impairment}, along with minimum and preferred RAM requirements. This data reveals the inadequacy of current standard configurations.
 
+%\newpage
+%\begin{landscape}
 \tagpdfsetup{table/header-rows={1}}
-\centering
 \begin{longtblr}[
-caption = {Student software needs and recommended hardware specifications},
-label = {tab:student-software-needs},
-note = {This table lists assistive software commonly used by students with visual impairments, along with minimum and preferred RAM and processor requirements. It provides a comprehensive overview of the hardware demands for equitable access to educational technology, emphasizing the inadequacy of standard configurations.}
-]{
-colspec = {X[l] X[l] X[l] X[l] X[l] X[l]},
-rowhead = 1,
-row{1} = {font=\normalfont},
-hlines,
-stretch = 1.5
-}
-Program & Type of Program & Cost & Min RAM & Pref RAM & Processor \\
-JAWS & Screenreader & \$225/yr \cite{APHQuotaFunds} & 8GB \cite{FreedomScientificJAWSRequirements} & \textgreater24GB \cite{EquityAnalysisRevision} & \textgreater11th Gen Intel® Core™ i5+ \cite{FreedomScientificJAWSRequirements} \\
-TypeAbility & Typing Instruction \cite{RequiresJAWSFusion} & \$150 \cite{TypeAbilityPricing} & 8GB \cite{TypeAbilityRequirements} & \textgreater24GB \cite{EquityAnalysisRevision} & \textgreater11th Gen Intel® Core™ i5+ \cite{TypeAbilityRequirements} \\
-Narrator & Screenreader \cite{WindowsBuiltInScreenreader} & \$0 & 4GB \cite{MicrosoftWindowsAccessibility} & \textgreater16GB \cite{MicrosoftWindowsAccessibility} & \textgreater11th Gen Intel® Core™ i5 \cite{MicrosoftWindowsAccessibility} \\
-NVDA & Screenreader \cite{FreePremiumVoices} & \$0 & 2GB \cite{NVDARequirements} & \textgreater16GB \cite{EquityAnalysisRevision} & \textgreater11th Gen Intel® Core™ i5 \cite{NVDARequirements} \\
-ZDSR & Screenreader & \$232 \cite{ZDSRPricing} & 2GB \cite{ZDSRRequirements} & \textgreater16GB \cite{EquityAnalysisRevision} & \textgreater11th Gen Intel® Core™ i7+ \cite{ZDSRRequirements} \\
-Dolphin Screenreader & Screenreader & \$1105/yr \cite{DolphinScreenreaderPricing} & 8GB \cite{DolphinScreenreaderRequirements} & \textgreater32GB \cite{EquityAnalysisRevision} & \textgreater11th Gen Intel® Core™ i7+ \cite{DolphinScreenreaderRequirements} \\
-ZoomText & Magnification \& Speech \cite{PricingChange2024} & \$85/yr \cite{FreedomScientificZoomTextPricing} & 16GB \cite{FreedomScientificZoomTextRequirements} & \textgreater32GB \cite{EquityAnalysisRevision} & \textgreater11th Gen Intel® Core™ i7+ \cite{FreedomScientificZoomTextRequirements} \\
-Windows Magnifier & Magnification \cite{WindowsBuiltInMagnifier} & \$0 & 16GB \cite{MicrosoftWindowsAccessibility} & \textgreater24GB \cite{MicrosoftWindowsAccessibility} & \textgreater11th Gen Intel® Core™ i7+ \cite{MicrosoftWindowsAccessibility} \\
-Dolphin SuperNova & Magnification & \$545/yr \cite{DolphinSuperNovaPricing} & 16GB \cite{DolphinSuperNovaRequirements} & \textgreater32GB \cite{EquityAnalysisRevision} & \textgreater11th Gen Intel® Core™ i7+ \cite{DolphinSuperNovaRequirements} \\
-Dolphin SuperNova + Speech & Magnification \& Speech & \$825/yr \cite{DolphinSuperNovaPricing} & 16GB \cite{DolphinSuperNovaRequirements} & \textgreater32GB \cite{EquityAnalysisRevision} & \textgreater11th Gen Intel® Core™ i7+ \cite{DolphinSuperNovaRequirements} \\
+		caption = {Student software needs and recommended hardware specifications},
+		label = {tab:student-software-needs},
+		note = {This table lists assistive software commonly used by students with visual impairments, along with minimum and preferred RAM\index{RAM} and processor requirements. It provides a comprehensive overview of the hardware demands for equitable access\index{equitable access} to educational technology\index{technology}, emphasizing the inadequacy of standard configurations.}
+	]{
+		colspec = {X[l] X[l] X[l] X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\small},
+		hlines,
+		stretch = 1.5
+	}
+	Program                                                        & Type of Program                                                            & Cost                                                 & Min RAM\index{RAM}                                     & Pref RAM                                                   & Processor                                                                               \\
+	JAWS                                                           & Screenreader\index{screen reader}                                          & \$225/yr \supercite{APHQuotaFunds}                   & 8GB \supercite{FreedomScientificJAWSRequirements}      & \textgreater24GB \supercite{EquityAnalysisRevision}        & \textgreater11th Gen Intel® Core™ i5+ \supercite{FreedomScientificJAWSRequirements}     \\
+	TypeAbility                                                    & Typing Instruction \supercite{RequiresJAWSFusion}                          & \$150 \supercite{TypeAbilityPricing}                 & 8GB \supercite{TypeAbilityRequirements}                & \textgreater24GB \supercite{EquityAnalysisRevision}        & \textgreater11th Gen Intel® Core™ i5+ \supercite{TypeAbilityRequirements}               \\
+	Narrator                                                       & Screenreader\index{screen reader} \supercite{WindowsBuiltInScreenreader}   & \$0                                                  & 4GB \supercite{MicrosoftWindowsAccessibility}          & \textgreater16GB \supercite{MicrosoftWindowsAccessibility} & \textgreater11th Gen Intel® Core™ i5 \supercite{MicrosoftWindowsAccessibility}          \\
+	\gls{nvda}                                                     & Screenreader \supercite{FreePremiumVoices}                                 & \$0                                                  & 2GB \supercite{NVDARequirements}                       & \textgreater16GB \supercite{EquityAnalysisRevision}        & \textgreater11th Gen Intel® Core™ i5 \supercite{NVDARequirements}                       \\
+	ZDSR                                                           & Screenreader                                                               & \$232 \supercite{ZDSRPricing}                        & 2GB \supercite{ZDSRRequirements}                       & \textgreater16GB \supercite{EquityAnalysisRevision}        & \textgreater11th Gen Intel® Core™ i7+ \supercite{ZDSRRequirements}                      \\
+	Dolphin Screenreader\index{screen reader!Dolphin Screenreader} & Screenreader                                                               & \$1105/yr \supercite{DolphinScreenreaderPricing}     & 8GB \supercite{DolphinScreenreaderRequirements}        & \textgreater32GB \supercite{EquityAnalysisRevision}        & \textgreater11th Gen Intel® Core™ i7+ \supercite{DolphinScreenreaderRequirements}       \\
+	ZoomText\index{magnification!ZoomText}                         & Magnification\index{magnification} \& Speech \supercite{PricingChange2024} & \$85/yr \supercite{FreedomScientificZoomTextPricing} & 16GB \supercite{FreedomScientificZoomTextRequirements} & \textgreater32GB \supercite{EquityAnalysisRevision}        & \textgreater11th Gen Intel® Core™ i7+ \supercite{FreedomScientificZoomTextRequirements} \\
+	Windows Magnifier\index{magnification!Windows Magnifier}       & Magnification \supercite{WindowsBuiltInMagnifier}                          & \$0                                                  & 16GB \supercite{MicrosoftWindowsAccessibility}         & \textgreater24GB \supercite{MicrosoftWindowsAccessibility} & \textgreater11th Gen Intel® Core™ i7+ \supercite{MicrosoftWindowsAccessibility}         \\
+	Dolphin SuperNova                                              & Magnification\index{magnification}                                         & \$545/yr \supercite{DolphinSuperNovaPricing}         & 16GB \supercite{DolphinSuperNovaRequirements}          & \textgreater32GB \supercite{EquityAnalysisRevision}        & \textgreater11th Gen Intel® Core™ i7+ \supercite{DolphinSuperNovaRequirements}          \\
+	Dolphin SuperNova + Speech                                     & \gls{magnification} \& Speech                                              & \$825/yr \supercite{DolphinSuperNovaPricing}         & 16GB \supercite{DolphinSuperNovaRequirements}          & \textgreater32GB \supercite{EquityAnalysisRevision}        & \textgreater11th Gen Intel® Core™ i7+ \supercite{DolphinSuperNovaRequirements}          \\
 \end{longtblr}
-\par
+%\end{landscape}
+%\newpage
 
+%\par
 
+\hypertarget{current-educational-technology\index{technology}-inadequacy}{}\section{Current Educational Technology Inadequacy}\label{current-educational-technology-inadequacy}
 
-\hypertarget{current-educational-technology-inadequacy}{}\section{Current Educational Technology Inadequacy}\label{current-educational-technology-inadequacy}
+Analysis of current student and professional laptop\index{laptop} configurations reveals systematic educational equity\index{educational equity} violations:
 
-Analysis of current student and professional laptop configurations reveals systematic educational equity violations:
-
+%\newpage
+%\begin{landscape}
 \tagpdfsetup{table/header-rows={1}}
-\centering
 \begin{longtblr}[
-caption = {Comparison of student and professional laptop configurations for educational equity},
-label = {tab:chapter1:laptop-configurations},
-note = {This table compares the specifications of student and professional laptops, including cost, RAM, screen size, and processor. It illustrates the disparities in hardware provided to students versus professionals and highlights how these differences contribute to educational equity violations for students relying on assistive technology.}
-]{
-colspec = {X[l] X[l] X[l] X[l] X[l] X[l]},
-rowhead = 1,
-row{1} = {font=\normalfont},
-hlines,
-stretch = 1.5
-}
-Device & Cost & Keyboard & RAM & Screen Size & Processor \\
-Dell Latitude 3190 & \$379 \cite{DellLatitude3190Specs} & QWERTY & 4GB \cite{EquityViolationAccessibility} & 11.6" Touchscreen & Intel® Celeron Silver \cite{DellLatitude3190Specs} \\
-Lenovo 500w Gen 3 & \$358 \cite{Lenovo500wGen3Specs} & QWERTY & 4GB \cite{EquityViolationAccessibility} & 11.6" Touchscreen & Intel® Pentium Silver \cite{Lenovo500wGen3Specs} \\
-Dell Precision 3530 & \$1751 \cite{DellPrecision3530Specs} & QWERTY & 16GB \cite{UnacceptableEquityViolation} & 16.0" & 8th Gen Intel® Core™ i7 \cite{DellPrecision3530Specs} \\
-Dell Precision 7420 & \$1349 \cite{DellPrecision7420Specs} & QWERTY & 16GB \cite{UnacceptableEquityViolation} & 16.0" & 8th Gen Intel® Core™ i7 \cite{DellPrecision7420Specs} \\
-Microsoft Surface Laptop 3 & \$1500 \cite{MicrosoftSurface3Specs} & QWERTY & 32GB \cite{ApproachesEquityAcceptable} & 15.0" Touchscreen & AMD® Ryzen™ 7 \cite{MicrosoftSurface3Specs} \\
-Framework Laptop 16 & \$2750 \cite{FrameworkLaptop16Specs} & QWERTY & 64GB \cite{AchievesEquityCompliance} & 16.0" & AMD® Ryzen™ 9 \cite{FrameworkLaptop16Specs} \\
+		caption = {Comparison of student and professional laptop configurations for educational equity},
+		label = {tab:chapter1:laptop-configurations},
+		note = {This table compares the specifications of student and professional laptops, including cost, RAM, screen size, and processor. It illustrates the disparities in hardware provided to students versus professionals and highlights how these differences contribute to educational equity violations for students relying on assistive technology\index{assistive technology}.}
+	]{
+		colspec = {X[l] X[l] X[l] X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\normalfont},
+		hlines,
+		stretch = 1.5
+	}
+	Device                                             & Cost                                      & Keyboard & RAM                                          & Screen Size       & Processor                                                  \\
+	Dell\index{laptop!Dell} Latitude 3190              & \$379 \supercite{DellLatitude3190Specs}   & QWERTY   & 4GB \supercite{EquityViolationAccessibility} & 11.6" Touchscreen & Intel® Celeron Silver \supercite{DellLatitude3190Specs}    \\
+	Lenovo\index{tablet!Lenovo} 500w Gen 3             & \$358 \supercite{Lenovo500wGen3Specs}     & QWERTY   & 4GB \supercite{EquityViolationAccessibility} & 11.6" Touchscreen & Intel® Pentium Silver \supercite{Lenovo500wGen3Specs}      \\
+	Dell Precision 3530                                & \$1751 \supercite{DellPrecision3530Specs} & QWERTY   & 16GB \supercite{UnacceptableEquityViolation} & 16.0"             & 8th Gen Intel® Core™ i7 \supercite{DellPrecision3530Specs} \\
+	Dell Precision 7420                                & \$1349 \supercite{DellPrecision7420Specs} & QWERTY   & 16GB \supercite{UnacceptableEquityViolation} & 16.0"             & 8th Gen Intel® Core™ i7 \supercite{DellPrecision7420Specs} \\
+	Microsoft\index{tablet!Microsoft} Surface Laptop 3 & \$1500 \supercite{MicrosoftSurface3Specs} & QWERTY   & 32GB \supercite{ApproachesEquityAcceptable}  & 15.0" Touchscreen & AMD® Ryzen™ 7 \supercite{MicrosoftSurface3Specs}           \\
+	Framework\index{laptop!Framework} Laptop 16        & \$2750 \supercite{FrameworkLaptop16Specs} & QWERTY   & 64GB \supercite{AchievesEquityCompliance}    & 16.0"             & AMD® Ryzen™ 9 \supercite{FrameworkLaptop16Specs}           \\
 \end{longtblr}
+%\end{landscape}
+%\newpage
 
-\hypertarget{the-educational-equity-crisis}{}\section{The Educational Equity Crisis: A Civil Rights Issue}\label{the-educational-equity-crisis}
 
-The RAM-latency relationship reveals a fundamental civil rights violation in educational technology:
+\hypertarget{the-educational-equity-crisis}{}\section{The Educational Equity\index{educational equity} Crisis: A Civil Rights Issue}\label{the-educational-equity-crisis}
+
+The RAM-latency\index{latency} relationship reveals a fundamental civil rights violation in educational technology\index{technology}:
 
 \subsubsection{Current State of "Accommodation"}
 
 \begin{itemize}
-\item Students with 8GB systems: \textbf{10-20x slower} than necessary for equal access \cite{EducationalEquityReport2024}
-\item Students with 16GB systems: \textbf{6-12x slower} with unacceptably long latency \cite{EducationalEquityReport2024}
-\item Students with 24GB systems: \textbf{3-6x slower}, representing minimum threshold for basic equity \cite{EducationalEquityReport2024}
-\item Only students with 32GB+ systems: Approach true educational equity \cite{EducationalEquityReport2024}
+	\item Students with 8GB systems: \textbf{10-20x slower} than necessary for equal access \supercite{EducationalEquityReport2024}
+	\item Students with 16GB systems: \textbf{6-12x slower} with unacceptably long latency \supercite{EducationalEquityReport2024}
+	\item Students with 24GB systems: \textbf{3-6x slower}, representing minimum threshold for basic equity \supercite{EducationalEquityReport2024}
+	\item Only students with 32GB+ systems: Approach true educational equity\index{educational equity} \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 \subsubsection{The False Economy of "Adequate" Systems}
-Educational institutions providing 8GB or 16GB systems to screen reader users are not providing accommodation—they are creating systematic educational disadvantage that violates principles of equal access \cite{ADA1990, Section504RehabAct}. The unacceptably long latency demonstrated by 16GB systems makes them unsuitable for educational equity \cite{EducationalEquityReport2024}.
+Educational institutions providing 8GB or 16GB systems to screen reader\index{screen reader} users are not providing accommodation—they are creating systematic educational disadvantage that violates principles of equal access \supercite{ADA1990, Section504RehabAct}. The unacceptably long latency\index{latency} demonstrated by 16GB systems makes them unsuitable for educational equity \supercite{EducationalEquityReport2024}.
 
 \subsubsection{True Cost of Inadequate Systems}
 
 \begin{itemize}
-\item Extended time requirements don't compensate for efficiency loss \cite{Fowler2011ScreenReaderLatency}
-\item Increased cognitive load impairs learning outcomes \cite{Sweller1988CognitiveLoadTheory}
-\item Accumulated disadvantage over academic career \cite{Warschauer2003TechnologyAndSocialInclusion}
-\item Reduced preparation for technology-dependent careers \cite{DigitalSkillsGap}
-\item Perpetuation of disability-based educational inequality \cite{ADA1990, Section504RehabAct}
+	\item Extended time requirements don't compensate for efficiency loss \supercite{Fowler2011ScreenReaderLatency}
+	\item Increased cognitive load\index{cognitive load} impairs learning outcomes \supercite{Sweller1988CognitiveLoadTheory}
+	\item Accumulated disadvantage over academic career \supercite{Warschauer2003TechnologyAndSocialInclusion}
+	\item Reduced preparation for technology\index{technology}-dependent careers \supercite{DigitalSkillsGap}
+	\item Perpetuation of disability-based educational inequality \supercite{ADA1990, Section504RehabAct}
 \end{itemize}
 
 
 \subsection{The 16GB Inadequacy Crisis}\label{the-16gb-inadequacy-crisis}
 
-Systems with 16GB RAM, while previously considered adequate, demonstrate unacceptably long latency that violates educational equity principles:
+Systems with 16GB RAM\index{RAM}, while previously considered adequate, demonstrate unacceptably long latency that violates educational equity principles:
 
 \begin{itemize}
-\item \textbf{Persistent Latency}: 125-300ms response times during typical educational tasks \cite{InternalTestingData2024}
-\item \textbf{Performance Degradation}: Memory pressure from modern educational software exceeds 16GB capacity \cite{SoftwareMemoryDemands}
-\item \textbf{Accessibility Violation}: Response times 5-12x slower than equity standard constitute discrimination \cite{ADA1990, Section504RehabAct}
-\item \textbf{Educational Impact}: Students experience measurable disadvantage in all computer-based learning activities \cite{EducationalEquityReport2024}
+	\item \textbf{Persistent Latency}: 125-300ms response times during typical educational tasks \supercite{InternalTestingData2024}
+	\item \textbf{Performance Degradation}: Memory pressure from modern educational software\index{software} exceeds 16GB capacity \supercite{SoftwareMemoryDemands}
+	\item \textbf{Accessibility\index{accessibility} Violation}: Response times 5-12x slower than equity standard constitute discrimination \supercite{ADA1990, Section504RehabAct}
+	\item \textbf{Educational Impact}: Students experience measurable disadvantage in all computer-based learning activities \supercite{EducationalEquityReport2024}
 \end{itemize}
 
 
-The evidence clearly demonstrates that 16GB RAM is insufficient for screen reader users in educational environments, necessitating a minimum recommendation of 24-32GB RAM for basic educational equity \cite{EducationalEquityReport2024}.
+The evidence clearly demonstrates that 16GB RAM\index{RAM} is insufficient for screen reader\index{screen reader} users in educational environments, necessitating a minimum recommendation of 24-32GB RAM for basic educational equity\index{educational equity} \supercite{EducationalEquityReport2024}.
 
 \pagebreak
 
@@ -612,387 +627,31 @@ The evidence clearly demonstrates that 16GB RAM is insufficient for screen reade
 \subsection{Immediate Interventions - Equity-Focused Approach}\label{immediate-interventions-equity-focused-approach}
 
 \begin{enumerate}
-\item \emph{Equity Audit}: Identify all students using systems that fail to meet <25ms response standard \cite{EducationalEquityReport2024}
-\item \emph{Emergency Hardware Replacement}: Immediately upgrade systems with <24GB RAM as accessibility violation \cite{ADA1990, Section504RehabAct}
-\item \emph{16GB System Discontinuation}: Recognize 16GB systems as demonstrating unacceptably long latency for screen reader users \cite{EducationalEquityReport2024}
-\item \emph{Performance Optimization}: Implement aggressive memory management and audio driver optimization \cite{SystemOptimizationGuides}
-\item \emph{Interim Accommodations}: Provide alternative assessment methods while hardware is upgraded \cite{AccommodationsBestPractices}
-\item \emph{Legal Compliance}: Recognize sub-standard systems as potential ADA/Section 504 violations \cite{ADA1990, Section504RehabAct}
+	\item \emph{Equity Audit}: Identify all students using systems that fail to meet <25ms response standard \supercite{EducationalEquityReport2024}
+	\item \emph{Emergency Hardware Replacement}: Immediately upgrade systems with <24GB RAM as accessibility\index{accessibility} violation \supercite{ADA1990, Section504RehabAct}
+	\item \emph{16GB System Discontinuation}: Recognize 16GB systems as demonstrating unacceptably long latency\index{latency} for screen reader users \supercite{EducationalEquityReport2024}
+	\item \emph{Performance Optimization}: Implement aggressive memory management and audio driver optimization \supercite{SystemOptimizationGuides}
+	\item \emph{Interim Accommodations}: Provide alternative assessment methods while hardware\index{hardware} is upgraded \supercite{AccommodationsBestPractices}
+	\item \emph{Legal Compliance\index{accessibility!legal accessibility}}: Recognize sub-standard systems as potential ADA/Section 504 violations \supercite{ADA1990, Section504RehabAct}
 \end{enumerate}
 
 \subsection{Long-term Solutions - Civil Rights Compliance}\label{long-term-solutions-civil-rights-compliance}
 
 \begin{enumerate}
-\item \emph{Minimum Hardware Standards}: Establish 24-32GB RAM as minimum for screen reader accessibility compliance, with 32GB as the preferred standard \cite{EducationalEquityReport2024}
-\item \emph{Equity-Based Budgeting}: Allocate budget based on true cost of educational equity, not minimum functionality \cite{EquityInFundingEducation}
-\item \emph{Technology Equity Audits}: Regular assessment of response times to ensure ongoing compliance \cite{TechnologyAccessibilityAudits}
-\item \emph{Faculty Education}: Train educators on the civil rights implications of inadequate assistive technology \cite{AccessibilityTrainingEducation}
-\item \emph{Procurement Standards}: Mandate equity-compliant hardware (24-32GB minimum) in all accessibility technology purchases \cite{AccessibleProcurementGuidelines}
-\item \emph{Performance Monitoring}: Implement real-time latency monitoring to ensure systems maintain equity standards \cite{SystemPerformanceMonitoring}
+	\item \emph{Minimum Hardware Standards}: Establish 24-32GB RAM as minimum for screen reader accessibility\index{screen reader} compliance, with 32GB as the preferred standard \supercite{EducationalEquityReport2024}
+	\item \emph{Equity-Based Budgeting}: Allocate budget based on true cost of educational equity\index{educational equity}, not minimum functionality \supercite{EquityInFundingEducation}
+	\item \emph{Technology\index{technology} Equity Audits}: Regular assessment of response times to ensure ongoing compliance \supercite{TechnologyAccessibilityAudits}
+	\item \emph{Faculty Education}: Train educators on the civil rights implications of inadequate assistive technology\index{assistive technology} \supercite{AccessibilityTrainingEducation}
+	\item \emph{Procurement Standards}: Mandate equity-compliant hardware (24-32GB minimum) in all accessibility\index{accessibility} technology purchases \supercite{AccessibleProcurementGuidelines}
+	\item \emph{Performance Monitoring}: Implement real-time latency\index{latency} monitoring to ensure systems maintain equity standards \supercite{SystemPerformanceMonitoring}
 \end{enumerate}
 
 \section{Conclusion}\label{chapter1-conclusion}
 
-Screen reader response latency caused by inadequate RAM creates a fundamental violation of educational equity principles. The zero-frustration standard—requiring response times under 25ms to match sighted user experiences—reveals that most current educational technology fails to provide true accessibility \cite{EducationalEquityReport2024, W3C2018WCAG21}.
+Screen reader response latency caused by inadequate RAM creates a fundamental violation of educational equity\index{educational equity} principles. The zero-frustration standard—requiring response times under 25ms to match sighted user experiences—reveals that most current educational technology fails to provide true accessibility\index{accessibility} \supercite{EducationalEquityReport2024, W3C2018WCAG21}.
 
 \subsubsection{The Equity Crisis:}
 
 \begin{itemize}
-\item \textbf{Systems with 8GB RAM create 6-32x slower response times than necessary} \cite{EducationalEquityReport2024}
+	\item \textbf{Systems with 8GB RAM\index{RAM} create 6-32x slower response times than necessary} \supercite{EducationalEquityReport2024}
 \end{itemize}
-
-\begin{thebibliography}{99}
-\bibitem{AccessibilityTrainingEducation}
-Faculty Development Center for Accessibility. "Training Educators on Disability Rights and Technology Accommodations." Training materials, 2024.
-
-\bibitem{AccessibleProcurementGuidelines}
-Federal Acquisition Regulation Council. "Accessible Technology Procurement Guidelines for Educational Institutions." Federal guidelines, 2024.
-
-\bibitem{AccommodationsBestPractices}
-Disability Services Coalition. "Best Practices for Educational Accommodations in Digital Learning Environments." Professional guidelines, 2024.
-
-\bibitem{AchievesEquityCompliance}
-ACHIEVES EQUITY - True accessibility compliance.
-
-\bibitem{ADA1990}
-Americans with Disabilities Act of 1990, Pub. L. No. 101-336, 104 Stat. 327 (1990).
-
-\bibitem{Adams2000ImpactOfTechnology}
-Adams, Dennis M., and Mary E. Hamm. \emph{Media and Literacy: Learning in an Electronic Age}. Charles C Thomas Publisher, 2000.
-
-\bibitem{AIComputationalRequirements}
-AI Computing Requirements Consortium. "Computational Requirements for AI-Enhanced Accessibility." Technical report, 2024.
-
-\bibitem{AIinAccessibility}
-AI in Accessibility Research Consortium. "Artificial Intelligence Applications in Assistive Technology." Research report, 2024.
-
-\bibitem{AMDAIAcceleration}
-AMD. "AMD AI Acceleration Technologies." 2024. \url{https://www.amd.com/en/technologies/ai-acceleration}.
-
-\bibitem{AMDAIProcessing}
-AMD. "AMD AI Processing Technology." 2024. \url{https://www.amd.com/en/technologies/ai}.
-
-\bibitem{AMDMachineLearning}
-AMD. "Machine Learning with AMD Processors." 2024. \url{https://www.amd.com/en/solutions/artificial-intelligence}.
-
-\bibitem{AMD2024RyzenPerformance}
-AMD. "AMD Ryzen Processors." 2024. \url{https://www.amd.com/en/processors/ryzen}. General information on AMD processor capabilities and performance factors.
-
-\bibitem{AMDRyzenAI300}
-AMD. "AMD Ryzen AI 300 Series Processors." 2024. \url{https://www.amd.com/en/products/processors/ryzen-ai}.
-
-\bibitem{AnandTech2023MemoryControllers}
-AnandTech. "The State of Memory Controllers: DDR5 and Beyond." \emph{AnandTech.com}, 2023. \url{https://www.anandtech.com/}. Technological review discussing the efficiency of memory controllers in modern CPUs.
-
-\bibitem{APHQuotaFunds}
-Typically purchased via APH quota funds.
-
-\bibitem{ApproachesEquityAcceptable}
-APPROACHES EQUITY - Acceptable performance.
-
-\bibitem{ASIO4ALL2023Latency}
-ASIO4ALL. "ASIO4ALL Documentation." 2023. \url{http://www.asio4all.org/}. Indicates that generic audio drivers can introduce latency issues.
-
-\bibitem{Attewell2001TheDigitalDivide}
-Attewell, Paul. "The first and second digital divides." \emph{Sociology of Education}, vol. 74, no. 3, 2001, pp. 252--259.
-
-\bibitem{Bigham2014UnderstandingScreenReaderUsage}
-Bigham, Jeffrey P., Sarah Prince, and Richard E. Ladner. "Understanding screen reader usage: a field study." In \emph{Proceedings of the 16th International ACM SIGACCESS Conference on Computers and Accessibility}, ACM, 2014, pp. 217--224. Discusses practical challenges and workflow adjustments users make due to screen reader performance issues, including speech truncation.
-
-\bibitem{Brown2010TheGiftsOfImperfection}
-Brown, Brené. \emph{The Gifts of Imperfection: Let Go of Who You Think You're Supposed to Be and Embrace Who You Are}. Hazelden Publishing, 2010.
-
-\bibitem{Card1983ThePsychologyOfHumanComputerInteraction}
-Card, Stuart K., Thomas P. Moran, and Allen Newell. \emph{The Psychology of Human-Computer Interaction}. Lawrence Erlbaum Associates, 1983. Seminal work on human-computer interaction, including performance models and impact of delays.
-
-\bibitem{Compaine2001TheDigitalDivide}
-Compaine, Benjamin M., editor. \emph{The Digital Divide: Facing a Crisis or Creating a Myth?} MIT Press, 2001.
-
-\bibitem{Craik1972LevelsOfProcessing}
-Craik, Fergus I. M., and Robert S. Lockhart. "Levels of processing: A framework for memory research." \emph{Journal of Verbal Learning and Verbal Behavior}, vol. 11, no. 6, 1972, pp. 671--684.
-
-\bibitem{DellLatitude3190}
-Dell Latitude 3190, 8GB RAM.
-
-\bibitem{DellLatitude3190Specs}
-Dell. "Dell Latitude 3190 Specifications." 2024. \url{https://www.dell.com/en-us/work/shop/laptops/latitude-3190/spd/latitude-11-3190-laptop}.
-
-\bibitem{DellPrecision3530}
-Dell Precision 3530, 16GB RAM.
-
-\bibitem{DellPrecision3530Specs}
-Dell. "Dell Precision 3530 Specifications." 2024. \url{https://www.dell.com/en-us/work/shop/laptops/precision-3530/spd/precision-15-3530-laptop}.
-
-\bibitem{DellPrecision7420Specs}
-Dell. "Dell Precision 7420 Specifications." 2024. \url{https://www.dell.com/en-us/work/shop/laptops/precision-7420/spd/precision-15-7420-laptop}.
-
-\bibitem{DigitalSkillsGap}
-Digital Skills Research Institute. "The Digital Skills Gap in Disability Employment." Research report, 2024.
-
-\bibitem{DiMaggio2001FromUnequalAccess}
-DiMaggio, Paul, Eszter Hargittai, Coral Celeste, and Steven Shafer. "Digital inequality: From unequal access to differentiated use." In Karen Neckerman, editor, \emph{Social Inequality}, Russell Sage Foundation, 2001, pp. 355--400.
-
-\bibitem{Dix2004HumanComputerInteraction}
-Dix, Alan, Janet Finlay, Gregory D. Abowd, and Russell Beale. \emph{Human-Computer Interaction}. 3rd ed., Prentice Hall, 2004. Comprehensive text on HCI, including discussions on system response and user experience.
-
-\bibitem{DolphinScreenreaderPricing}
-Dolphin Computer Access. "Dolphin ScreenReader Pricing." 2024. \url{https://www.dolphincomputeraccess.com/products/screenreader}.
-
-\bibitem{DolphinScreenreaderRequirements}
-Dolphin Computer Access. "Dolphin ScreenReader System Requirements." 2024. \url{https://www.dolphincomputeraccess.com/products/screenreader/requirements}.
-
-\bibitem{DolphinSuperNovaPricing}
-Dolphin Computer Access. "SuperNova Magnifier Pricing." 2024. \url{https://www.dolphincomputeraccess.com/products/supernova}.
-
-\bibitem{DolphinSuperNovaRequirements}
-Dolphin Computer Access. "SuperNova System Requirements." 2024. \url{https://www.dolphincomputeraccess.com/products/supernova/requirements}.
-
-\bibitem{EducationalEquityReport2024}
-Educational Equity Analysis Team. "Hardware-Based Educational Equity Violations in Assistive Technology." Internal report, 2024.
-
-\bibitem{EquityAnalysisRevision}
-Revised based on equity analysis.
-
-\bibitem{EquityInFundingEducation}
-Educational Funding Equity Commission. "Funding Models for Truly Accessible Educational Technology." Policy report, 2024.
-
-\bibitem{EquityViolationAccessibility}
-EQUITY VIOLATION - Inadequate for accessibility.
-
-\bibitem{EquityViolationData}
-These data demonstrate the educational equity violation created by inadequate hardware.
-
-\bibitem{ExternalGPUAssistiveTech}
-External Graphics Solutions Institute. "External GPU Solutions for Assistive Technology Applications." Technical report, 2024.
-
-\bibitem{Eysenck2007AnxietyAndCognition}
-Eysenck, Michael W., Nazanin Derakshan, Rita Santos, and Manuel G. Calvo. "Anxiety and cognitive performance: Attentional control theory." \emph{Emotion}, vol. 7, no. 2, 2007, pp. 336--353.
-
-\bibitem{Fogg2003PersuasiveTechnology}
-Fogg, B. J. \emph{Persuasive Technology: Using Computers to Change What We Think and Do}. Morgan Kaufmann Publishers, 2003.
-
-\bibitem{Fowler2011ScreenReaderLatency}
-Fowler, Susan L., Jacob Barash, and Meredith Ringel Morris. "Screen reader interaction: Latency and cognitive load." In \emph{Proceedings of the SIGCHI Conference on Human Factors in Computing Systems}, ACM, 2011, pp. 155--164. Specific research on screen reader latency and its impact on user efficiency and cognitive load.
-
-\bibitem{FrameworkLaptop16}
-Framework 16.0, 64GB RAM.
-
-\bibitem{FrameworkLaptop16Specs}
-Framework. "Framework Laptop 16 Specifications." 2024. \url{https://frame.work/products/laptop16}.
-
-\bibitem{FreedomScientificFusionRequirements}
-Freedom Scientific. "Fusion Screen Reader and Magnifier System Requirements." 2024. \url{https://www.freedomscientific.com/products/software/fusion/}.
-
-\bibitem{FreePremiumVoices}
-Free, but premium voices cost \$70.
-
-\bibitem{FreedomScientificJAWSRequirements}
-Freedom Scientific. "JAWS Screen Reader System Requirements." 2024. \url{https://www.freedomscientific.com/products/software/jaws/}.
-
-\bibitem{FreedomScientificZoomTextPricing}
-Freedom Scientific. "ZoomText Pricing Information." 2024. \url{https://www.freedomscientific.com/products/software/zoomtext/pricing}.
-
-\bibitem{FreedomScientificZoomTextRequirements}
-Freedom Scientific. "ZoomText Magnifier System Requirements." 2024. \url{https://www.freedomscientific.com/products/software/zoomtext/}.
-
-\bibitem{FutureProofingTech}
-Technology Futures Research Center. "Future-Proofing Educational Technology Infrastructure." Strategic report, 2024.
-
-\bibitem{GoogleTranslateRealtime}
-Google. "Google Translate Real-Time Features." 2024. \url{https://translate.google.com/}.
-
-\bibitem{GPUforAssistiveTech}
-Graphics Processing for Accessibility Alliance. "GPU Requirements for Assistive Technologies." Technical guidelines, 2024.
-
-\bibitem{Grunwald1999AuditoryLatency}
-Grünwald, T., M. Lehmann, H. Kuretzky, C. Kincaid, G. Zouridakis, K. Kümpel, M. Kurthen, and C.E. Elger. "Auditory event-related potentials and temporal integration in speech processing." \emph{Clinical Neurophysiology}, vol. 110, no. 4, 1999, pp. 681--689. Provides insights into the human perception of auditory delays.
-
-\bibitem{ImmediateResponseEquity}
-0.01 represents an immediate response approaching educational equity.
-
-\bibitem{Intel2024ProcessorMemory}
-Intel Corporation. "Intel Processors and Memory." 2024. \url{https://www.intel.com/content/www/us/en/products/processors/core/core-features.html}. General information on how processors interact with memory and the impact on overall system speed.
-
-\bibitem{IntelAIAcceleration}
-Intel Corporation. "AI Acceleration with Intel Processors." 2024. \url{https://www.intel.com/content/www/us/en/artificial-intelligence/overview.html}.
-
-\bibitem{IntelCoreRequirements}
-Intel Corporation. "Intel Core Processor Requirements and Specifications." 2024. \url{https://www.intel.com/content/www/us/en/products/processors/core.html}.
-
-\bibitem{IntelHybridArchitecture}
-Intel Corporation. "Intel Hybrid Architecture Technology." 2024. \url{https://www.intel.com/content/www/us/en/architecture-and-technology/hybrid-architecture.html}.
-
-\bibitem{IntelIntegratedGraphics}
-Intel Corporation. "Intel Integrated Graphics Solutions." 2024. \url{https://www.intel.com/content/www/us/en/architecture-and-technology/visual-technology/graphics-overview.html}.
-
-\bibitem{IntelMeteorLake}
-Intel Corporation. "Intel Core Ultra Processors (Meteor Lake)." 2024. \url{https://www.intel.com/content/www/us/en/products/processors/core-ultra/}.
-
-\bibitem{IntelNPU}
-Intel Corporation. "Intel Neural Processing Unit (NPU) Technology." 2024. \url{https://www.intel.com/content/www/us/en/developer/articles/technical/intel-neural-processing-unit-npu.html}.
-
-\bibitem{IntelPowerEfficiency}
-Intel Corporation. "Intel Processor Power Efficiency Technologies." 2024. \url{https://www.intel.com/content/www/us/en/architecture-and-technology/intel-processor-power-efficiency.html}.
-
-\bibitem{IntelThermalManagement}
-Intel Corporation. "Intel Thermal Management Technologies." 2024. \url{https://www.intel.com/content/www/us/en/architecture-and-technology/thermal-management.html}.
-
-\bibitem{InternalTestingData2024}
-Internal Testing Data. "Screen Reader Performance Analysis Across Hardware Configurations." Unpublished research data, 2024.
-
-\bibitem{Kintsch1998Comprehension}
-Kintsch, Walter. \emph{Comprehension: A Paradigm for Cognition}. Cambridge University Press, 1998.
-
-\bibitem{Kirschner2006WhyMinimalGuidance}
-Kirschner, Paul A., John Sweller, and Richard E. Clark. "Why minimal guidance during instruction does not work: An analysis of the failure of constructivist, discovery, problem-based, experiential, and inquiry-based teaching." \emph{Educational Psychologist}, vol. 41, no. 2, 2006, pp. 75--86.
-
-\bibitem{Lazarus1991EmotionAndAdaptation}
-Lazarus, Richard S. \emph{Emotion and Adaptation}. Oxford University Press, 1991.
-
-\bibitem{Lenovo500wGen3Specs}
-Lenovo. "Lenovo 500w Gen 3 Specifications." 2024. \url{https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkbook/500w-gen-3}.
-
-\bibitem{LenovoThinkPadE16}
-Lenovo ThinkPad E16, 24GB RAM.
-
-\bibitem{LinuxAudioLatency}
-Linux Audio. "Understanding Audio Latency on Linux." 2023. \url{https://linuxaudio.org/resources/latency-basics}. Discusses factors contributing to OS-level audio buffering and delays.
-
-\bibitem{Microsoft2023WindowsPerformance}
-Microsoft. "Tips to improve PC performance in Windows." 2023. \url{https://support.microsoft.com/en-us/windows/tips-to-improve-pc-performance-in-windows-b295f700-1123-28c0-84c4-75892f33c301}. Explains how insufficient RAM can lead to reliance on page files and slower performance.
-
-\bibitem{MicrosoftCopilotFeatures}
-Microsoft. "Microsoft Copilot Features and Capabilities." 2024. \url{https://copilot.microsoft.com/}.
-
-\bibitem{MicrosoftCopilotRequirements}
-Microsoft. "Microsoft Copilot System Requirements." 2024. \url{https://support.microsoft.com/en-us/topic/copilot-system-requirements}.
-
-\bibitem{MicrosoftCopilotTech}
-Microsoft. "Microsoft Copilot Technology Overview." 2024. \url{https://www.microsoft.com/en-us/microsoft-copilot}.
-
-\bibitem{MicrosoftOfficeSystemRequirements}
-Microsoft. "Microsoft Office System Requirements." 2024. \url{https://www.microsoft.com/en-us/microsoft-365/microsoft-365-and-office-resources}.
-
-\bibitem{MicrosoftSurface3}
-Microsoft Surface 3, 32GB RAM.
-
-\bibitem{MicrosoftSurface3Specs}
-Microsoft. "Microsoft Surface Laptop 3 Specifications." 2024. \url{https://www.microsoft.com/en-us/surface/devices/surface-laptop-3}.
-
-\bibitem{MicrosoftWindowsAccessibility}
-Microsoft. "Windows Accessibility Features and Requirements." 2024. \url{https://support.microsoft.com/en-us/accessibility/}.
-
-\bibitem{Miller1968ReactionTime}
-Miller, George A. "Reaction Time: Its Role in Perceptual Processing and Attention." \emph{Psychological Review}, vol. 75, no. 4, 1968, pp. 343--352. Establishes basic human perception of delays.
-
-\bibitem{ModernProcessorBenefits}
-Processor Performance Analysis Group. "Benefits of Modern Processor Architectures for Educational Applications." Technical analysis, 2024.
-
-\bibitem{Nielsen1993UsabilityEngineering}
-Nielsen, Jakob. \emph{Usability Engineering}. Academic Press, 1993. Often cited for critical response time thresholds in user interface design.
-
-\bibitem{NVDARequirements}
-NV Access. "NVDA Screen Reader System Requirements." 2024. \url{https://www.nvaccess.org/download/}.
-
-\bibitem{Parasuraman2008CognitiveWorkload}
-Parasuraman, Raja, Thomas B. Sheridan, and Christopher D. Wickens. "Situation awareness, mental workload, and trust in automation: Viable, empirically supported cognitive engineering constructs." \emph{Journal of Cognitive Engineering and Decision Making}, vol. 2, no. 2, 2008, pp. 140--160.
-
-\bibitem{Pashler1994DualTaskInterference}
-Pashler, Harold. "Dual-task interference in simple tasks: Data and theory." \emph{Psychological Bulletin}, vol. 116, no. 2, 1994, pp. 220--244.
-
-\bibitem{PredictiveTextAccessibility}
-Accessibility Technology Research Group. "Predictive Text Technologies for Assistive Applications." Research report, 2024.
-
-\bibitem{PricingChange2024}
-Pricing changed October 2024.
-
-\bibitem{QualcommSnapdragonX}
-Qualcomm. "Snapdragon X Series Processors." 2024. \url{https://www.qualcomm.com/products/mobile/snapdragon/pcs-and-tablets/snapdragon-x-series}.
-
-\bibitem{Realtek2023AudioDriverPerformance}
-Realtek. "Realtek Audio Drivers and Performance." 2023. \url{https://www.realtek.com/en/}. Implies that driver quality can affect audio output and latency, although not a direct academic source.
-
-\bibitem{RequiresJAWSFusion}
-Requires JAWS or Fusion.
-
-\bibitem{Sapolsky2004WhyZebrasDontGetUlcers}
-Sapolsky, Robert M. \emph{Why Zebras Don't Get Ulcers}. 3rd ed., Henry Holt and Company, 2004.
-
-\bibitem{ScreenreaderLagImpact}
-Any lag in screenreader responsiveness of >1 sec means the student is behind their peers and their educational opportunity is limited by inadequate technology accommodation.
-
-\bibitem{Sears1993TheEffectOfResponseTime}
-Sears, Andrew, Ben Shneiderman, and Catherine Plaisant. "The effect of response time on user performance and satisfaction." \emph{International Journal of Human-Computer Interaction}, vol. 5, no. 3, 1993, pp. 257--272. Directly addresses the impact of response time on user efficiency and frustration.
-
-\bibitem{Section504RehabAct}
-Section 504 of the Rehabilitation Act of 1973, 29 U.S.C. § 794 (1973).
-
-\bibitem{Seligman1975Helplessness}
-Seligman, Martin E. P. \emph{Helplessness: On Depression, Development, and Death}. W. H. Freeman, 1975.
-
-\bibitem{Shneiderman1998DesigningTheUserInterface}
-Shneiderman, Ben. \emph{Designing the User Interface: Strategies for Effective Human-Computer Interaction}. 3rd ed., Addison-Wesley, 1998. Discusses user frustration and interaction flow disruptions due to latency.
-
-\bibitem{Smallwood2011MindWandering}
-Smallwood, Jonathan, and Jonathan W. Schooler. "The science of mind wandering: Empirically navigating the stream of consciousness." \emph{Annual Review of Psychology}, vol. 62, 2011, pp. 487--518.
-
-\bibitem{SoftwareMemoryDemands}
-Software Performance Analysis Group. "Memory Requirements of Modern Educational Software Suites." Technical report, 2024.
-
-\bibitem{Sweller1988CognitiveLoadTheory}
-Sweller, John. "Cognitive load during problem solving: Effects on learning." \emph{Cognitive Science}, vol. 12, no. 2, 1988, pp. 257--285. Introduces cognitive load theory, which is relevant to how delays increase mental effort.
-
-\bibitem{SystemOptimizationGuides}
-System Performance Optimization Team. "Assistive Technology Performance Optimization Guidelines." Technical documentation, 2024.
-
-\bibitem{SystemPerformanceMonitoring}
-IT Performance Monitoring Association. "Real-Time Performance Monitoring for Assistive Technology Systems." Technical standards, 2024.
-
-\bibitem{TechSpot2023RAMTimings}
-TechSpot. "RAM Timings Explained: CAS Latency, CL, and How They Impact Performance." \emph{TechSpot.com}, 2023. \url{https://www.techspot.com/}. Explains how RAM timings like CAS latency affect overall system speed.
-
-\bibitem{TechnologyAccessibilityAudits}
-Accessibility Compliance Institute. "Technology Accessibility Audit Methodologies for Educational Institutions." Professional standards, 2024.
-
-\bibitem{TrueEquityStandard}
-Achieves true educational equity standard.
-
-\bibitem{TypeAbilityPricing}
-TypeAbility. "TypeAbility Software Pricing." 2024. \url{https://www.typeability.com/pricing}.
-
-\bibitem{TypeAbilityRequirements}
-TypeAbility. "TypeAbility System Requirements." 2024. \url{https://www.typeability.com/requirements}.
-
-\bibitem{UnacceptableEquityViolation}
-UNACCEPTABLY INADEQUATE - Violates equity standard.
-
-\bibitem{UserExperienceImprovements}
-User Experience Research Institute. "Hardware Impact on User Experience in Assistive Technology." Research report, 2024.
-
-\bibitem{W3C2018WCAG21}
-W3C. "Web Content Accessibility Guidelines (WCAG) 2.1." 2018. \url{https://www.w3.org/TR/WCAG21/}. Provides guidelines for perceivable, operable, understandable, and robust web content, which implicitly supports responsive interactions.
-
-\bibitem{Warschauer2003TechnologyAndSocialInclusion}
-Warschauer, Mark. \emph{Technology and Social Inclusion: Rethinking the Digital Divide}. MIT Press, 2003.
-
-\bibitem{Wickens2008MultipleResourceTheory}
-Wickens, Christopher D. "Multiple resources and mental workload." \emph{Human Factors}, vol. 50, no. 3, 2008, pp. 449--455.
-
-\bibitem{WindowsBuiltInMagnifier}
-Windows built-in magnifier.
-
-\bibitem{WindowsBuiltInScreenreader}
-Windows built-in screenreader.
-
-\bibitem{WindowsPowerManagement}
-Microsoft. "Power modes in Windows." 2023. \url{https://support.microsoft.com/en-us/windows/power-modes-in-windows-fa42a172-a74f-41ab-9377-27f91873169d}. Explains how power-saving modes can affect system performance and responsiveness.
-
-\bibitem{ZDSRPricing}
-ZoomText Desktop Screen Reader. "ZDSR Pricing Information." 2024. \url{https://www.aisquared.com/products/zdsr}.
-
-\bibitem{ZDSRRequirements}
-ZoomText Desktop Screen Reader. "ZDSR System Requirements." 2024. \url{https://www.aisquared.com/products/zdsr/requirements}.
-
-\bibitem{Zeidner1998TestAnxiety}
-Zeidner, Moshe. \emph{Test Anxiety: The State of the Art}. Plenum Press, 1998.
-\end{thebibliography}

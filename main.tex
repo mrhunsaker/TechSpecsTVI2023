@@ -10,7 +10,6 @@
 \documentclass[11pt,letterpaper,twoside]{report}
 \usepackage[bottom, hang, multiple]{footmisc}
 \usepackage[export]{adjustbox}
-
 \PassOptionsToPackage{hyphens}{url}\usepackage[unicode,colorlinks=true,linkcolor=blue]{hyperref}
 \usepackage{accsupp}
 \usepackage[font=small, labelfont=bf, labelsep=colon, hang, singlelinecheck=off, justification=raggedright]{caption}
@@ -20,12 +19,76 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{tagpdf}
+\usepackage{pdflscape}
 \usepackage{array}
 \usepackage{arydshln}
 \usepackage{enumitem}
 \usepackage{fontspec}
 \usepackage{geometry}
 \usepackage[export]{adjustbox}
+
+
+\usepackage[
+  style=numeric-comp,
+  backend=biber,
+  citetracker=true,
+  pagetracker=true,
+  autocite=footnote,
+  autopunct=true,
+  sortcites=true
+]{biblatex}
+
+\addbibresource{global_bibliography.bib}
+\AtBeginDocument{\raggedright}
+
+% TOC Formatting
+% Add these commands to your preamble (after \usepackage{hyperref})
+% RECOMMENDED: titletoc works better with tagpdf for accessible PDFs
+
+% Load titletoc package for advanced TOC formatting
+\usepackage{titletoc}
+
+% Custom TOC formatting for parts
+\titlecontents{part}%
+[0pt]% left margin
+{\addvspace{2ex}\large\bfseries}% above code
+{\contentslabel[\thecontentslabel]{5em}}% numbered entry format
+{\hspace*{5em}}% numberless entry format
+{\hfill\contentspage}% filler and page format
+[\addvspace{.5ex}]% below code
+
+% Custom TOC formatting for chapters
+\titlecontents{chapter}%
+[0pt]% left margin
+{\addvspace{1ex}\normalsize}% above code
+{\contentslabel[\thecontentslabel]{5em}}% numbered entry format
+{\hspace*{5em}}% numberless entry format
+{\hspace{5em}\titlerule*[.5pc]{.}\contentspage}% filler and page format
+[\addvspace{.2ex}]% below code
+
+% Custom TOC formatting for sections
+\titlecontents{section}%
+[5em]% left margin (indent from chapter level)
+{\normalsize}% above code
+{\contentslabel[\thecontentslabel]{5em}}% numbered entry format
+{\hspace*{5em}}% numberless entry format
+{\hspace{5em}\titlerule*[.5pc]{.}\contentspage}% filler and page format
+
+% Custom TOC formatting for subsections
+\titlecontents{subsection}%
+[10em]% left margin (indent from section level)
+{\normalsize}% above code
+{\contentslabel[\thecontentslabel]{5em}}% numbered entry format
+{\hspace*{5em}}% numberless entry format
+{\hspace{5em}\titlerule*[.5pc]{.}\contentspage}% filler and page format
+
+% Ensure TOC gets proper accessibility tags
+\AddToHook{cmd/tableofcontents/before}{%
+  \tagstructbegin{tag=TOC}%
+}
+\AddToHook{cmd/tableofcontents/after}{%
+  \tagstructend%
+}
 
 % --- Custom font families for Atkinson Hyperlegible Mono and Next ---
 % Usage: \AtkinsonMonoText{your text} or \AtkinsonNextText{your text}
@@ -41,8 +104,6 @@
 ]{AtkinsonHyperlegibleNext}
 \newcommand{\AtkinsonMonoText}[1]{{\AtkinsonMono #1}}
 \newcommand{\AtkinsonNextText}[1]{{\AtkinsonNext #1}}
-
-% --- Font family commands for FontSample compatibility (matching Appendix5) ---
 
 \newfontfamily\atkinsonhyperlegiblefont[
     Path=fontfiles/,
@@ -147,6 +208,7 @@
 \usepackage{pdfpages}
 \usepackage{placeins}
 \usepackage{textcomp}
+\usepackage{makeidx}
 \usepackage{xcolor}
 \usepackage{chngcntr}
 \tagpdfsetup{
@@ -154,7 +216,7 @@
   uncompress,
   interwordspace=true,
   table/tagging=true,
-  table/header-rows=1
+  table/header-rows=1,
 }
 
 % Configure table and structure tagging
@@ -187,12 +249,6 @@
     ItalicFont = *-Italic,
     BoldItalicFont = *-BoldItalic
     ]
-% --- Accessible Font Families from Appendix 5 ---
-% Atkinson Hyperlegible (already set as main font)
-% Atkinson Hyperlegible Mono (already defined as \AtkinsonMono)
-% Atkinson Hyperlegible Next (already defined as \AtkinsonNext)
-% APHont (already set as sans font)
-% JetBrains Mono (already set as mono font)
 
 % Custom commands for sample text blocks
 \newcommand{\FontSample}[1]{%
@@ -210,11 +266,17 @@
 }
 
 \appendixtitletocon
+\makeindex
+\usepackage[acronym,toc]{glossaries}
+\makeglossaries
+\input{glossary_preamble.tex}
 
 \title{\Huge ENHANCING EDUCATIONAL EQUITY \vskip1em \Large A Comprehensive Exploration of Technology Needs for Students with Visual Impairments}
 \author{Michael Ryan Hunsaker, M.Ed., Ph.D.}
 \date{\vfill \emph{Last Updated: {\today}}}
+\raggedbottom
 \begin{document}
+
 \maketitle
 \abstract{
 	In the dynamic landscape of education, technology stands as a powerful enabler, breaking down barriers and creating pathways for inclusivity. Nowhere is this more evident than in the realm of assistive technology designed for visually impaired students. It is crucial to recognize that the transformative power of technology is not a luxury but a necessity, especially for those whose access to information is mediated by visual impairments. Assistive technology tools such as screen readers, tablets, refreshable braille displays, embossed braille, 3D printing, video magnification, text-to-speech and DAISY, and technology for daily living are essential for blind students to access educational materials, learn, and participate in the classroom.
@@ -228,16 +290,16 @@
 \hypersetup{
 	pdfborderstyle={/S/U/W 1},
 	linkbordercolor=magenta,
-    linkcolor=darkgray,
+	linkcolor=darkgray,
 	citecolor=darkgray,
-    citebordercolor=magenta,
+	citebordercolor=magenta,
 	filebordercolor=magenta,
 	urlbordercolor=magenta,
-    urlcolor=darkgray,
-    pdftitle={TechSpecsTVI2023},
-    pdfauthor={Michael Ryan Hunsaker, M.Ed., Ph.D.},
-    pdfkeywords={assistive technology, visually impaired, blind students, braille, tactile graphics, audio description, closed captioning, screen readers, tablets, refreshable braille displays, embossed braille, 3D printing, video magnification software, text-to-speech}
-    }
+	urlcolor=darkgray,
+	pdftitle={TechSpecsTVI2025},
+	pdfauthor={Michael Ryan Hunsaker, M.Ed., Ph.D.},
+	pdfkeywords={assistive technology, visually impaired, blind students, braille, tactile graphics, audio description, closed captioning, screen readers, tablets, refreshable braille displays, embossed braille, 3D printing, video magnification software, text-to-speech}
+}
 \setcounter{tocdepth}{1}
 \pagenumbering{roman}
 \tableofcontents
@@ -245,47 +307,44 @@
 \listoffigures
 \newpage{}
 \interfootnotelinepenalty=10000
-\addcontentsline{toc}{chapter}{Introduction}
-\include{./Chapters/Introduction}
+\include{Chapters/Introduction}
 \pagenumbering{arabic}
 \part{Accessibility Related Hardware Specifications}
-\include{./Chapters/Chapter01}
-\include{./Chapters/Chapter02}
-\include{./Chapters/Chapter03}
-\include{./Chapters/Chapter04}
-\include{./Chapters/Chapter05}
-\include{./Chapters/Chapter06}
+\include{Chapters/Chapter01}
+\include{Chapters/Chapter02}
+\include{Chapters/Chapter03}
+\include{Chapters/Chapter04}
+\include{Chapters/Chapter05}
+\include{Chapters/Chapter06}
+\include{Chapters/Chapter07}
+\include{Chapters/Chapter08}
 \part{Accessibility Related Software Specifications}
-\include{./Chapters/Chapter07}
-\include{./Chapters/Chapter08}
-\include{./Chapters/Chapter09}
-\include{./Chapters/Chapter10}
-\include{./Chapters/Chapter14}
-\include{./Chapters/Chapter23}
-\include{./Chapters/Chapter24}
-\part{Accessible Technology/Software Implementation Guides}
-\include{./Chapters/Chapter11}
-\include{./Chapters/Chapter15}
-\include{./Chapters/Chapter16}
-\include{./Chapters/Chapter17}
-\include{./Chapters/Chapter18}
-\include{./Chapters/Chapter19}
-\include{./Chapters/Chapter21}
-\part{Accessibile Document Creation \& Accessibility Auditing}
-\include{./Chapters/Chapter12}
-\include{./Chapters/Chapter13}
-\include{./Chapters/Chapter20}
-\include{./Chapters/Chapter22}
-\include{./Chapters/Conclusion}
-\addcontentsline{toc}{chapter}{APPENDICES}
-\begin{appendices}
-\include{./Chapters/Appendix00}
-\include{./Chapters/Appendix01}
-\include{./Chapters/Appendix02}
-\include{./Chapters/Appendix03}
-\include{./Chapters/Appendix04}
-\include{./Chapters/Appendix05}
-\include{./Chapters/Appendix06}
-\end{appendices}
-\include{./Chapters/BackMatter}
+\include{Chapters/Appendix00}
+\include{Chapters/Chapter23}
+\include{Chapters/Chapter14}
+\include{Chapters/Chapter10}
+\include{Chapters/Chapter11}
+\include{Chapters/Chapter17}
+\include{Chapters/Chapter19}
+\include{Chapters/Chapter21}
+\include{Chapters/Chapter12}
+\include{Chapters/Chapter13}
+\include{Chapters/Chapter09}
+\part{Accessible Software Implementation}
+\include{Chapters/Chapter24}
+\include{Chapters/Chapter15}
+\include{Chapters/Appendix04}
+\include{Chapters/Appendix06}
+\part{Accessibility Auditing \& Evaluation Tools}
+\include{Chapters/Chapter16}
+\include{Chapters/Chapter18}
+\include{Chapters/Chapter20}
+\include{Chapters/Chapter22}
+\part{Accessibile Technology Troubleshooting}
+\include{Chapters/Appendix01}
+\include{Chapters/Appendix02}
+\include{Chapters/Appendix03}
+\include{Chapters/Appendix05}
+\include{Chapters/Conclusion}
+\include{Chapters/BackMatter}
 \end{document}

@@ -1,0 +1,228 @@
+\chapter{Transformative Tablets: Pioneering Success for Visually Impaired Students Through Innovative Apps}\label{ch2:tablets}
+
+\begin{raggedright}
+	\textbf{Accessibility\index{accessibility} Note:} This chapter provides a comprehensive overview of tablets\index{tablet} and mobile applications for students with visual impairments\index{visual impairment}. The content has been structured for clarity, navigation!navigation, and accessibility, with semantic markup and descriptive context for all tables and lists\index{Markdown!lists}.
+\end{raggedright}
+
+Tablets have emerged as powerful tools\index{sonification!tools} for students with visual impairments, offering a combination of portability, intuitive touch interfaces, and a vast ecosystem of specialized applications \supercite{Day2021}. This chapter explores the transformative potential of tablets in education, providing guidance on selecting the right device and highlighting key apps\index{apps} that support\index{troubleshooting!support} learning, independence\index{independence}, and engagement.
+
+\section{Tablet Considerations}\label{ch2:sec:tablet-considerations}
+
+When selecting a \gls{tablet} for a student with a \gls{visualimpairment}, several factors must be considered beyond the standard technical specifications.
+
+\begin{itemize}
+	\item \textbf{Operating System\index{operating system} (OS):} The choice between Android\index{operating system!Android}, iPadOS, Windows\index{operating system!Windows}, and ChromeOS\index{operating system!ChromeOS} often comes down to the built-in accessibility features and the availability of specific apps. iPadOS is often lauded for its robust\index{accessibility!principles} \index{VoiceOver} screen reader\index{screen reader}, while Android's open nature allows for more customization \supercite{AndroidAccessibility}.
+	\item \textbf{Screen Size and Quality:} A larger, high-resolution screen is generally better for students with low vision. Screen quality, including brightness and color accuracy, can also impact readability.
+	\item \textbf{App Ecosystem:} The availability of educational and assistive apps is a critical factor. The Apple\index{tablet!Apple} App Store and Google\index{tablet!Google} Play Store have vast libraries, but the quality and accessibility\index{accessibility} of apps can vary.
+	\item \textbf{Physical Characteristics:} The weight and durability of the tablet\index{tablet} are important, especially for younger students. A protective case is almost always a necessity.
+	\item \textbf{AI Integration:} Modern tablets now offer enhanced AI-powered accessibility features, including improved object recognition and natural language processing.
+\end{itemize}
+
+\section{Tablet Options}\label{ch2:sec:tablet-options}
+
+The tablet market offers a wide range of options across different operating systems and price points. The following tables provide a comparison of popular models, highlighting key features relevant to students with visual impairments\index{visual impairment}.
+
+\subsubsection{Tables \ref{ch2:tab:android-tablets} through \ref{ch2:tab:chromeOS-tablets}}
+The following tables provide a comparative overview of tablets across different operating systems, focusing on specifications relevant to \gls{accessibility} and educational use.
+
+\subsection{AndroidOS 14+ Tablets}\label{ch2:ssec:android-tablets}
+\newpage
+\begin{landscape}
+	\begin{longtblr}[
+			caption = {Android OS 14+ Tablets},
+			label = {ch2:tab:android-tablets},
+			note = {This table provides a list of Android OS 14+ tablets, their key features, and starting prices. It is intended to help users compare different models based on their specifications and cost.},
+		]{
+			colspec = {X[l] X[l] X[l] X[l]},
+			rowhead = 1,
+			row{1} = {font=\normalfont},
+			hlines,
+		}
+		\toprule
+		Model                                             & Key Features                                                   & Price   & Accessibility Highlights                                                                 \\
+		\midrule
+		Samsung\index{tablet!Samsung} Galaxy Tab S9 Ultra & 14.6" AMOLED, S Pen, DeX Mode                                  & \$1,199 & High-contrast screen, \index{TalkBack}, Live Transcribe \supercite{SamsungAccessibility} \\
+		Google Pixel Tablet                               & 11" LCD, Tensor G2, Hub Mode                                   & \$499   & Clean Android experience, regular updates \supercite{GoogleAccessibility}                \\
+		OnePlus Pad                                       & 11.6" 144Hz LCD, Dimensity 9000                                & \$479   & Fast refresh rate for smooth visuals                                                     \\
+		Amazon Fire Max 11                                & 11" 2K, Wi-Fi 6, Stylus support\index{troubleshooting!support} & \$229   & Affordable, good for media consumption                                                   \\
+		\bottomrule
+	\end{longtblr}
+\end{landscape}
+\newpage
+
+
+\subsection{iPadOS Tablets}\label{ch2:ssec:ipados-tablets}
+\newpage
+\begin{landscape}
+	\begin{longtblr}[
+			caption = {iPadOS Tablets},
+			label = {ch2:tab:ipados-tablets},
+			note = {This table presents a selection of iPadOS tablets, highlighting their specifications and pricing to aid in choosing a suitable device for various needs.},
+		]{
+			colspec = {X[l] X[l] X[l] X[l]},
+			rowhead = 1,
+			row{1} = {font=\normalfont},
+			hlines,
+		}
+		\toprule
+		Model               & Key Features                     & Price   & Accessibility Highlights                                                                                                              \\
+		\midrule
+		iPad Pro (M2)       & 12.9" Liquid Retina XDR, M2 chip & \$1,099 & ProMotion, LiDAR for AR apps\index{apps}, best-in-class performance\index{troubleshooting!performance} \supercite{AppleAccessibility} \\
+		iPad Air (M1)       & 10.9" Liquid Retina, M1 chip     & \$599   & Powerful and portable, supports Magic Keyboard                                                                                        \\
+		iPad (10th Gen)     & 10.9" Liquid Retina, A14 Bionic  & \$449   & Modern design, good all-around performance                                                                                            \\
+		iPad Mini (6th Gen) & 8.3" Liquid Retina, A15 Bionic   & \$499   & Ultra-portable, powerful for its size                                                                                                 \\
+		\bottomrule
+	\end{longtblr}
+\end{landscape}
+\newpage
+
+
+\subsection{Windows OS Tablets}\label{ch2:ssec:windows-tablets}
+\newpage
+\begin{landscape}
+	\begin{longtblr}[
+			caption = {Windows OS Tablets},
+			label = {ch2:tab:windows-tablets},
+			note = {This table showcases various Windows OS tablets, detailing their features and price points to assist in making an informed purchasing decision.},
+		]{
+			colspec = {X[l] X[l] X[l] X[l]},
+			rowhead = 1,
+			row{1} = {font=\normalfont},
+			hlines,
+		}
+		\toprule
+		Model                                           & Key Features                                  & Price   & Accessibility Highlights                                                              \\
+		\midrule
+		Microsoft\index{tablet!Microsoft} Surface Pro 9 & 13" PixelSense, 12th Gen Intel, Thunderbolt 4 & \$999   & Full Windows OS, runs \index{desktop!desktop} apps \supercite{MicrosoftAccessibility} \\
+		Lenovo\index{tablet!Lenovo} Yoga 9i (14")       & 14" OLED, 13th Gen Intel, rotating soundbar   & \$1,399 & High-quality display and audio, versatile form factor                                 \\
+		Dell\index{laptop!Dell} XPS 13 2-in-1           & 13.4" InfinityEdge, 13th Gen Intel            & \$1,099 & Premium build, compact design                                                         \\
+		HP\index{tablet!HP} Spectre Foldable            & 17" Foldable OLED, 12th Gen Intel             & \$4,999 & Innovative foldable design, large screen real estate                                  \\
+		\bottomrule
+	\end{longtblr}
+\end{landscape}
+\newpage
+
+
+\subsection{ChromeOS Tablets}\label{ch2:ssec:chromeos-tablets}
+\newpage
+\begin{landscape}
+	\begin{longtblr}[
+			caption = {ChromeOS Tablets},
+			label = {ch2:tab:chromeOS-tablets},
+			note = {This table lists several ChromeOS tablets, outlining their primary features and costs to facilitate comparison and selection.},
+		]{
+			colspec = {X[l] X[l] X[l] X[l]},
+			rowhead = 1,
+			row{1} = {font=\normalfont},
+			hlines,
+		}
+		\toprule
+		Model                    & Key Features                               & Price & Accessibility\index{accessibility} Highlights                                                               \\
+		\midrule
+		HP Chromebook x2 11      & 11" 2K, Snapdragon 7c, USI stylus          & \$599 & Detachable, good battery life, ChromeVox screen reader\index{screen reader} \supercite{GoogleAccessibility} \\
+		Lenovo Chromebook Duet 5 & 13.3" OLED, Snapdragon 7c Gen 2            & \$499 & Excellent screen for the price, detachable                                                                  \\
+		Asus Chromebook CM3      & 10.5" WUXGA, MediaTek 8183, garaged stylus & \$369 & Compact, versatile with dual-hinge design                                                                   \\
+		Acer Chromebook Spin 714 & 14" WUXGA, 13th Gen Intel, convertible     & \$699 & Powerful performance\index{troubleshooting!performance}, durable build                                      \\
+		\bottomrule
+	\end{longtblr}
+\end{landscape}
+\newpage
+
+
+\section{Mobile Applications}\label{ch2:sec:mobile-apps}
+The true power of tablets for students with visual impairments\index{visual impairment} lies in the vast array of specialized applications. The following sections highlight some of the most impactful apps\index{apps} across various categories.
+
+\subsubsection{Accessibility Training/Auditory Games}\label{ch2:sssec:games}
+\begin{itemize}
+	\item \textbf{Blindfold Games:} A suite of audio games that are fully accessible and help develop auditory skills \supercite{BlindfoldGames}.
+	\item \textbf{A Blind Legend:} An audio-only adventure game where the player navigates using 3D sound \supercite{ABlindLegend}.
+	\item \textbf{Zany Touch:} A collection of simple, accessible games for learning touchscreen gestures\index{instructional materials!gestures}.
+\end{itemize}
+
+\subsection{Cortical Vision Impairment}\label{ch2:ssec:cvi-apps}
+\begin{itemize}
+	\item \textbf{Tap-n-See Now:} An app designed for children with CVI\index{CVI}, presenting simple, high-contrast images on a black background \supercite{TapNSeeNow}.
+	\item \textbf{InfantSee:} A research-based app that uses preferential looking to assess visual development in infants \supercite{InfantSee}.
+	\item \textbf{Various Sensory Apps:} Many apps designed for sensory exploration, with features like high contrast, simple animations, and cause-and-effect interactions, can be beneficial for students with CVI\index{CVI} \supercite{SensoryApps}.
+\end{itemize}
+
+\subsection{Audiobook/Reading}\label{ch2:ssec:reading-apps}
+\begin{itemize}
+	\item \textbf{BARD Mobile:} Provides access to the National Library Service for the Blind and Print Disabled's collection of audiobooks\index{audiobook} and braille\index{braille} books \supercite{BARDMobile}.
+	\item \textbf{Bookshare\index{Bookshare}:} An extensive library of accessible e-books\index{e-books} for people with print disabilities \supercite{Bookshare}.
+	\item \textbf{Audible\index{audiobook!Audible}:} The leading audiobook service, with a massive library of titles \supercite{Audible}.
+	\item \textbf{Voice Dream\index{text-to-speech!Voice Dream} Reader:} A highly customizable reading app that supports a wide range of file formats and text-to-speech\index{text-to-speech} voices \supercite{VoiceDreamReader}.
+\end{itemize}
+
+\subsubsection{Productivity/Schoolwork/Optical Character Recognition}\label{ch2:sssec:ocr-apps}
+\begin{itemize}
+	\item \textbf{Seeing AI\index{apps!Seeing AI}:} A free app from Microsoft\index{tablet!Microsoft} that uses AI\index{AI} to describe the world, including reading text, identifying products, and recognizing people \supercite{SeeingAI}.
+	\item \textbf{Voice Dream Scanner:} A powerful OCR\index{OCR} app that can quickly scan and read printed documents \supercite{VoiceDreamScanner}.
+	\item \textbf{Google\index{tablet!Google} Keep/Evernote:} Note-taking apps that are accessible and support\index{troubleshooting!support} text, audio, and image notes \supercite{GoogleKeep}.
+\end{itemize}
+
+\subsubsection{Orientation \& Mobility / Navigation}
+
+\newpage
+\begin{landscape}
+	\begin{longtblr}[
+			caption = {Mobile apps for orientation, mobility, and navigation for students with visual impairments (Updated 2025)},
+			label = {tab:chapter2:navigation-apps},
+			note = {This table presents mobile apps for orientation, mobility, and navigation, supporting independent travel and spatial awareness for visually impaired students. It includes details on cost, function, and OS compatibility.}
+		]{
+			colspec = {X[l] X[l] X[l] X[l]},
+			rowhead = 1,
+			row{1} = {font=\normalfont},
+			hlines,
+			stretch = 1.5
+		}
+		App              & Cost                                                   & Function                         & OS                        \\
+		Apple Maps       & free                                                   & Turn by Turn Navigation          & iOS/iPadOS                \\
+		Be My Eyes       & free                                                   & Visual assistance via volunteers & iOS/iPadOS, AndroidOS 14+ \\
+		BlindSquare      & \$49.99                                                & GPS Navigation                   & iOS/iPadOS                \\
+		Clew             & free                                                   & Indoor navigation                & iOS/iPadOS, AndroidOS 14+ \\
+		GoodMaps Explore & free                                                   & Indoor/Outdoor navigation        & iOS/iPadOS                \\
+		Google Maps      & free                                                   & Turn by Turn Navigation          & iOS/iPadOS, AndroidOS 14+ \\
+		Lazarillo        & free                                                   & GPS navigation                   & iOS/iPadOS, AndroidOS 14+ \\
+		Moovit           & free\footnote{\raggedright Premium features \$3.99/mo} & Public Transit                   & iOS/iPadOS, AndroidOS 14+ \\
+		Oko              & free                                                   & Smart traffic detection          & iOS/iPadOS, AndroidOS 14+ \\
+		Soundscape       & free                                                   & 3D audio navigation              & iOS/iPadOS, AndroidOS 14+ \\
+		Waymap           & free                                                   & Indoor/Outdoor navigation        & iOS/iPadOS, AndroidOS 14+ \\
+	\end{longtblr}
+\end{landscape}
+\newpage
+
+
+\subsection{Independent Living Skills}
+\newpage
+\begin{landscape}
+	\begin{longtblr}[
+			caption = {Mobile apps for independent living skills for students with visual impairments (Updated 2025)},
+			label = {tab:chapter2:independent-living-apps},
+			note = {This table lists mobile apps that support independent living skills for visually impaired students, including currency identification, magnification, labeling, and AI-powered assistance. It provides information on cost, function, and platform compatibility.}
+		]{
+			colspec = {X[l] X[l] X[l] X[l]},
+			rowhead = 1,
+			row{1} = {font=\normalfont},
+			hlines,
+			stretch = 1.5
+		}
+		App             & Cost                                                                                    & Function                & OS                        \\
+		CashReader      & free\footnote{\raggedright Premium features \$2.99/mo, \$19.99/yr, or \$49.99/lifetime} & Currency identification & iOS/iPadOS, AndroidOS 14+ \\
+		Lookout         & free                                                                                    & AI-powered assistance   & AndroidOS 14+             \\
+		Magnifier       & free                                                                                    & Built-in magnification  & iOS/iPadOS                \\
+		Menus4All       & free\footnote{\raggedright Premium subscription \$3.99/mo or \$39.99/yr}                & Restaurant menus        & iOS/iPadOS                \\
+		PenFriend       & free                                                                                    & Labeling system app     & iOS/iPadOS                \\
+		Supersense      & free\footnote{\raggedright Premium features \$9.99/mo}                                  & AI scene description    & iOS/iPadOS, AndroidOS 14+ \\
+		Voice Assistant & free                                                                                    & Voice control           & iOS/iPadOS, AndroidOS 14+ \\
+	\end{longtblr}
+\end{landscape}
+\newpage
+
+
+
+\section{Conclusion}
+\label{sec:conclusion-tablets}
+The landscape of assistive technology for visually impaired students continues to evolve rapidly, with new applications and enhanced features being released regularly. When selecting tablets and applications for educational use, it is essential to consider the specific needs of each student, the available budget, and the compatibility with existing assistive technologies. Regular updates to both hardware and software ensure that students have access to the most current and effective tools for their educational success.
+
+The integration of artificial intelligence and machine learning in accessibility applications has significantly improved the user experience for visually impaired students. From enhanced object recognition to more accurate optical character recognition, these technological advances continue to break down barriers and provide greater independence in educational settings \supercite{Bigham2014}.

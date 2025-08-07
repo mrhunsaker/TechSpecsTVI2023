@@ -1,0 +1,1008 @@
+{
+  "educational equity": {
+    "terms": ["educational equity"]
+  },
+  "visual impairment": {
+    "terms": ["visual impairment", "visual impairments", "vision impairment"],
+    "see also": "CVI"
+  },
+  "CVI": {
+    "terms": ["CVI", "Cortical Visual Impairment", "Cerebral Visual Impairment"]
+  },
+  "technology": {
+    "terms": ["technology"]
+  },
+  "assistive technology": {
+    "terms": ["assistive technology", "assistive technologies"],
+    "assessment": {
+      "SETT": {},
+      "WATI": {},
+      "QIAT": {}
+    }
+  },
+  "hardware": {
+    "terms": ["hardware"]
+  },
+  "software": {
+    "terms": ["software"],
+    "TIGER": {
+      "terms": ["TIGER", "TIGER Software Suite"]
+    }
+  },
+  "apps": {
+    "terms": ["apps", "app"],
+    "Seeing AI": {},
+    "Voice Dream Scanner": {},
+    "Voice Dream Reader": {},
+    "Goodnotes": {},
+    "Notability": {},
+    "BlindSquare": {},
+    "Lazarillo": {},
+    "GoodMaps": {},
+    "Be My Eyes": {},
+    "Aira": {},
+    "Envision AI": {},
+    "Ballyland": {},
+    "A Blind Legend": {},
+    "Zany Touch": {},
+    "Tap-n-See Now": {},
+    "Little Bear Sees": {},
+    "Cause and Effect Sensory Light Box": {}
+  },
+  "operating system": {
+    "terms": ["operating system", "OS"],
+    "iOS": { "terms": ["iOS"] },
+    "Android": { "terms": ["Android"] },
+    "Windows": { "terms": ["Windows"] },
+    "ChromeOS": { "terms": ["ChromeOS"] }
+  },
+  "accessible materials": {
+    "terms": ["accessible materials"]
+  },
+  "accessible math": {
+    "terms": ["accessible math", "Accessible Math"]
+  },
+  "braille": {
+    "terms": ["braille", "Braille"],
+    "math codes": {
+      "terms": [
+        "braille math codes",
+        "Nemeth Code",
+        "UEB",
+        "Unified English Braille"
+      ]
+    },
+    "math software": {
+      "terms": ["braille math software", "MathType", "Scientific Notebook"]
+    },
+    "transcription software": {
+      "terms": ["braille transcription software", "text-to-braille conversion"],
+      "commercial": {
+        "terms": ["Duxbury Braille Translator", "DBT", "Braille2000"],
+        "Duxbury DBT": {
+          "terms": ["Duxbury DBT", "Duxbury Braille Translator"]
+        },
+        "Braille2000": { "terms": ["Braille2000"] }
+      },
+      "open source": {
+        "terms": [
+          "BrailleBlaster",
+          "BrailleBlaster-NG",
+          "Liblouis",
+          "Sao Mai Braille",
+          "SMB",
+          "Dotify"
+        ],
+        "BrailleBlaster": { "terms": ["BrailleBlaster", "BrailleBlaster-NG"] },
+        "Biblos": { "terms": ["Biblos"] },
+        "Sao Mai Braille": { "terms": ["Sao Mai Braille", "SMB"] },
+        "Dotify": { "terms": ["Dotify"] },
+        "Liblouis": { "terms": ["Liblouis", "liblouis"] }
+      }
+    }
+  },
+  "braille literacy": {
+    "terms": ["braille literacy"]
+  },
+  "BANA": {
+    "terms": ["BANA", "Braille Authority of North America"]
+  },
+  "braille display": {
+    "terms": [
+      "braille display",
+      "braille displays",
+      "refreshable braille display",
+      "refreshable braille displays"
+    ],
+    "14-20 cell": {
+      "terms": ["14-20 cell braille display", "small braille display"]
+    },
+    "32-40 cell": {
+      "terms": ["32-40 cell braille display", "mid-size braille display"]
+    },
+    "multi-line": {
+      "terms": [
+        "multi-line braille display",
+        "multiline braille display",
+        "multi line braille display"
+      ]
+    }
+  },
+  "notetaker": {
+    "terms": ["notetaker", "notetakers"],
+    "braille": { "terms": ["braille notetaker", "braille notetakers"] }
+  },
+  "braille education": {
+    "terms": ["braille education"],
+    "Taptilo": { "terms": ["Taptilo"] },
+    "Polly": { "terms": ["Polly"] },
+    "Code Jumper": { "terms": ["Code Jumper"] },
+    "Braille Buzz": { "terms": ["Braille Buzz"] }
+  },
+  "video magnifier": {
+    "terms": ["video magnifier", "video magnifiers", "CCTV"],
+    "Zoomax": {
+      "terms": ["Zoomax", "Zoomax Snow", "Zoomax Luna", "Zoomax Panda"]
+    },
+    "Irie AT": { "terms": ["Irie AT", "Irie-AT", "Irie Clover"] },
+    "Enhanced Vision": {
+      "terms": [
+        "Enhanced Vision",
+        "Enhanced Vision Amigo",
+        "Enhanced Vision Pebble"
+      ]
+    },
+    "Humanware": {
+      "terms": ["Humanware", "Humanware Explore", "Humanware Prodigi"]
+    },
+    "Freedom Scientific": {
+      "terms": [
+        "Freedom Scientific",
+        "Freedom Scientific Ruby",
+        "Freedom Scientific Onyx"
+      ]
+    },
+    "OrCam": { "terms": ["OrCam", "OrCam MyEye", "OrCam Read"] },
+    "APH": { "terms": ["APH", "American Printing House for the Blind"] },
+    "Orbit Research": { "terms": ["Orbit Research"] },
+    "Trysight": { "terms": ["Trysight"] },
+    "Low Vision International": {
+      "terms": ["Low Vision International", "LVI"]
+    },
+    "Tactonum": { "terms": ["Tactonum"] },
+    "Optelec": { "terms": ["Optelec"] }
+  },
+  "braille embosser": {
+    "terms": [
+      "braille embosser",
+      "braille embossers",
+      "braille printer",
+      "braille printers"
+    ],
+    "APH": { "terms": ["APH", "American Printing House for the Blind"] },
+    "Index Braille": { "terms": ["Index Braille"] },
+    "Irie-AT": { "terms": ["Irie-AT"] },
+    "HumanWare": { "terms": ["HumanWare"] },
+    "ViewPlus": { "terms": ["ViewPlus", "View Plus"] }
+  },
+  "tactile graphics": {
+    "terms": ["tactile graphics", "tactile graphic"],
+    "high resolution": { "terms": ["high-resolution tactile graphics"] },
+    "thermoform": { "terms": ["thermoform", "thermoform machine"] },
+    "capsule paper": {
+      "terms": ["capsule paper", "swell paper", "microcapsule paper"]
+    },
+    "swell paper": { "terms": ["swell paper"] },
+    "production": { "terms": ["tactile graphics production"] },
+    "software": {
+      "commercial": {
+        "terms": ["CorelDRAW", "Adobe Illustrator", "Affinity Designer"]
+      },
+      "open source": { "terms": ["Inkscape", "TactileView"] }
+    },
+    "interactive": { "terms": ["interactive tactile graphics", "APH Graphiti"] }
+  },
+  "tactile graphicacy": {
+    "terms": ["tactile graphicacy"]
+  },
+  "3D printing": {
+    "terms": ["3D printing"],
+    "filament": {
+      "terms": ["filament", "3D printing filament"],
+      "Bambu Labs": { "terms": ["Bambu Labs"] },
+      "Creality": { "terms": ["Creality"] },
+      "ELEGOO": { "terms": ["ELEGOO"] },
+      "eSun": { "terms": ["eSun"] },
+      "Sunlu": { "terms": ["Sunlu"] },
+      "Polymaker": { "terms": ["Polymaker"] },
+      "OVERTURE": { "terms": ["OVERTURE"] },
+      "Polar Filament": { "terms": ["Polar Filament"] },
+      "3D Fuel": { "terms": ["3D Fuel"] },
+      "American Filament": { "terms": ["American Filament"] },
+      "Atomic Filament": { "terms": ["Atomic Filament"] },
+      "Hatchbox": { "terms": ["Hatchbox"] },
+      "MatterHackers": { "terms": ["MatterHackers"] },
+      "Overture 3D": { "terms": ["Overture 3D"] },
+      "ProtoPasta": { "terms": ["ProtoPasta"] },
+      "Push Plastic": { "terms": ["Push Plastic"] },
+      "Printed Solid": { "terms": ["Printed Solid"] },
+      "Filastruder": { "terms": ["Filastruder"] },
+      "Splice 3D": { "terms": ["Splice 3D"] },
+      "ZYLTech": { "terms": ["ZYLTech"] },
+      "Gizmo Dorks": { "terms": ["Gizmo Dorks"] },
+      "IC3D": { "terms": ["IC3D"] },
+      "Keene Village Plastics": { "terms": ["Keene Village Plastics"] },
+      "Numakers": { "terms": ["Numakers"] },
+      "Paramount 3D": { "terms": ["Paramount 3D"] },
+      "VoxelPLA": { "terms": ["VoxelPLA"] },
+      "Toner Plastics": { "terms": ["Toner Plastics"] }
+    },
+    "resources": {
+      "VI specific": { "terms": ["VI-specific 3D printing resources"] },
+      "math": { "terms": ["math 3D printing resources"] },
+      "astronomy": { "terms": ["astronomy 3D printing resources"] },
+      "biology": { "terms": ["biology 3D printing resources"] }
+    },
+    "repositories": {
+      "terms": [
+        "3D printing repositories",
+        "Thingiverse",
+        "Printables",
+        "MyMiniFactory"
+      ]
+    },
+    "search aggregators": {
+      "terms": ["3D printing search aggregators", "Yeggi", "Thangs"]
+    },
+    "AI generation": { "terms": ["AI 3D model generation"] },
+    "professional groups": { "terms": ["3D printing professional groups"] },
+    "VI resources": { "terms": ["3D printing VI resources"] },
+    "software": {
+      "modeling": {
+        "terms": [
+          "3D modeling software",
+          "TinkerCAD",
+          "Fusion 360",
+          "Blender",
+          "OpenSCAD"
+        ]
+      },
+      "slicing": {
+        "terms": ["slicing software", "slicer", "Cura", "PrusaSlicer"]
+      },
+      "repair": { "terms": ["3D model repair software"] }
+    }
+  },
+  "3D printer": {
+    "terms": ["3D printer", "3D printers"],
+    "Bambu Lab": { "terms": ["Bambu Lab", "Bambu Labs"] },
+    "Elegoo": { "terms": ["Elegoo"] },
+    "Creality": { "terms": ["Creality"] },
+    "Anycubic": { "terms": ["Anycubic"] },
+    "AnkerMake": { "terms": ["AnkerMake"] },
+    "Prusa": { "terms": ["Prusa"] },
+    "Artillery": { "terms": ["Artillery"] }
+  },
+  "STEM": {
+    "terms": ["STEM"]
+  },
+  "text-to-speech": {
+    "terms": ["text-to-speech", "TTS"],
+    "C-Pen": { "terms": ["C-Pen"] },
+    "Scanmarker": { "terms": ["Scanmarker"] },
+    "Voice Dream": { "terms": ["Voice Dream"] },
+    "KNFB": { "terms": ["KNFB Reader"] },
+    "Speechify": { "terms": ["Speechify"] }
+  },
+  "OCR": {
+    "terms": [
+      "OCR",
+      "Optical Character Recognition",
+      "OCR technology",
+      "digitization",
+      "image acquisition",
+      "preprocessing",
+      "deskewing",
+      "despeckling",
+      "script recognition",
+      "text detection",
+      "text recognition",
+      "pattern matching",
+      "feature extraction",
+      "post-processing"
+    ],
+    "challenges": {
+      "terms": [
+        "OCR challenges",
+        "multi-column text",
+        "table layouts",
+        "handwriting recognition"
+      ]
+    },
+    "math": { "terms": ["OCR for math and science", "math OCR"] },
+    "AI": { "terms": ["AI-leveraged OCR"] },
+    "workflows": { "terms": ["accessible OCR workflows"] },
+    "commercial": {
+      "terms": ["ABBYY FineReader", "Kofax OmniPage", "Readiris"]
+    },
+    "open-source": { "terms": ["Tesseract", "GOCR", "CuneiForm"] }
+  },
+  "DAISY": {
+    "terms": ["DAISY", "Digital Accessible Information System"],
+    "reader": {
+      "terms": ["DAISY reader", "DAISY players"],
+      "Bones": { "terms": ["Bones"] },
+      "Orbit Research": { "terms": ["Orbit Research"] },
+      "PlexTalk": { "terms": ["PlexTalk"] },
+      "Reizen": { "terms": ["Reizen"] },
+      "Humanware": { "terms": ["Humanware"] }
+    },
+    "music": { "terms": ["DAISY music"] }
+  },
+  "NIMAS": {
+    "terms": [
+      "NIMAS",
+      "National Instructional Materials Accessibility Standard"
+    ]
+  },
+  "NIMAC": {
+    "terms": ["NIMAC", "National Instructional Materials Access Center"]
+  },
+  "audiobook": {
+    "terms": ["audiobook", "audiobooks"],
+    "BARD": { "terms": ["BARD"] },
+    "Bookshare": { "terms": ["Bookshare"] },
+    "Audible": { "terms": ["Audible"] },
+    "Libby": { "terms": ["Libby"] }
+  },
+  "e-books": {
+    "accessible": { "terms": ["accessible e-books"] }
+  },
+  "file formats": {
+    "SVG": { "terms": ["SVG", "Scalable Vector Graphics", "svg"] }
+  },
+  "fonts": {
+    "terms": ["fonts"],
+    "accessible": {
+      "terms": ["accessible fonts"],
+      "Atkinson Hyperlegible": {},
+      "APHont": {},
+      "Comic Sans MS": {},
+      "JetBrains Mono": {},
+      "OpenDyslexic": {},
+      "Tiresias": {},
+      "Verdana": {},
+      "Arial": {},
+      "Calibri": {},
+      "Century Gothic": {}
+    }
+  },
+  "typography": {
+    "terms": ["typography"]
+  },
+  "GPS": {
+    "terms": ["GPS", "Global Positioning System"],
+    "hardware": { "terms": ["GPS hardware"] },
+    "software": { "terms": ["GPS software"] },
+    "AI-powered": { "terms": ["AI-powered GPS"] },
+    "company": {
+      "American Printing House": { "terms": ["American Printing House"] },
+      "Audiom": { "terms": ["Audiom"] },
+      "Envision": { "terms": ["Envision"] },
+      "Glidance": { "terms": ["Glidance"] },
+      "Humanware": { "terms": ["Humanware"] },
+      "Lazarillo": { "terms": ["Lazarillo"] },
+      "MIPsoft": { "terms": ["MIPsoft"] },
+      "Microsoft": { "terms": ["Microsoft"] },
+      "OKO": { "terms": ["OKO"] },
+      "Swiss Federation of the Blind": {
+        "terms": ["Swiss Federation of the Blind"]
+      },
+      "WearWorks": { "terms": ["WearWorks"] }
+    }
+  },
+  "auditory feedback": {
+    "terms": ["auditory feedback"]
+  },
+  "SETT framework": {
+    "terms": ["SETT framework"]
+  },
+  "digital literacy": {
+    "terms": ["digital literacy"]
+  },
+  "independence": {
+    "terms": ["independence"]
+  },
+  "independent living skills": {
+    "terms": ["independent living skills"]
+  },
+  "orientation & mobility": {
+    "terms": ["orientation and mobility", "O&M"]
+  },
+  "daily living aids": {
+    "terms": ["daily living aids"],
+    "medical": { "terms": ["medical daily living aids"] },
+    "kitchen": { "terms": ["kitchen daily living aids"] },
+    "general": { "terms": ["general daily living aids"] },
+    "labeling": { "terms": ["labeling aids"] },
+    "measurement": { "terms": ["measurement aids"] }
+  },
+  "haptic feedback": {
+    "terms": ["haptic feedback"],
+    "data exploration": { "terms": ["haptic feedback for data exploration"] }
+  },
+  "indoor navigation": {
+    "terms": ["indoor navigation"]
+  },
+  "screen reader": {
+    "terms": [
+      "screen reader",
+      "screen readers",
+      "Screen reader",
+      "Screen readers",
+      "Screenreader",
+      "screenreader",
+      "Screen reader accessibility"
+    ],
+    "JAWS": {
+      "terms": ["JAWS", "Job Access With Speech", "Freedom Scientific JAWS"]
+    },
+    "NVDA": { "terms": ["NVDA", "NonVisual Desktop Access"] },
+    "Narrator": { "terms": ["Narrator", "Windows Narrator"] },
+    "VoiceOver": { "terms": ["VoiceOver"] },
+    "TalkBack": { "terms": ["TalkBack"] },
+    "ChromeVox": { "terms": ["ChromeVox"] },
+    "Dolphin": {
+      "terms": [
+        "Dolphin Screenreader",
+        "Dolphin Supernova",
+        "Dolphin SuperNova"
+      ]
+    },
+    "ZDSR": { "terms": ["ZDSR"] },
+    "architecture": {
+      "terms": [
+        "screen reader architecture",
+        "off-screen model",
+        "OSM",
+        "virtual buffer",
+        "data processing pipelines",
+        "rendering logic"
+      ]
+    },
+    "input": { "terms": ["user input", "keyboard hooks"] },
+    "output": {
+      "terms": [
+        "screen reader output",
+        "speech synthesis",
+        "braille display output",
+        "auditory cues"
+      ]
+    },
+    "navigation": { "terms": ["screen reader navigation commands"] },
+    "demographics": { "terms": ["screen reader user demographics"] },
+    "proficiency": { "terms": ["screen reader proficiency"] },
+    "satisfaction": { "terms": ["screen reader satisfaction"] },
+    "usage": {
+      "terms": [
+        "primary screen reader",
+        "commonly used screen readers",
+        "mobile screen readers"
+      ]
+    },
+    "browser": {
+      "terms": ["browser usage", "screen reader browser combinations"]
+    }
+  },
+  "latency": {
+    "terms": ["latency"]
+  },
+  "LaTeX": {
+    "terms": ["LaTeX"],
+    "math": { "terms": ["LaTeX math"] }
+  },
+  "RAM": {
+    "terms": ["RAM", "Random Access Memory"]
+  },
+  "CPU": {
+    "terms": ["CPU", "Central Processing Unit"]
+  },
+  "magnification": {
+    "terms": ["magnification"],
+    "Zoom": { "terms": ["Zoom"] },
+    "ZoomText": { "terms": ["ZoomText"] },
+    "Windows": { "terms": ["Windows Magnifier"] },
+    "SuperNova": { "terms": ["SuperNova"] },
+    "Fusion": { "terms": ["Fusion"] }
+  },
+  "cognitive load": {
+    "terms": ["cognitive load"]
+  },
+  "digital divide": {
+    "terms": ["digital divide"]
+  },
+  "processor": {
+    "AI": { "terms": ["AI processor", "NPU", "Neural Processing Unit"] }
+  },
+  "AI": {
+    "terms": ["AI", "Artificial Intelligence"],
+    "daily living": { "terms": ["AI for daily living"] },
+    "ethics": { "terms": ["AI ethics"] },
+    "accessibility": {
+      "terms": [
+        "AI and accessibility",
+        "Artificial Intelligence and Accessibility",
+        "AI-Powered Accessibility Tools",
+        "Machine Learning-Based Testing",
+        "Natural Language Processing for Content Analysis",
+        "artificial intelligence and automation",
+        "emerging technologies and accessibility"
+      ]
+    }
+  },
+  "laptop": {
+    "terms": ["laptop"],
+    "Dell": { "terms": ["Dell"] },
+    "Lenovo": { "terms": ["Lenovo"] },
+    "Microsoft": { "terms": ["Microsoft"] },
+    "Framework": { "terms": ["Framework"] }
+  },
+  "tablet": {
+    "terms": ["tablet", "tablets"],
+    "Samsung": { "terms": ["Samsung"] },
+    "Google": { "terms": ["Google"] },
+    "Lenovo": { "terms": ["Lenovo"] },
+    "Apple": { "terms": ["Apple"] },
+    "Microsoft": { "terms": ["Microsoft"] },
+    "HP": { "terms": ["HP"] },
+    "Acer": { "terms": ["Acer"] }
+  },
+  "data visualization": {
+    "accessible": { "terms": ["accessible data visualization"] }
+  },
+  "equitable access": {
+    "terms": ["equitable access"]
+  },
+  "graphing calculator": {
+    "accessible": { "terms": ["accessible graphing calculator", "Desmos"] }
+  },
+  "infographics": {
+    "accessible": { "terms": ["accessible infographics"] }
+  },
+  "interactive graphing environments": {
+    "terms": ["interactive graphing environments"]
+  },
+  "image accessibility generator": {
+    "terms": ["image accessibility generator"]
+  },
+  "LLM": {
+    "terms": ["LLM", "Large Language Model"],
+    "local": {
+      "terms": ["local LLM"],
+      "frameworks": { "terms": ["local LLM frameworks"] },
+      "frontends": { "terms": ["local LLM frontends"] },
+      "technology": { "terms": ["local LLM technology"] }
+    }
+  },
+  "NLG": {
+    "terms": ["NLG", "Natural Language Generation"],
+    "data interpretation": { "terms": ["NLG for data interpretation"] }
+  },
+  "math OCR": {
+    "terms": ["math OCR"],
+    "software": { "terms": ["math OCR software"] }
+  },
+  "MathML": {
+    "terms": ["MathML"]
+  },
+  "math tools": {
+    "commercial": { "terms": ["commercial math tools"] },
+    "open source": { "terms": ["open source math tools"] }
+  },
+  "open source": {
+    "terms": ["open source"],
+    "data visualization": { "terms": ["open source data visualization"] }
+  },
+  "safety": {
+    "terms": ["safety"]
+  },
+  "situational awareness": {
+    "terms": ["situational awareness"]
+  },
+  "sonification": {
+    "terms": ["sonification"],
+    "tools": { "terms": ["sonification tools"] }
+  },
+  "music braille": {
+    "terms": ["music braille"],
+    "accessibility": { "terms": ["music braille accessibility"] },
+    "fundamentals": { "terms": ["music braille fundamentals"] },
+    "pipeline": {
+      "terms": ["music braille pipeline"],
+      "input": { "terms": ["music braille input"] },
+      "output": { "terms": ["music braille output"] }
+    },
+    "software": {
+      "commercial": { "terms": ["commercial music braille software"] },
+      "open source": { "terms": ["open source music braille software"] },
+      "translation engines": { "terms": ["music braille translation engines"] }
+    }
+  },
+  "MusicXML": {
+    "terms": ["MusicXML"]
+  },
+  "OMR": {
+    "terms": ["OMR", "Optical Music Recognition"],
+    "deep learning": { "terms": ["deep learning OMR"] },
+    "software": { "terms": ["OMR software"] }
+  },
+  "BMML": {
+    "terms": ["BMML", "Braille Music Markup Language"]
+  },
+  "WCAG": {
+    "terms": [
+      "WCAG",
+      "Web Content Accessibility Guidelines",
+      "WCAG 2.1",
+      "WCAG 2.0",
+      "WCAG 3.0",
+      "WCAG 3"
+    ],
+    "3.0": { "terms": ["WCAG 3.0"] }
+  },
+  "accessibility": {
+    "terms": ["accessibility"],
+    "office documents": {
+      "terms": ["office document accessibility", "accessible office documents"]
+    },
+    "principles": {
+      "terms": [
+        "accessibility principles",
+        "core accessibility principles",
+        "Perceivable",
+        "Operable",
+        "Understandable",
+        "Robust"
+      ]
+    },
+    "testing": {
+      "terms": [
+        "accessibility testing",
+        "Accessibility Checker",
+        "Accessibility Checkers",
+        "accessibility audit",
+        "Accessibility Auditing",
+        "accessibility check",
+        "PDF accessibility auditing"
+      ],
+      "automated": {
+        "terms": [
+          "Automated Testing",
+          "automated testing",
+          "browser extension accessibility testers",
+          "comprehensive scanning platforms",
+          "open source testing tools"
+        ]
+      },
+      "manual": {
+        "terms": [
+          "Manual Testing",
+          "manual testing",
+          "Keyboard Navigation Testing",
+          "Screen Reader Testing",
+          "Color and Contrast Testing",
+          "color contrast",
+          "automation drivers"
+        ]
+      },
+      "user": { "terms": ["User Testing", "user testing"] },
+      "tools": {
+        "terms": ["external accessibility audit tools"],
+        "commercial": {
+          "terms": ["TPGi ARC", "axe DevTools", "Level Access Platform"]
+        },
+        "open-source": {
+          "terms": ["NVDA", "JAWS Inspect", "axe-core", "Axe-Core", "Axe-core"]
+        }
+      }
+    },
+    "remediation": {
+      "terms": [
+        "remediation strategies",
+        "remediation",
+        "Automated Remediation Tools",
+        "prioritizing accessibility issues",
+        "technical remediation",
+        "content remediation",
+        "design remediation",
+        "layout and formatting remediation"
+      ]
+    },
+    "governance": {
+      "terms": [
+        "Policy Development",
+        "Governance",
+        "Stakeholder Education",
+        "policy development and governance",
+        "stakeholder education and training"
+      ]
+    },
+    "QA": {
+      "terms": [
+        "Quality Assurance",
+        "QA",
+        "Continuous Integration",
+        "Continuous Deployment",
+        "CI/CD",
+        "continuous monitoring",
+        "accessibility testing protocols",
+        "performance monitoring and analytics"
+      ]
+    },
+    "legal": {
+      "terms": [
+        "legal accessibility",
+        "compliance",
+        "Section 508",
+        "Americans with Disabilities Act",
+        "ADA",
+        "regulatory evolution"
+      ]
+    },
+    "standards": {
+      "ARIA": { "terms": ["ARIA", "Accessible Rich Internet Applications"] }
+    },
+    "failures": {
+      "terms": [
+        "common accessibility failures",
+        "screen reader accessibility failures"
+      ],
+      "headings": { "terms": ["missing or incorrect headings"] },
+      "alt text": { "terms": ["missing or low-quality alternative text"] },
+      "tables": { "terms": ["inaccessible tables"] },
+      "reading order": {
+        "terms": ["improper reading order", "improper tab order"]
+      },
+      "color contrast": { "terms": ["insufficient color contrast"] },
+      "lists": { "terms": ["improperly formatted lists"] }
+    },
+    "API": {
+      "terms": ["accessibility API", "accessibility APIs"],
+      "MSAA": { "terms": ["MSAA", "Microsoft Active Accessibility"] },
+      "UIA": { "terms": ["UIA", "UI Automation"] },
+      "IAccessible2": { "terms": ["IAccessible2"] },
+      "Java Access Bridge": { "terms": ["Java Access Bridge"] }
+    },
+    "screen flicker": { "terms": ["screen flicker"] },
+    "timed responses": { "terms": ["timed responses"] },
+    "links": { "terms": ["accessible links", "non-descriptive links"] }
+  },
+  "office suite": {
+    "Microsoft": {
+      "terms": [
+        "Microsoft Office",
+        "Microsoft Word",
+        "Microsoft Excel",
+        "Microsoft PowerPoint"
+      ]
+    },
+    "Google": {
+      "terms": [
+        "Google Workspace",
+        "Google Docs",
+        "Google Sheets",
+        "Google Slides"
+      ]
+    },
+    "LibreOffice": {
+      "terms": [
+        "LibreOffice",
+        "LibreOffice Writer",
+        "LibreOffice Calc",
+        "LibreOffice Impress"
+      ]
+    }
+  },
+  "document structure": {
+    "terms": [
+      "document structure",
+      "Headings",
+      "Lists",
+      "Page Layout",
+      "Table of Contents",
+      "Bookmarks",
+      "Cross-References"
+    ]
+  },
+  "text formatting": {
+    "terms": ["text formatting"]
+  },
+  "images and media": {
+    "alt text": {
+      "terms": [
+        "alternative text",
+        "alt text",
+        "nested alternate text",
+        "descriptive text",
+        "image description"
+      ]
+    }
+  },
+  "tables": {
+    "accessible": { "terms": ["accessible tables"] }
+  },
+  "formulas": {
+    "accessible": { "terms": ["accessible formulas"] }
+  },
+  "charts": {
+    "accessible": { "terms": ["accessible charts"] }
+  },
+  "presentations": {
+    "accessible": {
+      "terms": [
+        "accessible presentations",
+        "Slide Layouts",
+        "Reading Order",
+        "Speaker Notes"
+      ]
+    }
+  },
+  "PDF": {
+    "terms": ["PDF", "Portable Document Format"],
+    "UA": {
+      "terms": ["PDF/UA", "Universal Access", "ISO 14289", "ISO 14289-1"]
+    },
+    "accessibility": {
+      "terms": ["PDF accessibility", "scanned/archived PDFs"],
+      "Acrobat": { "terms": ["Adobe Acrobat", "Acrobat", "Acrobat Pro"] },
+      "report": { "terms": ["accessibility report"] },
+      "reading order": {
+        "terms": ["reading order", "logical reading order", "Fix reading order"]
+      },
+      "tagged": {
+        "terms": [
+          "tagged PDF",
+          "tagged content",
+          "tagged annotations",
+          "tagged multimedia",
+          "PDF tagging",
+          "fully tagged PDFs",
+          "manual tagging"
+        ]
+      },
+      "language": { "terms": ["document language"] },
+      "tab order": { "terms": ["tab order"] },
+      "character encoding": { "terms": ["character encoding"] },
+      "scripts": { "terms": ["scripts"] },
+      "remediation": {
+        "terms": ["PDF remediation", "remediating accessibility audit failures"]
+      },
+      "tools": {
+        "terms": ["PDF accessibility tools"],
+        "non-Adobe": { "terms": ["non-Adobe tools"] },
+        "desktop": { "terms": ["desktop applications"] },
+        "online": { "terms": ["online tools"] }
+      }
+    },
+    "forms": {
+      "tagged": { "terms": ["tagged form fields"] },
+      "descriptions": { "terms": ["field descriptions"] }
+    },
+    "source documents": {
+      "terms": ["source documents"],
+      "LaTeX": {
+        "terms": ["generating tagged PDFs with LaTeX", "accessible LaTeX PDFs"]
+      },
+      "Word": { "terms": ["Microsoft Word"] },
+      "InDesign": { "terms": ["Adobe InDesign"] }
+    },
+    "remediation": {
+      "forms": { "terms": ["forms remediation"] },
+      "tables": { "terms": ["table remediation"] },
+      "lists": { "terms": ["list remediation"] },
+      "color contrast": { "terms": ["low color contrast"] }
+    }
+  },
+  "digital accessibility": {
+    "terms": ["digital accessibility"]
+  },
+  "Markdown": {
+    "terms": ["Markdown"],
+    "accessible": { "terms": ["accessible Markdown"] },
+    "HTML": { "terms": ["semantic HTML", "semantic HTML markup"] },
+    "formatting": {
+      "terms": ["Markdown formatting"],
+      "headings": { "terms": ["headings"] },
+      "emphasis": {
+        "terms": ["text emphasis", "bold", "italic", "strikethrough"]
+      },
+      "lists": { "terms": ["lists", "ordered lists", "unordered lists"] },
+      "blockquotes": { "terms": ["blockquotes"] },
+      "rules": { "terms": ["horizontal rules"] }
+    },
+    "tables": {
+      "terms": ["Markdown tables"],
+      "accessible": {
+        "terms": ["accessible tables", "table headers", "table captions"]
+      }
+    },
+    "note-taking": { "terms": ["note-taking", "accessible note-taking"] },
+    "editors": { "terms": ["accessible Markdown editors"] },
+    "conversion": {
+      "terms": ["Markdown conversion"],
+      "braille": { "terms": ["Markdown to Braille", "braille conversion"] },
+      "Word": { "terms": ["Markdown to Word", "Word to Markdown"] }
+    }
+  },
+  "WebAIM": {
+    "terms": ["WebAIM"],
+    "survey": {
+      "terms": ["Screen Reader User Survey", "WebAIM Screen Reader User Survey"]
+    }
+  },
+  "web accessibility": {
+    "progress": { "terms": ["web accessibility progress"] },
+    "landmarks": { "terms": ["landmarks", "regions"] },
+    "headings": { "terms": ["heading levels"] },
+    "problematic items": { "terms": ["problematic items"] }
+  },
+  "troubleshooting": {
+    "terms": ["troubleshooting"],
+    "performance": {
+      "terms": [
+        "screenreader performance",
+        "magnifier performance",
+        "slow responsiveness"
+      ]
+    },
+    "cache": { "terms": ["clearing cache", "system cache"] },
+    "browser": { "terms": ["browser compatibility"] },
+    "support": {
+      "terms": [
+        "official support",
+        "community support",
+        "discussion groups",
+        "online forums"
+      ]
+    },
+    "testing": { "terms": ["professional testing resources"] },
+    "braille notetaker": {},
+    "braille display": {},
+    "community support": {},
+    "firmware": {}
+  },
+  "instructional materials": {
+    "typing": {
+      "Talking Typer": {},
+      "TypingClub": {},
+      "APH Typer Online": {},
+      "Accessibyte": {}
+    },
+    "gestures": {},
+    "coding": {
+      "Code.org": {},
+      "Quorum": {},
+      "Blocks4All": {},
+      "Swift Playgrounds": {}
+    }
+  },
+  "communication": {
+    "AAC": {
+      "assessment": {},
+      "non-symbolic": {},
+      "symbolic": {},
+      "object communication": {},
+      "core vocabulary": {},
+      "training": {}
+    },
+    "switch access": {
+      "DIY": {},
+      "Makers Making Change": {}
+    },
+    "tactile symbols": {
+      "Project Core": {},
+      "Blissymbolics": {}
+    }
+  },
+  "deafblindness": {}
+}

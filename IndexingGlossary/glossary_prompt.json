@@ -1,0 +1,123 @@
+{
+  "task": "Glossary Extraction, Normalization, and Annotation for a LaTeX Project",
+  "execution_order": "All LaTeX files must be fully parsed and analyzed before inserting any \\gls{} or \\newglossaryentry{} commands. A shared glossary_terms.json file must be generated first to ensure consistency across the project.",
+  "file sources": [
+    "Chapters/Chapter01.tex",
+    "Chapters/Chapter02.tex",
+    "Chapters/Chapter03.tex",
+    "Chapters/Chapter04.tex",
+    "Chapters/Chapter05.tex",
+    "Chapters/Chapter06.tex",
+    "Chapters/Chapter07.tex",
+    "Chapters/Chapter08.tex",
+    "Chapters/Chapter09.tex",
+    "Chapters/Chapter10.tex",
+    "Chapters/Chapter11.tex",
+    "Chapters/Chapter12.tex",
+    "Chapters/Chapter13.tex",
+    "Chapters/Chapter14.tex",
+    "Chapters/Chapter15.tex",
+    "Chapters/Chapter16.tex",
+    "Chapters/Chapter17.tex",
+    "Chapters/Chapter18.tex",
+    "Chapters/Chapter19.tex",
+    "Chapters/Chapter20.tex",
+    "Chapters/Chapter21.tex",
+    "Chapters/Chapter22.tex",
+    "Chapters/Chapter23.tex",
+    "Chapters/Chapter24.tex",
+    "Chapters/Introduction.tex",
+    "Chapters/Conclusion.tex",
+    "Chapters/Appendix00.tex",
+    "Chapters/Appendix01.tex",
+    "Chapters/Appendix02.tex",
+    "Chapters/Appendix03.tex",
+    "Chapters/Appendix04.tex",
+    "Chapters/Appendix05.tex",
+    "Chapters/Appendix06.tex"
+  ],
+  "shared_glossary_file": "glossary_terms.json",
+  "steps": [
+    {
+      "step": 1,
+      "title": "Read and Understand the LaTeX Documents",
+      "description": "Parse the LaTeX source code of all project files. Extract meaningful content while ignoring formatting and non-semantic markup. Identify concepts, terms, acronyms, abbreviations, and key vocabulary relevant to the subject matter."
+    },
+    {
+      "step": 2,
+      "title": "Glossary Term Extraction and Normalization",
+      "description": "Extract candidate glossary terms and generate consistent normalized names. Include inferred meanings based on context if definitions are not explicitly given.",
+      "substeps": [
+        {
+          "substep": "2a",
+          "title": "Generate Glossary Term Mapping",
+          "description": "Use stemming, lemmatization, synonym resolution, and case normalization to group term variants together. Assign a canonical glossary key for each concept.",
+          "output_format": {
+            "example": {
+              "ocr": {
+                "variants": ["OCR", "ocr", "Optical Character Recognition"],
+                "definition": "The process of converting scanned images or PDFs into machine-encoded text."
+              },
+              "screenreader": {
+                "variants": [
+                  "screen reader",
+                  "screen readers",
+                  "auditory access tool"
+                ],
+                "definition": "A software application that reads aloud content displayed on a screen, typically used by blind or visually impaired users."
+              }
+            }
+          }
+        },
+        {
+          "substep": "2b",
+          "title": "Update and Reuse Shared Glossary Reference",
+          "description": "Update or read from an existing shared glossary file (e.g., glossary_terms.json). Add new terms while preserving previously defined ones for consistent reuse across documents.",
+          "file_management": {
+            "read_from": "glossary_terms.json",
+            "write_to": "glossary_terms.json",
+            "merge_strategy": "Add new terms, merge variants, retain existing definitions unless overridden explicitly."
+          }
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Insert Glossary Commands in the LaTeX Files",
+      "description": "After finalizing glossary_terms.json, update the LaTeX source files with glossary declarations and inline references using the glossaries package.",
+      "substeps": [
+        {
+          "substep": "3a",
+          "title": "Declare Glossary Terms",
+          "description": "At the preamble of the main LaTeX document, insert \\newglossaryentry{key}{name=..., description=...} for each canonical glossary term."
+        },
+        {
+          "substep": "3b",
+          "title": "Insert \\gls{} References in Text",
+          "description": "Locate the first or most contextually appropriate mention of each term variant in body text (not headings or macro arguments), and replace it with \\gls{key}. Do not insert glossary commands into LaTeX structural commands like \\section{} or \\chapter{}.",
+          "rules": [
+            "Do not insert \\gls{} commands until all files have been parsed and the shared glossary_terms.json is complete.",
+            "Use the canonical key (e.g., 'ocr') for \\gls{} and \\newglossaryentry commands.",
+            "Avoid repeated \\gls{} references in close proximity unless context demands clarification.",
+            "Glossary keys should be lowercase, alphanumeric, and unique.",
+            "Insert \\newglossaryentry declarations once per project in the LaTeX preamble or a dedicated file.",
+            "**Do not insert \\gls{} inside structural LaTeX commands such as \\chapter{}, \\section{}, or similar.**"
+          ]
+        }
+
+  ],
+  "constraints": [
+    "All LaTeX files must be parsed before inserting any glossary commands.",
+    "Definitions should be short, accurate, and suitable for a glossary.",
+    "Shared glossary_terms.json must be updated and preserved across sessions.",
+    "The \\gls{} and \\newglossaryentry{} syntax must comply with the glossaries LaTeX package.",
+    "Glossary terms should be reused consistently across all documents."
+  ],
+  "final_output": {
+    "glossary_terms": "A structured dictionary of glossary entries with canonical keys, definitions, and variant forms.",
+    "updated_glossary_file": "A completed and merged glossary_terms.json file for project-wide consistency.",
+    "glossary_declarations": "A \\newglossaryentry block that can be included in the LaTeX preamble.",
+    "annotated_latex": "All LaTeX files with appropriate \\gls{} references inserted based on term mapping."
+  },
+  "note": "This is a two-pass process: (1) collect and define all terms before (2) inserting commands into source files. Glossary consistency is enforced through the shared glossary_terms.json file."
+}

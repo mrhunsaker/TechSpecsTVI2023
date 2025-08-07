@@ -1,0 +1,19 @@
+{
+  "min_index_repeat_distance": 150,
+  "glossary_enabled": true,
+  "index_enabled": true,
+  "structural_commands": [
+    "\\chapter{",
+    "\\section{",
+    "\\subsection{",
+    "\\subsubsection{",
+    "\\paragraph{",
+    "\\subparagraph{",
+    "\\part{",
+    "\\title{"
+  ],
+  "latex_directory": "Chapters/",
+  "glossary_terms_file": "glossary_terms.json",
+  "index_terms_file": "index_terms.json",
+  "processed_directory": "ProcessedChapters/"
+}

@@ -1,0 +1,152 @@
+\chapter{Bridging Literacy: The Crucial Role of Refreshable Braille Displays in Empowering Visually Impaired Students}\label{ch3:braille}
+\raggedright
+
+\begin{raggedright}
+	\textbf{Accessibility\index{accessibility} Note:} This chapter provides a comprehensive overview of refreshable Braille displays\index{braille display}, notetakers\index{notetaker}, and educational devices for students with visual impairments\index{visual impairment}. The content has been structured for clarity, navigation, and accessibility\index{accessibility}, with semantic markup and descriptive context for all tables and lists\index{Markdown!lists}.
+\end{raggedright}
+
+\section{Braille Notetakers and Laptops}\label{ch3:sec:notetakers-laptops}
+Braille notetakers\index{notetaker!braille notetaker} are specialized devices that combine a refreshable Braille display\index{braille display} with a Braille keyboard and note-taking\index{Markdown!note-taking} software. They are essential tools for literacy, allowing students to read and write in Braille\index{braille} efficiently \supercite{Holbrook2006}. When paired with a laptop, a Braille notetaker can serve as a powerful Braille terminal for accessing a wider range of applications and online content \supercite{Kelly2011}.
+
+\section{Braille Notetaker/Laptop Recommendations}\label{ch3:sec:notetaker-laptop-recs}
+The choice of a Braille notetaker and laptop combination depends on the student's individual needs, the educational context, and budget considerations. The following table provides a comparison of leading Braille notetakers and their suitability for use with different laptop\index{laptop} operating systems.
+
+\subsubsection{Table \ref{ch3:tab:braille-notetaker-laptop-recommendations}}
+\newpage
+\begin{landscape}
+	\tagpdfsetup{table/header-rows={1}}
+	\begin{longtblr}[
+			caption = {\gls{braille} \gls{notetaker}/\gls{laptop} Recommendations},
+			label = {ch3:tab:braille-notetaker-laptop-recommendations},
+			note = {This table provides a comparative overview of leading Braille notetakers and their compatibility with different laptop operating systems, highlighting key features relevant to students with visual impairments.}
+		]{
+			colspec = {X[l] X[l] X[l] X[l]},
+			rowhead = 1,
+			row{1} = {font=\normalfont},
+			hlines,
+		}
+		\toprule
+		Notetaker\index{notetaker} Model                    & Key Features                                                                                             & Laptop OS Compatibility                                      & Price Range       \\
+		\midrule
+		BrailleNote Touch+ \supercite{HumanWareBrailleNote} & Android\index{operating system!Android}-based, Google Play Store access, 32 Braille\index{braille} cells & Windows, macOS, ChromeOS\index{operating system!ChromeOS}    & \$5,500 - \$6,000 \\
+		BrailleSense 6 \supercite{HIMSBrailleSense}         & Android 10, 32 Braille cells, advanced productivity apps\index{apps}                                     & Windows, macOS, ChromeOS                                     & \$5,000 - \$5,500 \\
+		Orbit Reader 20 \supercite{OrbitReader20}           & Affordable, 20 Braille\index{braille} cells, standalone reader for SD cards                              & Windows\index{operating system!Windows}, macOS, iOS, Android & \$500 - \$600     \\
+		\bottomrule
+	\end{longtblr}
+\end{landscape}
+\newpage
+
+
+\section{Refreshable Braille Displays}\label{ch3:sec:refreshable-braille}
+Refreshable Braille displays\index{braille display} connect to computers and mobile devices to provide tactile output of screen content. They are essential for students who are Braille readers, enabling them to access digital text in real-time \supercite{Presley2012}. The choice of display size often depends on portability needs and the type of tasks the student will be performing.
+
+\subsection{14-20 cell Refreshable Braille Displays}\label{ch3:ssec:14-20-cell}
+Smaller Braille displays are highly portable and are ideal for use with smartphones and tablets\index{tablet}. They are excellent for reading on the go, sending text messages, and navigating mobile apps\index{apps} \supercite{Kamei-Hannan2012}.
+
+\newpage
+\begin{landscape}
+	\tagpdfsetup{table/header-rows={1}}
+	\begin{longtblr}[
+			caption = {14-20 Cell Refreshable Braille Displays},
+			label = {ch3:tab:14-20-cell-displays},
+			note = {This table provides a selection of recommended 14-20 cell Braille displays, highlighting their key features relevant to students with visual impairments.}
+		]{
+			colspec = {X[l] X[l] X[l]},
+			rowhead = 1,
+			row{1} = {font=\normalfont},
+			hlines,
+		}
+		\toprule
+		Model                                                                 & Key Features                                                           & Price Range       \\
+		\midrule
+		Focus 14 Blue \supercite{FocusBlue}                                   & 14 Braille\index{braille} cells, 8-dot keyboard, Bluetooth             & \$1,300 - \$1,500 \\
+		Orbit Reader 20 \supercite{OrbitReader20}                             & 20 Braille\index{braille} cells, standalone reader, affordable         & \$500 - \$600     \\
+		APH\index{braille embosser!APH} Chameleon 20 \supercite{APHChameleon} & 20 Braille cells, 8-dot keyboard, notetaker\index{notetaker} functions & \$1,500 - \$1,700 \\
+		\bottomrule
+	\end{longtblr}
+\end{landscape}
+\newpage
+
+
+\subsection{32-40 cell Refreshable Braille Displays}\label{ch3:ssec:32-40-cell}
+Mid-size Braille displays\index{braille display} offer a good balance between portability and reading comfort. They provide a longer line of Braille, which can enhance reading fluency and reduce the need for frequent panning \supercite{Wall2003}. They are well-suited for use with laptops and for more intensive reading and writing tasks.
+
+\newpage
+\begin{landscape}
+	\tagpdfsetup{table/header-rows={1}}
+	\begin{longtblr}[
+			caption = {32-40 Cell Refreshable Braille Displays},
+			label = {ch3:tab:32-40-cell-displays},
+			note = {This table provides a selection of recommended 32-40 cell Braille displays, highlighting their key features relevant to students with visual impairments.}
+		]{
+			colspec = {X[l] X[l] X[l]},
+			rowhead = 1,
+			row{1} = {font=\normalfont},
+			hlines,
+		}
+		\toprule
+		Model                                         & Key Features                                                  & Price Range       \\
+		\midrule
+		Focus 40 Blue \supercite{FocusBlue}           & 40 Braille cells, 8-dot keyboard, \gls{bluetooth}             & \$2,800 - \$3,200 \\
+		Brailliant BI 40X \supercite{BrailliantBI40X} & 40 Braille cells, notetaker\index{notetaker} functions, USB-C & \$3,000 - \$3,500 \\
+		APH Mantis Q40 \supercite{APHMantis}          & 40 Braille cells, QWERTY keyboard, notetaker functions        & \$2,500 - \$2,800 \\
+		\bottomrule
+	\end{longtblr}
+\end{landscape}
+\newpage
+
+
+\section{Multiple Line Braille Displays/Tablets}\label{ch3:sec:multi-line}
+Multi-line Braille displays represent a significant advancement in Braille technology\index{technology}, allowing for the presentation of multiple lines of Braille\index{braille} at once. This can greatly enhance the reading experience, particularly for complex content like tables, math equations, and spatial information \supercite{Behrmann2012}.
+
+\newpage
+\begin{landscape}
+	\tagpdfsetup{table/header-rows={1}}
+	\begin{longtblr}[
+			caption = {Multiple Line Braille Displays/Tablets},
+			label = {ch3:tab:multi-line-displays},
+			note = {This table provides a selection of innovative multi-line Braille displays, highlighting their key features relevant to students with visual impairments.}
+		]{
+			colspec = {X[l] X[l] X[l]},
+			rowhead = 1,
+			row{1} = {font=\normalfont},
+			hlines,
+		}
+		\toprule
+		Model                              & Key Features                                                          & Price Range       \\
+		\midrule
+		Canute 360 \supercite{Canute360}   & 9 lines of 40 cells, reads BRF files                                  & \$2,500 - \$3,000 \\
+		Graphiti \supercite{OrbitGraphiti} & 8 lines of 60 cells, tactile graphics\index{tactile graphics} display & \$10,000+         \\
+		Monarch \supercite{APHMonarch}     & 10 lines of 32 cells, \gls{tactile} graphics and text                 & \$5,000 - \$6,000 \\
+		\bottomrule
+	\end{longtblr}
+\end{landscape}
+\newpage
+
+
+\section{Braille Education Devices}\label{ch3:sec:braille-ed-devices}
+These devices are specifically designed to support early Braille literacy\index{braille literacy} and the development of Braille skills. They often incorporate gamified learning and interactive feedback to engage young learners \supercite{Lueck2016}.
+
+\newpage
+\begin{landscape}
+	\tagpdfsetup{table/header-rows={1}}
+	\begin{longtblr}[
+			caption = {\gls{brailleeducation} Devices},
+			label = {ch3:tab:braille-education-devices},
+			note = {This table provides a selection of devices designed for Braille education, highlighting their key features relevant to students with visual impairments.}
+		]{
+			colspec = {X[l] X[l] X[l]},
+			rowhead = 1,
+			row{1} = {font=\normalfont},
+			hlines,
+		}
+		\toprule
+		Model                                                                          & Key Features                                         & Price Range             \\
+		\midrule
+		APH Code Jumper\index{braille education!Code Jumper} \supercite{APHCodeJumper} & Teaches coding concepts through physical pods        & \$500 - \$600           \\
+		LEGO Braille Bricks \supercite{LEGOBricks}                                     & Teaches Braille alphabet and numbers through play    & Not for individual sale \\
+		Taptilo \supercite{Taptilo}                                                    & Smart Braille learning device with interactive games & \$3,000 - \$3,500       \\
+		\bottomrule
+	\end{longtblr}
+\end{landscape}
+\newpage

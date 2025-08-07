@@ -1,0 +1,244 @@
+{
+  "task": "Indexing and Semantic Tagging for a LaTeX Document Collection",
+  "execution_order": "All LaTeX files must be fully parsed before inserting any \\index{} commands. The shared index_terms.json file must be built and finalized from all sources first.",
+  "file sources": [
+    "Chapters/Chapter01.tex",
+    "Chapters/Chapter02.tex",
+    "Chapters/Chapter03.tex",
+    "Chapters/Chapter04.tex",
+    "Chapters/Chapter05.tex",
+    "Chapters/Chapter06.tex",
+    "Chapters/Chapter07.tex",
+    "Chapters/Chapter08.tex",
+    "Chapters/Chapter09.tex",
+    "Chapters/Chapter10.tex",
+    "Chapters/Chapter11.tex",
+    "Chapters/Chapter12.tex",
+    "Chapters/Chapter13.tex",
+    "Chapters/Chapter14.tex",
+    "Chapters/Chapter15.tex",
+    "Chapters/Chapter16.tex",
+    "Chapters/Chapter17.tex",
+    "Chapters/Chapter18.tex",
+    "Chapters/Chapter19.tex",
+    "Chapters/Chapter20.tex",
+    "Chapters/Chapter21.tex",
+    "Chapters/Chapter22.tex",
+    "Chapters/Chapter23.tex",{
+      "task": "Indexing and Semantic Tagging for a LaTeX Document Collection",
+      "execution_order": "All LaTeX files must be fully parsed before inserting any \\index{} commands. The shared index_terms.json file must be built and finalized from all sources first.",
+      "file sources": [
+        "Chapters/Chapter01.tex",
+        "Chapters/Chapter02.tex",
+        "Chapters/Chapter03.tex",
+        "Chapters/Chapter04.tex",
+        "Chapters/Chapter05.tex",
+        "Chapters/Chapter06.tex",
+        "Chapters/Chapter07.tex",
+        "Chapters/Chapter08.tex",
+        "Chapters/Chapter09.tex",
+        "Chapters/Chapter10.tex",
+        "Chapters/Chapter11.tex",
+        "Chapters/Chapter12.tex",
+        "Chapters/Chapter13.tex",
+        "Chapters/Chapter14.tex",
+        "Chapters/Chapter15.tex",
+        "Chapters/Chapter16.tex",
+        "Chapters/Chapter17.tex",
+        "Chapters/Chapter18.tex",
+        "Chapters/Chapter19.tex",
+        "Chapters/Chapter20.tex",
+        "Chapters/Chapter21.tex",
+        "Chapters/Chapter22.tex",
+        "Chapters/Chapter23.tex",
+        "Chapters/Chapter24.tex",
+        "Chapters/Introduction.tex",
+        "Chapters/Conclusion.tex",
+        "Chapters/Appendix00.tex",
+        "Chapters/Appendix01.tex",
+        "Chapters/Appendix02.tex",
+        "Chapters/Appendix03.tex",
+        "Chapters/Appendix04.tex",
+        "Chapters/Appendix05.tex",
+        "Chapters/Appendix06.tex"
+      ],
+      "shared_index_file": "index_terms.json",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Read and Understand the Documents",
+          "description": "Parse the LaTeX code of all input files, ignoring markup not essential to meaning. Understand the content, structure, and main ideas expressed in each document."
+        },
+        {
+          "step": 2,
+          "title": "Semantic Analysis and Term Normalization",
+          "description": "Analyze all parsed documents to extract terms to be included in a shared index and normalize them across all files.",
+          "types_of_entries": {
+            "explicit": "Directly stated terms (e.g., jargon, technical terms, proper nouns)",
+            "conceptual": "Inferred or implied topics (e.g., ideas not explicitly named)",
+            "subentries": "Specific aspects or examples of a broader term (e.g., screen readers!NVDA)"
+          },
+          "substeps": [
+            {
+              "substep": "2a",
+              "title": "Generate Term Normalization Mapping",
+              "description": "Detect and group variations of terms using stemming, lemmatization, and synonym detection. Normalize all variants to a single consistent form for indexing.",
+              "output_format": {
+                "example": {
+                  "OCR": ["ocr", "OCR", "Optical Character Recognition"],
+                  "database": ["database", "databases"],
+                  "accessibility": ["accessibilities", "Accessibility"]
+                },
+                "note": "Normalized keys (e.g., 'OCR') will be used for \\index{} insertion and listing."
+              }
+            },
+            {
+              "substep": "2b",
+              "title": "Build and Update Shared Index Term Reference",
+              "description": "Use or initialize a shared term dictionary (e.g., index_terms.json) to store normalized index entries. Merge new mappings from the current documents and ensure no duplicates.",
+              "file_management": {
+                "read_from": "index_terms.json",
+                "write_to": "index_terms.json",
+                "merge_strategy": "Preserve existing terms, merge new entries, and deduplicate synonyms across documents."
+              }
+            }
+          ],
+          "note": "Do not proceed to Step 3 until all files are analyzed and index_terms.json is complete."
+        },
+        {
+          "step": 3,
+          "title": "Insert \\index{} Markers in the LaTeX Documents",
+          "description": "After finalizing the normalized index mappings, insert \\index{} commands into each LaTeX file. Use the mapping to ensure consistency. Do not insert commands in structural LaTeX commands (e.g., \\part{}, \\chapter{}, etc.).",
+          "examples": [
+            {
+              "original": "Screen readers like NVDA and JAWS provide auditory feedback...",
+              "modified": "Screen readers like NVDA\\index{screen readers!NVDA} and JAWS\\index{screen readers!JAWS} provide auditory feedback..."
+            }
+          ],
+          "rules": [
+            "Do not add \\index{} commands within \\part{}, \\chapter{}, \\section{}, \\subsection{}, or \\subsusbection{}"
+            "Perform this step only after index_terms.json has been finalized from all documents",
+            "Avoid tagging the same term multiple times in a short span",
+            "Ensure consistent terminology using the finalized normalization map",
+            "Treat singular/plural forms and case-insensitive variants as one term (e.g., 'database' = 'databases')",
+            "Normalize synonyms to a canonical form (e.g., 'Optical Character Recognition' → 'OCR')",
+            "Use lowercase for index keys unless proper noun or acronym",
+            "Use noun or noun phrases as index terms",
+            "Avoid tagging terms in LaTeX structural commands unless semantically appropriate"
+          ]
+        }
+      ],
+      "constraints": [
+        "All input LaTeX files must be parsed before modifying any file",
+        "index_terms.json must be complete and merged before any \\index{} insertion occurs",
+        "Shared term file should persist across sessions for consistent indexing of multi-file projects",
+        "Use \\index{} syntax compatible with the default makeidx package"
+      ],
+      "final_output": {
+        "index_terms": "A structured list of index entries with their type (explicit or conceptual)",
+        "normalized_term_mapping": "A dictionary mapping term variants to their canonical index form",
+        "updated_shared_index_file": "The finalized index_terms.json used for all insertions",
+        "annotated_latex": "The original LaTeX files with \\index{} commands inserted based on normalized mappings"
+      },
+      "note": "This process must be executed in two passes: first to gather and normalize all terms from every file, and second to insert index commands based on a finalized shared map."
+    }
+
+    "Chapters/Chapter24.tex",
+    "Chapters/Introduction.tex",
+    "Chapters/Conclusion.tex",
+    "Chapters/Appendix00.tex",
+    "Chapters/Appendix01.tex",
+    "Chapters/Appendix02.tex",
+    "Chapters/Appendix03.tex",
+    "Chapters/Appendix04.tex",
+    "Chapters/Appendix05.tex",
+    "Chapters/Appendix06.tex"
+  ],
+  "shared_index_file": "index_terms.json",
+  "steps": [
+    {
+      "step": 1,
+      "title": "Read and Understand the Documents",
+      "description": "Parse the LaTeX code of all input files, ignoring markup not essential to meaning. Understand the content, structure, and main ideas expressed in each document."
+    },
+    {
+      "step": 2,
+      "title": "Semantic Analysis and Term Normalization",
+      "description": "Analyze all parsed documents to extract terms to be included in a shared index and normalize them across all files.",
+      "types_of_entries": {
+        "explicit": "Directly stated terms (e.g., jargon, technical terms, proper nouns)",
+        "conceptual": "Inferred or implied topics (e.g., ideas not explicitly named)",
+        "subentries": "Specific aspects or examples of a broader term (e.g., screen readers!NVDA)"
+      },
+      "substeps": [
+        {
+          "substep": "2a",
+          "title": "Generate Term Normalization Mapping",
+          "description": "Detect and group variations of terms using stemming, lemmatization, and synonym detection. Normalize all variants to a single consistent form for indexing.",
+          "output_format": {
+            "example": {
+              "OCR": ["ocr", "OCR", "Optical Character Recognition"],
+              "database": ["database", "databases"],
+              "accessibility": ["accessibilities", "Accessibility"]
+            },
+            "note": "Normalized keys (e.g., 'OCR') will be used for \\index{} insertion and listing."
+          }
+        },
+        {
+          "substep": "2b",
+          "title": "Build and Update Shared Index Term Reference",
+          "description": "Use or initialize a shared term dictionary (e.g., index_terms.json) to store normalized index entries. Merge new mappings from the current documents and ensure no duplicates.",
+          "file_management": {
+            "read_from": "index_terms.json",
+            "write_to": "index_terms.json",
+            "merge_strategy": "Preserve existing terms, merge new entries, and deduplicate synonyms across documents."
+          }
+        }
+      ],
+      "note": "Do not proceed to Step 3 until all files are analyzed and index_terms.json is complete."
+    },
+    {
+      "step": 3,
+      "title": "Insert \\index{} Markers in the LaTeX Documents",
+      "description": "After finalizing the normalized index mappings, insert \\index{} commands into each LaTeX file. Do not insert commands inside structural headings such as \\chapter{}, \\section{}, \\subsection{}, etc.",
+      "rules": [
+        "Do not add \\index{} commands within \\part{}, \\chapter{}, \\section{}, \\subsection{}, \\subsubsection{}, \\paragraph{}, or \\subparagraph{}.",
+        "Perform this step only after index_terms.json has been finalized from all documents.",
+        "Avoid tagging the same term multiple times in a short span. A minimum distance of approximately 150 words should be maintained between repeat \\index{} entries for the same term, unless contextually necessary (e.g., new section focus).",
+        "Ensure consistent terminology using the finalized normalization map.",
+        "Treat singular/plural forms and case-insensitive variants as one term (e.g., 'database' = 'databases' = 'Database' = Databases' = 'DataBases' = 'dataBases").",
+        "Normalize synonyms to a canonical form (e.g., 'Optical Character Recognition' → 'OCR').",
+        "Use lowercase for index keys unless proper noun or acronym.",
+        "Use noun or noun phrases as index terms.",
+        "**Only insert \\index{} in plain text, never inside structural LaTeX macros or section titles.**"
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Cleanup Redundant \\index{} Commands",
+      "description": "After inserting all \\index{} commands, perform a post-processing pass to identify and remove redundant index entries that violate spacing or relevance rules.",
+      "rules": [
+        "Remove \\index{} commands that appear within fewer than 150 words of a prior \\index{} of the same term, unless they occur in clearly distinct contexts such as new sections.",
+        "Retain only the most contextually meaningful occurrence when multiple \\index{} markers appear in close proximity.",
+        "Ensure no \\index{} commands exist inside structural commands such as \\chapter{}, \\section{}, \\subsection{}, etc.",
+        "Log removed entries for review in a cleanup report (optional)."
+      ],
+      "note": "This step ensures clarity and avoids cluttering the index with redundant entries, which can reduce the utility of the final index."
+    },
+  "constraints": [
+    "All input LaTeX files must be parsed before modifying any file",
+    "index_terms.json must be complete and merged before any \\index{} insertion occurs",
+    "Excessive or redundant \\index{} commands must be removed after insertion, especially if they violate minimum repeat distance or occur within structural elements.",
+    "Shared term file should persist across sessions for consistent indexing of multi-file projects",
+    "Use \\index{} syntax compatible with the default makeidx package",
+    "No \\index{} commands are placed within structural LaTeX commands (e.g., \\part{}, \\chapter{}, \\section{}, \\subsection{}, \\subsubsection{} etc.)."
+
+  ],
+  "final_output": {
+    "index_terms": "A structured list of index entries with their type (explicit or conceptual)",
+    "normalized_term_mapping": "A dictionary mapping term variants to their canonical index form",
+    "updated_shared_index_file": "The finalized index_terms.json used for all insertions",
+    "annotated_latex": "The original LaTeX files with \\index{} commands inserted based on normalized mappings"
+  },
+  "note": "This process must be executed in two passes: first to gather and normalize all terms from every file, and second to insert index commands based on a finalized shared map."
+}
