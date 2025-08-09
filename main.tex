@@ -39,6 +39,7 @@
 \addbibresource{global_bibliography.bib}
 \AtBeginDocument{\raggedright}
 \AtBeginDocument{\raggedbottom}
+
 % --- Custom font families for Atkinson Hyperlegible Mono and Next ---
 % Usage: \AtkinsonMonoText{your text} or \AtkinsonNextText{your text}
 \newfontfamily\AtkinsonMono[
@@ -168,8 +169,6 @@
   table/tagging=true,
   table/header-rows=1,
 }
-\AtBeginEnvironment{longtblr}{\small}
-% Configure table and structure tagging
 \ExplSyntaxOn
 \bool_set_true:N \l_tagpdf_table_detection_bool
 \bool_set_true:N \l_tagpdf_struct_destination_auto_bool
@@ -273,11 +272,14 @@
 \include{Chapters/Chapter13}
 \include{Chapters/Chapter09}
 \part{Accessible Software Implementation}
+\include{Chapters/Chapter25}
+\include{Chapters/Chapter26}
 \include{Chapters/Chapter24}
 \include{Chapters/Chapter15}
+\include{Chapters/Chapter27}
+\include{Chapters/Chapter28}
 \include{Chapters/Appendix04}
-\include{Chapters/Appendix06}
-\part{Accessibility Auditing \& Evaluation Tools}
+\include{Chapters/Appendix06}part{Accessibility Auditing \& Evaluation Tools}
 \include{Chapters/Chapter16}
 \include{Chapters/Chapter18}
 \include{Chapters/Chapter20}

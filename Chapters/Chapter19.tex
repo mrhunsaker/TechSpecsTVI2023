@@ -271,8 +271,8 @@ EPUB 3 is the latest version of the open ebook standard, with a strong emphasis 
 \end{itemize}
 The choice among these options depends heavily on the content's complexity, the target audience's needs, and the author's technical proficiency. While Markdown offers a strong starting point for accessible plain text, more specialized formats like DAISY and EPUB 3 provide comprehensive solutions for complex publications tailored for print disabilities.
 
-%\newpage
-%\begin{landscape}
+\footnotesize
+\tagpdfsetup{table/header-rows={1}}
 \begin{longtblr}[
 		caption={Table 2: Comparison of Markdown Flavors and Alternative Formats for Accessibility},
 		label={tab:markdown-flavors-comparison}
@@ -295,8 +295,7 @@ The choice among these options depends heavily on the content's complexity, the 
 	\emph{EPUB 3}                         & Industry standard for ebooks with strong accessibility features; high contrast, enlarged text, text-to-speech, keyboard navigation, accessible tables. \supercite{ElsevierEPUB3}                                       & Primarily for ebooks; requires specific authoring tools and validation. \supercite{CNIBEPUB}                                                                & Accessible ebooks, digital publications, and long-form content.                                                       \\
 	\bottomrule
 \end{longtblr}
-%\end{landscape}
-\newpage
+\normalsize
 
 
 \section{Conclusions and Recommendations}
@@ -318,56 +317,3 @@ To maximize the accessibility of documents created with Markdown, the following 
 	\item \emph{Consider Specialized Formats for Specific Needs}: For highly structured, interactive, or long-form content specifically intended for print-disabled users (e.g., textbooks, complex publications), investigate specialized accessible formats like DAISY (Digital Accessible Information System) or EPUB 3. These formats are designed from the ground up to provide advanced navigation and accessibility features.
 	\item \emph{Embrace Continuous Learning}: Accessibility standards and assistive technologies are constantly evolving. Staying informed about the latest best practices, tool capabilities, and user feedback is crucial for consistently producing high-quality, accessible digital content.
 \end{itemize}
-
-\begin{thebibliography}{99}
-	\bibitem{ReciteMe} ReciteMe. "Blind Accessibility." Available at: \url{https://reciteme.com/news/blind-accessibility/} [Accessed: July 4, 2025].
-	\bibitem{TextToBraille} ResearchGate. "Text to Braille Conversion System." Available at: \url{https://www.researchgate.net/publication/357113200_Text_to_Braille_Conversion_System} [Accessed: July 4, 2025].
-	\bibitem{TestDevLab} TestDevLab. "A Screen Reader’s Guide to Accessibility." Available at: \url{https://www.testdevlab.com/blog/screen-reader-guide-to-accessibility} [Accessed: July 4, 2025].
-	\bibitem{DSU} Dakota State University. "Provide an Accessible Page Structure and Layout." Available at: \url{https://support.dsu.edu/TDClient/1796/Portal/KB/ArticleDet?ID=148297} [Accessed: July 4, 2025].
-	\bibitem{SmashingMagazine} Smashing Magazine. "Improving The Accessibility Of Markdown." Available at: \url{https://www.smashingmagazine.com/2021/09/improving-accessibility-of-markdown/} [Accessed: July 4, 2025].
-	\bibitem{MDNHTML} MDN Web Docs. "Accessibility: HTML." Available at: \url{https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML} [Accessed: July 4, 2025].
-	\bibitem{UniversalDesign} Centre for Excellence in Universal Design. "Do Not Misuse Semantic Markup." Available at: \url{https://universaldesign.ie/communications-digital/web-and-mobile-accessibility/web-accessibility-techniques/developers-introduction-and-index/provide-an-accessible-page-structure-and-layout/do-not-misuse-semantic-markup} [Accessed: July 4, 2025].
-	\bibitem{UNIWeb} University of Northern Iowa. "Web Guidelines: Web Accessibility." Available at: \url{https://ur.uni.edu/uni-brand/web-guidelines/web-accessibility} [Accessed: July 4, 2025].
-	\bibitem{GitLabDocs} GitLab Docs. "Markdown Guide." Available at: \url{https://docs.gitlab.com/user/markdown/} [Accessed: July 4, 2025].
-	\bibitem{MarkdownToolbox} Markdown Toolbox. "Markdown Best Practices for Documentation." Available at: \url{https://www.markdowntoolbox.com/blog/markdown-best-practices-for-documentation/} [Accessed: July 4, 2025].
-	\bibitem{TestPros} TestPros. "Accessibility in GitHub with Git Flavored Markdown." Available at: \url{https://testpros.com/accessibility/accessibility-in-github-with-git-flavored-markdown/} [Accessed: July 4, 2025].
-	\bibitem{LancasterLatex} Lancaster University. "Checklist for LaTeX Accessibility." Available at: \url{https://portal.lancaster.ac.uk/ask/checklist-latex} [Accessed: July 4, 2025].
-	\bibitem{MarkdownGuide} Markdown Guide. "Basic Syntax." Available at: \url{https://www.markdownguide.org/basic-syntax/} [Accessed: July 4, 2025].
-	\bibitem{MarkdownGuideExtended} Markdown Guide. "Extended Syntax." Available at: \url{https://www.markdownguide.org/extended-syntax/} [Accessed: July 4, 2025].
-	\bibitem{RMarkdownMassey} Massey University. "RMarkdown." Available at: \url{https://r-resources.massey.ac.nz/rmarkdown/} [Accessed: July 4, 2025].
-	\bibitem{MSPowerShellMarkdown} Microsoft Docs. "General Markdown Guidance." Available at: \url{https://learn.microsoft.com/en-us/powershell/scripting/community/contributing/general-markdown?view=powershell-7.5} [Accessed: July 4, 2025].
-	\bibitem{DocsToMarkdown} Docs to Markdown. "Tables in Markdown." Available at: \url{https://www.docstomarkdown.pro/tables-in-markdown/} [Accessed: July 4, 2025].
-	\bibitem{MDNTableAccess} MDN Web Docs. "Table Accessibility." Available at: \url{https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility} [Accessed: July 4, 2025].
-	\bibitem{OSUDigitalAccess} Oregon State University. "Digital Accessibility: Tables." Available at: \url{https://accessibility.oregonstate.edu/digital-accessibility/tables} [Accessed: July 4, 2025].
-	\bibitem{PerkinsNoteTaking} Perkins School for the Blind. "Tips and Models for Effective Note-Taking." Available at: \url{https://www.perkins.org/resource/tips-and-models-for-effective-note-taking/} [Accessed: July 4, 2025].
-	\bibitem{TeachingVI} TeachingVisuallyImpaired.com. "Braille Notetakers." Available at: \url{https://www.teachingvisuallyimpaired.com/braille-notetakers.html} [Accessed: July 4, 2025].
-	\bibitem{PerkinsMonsterNote} Perkins School for the Blind. "Monster Note-Taking Skills." Available at: \url{https://www.perkins.org/resource/monster-note-taking-skills/} [Accessed: July 4, 2025].
-	\bibitem{Inkdrop} Inkdrop. "A Markdown Note-Taking App." Available at: \url{https://www.inkdrop.app/} [Accessed: July 4, 2025].
-	\bibitem{Bear} Bear. "Bear App." Available at: \url{https://bear.app/} [Accessed: July 4, 2025].
-	\bibitem{CreateUW} University of Washington. "Making Homework Write-Up Accessible." Available at: \url{https://create.uw.edu/a11y-in-action/accessible-courses/making-homework-write-up-accessible/} [Accessed: July 4, 2025].
-	\bibitem{DailyDevEditors} daily.dev. "10 Best Code Editors with Accessibility Features." Available at: \url{https://daily.dev/blog/10-best-code-editors-with-accessibility-features} [Accessed: July 4, 2025].
-	\bibitem{TinyMCE} TinyMCE Blog. "Accessible Rich Text Editor." Available at: \url{https://www.tiny.cloud/blog/accessible-rich-text-editor/} [Accessed: July 4, 2025].
-	\bibitem{EasyMDE} EasyMDE. "Easy Markdown Editor." Available at: \url{https://github.com/Ionaru/easy-markdown-editor} [Accessed: July 4, 2025].
-	\bibitem{QuartoCommonMark} Quarto. "CommonMark Reference." Available at: \url{https://quarto.org/docs/reference/formats/markdown/commonmark.html} [Accessed: July 4, 2025].
-	\bibitem{AccessR} Paul Northrop. "accessr: Accessible R Markdown Documents." Available at: \url{https://paulnorthrop.github.io/accessr/} [Accessed: July 4, 2025].
-	\bibitem{GitHubDocs} GitHub Docs. "Using Markdown and Liquid in GitHub Docs." Available at: \url{https://docs.github.com/en/contributing/writing-for-github-docs/using-markdown-and-liquid-in-github-docs} [Accessed: July 4, 2025].
-	\bibitem{LaTeXAccessibility} University of Wisconsin. "LaTeX Accessibility." Available at: \url{https://researchguides.library.wisc.edu/latex/accessibility} [Accessed: July 4, 2025].
-	\bibitem{DAISYWiki} Wikipedia. "Digital Accessible Information System." Available at: \url{https://en.wikipedia.org/wiki/Digital_Accessible_Information_System} [Accessed: July 4, 2025].
-	\bibitem{SnowDAISY} SNOW. "DAISY Audio Format." Available at: \url{https://snow.idrc.ocadu.ca/4b-0-alternative-formats/what-are-alternative-formats/audio/daisy/} [Accessed: July 4, 2025].
-	\bibitem{ElsevierEPUB3} Elsevier. "Flexible eBook Solutions: EPUB3." Available at: \url{https://shop.elsevier.com/flexible-ebook-solutions/epub3} [Accessed: July 4, 2025].
-	\bibitem{CNIBEPUB} CNIB Beyond Print. "Making an Accessible EPUB." Available at: \url{https://cnib-beyondprint.ca/making-an-accessible-epub/} [Accessed: July 4, 2025].
-	\bibitem{BrailleProcess} Accessible Print Shop. "The Braille Transcription Process." Available at: \url{https://accessibleprintshop.com/the-braille-transcription-process/} [Accessed: July 4, 2025].
-	\bibitem{Liblouis} American Printing House for the Blind. "Liblouis Braille Translator." Available at: \url{https://tech.aph.org/lt/} [Accessed: July 4, 2025].
-	\bibitem{DAISYPipeline} DAISY Consortium. "DAISY Pipeline Braille User Guide." Available at: \url{http://daisy.github.io/pipeline/Get-Help/User-Guide/Braille/} [Accessed: July 4, 2025].
-	\bibitem{BrailleBlaster} American Printing House for the Blind. "BrailleBlaster." Available at: \url{https://www.aph.org/product/brailleblaster/} [Accessed: July 4, 2025].
-	\bibitem{InclusiveASL} Inclusive ASL. "Accessible Media Services: Braille Transcription." Available at: \url{https://inclusiveasl.com/services/accessible-media-services/braille-transcription/} [Accessed: July 4, 2025].
-	\bibitem{YouTubeBraille} YouTube. "How Braille is Made." Available at: \url{https://www.youtube.com/watch?v=_mnitvxt8zk} [Accessed: July 4, 2025].
-	\bibitem{BrailleTranslatorGH} Sebdababo. "Braille Translator." GitHub Repository. Available at: \url{https://github.com/Sebdababo/Braille-Translator} [Accessed: July 4, 2025].
-	\bibitem{ATAEMBrailleFormatting} ATAEM. "Braille Formatting." Available at: \url{https://ataem.org/Braille-Formatting} [Accessed: July 4, 2025].
-	\bibitem{BRLFormat} BRL.org. "Braille Transcribers: Session 03 - Format." Available at: \url{http://www.brl.org/transcribers/session03/format.html} [Accessed: July 4, 2025].
-	\bibitem{AllThingsOpenPandoc} All Things Open. "Pandoc: Convert Markdown Documents to Office Formats." Available at: \url{https://allthingsopen.org/articles/pandoc-convert-markdown-documents-office-formats/} [Accessed: July 4, 2025].
-	\bibitem{PandocManual} Pandoc. "Pandoc User’s Guide." Available at: \url{https://pandoc.org/MANUAL.html} [Accessed: July 4, 2025].
-	\bibitem{MConverter} MConverter. "Convert Markdown to DOCX." Available at: \url{https://mconverter.eu/convert/markdown/docx/} [Accessed: July 4, 2025].
-	\bibitem{CloudConvert} CloudConvert. "MD to DOCX Converter." Available at: \url{https://cloudconvert.com/md-to-docx} [Accessed: July 4, 2025].
-	\bibitem{PandocLuaFilters} Pandoc. "Lua Filters." Available at: \url{https://pandoc.org/lua-filters.html} [Accessed: July 4, 2025].
-\end{thebibliography}
