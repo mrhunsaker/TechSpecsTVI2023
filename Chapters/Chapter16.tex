@@ -3,7 +3,7 @@
 
 \section{Introduction}
 \label{sec:intro-auditing}
-In the digital age, ensuring that internet-based materials are accessible to all users, including those with disabilities, is not just a matter of ethical responsibility but also a legal and commercial imperative. An accessibility audit\index{accessibility!accessibility testing} is a systematic evaluation of a website, application, or digital document against established accessibility\index{accessibility} standards. This guide provides a comprehensive overview of the principles, methodologies, and tools required to conduct a thorough accessibility audit, from initial planning to remediation\index{accessibility!remediation strategies} and continuous monitoring\index{accessibility!Quality Assurance}.
+In the digital age, ensuring that internet-based materials are accessible to all users, including those with disabilities, is not just a matter of ethical responsibility but also a legal and commercial imperative. An accessibility audit\index{accessibility!accessibility testing} is a systematic evaluation of a website, application, or digital document against established accessibility\index{accessibility} standards \supercite{DisabilityRightsAuditing}. This guide provides a comprehensive overview of the principles, methodologies, and tools required to conduct a thorough accessibility audit, from initial planning to remediation\index{accessibility!remediation strategies} and continuous monitoring\index{accessibility!Quality Assurance} \supercite{Lazar2015}.
 
 \section{Fundamental Principles and Standards}
 \label{sec:principles-standards}
@@ -12,19 +12,22 @@ A successful accessibility audit is grounded in a deep understanding of core acc
 \subsection{Web Content Accessibility Guidelines (WCAG)}
 \label{subsec:wcag}
 The Web Content Accessibility Guidelines\index{WCAG} (WCAG), developed by the World Wide Web Consortium (W3C), are the globally recognized standard for web accessibility. WCAG is organized around four core principles, often remembered by the acronym POUR.
-\supercite{WCAG21}
+\supercite{WCAG21, WCAG2018}
 
 \subsubsection{Perceivable}
 \label{ssubsec:perceivable}
 Information and user interface components must be presentable to users in ways they can perceive. This means providing text alternatives for non-text content, captions for multimedia, and ensuring content is adaptable and distinguishable.
+\supercite{WCAGNonText2018}
 
 \subsubsection{Operable}
 \label{ssubsec:operable}
 User interface components and \gls{navigation} must be operable. This includes making all functionality available from a keyboard, giving users enough time to read and use content, and avoiding content that is known to cause seizures.
+\supercite{WebAIMKeyboardA11y}
 
 \subsubsection{Understandable}
 \label{ssubsec:understandable}
 Information and the operation of the user interface must be understandable. This involves making text readable and understandable, making web pages appear and operate in predictable ways, and helping users avoid and correct mistakes.
+\supercite{Redish2012}
 
 \subsubsection{Robust}
 \label{ssubsec:robust}
@@ -34,10 +37,12 @@ Content must be robust enough that it can be interpreted reliably by a wide vari
 \subsection{Section 508 and Legal Frameworks}
 \label{subsec:section508-legal}
 In the United States, Section 508\index{accessibility!legal accessibility} of the Rehabilitation Act requires federal agencies to make their electronic and information technology\index{technology} accessible to people with disabilities. Many other countries have similar legal frameworks, such as the European Accessibility\index{accessibility} Act, which often reference WCAG as the standard for compliance.
+\supercite{Section5082018, Jaeger2006}
 
 \section{Comprehensive Audit Methodology}
 \label{sec:audit-methodology}
 A thorough accessibility audit\index{accessibility!accessibility testing} combines automated tools, manual testing\index{accessibility!Manual Testing}, and user feedback to identify and address accessibility barriers.
+\supercite{Henry2007}
 
 \subsection{Planning Phase}
 \label{subsec:planning-phase}
@@ -54,6 +59,7 @@ Manual testing is essential for evaluating aspects that automated tools cannot, 
 \subsection{User Testing Phase}
 \label{subsec:user-testing-phase}
 Involving users with disabilities in the testing process provides invaluable insights into the real-world usability of a product. User testing\index{accessibility!User Testing} can uncover issues that may not be apparent through automated or manual testing\index{accessibility!Manual Testing} alone.
+\supercite{Petrie2006}
 
 \section{Automated Testing Tools}
 \label{sec:automated-tools}
@@ -62,14 +68,17 @@ A wide range of automated tools is available to assist in the auditing process, 
 \subsection{Browser Extensions}
 \label{subsec:browser-extensions}
 Browser extensions like WAVE (Web Accessibility\index{accessibility} Evaluation Tool), Axe DevTools, and Accessibility Insights for Web are excellent for quick, on-the-fly testing of individual web pages. They provide visual feedback directly in the browser, making it easy to identify and inspect issues.
+\supercite{WebAIMWave, DequeAxeDevTools, MicrosoftInsights}
 
 \subsection{Comprehensive Scanning Platforms}
 \label{subsec:scanning-platforms}
 Platforms like Siteimprove, Deque's axe Monitor, and Level Access provide comprehensive, site-wide scanning capabilities. They can crawl an entire website, identify accessibility issues, prioritize them based on severity, and provide detailed reports and remediation\index{accessibility!remediation strategies} guidance.
+\supercite{SiteimproveAccessibility, DequeWorldSpace, AudioEyeTesting}
 
 \subsection{Open Source Testing Tools}
 \label{subsec:open-source-tools}
 Open-source tools like Pa11y and axe-core\index{accessibility!NVDA} offer powerful and flexible options for integrating accessibility testing\index{accessibility!accessibility testing} into development workflows. These tools can be run from the command line or integrated into continuous integration\index{accessibility!Quality Assurance} (CI) pipelines to automate testing.
+\supercite{Pa11y, Lighthouse, DequeAxeCore}
 
 \section{Manual Testing Methodologies}
 \label{sec:manual-methodologies}
@@ -78,14 +87,17 @@ Manual testing is a critical component of any \gls{accessibility} audit, requiri
 \subsection{Keyboard Navigation Testing}
 \label{subsec:keyboard-testing}
 This involves navigating a website using only the keyboard (Tab, Shift+Tab, Enter, Spacebar, and arrow keys) to ensure that all interactive elements are reachable and operable\index{accessibility!accessibility principles}, that the focus order is logical, and that a visible focus indicator is always present.
+\supercite{WebAIMKeyboardA11y}
 
 \subsection{Screen Reader Testing}
 \label{subsec:screen-reader-testing}
 Testing with screen readers\index{screen reader} like NVDA, JAWS, or VoiceOver\index{screen reader!VoiceOver} is essential to understand the experience of blind and visually impaired users. This includes checking for proper alt text\index{images and media!alternative text}, heading structure, table and form accessibility\index{accessibility}, and the overall coherence of the content when read aloud.
+\supercite{WebAIM2023, WebAIMSurvey}
 
 \subsection{Color and Contrast Testing}
 \label{subsec:color-contrast-testing}
 This involves using tools like a color contrast\index{accessibility!Manual Testing} analyzer to check that the contrast ratio between text and its background meets WCAG\index{WCAG} requirements. It also includes ensuring that color is not used as the sole means of conveying information.
+\supercite{WebAIMContrastChecker, WCAGContrast2018}
 
 \section{Emerging AI-Powered Accessibility Tools}
 \label{sec:ai-tools}
@@ -94,14 +106,17 @@ Artificial intelligence\index{AI} is increasingly being used to enhance and auto
 \subsection{Machine Learning-Based Testing}
 \label{subsec:ml-testing}
 \gls{machinelearning} models are being trained to identify accessibility issues with greater accuracy and nuance than traditional automated tools. They can analyze visual layouts, identify complex patterns, and even predict potential usability problems for users with different disabilities.
+\supercite{Evinced, Stark2024}
 
 \subsection{Automated Remediation Tools}
 \label{subsec:automated-remediation}
 Some AI-powered tools offer automated remediation\index{accessibility!remediation strategies} capabilities, attempting to fix common accessibility issues on the fly. While these tools can be a useful stopgap, they are not a substitute for building accessibility in from the ground up and should be used with caution.
+\supercite{AccessiBe, UserWay2024}
 
 \subsection{Natural Language Processing for Content Analysis}
 \label{subsec:nlp-analysis}
 Natural Language Processing (NLP) can be used to analyze the readability and complexity of content, automatically generate summaries, and even suggest simpler language to improve understandability for users with cognitive disabilities.
+\supercite{Lundgard2022Accessible}
 
 \section{Commercial vs. Open Source Solutions}
 \label{sec:commercial-vs-open-source}
@@ -126,18 +141,22 @@ Identifying accessibility\index{accessibility} issues is only the first step. A 
 \subsection{Prioritizing Accessibility Issues}
 \label{subsec:prioritizing-issues}
 Issues should be prioritized based on their impact on users and the severity of the WCAG\index{WCAG} violation. Critical issues that block access for users should be addressed first.
+\supercite{PowerAccessibility}
 
 \subsection{Technical Remediation Approaches}
 \label{subsec:technical-remediation}
 This involves fixing issues in the underlying code, such as adding ARIA\index{accessibility!ARIA} attributes, fixing incorrect HTML semantics, and ensuring JavaScript-powered components are accessible.
+\supercite{ARIA}
 
 \subsection{Content Remediation Strategies}
 \label{subsec:content-remediation}
 This focuses on improving the accessibility of the content itself, such as writing clear and concise alt text\index{images and media!alternative text}, providing transcripts for audio and video, and simplifying language.
+\supercite{WCAGNonText2018}
 
 \subsection{Design Remediation Principles}
 \label{subsec:design-remediation}
 This involves making changes to the visual design of a product, such as increasing color contrast\index{accessibility!Manual Testing}, improving the visibility of focus indicators, and creating more intuitive layouts.
+\supercite{Ware2012}
 
 \section{Quality Assurance and Continuous Monitoring}
 \label{sec:qa-monitoring}
@@ -150,6 +169,7 @@ Organizations should develop clear protocols for when and how accessibility test
 \subsection{Continuous Integration and Deployment}
 \label{subsec:ci-cd}
 Integrating automated accessibility\index{accessibility} tests into CI/CD pipelines helps catch issues early and prevents regressions from being introduced.
+\supercite{Fowler2013}
 
 \subsection{Performance Monitoring and Analytics}
 \label{subsec:performance-analytics}
@@ -162,10 +182,12 @@ Embedding accessibility into an organization's culture is key to long-term succe
 \subsection{Stakeholder Education and Training}
 \label{subsec:stakeholder-training}
 All stakeholders, from designers and developers to content creators and project managers, should receive training on their role in creating accessible products.
+\supercite{PEATTraining}
 
 \subsection{Policy Development and Governance}
 \label{subsec:policy-governance}
 Establishing a formal accessibility policy and a clear governance structure helps ensure that accessibility is a consistent priority across the organization.
+\supercite{Lazar2015}
 
 \section{Future Trends and Considerations}
 \label{sec:future-trends}
@@ -174,15 +196,19 @@ The field of digital accessibility\index{digital accessibility} is constantly ev
 \subsection{Emerging Technologies and Accessibility}
 \label{subsec:emerging-tech-a11y}
 New technologies like virtual and augmented reality present new challenges and opportunities for accessibility that will require new standards and best practices.
+\supercite{W3CEmergingTechA11y}
 
 \subsection{Regulatory Evolution}
 \label{subsec:regulatory-evolution}
 The legal and regulatory landscape for \gls{digitalaccessibility} is likely to continue to evolve, with increasing enforcement and new legislation.
+\supercite{WCAG3Draft}
 
 \subsection{Artificial Intelligence and Automation\index{AI!AI and accessibility}}
 \label{subsec:ai-automation}
 AI will play an increasingly important role in both creating and auditing for accessibility\index{accessibility}, but human oversight and expertise will remain essential.
+\supercite{MicrosoftAIAccessibility, GoogleMLAccessibility}
 
 \section{Conclusion}
 \label{sec:conclusion-auditing}
 A comprehensive accessibility audit\index{accessibility!accessibility testing} is a critical tool for any organization committed to digital inclusion. By combining automated tools, manual testing\index{accessibility!Manual Testing}, and user feedback, organizations can identify and remediate accessibility\index{accessibility} barriers, ensuring that their internet-based materials are usable by the widest possible audience. The journey to full accessibility is ongoing, requiring a sustained commitment to testing, remediation\index{accessibility!remediation strategies}, and continuous improvement. Ultimately, building accessibility into the core of an organization's processes and culture is the most effective way to create truly inclusive digital experiences.
+\supercite{Thatcher2006}

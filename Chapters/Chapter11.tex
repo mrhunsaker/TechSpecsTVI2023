@@ -1,4 +1,4 @@
-\chapter{Comprehensive Report on Tools for Creating and Reading Accessible Mathematics and Scientific Materials}\label{ch11:accessible-math}
+\chapter{Tools for Creating and Reading Accessible Mathematics and Scientific Materials}\label{ch11:accessible-math}
 \raggedright
 
 \section{Abstract}\label{ch11:sec:abstract}
@@ -6,63 +6,63 @@ This chapter provides a comprehensive analysis of the tools and technologies ava
 
 \section{Introduction}\label{ch11:sec:introduction}
 \subsection{The Imperative of Accessible Mathematical and Scientific Content}\label{ch11:ssec:imperative}
-The increasing digitalization of educational materials necessitates a strong focus on accessibility\index{accessibility}, particularly for complex content like mathematics. Ensuring mathematical content is accessible is a legal requirement under mandates such as the Americans with Disabilities Act (ADA)\index{accessibility!legal accessibility!ADA} and a critical component of educational equity\index{equitable access}. Students with visual impairments and other learning challenges often face significant barriers when interacting with traditional math formats, which frequently embed equations as inaccessible static images \supercite{UWAccessibleMath}. This "accessibility gap" hinders comprehension and participation, making robust technological solutions essential.
+The increasing digitalization of educational materials necessitates a strong focus on accessibility\index{accessibility}, particularly for complex content like mathematics. Ensuring mathematical content is accessible is a legal requirement under mandates such as the Americans with Disabilities Act (ADA)\index{accessibility!legal accessibility!ADA} and a critical component of educational equity\index{equitable access}. Students with visual impairments and other learning challenges often face significant barriers when interacting with traditional math formats, which frequently embed equations as inaccessible static images \supercite{UWAccessibleMath, ChallengesForVisuallyImpairedUsers}. This "accessibility gap" hinders comprehension and participation, making robust technological solutions essential.
 
 \subsection{Foundational Accessibility Standards: MathML and WCAG}\label{ch11:ssec:standards}
-\textbf{\gls{MathML} (Mathematical Markup Language)}\index{MathML} is the W3C\index{organizations!W3C} standard for displaying mathematical content on the web. As an \gls{XML}-based language, it encodes both the presentation and the semantic meaning of an equation, allowing assistive technologies like screen readers\index{screen reader} to interpret and voice the content correctly \supercite{W3CMathML}. This is a crucial advantage over \gls{LateX}\index{LaTeX}, which is designed for visual typesetting and is not natively accessible without conversion to \gls{MathML}, often via a library like MathJax\index{software!math rendering!MathJax} \supercite{MathJax}.
+\textbf{\gls{MathML} (Mathematical Markup Language)}\index{MathML} is the W3C\index{organizations!W3C} standard for displaying mathematical content on the web. As an \gls{XML}-based language, it encodes both the presentation and the semantic meaning of an equation, allowing assistive technologies like screen readers\index{screen reader} to interpret and voice the content correctly \supercite{W3CMathML, W3CMathML3, W3CMathML4}. This is a crucial advantage over \gls{LateX}\index{LaTeX}, which is designed for visual typesetting and is not natively accessible without conversion to \gls{MathML}, often via a library like MathJax\index{software!math rendering!MathJax} \supercite{MathJax, LaTeXProject}.
 
-\textbf{\gls{WCAG} (Web Content Accessibility Guidelines)}\index{WCAG} provide a framework for creating accessible web content. Tools for accessible math, both commercial and open-source, often adhere to \gls{WCAG} standards to ensure their interfaces and outputs are usable by people with disabilities \supercite{WCAG20}.
+\textbf{\gls{WCAG} (Web Content Accessibility Guidelines)}\index{WCAG} provide a framework for creating accessible web content. Tools for accessible math, both commercial and open-source, often adhere to \gls{WCAG} standards to ensure their interfaces and outputs are usable by people with disabilities \supercite{WCAG20, WCAG21W3C2018}.
 
 \subsection{Overview of Math OCR and AI in Accessibility}\label{ch11:ssec:math-ocr-ai}
-Optical Character Recognition (OCR) is the technology used to convert images of text into machine-readable text data \supercite{AdobeOCR}. Mathematical Optical Character Recognition (\gls{mathOCR})\index{Optical Character Recognition (OCR)!mathematical} is a specialized technology that digitizes mathematical expressions from images and PDFs. Unlike standard \gls{OCR}, \gls{mathOCR} must interpret the complex two-dimensional structure of equations. The integration of Artificial Intelligence (\gls{AI})\index{AI}, particularly deep learning\index{AI!deep learning}, has significantly advanced \gls{mathOCR}, enabling it to recognize even handwritten or poorly formatted equations with high accuracy \supercite{AIinOCR}. Tools like Marker\index{software!document conversion!Marker} are at the forefront, converting unstructured documents into clean, accessible markup like \gls{LateX} and \gls{MathML} \supercite{Marker}.
+Optical Character Recognition (OCR) is the technology used to convert images of text into machine-readable text data \supercite{AdobeOCR, ContinualEngineOCR}. Mathematical Optical Character Recognition (\gls{mathOCR})\index{Optical Character Recognition (OCR)!mathematical} is a specialized technology that digitizes mathematical expressions from images and PDFs. Unlike standard \gls{OCR}, \gls{mathOCR} must interpret the complex two-dimensional structure of equations. The integration of Artificial Intelligence (\gls{AI})\index{AI}, particularly deep learning\index{AI!deep learning}, has significantly advanced \gls{mathOCR}, enabling it to recognize even handwritten or poorly formatted equations with high accuracy \supercite{AIinOCR, DeepLearningOCROverview, ArxivMER2103}. Tools like Marker\index{software!document conversion!Marker} are at the forefront, converting unstructured documents into clean, accessible markup like \gls{LateX} and \gls{MathML} \supercite{Marker, MarkerDocs}.
 
 \section{Advancements in AI-Powered Math OCR}\label{ch11:sec:ai-ocr-advancements}
 \subsection{Core Technologies and Deep Learning Architectures}\label{ch11:ssec:core-tech}
-Modern \gls{mathOCR} systems utilize deep learning models, such as Convolutional Neural Networks (CNNs)\index{AI!deep learning!CNN} for symbol recognition and Recurrent Neural Networks (RNNs)\index{AI!deep learning!RNN} or Transformers\index{AI!deep learning!Transformers} for analyzing the spatial relationships between symbols. These models are trained on vast datasets of mathematical expressions to achieve high accuracy.
+Modern \gls{mathOCR} systems utilize deep learning models, such as Convolutional Neural Networks (CNNs)\index{AI!deep learning!CNN} for symbol recognition and Recurrent Neural Networks (RNNs)\index{AI!deep learning!RNN} or Transformers\index{AI!deep learning!Transformers} for analyzing the spatial relationships between symbols. These models are trained on vast datasets of mathematical expressions to achieve high accuracy \supercite{ArxivMER2203, ArxivMER2303}.
 
 \subsection{Challenges and Solutions in Mathematical Expression Recognition}\label{ch11:ssec:challenges}
-Recognizing mathematical expressions is challenging due to the large number of symbols, complex 2D layouts, and ambiguity (e.g., a horizontal line could be a fraction bar or a minus sign). \gls{AI}-powered systems address this by learning the contextual rules of mathematical notation from data, rather than relying on hand-coded rules.
+Recognizing mathematical expressions is challenging due to the large number of symbols, complex 2D layouts, and ambiguity (e.g., a horizontal line could be a fraction bar or a minus sign). \gls{AI}-powered systems address this by learning the contextual rules of mathematical notation from data, rather than relying on hand-coded rules \supercite{ResearchGateMathSVM, WorldScientificMathOCR}.
 
 \subsection{Semantic Enrichment for Enhanced Accessibility}\label{ch11:ssec:semantic-enrichment}
-The most advanced systems do not just recognize symbols; they parse the mathematical structure to generate semantically rich output like \gls{MathML}\index{MathML!semantic}. This means the output understands that $\frac{a}{b}$ is a fraction with a numerator $a$ and a denominator $b$, which is crucial for intelligent navigation by screen readers.
+The most advanced systems do not just recognize symbols; they parse the mathematical structure to generate semantically rich output like \gls{MathML}\index{MathML!semantic}. This means the output understands that $\frac{a}{b}$ is a fraction with a numerator $a$ and a denominator $b$, which is crucial for intelligent navigation by screen readers \supercite{IBMSemanticAI, OntotextSemanticAI}.
 
 \section{The Role of Marker and Similar Tools in Math OCR Workflows}\label{ch11:sec:marker}
 \subsection{Marker's Capabilities for Document and Math Conversion}\label{ch11:ssec:marker-capabilities}
 Marker\index{software!document conversion!Marker} is an open-source tool that converts PDFs to Markdown, with excellent support for mathematical content. It can detect and convert equations into \gls{LateX}, preserving the mathematical structure of the original document with high fidelity \supercite{Marker}.
 
 \subsection{Integration with Large Language Models (LLMs) for Accuracy}\label{ch11:ssec:marker-llm}
-Marker can optionally use Large Language Models (\gls{LLM})\index{AI!LLM} to improve the quality of its output, such as fixing \gls{OCR} errors or improving text flow. This combination of deep learning for layout detection and \gls{LLM}s for content refinement represents the state-of-the-art in document conversion.
+Marker can optionally use Large Language Models (\gls{LLM})\index{AI!LLM} to improve the quality of its output, such as fixing \gls{OCR} errors or improving text flow. This combination of deep learning for layout detection and \gls{LLM}s for content refinement represents the state-of-the-art in document conversion \supercite{MarkerDocs}.
 
 \subsection{Practical Workflows for LaTeX and MathML Output}\label{ch11:ssec:marker-workflows}
 A typical workflow for making a legacy PDF accessible involves:
 \begin{enumerate}
 	\item Processing the PDF with Marker to convert it to a Markdown file with \gls{LateX} equations.
 	\item Reviewing the generated Markdown for any \gls{OCR} errors.
-	\item Using a tool like Pandoc\index{software!document conversion!Pandoc} to convert the Markdown file into an accessible HTML file, where the \gls{LateX} is automatically rendered as \gls{MathML} by a library like MathJax\index{software!math rendering!MathJax}.
+	\item Using a tool like Pandoc\index{software!document conversion!Pandoc} to convert the Markdown file into an accessible HTML file, where the \gls{LateX} is automatically rendered as \gls{MathML} by a library like MathJax\index{software!math rendering!MathJax} \supercite{PandocDocs}.
 \end{enumerate}
 
 \subsubsection{Converting to LaTeX for Structured Math}\label{ch11:sssec:marker-latex}
 Marker's direct output to \gls{LateX}\index{LaTeX} is ideal for archiving, further editing in scientific document workflows, or as an intermediate format for conversion to other accessible formats.
 
 \subsubsection{Generating MathML for Web and Assistive Technologies}\label{ch11:sssec:marker-mathml}
-The final conversion of \gls{LateX} to \gls{MathML}\index{MathML} is the key step for web accessibility. \gls{MathML} is natively supported by modern web browsers and is the most robust format for interaction with screen readers and other assistive technologies.
+The final conversion of \gls{LateX} to \gls{MathML}\index{MathML} is the key step for web accessibility. \gls{MathML} is natively supported by modern web browsers and is the most robust format for interaction with screen readers and other assistive technologies \supercite{W3CMathMLWeb}.
 
 \section{Commercial Tools for Creating and Reading Accessible STEM Materials}\label{ch11:sec:commercial-tools}
 \subsection{Equatio (Texthelp)}\label{ch11:ssec:equatio}
-Equatio\index{software!math authoring!Equatio} is a popular tool that allows users to type, handwrite, or dictate equations directly into digital documents. It generates accessible \gls{MathML} and integrates with many platforms \supercite{TexthelpEquatio}.
+Equatio\index{software!math authoring!Equatio} is a popular tool that allows users to type, handwrite, or dictate equations directly into digital documents. It generates accessible \gls{MathML} and integrates with many platforms \supercite{TexthelpEquatio, EquatioPricing}.
 
 \subsection{MathType (WIRIS)}\label{ch11:ssec:mathtype}
-MathType\index{software!math authoring!MathType} is a powerful graphical editor for mathematical equations that integrates with Microsoft Word, Google Docs, and other applications. It is a long-standing tool for creating high-quality, accessible math content \supercite{WIRISMathType}.
+MathType\index{software!math authoring!MathType} is a powerful graphical editor for mathematical equations that integrates with Microsoft Word, Google Docs, and other applications. It is a long-standing tool for creating high-quality, accessible math content \supercite{WIRISMathType, WIRISMathTypeFeatures}.
 
 \subsection{Blackboard's Built-in Math Editor (WIRIS)}\label{ch11:ssec:blackboard-wiris}
 Many learning management systems, like Blackboard\index{LMS!Blackboard}, embed the WIRIS\index{software!math authoring!WIRIS} editor to provide a built-in, accessible way for students and instructors to create and share mathematical notation.
 
 \subsection{MathPix}\label{ch11:ssec:MathPix}
-MathPix\index{software!OCR!MathPix} is a powerful \gls{OCR} tool that can capture equations from a screen or image and convert them into \gls{LateX}, \gls{MathML}, and other formats. It is particularly popular among STEM students and researchers for its speed and accuracy \supercite{MathPix}.
+MathPix\index{software!OCR!MathPix} is a powerful \gls{OCR} tool that can capture equations from a screen or image and convert them into \gls{LateX}, \gls{MathML}, and other formats. It is particularly popular among STEM students and researchers for its speed and accuracy \supercite{MathPix, MathpixSnip}.
 
 \section{Open-Source Tools for Creating and Reading Accessible STEM Materials}\label{ch11:sec:open-source-tools}
 \subsection{MathJax}\label{ch11:ssec:mathjax}
-MathJax\index{software!math rendering!MathJax} is a JavaScript library that displays mathematical notation in web browsers. It can take \gls{LateX} or \gls{MathML} as input and renders it as accessible HTML with \gls{MathML}, making it a cornerstone of web-based math accessibility \supercite{MathJax}.
+MathJax\index{software!math rendering!MathJax} is a JavaScript library that displays mathematical notation in web browsers. It can take \gls{LateX} or \gls{MathML} as input and renders it as accessible HTML with \gls{MathML}, making it a cornerstone of web-based math accessibility \supercite{MathJax, MathJaxDocs}.
 
 \subsection{Chirun}\label{ch11:ssec:chirun}
 Chirun\index{software!document conversion!Chirun} is an open-source tool for creating accessible teaching materials. It can convert Markdown documents containing \gls{LateX} math into accessible web pages, e-books, and other formats \supercite{Chirun}.
@@ -75,7 +75,7 @@ KAlgebra\index{software!graphing!KAlgebra} is a graphing calculator and computer
 
 \section{Presentation for Accessibility: LaTeX, MathML, and Braille}\label{ch11:sec:presentation}
 \subsection{LaTeX for High-Quality Mathematical Typesetting}\label{ch11:ssec:latex}
-While not natively accessible, \gls{LateX}\index{LaTeX} remains the standard for authoring high-quality mathematical documents. The key to its accessibility is a reliable workflow for converting its output to an accessible format like HTML with \gls{MathML}.
+While not natively accessible, \gls{LateX}\index{LaTeX} remains the standard for authoring high-quality mathematical documents. The key to its accessibility is a reliable workflow for converting its output to an accessible format like HTML with \gls{MathML} \supercite{LaTeXProject, LaTeXMathematics}.
 
 \subsection{Braille Transcription: Codes, Software, and AI Integration}\label{ch11:ssec:braille}
 For blind users who read braille\index{braille}, mathematical content must be transcribed into a specialized code like Nemeth Code\index{braille!math codes!Nemeth} or UEB Math\index{braille!math codes!UEB}.
@@ -84,14 +84,14 @@ For blind users who read braille\index{braille}, mathematical content must be tr
 Software like Duxbury Braille Translator (DBT)\index{software!braille!Duxbury Braille Translator (DBT)} and BrailleBlaster\index{software!braille!BrailleBlaster} can convert digital documents containing math into formatted braille files. They often take \gls{LateX} or \gls{MathML} as input, highlighting the importance of these formats as intermediary steps \supercite{Duxbury, BrailleBlaster}.
 
 \subsubsection{AI in Braille Translation Workflows}\label{ch11:sssec:ai-braille}
-\gls{AI}\index{AI!in braille translation} is beginning to be used to improve the accuracy and efficiency of braille translation. For example, \gls{AI} could help in choosing the best formatting for a complex equation to maximize readability in braille, a task that currently requires significant human expertise.
+\gls{AI}\index{AI!in braille translation} is beginning to be used to improve the accuracy and efficiency of braille translation. For example, \gls{AI} could help in choosing the best formatting for a complex equation to maximize readability in braille, a task that currently requires significant human expertise \supercite{AIBrailleTranslation, AIGenMath}.
 
 \section{Accessible Math Visualization and Graphing Tools}\label{ch11:sec:visualization}
 \subsection{Desmos Accessible Graphing Calculator}\label{ch11:ssec:desmos}
-The Desmos\index{software!graphing!Desmos} graphing calculator has set a new standard for accessibility. Users can explore graphs via audio tracing (sonification)\index{sonification}, and the interface is fully keyboard-accessible and compatible with screen readers \supercite{Desmos}.
+The Desmos\index{software!graphing!Desmos} graphing calculator has set a new standard for accessibility. Users can explore graphs via audio tracing (sonification)\index{sonification}, and the interface is fully keyboard-accessible and compatible with screen readers \supercite{Desmos, DesmosAccessibility}.
 
 \subsection{Audio Graphing Calculators}\label{ch11:ssec:audio-graphing}
-Other tools, like the ViewPlus IVEO\index{hardware!tactile graphics!ViewPlus IVEO} and the Audio Graphing Calculator\index{software!graphing!Audio Graphing Calculator} from ViewPlus\index{organizations!ViewPlus}, provide multi-sensory access to graphs through a combination of audio feedback and tactile graphics\index{tactile graphics} \supercite{ViewPlusAGC}.
+Other tools, like the ViewPlus IVEO\index{hardware!tactile graphics!ViewPlus IVEO} and the Audio Graphing Calculator\index{software!graphing!Audio Graphing Calculator} from ViewPlus\index{organizations!ViewPlus}, provide multi-sensory access to graphs through a combination of audio feedback and tactile graphics\index{tactile graphics} \supercite{ViewPlusAGC, OrionTI84}.
 
 \subsection{Tactile Graphics Production (e.g., via Braille Embossers)}\label{ch11:ssec:tactile-graphics}
 For complex visualizations, tactile graphics\index{tactile graphics} remain essential. High-resolution braille embossers\index{hardware!embosser} can produce tactile versions of graphs and diagrams, often taking input from accessible graphing tools.
@@ -101,13 +101,13 @@ Tools like the ASU Image Accessibility Generator\index{software!accessibility!AS
 
 \section{Ethical Considerations and Future Directions}\label{ch11:sec:ethics}
 \subsection{Bias and Fairness in AI}\label{ch11:ssec:bias}
-\gls{AI} models for \gls{mathOCR} must be trained on diverse datasets to ensure they work well for all types of notation and handwriting. Bias in training data\index{AI!bias} can lead to lower accuracy for underrepresented groups.
+\gls{AI} models for \gls{mathOCR} must be trained on diverse datasets to ensure they work well for all types of notation and handwriting. Bias in training data\index{AI!bias} can lead to lower accuracy for underrepresented groups \supercite{AIEthicsBias, BiasinAI}.
 
 \subsection{Data Privacy and Security}\label{ch11:ssec:privacy}
-Cloud-based \gls{OCR} and \gls{AI} tools process user data, which can include sensitive educational records. It is crucial that these services have strong privacy\index{privacy} and security policies. Locally hosted, open-source tools can offer a more private alternative.
+Cloud-based \gls{OCR} and \gls{AI} tools process user data, which can include sensitive educational records. It is crucial that these services have strong privacy\index{privacy} and security policies. Locally hosted, open-source tools can offer a more private alternative \supercite{DataPrivacyAI}.
 
 \subsection{Future Outlook}\label{ch11:ssec:future}
-The future of accessible math lies in the seamless integration of \gls{AI}-powered \gls{OCR}, structured semantic formats like \gls{MathML}, and multi-modal presentation (visual, auditory, and tactile). The goal is to create a flexible ecosystem where users can access mathematical content in the way that works best for them.
+The future of accessible math lies in the seamless integration of \gls{AI}-powered \gls{OCR}, structured semantic formats like \gls{MathML}, and multi-modal presentation (visual, auditory, and tactile). The goal is to create a flexible ecosystem where users can access mathematical content in the way that works best for them \supercite{Kim2023, W3CEmergingTechA11y}.
 
 \section{Conclusion}\label{ch11:sec:conclusion}
 The creation and consumption of accessible mathematical and scientific materials have been revolutionized by a combination of established standards and cutting-edge technologies. The foundational role of \gls{MathML} in providing semantic, structured data for assistive technologies is undeniable. \gls{AI}-powered \gls{OCR} tools like Marker have dramatically lowered the barrier to converting legacy documents into accessible formats. Combined with a rich ecosystem of commercial and open-source authoring tools, graphing calculators, and braille transcription software, the resources to create truly accessible STEM content are more powerful and available than ever before. The key to success lies in understanding these components and implementing a workflow that prioritizes accessibility from start to finish.

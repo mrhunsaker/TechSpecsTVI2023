@@ -1,0 +1,3437 @@
+[
+  {
+    "key": "64ouncebraille",
+    "note": "Describes a 3D-printed universal core vocabulary system designed for accessibility, particularly for individuals with visual impairments.",
+    "cited": false
+  },
+  {
+    "key": "A11yProject",
+    "note": "A community-driven resource offering guidelines, tools, and best practices for web accessibility, including techniques for developers and designers.",
+    "cited": false
+  },
+  {
+    "key": "AAOApps",
+    "note": "A curated list of apps and devices that assist individuals with vision impairments, covering navigation, reading, and daily living tools.",
+    "cited": false
+  },
+  {
+    "key": "AAOTechnologyTools",
+    "note": "Focuses on assistive technologies tailored for children with low vision, including educational tools and adaptive devices.",
+    "cited": false
+  },
+  {
+    "key": "ABBYYAIOCR",
+    "note": "Explores how AI enhances optical character recognition (OCR) accuracy and efficiency, particularly for complex documents and multilingual text.",
+    "cited": false
+  },
+  {
+    "key": "ABlindLegend",
+    "note": "An audio-based adventure game designed for blind players, relying entirely on sound and spatial audio for gameplay.",
+    "cited": false
+  },
+  {
+    "key": "AbstractaBlackBoxAI",
+    "note": "Discusses strategies for making AI systems more transparent and interpretable, addressing the \"black box\" problem in machine learning.",
+    "cited": false
+  },
+  {
+    "key": "ACB",
+    "note": "An advocacy organization promoting the rights and opportunities of blind and visually impaired individuals through policy, education, and technology.",
+    "cited": false
+  },
+  {
+    "key": "AccessBrailleRAP",
+    "note": "An open-source braille embosser project aimed at making braille production more affordable and accessible.",
+    "cited": false
+  },
+  {
+    "key": "AccessiBe",
+    "note": "A web accessibility solution using AI to automatically adjust websites for compliance with accessibility standards like WCAG.",
+    "cited": false
+  },
+  {
+    "key": "AccessiBe2024",
+    "note": "Provides automated tools to make websites accessible for users with disabilities, including screen reader optimization and keyboard navigation.",
+    "cited": false
+  },
+  {
+    "key": "AccessiBeFonts",
+    "note": "A guide to selecting fonts that meet ADA accessibility standards, focusing on readability and legibility for users with visual impairments.",
+    "cited": false
+  },
+  {
+    "key": "AccessibilityInsights",
+    "note": "A suite of tools for developers to identify and fix accessibility issues in web and Windows applications, ensuring compliance with standards.",
+    "cited": false
+  },
+  {
+    "key": "AccessibilityTrainingEducation",
+    "note": "Resources and materials for educators to learn about disability rights and the use of assistive technologies in educational settings.",
+    "cited": false
+  },
+  {
+    "key": "AccessibleGraphs",
+    "note": "An initiative to create accessible graph visualizations for individuals with visual impairments, using tactile and auditory feedback.",
+    "cited": false
+  },
+  {
+    "key": "accessiblepharmacy2024",
+    "note": "Highlights AI-powered tools that assist blind and visually impaired individuals with tasks like navigation, reading, and object recognition.",
+    "cited": false
+  },
+  {
+    "key": "AccessibleProcurementGuidelines",
+    "note": "Guidelines for educational institutions to ensure the procurement of technology that meets accessibility standards for students with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "AccessVizWorkshop",
+    "note": "A workshop focused on creating accessible data visualizations, incorporating techniques like sonification and tactile graphics.",
+    "cited": false
+  },
+  {
+    "key": "AccommodationsBestPractices",
+    "note": "Best practices for implementing digital accommodations in educational settings to support students with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "AchievesEquityCompliance",
+    "note": "A framework or standard for ensuring that accessibility measures achieve true equity in compliance, beyond minimal legal requirements.",
+    "cited": false
+  },
+  {
+    "key": "ADA1990",
+    "note": "Landmark U.S. legislation prohibiting discrimination based on disability and mandating accessibility in public spaces, employment, and services.",
+    "cited": false
+  },
+  {
+    "key": "Adams2000ImpactOfTechnology",
+    "note": "Explores the impact of technology on literacy and learning, with a focus on inclusive practices for diverse learners.",
+    "cited": false
+  },
+  {
+    "key": "AdaptingInfographics",
+    "note": "Guidelines for adapting infographics to make them accessible, including alternative text and simplified layouts.",
+    "cited": false
+  },
+  {
+    "key": "ADARequirements",
+    "note": "Official documentation outlining the requirements of the ADA, including accessibility standards for public and private entities.",
+    "cited": false
+  },
+  {
+    "key": "AddeptoAIOCR",
+    "note": "Discusses advancements in OCR technology through AI, improving accuracy and efficiency in document processing and accessibility.",
+    "cited": false
+  },
+  {
+    "key": "AdobeOCR",
+    "note": "An overview of optical character recognition (OCR) technology, its applications, and how it converts scanned documents into editable text.",
+    "cited": false
+  },
+  {
+    "key": "AEMCenter",
+    "note": "Resources and training on assistive technologies for educators, supporting students with disabilities in accessing educational materials.",
+    "cited": false
+  },
+  {
+    "key": "AFBGPS2023",
+    "note": "Guidance on using smartphone GPS apps for navigation by individuals with visual impairments, including app recommendations and tips.",
+    "cited": false
+  },
+  {
+    "key": "AFBiOS",
+    "note": "A resource outlining accessibility features in iOS for blind and visually impaired users, including VoiceOver and magnification tools.",
+    "cited": false
+  },
+  {
+    "key": "AFBMagnification",
+    "note": "Information on screen magnification software, helping users with low vision to enlarge and enhance on-screen content.",
+    "cited": false
+  },
+  {
+    "key": "AFBScreenMagnification",
+    "note": "Explores the benefits and features of screen magnification tools for individuals with low vision, enhancing digital accessibility.",
+    "cited": false
+  },
+  {
+    "key": "AIBrailleTranslation",
+    "note": "Investigates the use of AI to improve braille translation accuracy and efficiency, particularly for complex documents.",
+    "cited": false
+  },
+  {
+    "key": "AIComputationalRequirements",
+    "note": "Analyzes the hardware and software requirements for deploying AI-based accessibility solutions, including processing power and memory needs.",
+    "cited": false
+  },
+  {
+    "key": "AIGenMath",
+    "note": "Focuses on AI techniques for translating mathematical notation into braille, addressing challenges in accuracy and formatting.",
+    "cited": false
+  },
+  {
+    "key": "AIinAccessibility",
+    "note": "A comprehensive report on how AI is being integrated into assistive technologies to enhance accessibility for individuals with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "AIinOCR",
+    "note": "Explains AI-powered OCR technology, its benefits over traditional OCR, and applications in document processing and accessibility.",
+    "cited": false
+  },
+  {
+    "key": "aimodels2024",
+    "note": "Research paper on AI-driven tools that assist individuals with visual impairments, including object recognition and navigation aids.",
+    "cited": false
+  },
+  {
+    "key": "AllAboutVision2023",
+    "note": "Practical tips for making homes more accessible for individuals with blindness or low vision, including lighting and organization strategies.",
+    "cited": false
+  },
+  {
+    "key": "Alotaibi2020",
+    "note": "Examines the effectiveness of tactile teaching methods in programming education for students with visual impairments.",
+    "cited": false
+  },
+  {
+    "key": "AMD2024RyzenPerformance",
+    "note": "Overview of AMD Ryzen processors, highlighting their performance features and suitability for various computing tasks.",
+    "cited": false
+  },
+  {
+    "key": "AMDAIAcceleration",
+    "note": "Details AMD's AI acceleration technologies, including hardware and software optimizations for machine learning workloads.",
+    "cited": false
+  },
+  {
+    "key": "AMDAIProcessing",
+    "note": "Explores AMD's advancements in AI processing, focusing on integration with CPUs and GPUs for enhanced performance.",
+    "cited": false
+  },
+  {
+    "key": "AMDMachineLearning",
+    "note": "Discusses the use of AMD processors in machine learning applications, including performance benchmarks and use cases.",
+    "cited": false
+  },
+  {
+    "key": "AMDRyzenAI",
+    "note": "Highlights AMD Ryzen AI capabilities, focusing on accelerating AI workloads for consumer and professional applications.",
+    "cited": false
+  },
+  {
+    "key": "AMDRyzenAI300",
+    "note": "Details the features and performance of AMD's Ryzen AI 300 series processors, designed for AI-enhanced computing.",
+    "cited": false
+  },
+  {
+    "key": "AMDRyzenPerformance",
+    "note": "Technical specifications and performance metrics for AMD Ryzen desktop processors, including benchmarks and comparisons.",
+    "cited": false
+  },
+  {
+    "key": "AmericanRecoveryAct",
+    "note": "Information on funding opportunities under the American Recovery Plan Act for assistive technology in education.",
+    "cited": false
+  },
+  {
+    "key": "AnandTech2023CPUReview",
+    "note": "Reviews the latest CPU models, focusing on performance metrics and suitability for various applications, including accessibility tools.",
+    "cited": false
+  },
+  {
+    "key": "AnandTech2023MemoryControllers",
+    "note": "Analyzes advancements in memory controller technology, particularly DDR5, and its impact on system performance and efficiency.",
+    "cited": false
+  },
+  {
+    "key": "Android16Release",
+    "note": "Release notes for Android 16, detailing new features, improvements, and accessibility enhancements.",
+    "cited": false
+  },
+  {
+    "key": "AndroidAccessibility",
+    "note": "Overview of built-in accessibility features in Android, including TalkBack, magnification, and voice control.",
+    "cited": false
+  },
+  {
+    "key": "AODA",
+    "note": "Legislation in Ontario, Canada, aimed at improving accessibility standards for individuals with disabilities in public and private sectors.",
+    "cited": false
+  },
+  {
+    "key": "APH",
+    "note": "A nonprofit organization providing accessible educational materials and assistive technologies for individuals with visual impairments.",
+    "cited": false
+  },
+  {
+    "key": "APH2025",
+    "note": "An online typing tool designed for individuals with visual impairments, featuring accessibility-focused typing exercises and feedback.",
+    "cited": false
+  },
+  {
+    "key": "APHBrailleBlasterFeatures",
+    "note": "Detailed description of BrailleBlaster's capabilities, including support for multiple braille codes and integration with other tools.",
+    "cited": false
+  },
+  {
+    "key": "APHChameleon",
+    "note": "A portable braille display with 20 cells, designed for note-taking and reading braille on the go.",
+    "cited": false
+  },
+  {
+    "key": "APHCodeJumper",
+    "note": "A physical coding language designed to teach programming concepts to blind and visually impaired children through tactile interaction.",
+    "cited": false
+  },
+  {
+    "key": "APHCodeJumperMS",
+    "note": "Training resources for educators on using Code Jumper, an inclusive physical coding language for students with visual impairments.",
+    "cited": false
+  },
+  {
+    "key": "APHMantis",
+    "note": "A portable electronic magnifier designed for individuals with low vision, featuring high-resolution displays and adjustable settings.",
+    "cited": false
+  },
+  {
+    "key": "APHMonarch",
+    "note": "A braille embosser designed for high-volume braille production, suitable for educational and professional use.",
+    "cited": false
+  },
+  {
+    "key": "APHQuotaFunds",
+    "note": "Indicates that certain assistive technologies are commonly acquired through quota funds allocated by the American Printing House for the Blind.",
+    "cited": false
+  },
+  {
+    "key": "Appendices1to4",
+    "note": "Supplementary materials providing detailed technical specifications and user guides for the referenced technologies.",
+    "cited": false
+  },
+  {
+    "key": "Appendix5",
+    "note": "A collection of additional resources, including references, tools, and further reading related to the document's topic.",
+    "cited": false
+  },
+  {
+    "key": "AppleAccessibility",
+    "note": "Apple's official accessibility page, showcasing features like VoiceOver, Magnifier, and other tools for users with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "AppleAccessibilityTesting",
+    "note": "A guide for developers on testing accessibility features in macOS applications, ensuring compatibility with assistive technologies.",
+    "cited": false
+  },
+  {
+    "key": "AppleInspector",
+    "note": "A tool for developers to inspect and test the accessibility of macOS and iOS applications, identifying potential issues.",
+    "cited": false
+  },
+  {
+    "key": "AppleVoiceOver",
+    "note": "Apple's screen reader technology, providing spoken descriptions of on-screen elements for users with visual impairments.",
+    "cited": false
+  },
+  {
+    "key": "ApproachesEquityAcceptable",
+    "note": "A benchmark indicating that performance levels are approaching equity standards, though further improvements may be needed.",
+    "cited": false
+  },
+  {
+    "key": "ARCToolkit",
+    "note": "A suite of tools for evaluating and improving web accessibility, including automated testing and manual review features.",
+    "cited": false
+  },
+  {
+    "key": "ARIA",
+    "note": "A technical specification for making web content more accessible to users with disabilities, particularly dynamic content.",
+    "cited": false
+  },
+  {
+    "key": "arxiv2410",
+    "note": "A preprint research paper on arXiv, likely discussing advancements in accessibility or assistive technology.",
+    "cited": false
+  },
+  {
+    "key": "arxiv2503",
+    "note": "A preprint research paper on arXiv, potentially covering topics related to accessibility, AI, or human-computer interaction.",
+    "cited": false
+  },
+  {
+    "key": "ArxivCalamari",
+    "note": "A research paper on Calamari, a high-performance OCR engine based on deep learning, focusing on accuracy and efficiency.",
+    "cited": false
+  },
+  {
+    "key": "ArxivMER2103",
+    "note": "Research on recognizing mathematical expressions in documents, using machine learning techniques for improved accuracy.",
+    "cited": false
+  },
+  {
+    "key": "ArxivMER2203",
+    "note": "Explores the use of transformer networks for recognizing and interpreting mathematical expressions in digital documents.",
+    "cited": false
+  },
+  {
+    "key": "ArxivMER2303",
+    "note": "Investigates the application of diffusion models to mathematical expression recognition, improving robustness and accuracy.",
+    "cited": false
+  },
+  {
+    "key": "ASHA",
+    "note": "Resources and guidelines on augmentative and alternative communication (AAC) for individuals with speech or language impairments.",
+    "cited": false
+  },
+  {
+    "key": "ASIO4ALL2023DriverPerformance",
+    "note": "Discusses the performance and latency characteristics of ASIO4ALL, a universal audio driver for low-latency audio processing.",
+    "cited": false
+  },
+  {
+    "key": "bipedai",
+    "note": "AI-powered mobility device designed to assist visually impaired users with navigation, using real-time object detection and spatial awareness to provide audio feedback about the surrounding environment.",
+    "cited": false
+  },
+  {
+    "key": "BlindfoldGames",
+    "note": "Collection of audio-based games specifically designed for blind and visually impaired players, providing accessible entertainment and skill-building activities through sound-only interfaces.",
+    "cited": false
+  },
+  {
+    "key": "BOIADevices",
+    "note": "Comprehensive overview of assistive technologies for visual impairments, including screen readers, magnification software, braille displays, and other tools that enable digital accessibility.",
+    "cited": false
+  },
+  {
+    "key": "BOIAScreenMagnifiers",
+    "note": "Explanation of screen magnification technologies and their benefits for users with low vision, covering software features, customization options, and implementation considerations.",
+    "cited": false
+  },
+  {
+    "key": "BOIATalkBack",
+    "note": "Guide to using Android's built-in TalkBack screen reader, including basic navigation, gesture controls, and customization options for blind and visually impaired users.",
+    "cited": false
+  },
+  {
+    "key": "Bookshare",
+    "note": "Online library offering accessible ebooks for people with print disabilities, including braille, audio, and large print formats, with over 1 million titles available for educational and recreational reading.",
+    "cited": false
+  },
+  {
+    "key": "Braille2000",
+    "note": "Professional braille translation software designed for producing high-quality braille documents, supporting multiple braille codes and offering advanced formatting options for braille production.",
+    "cited": false
+  },
+  {
+    "key": "Braille2000Docs",
+    "note": "Technical documentation and user guides for Braille2000 software, covering installation, configuration, and advanced features for braille transcription and formatting.",
+    "cited": false
+  },
+  {
+    "key": "Braille2000Intro",
+    "note": "Introductory materials explaining the features and capabilities of Braille2000 braille transcription software, including system requirements and basic operation.",
+    "cited": false
+  },
+  {
+    "key": "Braille2000Pricing",
+    "note": "Pricing information and licensing options for Braille2000 professional braille transcription software, including educational and organizational discounts.",
+    "cited": false
+  },
+  {
+    "key": "BrailleBlasterGitHub",
+    "note": "GitHub repository for the open-source version of BrailleBlaster, allowing community contributions and customization of the braille transcription tool.",
+    "cited": false
+  },
+  {
+    "key": "brailleblaster-ng",
+    "note": "Next generation version of BrailleBlaster braille transcription software, featuring improved user interface and enhanced braille translation capabilities.",
+    "cited": false
+  },
+  {
+    "key": "BrailleBlasterNG",
+    "note": "Development repository for the next generation of BrailleBlaster, an open-source braille transcription software with modernized architecture and features.",
+    "cited": false
+  },
+  {
+    "key": "brailleblaster-product",
+    "note": "Official product page for BrailleBlaster braille transcription software, describing features, system requirements, and download options for this accessible document production tool.",
+    "cited": false
+  },
+  {
+    "key": "BrailleMarketResearch",
+    "note": "Market analysis report on braille notetaker devices, examining industry trends, growth projections, and technological developments in portable braille computing solutions.",
+    "cited": false
+  },
+  {
+    "key": "BrailleMathCodes",
+    "note": "Official standards document from BANA covering braille formatting for mathematical notation and tactile graphics, ensuring consistency in technical braille materials.",
+    "cited": false
+  },
+  {
+    "key": "braillemusicnotator",
+    "note": "Professional braille music transcription software that converts standard music notation into braille music code, supporting various instruments and musical styles.",
+    "cited": false
+  },
+  {
+    "key": "braillemusicnotator-quickstart",
+    "note": "Introductory guide for the Braille Music Notator software, helping new users quickly learn the basics of braille music transcription and editing.",
+    "cited": false
+  },
+  {
+    "key": "BrailleNoteTouchPlus32",
+    "note": "Advanced braille notetaker device combining a 32-cell braille display with Android tablet functionality, providing access to productivity apps, web browsing, and educational tools.",
+    "cited": false
+  },
+  {
+    "key": "BraillePaperSize",
+    "note": "Official specifications for braille paper dimensions and quality standards, ensuring consistency in braille document production and embossing.",
+    "cited": false
+  },
+  {
+    "key": "BrailleRAPAccess",
+    "note": "Accessibility-focused documentation for the BrailleRAP open-source braille embosser project, including instructions for users with visual impairments.",
+    "cited": false
+  },
+  {
+    "key": "BrailleRAPDesktop",
+    "note": "Desktop version of the BrailleRAP open-source braille embosser project, designed for small-scale braille production in homes, schools, and offices.",
+    "cited": false
+  },
+  {
+    "key": "BrailleSense6",
+    "note": "Modern braille notetaker device featuring a braille keyboard, 18 or 32-cell braille display, and comprehensive suite of productivity applications designed for blind users.",
+    "cited": false
+  },
+  {
+    "key": "BrailliantBI20X",
+    "note": "Compact refreshable braille displays designed for portability and compatibility with various devices, offering 20-cell braille output for mobile accessibility.",
+    "cited": false
+  },
+  {
+    "key": "BrailliantBI40X",
+    "note": "High-performance 40-cell refreshable braille display with Bluetooth and USB connectivity, designed for professional use with computers and mobile devices.",
+    "cited": false
+  },
+  {
+    "key": "brightfocus2024",
+    "note": "Resource guide offering practical advice and adaptations for individuals with visual impairments to participate in sports and physical activities safely and confidently.",
+    "cited": false
+  },
+  {
+    "key": "Brown2010TheGiftsOfImperfection",
+    "note": "Self-help book exploring themes of self-acceptance and authenticity, with relevance to the psychological aspects of adapting to disability and using assistive technologies.",
+    "cited": false
+  },
+  {
+    "key": "Brown2022",
+    "note": "Critical examination of accessibility overlay technologies, discussing their limitations, potential harms, and the debate surrounding their effectiveness in achieving true digital accessibility.",
+    "cited": false
+  },
+  {
+    "key": "Burgstahler2015",
+    "note": "Comprehensive guide to implementing universal design principles in postsecondary education, covering curriculum development, physical spaces, and technology accessibility for diverse learners.",
+    "cited": false
+  },
+  {
+    "key": "Calamari",
+    "note": "Open-source optical character recognition engine using advanced machine learning techniques, with applications in document digitization and accessibility for print-disabled users.",
+    "cited": false
+  },
+  {
+    "key": "CalamariGitHub",
+    "note": "Open-source OCR engine using deep learning for document recognition, supporting multiple languages and offering high accuracy through neural networks.",
+    "cited": false
+  },
+  {
+    "key": "CalamariRG",
+    "note": "Research paper detailing Calamari OCR's architecture, performance benchmarks, and comparison with other OCR systems using deep learning approaches.",
+    "cited": false
+  },
+  {
+    "key": "Canute360",
+    "note": "Multi-line Braille e-reader capable of displaying up to 9 lines of refreshable Braille simultaneously.",
+    "cited": false
+  },
+  {
+    "key": "Card1983ThePsychologyOfHumanComputerInteraction",
+    "note": "Foundational text introducing the Model Human Processor and GOMS model, establishing key principles of interaction design.",
+    "cited": false
+  },
+  {
+    "key": "Carver1985Coping",
+    "note": "Psychological study examining how individuals manage uncertainty through hopeful thinking and perceived control mechanisms.",
+    "cited": false
+  },
+  {
+    "key": "CCA",
+    "note": "Tool for evaluating color contrast ratios to ensure compliance with WCAG accessibility standards for visual readability.",
+    "cited": false
+  },
+  {
+    "key": "ChallengesForVisuallyImpairedUsers",
+    "note": "Recent research identifying key barriers faced by visually impaired users when interacting with digital content and proposed solutions.",
+    "cited": false
+  },
+  {
+    "key": "Chapters6to8",
+    "note": "Sections covering the practical implementation of the research methodology and presentation of findings.",
+    "cited": false
+  },
+  {
+    "key": "Chirun",
+    "note": "Open-source platform that transforms LaTeX documents into accessible HTML with support for equations, diagrams, and screen reader navigation.",
+    "cited": false
+  },
+  {
+    "key": "CloudGoogleOCR",
+    "note": "Overview of Google's cloud-based OCR technology applications including document digitization and accessibility solutions.",
+    "cited": false
+  },
+  {
+    "key": "CNDLSGeorgetownOCR",
+    "note": "Educational resource center providing guidance on using OCR technology to create accessible materials for students with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "CodeAcademy",
+    "note": "Interactive programming learning platform with features designed to support screen reader users in learning to code.",
+    "cited": false
+  },
+  {
+    "key": "CodeGoMouse",
+    "note": "Tactile coding robot designed to teach programming concepts to visually impaired students through physical interaction.",
+    "cited": false
+  },
+  {
+    "key": "CodeHS",
+    "note": "Computer science education platform with specialized accessibility features for visually impaired programming students.",
+    "cited": false
+  },
+  {
+    "key": "CodeOrgAccessibility",
+    "note": "Collection of resources and tools for making computer science education accessible to students with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "CodeQuest",
+    "note": "iOS application that teaches programming concepts to blind and visually impaired students through audio feedback and accessible interfaces.",
+    "cited": false
+  },
+  {
+    "key": "ColorUniversalDesign",
+    "note": "Guidelines and tools for creating color schemes that are distinguishable by people with various types of color vision deficiency.",
+    "cited": false
+  },
+  {
+    "key": "Compaine2001TheDigitalDivide",
+    "note": "Collection of essays examining the nature and extent of digital inequality and its societal implications.",
+    "cited": false
+  },
+  {
+    "key": "ContinualEngineOCR",
+    "note": "Commercial OCR solution specializing in creating accessible documents with AI-powered accuracy and formatting preservation.",
+    "cited": false
+  },
+  {
+    "key": "ContrastChecker",
+    "note": "Online tool for testing color contrast ratios between foreground and background colors for web accessibility compliance.",
+    "cited": false
+  },
+  {
+    "key": "Craik1972LevelsOfProcessing",
+    "note": "Seminal paper proposing the levels-of-processing theory of memory, suggesting deeper analysis leads to better retention.",
+    "cited": false
+  },
+  {
+    "key": "CreatingAccessibleInfographics",
+    "note": "Best practices for designing visual data representations that include text alternatives and tactile versions for accessibility.",
+    "cited": false
+  },
+  {
+    "key": "CreatingTactileGraphics",
+    "note": "Resource for producing tactile versions of visual materials using various production methods for blind users.",
+    "cited": false
+  },
+  {
+    "key": "CSBInstruction",
+    "note": "Educational program offering assistive technology training and resources for visually impaired students and educators.",
+    "cited": false
+  },
+  {
+    "key": "CTEducation2025",
+    "note": "State guidelines for providing accessible learning materials to students with disabilities in K-12 education.",
+    "cited": false
+  },
+  {
+    "key": "Cura",
+    "note": "Open-source 3D printing slicer software with accessibility features for preparing 3D models for printing.",
+    "cited": false
+  },
+  {
+    "key": "DAISY2024",
+    "note": "Overview of the Digital Accessible Information System standard for accessible digital publications and reading tools.",
+    "cited": false
+  },
+  {
+    "key": "DAISYDevelopments",
+    "note": "Updates on evolving standards and technologies for creating and consuming accessible digital publications.",
+    "cited": false
+  },
+  {
+    "key": "daisyEBraille",
+    "note": "Specification for representing Braille in digital formats, supporting both literary and mathematical Braille notation.",
+    "cited": false
+  },
+  {
+    "key": "dancingdots-lime",
+    "note": "Accessible music notation editor that provides audio feedback and supports Braille music output.",
+    "cited": false
+  },
+  {
+    "key": "dancingdots-products",
+    "note": "Suite of products designed to make music notation and performance accessible to blind and visually impaired musicians.",
+    "cited": false
+  },
+  {
+    "key": "DassaultEducation",
+    "note": "Resources and case studies on using 3D printing technology for educational purposes, including accessibility applications.",
+    "cited": false
+  },
+  {
+    "key": "DataPrivacyAI",
+    "note": "Studies examining the ethical implications and privacy considerations of AI systems processing personal data for accessibility purposes.",
+    "cited": false
+  },
+  {
+    "key": "Day2021",
+    "note": "Study analyzing how commonly available technologies can be adapted to support visually impaired students in educational settings.",
+    "cited": false
+  },
+  {
+    "key": "DBTWebsite",
+    "note": "Official product page for Duxbury Braille Translator, the industry-standard Braille translation software.",
+    "cited": false
+  },
+  {
+    "key": "DeepLearningOCROverview",
+    "note": "Survey paper examining recent advances in optical character recognition using deep neural networks and their performance characteristics.",
+    "cited": false
+  },
+  {
+    "key": "DellLatitude3190",
+    "note": "Budget-friendly laptop model used for testing basic accessibility software performance.",
+    "cited": false
+  },
+  {
+    "key": "DellLatitude3190Specs",
+    "note": "Technical specifications for Dell's education-focused Latitude 3190 laptop model.",
+    "cited": false
+  },
+  {
+    "key": "DellPrecision3530",
+    "note": "Mid-range workstation laptop used for testing more demanding accessibility applications.",
+    "cited": false
+  },
+  {
+    "key": "DellPrecision3530Specs",
+    "note": "Technical specifications for Dell's Precision 3530 mobile workstation with professional-grade components.",
+    "cited": false
+  },
+  {
+    "key": "DellPrecision7420Specs",
+    "note": "Technical specifications for high-performance Dell Precision mobile workstation suitable for intensive computing tasks.",
+    "cited": false
+  },
+  {
+    "key": "Desmos",
+    "note": "Online graphing calculator with accessibility features for visually impaired mathematics students.",
+    "cited": false
+  },
+  {
+    "key": "DesmosAccessibility",
+    "note": "Documentation of accessibility implementations in Desmos graphing tools, including audio feedback and keyboard navigation.",
+    "cited": false
+  },
+  {
+    "key": "DesmosAPI",
+    "note": "Developer resources for integrating Desmos graphing capabilities into third-party applications with accessibility considerations.",
+    "cited": false
+  },
+  {
+    "key": "DesmosCalculator",
+    "note": "Interactive online calculator that renders mathematical expressions graphically with accessibility features for blind users.",
+    "cited": false
+  },
+  {
+    "key": "DesmosClassroom",
+    "note": "Teacher-facing platform for creating and sharing accessible math activities using Desmos tools.",
+    "cited": false
+  },
+  {
+    "key": "DesmosEmbed",
+    "note": "Technical guide for integrating accessible graphing calculator functionality into educational websites and applications.",
+    "cited": false
+  },
+  {
+    "key": "DesmosGraphingLaTeX",
+    "note": "Documentation on using LaTeX notation for mathematical expressions within the accessible Desmos graphing environment.",
+    "cited": false
+  },
+  {
+    "key": "DesmosLaTeX",
+    "note": "Feature allowing users to input mathematical expressions using LaTeX syntax within the accessible Desmos interface.",
+    "cited": false
+  },
+  {
+    "key": "DevToPDFStructure",
+    "note": "Developer tutorial on implementing semantic structure in PDF documents to ensure accessibility for screen reader users.",
+    "cited": false
+  },
+  {
+    "key": "DigitalDefyndOCR",
+    "note": "Analysis of the advantages and limitations of OCR technology across various applications and use cases.",
+    "cited": false
+  },
+  {
+    "key": "DigitalSkillsGap",
+    "note": "Study examining disparities in digital literacy and technology access among job seekers with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "DigrandeBiblos",
+    "note": "Free software for Braille document preparation and printing with support for multiple languages and formats.",
+    "cited": false
+  },
+  {
+    "key": "DiMaggio2001FromUnequalAccess",
+    "note": "Chapter analyzing how socioeconomic factors influence technology adoption patterns and usage quality.",
+    "cited": false
+  },
+  {
+    "key": "DisabilityAdvocacyReport",
+    "note": "Annual assessment of technology accessibility in educational institutions and recommendations for improvement.",
+    "cited": false
+  },
+  {
+    "key": "DisabilityAnswerDesk",
+    "note": "Microsoft's support service providing assistance with accessibility features across their products and services.",
+    "cited": false
+  },
+  {
+    "key": "DisabilityDiscriminationAct1992",
+    "note": "Australian legislation prohibiting discrimination against people with disabilities in various areas including education and employment.",
+    "cited": false
+  },
+  {
+    "key": "DisabilityRightsAuditing",
+    "note": "Guidelines for conducting comprehensive accessibility evaluations of digital properties and implementing remediation plans.",
+    "cited": false
+  },
+  {
+    "key": "DisabilityStats2023",
+    "note": "Comprehensive data analysis on employment trends, barriers, and opportunities for individuals with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "Dix2004HumanComputerInteraction",
+    "note": "Textbook covering fundamental principles of human-computer interaction design with considerations for diverse user needs.",
+    "cited": false
+  },
+  {
+    "key": "DocuwareOCR",
+    "note": "Compares Intelligent Document Processing (IDP) with traditional OCR technology, highlighting how IDP combines OCR with AI for more advanced document understanding and processing capabilities.",
+    "cited": false
+  },
+  {
+    "key": "Doe2020",
+    "note": "Presents research findings from user studies evaluating various accessible reading applications, focusing on usability and effectiveness for people with different types of disabilities.",
+    "cited": false
+  },
+  {
+    "key": "DolphinScreenreaderPricing",
+    "note": "Provides current pricing information for Dolphin ScreenReader software, including license options and upgrade paths for this screen reading solution for visually impaired users.",
+    "cited": false
+  },
+  {
+    "key": "DolphinScreenreaderRequirements",
+    "note": "Details the hardware and software requirements needed to run Dolphin ScreenReader effectively, including operating system versions and minimum specifications.",
+    "cited": false
+  },
+  {
+    "key": "DolphinSuperNovaPricing",
+    "note": "Lists pricing and licensing options for SuperNova Magnifier software, which combines screen magnification, reading, and braille support for low vision users.",
+    "cited": false
+  },
+  {
+    "key": "DolphinSuperNovaRequirements",
+    "note": "Specifies the technical requirements for installing and running SuperNova magnification and screen reading software across different versions.",
+    "cited": false
+  },
+  {
+    "key": "DoNoHarmGuide",
+    "note": "Comprehensive guide offering principles and practical techniques for creating accessible data visualizations that work for users with various disabilities.",
+    "cited": false
+  },
+  {
+    "key": "Dotify",
+    "note": "Digital platform for creating and accessing braille content, offering tools for braille transcription and accessible document conversion.",
+    "cited": false
+  },
+  {
+    "key": "DotInc",
+    "note": "Company developing innovative braille display technology and accessibility solutions for blind and visually impaired users.",
+    "cited": false
+  },
+  {
+    "key": "DublinCore",
+    "note": "Standard metadata schema comprising fifteen core elements for resource description, widely used for digital resource discovery and accessibility.",
+    "cited": false
+  },
+  {
+    "key": "Duxbury",
+    "note": "Industry-standard braille translation software that converts print documents to braille and supports numerous languages and braille codes.",
+    "cited": false
+  },
+  {
+    "key": "DuxburyDBT",
+    "note": "Comprehensive braille production tool used by educators, transcribers, and organizations to create accurate braille materials in multiple languages.",
+    "cited": false
+  },
+  {
+    "key": "DuxburyDBTFeatures",
+    "note": "Detailed listing of all capabilities including translation options, formatting controls, and output formats supported by DBT software.",
+    "cited": false
+  },
+  {
+    "key": "DuxburyDBTMac",
+    "note": "Information about the macOS-compatible version of DBT braille translation software, including system requirements and feature parity.",
+    "cited": false
+  },
+  {
+    "key": "DuxburyDBTPricing",
+    "note": "Current pricing information for various license types of Duxbury Braille Translator, including educational and volume discounts.",
+    "cited": false
+  },
+  {
+    "key": "DuxburyDBTWin",
+    "note": "Details about the Windows implementation of DBT braille translation software, including compatibility with different Windows versions.",
+    "cited": false
+  },
+  {
+    "key": "duxbury-main",
+    "note": "Official website for Duxbury Systems, developers of braille translation and accessibility software solutions.",
+    "cited": false
+  },
+  {
+    "key": "DuxburyNimPro",
+    "note": "Specialized braille production tool designed for high-volume braille publishing with advanced formatting and workflow features.",
+    "cited": false
+  },
+  {
+    "key": "DuxburySystems",
+    "note": "Company background information and history of Duxbury Systems, a leading developer of braille translation software.",
+    "cited": false
+  },
+  {
+    "key": "EarSketchGT",
+    "note": "Web-based platform that teaches coding through music composition, designed to be accessible and engaging for diverse learners.",
+    "cited": false
+  },
+  {
+    "key": "EarSketchLanding",
+    "note": "Entry point for EarSketch, an innovative educational platform combining computer science and music creation.",
+    "cited": false
+  },
+  {
+    "key": "EarSketchTeaching",
+    "note": "Educational materials and curriculum resources for instructors using EarSketch to teach programming through music.",
+    "cited": false
+  },
+  {
+    "key": "EconomicImpactOfDisability",
+    "note": "Analysis of the financial costs and productivity impacts associated with accessibility barriers in education and workplace settings.",
+    "cited": false
+  },
+  {
+    "key": "EducationalDisparityJournal",
+    "note": "Examines systemic inequalities in education systems, particularly how resource allocation creates unequal opportunities for students with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "EducationalEquityReport2024",
+    "note": "Investigates how hardware limitations in assistive technology devices create barriers to equal educational access for students with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "embedded2024",
+    "note": "Article about innovative technology that converts sports visuals into tactile representations for blind spectators.",
+    "cited": false
+  },
+  {
+    "key": "EmptyBoxNote",
+    "note": "Explanation of how missing characters are displayed in fonts, particularly relevant for technical and mathematical typography.",
+    "cited": false
+  },
+  {
+    "key": "EN301549",
+    "note": "European standard specifying accessibility requirements for ICT products and services, including web accessibility and assistive technologies.",
+    "cited": false
+  },
+  {
+    "key": "envision",
+    "note": "AI-powered smart glasses designed to assist blind and visually impaired users with object recognition, text reading, and environmental awareness.",
+    "cited": false
+  },
+  {
+    "key": "Equatio",
+    "note": "Software that enables digital creation and manipulation of mathematical content, particularly useful for accessible math education.",
+    "cited": false
+  },
+  {
+    "key": "EquatioGoogle",
+    "note": "Integration that brings Equatio's math creation capabilities into Google Docs, Forms, and other Google Workspace applications.",
+    "cited": false
+  },
+  {
+    "key": "EquatioPricing",
+    "note": "Detailed pricing information including individual, educational, and volume licensing options for Equatio math software.",
+    "cited": false
+  },
+  {
+    "key": "EquityAnalysisRevision",
+    "note": "Indicates content or recommendations that have been modified following an equity-focused review process.",
+    "cited": false
+  },
+  {
+    "key": "EquityInFundingEducation",
+    "note": "Proposes alternative funding approaches to ensure equitable access to assistive and educational technologies for all students.",
+    "cited": false
+  },
+  {
+    "key": "EquityViolationAccessibility",
+    "note": "Flag indicating a system or feature that fails to meet accessibility requirements, creating barriers for users with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "EquityViolationData",
+    "note": "Statement highlighting how collected evidence shows hardware limitations are creating unequal educational opportunities.",
+    "cited": false
+  },
+  {
+    "key": "ERICAITraining",
+    "note": "Research paper examining the importance of diverse and representative training data in developing equitable AI systems for education.",
+    "cited": false
+  },
+  {
+    "key": "eSUN",
+    "note": "Manufacturer of 3D printing materials and solutions, including potential applications in tactile graphics and accessibility tools.",
+    "cited": false
+  },
+  {
+    "key": "EUAccessibilityAct2019",
+    "note": "EU legislation establishing common accessibility requirements for products and services across member states to benefit people with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "Evinced",
+    "note": "Enterprise-grade accessibility testing platform using artificial intelligence to identify and help remediate digital accessibility issues.",
+    "cited": false
+  },
+  {
+    "key": "EvolutionOfAccessibilitySolutions",
+    "note": "Traces the development of assistive technologies over time, examining how technological advances have shaped accessibility solutions.",
+    "cited": false
+  },
+  {
+    "key": "ExternalGPUAssistiveTech",
+    "note": "Explores the potential of external GPU solutions to enhance performance of assistive technologies requiring significant graphical processing.",
+    "cited": false
+  },
+  {
+    "key": "EyeTrackingInfographic",
+    "note": "Research using eye-tracking technology to analyze how different infographic designs affect user understanding and cognitive processing.",
+    "cited": false
+  },
+  {
+    "key": "EyeTrackingWiki",
+    "note": "Comprehensive overview of eye-tracking technology, its applications, and underlying principles.",
+    "cited": false
+  },
+  {
+    "key": "EyetvisionBIN",
+    "note": "Educational resource teaching basic web navigation techniques using popular screen reader software for blind and visually impaired users.",
+    "cited": false
+  },
+  {
+    "key": "EyetvisionWWT",
+    "note": "Instructional materials focused on text manipulation and reading techniques using various screen reader applications.",
+    "cited": false
+  },
+  {
+    "key": "Eysenck2007AnxietyAndCognition",
+    "note": "Presents Attentional Control Theory, explaining how anxiety affects cognitive performance through impacts on attention regulation and processing efficiency.",
+    "cited": false
+  },
+  {
+    "key": "Faulkner2019",
+    "note": "Practical guide to implementing Section 508 accessibility standards in web development, with coding examples and compliance checklists.",
+    "cited": false
+  },
+  {
+    "key": "FocusBlue",
+    "note": "Technical specifications and features of the Focus Blue 5th Generation braille display, including connectivity options and compatibility with screen readers.",
+    "cited": false
+  },
+  {
+    "key": "Fogg2003PersuasiveTechnology",
+    "note": "Seminal work on captology (computers as persuasive technologies), examining how interactive technologies can influence human attitudes and behaviors.",
+    "cited": false
+  },
+  {
+    "key": "Foley2017AssistiveTechnologyOutcomes",
+    "note": "Research study examining the impact of assistive technologies on academic success for students with disabilities in postsecondary education.",
+    "cited": false
+  },
+  {
+    "key": "Fowler2011ScreenReaderLatency",
+    "note": "Empirical study measuring how system latency affects blind users' cognitive load and task performance when using screen readers.",
+    "cited": false
+  },
+  {
+    "key": "Fowler2013",
+    "note": "Comprehensive guide to continuous delivery practices, covering automation strategies for building, testing, and deploying software efficiently.",
+    "cited": false
+  },
+  {
+    "key": "FrameworkLaptop16",
+    "note": "Technical specifications for the modular Framework Laptop 16, highlighting its customizable components and upgrade capabilities.",
+    "cited": false
+  },
+  {
+    "key": "FrameworkLaptop16Specs",
+    "note": "Detailed hardware specifications for the Framework Laptop 16, including processor options, memory configurations, and expansion capabilities.",
+    "cited": false
+  },
+  {
+    "key": "FreeCodeCamp2017",
+    "note": "Article exploring the tools and techniques used by blind programmers, including screen readers and specialized development environments.",
+    "cited": false
+  },
+  {
+    "key": "FreeCodeCamp2018",
+    "note": "Discussion of educational initiatives and technological solutions that make programming more accessible to blind and visually impaired learners.",
+    "cited": false
+  },
+  {
+    "key": "FreedomScientificFusionRequirements",
+    "note": "Technical requirements for running Fusion, a combined screen reader and screen magnification software for users with visual impairments.",
+    "cited": false
+  },
+  {
+    "key": "FreedomScientificJAWS",
+    "note": "Comprehensive information about JAWS screen reader software, including features, version history, and compatibility information.",
+    "cited": false
+  },
+  {
+    "key": "FreedomScientificJAWSRequirements",
+    "note": "Detailed hardware and software requirements for running JAWS screen reader effectively across different Windows versions.",
+    "cited": false
+  },
+  {
+    "key": "FreedomScientificZoomTextPricing",
+    "note": "Pricing details for ZoomText screen magnification software, including version options and licensing models.",
+    "cited": false
+  },
+  {
+    "key": "FreedomScientificZoomTextRequirements",
+    "note": "System specifications required to run ZoomText screen magnification software effectively.",
+    "cited": false
+  },
+  {
+    "key": "freedots-blindguru",
+    "note": "Description of FreeDots software that converts music notation into accessible formats for blind musicians.",
+    "cited": false
+  },
+  {
+    "key": "FreePremiumVoices",
+    "note": "Pricing information for premium text-to-speech voices, comparing free and paid voice quality options.",
+    "cited": false
+  },
+  {
+    "key": "FromGraphsToWords",
+    "note": "Presents an automated system for generating accessible text descriptions of data visualizations, with evaluation of effectiveness.",
+    "cited": false
+  },
+  {
+    "key": "FutureProofingTech",
+    "note": "Guidelines for designing educational technology systems that remain adaptable to future technological advancements and accessibility needs.",
+    "cited": false
+  },
+  {
+    "key": "gaetanbaert-license",
+    "note": "License terms for software projects developed by Gaetan Baert, including OMR (Optical Music Recognition) tools.",
+    "cited": false
+  },
+  {
+    "key": "GazeRecorder",
+    "note": "Web-based eye tracking software that records and analyzes user gaze patterns for usability research and accessibility testing.",
+    "cited": false
+  },
+  {
+    "key": "github-accessibility",
+    "note": "GitHub's announcement of accessibility improvements to their platform, including enhanced screen reader support and keyboard navigation.",
+    "cited": false
+  },
+  {
+    "key": "GithubPaddleOCR",
+    "note": "Open-source OCR toolkit supporting multiple languages and text recognition scenarios, developed by PaddlePaddle.",
+    "cited": false
+  },
+  {
+    "key": "GoogleAccessibility",
+    "note": "Google's central accessibility hub, showcasing accessible products and features across their ecosystem.",
+    "cited": false
+  },
+  {
+    "key": "GoogleAccessibilityCommunity",
+    "note": "Support community and resources for Google's accessibility features, including help forums and documentation.",
+    "cited": false
+  },
+  {
+    "key": "GoogleAltText",
+    "note": "Instructions for adding alternative text to images in Google Docs to make visual content accessible to screen reader users.",
+    "cited": false
+  },
+  {
+    "key": "GoogleBookmarks2023",
+    "note": "Guide to creating and using bookmarks and cross-references in Google Docs for document navigation and structure.",
+    "cited": false
+  },
+  {
+    "key": "GoogleChromeRequirements",
+    "note": "Minimum and recommended system requirements for running Google Chrome browser across different operating systems.",
+    "cited": false
+  },
+  {
+    "key": "GoogleColorContrast",
+    "note": "Guidelines for implementing proper color contrast in Android applications to meet accessibility standards.",
+    "cited": false
+  },
+  {
+    "key": "GoogleKeep",
+    "note": "Note-taking service with basic accessibility features, including keyboard shortcuts and screen reader compatibility.",
+    "cited": false
+  },
+  {
+    "key": "GoogleMLAccessibility",
+    "note": "Overview of Google's research initiatives applying machine learning to solve accessibility challenges.",
+    "cited": false
+  },
+  {
+    "key": "GoogleSheetsA11y2023",
+    "note": "Best practices for creating accessible spreadsheets in Google Sheets, including structured data and screen reader considerations.",
+    "cited": false
+  },
+  {
+    "key": "GoogleShortcuts",
+    "note": "Comprehensive reference for keyboard commands across Google's productivity suite, essential for non-mouse navigation.",
+    "cited": false
+  },
+  {
+    "key": "GoogleSlidesA11y2023",
+    "note": "Guidelines for creating accessible presentations in Google Slides, covering alt text, reading order, and color contrast.",
+    "cited": false
+  },
+  {
+    "key": "GoogleTalkBack",
+    "note": "Official documentation for TalkBack, Android's built-in screen reader for blind and low-vision users.",
+    "cited": false
+  },
+  {
+    "key": "GoogleTranslateRealtime",
+    "note": "Information about Google Translate's real-time translation capabilities, including camera-based text translation.",
+    "cited": false
+  },
+  {
+    "key": "GoogleWebA11yGuidelines",
+    "note": "Google's comprehensive web accessibility guidelines for developers, covering principles and implementation techniques.",
+    "cited": false
+  },
+  {
+    "key": "GoogleWorkspaceAccessibility",
+    "note": "Overview of accessibility features across Google Workspace applications (Docs, Sheets, Slides, etc.).",
+    "cited": false
+  },
+  {
+    "key": "GPUforAssistiveTech",
+    "note": "Recommendations for graphics processing capabilities needed to support modern assistive technologies and accessibility features.",
+    "cited": false
+  },
+  {
+    "key": "GrackleDocs",
+    "note": "Accessibility compliance tool for Google Docs that checks and helps remediate documents to meet standards.",
+    "cited": false
+  },
+  {
+    "key": "Grunwald1999AuditoryLatency",
+    "note": "Neurological study examining how the brain processes auditory information and the effects of timing delays in speech perception.",
+    "cited": false
+  },
+  {
+    "key": "hable2025",
+    "note": "Guide to accessible hobbies and activities for visually impaired individuals, including technology-assisted options.",
+    "cited": false
+  },
+  {
+    "key": "HackerNewsMarker",
+    "note": "Community discussion about Marker, a document conversion tool, including user experiences and technical insights.",
+    "cited": false
+  },
+  {
+    "key": "HadwenBennett2018",
+    "note": "Comprehensive review of tools, methods, and challenges in teaching programming to visually impaired students.",
+    "cited": false
+  },
+  {
+    "key": "HapticDataViz",
+    "note": "Research paper exploring haptic feedback methods for making data visualizations accessible to blind users.",
+    "cited": false
+  },
+  {
+    "key": "HapticFootprint",
+    "note": "Innovative haptic interface project that creates tactile representations of digital content through foot-based feedback.",
+    "cited": false
+  },
+  {
+    "key": "Henry2007",
+    "note": "Comprehensive guide to inclusive design practices, covering principles and methods for creating accessible digital products.",
+    "cited": false
+  },
+  {
+    "key": "HIMSBrailleSense",
+    "note": "Product information for BrailleSense 6, a modern braille notetaker with word processing, internet, and productivity features.",
+    "cited": false
+  },
+  {
+    "key": "HIMSReleaseNotes",
+    "note": "Detailed changelog for BrailleSense 6 version 2.0 update, including new features and accessibility improvements.",
+    "cited": false
+  },
+  {
+    "key": "Holbrook2006",
+    "note": "Foundational textbook covering historical and theoretical aspects of education for visually impaired students.",
+    "cited": false
+  },
+  {
+    "key": "Hollingshead2020",
+    "note": "Article explaining the SETT (Student, Environments, Tasks, Tools) framework for assistive technology assessment and remote implementation.",
+    "cited": false
+  },
+  {
+    "key": "HTMLLivingStandard2021",
+    "note": "Official HTML specification for table elements, including accessibility requirements and semantic structuring.",
+    "cited": false
+  },
+  {
+    "key": "HubSpot",
+    "note": "Marketing, sales, and service platform with accessibility features for users with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "HubSpotFonts",
+    "note": "Guide to selecting web fonts that optimize readability and accessibility for diverse users.",
+    "cited": false
+  },
+  {
+    "key": "HumanWareBrailleNote",
+    "note": "Product details for BrailleNote Touch Plus, a braille notetaker combining tactile keyboard with touchscreen interface.",
+    "cited": false
+  },
+  {
+    "key": "IBMAIDeepLearning",
+    "note": "IBM's educational resource explaining deep learning concepts, applications, and their cloud-based solutions.",
+    "cited": false
+  },
+  {
+    "key": "IBMAIOCR",
+    "note": "IBM Research blog post discussing advancements in OCR technology through AI and machine learning approaches.",
+    "cited": false
+  },
+  {
+    "key": "IBMChecker",
+    "note": "Documentation for IBM's accessibility testing tool that scans for WCAG compliance issues in web content.",
+    "cited": false
+  },
+  {
+    "key": "IBMSemanticAI",
+    "note": "Explanation of semantic AI technologies that understand meaning and context in data processing.",
+    "cited": false
+  },
+  {
+    "key": "IDEA2004",
+    "note": "U.S. federal law ensuring services to children with disabilities throughout the nation, including assistive technology provisions.",
+    "cited": false
+  },
+  {
+    "key": "ImmediateResponseEquity",
+    "note": "Technical note explaining a performance metric threshold indicating near-instantaneous system response times critical for equitable access.",
+    "cited": false
+  },
+  {
+    "key": "iMoreContrast",
+    "note": "Tutorial for adjusting display contrast settings on iOS devices to improve accessibility for low-vision users.",
+    "cited": false
+  },
+  {
+    "key": "InclusiveCityMaker2023",
+    "note": "Article examining urban design considerations for visually impaired pedestrians, including accessible crossing technologies.",
+    "cited": false
+  },
+  {
+    "key": "IndexBrailleBiblos",
+    "note": "Braille editing software that supports various braille codes and formatting for document production.",
+    "cited": false
+  },
+  {
+    "key": "InfantSee",
+    "note": "Public health program providing no-cost infant eye assessments to detect early vision problems and developmental issues.",
+    "cited": false
+  },
+  {
+    "key": "InfographicComprehension",
+    "note": "Research study analyzing how different textual components affect comprehension of infographics, with implications for accessible design.",
+    "cited": false
+  },
+  {
+    "key": "InftyReader",
+    "note": "Optical character recognition system designed to convert scientific documents with complex notation into accessible formats.",
+    "cited": false
+  },
+  {
+    "key": "InsightsWindows",
+    "note": "Tool for developers to identify and fix accessibility issues in Windows applications during development.",
+    "cited": false
+  },
+  {
+    "key": "Intel2024ProcessorMemory",
+    "note": "Technical documentation explaining Intel processor architectures and their memory subsystem performance characteristics.",
+    "cited": false
+  },
+  {
+    "key": "IntelAIAcceleration",
+    "note": "Overview of Intel's processor technologies optimized for AI workloads, including neural network acceleration.",
+    "cited": false
+  },
+  {
+    "key": "IntelCoreRequirements",
+    "note": "Detailed specifications for Intel Core processor family, including performance benchmarks and system requirements.",
+    "cited": false
+  },
+  {
+    "key": "IntelHybridArchitecture",
+    "note": "Technical explanation of Intel's hybrid CPU architecture combining performance and efficiency cores.",
+    "cited": false
+  },
+  {
+    "key": "IntelIntegratedGraphics",
+    "note": "Product information for Intel's integrated GPU technologies, including performance capabilities and feature sets.",
+    "cited": false
+  },
+  {
+    "key": "IntelMeteorLake",
+    "note": "Product details for Intel's Meteor Lake processor family featuring advanced power efficiency and AI acceleration.",
+    "cited": false
+  },
+  {
+    "key": "IntelNPU",
+    "note": "Technical documentation for Intel's dedicated neural processing units designed for efficient AI workload acceleration.",
+    "cited": false
+  },
+  {
+    "key": "IntelPowerEfficiency",
+    "note": "Overview of power management and efficiency features in modern Intel processors.",
+    "cited": false
+  },
+  {
+    "key": "IntelThermalManagement",
+    "note": "Explanation of thermal regulation systems in Intel processors to maintain performance while managing heat output.",
+    "cited": false
+  },
+  {
+    "key": "InternalTestingData2024",
+    "note": "Internal research analyzing how different hardware configurations affect screen reader performance and responsiveness.",
+    "cited": false
+  },
+  {
+    "key": "IntroductionChapter1",
+    "note": "Chapter 1 of this document",
+    "cited": false
+  },
+  {
+    "key": "IrieTactileView",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "IronSoftwareTesseract",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "ISBEAssistive",
+    "note": "Retrieved July 2025",
+    "cited": false
+  },
+  {
+    "key": "ISO40500",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Jaeger2006",
+    "note": "Research study evaluating how well federal government websites comply with Section 508 accessibility requirements.",
+    "cited": false
+  },
+  {
+    "key": "JantridIAccessible2",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "JAWSAILabeler",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "JAWSBasicCommands",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "JAWSBraille",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "JAWSFS",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "JAWSInspect",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "JAWSKeyboardGestures",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "JAWSOCR",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "JAWSScripting",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "JAWSUIAScriptAPI",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "JAWSWhatsNew",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "JetBrainsMono",
+    "note": "Font created for monospace/coding needs",
+    "cited": false
+  },
+  {
+    "key": "JLCLCalamari",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Jo2016",
+    "note": "Research on methods and challenges for converting mathematical equations into braille notation.",
+    "cited": false
+  },
+  {
+    "key": "Jones2021",
+    "note": "Review of digital reading software and applications designed for users with print disabilities.",
+    "cited": false
+  },
+  {
+    "key": "KaiBot",
+    "note": "Accessible robotics platform for K-12 coding education",
+    "cited": false
+  },
+  {
+    "key": "KAlgebra",
+    "note": "Mathematical calculator and 3D plotter application",
+    "cited": false
+  },
+  {
+    "key": "Kamei-Hannan2012",
+    "note": "Research study examining braille literacy skills and development among students with visual impairments.",
+    "cited": false
+  },
+  {
+    "key": "Karbowski2020",
+    "note": "Educational research on using 3D printing technology to create tactile learning materials for blind students.",
+    "cited": false
+  },
+  {
+    "key": "KAZ2025",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Kelly2011",
+    "note": "Literature review analyzing how assistive technology affects academic outcomes for visually impaired students.",
+    "cited": false
+  },
+  {
+    "key": "Kelly2011TechnologyUseInEducation",
+    "note": "General overview of technology integration and usage patterns in educational settings.",
+    "cited": false
+  },
+  {
+    "key": "Keystroke2025",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Kim2023",
+    "note": "Analysis of artificial intelligence applications in accessibility technology, examining benefits and limitations.",
+    "cited": false
+  },
+  {
+    "key": "kingsbury2025",
+    "note": "Comprehensive guide to using Windows screen readers including JAWS, NVDA, and Narrator.",
+    "cited": false
+  },
+  {
+    "key": "Kintsch1998Comprehension",
+    "note": "Cognitive science framework for understanding how humans process and comprehend textual information.",
+    "cited": false
+  },
+  {
+    "key": "Kirschner2006WhyMinimalGuidance",
+    "note": "Educational research arguing against minimal guidance teaching methods and advocating for structured instruction.",
+    "cited": false
+  },
+  {
+    "key": "KoncileTesseract",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Krug2014",
+    "note": "Web design and usability guide focusing on intuitive user interface principles and accessibility.",
+    "cited": false
+  },
+  {
+    "key": "LatencyMon2023DPC",
+    "note": "Technical documentation about Windows system latency issues that can affect real-time audio processing.",
+    "cited": false
+  },
+  {
+    "key": "LaTeXMathematics",
+    "note": "Documentation for mathematical notation in LaTeX",
+    "cited": false
+  },
+  {
+    "key": "LaTeXProject",
+    "note": "High-quality typesetting system for technical and scientific documentation",
+    "cited": false
+  },
+  {
+    "key": "Lazar2015",
+    "note": "Comprehensive guide to implementing organizational policies and procedures for digital accessibility compliance.",
+    "cited": false
+  },
+  {
+    "key": "Lazarus1991EmotionAndAdaptation",
+    "note": "Psychological research on how individuals emotionally adapt to challenges and stressful situations.",
+    "cited": false
+  },
+  {
+    "key": "Lee2019",
+    "note": "Research comparing different integrated accessibility software packages and their effectiveness.",
+    "cited": false
+  },
+  {
+    "key": "LEGOBricks",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "Lenovo500wGen3Specs",
+    "note": "Technical specifications and hardware details for the Lenovo 500w Gen 3 laptop computer.",
+    "cited": false
+  },
+  {
+    "key": "LenovoThinkPadE16",
+    "note": "Hardware specifications for a Lenovo ThinkPad E16 laptop configuration with 24GB of memory.",
+    "cited": false
+  },
+  {
+    "key": "Leporini2004",
+    "note": "Research on improving user interface design principles to enhance screen reader user experience.",
+    "cited": false
+  },
+  {
+    "key": "lexgillette2024",
+    "note": "Personal recommendations for AI-powered accessibility tools from a Paralympic athlete's perspective.",
+    "cited": false
+  },
+  {
+    "key": "LiblouisGitHub",
+    "note": "Open-source braille translation library",
+    "cited": false
+  },
+  {
+    "key": "LibreOfficeKeyboard",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "LinuxAudioLatency",
+    "note": "Discusses factors contributing to OS-level audio buffering and delays",
+    "cited": false
+  },
+  {
+    "key": "LlamaCpp",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "Llamafile",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "loc-braille-intervals",
+    "note": "Educational resource explaining how musical intervals are represented in braille music notation.",
+    "cited": false
+  },
+  {
+    "key": "LowVisionCenter",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Lueck2016",
+    "note": "Medical and educational resource about cortical visual impairment and its impact on learning.",
+    "cited": false
+  },
+  {
+    "key": "LumaAI",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "Lundgard2021",
+    "note": "Research study examining how screen reader users interact with and understand data visualization content.",
+    "cited": false
+  },
+  {
+    "key": "Lundgard2022Accessible",
+    "note": "Framework for making data visualizations accessible through structured natural language descriptions.",
+    "cited": false
+  },
+  {
+    "key": "maitraye2024",
+    "note": "Conference paper on generative AI applications for blind, low vision, and visually impaired users.",
+    "cited": false
+  },
+  {
+    "key": "MakersMakingChange",
+    "note": "Retrieved from website",
+    "cited": false
+  },
+  {
+    "key": "Marker",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MarkerDocs",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MarketResearch2025",
+    "note": "Market analysis of current pricing for assistive technology products and independent living aids.",
+    "cited": false
+  },
+  {
+    "key": "MathJax",
+    "note": "JavaScript display engine for LaTeX, MathML, and AsciiMath notation",
+    "cited": false
+  },
+  {
+    "key": "MathJaxDocs",
+    "note": "Documentation for MathJax usage and configuration",
+    "cited": false
+  },
+  {
+    "key": "MathPix",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MathpixSnip",
+    "note": "OCR tool for converting mathematical images to LaTeX and other formats",
+    "cited": false
+  },
+  {
+    "key": "MatterHackers",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "MatterHackers2017",
+    "note": "Article about creating tactile learning materials using 3D printing technology for blind students.",
+    "cited": false
+  },
+  {
+    "key": "Mayer2009MultimediaLearning",
+    "note": "Educational research on how people learn from words and pictures in multimedia environments.",
+    "cited": false
+  },
+  {
+    "key": "MDPI2022",
+    "note": "Retrieved July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "MediumLayoutLMv3",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Meshy",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "Microsoft2023AudioEnhancements",
+    "note": "Windows system settings and features for optimizing audio quality and reducing processing delays.",
+    "cited": false
+  },
+  {
+    "key": "Microsoft2023WindowsPerformance",
+    "note": "Explains how insufficient RAM can lead to reliance on page files and slower performance",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftAccessibility",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftAccessibilityTraining",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftAIAccessibility",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftCopilotFeatures",
+    "note": "Overview of Microsoft's AI assistant capabilities and integration across Office applications.",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftCopilotRequirements",
+    "note": "Hardware and software requirements for running Microsoft Copilot AI assistant features.",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftCopilotTech",
+    "note": "Technical overview of Microsoft's AI-powered productivity assistant and its underlying technologies.",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftExcelA11y2023",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftExcelBestPractices2023",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftOfficeRequirements",
+    "note": "Hardware and software requirements for installing and running Microsoft Office applications.",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftOfficeSystemRequirements",
+    "note": "Technical specifications and minimum system requirements for Microsoft Office suite installation.",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftPowerPointA11y2023",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftProjectAccessibility",
+    "note": "Instructions for using Microsoft Project software with screen readers and keyboard navigation.",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftSpeakerNotes",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftSurface3",
+    "note": "Hardware configuration specifications for a Microsoft Surface 3 device with 32GB of memory.",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftSurface3Specs",
+    "note": "Technical specifications and hardware details for Microsoft Surface Laptop 3 computer models.",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftTeamsRequirements",
+    "note": "Hardware and network requirements for optimal Microsoft Teams video conferencing performance.",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftTOC2023",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MicrosoftWindowsAccessibility",
+    "note": "Overview of built-in accessibility features in Windows operating system including screen readers and magnifiers.",
+    "cited": false
+  },
+  {
+    "key": "Miller1968ReactionTime",
+    "note": "Establishes basic human perception of delays",
+    "cited": false
+  },
+  {
+    "key": "MITFifthSense",
+    "note": "Research project developing affordable haptic feedback devices for spatial navigation and sensory substitution.",
+    "cited": false
+  },
+  {
+    "key": "MIUSATips",
+    "note": "Retrieved July 2025",
+    "cited": false
+  },
+  {
+    "key": "MNSETT",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "ModernProcessorBenefits",
+    "note": "Technical report analyzing how modern processor architectures improve performance for educational software applications",
+    "cited": false
+  },
+  {
+    "key": "Modmath",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "moonlight2024",
+    "note": "Product review of SeeSay, an AI-powered assistive device that uses retrieval augmented generation to help visually impaired users",
+    "cited": false
+  },
+  {
+    "key": "MSAAWiki",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "MSAccessibilityChecker",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "MSCodeJumper",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "MSNarratorGuide",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "msseeingai",
+    "note": "Microsoft's AI-powered mobile app that narrates the world around blind and low-vision users through computer vision",
+    "cited": false
+  },
+  {
+    "key": "MSWin11ScreenReader",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "musescore-accessibility2",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "musescore-braille",
+    "note": "MuseScore documentation for Braille music output and integration with Braille displays",
+    "cited": false
+  },
+  {
+    "key": "MusicAccessibilityResources",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "musicbraillerap-github",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "MyDynamicTherapy",
+    "note": "Retrieved from website",
+    "cited": false
+  },
+  {
+    "key": "MyMiniFactory",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "NARAFileNaming",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "NarratorBraille",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NarratorGuide",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NarratorImageDescriptions",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NarratorKeyboardCommands",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NarratorTechDetails",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NarratorWhatsNew",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NASA3D",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "navilens",
+    "note": "Technology platform using high-contrast QR-like codes that can be read from long distances to provide audio information for navigation",
+    "cited": false
+  },
+  {
+    "key": "NFB",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "Nielsen1993UsabilityEngineering",
+    "note": "Often cited for critical response time thresholds in user interface design; foundational work on usability principles and response time requirements for effective user interfaces",
+    "cited": false
+  },
+  {
+    "key": "NIH3D",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "NIMAC2025",
+    "note": "Retrieved July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NISTAltFormats2018",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "NISTDocumentationStandards",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "NLGMeaning",
+    "note": "Explanation of Natural Language Generation technology and its applications in automatically creating human-readable text from data",
+    "cited": false
+  },
+  {
+    "key": "Norman2013TheDesignOfEverydayThings",
+    "note": "Influential design book covering user-centered design principles, affordances, and how good design makes technology accessible and intuitive",
+    "cited": false
+  },
+  {
+    "key": "NotebookCheck2023CPUThrottling",
+    "note": "Technical article explaining CPU throttling mechanisms and their impact on system performance, relevant to assistive technology requirements",
+    "cited": false
+  },
+  {
+    "key": "numberanalytics2024",
+    "note": "Comprehensive guide to making Natural Language Processing applications accessible to users with disabilities",
+    "cited": false
+  },
+  {
+    "key": "NVAccess",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NVDA2024Requirements",
+    "note": "Technical specifications and system requirements for running NVDA screen reader on Windows computers",
+    "cited": false
+  },
+  {
+    "key": "NVDAAPIsClym",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NVDABraille",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NVDAGuide",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "NVDAKeyboardCommands",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NVDARequirements",
+    "note": "Hardware and software requirements for installing and running NVDA screen reader effectively",
+    "cited": false
+  },
+  {
+    "key": "NVDASpeech",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "NVDATraining",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "OCRD",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "OCRDGitHub",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "OCRToolsAPIComparison",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "odt2braille",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "OfficeAccessibilityCenter",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "OITColoradoToolkit",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Olivero1997",
+    "note": "Retrieved July 2025",
+    "cited": false
+  },
+  {
+    "key": "Ollama",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "OntotextSemanticAI",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "OrbitGraphiti",
+    "note": "Advanced tactile graphics display system that allows blind users to feel and interact with digital graphics and images",
+    "cited": false
+  },
+  {
+    "key": "OrbitReader20",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "OrcaSlicer",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "OrientationMobilityInstruction",
+    "note": "Retrieved 2025-12-19",
+    "cited": false
+  },
+  {
+    "key": "OrionTI84",
+    "note": "Accessible talking graphing calculator based on TI-84 Plus functionality",
+    "cited": false
+  },
+  {
+    "key": "OSULibraryOCR",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "PaddleOCR",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "PaddleOCRGitHub",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Pandoc",
+    "note": "Universal markup converter supporting multiple input and output formats",
+    "cited": false
+  },
+  {
+    "key": "PandocDocs",
+    "note": "Complete documentation for Pandoc universal document converter",
+    "cited": false
+  },
+  {
+    "key": "Pantone",
+    "note": "Color matching system and design resources",
+    "cited": false
+  },
+  {
+    "key": "Parasuraman2008CognitiveWorkload",
+    "note": "Research on cognitive factors in human-automation interaction",
+    "cited": false
+  },
+  {
+    "key": "Pashler1994DualTaskInterference",
+    "note": "Classic study on cognitive limitations in multitasking",
+    "cited": false
+  },
+  {
+    "key": "PassMark2024CPUBenchmarks",
+    "note": "Comparative performance data for computer processors",
+    "cited": false
+  },
+  {
+    "key": "PathsToLiteracy",
+    "note": "Educational resource for teaching screen reader use to visually impaired students",
+    "cited": false
+  },
+  {
+    "key": "PathsToLiteracyMain",
+    "note": "Main website for literacy resources for visually impaired learners",
+    "cited": false
+  },
+  {
+    "key": "PEATTraining",
+    "note": "Resources for workplace accessibility training",
+    "cited": false
+  },
+  {
+    "key": "PerkinsBrailleDisplay",
+    "note": "Guide to using braille displays for early literacy development",
+    "cited": false
+  },
+  {
+    "key": "PerkinsElearning",
+    "note": "Online learning resources for educators of visually impaired students",
+    "cited": false
+  },
+  {
+    "key": "PerkinsMathKicker",
+    "note": "Guide to making math content accessible using AI tools",
+    "cited": false
+  },
+  {
+    "key": "PerkinsQuorum",
+    "note": "Resources and stories about blind individuals in programming careers",
+    "cited": false
+  },
+  {
+    "key": "PerkinsScreenMagnification",
+    "note": "Introductory guide to screen magnification software",
+    "cited": false
+  },
+  {
+    "key": "PerkinsTemplate",
+    "note": "Template for assessing technology needs of visually impaired students",
+    "cited": false
+  },
+  {
+    "key": "PerkinsVideoMagnifier",
+    "note": "Guide to selecting video magnification devices for low vision users",
+    "cited": false
+  },
+  {
+    "key": "Petrie2006",
+    "note": "Study on conducting usability tests remotely with disabled participants",
+    "cited": false
+  },
+  {
+    "key": "PlainLanguageGuidelines",
+    "note": "Official guidelines for creating clear, accessible government communications",
+    "cited": false
+  },
+  {
+    "key": "Polymaker",
+    "note": "3D printing materials manufacturer",
+    "cited": false
+  },
+  {
+    "key": "PowerAccessibility",
+    "note": "Research on real-world accessibility challenges beyond technical compliance",
+    "cited": false
+  },
+  {
+    "key": "PredictiveTextAccessibility",
+    "note": "Analysis of predictive text systems for accessibility applications",
+    "cited": false
+  },
+  {
+    "key": "Presley2012",
+    "note": "Comprehensive guide to assessing assistive technology needs for visually impaired students",
+    "cited": false
+  },
+  {
+    "key": "PresleyGuide",
+    "note": "Updated guide to assistive technology assessment for visually impaired students",
+    "cited": false
+  },
+  {
+    "key": "PricingChange2024",
+    "note": "Documentation of pricing changes for assistive technology products",
+    "cited": false
+  },
+  {
+    "key": "Printables",
+    "note": "Online community for sharing 3D printable designs",
+    "cited": false
+  },
+  {
+    "key": "PrintedSolid",
+    "note": "Supplier of 3D printing materials and equipment",
+    "cited": false
+  },
+  {
+    "key": "ProjectCore",
+    "note": "Resources for augmentative and alternative communication systems",
+    "cited": false
+  },
+  {
+    "key": "ProtoPasta",
+    "note": "Specialty 3D printing filament manufacturer",
+    "cited": false
+  },
+  {
+    "key": "PrusaSlicer",
+    "note": "Software for preparing 3D models for printing",
+    "cited": false
+  },
+  {
+    "key": "PsychologyOfDisability",
+    "note": "Research on psychological aspects of living with disabilities",
+    "cited": false
+  },
+  {
+    "key": "PublicSectorBodiesRegulations2018",
+    "note": "UK regulations mandating digital accessibility for public sector",
+    "cited": false
+  },
+  {
+    "key": "PushPlastic",
+    "note": "3D printing filament manufacturer",
+    "cited": false
+  },
+  {
+    "key": "PyImageSearchTables",
+    "note": "Technical guide to optical character recognition for tabular data",
+    "cited": false
+  },
+  {
+    "key": "QIATGuide",
+    "note": "Comprehensive resource for assistive technology in education",
+    "cited": false
+  },
+  {
+    "key": "QualcommSnapdragonX",
+    "note": "Information about Qualcomm's computer processors",
+    "cited": false
+  },
+  {
+    "key": "QuorumLanguage",
+    "note": "Accessible programming language for blind students",
+    "cited": false
+  },
+  {
+    "key": "RAWGraphs",
+    "note": "Open source data visualization framework",
+    "cited": false
+  },
+  {
+    "key": "Rayner2012EyeMovementsInReading",
+    "note": "Research on eye movement patterns during reading",
+    "cited": false
+  },
+  {
+    "key": "ReadabilityGroup",
+    "note": "Guide to selecting accessible typography",
+    "cited": false
+  },
+  {
+    "key": "Realtek2023AudioDriverPerformance",
+    "note": "Technical information about audio driver performance characteristics",
+    "cited": false
+  },
+  {
+    "key": "RECOG",
+    "note": "Research project on content recognition and analysis",
+    "cited": false
+  },
+  {
+    "key": "Redish2012",
+    "note": "Guide to effective web content writing",
+    "cited": false
+  },
+  {
+    "key": "ReindersAccessibleData",
+    "note": "Research on making data analysis accessible to visually impaired users",
+    "cited": false
+  },
+  {
+    "key": "Rello2013",
+    "note": "Study on typography design for dyslexic readers",
+    "cited": false
+  },
+  {
+    "key": "RequiresJAWSFusion",
+    "note": "Documentation of software dependency on specific screen readers",
+    "cited": false
+  },
+  {
+    "key": "researchgate-linearized-musicxml",
+    "note": "Research on music notation recognition technology",
+    "cited": false
+  },
+  {
+    "key": "ResearchGateMathSVM",
+    "note": "Technical paper on machine learning for math symbol recognition",
+    "cited": false
+  },
+  {
+    "key": "researchgate-polyphonic-omr",
+    "note": "Research on recognizing polyphonic music notation",
+    "cited": false
+  },
+  {
+    "key": "Respeecher2024",
+    "note": "Retrieved July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "RichScreenReaderExperiences",
+    "note": "Research on improving data visualization accessibility through screen readers",
+    "cited": false
+  },
+  {
+    "key": "RMEAudio2023UnderstandingLatency",
+    "note": "Technical explanation of audio latency concepts",
+    "cited": false
+  },
+  {
+    "key": "rnib-braille-music",
+    "note": "Resources for braille music notation",
+    "cited": false
+  },
+  {
+    "key": "RNIBBrailleMusic",
+    "note": "Duplicate entry for RNIB braille music resources",
+    "cited": false
+  },
+  {
+    "key": "sachindae-license",
+    "note": "Software license documentation",
+    "cited": false
+  },
+  {
+    "key": "sachindae-polyphonic-omr",
+    "note": "Open source project for polyphonic optical music recognition",
+    "cited": false
+  },
+  {
+    "key": "SamsungAccessibility",
+    "note": "Accessibility features and services from Samsung",
+    "cited": false
+  },
+  {
+    "key": "SaoMai2025",
+    "note": "Typing instruction software for blind users",
+    "cited": false
+  },
+  {
+    "key": "SaoMaiBraille",
+    "note": "Braille software solution for Vietnamese language",
+    "cited": false
+  },
+  {
+    "key": "Sapolsky2004WhyZebrasDontGetUlcers",
+    "note": "Popular science book about stress and its physiological effects",
+    "cited": false
+  },
+  {
+    "key": "SchoolTechProcurement",
+    "note": "Internal policies for educational technology purchasing",
+    "cited": false
+  },
+  {
+    "key": "ScreenReaderApp",
+    "note": "Community resource for screen reader users",
+    "cited": false
+  },
+  {
+    "key": "ScreenreaderLagImpact",
+    "note": "Statement about performance requirements for educational screen readers",
+    "cited": false
+  },
+  {
+    "key": "Sears1993TheEffectOfResponseTime",
+    "note": "Classic study on system response time impacts on users",
+    "cited": false
+  },
+  {
+    "key": "Section504RehabAct",
+    "note": "Legal requirements for disability accommodations in education",
+    "cited": false
+  },
+  {
+    "key": "Section508",
+    "note": "US federal accessibility standards for information technology",
+    "cited": false
+  },
+  {
+    "key": "Section508Fonts",
+    "note": "Guidance on typography choices for accessibility compliance",
+    "cited": false
+  },
+  {
+    "key": "Section508Presentations",
+    "note": "Accessibility guidelines for presentation software",
+    "cited": false
+  },
+  {
+    "key": "Section508ReviewProcess",
+    "note": "Process for evaluating ICT accessibility compliance",
+    "cited": false
+  },
+  {
+    "key": "Section508Tables2018",
+    "note": "Accessibility requirements for data tables in digital content",
+    "cited": false
+  },
+  {
+    "key": "See3D",
+    "note": "Organization creating 3D printed models for blind users",
+    "cited": false
+  },
+  {
+    "key": "SeeChart",
+    "note": "Research on accessible data visualization techniques",
+    "cited": false
+  },
+  {
+    "key": "SeeingAI",
+    "note": "AI-powered app describing the visual world for blind users",
+    "cited": false
+  },
+  {
+    "key": "Seeman2015",
+    "note": "W3C research on cognitive accessibility requirements",
+    "cited": false
+  },
+  {
+    "key": "seesay2024",
+    "note": "Research on assistive device using AI for visual impairment",
+    "cited": false
+  },
+  {
+    "key": "Seligman1975Helplessness",
+    "note": "Psychological theory of learned helplessness",
+    "cited": false
+  },
+  {
+    "key": "SensoryApps",
+    "note": "Developer of apps for sensory and special needs",
+    "cited": false
+  },
+  {
+    "key": "SETTResources",
+    "note": "Resources for the SETT assistive technology assessment framework",
+    "cited": false
+  },
+  {
+    "key": "SheetsChecker",
+    "note": "Tool for checking Google Sheets accessibility",
+    "cited": false
+  },
+  {
+    "key": "Shneiderman1998DesigningTheUserInterface",
+    "note": "Classic textbook on user interface design principles",
+    "cited": false
+  },
+  {
+    "key": "Smallwood2011MindWandering",
+    "note": "Research on cognitive processes of mind wandering",
+    "cited": false
+  },
+  {
+    "key": "SMB",
+    "note": "Duplicate entry for Sao Mai Braille software",
+    "cited": false
+  },
+  {
+    "key": "SMBNVDA",
+    "note": "Screen reader extension for Vietnamese braille support",
+    "cited": false
+  },
+  {
+    "key": "Smith2022",
+    "note": "Research on screen reader use in educational contexts",
+    "cited": false
+  },
+  {
+    "key": "Smithsonian3D",
+    "note": "3D digitization project of Smithsonian collections",
+    "cited": false
+  },
+  {
+    "key": "Smits2024AltGosling",
+    "note": "Research on accessible data visualization for genomics",
+    "cited": false
+  },
+  {
+    "key": "SnowChecklist",
+    "note": "Checklist for evaluating assistive technology needs",
+    "cited": false
+  },
+  {
+    "key": "SocietalImpactReport",
+    "note": "Report on broader impacts of educational disparities",
+    "cited": false
+  },
+  {
+    "key": "SoftwareMemoryDemands",
+    "note": "Analysis of system resource demands for educational software, including assistive technology tools.",
+    "cited": false
+  },
+  {
+    "key": "SonificationSandbox",
+    "note": "Interactive tool for converting data into sound, useful for accessible data representation.",
+    "cited": false
+  },
+  {
+    "key": "SoundGuys2023AudioCodecs",
+    "note": "Explanation of audio compression technologies relevant to screen reader speech synthesis.",
+    "cited": false
+  },
+  {
+    "key": "SourceOpenNewsOCR",
+    "note": "Comparison of optical character recognition tools for document accessibility.",
+    "cited": false
+  },
+  {
+    "key": "Speechify2025",
+    "note": "Retrieved July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "SRTUpdate",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "SRTVoiceOver",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "StackOverflowTesseractColumns",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Stallman2002",
+    "note": "Philosophical foundation of open-source software movement with implications for accessible technology.",
+    "cited": false
+  },
+  {
+    "key": "Stark2024",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "Steinberg2023AudioDriverPerformance",
+    "note": "Technical analysis of audio system performance factors affecting screen reader responsiveness.",
+    "cited": false
+  },
+  {
+    "key": "STFC",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "StudentOutcomesResearch",
+    "note": "Research Report",
+    "cited": false
+  },
+  {
+    "key": "SuperNovaBraille",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "SuperNovaFeatures",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "SuperNovaHotkeys",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "SuperNovaMagnifierScreenReader",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "SuperNovaSpeech",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "SurfsUp",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "SurfsUpOffline",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Sweller1988CognitiveLoadTheory",
+    "note": "Introduces cognitive load theory, which is relevant to how delays increase mental effort",
+    "cited": false
+  },
+  {
+    "key": "SwitchedAdaptedToys",
+    "note": "Retrieved from website",
+    "cited": false
+  },
+  {
+    "key": "SystemOptimizationGuides",
+    "note": "Best practices for configuring systems to run assistive technologies efficiently.",
+    "cited": false
+  },
+  {
+    "key": "SystemPerformanceMonitoring",
+    "note": "Methodologies for measuring and improving assistive technology responsiveness.",
+    "cited": false
+  },
+  {
+    "key": "TactileComms",
+    "note": "Retrieved from website",
+    "cited": false
+  },
+  {
+    "key": "TactileGraphicsAndInteractiveDisplays",
+    "note": "To be updated with actual citation details",
+    "cited": false
+  },
+  {
+    "key": "TactileMath",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "TactileSkillsDevelopment",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "TactileVegaLite",
+    "note": "Framework for automatically generating accessible tactile data visualizations.",
+    "cited": false
+  },
+  {
+    "key": "TactStyle",
+    "note": "AI-powered system for creating varied tactile surfaces for accessibility applications.",
+    "cited": false
+  },
+  {
+    "key": "TapNSeeNow",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "Taptilo",
+    "note": "Interactive device for teaching braille through gamification.",
+    "cited": false
+  },
+  {
+    "key": "TeachingAssessment",
+    "note": "Retrieved July 2025",
+    "cited": false
+  },
+  {
+    "key": "TeachThought2021",
+    "note": "Retrieved 2025-12-19",
+    "cited": false
+  },
+  {
+    "key": "TechLearning2023",
+    "note": "Retrieved 2025-12-19",
+    "cited": false
+  },
+  {
+    "key": "TechnologyAccessibilityAudits",
+    "note": "Procedures for evaluating technology accessibility in schools and universities.",
+    "cited": false
+  },
+  {
+    "key": "TechRadarOCR",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "TechSpot2023RAMTimings",
+    "note": "Explains how RAM timings like CAS latency affect overall system speed",
+    "cited": false
+  },
+  {
+    "key": "Tesseract",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "TexthelpEquatio",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "TexthelpEquatioPricing",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "TGPiCCA",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "Thangs",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "Thatcher2006",
+    "note": "Comprehensive guide to web accessibility standards and compliance, including practical testing methodologies",
+    "cited": false
+  },
+  {
+    "key": "Thingiverse",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "ThinkerbellLabs",
+    "note": "Innovative device for teaching braille through interactive feedback.",
+    "cited": false
+  },
+  {
+    "key": "TLOU2Accessibility",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "TPGiARC",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "TPGIMathAccessible",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Trayford2023STRAUSS",
+    "note": "Open-source toolkit for creating accessible data sonifications.",
+    "cited": false
+  },
+  {
+    "key": "TrueEquityStandard",
+    "note": "Conceptual framework for evaluating technology's role in inclusive education.",
+    "cited": false
+  },
+  {
+    "key": "TTRS2025",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "turn0news27",
+    "note": "Accessed: 2024-10-27",
+    "cited": false
+  },
+  {
+    "key": "turn0search0",
+    "note": "Accessed: 2024-10-27",
+    "cited": false
+  },
+  {
+    "key": "turn0search11",
+    "note": "Accessed: 2024-10-27",
+    "cited": false
+  },
+  {
+    "key": "turn0search12",
+    "note": "Compares the TalkBack implementations between Samsung's One UI and stock Android, focusing on accessibility differences.",
+    "cited": false
+  },
+  {
+    "key": "turn0search15",
+    "note": "Overview of new features and changes in TalkBack 16.0 from an independent accessibility-focused perspective.",
+    "cited": false
+  },
+  {
+    "key": "turn0search3",
+    "note": "Accessed: 2024-10-27",
+    "cited": false
+  },
+  {
+    "key": "turn0search8",
+    "note": "Accessed: 2024-10-27",
+    "cited": false
+  },
+  {
+    "key": "turn0search9",
+    "note": "Official Google announcement detailing new features and improvements in TalkBack version 16.0.",
+    "cited": false
+  },
+  {
+    "key": "TwoTone",
+    "note": "Web-based tool for converting data sets into auditory representations through sonification techniques.",
+    "cited": false
+  },
+  {
+    "key": "TypeAbility2025",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "TypeAbilityPricing",
+    "note": "Pricing information for the TypeAbility typing tutor software for visually impaired users.",
+    "cited": false
+  },
+  {
+    "key": "TypeAbilityRequirements",
+    "note": "Technical specifications and system requirements for running TypeAbility software.",
+    "cited": false
+  },
+  {
+    "key": "TypingClub2025",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Typio2025",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "UIAutomationOverview",
+    "note": "Accessed: July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "UMDearbornBlackBoxAI",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "Umwelt",
+    "note": "Research paper presenting a system for accessible editing of data representations across multiple modalities.",
+    "cited": false
+  },
+  {
+    "key": "UnacceptableEquityViolation",
+    "note": "Placeholder citation indicating a serious accessibility violation or equity concern.",
+    "cited": false
+  },
+  {
+    "key": "USAccessBoard2018",
+    "note": "36 CFR Part 1194",
+    "cited": false
+  },
+  {
+    "key": "USD",
+    "note": "Retrieved from website",
+    "cited": false
+  },
+  {
+    "key": "USDeptEducation2021",
+    "note": "Retrieved July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "UserExperienceImprovements",
+    "note": "Study examining how hardware specifications affect the usability of assistive technologies.",
+    "cited": false
+  },
+  {
+    "key": "UserWay2024",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "UWAccessibleMath",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "UWDocInfo",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "VestibularDigitalA11y",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "victastudents2024",
+    "note": "Overview of artificial intelligence applications designed to assist blind and visually impaired users.",
+    "cited": false
+  },
+  {
+    "key": "ViewPlusAGC",
+    "note": "Accessible graphing calculator with audio feedback for visually impaired users",
+    "cited": false
+  },
+  {
+    "key": "ViewPlusProduct",
+    "note": "Comprehensive range of accessibility products and software solutions",
+    "cited": false
+  },
+  {
+    "key": "ViewPlusTigerSuite",
+    "note": "Software suite for creating accessible tactile graphics and documents",
+    "cited": false
+  },
+  {
+    "key": "VisionAid2025",
+    "note": "Retrieved July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "VisionAidDBT",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "VisText",
+    "note": "Research paper introducing a benchmark dataset for evaluating automatic description of data visualizations.",
+    "cited": false
+  },
+  {
+    "key": "VisualisingMedicalResearch",
+    "note": "Study examining how infographics affect the communication and understanding of medical research.",
+    "cited": false
+  },
+  {
+    "key": "VoiceDreamReader",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "VoiceDreamScanner",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "W3C2018WCAG21",
+    "note": "Provides guidelines for perceivable, operable, understandable, and robust web content, which implicitly supports responsive interactions",
+    "cited": false
+  },
+  {
+    "key": "W3CChartsGraphs2023",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "W3CCollaborativeEditing",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "W3CEmergingTechA11y",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "W3CMathML",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "W3CMathML3",
+    "note": "W3C Recommendation",
+    "cited": false
+  },
+  {
+    "key": "W3CMathML4",
+    "note": "W3C Recommendation",
+    "cited": false
+  },
+  {
+    "key": "W3CMathMLWeb",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "W3CMediaA11y",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "wajdialjedaani2024",
+    "note": "Research project applying natural language processing techniques to improve digital accessibility.",
+    "cited": false
+  },
+  {
+    "key": "Wall2003",
+    "note": "Study examining how tactile graphics contribute to spatial understanding for blind individuals.",
+    "cited": false
+  },
+  {
+    "key": "Ware2012",
+    "note": "Foundational textbook on visualization principles and perceptual psychology.",
+    "cited": false
+  },
+  {
+    "key": "Warschauer2003TechnologyAndSocialInclusion",
+    "note": "Seminal work examining how technology access affects social participation and equity.",
+    "cited": false
+  },
+  {
+    "key": "WATI2010",
+    "note": "Retrieved 2025-12-19",
+    "cited": false
+  },
+  {
+    "key": "WATIAssessing",
+    "note": "Retrieved July 2025",
+    "cited": false
+  },
+  {
+    "key": "WAVE",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WCAG20",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "WCAG20Caldwell2008",
+    "note": "W3C Recommendation",
+    "cited": false
+  },
+  {
+    "key": "WCAG21",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "WCAG21Conformance",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WCAG21LevelAA",
+    "note": "State government adoption and implementation guidelines for mid-level WCAG compliance.",
+    "cited": false
+  },
+  {
+    "key": "WCAG21W3C2018",
+    "note": "W3C Recommendation",
+    "cited": false
+  },
+  {
+    "key": "WCAG3Draft",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WCAGComplexImages2023",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WCAGContrast2018",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WCAGNonText2018",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WCAGPrincipleRobust",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "WebAccessibilityDirectiveEU",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WebAIMContrastChecker",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WebAIMIntro2024",
+    "note": "Accessed: 2024",
+    "cited": false
+  },
+  {
+    "key": "WebAIMKeyboardA11y",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WebAIMLinks2023",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WebAIMPowerPoint2023",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WebAIMShortcuts",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WebAIMSpreadsheets2023",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WebAIMTables2023",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WeWALK",
+    "note": "Accessed: 2024-07-25",
+    "cited": false
+  },
+  {
+    "key": "Wickens2008MultipleResourceTheory",
+    "note": "Theoretical framework for understanding how humans process multiple information streams.",
+    "cited": false
+  },
+  {
+    "key": "Wikipedia2024",
+    "note": "Retrieved July 4, 2025",
+    "cited": false
+  },
+  {
+    "key": "WikipediaLayoutAnalysis",
+    "note": "Accessed: 2025",
+    "cited": false
+  },
+  {
+    "key": "WindowsBuiltInMagnifier",
+    "note": "Microsoft Windows feature for screen magnification to assist low-vision users.",
+    "cited": false
+  },
+  {
+    "key": "WindowsBuiltInScreenreader",
+    "note": "Reference to Windows Narrator, the built-in screen reading utility in Microsoft Windows.",
+    "cited": false
+  },
+  {
+    "key": "WindowsPowerManagement",
+    "note": "Explains how power-saving modes can affect system performance and responsiveness",
+    "cited": false
+  },
+  {
+    "key": "WIRISMathType",
+    "note": "Accessed: 2025. MathType is a mathematical equation editor that allows users to create and edit mathematical notation.",
+    "cited": false
+  },
+  {
+    "key": "WIRISMathTypeFeatures",
+    "note": "Mathematical equation editor with advanced formatting capabilities, including integration with various platforms and accessibility features.",
+    "cited": false
+  },
+  {
+    "key": "wjaets2024",
+    "note": "Explores the impact of assistive technology on the social-emotional well-being of individuals with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "WorldScientificMathOCR",
+    "note": "Accessed: 2025. Discusses techniques and challenges in recognizing mathematical symbols using OCR technology.",
+    "cited": false
+  },
+  {
+    "key": "WSRKeystrokeCompendium",
+    "note": "Accessed: 2025. A comprehensive guide to keystroke commands for Windows screen readers like JAWS, NVDA, and Narrator.",
+    "cited": false
+  },
+  {
+    "key": "WSRPrimer2ndEd",
+    "note": "Accessed: 2025. A beginner-friendly guide to using Windows screen readers for accessibility.",
+    "cited": false
+  },
+  {
+    "key": "WSRPrimerCoverage",
+    "note": "Covers use of Windows Narrator, NVDA, and JAWS, providing a comparative overview of these screen readers.",
+    "cited": false
+  },
+  {
+    "key": "Xu2024FromGraphs",
+    "note": "Proposes a framework for automatically generating accessible text descriptions of graphs and visual data.",
+    "cited": false
+  },
+  {
+    "key": "Ye2022",
+    "note": "Investigates the challenges and opportunities of VR accessibility for users with disabilities.",
+    "cited": false
+  },
+  {
+    "key": "Yeggi",
+    "note": "Accessed: 2024-07-25. A search engine for 3D printable models, including assistive devices and accessibility tools.",
+    "cited": false
+  },
+  {
+    "key": "Zabala2005",
+    "note": "Accessed: 2025. Introduces the SETT framework for assistive technology decision-making in education.",
+    "cited": false
+  },
+  {
+    "key": "Zabala2018",
+    "note": "Accessed: 2025. Expands on the SETT framework for assistive technology implementation in educational settings.",
+    "cited": false
+  },
+  {
+    "key": "ZabalaSETT",
+    "note": "Accessed: 2025. A collection of resources and tools related to the SETT framework for assistive technology.",
+    "cited": false
+  },
+  {
+    "key": "ZDSRPricing",
+    "note": "Provides pricing details for ZoomText Desktop Screen Reader, a popular screen magnification and reading software.",
+    "cited": false
+  },
+  {
+    "key": "ZDSRRequirements",
+    "note": "Lists the technical specifications needed to run ZoomText Desktop Screen Reader effectively.",
+    "cited": false
+  },
+  {
+    "key": "Zeidner1998TestAnxiety",
+    "note": "A comprehensive overview of research on test anxiety, its causes, effects, and potential interventions.",
+    "cited": false
+  },
+  {
+    "key": "Zewe2021Making",
+    "note": "Discusses new approaches to creating accessible data visualizations for blind and low-vision users.",
+    "cited": false
+  },
+  {
+    "key": "Zewe2022Making",
+    "note": "Follow-up research on innovative methods to improve data visualization accessibility.",
+    "cited": false
+  },
+  {
+    "key": "Zong2024Umwelt",
+    "note": "Presents Umwelt, a system for accessible editing of multi-modal data representations for users with diverse abilities.",
+    "cited": false
+  },
+  {
+    "key": "ZoomRequirements",
+    "note": "Details the technical requirements for running Zoom video conferencing software across different platforms.",
+    "cited": false
+  }
+]

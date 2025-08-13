@@ -1,255 +1,327 @@
 \chapter{Comprehensive Accessibility Audit of Office Suites for Screen Reader Accessibility}
-\label{chap:office-suite-accessibility}
+\label{cha:comprehensive-accessibility-audit-of-office-suites-for-screen-reader-accessibility}
+\index{accessibility!audit}
+\index{screen reader!accessibility}
 
-This chapter provides a comprehensive audit of the accessibility of major office suites—Microsoft Office\index{office suite!Microsoft Office}, Google Workspace, and LibreOffice\index{office suite!LibreOffice}—with a specific focus on their usability with screen readers\index{screen reader}. It covers fundamental accessibility standards, built-in accessibility\index{accessibility} features, external auditing tools, and common accessibility failures\index{accessibility!common accessibility failures} and their remediation\index{accessibility!remediation strategies}.
+A comprehensive \gls{accessibility} audit is crucial to ensure that individuals who rely on \gls{screenreader}s can effectively create, edit, and consume digital documents. This chapter provides a detailed guide on conducting such an audit, covering fundamental principles, built-in accessibility features, external auditing tools, and common accessibility failures.
+
+***
 
 \section{Fundamental Principles and Relevant Accessibility Standards}
-\label{sec:office-accessibility-standards}
+\label{sec:fundamental-principles-and-relevant-accessibility-standards}
+\index{accessibility!standards}
+\index{principles!accessibility}
 
-To conduct a thorough accessibility audit\index{accessibility!accessibility testing}, it is essential to understand the standards that define digital accessibility\index{digital accessibility}. These standards provide the framework\index{laptop!Framework} for creating documents that are usable by people with disabilities, including those who rely on screen readers\index{screen reader}.
+Before diving into the specifics of an audit, it is essential to understand the foundational principles and standards that govern digital accessibility. These guidelines provide a framework for creating content that is perceivable, operable, understandable, and robust for all users, including those with disabilities.
+
+***
 
 \subsection{Web Content Accessibility Guidelines (WCAG)}
-\label{subsec:wcag-office}
+\label{sub:web-content-accessibility-guidelines-wcag}
+\index{WCAG}
+\index{web content accessibility guidelines}
 
-The Web Content Accessibility Guidelines\index{WCAG} (WCAG), developed by the World Wide Web Consortium (W3C), are the de facto international standard for web accessibility. While aimed at web content, the principles of WCAG are directly applicable to documents created in office suites, as these documents are often shared electronically and consumed in a digital format. The four core principles of WCAG are:
+The Web Content Accessibility Guidelines (\gls{WCAG}) are the most widely recognized international standard for web accessibility, developed by the World Wide Web Consortium (W3C). Although primarily focused on web content, its principles are highly applicable to documents created in office suites, as these are often shared electronically and consumed in a digital format. \gls{WCAG} is organized around four main principles (POUR)\supercite{WCAGGuidelines}:
 
 \begin{itemize}
-	\item \textbf{Perceivable\index{accessibility!accessibility principles}}: Information and user interface components must be presentable to users in ways they can perceive. This means providing text alternatives for non-text content, creating content that can be presented in different ways (e.g., simple layout) without losing information or structure, and making it easier for users to see and hear content.
-	\item \textbf{Operable}: User interface components and navigation must be operable. This includes making all functionality available from a keyboard, giving users enough time to read and use content, not designing content in a way that is known to cause seizures, and providing ways to help users navigate, find content, and determine where they are.
-	\item \textbf{Understandable}: Information and the operation of the user interface must be understandable. This means making text content readable and understandable, making web pages appear and operate in predictable ways, and helping users avoid and correct mistakes.
-	\item \textbf{Robust}: Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies\index{assistive technology}. This means maximizing compatibility with current and future user agents, including assistive technologies\index{assistive technology}.
+	\item \textbf{Perceivable\gls{perceivable}:} Information and user interface components must be presentable to users in ways they can perceive. This includes providing text alternatives for non-text content, and ensuring content is distinguishable and can be presented in different ways without losing information or structure.
+	\item \textbf{Operable\gls{operable}:} User interface components and navigation must be operable. This means all functionality should be available from a keyboard, and users must have enough time to read and use content. It also involves not designing content that causes seizures and providing ways to help users navigate and find content.
+	\item \textbf{Understandable\gls{understandable}:} Information and the operation of the user interface must be understandable. This involves making text readable and understandable, and making content appear and operate in predictable ways. It also means helping users avoid and correct mistakes.
+	\item \textbf{Robust\gls{robust}:} Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies. This means maximizing compatibility with current and future user agents.
 \end{itemize}
 
-For office documents, this translates to using proper headings\index{Markdown!headings}, providing alt text for images, ensuring good color contrast\index{accessibility!Manual Testing}, creating logical reading orders, and ensuring that tables and lists\index{Markdown!lists} are correctly formatted.
+For office documents, these principles translate into using proper headings, providing alt text for images, ensuring good color contrast, creating logical reading orders, and correctly formatting tables and lists.
+
+***
 
 \subsection{Section 508 of the Rehabilitation Act}
-\label{subsec:section-508-office}
-In the United States, Section 508\index{accessibility!legal accessibility} of the Rehabilitation Act requires federal agencies to make their electronic and information technology\index{technology} (EIT) accessible to people with disabilities. The standards of Section 508 are harmonized with WCAG 2.0\index{WCAG} AA, making WCAG a key reference for compliance.
+\label{sub:section-508-of-the-rehabilitation-act}
+\index{Section 508}
+\index{rehabilitation act}
+
+In the United States, Section 508 of the Rehabilitation Act requires federal agencies to make their electronic and information technology (EIT) accessible to people with disabilities. The standards for Section 508 are based on WCAG 2.0 Level AA, making \gls{WCAG} a critical benchmark for compliance\supercite{Section508}.
+
+***
 
 \subsection{Accessible Rich Internet Applications (ARIA)}
-\label{subsec:aria-office}
-While more relevant to web applications, ARIA (Accessible Rich Internet Applications\index{accessibility!ARIA}) roles and attributes can be important for the web-based versions of office suites like Google Workspace and Microsoft Office\index{office suite!Microsoft Office} Online. ARIA provides a way to make web content and web applications more accessible to people with disabilities.
+\label{sub:accessible-rich-internet-applications-aria}
+\index{ARIA}
+\index{accessible rich internet applications}
+
+\gls{ARIA} is a set of attributes that can be added to HTML elements to improve the accessibility of web content and applications. While more relevant to web-based office suites like Google Workspace and Microsoft Office Online, understanding \gls{ARIA} roles, states, and properties can be beneficial for auditing complex interactive elements\supercite{w3caria}.
+
+***
 
 \section{Built-in Accessibility Features and Checkers}
-\label{sec:built-in-accessibility-checkers}
+\label{sec:built-in-accessibility-features-and-checkers}
+\index{accessibility!features}
+\index{accessibility!checkers}
 
-Modern office suites have made significant strides in integrating accessibility\index{accessibility} features and checkers directly into their applications. These tools can help authors identify and fix common accessibility issues during the document creation process.
+Most modern office suites include built-in tools to help authors create accessible documents. An essential part of an accessibility audit is to evaluate the effectiveness and usability of these features.
+
+***
 
 \subsection{Microsoft Office (Word, Excel, PowerPoint)}
-\label{subsec:ms-office-accessibility}
+\label{sub:microsoft-office-word-excel-powerpoint}
+\index{Microsoft Office}
+\index{accessibility checker!Microsoft}
 
-Microsoft Office has one of the most mature sets of \gls{accessibility} tools among the major office suites.
-
+Microsoft Office has a robust set of accessibility features, including\supercite{MicrosoftAccessibility}:
 \begin{itemize}
-	\item \textbf{Accessibility Checker}: Available in Word, Excel, and PowerPoint, the Accessibility Checker\index{accessibility!accessibility testing} is a powerful tool that inspects your file against a set of rules that identify possible issues for people with disabilities. It categorizes issues as Errors, Warnings, and Tips.
-	      \begin{itemize}
-		      \item \textbf{Errors}: Content that makes the file difficult or impossible for people with disabilities to understand (e.g., missing alt text\index{images and media!alternative text}).
-		      \item \textbf{Warnings}: Content that in most (but not all) cases makes the file difficult to understand (e.g., non-descriptive link text).
-		      \item \textbf{Tips}: Content that people with disabilities can understand but that could be presented in a different way to improve the user experience.
-	      \end{itemize}
-	\item \textbf{Automatic Alt Text}: Microsoft Office\index{office suite!Microsoft Office} can now automatically generate alt text for images using AI\index{AI}, though this should always be reviewed for accuracy.
-	\item \textbf{Styles}: The use of built-in styles for headings\index{Markdown!headings}, lists, and other elements is fundamental to creating a structured, accessible document.
-	\item \textbf{Reading Order\index{PDF!reading order} Pane (PowerPoint)}: PowerPoint includes a Reading Order pane that allows authors to control the order in which a screen reader\index{screen reader} will read the content on a slide.
-	\item \textbf{Accessible Templates}: Microsoft\index{tablet!Microsoft} provides a range of accessible templates to help users get started with creating accessible documents.
+	\item \textbf{Accessibility Checker:} This tool, available in Word, Excel, and PowerPoint, inspects the document for common accessibility issues, such as missing alternative text, unclear link text, and incorrect reading order. It provides feedback and instructions on how to fix the identified problems. It categorizes issues as Errors, Warnings, and Tips.
+	\item \textbf{Alt Text Pane:} A dedicated pane for adding and editing alternative text for images, charts, and other objects. Microsoft Office can also automatically generate alt text for images using AI, though this should always be reviewed for accuracy.
+	\item \textbf{Styles and Headings:} Proper use of heading styles in Word and slide layouts in PowerPoint ensures a logical document structure that screen readers can navigate.
+	\item \textbf{Table Headers:} The ability to specify header rows in tables allows screen readers to announce column and row headers, providing context for data cells.
+	\item \textbf{Reading Order Pane (PowerPoint):} This pane allows authors to control the order in which a screen reader will read the content on a slide.
+	\item \textbf{Accessible Templates:} Microsoft provides a range of accessible templates to help users get started.
 \end{itemize}
+
+***
 
 \subsection{Google Workspace (Docs, Sheets, Slides)}
-\label{subsec:google-workspace-accessibility}
+\label{sub:google-workspace-docs-sheets-slides}
+\index{Google Workspace}
+\index{accessibility checker!Google}
 
-Google Workspace\index{office suite!Google Workspace} has been improving its accessibility\index{accessibility} features, particularly for its web-based applications.
-
+Google Workspace also offers several accessibility features\supercite{GoogleAccessibility}:
 \begin{itemize}
-	\item \textbf{Accessibility Checker (Grackle)}: While Google Workspace does not have a built-in accessibility\index{accessibility} checker\index{accessibility!accessibility testing} as robust as Microsoft's, third-party add-ons like Grackle Docs, Grackle Sheets, and Grackle Slides can be used to check for and remediate accessibility issues. These tools check against WCAG 2.1\index{WCAG} standards.
-	\item \textbf{Screen Reader Support}: Google Workspace is designed to work well with screen readers like ChromeVox (on ChromeOS\index{operating system!ChromeOS}), NVDA, and JAWS on Windows, and VoiceOver\index{screen reader!VoiceOver} on macOS.
-	\item \textbf{Semantic Structure}: Like Microsoft Office\index{office suite!Microsoft Office}, using headings, lists\index{Markdown!lists}, and other structural elements correctly is key to accessibility in Google Docs.
-	\item \textbf{Alt Text\index{images and media!alternative text}}: Users can add alt text to images and drawings.
-	\item \textbf{Keyboard Shortcuts}: Google Workspace provides extensive keyboard shortcuts for navigation and editing.
-	\item \textbf{Color Contrast\index{accessibility!Manual Testing}}: Google has been working to improve the default color contrast in its user interface and templates.
+	\item \textbf{Accessibility Checker (via add-on):} While not built-in by default, add-ons like Grackle Docs, Sheets, and Slides can be used to check for accessibility issues against WCAG 2.1 standards.
+	\item \textbf{Alt Text:} Google Docs, Sheets, and Slides allow users to add alt text to images and drawings.
+	\item \textbf{Semantic Structure:} Using built-in headings in Docs and title/layout slides in Slides helps create a structured document.
+	\item \textbf{Screen Reader Support:} Google actively works on improving support for screen readers like ChromeVox, NVDA, JAWS, and VoiceOver across its applications.
+	\item \textbf{Keyboard Shortcuts:} Google Workspace provides extensive keyboard shortcuts for navigation and editing.
+	\item \textbf{Color Contrast:} Google has been working to improve the default color contrast in its user interface and templates.
 \end{itemize}
+
+***
 
 \subsection{LibreOffice (Writer, Calc, Impress)}
-\label{subsec:libreoffice-accessibility}
+\label{sub:libreoffice-writer-calc-impress}
+\index{LibreOffice}
+\index{accessibility checker!LibreOffice}
 
-LibreOffice\index{office suite!LibreOffice}, a free and open-source office suite, also includes accessibility features.
-
+LibreOffice, a popular open-source office suite, includes accessibility features as well\supercite{LibreOfficeAccessibility}:
 \begin{itemize}
-	\item \textbf{Accessibility Check}: LibreOffice includes an accessibility checker that can identify some common issues, such as missing alt text, but it is not as comprehensive as the one in Microsoft Office. It can be accessed via \texttt{Tools > Accessibility Check\index{accessibility!accessibility testing}}.
-	\item \textbf{Styles and Formatting}: LibreOffice heavily relies on styles for creating structured documents. Using paragraph styles for headings\index{Markdown!headings} and list styles for lists is crucial.
-	\item \textbf{Export to Tagged PDF}: LibreOffice can export documents to PDF\index{PDF} with tagging, which is essential for PDF accessibility\index{PDF!PDF accessibility}. The "Universal Accessibility (PDF/UA\index{PDF!PDF/UA})" option must be selected in the PDF\index{PDF} export dialog.
-	\item \textbf{Support for Assistive Technologies\index{assistive technology}}: LibreOffice works with screen readers\index{screen reader} on Windows (NVDA, JAWS\index{screen reader!JAWS}) and Linux (Orca).
+	\item \textbf{Accessibility Check Tool:} An experimental feature that can be enabled to check for common accessibility problems, such as missing alt text. It can be accessed via \texttt{Tools > Accessibility Check}.
+	\item \textbf{Alternative Text:} Options to add alt text to images and objects.
+	\item \textbf{Styles and Formatting:} Proper use of paragraph styles, especially headings and lists, is crucial for creating accessible documents in Writer.
+	\item \textbf{Export to Tagged PDF:} LibreOffice can export documents to PDF with accessibility tags, which is essential for creating accessible PDFs. The "Universal Accessibility (PDF/UA)\gls{pdf/ua}" option must be selected in the PDF export dialog.
+	\item \textbf{Support for Assistive Technologies:} LibreOffice works with screen readers on Windows (NVDA, JAWS) and Linux (Orca).
 \end{itemize}
+
+***
 
 \section{External Accessibility Audit Tools}
-\label{sec:external-audit-tools}
+\label{sec:external-accessibility-audit-tools}
+\index{accessibility!tools}
+\index{audit!tools}
 
-In addition to the built-in checkers, several external tools can be used to audit the accessibility\index{accessibility} of office documents. These tools often provide more in-depth analysis and can be used to verify compliance\index{accessibility!legal accessibility} with specific standards.
+While built-in checkers are a good starting point, a thorough audit requires the use of external tools. These tools can often identify issues that the native checkers miss and provide a more comprehensive analysis.
+
+***
 
 \subsection{Tools for Desktop Applications (Microsoft Office, LibreOffice)}
-\label{subsec:desktop-audit-tools}
+\label{sub:tools-for-desktop-applications-microsoft-office-libreoffice}
+\index{desktop applications!tools}
 
-These tools are typically installed on the user's computer and can interact with the office applications directly or with the files they produce (e.g., \gls{pdf}, \gls{html}).
+For documents created in desktop applications, the audit often involves checking the source document and the exported formats, such as PDF.
+
+***
 
 \subsubsection{Commercial Tools}
-\label{ssubsec:commercial-desktop-tools}
+\label{sub:commercial-tools}
+\index{commercial tools}
+
 \begin{itemize}
-	\item \textbf{CommonLook Office (Microsoft Office)}: A plugin for Microsoft Word\index{PDF!Microsoft Word} and PowerPoint that helps authors create compliant PDF documents. It goes beyond the built-in checker to ensure that documents meet standards like PDF/UA.
-	\item \textbf{axesPDF for Word (Microsoft Word)}: A plugin for Microsoft Word that helps create fully accessible, PDF/UA-compliant PDFs from Word documents.
-	\item \textbf{TPG's Colour Contrast Analyser (CCA)}: A free-standing application for Windows\index{operating system!Windows} and macOS that allows you to check the color contrast\index{accessibility!Manual Testing} of any content on your screen, which is useful for checking documents in any office suite.
+	\item \textbf{axesWord and axesPDF\supercite{AxesCheck}:} These are powerful plugins for Microsoft Word and Adobe Acrobat, respectively, that provide advanced accessibility checking and remediation capabilities, going far beyond the built-in checkers. axesPDF for Word helps create fully accessible, \gls{pdf/ua}-compliant PDFs from Word documents.
+	\item \textbf{CommonLook Office and CommonLook PDF\supercite{AllyantCommonLook}:} Similar to the axes tools, these provide comprehensive solutions for creating, checking, and repairing accessible documents and PDFs. CommonLook Office is a plugin for Microsoft Word and PowerPoint that helps authors create compliant PDF documents and goes beyond the built-in checker to ensure documents meet standards like \gls{pdf/ua}.
+	\item \textbf{TPG's Colour Contrast Analyser (CCA)\supercite{TGPiCCA}:} A free-standing application for Windows and macOS that allows you to check the color contrast of any content on your screen.
 \end{itemize}
 
+***
+
 \subsubsection{Open-Source Tools}
-\label{ssubsec:opensource-desktop-tools}
+\label{sub:open-source-tools}
+\index{open-source tools}
+
 \begin{itemize}
-	\item \textbf{NVDA (NonVisual Desktop Access)}: A free, open-source screen reader\index{screen reader} for Windows. Testing a document with NVDA\index{accessibility!NVDA} is one of the most effective ways to audit its accessibility from the perspective of a screen reader user.
-	\item \textbf{LibreOffice Accessibility Check}: As mentioned, LibreOffice\index{office suite!LibreOffice} has its own open-source accessibility checker\index{accessibility!accessibility testing}.
-	\item \textbf{Pandoc}: While not an audit tool per se, Pandoc can be used to convert office documents (e.g., .docx) into HTML, which can then be audited with web accessibility\index{accessibility} tools.
+	\item \textbf{PDF Accessibility Checker (PAC)\supercite{AxesCheck}:} A free tool for checking the accessibility of PDF files against the \gls{pdf/ua} (Universal Accessibility) standard. It is an essential tool for auditing exported PDFs from any office suite.
+	\item \textbf{NVDA (NonVisual Desktop Access)\supercite{NVDA}:} A free and open-source screen reader for Windows. Manually testing a document with \gls{nvda} is one of the most effective ways to understand the user experience for screen reader users.
+	\item \textbf{LibreOffice Accessibility Check\supercite{AccessODF}:} LibreOffice has its own open-source accessibility checker.
+	\item \textbf{Pandoc\supercite{Pandoc}:} While not an audit tool, Pandoc can be used to convert office documents into HTML, which can then be audited with web accessibility tools.
 \end{itemize}
+
+***
 
 \subsection{Tools for Web-based Applications (Google Workspace)}
-\label{subsec:web-audit-tools}
+\label{sub:tools-for-web-based-applications-google-workspace}
+\index{web-based applications!tools}
 
-Since Google Workspace\index{office suite!Google Workspace} applications are web-based, they can be audited using standard web accessibility testing tools.
+For web-based suites, the audit can be performed directly within the browser using various extensions and developer tools.
+
+***
 
 \subsubsection{Commercial Tools}
-\label{ssubsec:commercial-web-tools}
+\label{sub:commercial-tools-1}
+\index{commercial tools}
+
 \begin{itemize}
-	\item \textbf{axe DevTools (Browser Extension)}: A powerful browser extension that can analyze a web page (including a Google Doc) for accessibility\index{accessibility} issues based on WCAG standards.
-	\item \textbf{WAVE (Browser Extension)}: Another popular browser extension that provides visual feedback about the accessibility of web content by injecting icons and indicators into the page.
-	\item \textbf{Siteimprove Accessibility Checker (Browser Extension)}: A free browser extension that can check any web page for accessibility issues.
-	\item \textbf{Grackle Suite (Add-on)}: As mentioned, this is a commercial add-on specifically for Google Workspace that provides robust accessibility checking and remediation.
+	\item \textbf{axe DevTools\supercite{AxeDevTools}:} A browser extension that provides powerful automated accessibility testing, including checks for \gls{ARIA} implementation, color contrast, and more.
+	\item \textbf{WAVE (Web Accessibility Evaluation Tool)\supercite{WAVE}:} While primarily for websites, the WAVE browser extension can be used to evaluate the accessibility of the user interface of web applications like Google Docs.
+	\item \textbf{Deque axe Auditor\supercite{DequeWorldSpace}:} A comprehensive platform for conducting full accessibility audits, suitable for large-scale assessments of web applications.
+	\item \textbf{Siteimprove Accessibility Checker\supercite{SiteimproveAccessibility}:} A free browser extension that can check any web page for accessibility issues.
+	\item \textbf{Grackle Suite\supercite{GrackleDocs}:} A commercial add-on specifically for Google Workspace that provides robust accessibility checking and remediation.
 \end{itemize}
+
+***
 
 \subsubsection{Open-Source Tools}
-\label{ssubsec:opensource-web-tools}
+\label{sub:open-source-tools-1}
+\index{open-source tools}
+
 \begin{itemize}
-	\item \textbf{NVDA, JAWS, VoiceOver}: Testing with screen readers\index{screen reader} is crucial for web-based applications.
-	\item \textbf{ARC Toolkit (from TPGi)}: A browser extension that provides a set of tools for identifying accessibility issues.
-	\item \textbf{Lighthouse (in Chrome DevTools)}: Google\index{tablet!Google}'s Lighthouse tool, built into Chrome DevTools, includes an accessibility audit\index{accessibility!accessibility testing} that can provide a high-level overview of a page's accessibility.
-	      \begin{verbatim}
-    1. Open Chrome DevTools (F12 or Ctrl+Shift+I).
-    2. Go to the Lighthouse tab.
-    3. Select "Accessibility" from the categories.
-    4. Click "Generate report".
-    \end{verbatim}
-	\item \textbf{Bookmarklets}: There are many free accessibility bookmarklets available that can be used to check specific aspects of a page, such as headings\index{Markdown!headings}, images, and ARIA attributes.
+	\item \textbf{Lighthouse\supercite{Lighthouse}:} An open-source, automated tool integrated into Chrome DevTools. It includes an accessibility audit that provides a score and a list of issues. To use it, you open Chrome DevTools, go to the Lighthouse tab, select "Accessibility," and click "Generate report".
+	\item \textbf{Accessibility Insights for Web\supercite{AccessibilityInsights}:} A browser extension from Microsoft that helps developers find and fix accessibility issues in web apps and sites.
+	\item \textbf{Screen Readers (NVDA, JAWS, VoiceOver):} As with desktop applications, manual testing with screen readers is indispensable. For web applications, it is important to test with multiple screen readers and browsers to ensure broad compatibility.
+	\item \textbf{ARC Toolkit\supercite{ARCToolkit}:} A browser extension from TPGi that provides a set of tools for identifying accessibility issues.
+	\item \textbf{Bookmarklets\supercite{A11yProject}:} Many free accessibility bookmarklets are available that can be used to check specific aspects of a page, such as headings, images, and \gls{ARIA} attributes.
 \end{itemize}
+
+***
 
 \subsection{Manual Testing Tools (Screen Readers and Automation Drivers)}
-\label{subsec:manual-testing-tools}
-Automated tools can only catch a fraction of accessibility issues. Manual testing\index{accessibility!Manual Testing} with assistive technologies\index{assistive technology} is essential for a comprehensive audit.
+\label{sub:manual-testing-tools-screen-readers-and-automation-drivers}
+\index{manual testing}
+\index{screen readers}
+
+Automated tools can only catch a fraction of accessibility issues. Manual testing is critical for evaluating aspects like:
 \begin{itemize}
-	\item \textbf{Screen Readers\index{screen reader}}:
-	      \begin{itemize}
-		      \item \textbf{NVDA (Windows\index{operating system!Windows})}: Free and open-source.
-		      \item \textbf{JAWS (Windows)}: Commercial, but widely used.
-		      \item \textbf{VoiceOver\index{screen reader!VoiceOver} (macOS, iOS)}: Built into Apple\index{tablet!Apple} devices.
-		      \item \textbf{TalkBack\index{screen reader!TalkBack} (Android)}: Built into Android\index{operating system!Android} devices.
-		      \item \textbf{Orca (Linux)}: The standard screen reader for the GNOME desktop.
-	      \end{itemize}
-	\item \textbf{Keyboard-Only Navigation}: A critical manual test is to attempt to navigate and interact with the entire document using only the keyboard (Tab, Shift+Tab, Arrow keys, Enter, Spacebar). All functionality should be accessible without a mouse.
-	\item \textbf{Magnification\index{magnification} Software}: Test with screen magnification\index{magnification} software like ZoomText or the built-in magnifiers in Windows and macOS to check for issues that affect users with low vision.
+	\item \textbf{Logical Reading Order:} Does the screen reader navigate through the content in a logical sequence?
+	\item \textbf{Keyboard Accessibility:} Can all interactive elements be reached and operated using only the keyboard?
+	\item \textbf{Quality of Alt Text:} Is the alternative text for images meaningful and descriptive?
+	\item \textbf{Clarity of Link Text:} Are links understandable out of context?
+	\item \textbf{Usability:} Beyond technical compliance, is the document actually usable and easy to navigate for a screen reader user?
 \end{itemize}
+\subsubsection{Screen Readers}
+\label{sub:screen-readers}
+\index{NVDA}
+\index{JAWS}
+\index{VoiceOver}
+\index{TalkBack}
+\index{Orca}
+\begin{itemize}
+	\item \textbf{NVDA (Windows):} Free and open-source.
+	\item \textbf{JAWS (Windows):} Commercial, but widely used.
+	\item \textbf{VoiceOver (macOS, iOS):} Built into Apple devices.
+	\item \textbf{TalkBack (Android):} Built into Android devices.
+	\item \textbf{Orca (Linux):} The standard screen reader for the GNOME desktop.
+\end{itemize}
+
+\subsubsection{Magnification Software}
+\label{sub:magnification-software}
+\index{magnification software}
+Test with screen magnification software like ZoomText or the built-in magnifiers in Windows and macOS to check for issues that affect users with low vision.
+
+***
 
 \section{Common Screen Reader Accessibility Failures and Remediation}
-\label{sec:common-failures-remediation}
+\label{sec:common-screen-reader-accessibility-failures-and-remediation}
+\index{accessibility!failures}
+\index{remediation}
 
-Across all office suites, several common accessibility failures\index{accessibility!common accessibility failures} repeatedly cause problems for screen reader\index{screen reader} users. Understanding these issues is the first step toward remediation\index{accessibility!remediation strategies}.
+During an audit, you will likely encounter a set of recurring accessibility issues. Understanding these issues is the first step toward remediation.
+
+***
 
 \subsection{Missing or Incorrect Headings}
-\label{subsec:failures-headings}
+\label{sub:missing-or-incorrect-headings}
+\index{headings!missing}
+\index{headings!incorrect}
+
 \begin{itemize}
-	\item \textbf{Failure}: Using bold\index{Markdown!text emphasis} text or a larger font size to create the appearance of a heading instead of using the built-in heading styles (e.g., Heading 1, Heading 2). Skipping heading levels\index{web accessibility!heading levels} (e.g., going from a Heading 1 to a Heading 3).
-	\item \textbf{Impact}: Screen reader\index{screen reader} users cannot navigate the document by heading, making it difficult to understand the structure and find information. The document is perceived as a flat wall of text.
-	\item \textbf{Remediation}:
-	      \begin{enumerate}
-		      \item Apply the appropriate heading style to all text that functions as a heading.
-		      \item Ensure that headings\index{Markdown!headings} are used in a logical, hierarchical order.
-		      \item Use the built-in Accessibility\index{accessibility} Checker\index{accessibility!accessibility testing} to find instances of "fake" headings.
-		      \item In Google Docs\index{office suite!Google Workspace} and Word, use the Navigation Pane or Document Outline to check the heading structure at a glance.
-	      \end{enumerate}
+	\item \textbf{Failure:} Using bold or large text to create the appearance of a heading instead of using the built-in heading styles. Another failure is skipping heading levels (e.g., going from a Heading 1 to a Heading 3).
+	\item \textbf{Impact:} This prevents screen readers from identifying the document's structure, making navigation difficult. The document is perceived as a flat wall of text and users cannot navigate by heading.
+	\item \textbf{Remediation:} Apply the appropriate heading levels (Heading 1, Heading 2, etc.) sequentially. Ensure there is only one Heading 1 per document (usually the title). Use the built-in Accessibility Checker to find "fake" headings, and in Google Docs and Word, use the Navigation Pane to check the heading structure.
 \end{itemize}
 
-\subsection{Missing or Low-Quality Alternative Text\index{accessibility!missing or low-quality alternative text} (Alt Text\index{images and media!alternative text}) for Images and Objects}
-\label{subsec:failures-alt-text}
+***
+
+\subsection{Missing or Low-Quality Alternative Text (Alt Text) for Images and Objects}
+\label{sub:missing-or-low-quality-alternative-text-alt-text-for-images-and-objects}
+\index{alternative text!missing}
+\index{alternative text!low-quality}
+
 \begin{itemize}
-	\item \textbf{Failure}: Images, charts, or other graphical objects do not have alternative text. The alt text is non-descriptive (e.g., "image1.png"). The image is marked as decorative when it conveys important information.
-	\item \textbf{Impact}: Screen reader users have no way of knowing what information the image conveys.
-	\item \textbf{Remediation}:
-	      \begin{enumerate}
-		      \item Add concise, descriptive \gls{alttext} to all informative images. The \gls{alttext} should convey the content and function of the image.
-		      \item For complex images like \gls{charts} and graphs, provide a brief summary in the alt text and a longer description in the surrounding text.
-		      \item Mark purely decorative images (e.g., borders, spacers) as decorative so that screen readers can ignore them. In Microsoft Office\index{office suite!Microsoft Office}, you can check the "Mark as decorative" box. In Google Docs, you can enter `""` (empty quotes) as the alt text.
-		      \item Use the Accessibility\index{accessibility} Checker\index{accessibility!accessibility testing} to find all images that are missing alt text.
-	      \end{enumerate}
+	\item \textbf{Failure:} Images having no alt text, or alt text that is not descriptive (e.g., "image1.png"). Also, an image may be marked as decorative when it conveys important information.
+	\item \textbf{Impact:} Screen reader users have no way of knowing what information the image conveys.
+	\item \textbf{Remediation:} Write concise, descriptive alt text for all informative images. For complex images like charts or graphs, provide a longer description in the surrounding text and a brief summary in the alt text. Mark purely decorative images as such (e.g., by using empty alt text \texttt{alt=""} in HTML or the "Mark as Decorative" option in Office) so that screen readers can ignore them. Use the Accessibility Checker to find all images that are missing alt text.
 \end{itemize}
+
+***
 
 \subsection{Inaccessible Tables}
-\label{subsec:failures-tables}
+\label{sub:inaccessible-tables}
+\index{tables!inaccessible}
+
 \begin{itemize}
-	\item \textbf{Failure}: Using the layout grid to create the appearance of a table. Not designating a header row. Using merged or split cells, which can confuse screen readers.
-	\item \textbf{Impact}: Screen reader\index{screen reader} users cannot navigate the table logically and cannot understand the relationship between the data cells and the header cells.
-	\item \textbf{Remediation}:
-	      \begin{enumerate}
-		      \item Always use the "Insert Table" feature to create tables.
-		      \item In the table properties, designate the top row (and sometimes the first column) as the header row. In Word, this is a checkbox in the Table Design tab.
-		      \item Keep tables simple. Avoid merging or splitting cells whenever possible. If a complex table is necessary, consider breaking it into multiple simple tables.
-		      \item Add a caption or title to the table to describe its content.
-	      \end{enumerate}
+	\item \textbf{Failure:} Using tables for layout purposes, or data tables that do not have properly defined headers. Merged or split cells can also confuse screen readers.
+	\item \textbf{Impact:} Without header information, a screen reader user will hear a series of data cells without context, making it impossible to understand the relationship between the cells.
+	\item \textbf{Remediation:} Use tables only for tabular data and always use the "Insert Table" feature. In the table properties, specify the header row (and column, if applicable). Keep tables simple and avoid merging or splitting cells whenever possible. Add a caption or title to the table to describe its content.
 \end{itemize}
+
+***
 
 \subsection{Non-Descriptive Links}
-\label{subsec:failures-links}
+\label{sub:non-descriptive-links}
+\index{links!non-descriptive}
+
 \begin{itemize}
-	\item \textbf{Failure}: Using generic link text like "Click Here," "Read More," or pasting a full URL as the link text.
-	\item \textbf{Impact}: Screen reader\index{screen reader} users often navigate by pulling up a list of all the links on a page. If the links are not descriptive, this list is meaningless.
-	\item \textbf{Remediation\index{accessibility!remediation strategies}}:
-	      \begin{enumerate}
-		      \item The link text should describe the destination of the link. For example, instead of "Click here to read the annual report," use "Read the 2023 Annual Report."
-		      \item Avoid using URLs as link text unless the document is intended to be printed.
-		      \item Use the Accessibility\index{accessibility} Checker\index{accessibility!accessibility testing} to find instances of non-descriptive link text.
-	      \end{enumerate}
+	\item \textbf{Failure:} Using generic link text such as "Click Here," "Read More," or pasting a full URL.
+	\item \textbf{Impact:} Screen reader users often navigate by listing links, and such generic phrases provide no context, making the list meaningless.
+	\item \textbf{Remediation:} The link text should accurately describe the destination of the link. For example, instead of "Click here for the report," use "Read the 2023 Accessibility Report". Avoid using URLs as link text unless the document is intended for print. The Accessibility Checker can often find instances of non-descriptive link text.
 \end{itemize}
+
+***
 
 \subsection{Improper Reading/Tab Order (Especially in Presentations)}
-\label{subsec:failures-reading-order}
+\label{sub:improper-reading-tab-order-especially-in-presentations}
+\index{reading order!improper}
+\index{tab order!improper}
+
 \begin{itemize}
-	\item \textbf{Failure}: In PowerPoint or Google Slides\index{office suite!Google Workspace}, the order in which objects were added to the slide determines the screen reader reading order, which may not match the logical visual order.
-	\item \textbf{Impact}: The screen reader\index{screen reader} reads the content of the slide in a confusing, illogical order.
-	\item \textbf{Remediation}:
-	      \begin{enumerate}
-		      \item In PowerPoint, use the \textbf{Reading Order\index{PDF!reading order}} pane (\texttt{Review > Check Accessibility\index{accessibility} > Reading Order}) to drag and drop the objects into the correct logical sequence.
-		      \item In Google Slides, the reading order is determined by the order of objects in the "Object" list. You can reorder them by cutting and pasting them in the correct sequence.
-		      \item As a best practice, use the built-in slide layouts\index{presentations!accessible presentations}, as these are generally designed with a logical reading order.
-	      \end{enumerate}
+	\item \textbf{Failure:} In presentations (like PowerPoint or Google Slides), objects on a slide may be read in an illogical order if they were not added to the slide in the correct sequence.
+	\item \textbf{Impact:} The screen reader reads the content of the slide in a confusing, illogical order.
+	\item \textbf{Remediation:} Use the Selection Pane (in PowerPoint) or a similar feature to check and adjust the reading order of objects on each slide. Ensure the order flows logically from top to bottom, left to right. In Google Slides, the reading order is determined by the order of objects in the "Object" list and can be adjusted by cutting and pasting. As a best practice, use the built-in slide layouts, which are generally designed with a logical reading order.
 \end{itemize}
+
+***
 
 \subsection{Insufficient Color Contrast}
-\label{subsec:failures-color-contrast}
+\label{sub:insufficient-color-contrast}
+\index{color contrast!insufficient}
+
 \begin{itemize}
-	\item \textbf{Failure}: The color of the text does not have sufficient contrast with the background color, making it difficult for users with low vision or color blindness to read.
-	\item \textbf{Impact}: Text is unreadable for a segment of users.
-	\item \textbf{Remediation\index{accessibility!remediation strategies}}:
-	      \begin{enumerate}
-		      \item Use a color contrast\index{accessibility!Manual Testing} checking tool (like the TPGi Colour Contrast Analyser or a web-based checker) to ensure that the contrast ratio between text and background is at least 4.5:1 for normal text and 3:1 for large text (18pt or 14pt bold\index{Markdown!text emphasis}).
-		      \item The built-in accessibility\index{accessibility} checkers\index{accessibility!accessibility testing} in Microsoft Office and LibreOffice\index{office suite!LibreOffice} can detect some common color contrast issues.
-		      \item Do not use color as the only means of conveying information (e.g., "required fields are in red"). Use another indicator, such as an asterisk or bold text, as well.
-	      \end{enumerate}
+	\item \textbf{Failure:} Text color and background color not having a high enough contrast ratio, making it difficult for users with low vision or color blindness to read. Also, using color as the only means of conveying information (e.g., "required fields are in red") is a failure.
+	\item \textbf{Impact:} Text is unreadable for a segment of users.
+	\item \textbf{Remediation:} Use a color contrast checker tool to ensure that the contrast ratio between text and its background meets \gls{WCAG} AA standards (4.5:1 for normal text, 3:1 for large text). The built-in accessibility checkers in Microsoft Office and LibreOffice can detect some color contrast issues. When using color to convey information, use another indicator like an asterisk or bold text as well.
 \end{itemize}
+
+***
 
 \subsection{Improperly Formatted Lists}
-\label{subsec:failures-lists}
+\label{sub:improperly-formatted-lists}
+\index{lists!improperly formatted}
+
 \begin{itemize}
-	\item \textbf{Failure}: Manually creating the appearance of a list by typing numbers or asterisks at the beginning of a line instead of using the built-in list formatting tools.
-	\item \textbf{Impact}: The screen reader\index{screen reader} does not announce that it is a list or how many items are in it. The user cannot navigate the list as a single unit.
-	\item \textbf{Remediation}:
-	      \begin{enumerate}
-		      \item Always use the bulleted or numbered list buttons in the toolbar to create lists\index{Markdown!lists}.
-		      \item This will apply the correct list styles and ensure that the list is properly structured in the underlying document code.
-		      \item The Accessibility Checker can often detect improperly formatted lists\index{accessibility!improperly formatted lists}.
-	      \end{enumerate}
+	\item \textbf{Failure:} Creating lists by manually typing numbers or asterisks instead of using the built-in bulleted or numbered list features.
+	\item \textbf{Impact:} The screen reader does not announce that it is a list or the number of items in it, and the user cannot navigate the list as a single unit.
+	      \textbf{Remediation:} Always use the dedicated list formatting tools. This ensures that screen readers announce the list and the number of items, providing important structural context to the user. The Accessibility Checker can often detect improperly formatted lists.
 \end{itemize}
 
-\section{Conclusion}
-\label{sec:office-audit-conclusion}
+***
 
-While modern office suites have made significant progress in providing built-in accessibility\index{accessibility} tools, creating a truly accessible document still requires a conscious effort from the author. A comprehensive accessibility audit\index{accessibility!accessibility testing} should be a standard part of the document creation workflow. By combining the use of built-in checkers, external audit tools, and, most importantly, manual testing with assistive technologies\index{assistive technology}, authors can ensure that their documents are usable by everyone, regardless of ability.
+\section{Conclusion}
+\label{sec:conclusion}
+\index{conclusion!audit}
+
+Conducting a comprehensive accessibility audit of an office suite requires a multi-faceted approach. It involves understanding accessibility standards, leveraging both built-in and external tools, and performing thorough manual testing with assistive technologies. By systematically identifying and remediating common failures, you can significantly improve the accessibility of documents for screen reader users, ensuring that digital content is truly inclusive. This process not only aids in legal compliance but also fosters a more equitable digital environment for everyone.

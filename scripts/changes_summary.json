@@ -1,0 +1,9 @@
+[
+    {
+        "location": "./Chapters/Chapter10.tex#L24",
+        "action": "inserted",
+        "citation": "gaetanbaert-license",
+        "confidence": 0.75,
+        "reason": "Matched partial content from 'note': 'Optical Music Recognition...'"
+    }
+]

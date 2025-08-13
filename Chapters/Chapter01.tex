@@ -2,7 +2,7 @@
 \raggedright
 \section{Executive Summary}\label{executive-summary}
 
-Screen reader\index{screen reader} response latency—the delay between user input\index{screen reader!user input} and audio feedback—creates significant barriers to academic success for students using assistive technology\index{assistive technology} on underpowered computers. Research demonstrates that hardware\index{hardware} limitations, particularly insufficient RAM\index{RAM} and older CPU generations, directly increase response delays that trigger frustration, impair task completion, and ultimately undermine educational outcomes. Current findings indicate that systems with 16 GB RAM\index{RAM} demonstrate unacceptably long latency\index{latency} periods, necessitating a minimum recommendation of 24-32 GB RAM for educational equity\index{educational equity}.
+Screen reader\index{screen reader} response latency—the delay between user input\index{screen reader!user input} and audio feedback—creates significant barriers to academic success for students using assistive technology\index{assistive technology} on underpowered computers.\supercite{Foley2017AssistiveTechnologyOutcomes} Research demonstrates that hardware\index{hardware} limitations, particularly insufficient RAM\index{RAM} and older CPU generations, directly increase response delays that trigger frustration, impair task completion, and ultimately undermine educational outcomes.\supercite{Kelly2011, StudentOutcomesResearch} Current findings indicate that systems with 16 GB RAM\index{RAM} demonstrate unacceptably long latency\index{latency} periods, necessitating a minimum recommendation of 24-32 GB RAM for educational equity\index{educational equity}. See Appendix~\ref{chap:computationappendix} for the supporting data.
 
 \section{The Latency Problem}\label{the-latency-problem}
 
@@ -10,7 +10,7 @@ Screen reader\index{screen reader} response latency—the delay between user inp
 
 \subsubsection{Equivalent Response Times}
 
-Students using screen readers must achieve equivalent response times to their sighted peers to ensure educational equity\index{educational equity}. Any additional latency beyond what sighted users experience creates an unfair disadvantage and violates principles of equal access.
+Students using screen readers must achieve equivalent response times to their sighted peers to ensure educational equity\index{educational equity}. Any additional latency beyond what sighted users experience creates an unfair disadvantage and violates principles of equal access.\supercite{ADA1990, Section508}
 
 \subsection{Critical Response Time Thresholds}\label{critical-response-time-thresholds}
 
@@ -211,8 +211,8 @@ Using the zero-frustration standard exposes the severity of the \gls{educational
 \hypertarget{hardware\index{hardware}-configuration-analysis}{}\section{Hardware Configuration Analysis}\label{hardware-configuration-analysis}
 \subsection{Comprehensive System Performance Against Equity Standard}\label{comprehensive-system-performance-against-equity-standard}
 
-%\newpage
-%\begin{landscape}
+\footnotesize
+
 \begin{longtblr}[
 		caption = {Comprehensive system performance against equity standard},
 		label = {tab:chapter1:system-performance},
@@ -232,8 +232,7 @@ Using the zero-frustration standard exposes the severity of the \gls{educational
 	Enhanced Educational & 32GB                 & 10th+ Gen Intel/Ryzen 5+    & 50-100 ms       & APPROACHING (2-4x slower) \supercite{InternalTestingData2024}   & Minor but measurable disadvantage \supercite{EducationalEquityReport2024}                                   \\
 	Equity-Compliant     & 64GB                 & Latest Gen High-Performance & 15-50 ms        & ACHIEVES (≤2x slower) \supercite{InternalTestingData2024}       & True educational equity\index{educational equity} \supercite{EducationalEquityReport2024}                   \\
 \end{longtblr}
-%\end{landscape}
-%\newpage
+\normalsize
 
 
 \subsection{Zero-Frustration Performance Benchmarks}\label{zero-frustration-performance-benchmarks}
@@ -304,9 +303,9 @@ Figure~\ref{fig:figure1} shows a boxplot of the latency\index{latency} to load J
 \begin{figure}[htbp]
 
 	\tagstructbegin{tag=Figure}
-	%\imgalt{Screen reader\index{screen reader} load times by RAM configuration showing: 8GB RAM averaging 143 seconds, 16GB RAM\index{RAM} averaging 64 seconds, 24GB RAM averaging 49 seconds, and 32GB RAM averaging 25 seconds. The plot demonstrates significantly improved performance with higher RAM configurations.}
-	\includegraphics[alt={Screen reader load times by RAM configuration showing: 8GB RAM averaging 143 seconds, 16GB RAM averaging 64 seconds, 24GB RAM averaging 49 seconds, and 32GB RAM averaging 25 seconds. The plot demonstrates significantly improved performance with higher RAM configurations.}]{images/ComputerRBDisplaySpecsTVIFig1.png}
-	\caption[Latency to Load JAWS]{Plot showing Latency\index{latency} to Load JAWS while Microsoft Word\index{PDF!Microsoft Word} is open across a typical student laptop\index{laptop} (Dell Latitude 3190 with 8GB RAM), a high quality student laptop (Dell Precision 3530 with 16GB RAM), a professional laptop (Lenovo ThinkPad E16 with 24GB RAM), and a high power laptop (Microsoft\index{tablet!Microsoft} Surface Laptop 3 with 32GB RAM).}\label{fig:figure1}
+
+	\includegraphics[alt={Boxplots comparing initial load times (ms) for JAWS, NVDA, and SuperNova across 8GB,16GB,24GB,32GB,64GB RAM showing NVDA consistently fastest, JAWS/SuperNova high and variable with improvement at higher RAM.}]{images/load_time.png}
+	\caption[Screen reader load time by RAM and product]{Screen reader cold start (load) time in milliseconds for JAWS, NVDA, and SuperNova grouped by RAM configuration (8–64GB). NVDA launches an order of magnitude faster and shows tighter dispersion; JAWS and SuperNova exhibit long, volatile start times that decrease with additional memory but remain far above equity thresholds.}\label{fig:figure1}
 	\tagstructend
 \end{figure}
 
@@ -314,8 +313,8 @@ Figure~\ref{fig:figure1} shows a boxplot of the latency\index{latency} to load J
 
 Measuring the latency of a screenreader\index{screen reader} to respond to key presses reveals the educational equity\index{educational equity} crisis. If the laptop\index{laptop} has insufficient RAM, the screenreader\index{screen reader} takes longer to respond to key presses, creating barriers to equal educational access.
 
-%\newpage
-%\begin{landscape}
+\footnotesize
+
 \tagpdfsetup{table/header-rows={1}}
 \begin{longtblr}[
 		caption = {Screenreader responsiveness and load times across \gls{hardware} configurations},
@@ -335,10 +334,32 @@ Measuring the latency of a screenreader\index{screen reader} to respond to key p
 	Professional Laptop \supercite{MicrosoftSurface3}                       & 25 [10-32] \supercite{InternalTestingData2024} & 0.5 [0.01-1] \supercite{ImmediateResponseEquity} \\
 	High-Performance Laptop \supercite{FrameworkLaptop16}                   & 15 [8-22] \supercite{InternalTestingData2024}  & 0.02 [0.01-0.05] \supercite{TrueEquityStandard}  \\
 \end{longtblr}
-%\end{landscape}
-%\newpage
+\normalsize
 
+Figure~\ref{fig:figure2} shows a boxplot of the keystroke latency for JAWS to respond to keystrokes across various student and professional computers.
+\begin{figure}[htbp]
+	\tagstructbegin{tag=Figure}
+	\includegraphics[alt={Boxplots of keystroke response latency (ms) for JAWS, NVDA, SuperNova across RAM tiers; NVDA lowest median and variance, JAWS highest, SuperNova intermediate with wide spread.}]{images/keystroke_latency.png}
+	\caption[Keystroke response latency by RAM]{Distribution of keystroke-to-speech latencies for JAWS, NVDA, and SuperNova across RAM configurations. NVDA maintains low, stable latency; JAWS remains elevated even at higher RAM; SuperNova improves but retains large outliers, underscoring hardware dependence for equitable responsiveness.}\label{fig:figure2}
+	\tagstructend
+\end{figure}
 
+Figure~\ref{fig:figure3} shows a boxplot of the latency\index{latency} for JAWS to respond to navigational keystroke commands in Google Chrome measured across various student and professional computers.
+\begin{figure}[htbp]
+	\tagstructbegin{tag=Figure}
+	\includegraphics[alt={Boxplots of navigation command latency (ms) across RAM for JAWS, NVDA, SuperNova; NVDA fastest, JAWS slowest, SuperNova mid with variability and RAM-driven improvement.}]{images/navigation_latency.png}
+	\caption[Navigation command latency by RAM]{Latency distributions for structural/navigation commands (e.g., next element) for JAWS, NVDA, and SuperNova across RAM levels. Patterns mirror keystrokes: NVDA fastest and consistent; JAWS slow with heavy tail; SuperNova variable—highlighting compounding delays for complex interaction sequences on lower-spec systems.}\label{fig:figure3}
+	\tagstructend
+\end{figure}
+
+Figure~\ref{fig:figure4} shows a boxplot Comparing the latency of JAWS across the above three conditions
+
+\begin{figure}[htbp]
+	\tagstructbegin{tag=Figure}
+	\includegraphics[alt={Composite panel comparing boxplots of load, keystroke, and navigation latencies across RAM for JAWS, NVDA, SuperNova; NVDA consistently lowest; memory reduces but does not eliminate JAWS/SuperNova gaps.}]{images/composite_latency.png}
+	\caption[Composite latency comparison]{Side-by-side comparison of three metrics (load time, keystroke latency, navigation latency) for JAWS, NVDA, and SuperNova across RAM capacities. NVDA leads in all categories; additional RAM narrows but does not close gaps for JAWS/SuperNova, evidencing persistent architectural inefficiencies affecting educational equity.}\label{fig:figure4}
+	\tagstructend
+\end{figure}
 
 \hypertarget{vision-specific-software-requirements}{}\section{Vision Specific Software Requirements}\label{vision-specific-software-requirements}
 
@@ -349,6 +370,7 @@ Students with visual impairments\index{visual impairment} require specialized so
 \subsubsection{Detailed Justification for Processor and RAM Considerations}
 
 \subsubsection{Baseline Software Memory Requirements}
+These  specs are based on what the vendors state is the minimum required for performance. In practice these requirements are almost always higher depending on the specific use case and workload.
 
 \begin{itemize}
 	\item \emph{Freedom Scientific JAWS:} Minimum 4--6~GB RAM\index{RAM} \supercite{FreedomScientificJAWSRequirements}
@@ -518,8 +540,8 @@ For students relying on assistive technologies, the computational infrastructure
 
 Table \ref{tab:student-software-needs} lists software used by students with visual impairments\index{visual impairment}, along with minimum and preferred RAM requirements. This data reveals the inadequacy of current standard configurations.
 
-%\newpage
-%\begin{landscape}
+\footnotesize
+
 \tagpdfsetup{table/header-rows={1}}
 \begin{longtblr}[
 		caption = {Student software needs and recommended hardware specifications},
@@ -544,17 +566,14 @@ Table \ref{tab:student-software-needs} lists software used by students with visu
 	Dolphin SuperNova                                              & Magnification\index{magnification}                                         & \$545/yr \supercite{DolphinSuperNovaPricing}         & 16GB \supercite{DolphinSuperNovaRequirements}          & \textgreater32GB \supercite{EquityAnalysisRevision}        & \textgreater11th Gen Intel® Core™ i7+ \supercite{DolphinSuperNovaRequirements}          \\
 	Dolphin SuperNova + Speech                                     & \gls{magnification} \& Speech                                              & \$825/yr \supercite{DolphinSuperNovaPricing}         & 16GB \supercite{DolphinSuperNovaRequirements}          & \textgreater32GB \supercite{EquityAnalysisRevision}        & \textgreater11th Gen Intel® Core™ i7+ \supercite{DolphinSuperNovaRequirements}          \\
 \end{longtblr}
-%\end{landscape}
-%\newpage
+\normalsize
 
-%\par
 
 \hypertarget{current-educational-technology\index{technology}-inadequacy}{}\section{Current Educational Technology Inadequacy}\label{current-educational-technology-inadequacy}
 
 Analysis of current student and professional laptop\index{laptop} configurations reveals systematic educational equity\index{educational equity} violations:
 
-%\newpage
-%\begin{landscape}
+\footnotesize
 \tagpdfsetup{table/header-rows={1}}
 \begin{longtblr}[
 		caption = {Comparison of student and professional laptop configurations for educational equity},
@@ -575,8 +594,8 @@ Analysis of current student and professional laptop\index{laptop} configurations
 	Microsoft\index{tablet!Microsoft} Surface Laptop 3 & \$1500 \supercite{MicrosoftSurface3Specs} & QWERTY   & 32GB \supercite{ApproachesEquityAcceptable}  & 15.0" Touchscreen & AMD® Ryzen™ 7 \supercite{MicrosoftSurface3Specs}           \\
 	Framework\index{laptop!Framework} Laptop 16        & \$2750 \supercite{FrameworkLaptop16Specs} & QWERTY   & 64GB \supercite{AchievesEquityCompliance}    & 16.0"             & AMD® Ryzen™ 9 \supercite{FrameworkLaptop16Specs}           \\
 \end{longtblr}
-%\end{landscape}
-%\newpage
+\normalsize
+
 
 
 \hypertarget{the-educational-equity-crisis}{}\section{The Educational Equity\index{educational equity} Crisis: A Civil Rights Issue}\label{the-educational-equity-crisis}

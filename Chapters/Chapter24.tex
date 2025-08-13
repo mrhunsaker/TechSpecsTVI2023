@@ -9,8 +9,8 @@ This chapter delves into the technical underpinnings of how screen readers\index
 Screen readers do not operate in a vacuum; they are deeply integrated with the operating system\index{operating system}'s accessibility infrastructure. In Windows\index{operating system!Windows}, this is primarily achieved through a set of Application Programming Interfaces (APIs) that expose information about UI elements to assistive technologies\index{assistive technology}.
 
 \begin{itemize}
-	\item \textbf{Microsoft Active Accessibility\index{accessibility} (MSAA):} An older COM-based API that provides a basic framework\index{laptop!Framework} for making applications accessible. It represents UI elements as objects with properties (like name, role, state) and methods that screen readers can query. While largely superseded, it is still used as a fallback for legacy applications.
-	\item \textbf{UI Automation\index{accessibility!UIA} (UIA):} The modern accessibility\index{accessibility} framework for Windows. UIA offers a much richer and more flexible object model than MSAA\index{accessibility!MSAA}. It provides detailed information about UI elements, their properties, and the patterns they support (e.g., Invoke, Selection, Text). UIA is the preferred API for Windows Presentation Foundation (WPF), Universal Windows Platform (UWP), and modern web browsers.
+	\item \textbf{Microsoft Active Accessibility\index{accessibility} (MSAA):} An older COM-based API that provides a basic framework\index{laptop!Framework} for making applications accessible \cite{MSAAWiki}. It represents UI elements as objects with properties (like name, role, state) and methods that screen readers can query. While largely superseded, it is still used as a fallback for legacy applications.
+	\item \textbf{UI Automation\index{accessibility!UIA} (UIA):} The modern accessibility\index{accessibility} framework for Windows \cite{UIAutomationOverview}. UIA offers a much richer and more flexible object model than MSAA\index{accessibility!MSAA}. It provides detailed information about UI elements, their properties, and the patterns they support (e.g., Invoke, Selection, Text). UIA is the preferred API for Windows Presentation Foundation (WPF), Universal Windows Platform (UWP), and modern web browsers.
 	\item \textbf{Legacy Off-Screen Models:} For applications that do not properly support MSAA or UIA (e.g., older custom-drawn controls), screen readers\index{screen reader} may resort to creating an "off-screen model\index{screen reader!screen reader architecture}." This involves techniques like intercepting graphics driver calls (GDI) or using Optical Character Recognition\index{OCR} (OCR) to build a representation of the screen content. This is a last resort and is often less reliable.
 \end{itemize}
 
@@ -26,16 +26,16 @@ Screen readers do not operate in a vacuum; they are deeply integrated with the o
 \section{Intercepting and Processing User Inputs}
 \label{sec:intercepting-and-processing-user-inputs}
 
-A screen reader\index{screen reader} must intercept keyboard inputs to provide its own set of navigation commands without interfering with the application's normal keyboard shortcuts. This is typically achieved through low-level keyboard hooks\index{screen reader!user input}.
+A screen reader\index{screen reader} must intercept keyboard inputs to provide its own set of navigation commands without interfering with the application's normal keyboard shortcuts \cite{WSRKeystrokeCompendium}. This is typically achieved through low-level keyboard hooks\index{screen reader!user input}.
 
 \begin{itemize}
 	\item \textbf{Keyboard Hooks:} Using the `SetWindowsHookEx` function, a screen reader can install a low-level keyboard hook that intercepts keystrokes before they reach the active application.
-	\item \textbf{Command Processing:} When a user presses a key combination (e.g., \texttt{Insert + Down Arrow} for "Say All"), the hook intercepts it. The screen reader's input processing logic checks if the keystroke matches one of its own commands.
+	\item \textbf{Command Processing:} When a user presses a key combination (e.g., \texttt{Insert + Down Arrow} for "Say All"), the hook intercepts it. The screen reader's input processing logic checks if the keystroke matches one of its own commands \cite{JAWSBasicCommands, NVDAKeyboardCommands, NarratorKeyboardCommands}.
 	      \begin{itemize}
 		      \item If it is a \gls{screenreader} command, the \gls{screenreader} executes the corresponding action (e.g., starts reading the document) and "swallows" the keystroke so the application does not receive it.
 		      \item If it is not a screen reader command, the keystroke is passed through to the application to be processed as usual (e.g., typing a letter into a text editor). This is often referred to as "passing the key through."
 	      \end{itemize}
-	\item \textbf{Modifier Keys:} The "screen reader\index{screen reader} key" (typically \texttt{Insert} or \texttt{Caps Lock}) is used to differentiate screen reader commands from application commands, preventing conflicts.
+	\item \textbf{Modifier Keys:} The "screen reader\index{screen reader} key" (typically \texttt{Insert} or \texttt{Caps Lock}) is used to differentiate screen reader commands from application commands, preventing conflicts \cite{WebAIMShortcuts}.
 \end{itemize}
 
 \section{Generating Screen Reader Outputs}
@@ -47,7 +47,7 @@ Once a screen reader has gathered information about a UI element (via an accessi
 \label{sub:speech-synthesis}
 
 \begin{itemize}
-	\item \textbf{Text-to-Speech (TTS) Engines:} Screen readers use TTS engines to convert text into audible speech. Windows\index{operating system!Windows} includes the Speech API (SAPI), which provides a standard interface for TTS engines. Screen readers can use SAPI-compliant voices (like the default "Microsoft David" or "Microsoft\index{tablet!Microsoft} Zira") or bundle their own proprietary synthesizers (e.g., Eloquence, Vocalizer).
+	\item \textbf{Text-to-Speech (TTS) Engines:} Screen readers use TTS engines to convert text into audible speech. Windows\index{operating system!Windows} includes the Speech API (SAPI), which provides a standard interface for TTS engines. Screen readers can use SAPI-compliant voices (like the default "Microsoft David" or "Microsoft\index{tablet!Microsoft} Zira") or bundle their own proprietary synthesizers (e.g., Eloquence, Vocalizer) \cite{NVDASpeech, SuperNovaSpeech, JAWSFeatures}.
 	\item \textbf{Speech Generation Pipeline:}
 	      \begin{enumerate}
 		      \item The screen reader\index{screen reader} determines what text to speak (e.g., the name and role of a button: "OK, button").
@@ -61,8 +61,8 @@ Once a screen reader has gathered information about a UI element (via an accessi
 \label{sub:braille-display-output}
 
 \begin{itemize}
-	\item \textbf{Braille Translation:} The text that would be spoken is also sent to a braille\index{braille} translation library. This library converts the text into braille characters according to the user's selected braille code (e.g., Uncontracted English, Unified English Braille\index{braille!braille math codes}). Liblouis is a popular open-source library used by NVDA\index{accessibility!NVDA} and other projects for this purpose.
-	\item \textbf{Braille Drivers:} The translated braille data is then sent to the driver for the connected refreshable braille display\index{braille display}. Each brand of braille display\index{braille display} (e.g., Focus, Brailliant, Mantis) has its own driver that understands how to receive braille data and actuate the correct pins on the display.
+	\item \textbf{Braille Translation:} The text that would be spoken is also sent to a braille\index{braille} translation library. This library converts the text into braille characters according to the user's selected braille code (e.g., Uncontracted English, Unified English Braille\index{braille!braille math codes}). Liblouis is a popular open-source library used by NVDA\index{accessibility!NVDA} and other projects for this purpose \cite{Liblouis, NVDABraille}.
+	\item \textbf{Braille Drivers:} The translated braille data is then sent to the driver for the connected refreshable braille display\index{braille display}. Each brand of braille display\index{braille display} (e.g., Focus, Brailliant, Mantis) has its own driver that understands how to receive braille data and actuate the correct pins on the display \cite{FocusBlue, BrailliantBI40X, APHMantis, JAWSBraille, NarratorBraille}.
 	\item \textbf{Cursor and Highlighting:} The screen reader\index{screen reader} is also responsible for indicating the cursor position and highlighting selected text on the braille display, often by using dots 7 and 8 (the cursor dots) beneath the relevant characters.
 \end{itemize}
 
@@ -70,7 +70,7 @@ Once a screen reader has gathered information about a UI element (via an accessi
 \label{sub:auditory-cues}
 
 \begin{itemize}
-	\item \textbf{Earcons:} Screen readers\index{screen reader} use non-speech audio cues, or "earcons," to provide information quickly and unobtrusively. These are short, distinct sounds that signify events or object types.
+	\item \textbf{Earcons:} Screen readers\index{screen reader} use non-speech audio cues, or "earcons," to provide information quickly and unobtrusively. These are short, distinct sounds that signify events or object types \cite{Grunwald1999AuditoryLatency}.
 	\item \textbf{Examples:}
 	      \begin{itemize}
 		      \item A soft "thump" when navigating to the end of a document.
@@ -86,9 +86,9 @@ Once a screen reader has gathered information about a UI element (via an accessi
 The core of a screen reader is its internal logic that decides what information to present and how. This involves several key components:
 
 \begin{itemize}
-	\item \textbf{Virtual Buffer\index{screen reader!screen reader architecture} (or Off-Screen Model):} For complex documents like web pages or PDFs, screen readers often create a "virtual buffer." They traverse the entire document object model (DOM) or accessibility\index{accessibility} tree and create a linear, simplified representation of the content in memory. This allows the user to navigate the document with simple text-reading commands (e.g., reading line-by-line) as if it were a simple text file, abstracting away the complex underlying structure.
-	\item \textbf{Event Handling:} The screen reader\index{screen reader} listens for events from the accessibility API, such as `EVENT\_OBJECT\_FOCUS` (an object received focus), `EVENT\_OBJECT\_VALUECHANGE` (the value of an object changed), or `EVENT\_OBJECT\_SELECTION` (an item was selected).
-	\item \textbf{Rendering Logic:} When an event occurs, the rendering logic determines what to announce. For a focus event on a button, the logic is simple: get the object's name, role, and state, and send it to the output channels (e.g., "Submit, button, unavailable"). For more complex situations, like a change in a spreadsheet cell, the logic might also announce the row and column headers to provide context.
+	\item \textbf{Virtual Buffer\index{screen reader!screen reader architecture} (or Off-Screen Model):} For complex documents like web pages or PDFs, screen readers often create a "virtual buffer." They traverse the entire document object model (DOM) or accessibility\index{accessibility} tree and create a linear, simplified representation of the content in memory. This allows the user to navigate the document with simple text-reading commands (e.g., reading line-by-line) as if it were a simple text file, abstracting away the complex underlying structure \cite{kingsbury2025, WSRPrimerCoverage}.
+	\item \textbf{Event Handling:} The screen reader\index{screen reader} listens for events from the accessibility API, such as `EVENT\_OBJECT\_FOCUS` (an object received focus), `EVENT\_OBJECT\_VALUECHANGE` (the value of an object changed), or `EVENT\_OBJECT\_SELECTION` (an item was selected) \cite{UIAutomationOverview}.
+	\item \textbf{Rendering Logic:} When an event occurs, the rendering logic determines what to announce. For a focus event on a button, the logic is simple: get the object's name, role, and state, and send it to the output channels (e.g., "Submit, button, unavailable"). For more complex situations, like a change in a spreadsheet cell, the logic might also announce the row and column headers to provide context \cite{Leporini2004}.
 	\item \textbf{State Management:} The screen reader\index{screen reader} must keep track of its own state, such as the current navigation mode (e.g., focus mode vs. browse mode), the last spoken phrase, and the user's settings (e.g., speech rate, verbosity level).
 \end{itemize}
 
@@ -99,17 +99,17 @@ The core of a screen reader is its internal logic that decides what information 
 	\item \textbf{JAWS: Scripting and Customization}
 	      \begin{itemize}
 		      \item \textbf{Architecture:} JAWS\index{screen reader!JAWS} has a monolithic core application supplemented by a powerful scripting language (JAWS Script). This allows for highly detailed customizations for specific applications.
-		      \item \textbf{Unique Method:} The extensive use of application-specific scripts\index{PDF!scripts} is JAWS's defining feature. For major applications like Microsoft Office\index{office suite!Microsoft Office}, these scripts can be thousands of lines long, providing a level of granular control and support that is difficult to achieve with a purely API-driven approach.
+		      \item \textbf{Unique Method:} The extensive use of application-specific scripts\index{PDF!scripts} is JAWS's defining feature. For major applications like Microsoft Office\index{office suite!Microsoft Office}, these scripts can be thousands of lines long, providing a level of granular control and support that is difficult to achieve with a purely API-driven approach \cite{JAWSScripting}.
 	      \end{itemize}
 	\item \textbf{NVDA\index{accessibility!NVDA}: Modularity and Community Contribution}
 	      \begin{itemize}
 		      \item \textbf{Architecture:} NVDA is written in Python and has a highly modular architecture. Core functionality is supplemented by "app\index{apps} modules" (for specific applications) and "global plugins" (for system-wide features).
-		      \item \textbf{Unique Method:} Its open-source nature and Python codebase make it highly extensible. The community can develop and share add-ons that provide new features, support for new braille displays\index{braille display}, or improved interaction with specific applications. This distributed development model allows NVDA to adapt quickly.
+		      \item \textbf{Unique Method:} Its open-source nature and Python codebase make it highly extensible. The community can develop and share add-ons that provide new features, support for new braille displays\index{braille display}, or improved interaction with specific applications. This distributed development model allows NVDA to adapt quickly \cite{NVAccess}.
 	      \end{itemize}
 	\item \textbf{Narrator\index{screen reader!Narrator}: OS Integration and Simplicity}
 	      \begin{itemize}
 		      \item \textbf{Architecture:} Narrator is a component of the Windows\index{operating system!Windows} operating system\index{operating system} itself. Its architecture is less about extensibility and more about providing a reliable, stable, and secure screen reading experience out of the box.
-		      \item \textbf{Unique Method:} Its primary strength is its deep integration with the UIA framework. As Microsoft\index{tablet!Microsoft} develops new UI controls and application frameworks, Narrator support is built-in from the ground up, ensuring baseline accessibility\index{accessibility} for all modern Windows applications.
+		      \item \textbf{Unique Method:} Its primary strength is its deep integration with the UIA framework. As Microsoft\index{tablet!Microsoft} develops new UI controls and application frameworks, Narrator support is built-in from the ground up, ensuring baseline accessibility\index{accessibility} for all modern Windows applications \cite{NarratorTechDetails}.
 	      \end{itemize}
 \end{itemize}
 
@@ -141,7 +141,7 @@ The core of a screen reader is its internal logic that decides what information 
 \section{Summary of Basic Navigation Commands}
 \label{sec:summary-of-basic-navigation-commands}
 
-While each screen reader\index{screen reader} has its own unique command set, a core set of navigation concepts is shared among them. The "SR Key" refers to the screen reader\index{screen reader}'s modifier key (Insert by default for JAWS/NVDA, Caps Lock for Narrator\index{screen reader!Narrator}).
+While each screen reader\index{screen reader} has its own unique command set, a core set of navigation concepts is shared among them. The "SR Key" refers to the screen reader\index{screen reader}'s modifier key (Insert by default for JAWS/NVDA, Caps Lock for Narrator\index{screen reader!Narrator}) \cite{WSRKeystrokeCompendium, WebAIMShortcuts}.
 
 \footnotesize
 \tagpdfsetup{table/header-rows={1}}

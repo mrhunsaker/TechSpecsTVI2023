@@ -1,7 +1,3 @@
-% Enhanced Professional Glossary definitions for TechSpecsTVI project
-% Include this file in your main document preamble after \usepackage{glossaries}
-% Use \makeglossaries after including this file
-
 \newglossaryentry{3dprinter}{
 	name={3D printer},
 	description={A device that creates three-dimensional objects from digital files by depositing material layer by layer. In assistive technology, 3D printers create tactile models, adaptive devices, and custom prosthetics. Examples include printing raised maps for geography lessons or custom grips for tools},
@@ -1272,4 +1268,43 @@
 	name={ZoomText},
 	description={A screen magnification software program designed for users with low vision. Provides customizable magnification levels, color enhancements, and screen reading capabilities to improve accessibility of digital content},
 	seealso={magnification,lowvision,screenreader,accessibilitysoftware}
+}
+\newglossaryentry{perceivable}{
+	name={perceivable},
+	description={One of the four principles of WCAG, meaning that information and user interface components must be presented in ways that users can perceive. Includes providing text alternatives for non-text content, captions for audio, and ensuring content is adaptable to different sensory modalities},
+	seealso={WCAG,webaccessibility,POUR,alttext}
+}
+
+\newglossaryentry{operable}{
+	name={operable},
+	description={One of the four principles of WCAG, meaning that user interface components and navigation must be operable by all users. Includes ensuring functionality is available through a keyboard, providing enough time to read and use content, and avoiding content that causes seizures},
+	seealso={WCAG,webaccessibility,POUR,keyboardnavigation}
+}
+
+\newglossaryentry{understandable}{
+	name={understandable},
+	description={One of the four principles of WCAG, meaning that information and operation of user interface must be understandable. Includes using clear language, consistent navigation, and error prevention mechanisms to help users comprehend content and actions},
+	seealso={WCAG,webaccessibility,POUR,usability}
+}
+
+\newglossaryentry{robust}{
+	name={robust},
+	description={One of the four principles of WCAG, meaning that content must be robust enough to be interpreted reliably by a wide variety of user agents, including assistive technologies. Involves using standard coding practices and ensuring compatibility with current and future technologies},
+	seealso={WCAG,webaccessibility,POUR,accessibility}
+}
+\newglossaryentry{POUR}{
+	name={POUR},
+	description={An acronym for the four principles of WCAG: Perceivable, Operable, Understandable, and Robust. These principles guide the design and evaluation of accessible web content to ensure it can be used by people with diverse abilities},
+	seealso={WCAG,webaccessibility,accessibility}
+}
+
+\newglossaryentry{pdf/ua}{
+	name={PDF/UA},
+	description={PDF Universal Accessibility - an ISO standard (ISO 14289) that specifies requirements for creating accessible PDF documents. Ensures that PDFs are usable by people with disabilities, including those who use assistive technologies like screen readers},
+	seealso={pdf,accessibilitysoftware,WCAG,documentstructure}
+}
+\newglossaryentry{usability}{
+	name={usability},
+	description={The ease of use and learnability of a product or system, particularly for people with disabilities. Usability testing evaluates how effectively users can interact with assistive technology and digital content, identifying barriers and areas for improvement},
+	seealso={userexperience,accessibilityaudit,cognitiveaccessibility,ergonomics}
 }

@@ -1,0 +1,112 @@
+\chapter{iOS 26 VoiceOver and Braille Enhancements}
+
+iOS 26 introduces significant upgrades over iOS 18 for VoiceOver and Braille Screen Input users, focusing on expanded workspace capabilities, greater customization, and improved efficiency for both on-screen and physical braille devices\supercite{nelowvision2025,myvision2025,applevisVO2024}.
+
+\section{Overview of New and Enhanced Features}
+
+\subsection{High-Level Feature Comparison}
+Table~\ref{tab:feature-comparison} summarizes the key differences between iOS 18 and iOS 26 for VoiceOver and Braille Screen Input.
+
+\footnotesize
+\begin{longtblr}[
+	caption = {New and Enhanced VoiceOver \& Braille Features in iOS 26 vs iOS 18},
+	label = {tab:feature-comparison},
+	note = {Summary of major accessibility feature enhancements between iOS 18 and iOS 26 for VoiceOver and braille users.},
+]{
+	colspec = {X[l] X[l] X[l] X[l]},
+	rowhead = 1,
+	row{1} = {font=\normalfont},
+	hlines,
+	stretch = 1.5
+}
+Feature               & iOS 18           & iOS 26              & Enhancement Description                                                      \\
+Braille Access / Workspace     & No dedicated workspace    & Integrated braille workspace & Note-taking, Nemeth math support, open BRF/TXT, app launching\supercite{myvision2025} \\
+Expanded Gestures              & Basic navigation/entry    & Context-sensitive gestures   & Adds more navigation and control gestures\supercite{applevisBSI2024}                  \\
+Customizable Activities        & Limited                   & App-specific Activities      & Adjust verbosity, speech rate, hide rotor actions per context                         \\
+App/Action Remapping           & Partially locked gestures & Fully remappable commands    & Map nearly all gestures, keys to system/app actions\supercite{hks2025}                \\
+Quick Launch (Braille Display) & Not available             & Direct app/system launch     & Open apps/books from display keys                                                     \\
+Nemeth Code/Math               & Unsupported               & On-device Nemeth entry       & Type math directly\supercite{appleSupportBSI2025}                                     \\
+Braille Output Settings        & Limited                   & Enhanced output control      & On-the-fly table switching, context-sensitive reading                                 \\
+Share Accessibility Settings   & Not available             & AirDrop/QR code transfer     & Share VoiceOver/Braille profiles                                                      \\
+Hide Rotor Actions             & Fixed set                 & Customizable rotor options   & Remove unused actions                                                                 \\
+Voice Control + VoiceOver      & Not simultaneous          & Fully concurrent             & Use both without conflict\supercite{applevisVO2024}                                   \\
+Personal Voice Setup           & 30 phrases                & 10 phrases + iCloud sync     & Faster voice creation                                                                 \\
+Settings Backup/Export         & Not available             & Backup to file               & Restore or share accessibility settings                                               \\
+\end{longtblr}
+\normalsize
+
+\section{Specific Commands and Gestures}
+
+Table~\ref{tab:commands} lists specific on-screen and braille hardware commands in iOS 26, including newly added or enhanced gestures from iOS 18.
+
+\footnotesize
+\begin{longtblr}[
+	caption = {VoiceOver \& Braille Screen Input Commands (iOS 26)},
+	label = {tab:commands},
+	note = {Representative set of core and newly enhanced braille and on-screen commands in iOS 26.},
+]{
+	colspec = {X[l] X[l] X[l]},
+	rowhead = 1,
+	row{1} = {font=\normalfont},
+	hlines,
+	stretch = 1.5
+}
+Command / Gesture & Type                           & Action / Notes                                                           \\
+Enter Braille Screen Input & On-screen (double-tap top+bottom edges) & Quick workspace entry\supercite{appleSupportBSI2025}                              \\
+Cycle spelling suggestions & Swipe up/down (1 finger)                & Browse autocorrect options                                                        \\
+Move to new line           & Swipe right (2 fingers)                 & Insert line break                                                                 \\
+Cycle input/command mode   & Swipe left/right (3 fingers)            & Switch modes inside workspace                                                     \\
+Reverse dot positions      & Settings toggle                         & Swap 6-dot layout                                                                 \\
+Switch braille table       & Swipe up (2 fingers)                    & Change language/table instantly                                                   \\
+Pan left/right on display  & Dots 2+Space / 5+Space                  & Move braille content window\supercite{appleSupportCommands2024}                   \\
+Select All                 & Dots 2-3-5-6+Space                      & Highlight all text                                                                \\
+Cut / Copy / Paste         & Braille chords                          & Standard text actions (cut: 1-3-4-6+Space, copy: 1-4+Space, paste: 1-2-3-6+Space) \\
+Undo / Redo                & Dots 1-3-5-6+Space / 2-3-4-6+Space      & Editing convenience                                                               \\
+Quick Launch app           & Braille display shortcut                & Open app/system function instantly                                                \\
+Hide rotor action          & Settings                                & Remove unused rotor entries                                                       \\
+Reader/Live Text           & Safari/Share sheet button               & Activate large print/speech for page\supercite{nelowvision2025}                   \\
+\end{longtblr}
+\normalsize
+
+\section{Braille Access / Workspace in Detail}
+
+The \emph{Braille Access Workspace} in iOS 26 is a dedicated, full-screen environment for braille-based productivity\supercite{convergeaccessibility2025}. It integrates:
+
+\begin{itemize}
+	\item \textbf{Note-taking and editing}: Create/edit BRF or TXT documents with full cursor routing and text navigation.
+	\item \textbf{Nemeth math entry}: Inline math creation and review.
+	\item \textbf{Quick Launch}: Open apps or files without leaving the workspace.
+	\item \textbf{Customizable Commands}: Almost any VoiceOver or text action can be mapped to a key/gesture.
+	\item \textbf{File Handling}: Save, export, or share documents directly.
+	\item \textbf{Settings Portability}: Export/import workspace and braille settings between devices.
+\end{itemize}
+
+\footnotesize
+\begin{longtblr}[
+	caption = {Common Braille Access / Workspace Commands},
+	label = {tab:workspace},
+	note = {Frequent productivity and navigation commands within the Braille Access workspace environment.},
+]{
+	colspec = {X[l] X[l] X[l]},
+	rowhead = 1,
+	row{1} = {font=\normalfont},
+	hlines,
+	stretch = 1.5
+}
+Command          & Gesture / Key      & Function                     \\
+Enter Workspace           & Double-tap top+bottom edges & Launch braille environment            \\
+Exit Workspace            & Two-finger scrub            & Return to prior context               \\
+Switch entry/command mode & 3-finger swipe left/right   & Toggle between modes                  \\
+Translate contracted text & 2-finger swipe down         & Perform immediate braille translation \\
+Search / Find             & Dots 1-2-4+Space            & Search within a document              \\
+Heading navigation        & Assigned chord              & Jump between headings in document/web \\
+Dictation                 & Dots 1+5+6+Space            & Start voice dictation in field        \\
+\end{longtblr}
+\normalsize
+
+\noindent
+The workspace also supports macro chaining, where one chord can perform multiple actions (e.g., save, exit, and open the Files app), and adaptive gestures that behave differently depending on context.
+
+\section{Conclusion}
+
+Across three major domains—feature set, commands, and workspace integration—iOS 26 delivers a more powerful and customizable braille and VoiceOver experience, closing gaps left in iOS 18.

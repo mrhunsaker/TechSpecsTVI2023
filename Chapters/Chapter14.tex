@@ -4,19 +4,19 @@
 \section{Executive Summary}\label{ch14:sec:executive-summary}
 This chapter provides a detailed analysis of the computer specifications and hardware compatibility required for various software solutions used in the production of tactile graphics\index{tactile graphics}. It examines both commercial\index{software!commercial} and open-source\index{software!open-source} software, detailing their core functionalities, system requirements (CPU, RAM, storage, and operating system), and compatibility with different models of braille embossers\index{hardware!embosser} and thermal devices\index{hardware!thermal device}.
 
-Key commercial products reviewed include \index{TactileView} from \index{Humanware}, \index{ElPicsPrint} from the Elita Group, \index{Duxbury Braille Translator (DBT)} with \index{QuickTac} from Duxbury, \index{Firebird} from ETS, and the \index{Tiger Software Suite (TSS)} from ViewPlus. Open-source alternatives such as \index{Inkscape}, \index{Touch Mapper}, and \index{BrailleBlaster}/\index{BrailleBlaster-NG} are also analyzed. The report finds that while most software is designed for Windows\index{operating system!Windows}, several key applications offer native or web-based support for macOS\index{operating system!macOS} and Linux\index{operating system!Linux}. System requirements are generally modest, making the software accessible on standard educational hardware. However, embosser compatibility\index{hardware!embosser!compatibility} is a critical factor, with some software being tightly coupled to specific hardware ecosystems (e.g., TSS for ViewPlus embossers). The chapter concludes with a comparative analysis to guide educators and transcribers in selecting a software solution that aligns with their existing hardware, operating systems, and production needs.
+Key commercial products reviewed include \index{TactileView} from \index{Humanware}\supercite{TactileViewIrie}, \index{ElPicsPrint} from the Elita Group\supercite{ElitaElPicsPrint}, \index{Duxbury Braille Translator (DBT)} with \index{QuickTac} from Duxbury\supercite{DuxburyDBT}, \index{Firebird} from ETS, and the \index{Tiger Software Suite (TSS)} from ViewPlus\supercite{ViewplusTSS}. Open-source alternatives such as \index{Inkscape}\supercite{SoftorageInkscape}, \index{Touch Mapper}\supercite{TouchMapper}, and \index{BrailleBlaster}/\index{BrailleBlaster-NG}\supercite{aph-brailleblaster} are also analyzed. The report finds that while most software is designed for Windows\index{operating system!Windows}, several key applications offer native or web-based support for macOS\index{operating system!macOS} and Linux\index{operating system!Linux}. System requirements are generally modest, making the software accessible on standard educational hardware. However, embosser compatibility\index{hardware!embosser!compatibility} is a critical factor, with some software being tightly coupled to specific hardware ecosystems (e.g., TSS for ViewPlus embossers\supercite{ViewPlusProduct}). The chapter concludes with a comparative analysis to guide educators and transcribers in selecting a software solution that aligns with their existing hardware, operating systems, and production needs.
 
 \section{Introduction to Tactile Graphics Technology}\label{ch14:sec:introduction}
 \subsection{The Role of Tactile Graphics for the Visually Impaired}\label{ch14:ssec:role-of-tactile-graphics}
-Tactile graphics\index{tactile graphics} are a crucial medium for conveying non-textual information to individuals with visual impairments\index{visual impairment}. They translate visual content such as maps, diagrams, charts, and illustrations into a format that can be understood through touch, enabling access to essential educational and informational content in STEM, geography, and other fields.
+Tactile graphics\index{tactile graphics} are a crucial medium for conveying non-textual information to individuals with visual impairments\index{visual impairment}\supercite{CreatingTactileGraphics, Wall2003}. They translate visual content such as maps, diagrams, charts, and illustrations into a format that can be understood through touch, enabling access to essential educational and informational content in STEM, geography, and other fields\supercite{AELData, GetBraille}.
 
 \subsection{Overview of Software Categories for Tactile Production}\label{ch14:ssec:software-categories}
-The production of tactile graphics relies on specialized software\index{software!tactile graphics} that falls into several categories: dedicated tactile design software, braille translators with graphics capabilities, standard vector graphics editors adapted for tactile workflows, and web-based generation tools. The choice of software often depends on the user's technical skill, the complexity of the desired graphic, and the specific output hardware (e.g., embosser, thermal device) available.
+The production of tactile graphics relies on specialized software\index{software!tactile graphics} that falls into several categories: dedicated tactile design software\supercite{TactileView}, braille translators with graphics capabilities\supercite{DuxburyDBT}, standard vector graphics editors adapted for tactile workflows\supercite{SoftorageInkscape}, and web-based generation tools\supercite{TouchMapper}. The choice of software often depends on the user's technical skill, the complexity of the desired graphic, and the specific output hardware (e.g., embosser, thermal device) available.
 
 \section{Commercial Tactile Graphics Software}\label{ch14:sec:commercial-software}
 \subsection{TactileView Design Software}\label{ch14:ssec:tactileview}
 \subsubsection{Core Functionality and Features}\label{ch14:sssec:tactileview-features}
-\index{TactileView}\index{software!tactile graphics!TactileView}, developed by I-Sense\index{organizations!I-Sense}, is a comprehensive software for designing and producing tactile graphics. It allows users to create designs from scratch, import images, and use automated tools to generate tactile representations of mathematical functions. It is widely used in educational settings for creating tactile learning materials.
+\index{TactileView}\index{software!tactile graphics!TactileView}, developed by I-Sense\index{organizations!I-Sense}\supercite{TactileView, TactileViewIrie, EmeraldCoast}, is a comprehensive software for designing and producing tactile graphics. It allows users to create designs from scratch, import images, and use automated tools to generate tactile representations of mathematical functions. It is widely used in educational settings for creating tactile learning materials.
 
 \subsubsection{System Requirements (Windows, MacOS via Emulator)}\label{ch14:sssec:tactileview-sysreq}
 \begin{itemize}
@@ -25,11 +25,11 @@ The production of tactile graphics relies on specialized software\index{software
 \end{itemize}
 
 \subsubsection{Embosser and Thermal Device Compatibility}\label{ch14:sssec:tactileview-compat}
-TactileView supports a wide range of braille embossers\index{hardware!embosser!compatibility!TactileView} and thermal devices (for swell paper\index{hardware!swell paper}), including models from Index Braille, ViewPlus, and Enabling Technologies.
+TactileView supports a wide range of braille embossers\index{hardware!embosser!compatibility!TactileView} and thermal devices (for swell paper\index{hardware!swell paper}), including models from Index Braille, ViewPlus, and Enabling Technologies\supercite{IrieTactileView}.
 
 \subsection{ElPicsPrint}\label{ch14:ssec:elpicsprint}
 \subsubsection{Core Functionality and Features}\label{ch14:sssec:elpicsprint-features}
-\index{ElPicsPrint}\index{software!tactile graphics!ElPicsPrint} is a software tool developed by Index Braille\index{organizations!Index Braille} specifically for creating tactile graphics on their embossers. It simplifies the process of converting images into tactile format by automatically applying dot patterns and allowing for easy editing and labeling.
+\index{ElPicsPrint}\index{software!tactile graphics!ElPicsPrint} is a software tool developed by Index Braille\index{organizations!Index Braille}\supercite{ElitaElPicsPrint} specifically for creating tactile graphics on their embossers. It simplifies the process of converting images into tactile format by automatically applying dot patterns and allowing for easy editing and labeling\supercite{ElitaManual}.
 
 \subsubsection{System Requirements (Windows)}\label{ch14:sssec:elpicsprint-sysreq}
 \begin{itemize}
@@ -45,7 +45,7 @@ TactileView supports a wide range of braille embossers\index{hardware!embosser!c
 
 \subsection{Duxbury Braille Translator (DBT) \& QuickTac}\label{ch14:ssec:dbt-quicktac}
 \subsubsection{Core Functionality and Features (Braille Translation with Graphics Integration)}\label{ch14:sssec:dbt-features}
-\index{Duxbury Braille Translator (DBT)}\index{software!braille!Duxbury Braille Translator (DBT)} is the industry standard for braille translation. While its primary function is text, it integrates with \index{QuickTac}\index{software!tactile graphics!QuickTac}, a free companion program for creating simple tactile graphics. QuickTac allows users to create diagrams which can then be imported into DBT and embossed alongside braille text. It is particularly useful for creating educational materials that mix text and diagrams, adhering to BANA\index{organizations!BANA} standards for tactile graphics.
+\index{Duxbury Braille Translator (DBT)}\index{software!braille!Duxbury Braille Translator (DBT)} is the industry standard for braille translation\supercite{DuxburyDBT, DuxburyDBTWin, DuxburyDBTMac}. While its primary function is text, it integrates with \index{QuickTac}\index{software!tactile graphics!QuickTac}, a free companion program for creating simple tactile graphics. QuickTac allows users to create diagrams which can then be imported into DBT and embossed alongside braille text. It is particularly useful for creating educational materials that mix text and diagrams, adhering to BANA\index{organizations!BANA} standards for tactile graphics.
 
 \subsubsection{System Requirements (Windows, MacOS)}\label{ch14:sssec:dbt-sysreq}
 \begin{itemize}
@@ -63,15 +63,15 @@ TactileView supports a wide range of braille embossers\index{hardware!embosser!c
 \end{itemize}
 
 \subsubsection{Embosser Compatibility}\label{ch14:sssec:dbt-compat}
-DBT supports virtually all commercially available braille embossers\index{hardware!embosser!compatibility!Duxbury Braille Translator (DBT)}, making it one of the most versatile solutions for integrated text and graphics production.
+DBT supports virtually all commercially available braille embossers\index{hardware!embosser!compatibility!Duxbury Braille Translator (DBT)}, making it one of the most versatile solutions for integrated text and graphics production\supercite{DuxburyProducts}.
 
 \subsection{Tiger Software Suite (TSS)}\label{ch14:ssec:tss}
 \subsubsection{Core Functionality and Features (ViewPlus Embosser Ecosystem)}\label{ch14:sssec:tss-features}
-The \index{Tiger Software Suite (TSS)}\index{software!tactile graphics!Tiger Software Suite (TSS)} is designed by ViewPlus\index{organizations!ViewPlus} to work exclusively with their line of embossers.
+The \index{Tiger Software Suite (TSS)}\index{software!tactile graphics!Tiger Software Suite (TSS)} is designed by ViewPlus\index{organizations!ViewPlus}\supercite{ViewplusTSS, ViewPlusTigerSuite} to work exclusively with their line of embossers.
 \begin{itemize}
 	\item \textbf{Tiger Designer:} A tool for creating and editing tactile graphics.
 	\item \textbf{Tiger Translator:} A braille translator that integrates with Microsoft Word and Excel to convert documents into braille and tactile graphics.
-	\item \textbf{IVEO Creator:} A tool for creating interactive audio-tactile graphics that can be used with the IVEO Touchpad\index{hardware!tactile graphics!ViewPlus IVEO}.
+	\item \textbf{IVEO Creator:} A tool for creating interactive audio-tactile graphics that can be used with the IVEO Touchpad\index{hardware!tactile graphics!ViewPlus IVEO}\supercite{ViewPlusAGC}.
 \end{itemize}
 
 \subsubsection{System Requirements (Windows)}\label{ch14:sssec:tss-sysreq}
@@ -81,12 +81,12 @@ The \index{Tiger Software Suite (TSS)}\index{software!tactile graphics!Tiger Sof
 \end{itemize}
 
 \subsubsection{Embosser Compatibility}\label{ch14:sssec:tss-compat}
-TSS is designed to work exclusively with ViewPlus embossers\index{hardware!embosser!ViewPlus}, such as the Columbia, Delta, and Embraille.
+TSS is designed to work exclusively with ViewPlus embossers\index{hardware!embosser!ViewPlus}, such as the Columbia, Delta, and Embraille\supercite{ViewPlusProduct}.
 
 \section{Open-Source Tactile Graphics Software}\label{ch14:sec:open-source-software}
 \subsection{Inkscape}\label{ch14:ssec:inkscape}
 \subsubsection{Core Functionality and Features (Vector Graphics for Tactile Output)}\label{ch14:sssec:inkscape-features}
-\index{Inkscape}\index{software!vector graphics!Inkscape} is a powerful, professional-grade open-source vector graphics editor. While not designed specifically for tactile graphics, its ability to create clean, high-contrast line art in SVG\index{file formats!vector!SVG} format makes it an excellent tool for designing complex diagrams. It is often used by advanced transcribers who require precise control over the final design.
+\index{Inkscape}\index{software!vector graphics!Inkscape} is a powerful, professional-grade open-source vector graphics editor\supercite{SoftorageInkscape, SteemitInkscape}. While not designed specifically for tactile graphics, its ability to create clean, high-contrast line art in SVG\index{file formats!vector!SVG} format makes it an excellent tool for designing complex diagrams. It is often used by advanced transcribers who require precise control over the final design.
 
 \subsubsection{System Requirements (Windows, MacOS, Linux)}\label{ch14:sssec:inkscape-sysreq}
 \begin{itemize}
@@ -105,7 +105,7 @@ The workflow for using Inkscape\index{hardware!embosser!workflow!Inkscape} invol
 
 \subsection{Touch Mapper}\label{ch14:ssec:touch-mapper}
 \subsubsection{Core Functionality and Features (Specialized Tactile Map Generation)}\label{ch14:sssec:touch-mapper-features}
-\index{Touch Mapper}\index{software!tactile graphics!Touch Mapper} is a free, web-based tool for generating tactile maps\index{tactile maps} of any location. It uses data from OpenStreetMap\index{OpenStreetMap} to create simplified maps showing roads and key points of interest, which can then be downloaded for production.
+\index{Touch Mapper}\index{software!tactile graphics!Touch Mapper} is a free, web-based tool for generating tactile maps\index{tactile maps} of any location\supercite{TouchMapper}. It uses data from OpenStreetMap\index{OpenStreetMap} to create simplified maps showing roads and key points of interest, which can then be downloaded for production.
 
 \subsubsection{System Requirements (Web-Based)}\label{ch14:sssec:touch-mapper-sysreq}
 \begin{itemize}
@@ -118,12 +118,12 @@ Touch Mapper provides output files suitable for various production methods:
 \begin{itemize}
 	\item \textbf{Embossers:} Generates files compatible with most standard embossers.
 	\item \textbf{Swell Paper:} Provides high-contrast PDF files for printing on swell paper\index{hardware!swell paper}.
-	\item \textbf{3D Printers:} Can export STL files for creating 3D printed tactile maps\index{3D printing!for tactile maps}.
+	\item \textbf{3D Printers:} Can export STL files for creating 3D printed tactile maps\index{3D printing!for tactile maps}\supercite{PerkinsTouchMapper}.
 \end{itemize}
 
 \subsection{BrailleBlaster}\label{ch14:ssec:brailleblaster}
 \subsubsection{Core Functionality and Features (Braille Production with Graphics Potential)}\label{ch14:sssec:brailleblaster-features}
-\index{BrailleBlaster}\index{software!braille!BrailleBlaster}, developed by the American Printing House for the Blind (APH)\index{organizations!American Printing House for the Blind}, is a free, open-source tool for producing high-quality braille textbooks. While its primary focus is literary braille and adherence to NIMAC\index{NIMAC} standards, it has features for incorporating and describing graphics, making it a key part of accessible document production workflows.
+\index{BrailleBlaster}\index{software!braille!BrailleBlaster}, developed by the American Printing House for the Blind (APH)\index{organizations!American Printing House for the Blind}\supercite{aph-brailleblaster, BrailleBlasterGitHub, brailleblaster-product}, is a free, open-source tool for producing high-quality braille textbooks. While its primary focus is literary braille and adherence to NIMAC\index{NIMAC} standards, it has features for incorporating and describing graphics, making it a key part of accessible document production workflows.
 
 \subsubsection{System Requirements (Windows, MacOS, Linux)}\label{ch14:sssec:brailleblaster-sysreq}
 \begin{itemize}
@@ -138,7 +138,7 @@ Touch Mapper provides output files suitable for various production methods:
 \end{itemize}
 
 \subsubsection{Embosser Compatibility}\label{ch14:sssec:brailleblaster-compat}
-BrailleBlaster supports a wide range of modern braille embossers.
+BrailleBlaster supports a wide range of modern braille embossers\supercite{APHBrailleBlasterFeatures}.
 
 \section{Comparative Analysis: Choosing the Right Solution}\label{ch14:sec:comparative-analysis}
 Choosing the right tactile graphics software depends on a careful evaluation of operating system support, hardware demands, and, most critically, compatibility with existing embossers.
