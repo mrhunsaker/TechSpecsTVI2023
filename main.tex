@@ -11,7 +11,7 @@
 \usepackage[bottom, hang, multiple]{footmisc}
 \usepackage[export]{adjustbox}
 \PassOptionsToPackage{hyphens}{url}\usepackage[unicode,colorlinks=true,linkcolor=blue]{hyperref}
-\usepackage{accsupp}
+\usepackage{accsupp} % removed; alt text now integrated via tagpdf in \imgalt
 \usepackage[font=small, labelfont=bf, labelsep=colon, hang, singlelinecheck=off, justification=raggedright]{caption}
 \usepackage[none]{hyphenat}
 \usepackage{appendix}
@@ -24,7 +24,7 @@
 \usepackage{arydshln}
 \usepackage{enumitem}
 \usepackage{fontspec}
-\usepackage{geometry}
+\usepackage[margin=2.5cm]{geometry}
 \usepackage[export]{adjustbox}
 \usepackage[
   style=numeric-comp,
@@ -147,9 +147,11 @@
 \pdfvariable suppressoptionalinfo 512
 % Setup accessibility for figures
 \newcommand{\imgalt}[2]{%
-  \BeginAccSupp{method=escape,Alt={{#1}}}%
+  % Bypass tagpdf entirely and use direct PDF annotation
+  \pdfextension annot width 0pt height 0pt depth 0pt {%
+    /Subtype /Text /Contents (#1) /Open false /Name /Note%
+  }%
   #2%
-  \EndAccSupp{}%
 }
 \usepackage{tabularray}
 \UseTblrLibrary{booktabs}
@@ -242,6 +244,7 @@
 	pdfauthor={Michael Ryan Hunsaker, M.Ed., Ph.D.},
 	pdfkeywords={assistive technology, visually impaired, blind students, braille, tactile graphics, audio description, closed captioning, screen readers, tablets, refreshable braille displays, embossed braille, 3D printing, video magnification software, text-to-speech}
 }
+
 \setcounter{tocdepth}{1}
 \pagenumbering{roman}
 \small{\tableofcontents}
@@ -295,8 +298,7 @@
 \include{Chapters/Appendix03}
 \include{Chapters/Appendix05}
 \include{Chapters/Conclusion}
-\include{Chapters/BackMatter}
 \part{Appendices}
 \include{Chapters/ComputationAppendix.tex}
+\include{Chapters/BackMatter}
 \end{document}
-

@@ -3,7 +3,7 @@
 
 This chapter delves into the technical underpinnings of how screen readers\index{screen reader} like JAWS, NVDA, and Narrator\index{screen reader!Narrator} function within the Microsoft\index{tablet!Microsoft} Windows operating system\index{operating system}. It explores their interaction with accessibility APIs\index{accessibility!accessibility API}, methods for intercepting user input\index{screen reader!user input}, data processing pipelines\index{screen reader!screen reader architecture}, and the logic behind rendering user interface elements into speech and braille\index{braille}. The analysis provides a comparative overview of their architectural approaches and concludes with a summary of basic navigation commands common to these screen readers\index{screen reader}.
 
-\section{Interaction with Windows Environment: Utilizing Accessibility APIs}
+\section{~~Interaction with Windows Environment: Utilizing Accessibility APIs}
 \label{sec:interaction-with-windows-environment-utilizing-accessibility-apis}
 
 Screen readers do not operate in a vacuum; they are deeply integrated with the operating system\index{operating system}'s accessibility infrastructure. In Windows\index{operating system!Windows}, this is primarily achieved through a set of Application Programming Interfaces (APIs) that expose information about UI elements to assistive technologies\index{assistive technology}.
@@ -23,7 +23,7 @@ Screen readers do not operate in a vacuum; they are deeply integrated with the o
 	\item \textbf{Narrator:} As Microsoft\index{tablet!Microsoft}'s built-in screen reader\index{screen reader}, Narrator is designed to work seamlessly with UIA\index{accessibility!UIA}. Its development is closely tied to the evolution of the Windows\index{operating system!Windows} OS and UIA itself, making it a reference implementation for the UIA framework\index{laptop!Framework}. It has less support for the legacy off-screen model\index{screen reader!screen reader architecture} techniques used by JAWS\index{screen reader!JAWS} and NVDA.
 \end{itemize}
 
-\section{Intercepting and Processing User Inputs}
+\section{~~Intercepting and Processing User Inputs}
 \label{sec:intercepting-and-processing-user-inputs}
 
 A screen reader\index{screen reader} must intercept keyboard inputs to provide its own set of navigation commands without interfering with the application's normal keyboard shortcuts \cite{WSRKeystrokeCompendium}. This is typically achieved through low-level keyboard hooks\index{screen reader!user input}.
@@ -38,7 +38,7 @@ A screen reader\index{screen reader} must intercept keyboard inputs to provide i
 	\item \textbf{Modifier Keys:} The "screen reader\index{screen reader} key" (typically \texttt{Insert} or \texttt{Caps Lock}) is used to differentiate screen reader commands from application commands, preventing conflicts \cite{WebAIMShortcuts}.
 \end{itemize}
 
-\section{Generating Screen Reader Outputs}
+\section{~~Generating Screen Reader Outputs}
 \label{sec:generating-screen-reader-outputs}
 
 Once a screen reader has gathered information about a UI element (via an accessibility API\index{accessibility!accessibility API}) or received a command from the user, it must present this information in an accessible format. This is done through speech, braille, and auditory cues\index{screen reader!screen reader output}.
@@ -80,7 +80,7 @@ Once a screen reader has gathered information about a UI element (via an accessi
 	\item \textbf{Implementation:} These are typically pre-recorded sound files (e.g., WAV files) that are played by the screen reader's audio engine in response to specific events received from the accessibility API\index{accessibility!accessibility API}.
 \end{itemize}
 
-\section{Internal Data Processing Pipelines and Rendering Logic}
+\section{~~Internal Data Processing Pipelines and Rendering Logic}
 \label{sec:internal-data-processing-pipelines-and-rendering-logic}
 
 The core of a screen reader is its internal logic that decides what information to present and how. This involves several key components:
@@ -92,7 +92,7 @@ The core of a screen reader is its internal logic that decides what information 
 	\item \textbf{State Management:} The screen reader\index{screen reader} must keep track of its own state, such as the current navigation mode (e.g., focus mode vs. browse mode), the last spoken phrase, and the user's settings (e.g., speech rate, verbosity level).
 \end{itemize}
 
-\section{Architectural Approaches and Unique Methods}
+\section{~~Architectural Approaches and Unique Methods}
 \label{sec:architectural-approaches-and-unique-methods}
 
 \begin{itemize}
@@ -113,7 +113,7 @@ The core of a screen reader is its internal logic that decides what information 
 	      \end{itemize}
 \end{itemize}
 
-\section{Comparison of Methodologies for Processing and Rendering UI Elements}
+\section{~~Comparison of Methodologies for Processing and Rendering UI Elements}
 \label{sec:comparison-of-methodologies-for-processing-and-rendering-ui-elements}
 
 \footnotesize
@@ -138,7 +138,7 @@ The core of a screen reader is its internal logic that decides what information 
 \normalsize
 
 
-\section{Summary of Basic Navigation Commands}
+\section{~~Summary of Basic Navigation Commands}
 \label{sec:summary-of-basic-navigation-commands}
 
 While each screen reader\index{screen reader} has its own unique command set, a core set of navigation concepts is shared among them. The "SR Key" refers to the screen reader\index{screen reader}'s modifier key (Insert by default for JAWS/NVDA, Caps Lock for Narrator\index{screen reader!Narrator}) \cite{WSRKeystrokeCompendium, WebAIMShortcuts}.
