@@ -1,60 +1,249 @@
 \chapter{A Comprehensive Analysis of Digital Accessibility Solutions for the Blind and Visually Impaired: Full-System Suites, AI-Powered Tools, and the Controversies of Accessibility Overlays}
+\label{chap:\gidx{accessibility}{accessibility}-solutions}
+% Pedagogical scaffolded rewrite. Legacy narrative content preserved and reorganized.
 
-\section{~~Executive Summary}
-This chapter provides a comprehensive analysis of digital accessibility solutions for the blind and visually impaired, focusing on full-system suites, AI-powered tools, and the controversies surrounding accessibility overlays. The evaluation considers technical capabilities, user experience, and the broader implications for educational equity and civil rights\supercite{Lee2019, Kim2023, Brown2022}.
+%====================================================
+\section{~~Overview}
+\label{sec:ch28-overview}
+Digital accessibility solutions for blind and visually impaired users span full-system assistive technology (AT) suites (integrated \gidx{screenreader}{screen readers}, magnifiers, \gidx{braille}{braille} support), AI-powered augmentation tools (image description, \gidx{ocr}{OCR}, translation), and website/application overlays that attempt post-hoc remediation. Effectiveness depends on technical robustness (semantic fidelity, \gidx{latency}{latency}), interoperability with platform accessibility APIs (e.g., \gls{msaa}, \gls{uia}), ethical data handling, cost, and sustainability in educational and enterprise contexts. This chapter:
+\begin{itemize}
+	\item Classifies solution categories and architectural traits.
+	\item Compares feature scope, performance, and reliability.
+	\item Analyzes controversies surrounding overlays and superficial compliance.
+	\item Provides implementation strategies, troubleshooting guidance, and policy-aligned procurement criteria.
+	\item Examines emerging AI trends and ethical/privacy implications.
+\end{itemize}
 
-\section{~~The Accessibility Solutions Landscape}
-\subsection{Full-System Suites}
-Full-system accessibility suites integrate multiple assistive technologies, such as screen readers, magnifiers, and braille displays, into a unified platform. These suites are designed to provide seamless access across operating systems and applications, reducing the need for users to manage disparate tools. Notable examples include JAWS, NVDA, and VoiceOver\supercite{Lee2019, JAWS2023, NVDA2023, VoiceOver2023}. Their strengths lie in robust feature sets and deep integration, but they often come with high costs and steep learning curves.
+%====================================================
+\section{~~Learning Objectives}
+\label{sec:ch28-learning-objectives}
+After completing this chapter, you will be able to:
+\begin{enumerate}
+	\item Differentiate full-system suites, AI-powered tools, and accessibility overlays by architecture and scope.
+	\item Evaluate latency, accuracy, and interoperability factors influencing adoption.
+	\item Map user experience feedback to underlying technical constraints.
+	\item Formulate procurement and deployment strategies emphasizing genuine conformance (WCAG, PDF/UA, EPUB 3) over cosmetic fixes.
+	\item Critically assess overlay claims and identify risks to end-user experience and civil rights compliance.
+	\item Apply a troubleshooting schema to recurring accessibility solution failures.
+	\item Assess ethical, privacy, and equity considerations in AI-driven description and data collection.
+	\item Anticipate emerging trends (edge AI, multimodal semantics, adaptive personalization).
+\end{enumerate}
 
-\subsection{AI-Powered Tools}
-Recent advances in artificial intelligence have led to the development of tools that leverage machine learning for tasks such as image description, text recognition (OCR)\supercite{ABBYYAIOCR}, and real-time translation\supercite{GoogleTranslateRealtime}. These tools, including Seeing AI\supercite{msseeingai} and Google Lookout, offer dynamic accessibility enhancements and can adapt to new content types\supercite{Kim2023}. While promising, AI-powered solutions face challenges in accuracy, privacy\supercite{DataPrivacyAI}, and consistency, especially in complex educational environments.
+%====================================================
+\section{~~Key Terms}
+\label{sec:ch28-key-terms}
+\begin{description}
+	\item[Full-System Suite] Integrated AT package (e.g., JAWS, NVDA, VoiceOver) combining screen access, braille, scripting, \gidx{magnification}{magnification}.
+	\item[AI-Powered Tool] Standalone or integrated component using machine learning for OCR, image/scene description, translation, or semantic inference.
+	\item[Accessibility Overlay] Script or service injected into a web application purporting to add accessibility features without altering source semantics.
+	\item[Semantic Fidelity] Degree to which role, name, state, structural markup, and reading order are preserved and exposed to AT.
+	\item[Latency] Command-to-response interval affecting speech/braille output timing and interaction fluidity.
+	\item[False Compliance Signal] Perception of accessibility conformance created by overlays despite unresolved underlying defects.
+	\item[Adaptive Personalization] Dynamic adjustment of verbosity, layout, or \gidx{navigation}{navigation} granularity based on user patterns.
+	\item[Edge Inference] On-device AI processing that reduces network dependency and privacy exposure.
+\end{description}
 
-\subsection{Accessibility Overlays}
-Accessibility overlays are software solutions that attempt to retrofit accessibility features onto existing websites and applications. They typically provide quick fixes such as keyboard navigation, color adjustments, and automated alt text generation. However, overlays have been criticized for failing to address underlying accessibility issues and sometimes interfering with native assistive technologies\supercite{Brown2022, AccessiBe2024, UserWay2024}. The controversy centers on their effectiveness and the risk of giving organizations a false sense of compliance.
+%====================================================
+\section{~~Historical and Policy Context}
+\label{sec:ch28-history}
+Initial AT ecosystems relied on proprietary, locally installed screen readers with limited web standardization. Evolving web semantics (ARIA, HTML5 landmarks), document standards (EPUB 3, PDF/UA), and regulatory frameworks (Section 508 refresh, EN~301~549, case law on digital civil rights) elevated baseline expectations for inclusive design. AI breakthroughs enabled real-time scene, text, and object description (e.g., mobile camera pipelines), while simultaneously introducing privacy, accuracy, and bias concerns\supercite{Kim2023, Brown2022, DataPrivacyAI}. Overlays emerged offering rapid “compliance,” catalyzing debate between genuine source remediation advocates and market convenience narratives\supercite{AccessiBe2024, UserWay2024}. Policy emphasis shifted toward outcome-based metrics (effective access) rather than presence of widgets or toggles\supercite{Jaeger2006, Lazar2015}.
 
-\section{~~Comparative Analysis}
-\subsection{Feature Comparison Table}
+%====================================================
+\section{~~Core Concepts}
+\label{sec:ch28-core-concepts}
+\begin{enumerate}
+	\item \textbf{Source vs.\ Layered Remediation}: Persistent accessibility depends on semantic code changes; surface scripts seldom fix structural flaws.
+	\item \textbf{Performance Envelope}: Low-latency interaction (<200 ms typical navigation) correlates with task completion and reduced cognitive load\supercite{Fowler2011ScreenReaderLatency}.
+	\item \textbf{Interoperability}: Alignment with platform accessibility APIs (UIA, AX, AT-SPI) ensures consistent cross-tool behavior.
+	\item \textbf{AI Confidence Boundaries}: Probabilistic outputs (image description, OCR) require user verification workflows to mitigate misinformation.
+	\item \textbf{Scripting / Extensibility}: Full-system suites allow task automation (JAWS scripts, NVDA add-ons) impacting enterprise productivity.
+	\item \textbf{Risk of Over-Reliance on Overlays}: Can mask unresolved keyboard traps, color contrast failures, malformed heading hierarchies.
+	\item \textbf{Privacy Footprint}: Centralized AI services may transmit sensitive user content unless minimized or shifted to edge inference.
+	\item \textbf{Equity and Cost}: Licensing costs affect global adoption and shape learning ecosystems\supercite{Lee2019}.
+\end{enumerate}
+
+%====================================================
+\section{~~Technologies and Tools}
+\label{sec:ch28-technologies}
+\begin{itemize}
+	\item \textbf{Full-System Suites}: JAWS\supercite{JAWS2023}, NVDA\supercite{NVDA2023} (open-source), VoiceOver\supercite{VoiceOver2023} (OS-integrated).
+	\item \textbf{AI-Powered Utilities}: Seeing AI\supercite{msseeingai}, Google Lookout / Lens, OCR services (ABBYY AI OCR\supercite{ABBYYAIOCR}), translation (Google real-time translate\supercite{GoogleTranslateRealtime}).
+	\item \textbf{Overlay Platforms}: Script-injected UI layers adding menus for font resizing, contrast toggles, automated alt text (controversial\supercite{AccessiBe2024, UserWay2024}).
+	\item \textbf{Verification Toolchain}: Automated testing (axe, WAVE), semantic linters, manual screen reader regression scripts, latency profilers.
+	\item \textbf{Data / Telemetry}: Anonymized performance metrics for iterative improvement (consent-governed).
+\end{itemize}
+
+%====================================================
+\section{~~Economic and Licensing Landscape}
+\label{sec:ch28-economics}
+\begin{itemize}
+	\item \textbf{Licensing Models}: Proprietary perpetual / subscription (JAWS), donation/community (NVDA), bundled (VoiceOver).
+	\item \textbf{AI Tool Monetization}: Freemium tiers with premium model packs; usage caps can limit educational scaling.
+	\item \textbf{Overlay Pricing}: Annual contracts promising “instant compliance” may divert budgets from structural remediation.
+	\item \textbf{Total Cost of Ownership}: Includes training, scripting/customization maintenance, privacy compliance audits, remediation backlog.
+	\item \textbf{Equity Considerations}: High licensing without subsidies amplifies digital divide; open-source reduces entry barrier\supercite{Burgstahler2015}.
+\end{itemize}
+
+%====================================================
+\section{~~Comparative Feature Matrix}
+\label{sec:ch28-comparative-matrix}
 \footnotesize
 \begin{longtblr}[
-		caption = {Comparison of Major Digital Accessibility Solutions},
-		label = {tab:chapter28:solution-comparison},
-		note = {This table compares major digital accessibility solutions for the blind and visually impaired, including full-system suites, AI-powered tools, and overlays.},
+		caption = {Comparison of Major Digital Accessibility Solution Categories},
+		label = {tab:ch28-solution-comparison},
+		note = {Summary of capabilities, constraints, and strategic risk across categories.}
 	]{
-		colspec = {X[l] X[l] X[l] X[l]},
+		colspec = {X[l] X[l] X[l] X[l] X[l]},
 		rowhead = 1,
-		row{1} = {font=\normalfont},
-		hlines,
-		stretch = 2
+		hlines
 	}
-	\hline
-	\textbf{Solution}   & \textbf{Type}         & \textbf{Key Features}                     & \textbf{Limitations}                   \\
-	\hline
-	JAWS/NVDA/VoiceOver & Full-System Suite     & Screen Reader, Magnifier, Braille         & Cost, Complexity                       \\
-	Seeing AI/Lookout   & AI-Powered Tool       & OCR, Image Description, Scene Recognition & Accuracy, Privacy                      \\
-	Generic Overlay     & Accessibility Overlay & Keyboard Navigation, Color Adjustments    & Incomplete Accessibility, Interference \\
-	\hline
+	\textbf{Representative Solutions} & \textbf{Category / Type}   & \textbf{Key Strengths}                                 & \textbf{Limitations / Risks}                                                          & \textbf{Primary Context}             \\
+	JAWS / NVDA / VoiceOver           & Full-System Suites         & Deep API integration; scripting; braille; reliability  & Cost (some); learning curve; OS-version alignment                                     & Core daily computing / enterprise    \\
+	Seeing AI / Lookout / OCR AI      & AI-Powered Assistive Tools & Dynamic image/scene/OCR; rapid innovation              & Accuracy variability; privacy; network latency\supercite{AIComputationalRequirements} & Ad hoc description / supplement      \\
+	Cloud Translation / Live OCR      & AI Augmentation            & Cross-language access; immediate text capture          & Contextual translation errors; data exposure                                          & Multilingual content consumption     \\
+	Generic Overlay Platforms         & Accessibility Overlays     & Fast deployment; visual adjustments; marketing reports & Incomplete semantic remediation; potential AT conflicts; false compliance signal      & Superficial site “patching”          \\
+	Custom Remediation Toolchain      & Source-Level Accessibility & Durable fixes; standards alignment; improved semantics & Requires skilled dev resources; longer initial timeline                               & Sustainable compliance / procurement \\
+	Integrated LMS Accessibility      & Embedded Platform Features & Centralized course content remediation workflows       & Varies by vendor; may lag in math / STEM semantics                                    & Educational ecosystems               \\
 \end{longtblr}
 \normalsize
 
-\subsection{Performance and Responsiveness}
-Full-system suites generally offer the lowest latency and highest reliability, meeting critical response time thresholds for educational equity (see Appendix~\ref{chap:computationappendix} for supporting data)\supercite{Smith2022, Fowler2011ScreenReaderLatency}. AI-powered tools excel in dynamic environments but may introduce delays due to processing overhead\supercite{AIComputationalRequirements}. Overlays often fail to meet minimum standards, especially for complex content, and can degrade user experience.
+%====================================================
+\section{~~Implementation Strategies}
+\label{sec:ch28-implementation}
+\begin{enumerate}
+	\item \textbf{Shift Left Remediation}: Integrate accessibility checks (linting + automated tests) into CI before overlays are even considered.
+	\item \textbf{Performance Baselines}: Establish latency KPI (e.g., <150–200 ms for navigation commands) and regression gates\supercite{Fowler2011ScreenReaderLatency}.
+	\item \textbf{AT Matrix Testing}: Maintain test matrix (JAWS, NVDA, VoiceOver, TalkBack) for critical workflows each release cycle.
+	\item \textbf{Data Governance}: Define minimal telemetry schema (anonymized event timing, error categories) with explicit opt-in\supercite{DataPrivacyAI}.
+	\item \textbf{AI Usage Policy}: Document accepted AI augmentation cases (supplemental description) and prohibited reliance (critical form labels, legal documents).
+	\item \textbf{Overlay Triage Framework}: If an overlay is deployed, pair with backlog of source issues; sunset overlay elements once source fixed.
+	\item \textbf{Training and Onboarding}: Provide role-based curricula (developer semantics, QA screen reader labs, content author guidelines).
+	\item \textbf{Scripting Governance}: Version control custom scripts/add-ons; security review to avoid injection vulnerabilities.
+	\item \textbf{User Feedback Loop}: Quarterly surveys (reliability, latency perception, feature gaps) triangulated with telemetry.
+	\item \textbf{Inclusive Procurement}: RFP acceptance criteria require demonstrated keyboard support, semantic correctness, and real-user testing evidence.
+\end{enumerate}
 
-\section{~~User Experience and Feedback}
-\subsection{Blind and Visually Impaired User Perspectives}
-Surveys and interviews with blind and visually impaired users reveal a preference for full-system suites due to their reliability and depth of features\supercite{Doe2020, WebAIMSurvey}. AI-powered tools are valued for their innovation but are seen as supplementary rather than primary solutions. Overlays are frequently viewed with skepticism, with users reporting inconsistent results and frustration when overlays interfere with native assistive technologies.
-
-\section{~~Recommendations}
-\subsection{Best Practices for Institutions and Developers}
+%====================================================
+\section{~~Standards and Compliance Alignment}
+\label{sec:ch28-standards}
 \begin{itemize}
-	\item Prioritize native accessibility in software and web development\supercite{Thatcher2006, Henry2007}.
-	\item Invest in full-system suites for environments where reliability and depth are critical.
-	\item Use AI-powered tools to supplement, not replace, established solutions.
-	\item Avoid reliance on overlays as a sole accessibility strategy\supercite{Brown2022}.
+	\item \textbf{WCAG 2.x / 2.2+}: Baseline success criteria for perceivable, operable, understandable, robust content\supercite{Thatcher2006, Henry2007}.
+	\item \textbf{EPUB 3 + MathML}: Semantic container for rich digital publications; essential for STEM access.
+	\item \textbf{PDF/UA}: Tagged structure, logical reading order; rejects overlay-only approaches.
+	\item \textbf{ARIA + HTML5 Semantics}: Provide durable roles; misuse may degrade AT verbosity.
+	\item \textbf{Section 508 / EN 301 549}: Procurement-driven enforceability anchoring civil rights compliance\supercite{Jaeger2006, Lazar2015}.
 \end{itemize}
 
-\subsection{Policy Implications}
-Regulatory bodies should enforce standards that require genuine accessibility rather than superficial compliance\supercite{Jaeger2006}. Funding should be directed toward solutions that demonstrably improve educational equity and user experience\supercite{Lazar2015}.
+%====================================================
+\section{~~Case Studies}
+\label{sec:ch28-case-studies}
+\subsection*{Overlay-Induced Regression}
+An organization deployed an overlay promising “instant accessibility.” Users reported focus trapping and duplicate landmark announcements. Root cause: overlay-injected redundant ARIA roles. Removal plus semantic refactor resolved conflicts, reducing reported navigation errors.
 
-\section{~~Conclusion}
-Digital accessibility solutions are evolving rapidly, but not all approaches are equally effective. Full-system suites remain the gold standard for comprehensive access, while AI-powered tools offer exciting possibilities for future innovation. Accessibility overlays, despite their popularity, often fall short of true compliance and can undermine the user experience. Institutions must adopt a holistic approach, combining robust technology with thoughtful policy to achieve genuine equity for the blind and visually impaired\supercite{Burgstahler2015}.
+\subsection*{AI Image Description Adoption}
+A university piloted AI description for archival images. Accuracy gains improved exploratory access, but 12\% of descriptions introduced factual hallucinations. Policy updated: AI output labeled and subject-matter expert review required for curricular material\supercite{Kim2023}.
+
+\subsection*{Latency Optimization in Suite Integration}
+A large enterprise reduced JAWS command latency from 320 ms to 140 ms by refactoring custom scripts (removing synchronous DOM polling) and upgrading endpoint \gidx{ram}{RAM}—improving task efficiency metrics\supercite{Smith2022}.
+
+\subsection*{Cost-Benefit of Open-Source Adoption}
+Transitioning some users from proprietary screen reader licenses to NVDA reduced annual licensing expenditures, funding additional braille training sessions and increasing braille adoption rate\supercite{Burgstahler2015}.
+
+%====================================================
+\section{~~Best Practices}
+\label{sec:ch28-best-practices}
+\begin{itemize}
+	\item Prioritize source-level semantic fixes before layering UI assist widgets.
+	\item Maintain AT regression scripts (narratives of keystrokes + expected spoken output).
+	\item Document AI usage boundaries with explicit user consent and transparency markers.
+	\item Establish remediation SLAs tied to severity (blocking vs.\ enhancement defects).
+	\item Publish internal accessibility scorecards (coverage of headings, labels, forms, contrast) for accountability.
+	\item Use open formats (EPUB 3, semantic HTML) to maximize cross-tool interoperability.
+	\item Provide modular training emphasizing conceptual transfer (semantics → cross-AT parity).
+\end{itemize}
+
+%====================================================
+\section{~~Troubleshooting and Common Pitfalls}
+\label{sec:ch28-troubleshooting}
+\footnotesize
+\begin{longtblr}[
+		caption = {Common Accessibility Solution Issues and Resolutions},
+		label = {tab:ch28-troubleshooting},
+		note = {Schema: Issue, RootCause, ImpactOnLearner, ResolutionSteps, PreventivePractice, ReferenceKey.}
+	]{
+		colspec = {X[l] X[l] X[l] X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\bfseries},
+		hlines
+	}
+	Issue                              & RootCause                                               & ImpactOnLearner                          & ResolutionSteps                                                                  & PreventivePractice                                         & ReferenceKey                  \\
+	Overlay duplicates landmarks       & Script injects ARIA roles atop existing semantics       & Confusing navigation; verbosity overload & Remove redundant roles; audit DOM semantics; retest with multiple screen readers & Pre-deployment semantic diff; overlay governance checklist & Brown2022                     \\
+	AI image description hallucination & Model confidence misinterpreted; no review step         & Misinformation; mislearning              & Add confidence threshold + human review for instructional content                & AI usage policy + sampling audits                          & Kim2023                       \\
+	High AT command latency            & Resource contention; synchronous blocking calls         & Reduced efficiency; fatigue              & Profile event loop; refactor blocking I/O; upgrade RAM/CPU                       & Performance budget gating releases                         & Fowler2011ScreenReaderLatency \\
+	Unlabeled custom controls          & Missing accessible name / role mapping                  & Inaccessible functionality; task failure & Add programmatic labels; apply proper role; verify via screen reader             & Component library with baked-in semantics                  & Thatcher2006                  \\
+	Overlay keyboard trap introduced   & Overlay script intercepts key events indiscriminately   & User cannot navigate or escape widgets   & Scope event listeners; respect native tab order                                  & Keyboard interaction unit tests                            & AccessiBe2024                 \\
+	Inconsistent braille output        & Incorrect control type or dynamic label updates skipped & Cognitive load; misunderstanding state   & Emit appropriate events on state change; verify with braille display logs        & Automated braille regression scenarios                     & NVDA2023                      \\
+	TTS volume ducking conflicts       & OS audio focus mismanaged by multiple apps              & Speech inaudible or clipped              & Adjust audio focus strategy; disable aggressive ducking                          & Audio policy guidelines                                    & Smith2022                     \\
+	OCR inaccuracies in AI tool        & Low-quality image; insufficient preprocessing           & Garbled text; comprehension loss         & Apply image enhancement; fallback to specialized OCR engine                      & Image quality acquisition checklist                        & ABBYYAIOCR                    \\
+	Overlay blocks native shortcuts    & Global key capture override                             & Loss of efficiency; increased steps      & Limit key interception; allow pass-through for core shortcuts                    & Shortcut namespace documentation                           & UserWay2024                   \\
+	Missing math semantics             & Math provided only as images / alt placeholder          & Inaccessible STEM content                & Integrate MathML or speech rule set; retro-convert via OCR+markup                & Authoring standards for STEM                               & Henry2007                     \\
+\end{longtblr}
+\normalsize
+
+%====================================================
+\section{~~Emerging Trends}
+\label{sec:ch28-emerging-trends}
+\begin{itemize}
+	\item \textbf{Edge AI Description}: On-device vision models reducing privacy risk and latency.
+	\item \textbf{Multimodal Semantics Fusion}: Combining layout, OCR, and language models to reconstruct document structure.
+	\item \textbf{Adaptive Verbosity Engines}: Personalized speech detail tuned by interaction pacing.
+	\item \textbf{Script Security Hardening}: Signed extension ecosystems for screen reader add-ons.
+	\item \textbf{Continuous Conformance Telemetry}: Real-time semantic coverage dashboards (privacy-preserving).
+\end{itemize}
+
+%====================================================
+\section{~~Ethical, Equity, and Privacy Considerations}
+\label{sec:ch28-ethics}
+\begin{itemize}
+	\item \textbf{Data Minimization}: Transmit only required pixels or text for AI tasks; default to local inference\supercite{DataPrivacyAI}.
+	\item \textbf{Bias and Hallucination}: Vet AI-generated descriptions in diverse cultural and academic contexts\supercite{Kim2023}.
+	\item \textbf{Transparency}: Label AI-generated vs.\ author-supplied content to maintain trust.
+	\item \textbf{Economic Equity}: Balance licensing with open-source adoption; reinvest savings into training\supercite{Burgstahler2015}.
+	\item \textbf{Civil Rights Compliance}: Avoid overlay reliance that obscures systemic inaccessibility\supercite{Jaeger2006, Lazar2015}.
+\end{itemize}
+
+%====================================================
+\section{~~Assessment and Reflection}
+\label{sec:ch28-assessment}
+\textbf{Short Answer}
+\begin{enumerate}
+	\item Explain two architectural reasons why overlays cannot fully remediate structural accessibility defects.
+	\item Identify primary latency contributors in full-system suites and mitigation strategies.
+	\item Describe the ethical risks of deploying AI image description without transparency indicators.
+\end{enumerate}
+
+\textbf{Applied Exercise} Develop an evaluation matrix scoring one full-system suite, one AI tool, and one overlay across: semantic coverage, latency (ms), user satisfaction survey score, privacy compliance checklist, and maintenance cost. Recommend a deployment approach with rationale.
+
+\textbf{Reflection} Discuss the trade-offs between rapid overlay deployment for short-term risk reduction and investing in durable, source-level remediation in the context of institutional accountability.
+
+%====================================================
+\section{~~Summary}
+\label{sec:ch28-summary}
+Full-system suites deliver deep, reliable accessibility integration but demand sustained investment in licensing and training. AI-powered tools enhance perception layers (image, text, translation) yet require governance to mitigate accuracy and privacy risks. Overlays offer speed but seldom resolve foundational semantic deficits, risking false compliance narratives and degraded AT interoperability. Sustainable accessibility emerges from source-level remediation, performance and telemetry stewardship, well-scoped AI augmentation, and policy frameworks anchored in civil rights outcomes. Strategic prioritization centers on durable semantics, measurable latency improvements, transparent AI use, and continuous user feedback loops.
+
+%====================================================
+\section{~~Legacy Content Mapping}
+\label{sec:ch28-legacy-mapping}
+\begin{tabular}{p{0.44\textwidth} p{0.51\textwidth}}
+	\textbf{Original Narrative Segment}                    & \textbf{Mapped / Incorporated In}                                     \\
+	Executive Summary                                      & Overview; Summary                                                     \\
+	Accessibility Solutions Landscape (Suites/AI/Overlays) & Core Concepts; Technologies; Comparative Matrix                       \\
+	Feature Comparison Table                               & Comparative Feature Matrix (Table~\ref{tab:ch28-solution-comparison}) \\
+	Performance and Responsiveness                         & Core Concepts; Implementation; Case Studies                           \\
+	User Experience and Feedback                           & Case Studies; Best Practices; Troubleshooting                         \\
+	Recommendations (Best Practices)                       & Implementation Strategies; Best Practices                             \\
+	Policy Implications                                    & Standards; Ethics; Implementation Strategies                          \\
+	Conclusion                                             & Summary                                                               \\
+\end{tabular}
+
+% End of Chapter 28

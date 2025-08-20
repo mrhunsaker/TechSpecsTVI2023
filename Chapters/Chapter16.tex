@@ -1,9 +1,125 @@
 \chapter{Accessibility Auditing for Internet-Based Materials: A Comprehensive Guide}
+\glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 \label{chap:accessibility-auditing}
 
-\section{~~Introduction}
-\label{sec:intro-auditing}
-In the digital age, ensuring that internet-based materials are accessible to all users, including those with disabilities, is not just a matter of ethical responsibility but also a legal and commercial imperative. An accessibility audit\index{accessibility!accessibility testing} is a systematic evaluation of a website, application, or digital document against established accessibility\index{accessibility} standards \supercite{DisabilityRightsAuditing}. This guide provides a comprehensive overview of the principles, methodologies, and tools required to conduct a thorough accessibility audit, from initial planning to remediation\index{accessibility!remediation strategies} and continuous monitoring\index{accessibility!Quality Assurance} \supercite{Lazar2015}.
+\section{~~Overview}\label{sec:intro-auditing}
+In the digital age, ensuring that internet-based materials are accessible to all users, including those with disabilities, is not just a matter of ethical responsibility but also a legal and commercial imperative. An accessibility audit\index{accessibility!accessibility testing} is a systematic evaluation of a website, application, or digital document against established \gidx{accessibility}{accessibility} standards \supercite{DisabilityRightsAuditing}. This chapter reframes existing guidance into a structured pedagogical scaffold: clarifying objectives, defining key terms, mapping standards, presenting implementation strategies, troubleshooting patterns, and reflecting on ethical and future-facing considerations.
+
+\section{~~Learning Objectives}\label{sec:learning-objectives-auditing}
+After completing this chapter, the reader will be able to:
+\begin{enumerate}
+	\item Explain the phased workflow of an accessibility audit (planning, automated, manual, user testing, remediation, monitoring).
+	\item Map identified issues to relevant WCAG 2.x success criteria, Section 508, and organizational policy requirements.
+	\item Design an implementation strategy integrating automated tooling, manual heuristics, and user feedback loops.
+	\item Diagnose and resolve common auditing pitfalls using a structured troubleshooting matrix and prevention practices.
+\end{enumerate}
+
+\section{~~Key Terms}\label{sec:key-terms-auditing}
+\begin{description}
+	\item[Audit Scope] Defined set of pages, user flows, or document types selected to represent system-wide accessibility state.
+	\item[False Positive] Tool-reported issue that does not actually violate an accessibility requirement.
+	\item[Severity Triage] Prioritization method that ranks issues by user impact and remediation effort.
+	\item[Baseline Audit] Initial comprehensive measurement used to benchmark improvement over time.
+	\item[Regression] Reintroduction of a previously remediated accessibility issue.
+	\item[Assistive Technology (AT)] Software or \gidx{hardware}{hardware} (e.g., screen reader, switch device) used to access digital content.
+	\item[Continuous Monitoring] Ongoing automated and procedural checks to prevent accessibility drift.
+\end{description}
+
+\section{~~Historical and Policy Context}\label{sec:historical-policy-auditing}
+Accessibility auditing practices evolved from ad hoc expert reviews to disciplined, standards-based engineering workflows as WCAG matured (1.0 → 2.0 → 2.1/2.2) and legal frameworks (Section 508 refresh, European directives) referenced WCAG conformance. Increased litigation and procurement requirements accelerated institutional adoption of systematic audit methodologies, integrating DevOps concepts (CI gating, regression suites) to shift accessibility earlier (“shift-left”) in the lifecycle.
+
+\section{~~Core Concepts}\label{sec:core-concepts-auditing}
+\begin{itemize}
+	\item \textbf{POUR Framework:} Foundational lens (Perceivable, Operable, Understandable, Robust) for categorizing findings.
+	\item \textbf{Layered Testing:} Automated + manual + AT user validation provides complementary coverage.
+	\item \textbf{Evidence-Based Remediation:} Each issue ties to a standard, reproducible steps, and measurable acceptance criteria.
+	\item \textbf{Continuous Improvement:} Baseline metrics inform iterative governance (defect density, remediation cycle time).
+\end{itemize}
+
+\section{~~Technologies and Tools}\label{sec:technologies-tools-auditing}
+Detailed tooling descriptions appear later (Automated Testing Tools; Manual Methodologies; AI-Powered Tools). Key categories:
+\begin{itemize}
+	\item \textbf{Browser Extensions:} Rapid page-level inspection (e.g., color contrast, ARIA role presence).
+	\item \textbf{Crawl Platforms:} Site-wide scanning, trend dashboards, prioritization heuristics.
+	\item \textbf{CLI / CI Integrations:} Axe-core / Pa11y for pipeline gating.
+	\item \textbf{AI Assistants:} Experimental model-based heuristics for pattern recognition and emerging remediation suggestions.
+\end{itemize}
+
+\section{~~Implementation Strategies}\label{sec:implementation-strategies-auditing}
+\paragraph{Phase 1: Planning} Define scope, success criteria (target WCAG level), page sampling strategy (traffic, template diversity, high-risk workflows), and stakeholder responsibilities.
+\paragraph{Phase 2: Automated Scan} Run baseline tools; export raw findings; de-duplicate; flag suspected false positives for manual verification.
+\paragraph{Phase 3: Manual Heuristic Review} Keyboard traversal, structural landmarks, focus management, dynamic component behavior, error recovery.
+\paragraph{Phase 4: Assistive Technology Testing} NVDA/JAWS or VoiceOver pass focusing on semantic announcements, \gidx{readingorder}{reading order}, alt text completeness, interactive control clarity.
+\paragraph{Phase 5: User / Contextual Testing} Representative users (e.g., screen reader primary, low vision magnifier user) perform core tasks; capture friction metrics.
+\paragraph{Phase 6: Remediation & Verification} Prioritize blocking issues (task failure) → severe (significant friction) → moderate (efficiency loss) → minor (cosmetic).
+\paragraph{Phase 7: Governance & Monitoring} Integrate automated suites into CI; define regression thresholds and SLA for fix turnaround.
+
+\section{~~Standards and Compliance}\label{sec:standards-compliance-auditing}
+\begin{itemize}
+	\item \textbf{WCAG 2.x Mapping:} Each issue logged with SC reference (e.g., Non-text Content 1.1.1, Contrast 1.4.3, Focus Order 2.4.3).
+	\item \textbf{Section 508 / EN 301 549:} Leverage WCAG alignment for procurement and public-sector compliance.
+	\item \textbf{Conformance Claims:} Document scope, technologies relied upon, known exceptions (partial support), testing methodology.
+	\item \textbf{Risk Register Integration:} High-severity accessibility defects tracked alongside security and performance risks.
+\end{itemize}
+
+\section{~~Best Practices}\label{sec:best-practices-auditing}
+\begin{itemize}
+	\item Shift-left: Add linting & unit-level accessibility assertions early.
+	\item Maintain a component accessibility spec (roles, states, keyboard map) for each design system element.
+	\item Treat color & contrast tokens as governed design assets with automated regression checks.
+	\item Use issue templates capturing: SC, reproduction steps, user impact narrative, remediation guidance, acceptance criteria.
+	\item Track mean remediation time and reopen rate to guide training investments.
+\end{itemize}
+
+\section{~~Troubleshooting and Common Pitfalls}\label{sec:troubleshooting-auditing}
+\footnotesize
+\begin{longtblr}[
+		caption = {Common Accessibility Auditing Issues and Resolutions},
+		label = {tab:ch16-troubleshooting},
+		note = {Schema: Issue, RootCause, ImpactOnLearner, ResolutionSteps, PreventivePractice, ReferenceKey.}
+	]{
+		colspec = {X[l] X[l] X[l] X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\bfseries},
+		hlines
+	}
+	Issue                                       & RootCause                                         & ImpactOnLearner                              & ResolutionSteps                                                   & PreventivePractice                                       & ReferenceKey          \\
+	False positive overload in reports          & Unrefined automated rules / duplicate scanners    & Noise obscures critical blockers             & Consolidate tools; de-duplicate; manually validate sample set     & Curate minimal tool stack; periodic rule review          & DequeAxeCore          \\
+	Missed keyboard trap                        & Insufficient manual traversal depth               & User cannot exit component; task abandonment & Reproduce; add proper focus management or ESC handling            & Keyboard checklist in every sprint review                & WebAIMKeyboardA11y    \\
+	Contrast failures in dynamic states         & Hover/focus styles not audited                    & Low vision users lose state context          & Audit interactive states; adjust token values                     & Design token accessibility gating                        & WebAIMContrastChecker \\
+	Incorrect landmark/heading hierarchy        & Ad hoc template changes                           & Disorientation; increased \gidx{navigation}{navigation} time    & Refactor layout regions; normalize heading levels                 & Locked templates with design system review               & WCAG2018              \\
+	ARIA misuse (role duplication or misrole)   & Copy-paste from examples without semantics review & Screen reader ambiguity; redundant verbosity & Remove invalid roles; use native semantics                        & ARIA usage guidelines + code review checklist            & ARIA                  \\
+	Focus loss after dynamic content update     & JavaScript replacing nodes without focus handling & User stranded; context loss                  & Programmatically restore or move focus logically                  & Pattern library with tested update routines              & WebAIMKeyboardA11y    \\
+	Unlabeled interactive icon buttons          & Reliance on visual glyph only                     & Function unknown; action avoidance           & Add accessible name (aria-label) or visible text                  & Component definition requires label prop                 & WCAGNonText2018       \\
+	Latency in automated CI scans (> build SLA) & Excessive page set / unoptimized concurrency      & Teams disable checks → regression risk       & Parallelize scans; reduce scope to template set; schedule nightly & Tiered scan strategy (PR subset vs. nightly full crawl)  & Pa11y                 \\
+	Stale baseline not updated post-remediation & Lack of versioned audit artifacts                 & Re-opened issues; misaligned metrics         & Snapshot post-fix; update tracking doc and dashboards             & Baseline versioning policy                               & Henry2007             \\
+	User feedback conflicts with tool results   & Over-reliance on automated severity scoring       & Real barriers under-prioritized              & Re-triage with user evidence; adjust severity rubric              & Incorporate user test weighting in prioritization matrix & Petrie2006            \\
+\end{longtblr}
+\normalsize
+
+\section{~~Emerging Trends and Future Directions}\label{sec:emerging-trends-auditing}
+A preview of detailed future-facing content: ML-based pattern detection improving specificity, AI-assisted code suggestions, VR/AR accessibility heuristics, and automated semantic region inference are accelerating—but require rigorous validation to avoid entrenching bias or hallucinated “fixes.”
+
+\section{~~Ethical, Equity, and Privacy Considerations}\label{sec:ethics-equity-auditing}
+\begin{itemize}
+	\item \textbf{Equity of Access:} Untested regressions disproportionately affect assistive technology users; monitoring ensures parity.
+	\item \textbf{Bias Mitigation:} AI auditing models must be evaluated for false negative disparity across content types.
+	\item \textbf{Privacy:} Limit transmission of user-generated or sensitive content to third-party scanning/AI services; apply data minimization.
+	\item \textbf{Transparency:} Document methodology, tool versions, and known limitations in conformance statements.
+\end{itemize}
+
+\section{~~Assessment and Reflection}\label{sec:assessment-reflection-auditing}
+\textbf{Reflection Questions}
+\begin{enumerate}
+	\item Which audit phase currently yields the highest proportion of critical findings in your workflow and why?
+	\item How would you refactor your issue triage rubric to better integrate user testing evidence?
+	\item What metrics (e.g., mean time to remediate, reopened issue rate) would you instrument to drive continuous improvement?
+\end{enumerate}
+\textbf{Applied Exercise} Design a one-page audit implementation plan for a medium-sized web application: include scope rationale, tool stack, sampling strategy, severity rubric, and reporting cadence.
+
+\section{~~Summary}\label{sec:summary-auditing}
+A mature accessibility audit program aligns phased methodology, standards mapping, user validation, and continuous monitoring to reduce barriers sustainably. Strategic tooling, disciplined triage, and ethical governance (transparency, privacy, equity) transform audits from reactive compliance tasks into proactive quality engineering, improving both user experience and organizational risk posture.
+
 
 \section{~~Fundamental Principles and Standards}
 \label{sec:principles-standards}
@@ -21,7 +137,7 @@ Information and user interface components must be presentable to users in ways t
 
 \subsubsection{Operable}
 \label{ssubsec:operable}
-User interface components and \gls{navigation} must be operable. This includes making all functionality available from a keyboard, giving users enough time to read and use content, and avoiding content that is known to cause seizures.
+User interface components and \gidx{navigation}{navigation} must be operable. This includes making all functionality available from a keyboard, giving users enough time to read and use content, and avoiding content that is known to cause seizures.
 \supercite{WebAIMKeyboardA11y}
 
 \subsubsection{Understandable}
@@ -36,7 +152,7 @@ Content must be robust enough that it can be interpreted reliably by a wide vari
 
 \subsection{Section 508 and Legal Frameworks}
 \label{subsec:section508-legal}
-In the United States, Section 508\index{accessibility!legal accessibility} of the Rehabilitation Act requires federal agencies to make their electronic and information technology\index{technology} accessible to people with disabilities. Many other countries have similar legal frameworks, such as the European Accessibility\index{accessibility} Act, which often reference WCAG as the standard for compliance.
+In the United States, Section 508\index{accessibility!legal accessibility} of the Rehabilitation Act requires federal agencies to make their electronic and information \gidx{technology}{technology} accessible to people with disabilities. Many other countries have similar legal frameworks, such as the European Accessibility\index{accessibility} Act, which often reference WCAG as the standard for compliance.
 \supercite{Section5082018, Jaeger2006}
 
 \section{~~Comprehensive Audit Methodology}
@@ -54,7 +170,7 @@ Automated tools can quickly scan a website or application to detect a significan
 
 \subsection{Manual Testing Phase}
 \label{subsec:manual-testing-phase}
-Manual testing is essential for evaluating aspects that automated tools cannot, such as keyboard navigation, screen reader\index{screen reader} compatibility, and the logical flow of content. This phase requires a deep understanding of accessibility principles\index{accessibility!accessibility principles} and how users with disabilities interact with digital content.
+Manual testing is essential for evaluating aspects that automated tools cannot, such as keyboard \gidx{navigation}{navigation}, \gidx{screenreader}{screen reader} compatibility, and the logical flow of content. This phase requires a deep understanding of accessibility principles\index{accessibility!accessibility principles} and how users with disabilities interact with digital content.
 
 \subsection{User Testing Phase}
 \label{subsec:user-testing-phase}
@@ -84,14 +200,14 @@ Open-source tools like Pa11y and axe-core\index{accessibility!NVDA} offer powerf
 \label{sec:manual-methodologies}
 Manual testing is a critical component of any \gls{accessibility} audit, requiring a systematic approach to evaluating key aspects of usability.
 
-\subsection{Keyboard Navigation Testing}
+\subsection{Keyboard \gidx{navigation}{Navigation} Testing}
 \label{subsec:keyboard-testing}
 This involves navigating a website using only the keyboard (Tab, Shift+Tab, Enter, Spacebar, and arrow keys) to ensure that all interactive elements are reachable and operable\index{accessibility!accessibility principles}, that the focus order is logical, and that a visible focus indicator is always present.
 \supercite{WebAIMKeyboardA11y}
 
 \subsection{Screen Reader Testing}
 \label{subsec:screen-reader-testing}
-Testing with screen readers\index{screen reader} like NVDA, JAWS, or VoiceOver\index{screen reader!VoiceOver} is essential to understand the experience of blind and visually impaired users. This includes checking for proper alt text\index{images and media!alternative text}, heading structure, table and form accessibility\index{accessibility}, and the overall coherence of the content when read aloud.
+Testing with screen readers\index{screen reader} like NVDA, JAWS, or VoiceOver\index{screen reader!VoiceOver} is essential to understand the experience of blind and visually impaired users. This includes checking for proper alt text\index{images and media!alternative text}, heading structure, table and form \gidx{accessibility}{accessibility}, and the overall coherence of the content when read aloud.
 \supercite{WebAIM2023, WebAIMSurvey}
 
 \subsection{Color and Contrast Testing}
@@ -103,7 +219,7 @@ This involves using tools like a color contrast\index{accessibility!Manual Testi
 \label{sec:ai-tools}
 Artificial intelligence\index{AI} is increasingly being used to enhance and automate accessibility auditing\index{accessibility!accessibility testing}.
 
-\subsection{Machine Learning-Based Testing}
+\subsection{\gidx{machinelearning}{Machine Learning}-Based Testing}
 \label{subsec:ml-testing}
 \gls{machinelearning} models are being trained to identify accessibility issues with greater accuracy and nuance than traditional automated tools. They can analyze visual layouts, identify complex patterns, and even predict potential usability problems for users with different disabilities.
 \supercite{Evinced, Stark2024}
@@ -136,7 +252,7 @@ Many organizations find that a hybrid approach, combining the strengths of both 
 
 \section{~~Remediation Strategies and Implementation}
 \label{sec:remediation-strategies}
-Identifying accessibility\index{accessibility} issues is only the first step. A successful audit must lead to effective remediation\index{accessibility!remediation strategies}.
+Identifying \gidx{accessibility}{accessibility} issues is only the first step. A successful audit must lead to effective remediation\index{accessibility!remediation strategies}.
 
 \subsection{Prioritizing Accessibility Issues}
 \label{subsec:prioritizing-issues}
@@ -168,7 +284,7 @@ Organizations should develop clear protocols for when and how accessibility test
 
 \subsection{Continuous Integration and Deployment}
 \label{subsec:ci-cd}
-Integrating automated accessibility\index{accessibility} tests into CI/CD pipelines helps catch issues early and prevents regressions from being introduced.
+Integrating automated \gidx{accessibility}{accessibility} tests into CI/CD pipelines helps catch issues early and prevents regressions from being introduced.
 \supercite{Fowler2013}
 
 \subsection{Performance Monitoring and Analytics}
@@ -205,10 +321,11 @@ The legal and regulatory landscape for \gls{digitalaccessibility} is likely to c
 
 \subsection{Artificial Intelligence and Automation\index{AI!AI and accessibility}}
 \label{subsec:ai-automation}
-AI will play an increasingly important role in both creating and auditing for accessibility\index{accessibility}, but human oversight and expertise will remain essential.
+AI will play an increasingly important role in both creating and auditing for \gidx{accessibility}{accessibility}, but human oversight and expertise will remain essential.
 \supercite{MicrosoftAIAccessibility, GoogleMLAccessibility}
 
 \section{~~Conclusion}
 \label{sec:conclusion-auditing}
-A comprehensive accessibility audit\index{accessibility!accessibility testing} is a critical tool for any organization committed to digital inclusion. By combining automated tools, manual testing\index{accessibility!Manual Testing}, and user feedback, organizations can identify and remediate accessibility\index{accessibility} barriers, ensuring that their internet-based materials are usable by the widest possible audience. The journey to full accessibility is ongoing, requiring a sustained commitment to testing, remediation\index{accessibility!remediation strategies}, and continuous improvement. Ultimately, building accessibility into the core of an organization's processes and culture is the most effective way to create truly inclusive digital experiences.
+A comprehensive accessibility audit\index{accessibility!accessibility testing} is a critical tool for any organization committed to digital inclusion. By combining automated tools, manual testing\index{accessibility!Manual Testing}, and user feedback, organizations can identify and remediate \gidx{accessibility}{accessibility} barriers, ensuring that their internet-based materials are usable by the widest possible audience. The journey to full accessibility is ongoing, requiring a sustained commitment to testing, remediation\index{accessibility!remediation strategies}, and continuous improvement. Ultimately, building accessibility into the core of an organization's processes and culture is the most effective way to create truly inclusive digital experiences.
 \supercite{Thatcher2006}
+

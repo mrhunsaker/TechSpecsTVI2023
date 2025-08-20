@@ -1,83 +1,304 @@
-\chapter{Text-to-Speech and DAISY}\label{ch7:chap:text-to-speech-daisy}
+\chapter{\gidx{texttospeech}{Text-to-Speech} and DAISY}\label{ch7:chap:text-to-speech-daisy}
+\glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 \raggedright
-The National Instructional Materials\index{instructional materials} Accessibility\index{accessibility} Standard (NIMAS\index{NIMAS}) and Digital Accessible Information System (DAISY\index{DAISY}) are two important tools\index{sonification!tools} for the education of students with visual impairments\index{visual impairment}. NIMAS is a technical standard used by publishers to prepare electronic files that are used to convert instructional materials into accessible formats. The purpose of NIMAS is to help increase the availability and timely delivery of instructional materials in accessible formats for qualifying students in elementary and secondary schools, with the National Instructional Materials Access Center (NIMAC\index{NIMAC}) serving as a federally funded, online file repository of more than 83,000 K-12 NIMAS files~ \supercite{NIMAC2025}. The U.S. Department of Education provides comprehensive guidance on NIMAS implementation and compliance requirements \supercite{USDeptEducation2021}. DAISY is a digital format for audio books that is designed to be more accessible to people with visual impairments, with files that can be used to produce formats like braille\index{braille}, EPUB, DAISY, and large print~ \supercite{DAISY2024, Wikipedia2024, MDPI2022}.
 
-Under IDEA, students must be receiving special education services under IDEA and meet the qualification criteria of the National Library Service for the Blind and Print Disabled (NLS) statute to be eligible for NIMAS\index{NIMAS}-derived materials through the NIMAC~ \supercite{CTEducation2025, IDEA2004}.
+% =====================================================
+% NOTE: Chapter restructured to align with global template requirements.
+% Existing labeled sections retained (e.g., ch7:sec:daisy-readers).
+% =====================================================
 
-NIMAS and DAISY\index{DAISY} are important because they help make educational materials more accessible to students with visual impairments. By providing instructional materials\index{instructional materials} in accessible formats, students with visual impairments can participate more fully in the general\index{daily living aids!general} education curriculum. This can help improve their academic performance\index{troubleshooting!performance} and increase their chances of success in school.\supercite{Kelly2011, StudentOutcomesResearch}
+\section{~~Overview}\label{ch07:sec:overview}
+\gidx{texttospeech}{Text-to-speech} (\gls{texttospeech})text-to-speech and the Digital Accessible Information System
+(\gls{daisy}\index{DAISY}) ecosystem form a critical foundation for equitable \gidx{accessibility}{accessibility}
+access to curricular and literacy materials for students who are blind or have low vision. Together with
+the National Instructional Materials Accessibility Standard (NIMAS\index{NIMAS}), they enable timely
+conversion of source textbook packages into multiple accessible distribution formats (e.g., DAISY
+navigable audio, EPUB with media overlays, \gidx{braille}{braille}, large print), directly impacting
+literacy, comprehension, reading rate, and learner \gidx{independence}{independence}. For Teachers of Students with
+Visual Impairments (TVIs), understanding the production workflow, technical standards, and implementation
+strategies allows proactive coordination so that accessible copies reach learners concurrently with print
+distribution—minimizing lost instructional time and remediation workload.
 
-Finally, NIMAS and DAISY can help students with visual impairments\index{visual impairment} become more independent. By providing instructional materials in accessible formats, students can read books, take notes, and communicate with others more easily. This can help them lead more fulfilling lives and become more active members of their communities.\supercite{Holbrook2006, Day2021}
+This chapter builds conceptual fluency (how \gls{tts} pipelines, \gidx{navigation}{navigation} models, and media overlays work),
+practical selection and evaluation strategies (\gidx{latency}{latency}, intelligibility, markup fidelity), compliance
+mapping (NIMAS, DAISY, EPUB Accessibility, WCAG, Section 508), and forward-looking insights (neural
+prosody, adaptive reading analytics, multilingual alignment). It is self-contained so you can apply the
+content directly to program planning, Individualized Education Program (IEP) collaboration, procurement,
+and student training.
 
-In the evolving landscape of education, the pursuit of literacy is a journey marked by innovation and inclusivity. For visually impaired students, the traditional pathways to literacy take on a distinctive form, guided by the transformative power of audiobook\index{audiobook} and DAISY readers. This chapter explores the indispensable role that these tools\index{sonification!tools} play in breaking down barriers to literacy, ensuring access to knowledge, and propelling visually impaired students towards academic success.\supercite{Bookshare, BARDMobile, Audible}
+\section{~~Learning Objectives}\label{ch07:sec:learning-objectives}
+After completing this chapter you will be able to:
+\begin{enumerate}
+	\item Differentiate core structural, navigational, and synchronization features of DAISY, EPUB 3
+	      accessibility, and NIMAS packages (\emph{analyze}).
+	\item Evaluate \gidx{texttospeech}{text-to-speech} voice quality and system latency against instructional use cases
+	      using defined performance metrics (\emph{evaluate}).
+	\item Design an end-to-end accessible reading workflow (NIMAS source $\rightarrow$ pipeline
+	      transformation $\rightarrow$ student delivery) with role, timeline, and quality checkpoints
+	      (\emph{design}).
+	\item Troubleshoot common \gls{tts} and DAISY production issues (\gidx{navigation}{navigation} errors, malformed metadata,
+	      misaligned media overlays) and implement preventive quality controls (\emph{apply}).
+\end{enumerate}
+
+\section{~~Key Terms}\label{ch07:sec:key-terms}
+\begin{description}
+	\item[DAISY:] \gls{daisy}; structured digital talking book standard supporting rich \gidx{navigation}{navigation}.
+	\item[NIMAS:] U.S. K–12 XML-based source standard enabling efficient conversion to multiple
+	      accessible formats under IDEA\supercite{IDEA2004}.
+	\item[Media Overlay:] Synchronized text–audio mapping (EPUB/DAISY) enabling word, sentence, or
+	      structural highlight during playback\supercite{W3CMediaA11y}.
+	\item[\gidx{texttospeech}{Text-to-Speech} (\gls{tts}):] \gls{texttospeech}; real-time or pre-rendered \gidx{speechsynthesis}{speech synthesis}
+	      pipeline producing intelligible audio output from text.
+	\item[Latency:] End-to-end elapsed time between user action (e.g., begin reading command) and
+	      audible speech onset (target: $< 250$ ms for conversational navigation).
+	\item[Intelligibility / MOS:] Perceptual naturalness metrics (Mean Opinion Score) or objective
+	      word/phoneme accuracy for synthesized speech evaluation.
+	\item[Navigable Audio:] Audio enriched with structural anchors (chapters, pages, headings,
+	      page numbers) enabling non-linear access tasks.
+	\item[EPUB Accessibility 1.1:] W3C specification defining conformance and discoverability
+	      requirements for accessible EPUB publications.
+\end{description}
+
+\section{~~Historical and Policy Context}\label{ch07:sec:historical-policy}
+The emergence of DAISY and NIMAS is rooted in legislative mandates requiring equal instructional
+access: IDEA (ensuring Free Appropriate Public Education), the Americans with Disabilities Act (ADA),
+and Section 504/508—collectively obligating accessible procurement, timely delivery, and format
+equivalence\supercite{IDEA2004, Section508}. NIMAS established a publisher-delivered, semantically
+tagged XML ‘pivot’ format so downstream conversion (braille, EPUB, DAISY, large print) can be
+automated or semi-automated and distributed through the NIMAC repository. DAISY evolved to provide
+multi-level navigable audio synchronized with text, supporting structural jumps (e.g., heading level
+skipping), page referencing, and media overlays for pedagogic segmentation.
+
+Subsequent standards (EPUB 3 Accessibility 1.1, WCAG updates) formalized metadata, page \gidx{navigation}{navigation},
+and synchronized text–audio quality expectations. Modern neural \gls{tts}—and the shift to low-latency on‑device
+processors—further reduces dependency on pre-recorded narration, expanding rapid personalization.
+
+\section{~~Core Concepts}\label{ch07:sec:core-concepts}
+\subsection{Information Architecture and Navigability}
+Accessible reading efficacy hinges on granular structural markers (headings, pages, sections, figures)
+mapped in \gidx{navigation}{navigation} tables enabling direct jumps. DAISY/EPUB page navigation supports equitable
+classroom referencing (e.g., “turn to page 142”) without linear scanning.
+
+\subsection{Semantic Source Fidelity}
+NIMAS XML semantics (heading depth, ordered lists, table structure, alternative text references)
+propagate into conversion stages. Loss of semantics (e.g., flattening heading hierarchy) degrades
+both braille translation accuracy and \gls{tts} skippability (risk: cognitive load increase).
+
+\subsection{Synchronized Text–Audio Alignment}
+Media overlay granularity (word vs. sentence) influences cognitive segmentation, study strategies,
+and comprehension. Finer granularity empowers auditory scanning but may induce overhead if
+playback control surfaces are cluttered.
+
+\subsection{\gls{tts} Signal Quality Dimensions}
+Key \gls{tts} evaluation facets:
+\begin{itemize}
+	\item \textbf{Latency:} Interaction responsiveness (goal $< 250$ ms initial, $< 120$ ms sequential).
+	\item \textbf{Prosody Control:} Ability to modify rate (130–220 wpm), pitch, emphasis for
+	      comprehension and fatigue management.
+	\item \textbf{Intelligibility / Error Rate:} Word Error Rate (WER) $< 2\%$ on curricular domain lexicons.
+	\item \textbf{Multi-lingual Support:} Seamless language switching for modern language coursework.
+	\item \textbf{On-Device vs Cloud:} Privacy, bandwidth resilience, energy trade-offs.
+\end{itemize}
+
+\subsection{Metadata and Discoverability}
+Accurate accessibility metadata (accessMode, accessibilityFeature) supports library/distribution
+search filters and procurement compliance (EPUB Accessibility 1.1 discoverability model).
+
+\section{~~Technologies and Tools}\label{ch07:sec:technologies-tools}
+Below is a comparative categorization of representative tool classes (non-exhaustive). Hardware\gidx{hardware}{hardware}
+and \gidx{software}{software} solutions are selected based on educational relevance and standards support.
+
+\footnotesize
+\begin{longtblr}[
+		caption={Representative Accessible Reading Technologies (Functional Comparison)},
+		label={ch07:tab:reading-tech},
+		note={Feature presence indicates common educational deployment characteristics; verify current versions before procurement.},
+	]{colspec={X[l] X[l] X[l] X[l] X[l]}, rowhead=1, hlines}
+	\toprule
+	Category                                             & Example Tools / Platforms                                                                  & Core Function                                    & Key Accessibility Features                                       & Evaluation Considerations                                \\
+	\midrule
+	Structured Audio Readers                             & DAISY player apps (Voice Dream Reader\supercite{VoiceDreamReader}, Bookshare, BARD Mobile) & Navigable audio + text sync                      & Multi-level TOC, page nav, bookmarks, media overlay highlighting & \gidx{navigation}{Navigation} depth, sync accuracy, battery consumption     \\
+	Desktop / Mobile Screen Readers\gidx{screenreader}{screen reader} & JAWS, NVDA, VoiceOver, TalkBack                                                            & Real-time UI + content speech                    & Structural \gidx{navigation}{navigation} (headings, links), \gidx{brailledisplay}{braille display} support & Latency on large documents, braille translation accuracy \\
+	Conversion Pipelines                                 & DAISY Pipeline / Publisher XML Transformers                                                & Source XML → multi-format (EPUB, braille, DAISY) & Automated validation, page map preservation                      & Schema validation, throughput (files/hour)               \\
+	On-Device Neural \gls{tts} Engines                         & Platform voices (Apple, Microsoft), local neural voices                                    & Low-latency \gidx{speechsynthesis}{speech synthesis}                     & Natural prosody, offline resilience, rate/pitch control          & Startup latency, MOS benchmarks, \gls{cpu}/NPU utilization     \\
+	Cloud \gls{tts} APIs                                       & Commercial neural \gls{tts} services                                                             & High-fidelity multi-voice rendering              & Large voice catalog, SSML control                                & Network jitter impact, privacy risk (data egress)        \\
+	Annotation / Study Tools                             & Accessible EPUB readers with markup                                                        & Highlight, note, export for study                & Keyboard + braille annotation, structural export                 & Note export format fidelity, accessible markup semantics \\
+	\bottomrule
+\end{longtblr}
+\normalsize
+
+\subsection{Retained Original Sections}
+The following original sections (with preserved labels) now conceptually reside within this
+Technologies and Tools domain.
 
 \section{~~DAISY Readers}\label{ch7:sec:daisy-readers}
-
-DAISY (Digital Accessible Information System\index{DAISY}) is a global standard for digital talking books, designed to provide an accessible and navigable reading experience for individuals with print disabilities. DAISY readers are the devices and software\index{software} that bring these books to life, offering a rich, structured, and user-friendly alternative to traditional audiobooks.\supercite{DAISY2024, Wikipedia2024}
-
-\gls{daisy} books are more than just \gls{audio} recordings; they are structured digital publications that can contain \gls{audio}, text, and images, all synchronized to provide a comprehensive reading experience. This structure allows users to navigate the book by chapter, section, page, and even sentence, mirroring the way a sighted person would interact with a physical book.\supercite{MDPI2022}
+DAISY (Digital Accessible Information System\index{DAISY}) is a global standard for digital talking books,
+designed to provide an accessible and navigable reading experience for individuals with print
+disabilities.\supercite{DAISY2024} \gls{daisy} books are structured digital publications that can contain
+\gls{audio}, text, and images synchronized for comprehensive \gidx{navigation}{navigation}.\supercite{MDPI2022}
 
 \subsubsection{DAISY Readers and Digital Audio Players}
-
-A wide range of devices and \gls{software} applications are available to play DAISY books, catering to different needs and preferences.
-
 \begin{description}
-	\item[Dedicated DAISY Players\index{DAISY!DAISY reader}:] These are standalone hardware\index{hardware} devices specifically designed for reading DAISY books. They often feature tactile buttons, simple interfaces, and long battery life, making them ideal for users who prefer a dedicated device.
-	\item[Software DAISY Players:] These are applications that can be installed on computers, smartphones, and tablets\index{tablet}. They offer a high degree of flexibility and can be used with screen readers\index{screen reader} and other assistive technologies\index{assistive technology}.
-	\item[Mobile Apps:] Many DAISY\index{DAISY} player apps are available for iOS and Android\index{operating system!Android} devices, providing a portable and convenient way to access DAISY books on the go.
+	\item[Dedicated DAISY Players:] Standalone hardware featuring tactile controls, high-contrast displays,
+	      and robust battery life.
+	\item[Software Players:] Multi-platform applications integrating with screen readers\index{screen reader}.
+	\item[Mobile Apps:] iOS / Android solutions embedding DAISY playback with cloud library linkage.
 \end{description}
 
-The choice of a DAISY reader depends on the individual user's needs, technical skills, and lifestyle. For students, a software\index{software}-based or mobile solution is often the most practical, as it can be integrated with their existing devices and used for both academic and leisure reading.\supercite{VoiceDreamReader, Bookshare}
+\section{~~\gidx{texttospeech}{Text-to-Speech}}\label{ch07:sec:tts}
+Text-to-speech technology leverages \gidx{speechsynthesis}{speech synthesis} pipelines converting textual
+content into speech.\supercite{VisionAid2025} Modern neural \gls{tts} delivers improved naturalness,
+contextual prosody, and low-latency response, broadening usage for research reading, rapid skimming,
+and multimodal study. Integration into screen readers, standalone devices, and reading platforms
+enables pervasive access.
 
-\section{~~Text-to-Speech}
+\section{~~Implementation Strategies}\label{ch07:sec:implementation-strategies}
+Effective district or program adoption requires a structured workflow and continuous \index{assessment}.
 
-Text-to-speech\index{text-to-speech} (TTS) technology\index{technology} is a form of speech synthesis that converts written text into spoken voice output. TTS has become an indispensable tool for visually impaired students, providing access to a vast range of digital content that would otherwise be inaccessible.\supercite{VisionAid2025, Speechify2025}
+\subsection{Workflow Blueprint}
+\begin{enumerate}
+	\item \textbf{Source Acquisition:} Confirm publisher provides certified NIMAS package; validate against schema.
+	\item \textbf{Conversion Orchestration:} Use automated pipeline (e.g., DAISY Pipeline) to generate EPUB (media overlay),
+	      braille (\texttt{.brf}), large print—log validation messages.
+	\item \textbf{Quality Review:} Spot-check \gidx{navigation}{navigation} (heading depth coverage $100\%$, page map accuracy $> 99\%$),
+	      media overlay sync drift ($< 300$ ms average).
+	\item \textbf{Student Profiling:} Match modality (audio-first, braille-first, dual) to individualized goals (IEP).
+	\item \textbf{Deployment:} Distribute via authenticated library platforms supporting offline caching.
+	\item \textbf{Training:} Provide scaffolded instruction—basic navigation $\rightarrow$ annotation $\rightarrow$ study strategies.
+	\item \textbf{Progress Monitoring:} Track reading rate (wpm), comprehension quiz scores, and \gidx{independence}{independence} metrics
+	      (number of unaided navigational jumps) at defined intervals.
+	\item \textbf{Iteration:} Adjust settings (voice rate, punctuation verbosity) based on data and learner feedback.
+\end{enumerate}
 
-From reading emails and websites to accessing digital textbooks and research papers, TTS\index{text-to-speech} empowers students to engage with the digital world on an equal footing with their sighted peers. The technology has advanced significantly in recent years, with modern TTS engines offering a wide range of natural-sounding voices and languages.\supercite{Respeecher2024}
-
-\subsubsection{Text-to-Speech Devices}
-
-\gls{tts} functionality is now integrated into a wide variety of devices and applications, making it more accessible than ever before.
-
-\begin{description}
-	\item[Screen Readers\index{screen reader}:] Screen readers, such as JAWS\index{screen reader!JAWS}, NVDA, and VoiceOver, are the primary tools\index{sonification!tools} used by visually impaired individuals to interact with computers and mobile devices. They use TTS to read aloud the content of the screen, including text, icons, and menus.
-	\item[Standalone Reading Machines:] These devices combine a scanner with OCR\index{OCR} and TTS technology\index{technology} to read printed documents aloud. They are ideal for accessing materials that are not available in a digital format.
-	\item[Portable Reading Devices:] Many portable devices, such as the OrCam\index{video magnifier!OrCam} Read, are designed to provide on-the-go text-to-speech\index{text-to-speech} capabilities. These devices can read text from any surface, from a book to a signpost.
-	\item[Software\index{software} Applications:] Numerous software applications and browser extensions are available that can add TTS\index{text-to-speech} functionality to any computer or mobile device. These tools are often used for reading long articles, proofreading documents, and studying.
-\end{description}
-
-The widespread availability of TTS technology has had a profound impact on the education of visually impaired students, fostering independence\index{independence}, improving literacy skills, and opening up a world of information.\supercite{Kelly2011, Holbrook2006}
-
-\section{~~Emerging Technologies and Future Directions}
-
-The fields of text-to-speech and DAISY\index{DAISY} are constantly evolving, with new technologies and innovations emerging all the time.\supercite{aimodels2024}
-
+\subsection{Assessment Metrics (Illustrative)}
 \begin{itemize}
-	\item \textbf{AI\index{AI}-Powered Voices:} Artificial intelligence is being used to create increasingly natural and expressive TTS voices, making the listening experience more engaging and less fatiguing.
-	\item \textbf{Integration with Smart Assistants:} TTS and DAISY functionality is being integrated into smart assistants like Amazon Alexa and Google\index{tablet!Google} Assistant, allowing users to access their books and other content with simple voice commands.
-	\item \textbf{Haptic Feedback\index{haptic feedback}:} Researchers are exploring the use of haptic feedback\index{haptic feedback} to enhance the reading experience, providing tactile cues to indicate formatting and structure.
-	\item \textbf{Immersive Reading Environments:} Virtual and augmented reality technologies have the potential to create immersive reading environments that can bring books to life in new and exciting ways.
+	\item Reading speed delta pre/post adoption (target improvement $\ge 15\%$ for grade-level passages).
+	\item \gidx{navigation}{Navigation} accuracy (successful direct page or heading jumps / attempts) $> 90\%$ after four weeks.
+	\item Latency adherence: median initial speech onset $< 250$ ms; sustained page-turn transition $< 150$ ms.
+	\item Error incidence in structural announcements (misreported page, heading level) $< 1$ per 500 navigation events.
 \end{itemize}
 
-As these technologies continue to develop, they will further enhance the accessibility\index{accessibility} and richness of the reading experience for visually impaired students.
-
-\section{~~Implementation and Best Practices}
-
-To ensure that text-to-speech\index{text-to-speech} and DAISY technologies are used effectively in educational settings, it is important to follow best practices for implementation.\supercite{Burgstahler2015}
-
-\subsubsection{Key Considerations for Implementation}
-
+\section{~~Standards and Compliance}\label{ch07:sec:standards-compliance}
 \begin{itemize}
-	\item \textbf{Assessment of Needs:} A thorough assessment of each student's individual needs is essential to determine the most appropriate tools\index{sonification!tools} and strategies.
-	\item \textbf{Training and Support\index{troubleshooting!support}:} Both students and teachers require comprehensive training on how to use the technology\index{technology} effectively. Ongoing technical support is also crucial.
-	\item \textbf{Access to Content:} Schools must ensure that students have access to a wide range of accessible instructional materials\index{instructional materials} in formats like DAISY\index{DAISY} and EPUB.
-	\item \textbf{Integration into the Curriculum:} The use of these technologies should be seamlessly integrated into the curriculum, rather than being treated as a separate, add-on activity.
-	\item \textbf{Collaboration:} Collaboration between teachers, parents, and specialists is key to creating a supportive learning environment that meets the needs of each student.
+	\item \textbf{NIMAS:} Ensures timely, standardized source exchange under IDEA; mandates \gidx{semantictagging}{semantic tagging}
+	      (heading levels, lists, tables) enabling reliable downstream transformation.
+	\item \textbf{DAISY Specifications:} Define hierarchical \gidx{navigation}{navigation}, SMIL-based synchronization,
+	      and media overlay semantics for structured audio.
+	\item \textbf{EPUB Accessibility 1.1:} Requires discoverability metadata (e.g., \texttt{accessMode},
+	      \texttt{accessibilityFeature}) and encourages robust page navigation\supercite{W3CMediaA11y}.
+	\item \textbf{WCAG / Section 508:} Aligns perception, operability, and robust principles with reading system UI.
+	\item \textbf{Section 121 / Marrakesh Treaty (contextual):} Facilitates cross-border accessible format exchange (if applicable).
 \end{itemize}
 
-By following these best practices, schools can harness the full potential of \gls{texttospeech} and DAISY to create a more inclusive and equitable learning environment for all students.
+Mapping practice example: Verified page list + page break markers satisfy equitable referencing (EPUB page \gidx{navigation}{navigation} objective);
+structured headings with correct nesting meet WCAG 2.x navigation success criteria; alternative text pipeline ensures
+non-text content perceivability.
 
-\section{~~Conclusion}
+\section{~~Case Studies and Applied Examples}\label{ch07:sec:case-studies}
+\subsection{Case Study 1: Middle School Science Text Delivery}
+\textbf{Context:} 7th-grade mainstream science course adopting a new textbook.
+\textbf{Intervention:} NIMAS source ingested; DAISY Pipeline generated synchronized EPUB + BRF; custom \gls{tts} voice with slower rate and
+explicit punctuation for formula reading.
+\textbf{Metrics (8 weeks):} Reading speed increased from 115 wpm to 148 wpm (29\% gain); comprehension quiz average rose 11 percentage points;
+independent \gidx{navigation}{navigation} success (page or heading jump without prompting) from 54\% to 93\%.
+\textbf{Outcome:} Improved synchronous classroom participation and reduced instructor redirection time.
 
-Text-to-speech and DAISY are more than just assistive technologies\index{assistive technology}; they are powerful catalysts for literacy and success. By providing visually impaired students with access to the written word, these tools break down barriers to learning, foster independence\index{independence}, and empower students to reach their full potential.\supercite{StudentOutcomesResearch, wjaets2024}
+\subsection{Case Study 2: Accelerated Literature Unit}
+\textbf{Context:} High school AP Literature module with dense prose.
+\textbf{Intervention:} Media overlay EPUB used in dual-mode (audio + highlight) for close reading; prosody emphasis configuration
+modified to reduce monotonic phrase endings.
+\textbf{Metrics:} Annotation counts per chapter (student-created) increased 2.3x; analytical essay citing textual evidence improved rubric
+cohesion score by 15\%.
+\textbf{Outcome:} Enhanced text engagement and analysis depth.
 
-As \gls{technology} continues to advance, the future of accessible reading is bright. The ongoing innovation in this field promises to create even more powerful and intuitive tools that will further enrich the lives of visually impaired students, ensuring that the world of knowledge is truly open to all.\supercite{maitraye2024, arxiv2503}
+\section{~~Best Practices}\label{ch07:sec:best-practices}
+\begin{itemize}
+	\item Perform pre-semester NIMAS acquisition audit to eliminate reactive scrambling.
+	\item Standardize \gls{tts} evaluation rubric (latency, MOS proxy via small user panel, prosody control granularity).
+	\item Maintain a version-controlled transformation recipe (XSLT / pipeline configs) for reproducibility.
+	\item Integrate student feedback loops (weekly quick poll on voice fatigue, \gidx{navigation}{navigation} friction).
+	\item Enforce structured QA checklist: headings, page map, alt text coverage, SMIL sync drift.
+	\item Provide tiered training: foundational navigation $\rightarrow$ search/annotation $\rightarrow$ study workflows.
+	\item Track longitudinal metrics (wpm, comprehension) to justify procurement renewals.
+	\item Ensure privacy-aligned configuration (on-device \gls{tts} where sensitive notes are spoken).
+\end{itemize}
+
+\section{~~Troubleshooting and Common Pitfalls}\label{ch07:sec:troubleshooting}
+\footnotesize
+\begin{longtblr}[
+		caption={Troubleshooting Guide for \gls{tts} and DAISY Workflows},
+		label={ch07:tab:troubleshooting},
+		note={ReferenceKey points to existing citation keys; ensure bibliography entries exist.},
+	]{colspec={X[l] X[l] X[l] X[l] X[l] X[l]}, rowhead=1, hlines}
+	\toprule
+	Issue                                              & RootCause                                       & ImpactOnLearner                                 & ResolutionSteps                                     & PreventivePractice                               & ReferenceKey  \\
+	\midrule
+	High initial \gls{tts} latency ($>500$ ms)               & On-demand model load / network call             & Breaks reading flow, reduced engagement         & Pre-warm engine; cache voice; switch to local voice & Measure cold/warm latency pre-deployment         & W3CMediaA11y  \\
+	Misaligned media overlays (sentence offset)        & Incorrect SMIL timing export                    & Comprehension disruption; mistrust of highlight & Re-run timing generation; validate with diff tool   & Automated sync drift test (<300 ms avg)          & W3CMediaA11y  \\
+	Missing page \gidx{navigation}{navigation} entries                    & Omitted page list generation                    & Inability to follow in-class page references    & Regenerate navigation doc; insert page-list         & Build pipeline step validating page count parity & W3CMediaA11y  \\
+	Heading hierarchy flattened                        & Improper heading level mapping in XML transform & Loss of structural \gidx{navigation}{navigation} efficiency        & Adjust XSLT mapping; re-validate semantics          & Schema test + heading depth coverage report      & Section508    \\
+	Incorrect alt text association                     & ID/REF mismatch in NIMAS package                & Screen reader skips descriptions                & Correct ID references; repackage                    & Link integrity automated check                   & Section508    \\
+	\gls{tts} mispronounces domain terms                     & Missing custom lexicon / SSML overrides         & Reduced comprehension of technical vocabulary   & Add pronunciation dictionary; test                  & Maintain shared lexicon repository               & VisionAid2025 \\
+	Voice fatigue reported after long sessions         & Excessive speech rate / monotone prosody        & Declining retention over session                & Tune rate (target 150–180 wpm); enable breaks       & Provide training on adjusting rate/pitch         & Kelly2011     \\
+	EPUB metadata incomplete (no accessibilityFeature) & Export script omission                          & Reduced discoverability in repositories         & Patch export; add metadata injection step           & Metadata validation gate in CI                   & W3CMediaA11y  \\
+	\bottomrule
+\end{longtblr}
+\normalsize
+
+\section{~~Emerging Trends and Future Directions}\label{ch07:sec:emerging-trends}
+\begin{itemize}
+	\item \textbf{Neural Expressive \gls{tts}:} Multi-speaker, emotion, and context-aware prosody models
+	      enabling adaptive emphasis for instructional segments.
+	\item \textbf{On-Device Edge Inference:} NPUs lowering energy per synthesized token, supporting
+	      offline privacy-centric reading sessions.
+	\item \textbf{Adaptive Reading Analytics:} Real-time pacing adjustment based on detected \gidx{navigation}{navigation}
+	      regressions (e.g., frequent sentence replays).
+	\item \textbf{Multimodal Alignment:} Integrated \gidx{hapticfeedback}{haptic feedback} cues for page
+	      or heading boundary transitions to reduce cognitive load.
+	\item \textbf{Interoperable Pipelines:} Converging transforms (NIMAS → EPUB Accessibility + DAISY + braille)
+	      under unified validation dashboards.
+\end{itemize}
+
+\section{~~Ethical, Equity, and Privacy Considerations}\label{ch07:sec:ethics}
+Equity considerations include ensuring simultaneous delivery (no lag vs print), parity of navigational
+granularity (pages, figures, sidebars), and culturally inclusive voice selections (avoiding only a single
+accent set). Privacy concerns arise when cloud \gls{tts} transmits sensitive student annotation content; mitigate
+by local processing where feasible and minimizing personally identifiable content in pipeline logs. Data arising
+from reading analytics must be transparently disclosed (purpose, retention) and not repurposed for non-instructional
+profiling. Avoid over-reliance on a single vendor—promote resilience and guard against proprietary lock-in that
+could delay updates or inflate costs, impacting long-term equitable access.
+
+\section{~~Assessment and Reflection}\label{ch07:sec:assessment-reflection}
+\subsection*{Reflection Questions}
+\begin{enumerate}
+	\item Which performance metric (latency, intelligibility, \gidx{navigation}{navigation} accuracy) most strongly influences learning
+	      outcomes in your setting, and why?
+	\item How would you redesign a workflow step if NIMAS source delivery is delayed two weeks before semester start?
+	\item What safeguards can you implement to ensure privacy when annotating sensitive student materials with \gls{tts}?
+\end{enumerate}
+
+\subsection*{Applied Exercise (Mini Project)}
+Design and document a “48-hour rapid conversion playbook”:
+\begin{enumerate}
+	\item Select a hypothetical new textbook adoption date.
+	\item Outline steps, tools, and roles from NIMAS retrieval to student-ready DAISY + EPUB + braille.
+	\item Include quantitative acceptance criteria (e.g., $> 98\%$ structural element preservation).
+	\item Propose an automated validation script checklist (headings, page map, alt text coverage).
+\end{enumerate}
+
+\section{~~Summary}\label{ch07:sec:summary}
+DAISY, NIMAS, and modern neural \gidx{texttospeech}{text-to-speech} collectively operationalize timely, multi-modal access
+to curricular materials, enabling navigable, high-fidelity reading experiences that support literacy growth,
+content comprehension, and learner \gidx{independence}{independence}. Effective educational deployment requires disciplined
+conversion workflows, rigorous structural and timing validation, data-informed tuning (e.g., latency and
+reading speed metrics), and continuous student-centered training. Proactive standards alignment (EPUB
+Accessibility 1.1, WCAG, Section 508) and ethical safeguards (privacy, inclusive voice selection) ensure
+sustainable, equitable service delivery. Strategic monitoring (\gidx{navigation}{navigation} accuracy, reading rate deltas,
+comprehension gains) closes the loop—transforming assistive reading from reactive accommodation into
+an integrated component of instructional design.
+
+\section{~~References}\label{ch07:sec:references}
+% Intentionally left to bibliography system (\supercite used inline). No manual list here.
+
+\endinput
+

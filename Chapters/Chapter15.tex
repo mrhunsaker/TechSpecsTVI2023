@@ -1,8 +1,30 @@
-\chapter{Screen Reader Accessibility Guide for Office Documents}\label{ch15:office-accessibility}
-\index{screen reader}
+\chapter{Screen Reader Accessibility Guide for Office Documents}\label{ch15:office-\gidx{accessibility}{accessibility}}
+\glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
+\gidx{screenreader}{screen reader}
 \index{office suite}
 
-\section{~~Overview and Principles}\label{ch15:sec:overview}
+\section{~~Overview}\label{ch15:sec:overview}
+This chapter provides practical guidance for creating screen reader accessible office documents across word processing, spreadsheet, and presentation platforms. To align with the standardized pedagogical template adopted across the book, the chapter now includes explicit learning objectives, defined key terms, standards mapping, troubleshooting guidance, and assessment materials while preserving existing instructional content.
+
+\section{~~Learning Objectives}\label{ch15:sec:learning-objectives}
+After completing this chapter, the reader will be able to:
+\begin{enumerate}
+	\item Apply core accessibility principles (structure, semantics, alternatives, \gidx{navigation}{navigation}) to author accessible documents in Word, Google Docs, Excel/Sheets, and PowerPoint/Slides.
+	\item Map common document elements (headings, lists, tables, charts, images, links) to WCAG 2.x success criteria and Section 508 / EN 301 549 expectations.
+	\item Design and execute a validation workflow combining automated checkers, manual keyboard review, and screen reader testing.
+	\item Diagnose and remediate frequent accessibility failures using a structured troubleshooting matrix.
+\end{enumerate}
+
+\section{~~Key Terms}\label{ch15:sec:key-terms}
+\begin{description}
+	\item[Semantic Structure] Logical hierarchy of headings, lists, tables, and regions enabling non-visual \gidx{navigation}{navigation}.
+	\item[Logical \gidx{readingorder}{Reading Order}] The sequence in which assistive technologies traverse content (distinct from purely visual placement).
+	\item[Accessible Name] Programmatically determinable text used by assistive tech to identify an element (e.g., link, image, control).
+	\item[Alt Text (Alternative Text)] Concise textual alternative conveying the purpose or essential information of a non-text element.
+	\item[Table Header Scope] Association between header cells and data cells that enables contextual announcements.
+	\item[Tagged PDF] PDF containing a structural tree representing the logical reading order and semantics.
+	\item[Contrast Ratio] Luminance difference between foreground and background expressed per WCAG formulas.
+\end{description}
 
 \subsection{Why Accessibility Matters}\label{ch15:ssec:why-matters}
 Screen reader accessibility ensures that people with visual impairments can effectively navigate, understand, and interact with digital documents. According to the World Health Organization, approximately 2.2 billion people worldwide have a vision impairment \supercite{WHO2021}. Proper accessibility benefits everyone by creating clearer, more organized content that improves usability for all users.
@@ -23,7 +45,7 @@ Screen readers convert digital text to speech or braille, navigating documents t
 	\item \textbf{Lists and tables}
 	\item \textbf{Links and form controls}
 	\item \textbf{Alternative text for images}
-	\item \textbf{Keyboard navigation}
+	\item \textbf{Keyboard \gidx{navigation}{navigation}}
 \end{itemize}
 
 \section{~~Microsoft Word and Google Docs}\label{ch15:sec:word-docs}
@@ -36,7 +58,7 @@ Screen readers convert digital text to speech or braille, navigating documents t
 Use built-in heading styles (Heading 1, Heading 2, etc.) to create a logical document structure. This allows screen reader users to navigate the document by section.
 
 \subsubsection{Microsoft Word}\label{ch15:sssec:word-headings}
-Apply heading styles from the "Styles" pane on the "Home" tab. Use the "Navigation Pane" to view the document outline. This practice is essential for accessibility, as it allows screen readers to generate a navigable outline of the document, enabling users to jump between sections efficiently \supercite{MicrosoftAccessibility}.
+Apply heading styles from the "Styles" pane on the "Home" tab. Use the "\gidx{navigation}{Navigation} Pane" to view the document outline. This practice is essential for accessibility, as it allows screen readers to generate a navigable outline of the document, enabling users to jump between sections efficiently \supercite{MicrosoftAccessibility}.
 
 \subsubsection{Google Docs}\label{ch15:sssec:docs-headings}
 Apply heading styles from the "Styles" dropdown menu in the toolbar. Use "View > Show document outline" to see the structure. Consistent use of headings helps screen reader users understand the document's hierarchy and locate information quickly \supercite{GoogleAccessibility}.
@@ -51,10 +73,10 @@ Use the "Bullets" and "Numbering" buttons in the "Paragraph" group on the "Home"
 Use the "Numbered list" and "Bulleted list" buttons in the toolbar. Properly formatted lists are announced with item counts, which provides important context for screen reader users.
 
 \subsubsection{Page Layout}\label{ch15:sssec:page-layout}
-Use columns and page breaks correctly. Avoid using text boxes or frames for layout, as they can disrupt the reading order for screen readers.
+Use columns and page breaks correctly. Avoid using text boxes or frames for layout, as they can disrupt the \gidx{readingorder}{reading order} for screen readers.
 
 \subsubsection{Both platforms}\label{ch15:sssec:layout-both}
-Use the "Columns" feature under the "Layout" tab (Word) or "Format" menu (Docs). Insert page breaks instead of pressing "Enter" multiple times to ensure a clean document structure and predictable navigation for screen readers.
+Use the "Columns" feature under the "Layout" tab (Word) or "Format" menu (Docs). Insert page breaks instead of pressing "Enter" multiple times to ensure a clean document structure and predictable \gidx{navigation}{navigation} for screen readers.
 
 \subsection{Text Formatting}\label{ch15:ssec:text-formatting}
 
@@ -110,9 +132,9 @@ While Google Docs has limited table accessibility features, using the first row 
 Ensure tables are used for data, not layout.
 
 \subsubsection{Both platforms}\label{ch15:sssec:tables-both}
-Use tables for presenting tabular data only. Do not use them for visual layout, as this can create a confusing reading order for screen reader users.
+Use tables for presenting tabular data only. Do not use them for visual layout, as this can create a confusing \gidx{readingorder}{reading order} for screen reader users.
 
-\subsection{Navigation Features}\label{ch15:ssec:nav-features}
+\subsection{\gidx{navigation}{Navigation} Features}\label{ch15:ssec:nav-features}
 
 \subsubsection{Table of Contents}\label{ch15:sssec:toc}
 Generate an automatic table of contents.
@@ -124,13 +146,13 @@ Use "References > Table of Contents" to insert an automatic TOC based on heading
 Use "Insert > Table of Contents." An automated TOC ensures that it stays up-to-date as the document is edited and provides direct links to different sections.
 
 \subsubsection{Bookmarks and Cross-References}\label{ch15:sssec:bookmarks-cross-refs}
-Use bookmarks and cross-references for internal navigation.
+Use bookmarks and cross-references for internal \gidx{navigation}{navigation}.
 
 \subsubsection{Microsoft Word}\label{ch15:sssec:word-bookmarks}
 Use the "Bookmark" feature under the "Insert" tab to mark locations and "Cross-reference" under "References" to link to them.
 
 \subsubsection{Google Docs}\label{ch15:sssec:docs-bookmarks}
-Use "Insert > Bookmark" to create links to specific points in the document, which improves navigation for all users.
+Use "Insert > Bookmark" to create links to specific points in the document, which improves \gidx{navigation}{navigation} for all users.
 
 \section{~~Microsoft Excel and Google Sheets}\label{ch15:sec:excel-sheets}
 \index{office suite!Microsoft Office}
@@ -168,7 +190,7 @@ Freeze header rows using "View > Freeze > 1 row." While not as robust as Excel's
 Keep tables simple and avoid merged cells.
 
 \subsubsection{Best practices}\label{ch15:sssec:data-org-best-practices}
-Merged cells can disrupt navigation and make it difficult for screen readers to interpret table structure. It is better to use alternative formatting options to achieve the desired visual layout.
+Merged cells can disrupt \gidx{navigation}{navigation} and make it difficult for screen readers to interpret table structure. It is better to use alternative formatting options to achieve the desired visual layout.
 
 \subsection{Formulas and Functions}\label{ch15:ssec:formulas-functions}
 
@@ -208,19 +230,19 @@ For complex charts, providing the data in a simple, well-structured table is the
 \subsection{Slide Structure}\label{ch15:ssec:slide-structure}
 
 \subsubsection{Slide Layouts}\label{ch15:sssec:slide-layouts}
-Use built-in slide layouts to ensure a logical reading order.
+Use built-in slide layouts to ensure a logical \gidx{readingorder}{reading order}.
 
 \subsubsection{Microsoft PowerPoint}\label{ch15:sssec:ppt-layouts}
-Choose from the predefined layouts under "Home > New Slide." These layouts have a built-in reading order that screen readers can follow. Avoid adding text boxes manually, as they can disrupt this order.
+Choose from the predefined layouts under "Home > New Slide." These layouts have a built-in \gidx{readingorder}{reading order} that screen readers can follow. Avoid adding text boxes manually, as they can disrupt this order.
 
 \subsubsection{Google Slides}\label{ch15:sssec:slides-layouts}
 Apply a layout from the "Layout" menu. Using standard layouts ensures that content is presented in a predictable and accessible manner for screen reader users.
 
-\subsubsection{Reading Order}\label{ch15:sssec:reading-order}
+\subsubsection{\gidx{readingorder}{Reading Order}}\label{ch15:sssec:reading-order}
 Check and adjust the reading order of slide elements.
 
 \subsubsection{Both platforms}\label{ch15:sssec:reading-order-both}
-In PowerPoint, use the "Selection Pane" to view and reorder objects. In Google Slides, the reading order is generally determined by the order in which objects are added, so careful construction is key.
+In PowerPoint, use the "Selection Pane" to view and reorder objects. In Google Slides, the \gidx{readingorder}{reading order} is generally determined by the order in which objects are added, so careful construction is key.
 
 \subsection{Content Organization}\label{ch15:ssec:content-org}
 
@@ -228,7 +250,7 @@ In PowerPoint, use the "Selection Pane" to view and reorder objects. In Google S
 Ensure every slide has a unique, descriptive title.
 
 \subsubsection{Microsoft PowerPoint}\label{ch15:sssec:ppt-titles}
-Use the title placeholder in the slide layout. If a slide does not need a visible title, you can move the placeholder off-screen, but do not delete it, as screen readers use it for navigation.
+Use the title placeholder in the slide layout. If a slide does not need a visible title, you can move the placeholder off-screen, but do not delete it, as screen readers use it for \gidx{navigation}{navigation}.
 
 \subsubsection{Google Slides}\label{ch15:sssec:slides-titles}
 Like PowerPoint, every slide should have a unique title. This is the primary way screen reader users navigate a presentation, allowing them to quickly find specific slides.
@@ -322,7 +344,7 @@ Google Workspace has fewer built-in accessibility features. However, third-party
 
 \subsection{Manual Testing Methods}\label{ch15:ssec:manual-testing}
 
-\subsubsection{Keyboard Navigation}\label{ch15:sssec:keyboard-nav}
+\subsubsection{Keyboard \gidx{navigation}{Navigation}}\label{ch15:sssec:keyboard-nav}
 Test the document using only the keyboard. Ensure you can navigate to all interactive elements, such as links and form fields, in a logical order. This is a crucial test for users who cannot use a mouse.
 
 \subsubsection{Screen Reader Testing}\label{ch15:ssec:sr-testing}
@@ -337,7 +359,7 @@ Use a color contrast checker to ensure that text and background colors meet WCAG
 \begin{itemize}
 	\item Are headings used correctly to create a logical outline?
 	\item Are lists and tables properly formatted?
-	\item Is the reading order logical?
+	\item Is the \gidx{readingorder}{reading order} logical?
 \end{itemize}
 
 \subsubsection{Images and Media}\label{ch15:sssec:checklist-images}
@@ -354,12 +376,38 @@ Use a color contrast checker to ensure that text and background colors meet WCAG
 	\item Are links descriptive?
 \end{itemize}
 
-\subsubsection{Navigation}\label{ch15:sssec:checklist-nav}
+\subsubsection{\gidx{navigation}{Navigation}}\label{ch15:sssec:checklist-nav}
 \begin{itemize}
 	\item Is there a navigable table of contents?
 	\item Can all elements be reached with a keyboard?
 	\item Is the document language set correctly?
 \end{itemize}
+
+\section{~~Troubleshooting and Common Pitfalls}\label{ch15:sec:troubleshooting}
+\footnotesize
+\begin{longtblr}[
+		caption = {Frequent Office Document Accessibility Issues and Resolutions},
+		label = {ch15:tab:troubleshooting},
+		note = {Schema: Issue, RootCause, ImpactOnLearner, ResolutionSteps, PreventivePractice, ReferenceKey.}
+	]{
+		colspec = {X[l] X[l] X[l] X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\bfseries},
+		hlines
+	}
+	Issue                                          & RootCause                                         & ImpactOnLearner                            & ResolutionSteps                                   & PreventivePractice                            & ReferenceKey           \\
+	Improper heading levels (skips from H1 to H3)  & Manual styling instead of built‑in heading styles & Disorienting outline; harder jumping       & Reapply correct styles; rebuild TOC               & Enforce template with style guide             & MicrosoftAccessibility \\
+	Lists manually authored with dashes/asterisks  & Plain text characters not semantic                & Screen reader fails to announce list count & Convert to true list using platform tools         & Author training; pre-publish checklist        & GoogleAccessibility    \\
+	Merged table header cells                      & Visual layout emphasis                            & Screen reader mis-associates data cells    & Split headers; use simple grid                    & Restrict complex tables; design alt structure & WCAG2018               \\
+	Missing or decorative-only alt text left blank & Author oversight                                  & Information / context lost                 & Add concise alt text or mark decorative           & Accessibility checker in workflow             & MicrosoftAccessibility \\
+	Low contrast text (light gray on white)        & Branding / aesthetic choice                       & Reduced readability (low vision, glare)    & Adjust colors to meet 4.5:1 ratio                 & Maintain approved accessible palette          & WCAG2018               \\
+	Chart included without data table              & Exported image only                               & Data inaccessible for non-visual analysis  & Insert underlying data table; descriptive summary & Require paired data + summary                 & MicrosoftAccessibility \\
+	Inconsistent \gidx{readingorder}{reading order} in slides           & Freeform placement / added text boxes             & Fragmented narration sequence              & Reorder objects (Selection Pane); use layouts     & Mandate slide master usage                    & WCAG2018               \\
+	Hyperlink text “click here”                    & Non-descriptive anchor                            & Loss of context in link list               & Replace with meaningful target-specific text      & Link text policy in authoring guide           & MicrosoftAccessibility \\
+	Unlabeled complex formula intent               & Opaque expression                                 & Slowed comprehension / error risk          & Add adjacent explanation/comment                  & Document explanatory annotation pattern       & NVDA2023               \\
+	Tagged PDF export disabled                     & Export defaults unchecked                         & Structure lost in final distribution       & Re-export with tagging enabled                    & Export checklist w/ responsibility signoff    & PDFUA2014              \\
+\end{longtblr}
+\normalsize
 
 \section{~~Additional Resources}\label{ch15:sec:additional-resources}
 
@@ -387,7 +435,7 @@ Use a color contrast checker to ensure that text and background colors meet WCAG
 \subsection{Screen Reader Resources}\label{ch15:ssec:sr-resources}
 \begin{itemize}
 	\item \href{https://www.nvaccess.org/}{NVDA (NonVisual Desktop Access)}
-	\item \href{https://www.freedomscientific.com/products/software/jaws/}{JAWS (Job Access With Speech)}
+	\item \href{https://www.freedomscientific.com/products/\gidx{software}{software}/jaws/}{JAWS (Job Access With Speech)}
 	\item \href{https://www.apple.com/voiceover/info/guide/_1121.html}{VoiceOver User Guide}
 \end{itemize}
 
@@ -396,6 +444,14 @@ Use a color contrast checker to ensure that text and background colors meet WCAG
 	\item \href{https://www.tpgi.com/color-contrast-checker/}{TPGi Colour Contrast Analyser}
 	\item \href{https://wave.webaim.org/}{WAVE Web Accessibility Evaluation Tool}
 	\item \href{https://www.deque.com/axe/}{axe DevTools}
+\end{itemize}
+
+\section{~~Standards and Compliance}\label{ch15:sec:standards-compliance}
+\begin{itemize}
+	\item \textbf{WCAG 2.x Mapping:} Headings (1.3.1), Lists/Tables (1.3.1), Alt Text (1.1.1), Contrast (1.4.3/1.4.6), Keyboard \gidx{navigation}{Navigation} (2.1.x), Focus Order (2.4.3), Link Purpose (2.4.4), Language (3.1.1), Error Prevention in forms (3.3.x).
+	\item \textbf{\gls{pdfua} Alignment:} Tagged structure tree, logical \gidx{readingorder}{reading order}, alt text, correct artifact tagging for purely decorative items.
+	\item \textbf{Section 508 / EN 301 549:} Incorporates WCAG A/AA success criteria and procurement obligations—ensure conformance statements for tooling.
+	\item \textbf{Organizational Policy:} Embed accessibility acceptance criteria in document templates and LMS upload workflows.
 \end{itemize}
 
 \section{~~Legal and Compliance Considerations}\label{ch15:sec:legal-compliance}
@@ -443,7 +499,7 @@ Create and maintain documentation on accessibility best practices and standards.
 \subsubsection{AI-Assisted Accessibility}\label{ch15:sssec:ai-assisted-a11y}
 AI is increasingly being used to automate accessibility tasks, such as generating alt text for images and creating captions for videos. While these tools are powerful, they should be used as a starting point and always reviewed by a human for accuracy and context.
 
-\subsubsection{Machine Learning Applications}\label{ch15:sssec:ml-apps}
+\subsubsection{\gidx{machinelearning}{Machine Learning} Applications}\label{ch15:sssec:ml-apps}
 Machine learning models are being developed to identify accessibility issues in documents and suggest fixes. As these technologies mature, they will play a larger role in creating accessible content.
 
 \subsection{Future Standards and Guidelines}\label{ch15:ssec:future-standards}
@@ -454,5 +510,27 @@ The next major version of the Web Content Accessibility Guidelines, WCAG 3.0, is
 \subsubsection{Technology Evolution}\label{ch15:sssec:tech-evolution}
 As technology evolves, so will accessibility needs and best practices. Continuous learning and adaptation will be key to ensuring that digital content remains accessible to everyone.
 
+\section{~~Ethical, Equity, and Privacy Considerations}\label{ch15:sec:ethics-equity}
+Equitable access to instructional and administrative documents is foundational to participation and assessment parity. Delays or partial remediation disproportionately disadvantage learners who rely on screen readers or braille displays. Ethical practice demands:
+\begin{itemize}
+	\item Minimizing publication \gidx{latency}{latency} between sighted-ready and accessible versions.
+	\item Transparent remediation status tracking (e.g., dashboard metrics).
+	\item Protecting personally identifiable information when using cloud-based remediation aids.
+	\item Avoiding over-reliance on automated alt text or AI-generated summaries without human verification.
+\end{itemize}
+
+\section{~~Assessment and Reflection}\label{ch15:sec:assessment-reflection}
+\textbf{Reflection Questions}
+\begin{enumerate}
+	\item Which three WCAG success criteria present the greatest recurring risk in your current document workflows and why?
+	\item How would you redesign the authoring lifecycle to reduce reliance on post-hoc remediation?
+	\item What quantitative KPIs (e.g., % documents passing automated checker on first submission) would you track to ensure continuous improvement?
+\end{enumerate}
+\textbf{Applied Exercise} Audit a multi-section report (minimum 10 pages). Produce a one-page remediation plan including: issue inventory (grouped by WCAG SC), estimated effort, prioritization rationale (impact vs. complexity), and prevention recommendations for future authoring.
+
+\section{~~Summary}\label{ch15:sec:summary}
+Accessible office documents depend on intentional semantic structure, descriptive alternatives, navigable tables/charts, predictable \gidx{readingorder}{reading order}, and rigorous validation. Embedding accessibility early (template governance, automated linting, training) reduces remediation cost and accelerates equitable availability. A structured troubleshooting matrix, standards mapping, and continuous metric tracking enable sustained quality improvements.
+
 \section{~~Conclusion}\label{ch15:sec:conclusion}
-Creating accessible Office documents is an essential part of inclusive communication. By following the guidelines outlined in this chapter, you can ensure that your content is usable by people of all abilities. Remember that accessibility is an ongoing process, not a one-time fix. Regularly test your documents, stay informed about best practices, and foster a culture of accessibility within your organization. By doing so, you contribute to a more equitable and inclusive digital world.
+Creating accessible Office documents is an essential part of inclusive communication. By following the guidelines outlined in this chapter, you can ensure that your content is usable by people of all abilities. Accessibility remains an ongoing process requiring periodic review, stakeholder training, and governance alignment to maintain parity and uphold legal as well as ethical obligations.
+

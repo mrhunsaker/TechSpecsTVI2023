@@ -1,19 +1,20 @@
 \chapter{Tablets and Accessible Apps}\label{ch2:tablets}
+\glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 
 \begin{raggedright}
-	\textbf{Accessibility\index{accessibility} Note:} This chapter provides a comprehensive overview of tablets\index{tablet} and mobile applications for students with visual impairments\index{visual impairment}. The content has been structured for clarity, navigation!navigation, and accessibility, with semantic markup and descriptive context for all tables and lists\index{Markdown!lists}.
+	\textbf{Accessibility\index{accessibility} Note:} This chapter provides a comprehensive overview of tablets\index{tablet} and mobile applications for students with visual impairments\index{visual impairment}. The content has been structured for clarity, \gidx{navigation}{navigation}!navigation, and accessibility, with semantic markup and descriptive context for all tables and lists\index{Markdown!lists}.
 \end{raggedright}
 
-Tablets have emerged as powerful tools\index{sonification!tools} for students with visual impairments, offering a combination of portability, intuitive touch interfaces, and a vast ecosystem of specialized applications \supercite{Day2021, Kelly2011}. This chapter explores the transformative potential of tablets in education, providing guidance on selecting the right device and highlighting key apps\index{apps} that support\index{troubleshooting!support} learning, independence\index{independence}, and engagement.
+Tablets have emerged as powerful tools\index{sonification!tools} for students with visual impairments, offering a combination of portability, intuitive touch interfaces, and a vast ecosystem of specialized applications \supercite{Day2021, Kelly2011}. This chapter explores the transformative potential of tablets in education, providing guidance on selecting the right device and highlighting key apps\index{apps} that support\index{troubleshooting!support} learning, \gidx{independence}{independence}, and engagement.
 
 \section{~~Tablet Considerations}\label{ch2:sec:tablet-considerations}
 
 When selecting a \gls{tablet} for a student with a \gls{visualimpairment}, several factors must be considered beyond the standard technical specifications.
 
 \begin{itemize}
-	\item \textbf{Operating System\index{operating system} (OS):} The choice between Android\index{operating system!Android}, iPadOS, Windows\index{operating system!Windows}, and ChromeOS\index{operating system!ChromeOS} often comes down to the built-in accessibility features and the availability of specific apps. iPadOS is often lauded for its robust\index{accessibility!principles} \index{VoiceOver} screen reader\index{screen reader} \supercite{AppleVoiceOver, AFBiOS}, while Android's open nature allows for more customization \supercite{AndroidAccessibility, GoogleTalkBack, SamsungAccessibility}.
+	\item \textbf{Operating System\index{operating system} (OS):} The choice between Android\index{operating system!Android}, iPadOS, Windows\index{operating system!Windows}, and ChromeOS\index{operating system!ChromeOS} often comes down to the built-in accessibility features and the availability of specific apps. iPadOS is often lauded for its robust\index{accessibility!principles} \index{VoiceOver} \gidx{screenreader}{screen reader} \supercite{AppleVoiceOver, AFBiOS}, while Android's open nature allows for more customization \supercite{AndroidAccessibility, GoogleTalkBack, SamsungAccessibility}.
 	\item \textbf{Screen Size and Quality:} A larger, high-resolution screen is generally better for students with low vision. Screen quality, including brightness and color accuracy, can also impact readability.\supercite{AFBiOS, AAOTechnologyTools, BOIAScreenMagnifiers}
-	\item \textbf{App Ecosystem:} The availability of educational and assistive apps is a critical factor. The Apple\index{tablet!Apple} App Store and Google\index{tablet!Google} Play Store have vast libraries, but the quality and accessibility\index{accessibility} of apps can vary \supercite{AAOApps, Bookshare, VoiceDreamReader}.
+	\item \textbf{App Ecosystem:} The availability of educational and assistive apps is a critical factor. The Apple\index{tablet!Apple} App Store and Google\index{tablet!Google} Play Store have vast libraries, but the quality and \gidx{accessibility}{accessibility} of apps can vary \supercite{AAOApps, Bookshare, VoiceDreamReader}.
 	\item \textbf{Physical Characteristics:} The weight and durability of the tablet\index{tablet} are important, especially for younger students. A protective case is almost always a necessity.\supercite{Day2021, Holbrook2006}
 	\item \textbf{AI Integration:} Modern tablets now offer enhanced AI-powered accessibility features, including improved object recognition and natural language processing.\supercite{HIMSReleaseNotes, Android16Release, msseeingai, envision}
 \end{itemize}
@@ -117,7 +118,7 @@ The American Foundation for the Blind provides comprehensive guidance on Apple i
 	\toprule
 	Model                    & Key Features                               & Price & Accessibility\index{accessibility} Highlights                                                               \\
 	\midrule
-	HP Chromebook x2 11      & 11" 2K, Snapdragon 7c, USI stylus          & \$599 & Detachable, good battery life, ChromeVox screen reader\index{screen reader} \supercite{GoogleAccessibility} \\
+	HP Chromebook x2 11      & 11" 2K, Snapdragon 7c, USI stylus          & \$599 & Detachable, good battery life, ChromeVox screen reader \supercite{GoogleAccessibility} \\
 	Lenovo Chromebook Duet 5 & 13.3" OLED, Snapdragon 7c Gen 2            & \$499 & Excellent screen for the price, detachable                                                                  \\
 	Asus Chromebook CM3      & 10.5" WUXGA, MediaTek 8183, garaged stylus & \$369 & Compact, versatile with dual-hinge design                                                                   \\
 	Acer Chromebook Spin 714 & 14" WUXGA, 13th Gen Intel, convertible     & \$699 & Powerful performance\index{troubleshooting!performance}, durable build                                      \\
@@ -125,6 +126,85 @@ The American Foundation for the Blind provides comprehensive guidance on Apple i
 \end{longtblr}
 \normalsize
 
+
+\section{~~Mainstream Tablets (Assistive Technology Integration)}\label{ch2:sec:mainstream-tablets}
+Mainstream tablets pair with refreshable \gls{braille} displays and notetakers to form a multi-modal ecosystem (tactile + auditory + visual). Selecting current-generation \gidx{hardware}{hardware} helps ensure long OS update windows (security + accessibility feature cadence), on-device AI for object / scene description, robust wireless stacks for low-\gidx{latency}{latency} Braille HID/Bluetooth LE, and sufficient \gidx{ram}{RAM}/\gls{cpu} (or NPU) headroom for concurrent screen reader, \gls{ocr}, and real-time transcription workloads. The models below represent current (U.S. market) broadly available devices spanning iPadOS, Android, Windows, and Fire OS form factors that commonly appear in educational or AT deployments.\index{tablet}
+
+\footnotesize
+\tagpdfsetup{table/header-rows={1}}
+\begin{longtblr}[
+		caption = {Representative Current U.S. Tablets (Accessibility / AT Readiness)},
+		label = {ch2:tab:mainstream-tablets},
+		note = {Focus on models offering strong accessibility stacks, long \gidx{software}{software} support windows, and compatibility with external Braille displays and switch / AAC peripherals. Price bands are approximate U.S. MSRP at publication; verify during procurement.}
+	]{
+		colspec = {X[l] X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\normalfont},
+		hlines,
+	}
+	\toprule
+	Model                                                                                    & Key Hardware Features                                                              & Accessibility / AT Highlights                                                                             & Approx. Price Band \\
+	\midrule
+	iPad Pro (M4, 13" or 11") \supercite{AppleAccessibility}                                 & Tandem OLED (13"/11"), M4 SoC, USB-C/Thunderbolt, LiDAR (13"/11"), up to 16 GB RAM & VoiceOver, Zoom, LiDAR-assisted spatial capture, Live Speech, Point and Speak, robust Braille HID support & \$999 - \$2,299    \\
+	iPad Air (M2, 11" / 13") \supercite{AppleAccessibility}                                  & M2, Liquid Retina, USB-C, Pencil + keyboard support                                & Core iPadOS accessibility (VoiceOver, Magnifier, Live Captions), long OS support window                   & \$599 - \$1,299    \\
+	iPad (10th Gen) \supercite{AppleAccessibility}                                           & 10.9" Liquid Retina, A14, USB-C                                                    & Cost-effective iPadOS access (VoiceOver, Switch Control) for general classrooms                           & \$349 - \$599      \\
+	iPad Mini (6th Gen) \supercite{AppleAccessibility}                                       & 8.3" portable form factor, A15, USB-C                                              & Ultra-portability for \gidx{mobility}{mobility} tasks; full iPadOS accessibility stack                                     & \$499 - \$799      \\
+	Samsung Galaxy Tab S9+ / S9 Ultra \supercite{SamsungAccessibility, AndroidAccessibility} & AMOLED (12.4"+), Snapdragon 8 Gen 2, S Pen, IP68                                   & TalkBack, high contrast modes, multi-window + DeX, BrailleBack integration                                & \$899 - \$1,199    \\
+	Samsung Galaxy Tab S9 FE \supercite{SamsungAccessibility}                                & 10.9"/12.4", mid-range SoC, S Pen                                                  & Affordable entry to Samsung accessibility + multi-year Android updates                                    & \$449 - \$699      \\
+	Google Pixel Tablet (with Dock) \supercite{AndroidAccessibility, GoogleTalkBack}         & 11" LCD, Tensor G2, speaker dock/charging                                          & TalkBack, Live Caption, Lookout, guided frame \gls{ocr}, docked ambient mode for hands-free access              & \$399 - \$599      \\
+	Microsoft Surface Pro (Snapdragon X / 11th Gen) \supercite{MicrosoftAccessibility}       & 13" PixelSense, ARM (NPU), detachable keyboard, USB-C                              & Narrator natural voices, Magnifier, Voice Access, mature NVDA/JAWS ecosystem                              & \$999 - \$2,099    \\
+	Lenovo Tab P12 Pro \supercite{AndroidAccessibility}                                      & 12.6" AMOLED, Snapdragon 870, stylus, keyboard cover                               & Large screen for low-vision \gidx{magnification}{magnification}; full Android accessibility + multi-user profiles               & \$599 - \$899      \\
+	Amazon Fire Max 11 \supercite{AndroidAccessibility}                                      & 11" 2K display, mid-range SoC, keyboard/stylus options                             & VoiceView screen reader, Magnifier, simplified ecosystem (evaluate app availability)                      & \$229 - \$379      \\
+	\bottomrule
+\end{longtblr}
+\normalsize
+
+\subsection*{Tablet Selection Considerations (Accessibility Lens)}
+\begin{itemize}
+	\item \textbf{Longevity / Updates:} Favor platforms with \(\geq\)5 year OS + security commitment (iPad Pro/Air, flagship Samsung S series, Pixel line) to sustain evolving AT APIs.
+	\item \textbf{I/O + Mounting:} USB-C with DisplayPort alt mode (iPad Pro, Surface, Tab S9) eases pairing with external monitors and capture devices for low-vision workflows.
+	\item \textbf{Performance Headroom:} Modern NPUs / high-end SoCs accelerate on-device \gls{ocr}, scene description, and real-time captioning without cloud latency.
+	\item \textbf{Accessory Ecosystem:} Keyboard cases, ruggedized frames, switch interfaces, and mounts broaden access modalities for multi-disability support.
+	\item \textbf{Braille / HID Stability:} iPadOS and Android 14+ show improved Braille HID reliability; pilot test pair persistence (multi-day) before fleet deployment.
+\end{itemize}
+
+\section{~~High-End Smartphones (Assistive Tech Ready)}\label{ch2:sec:accessible-phones}
+High-end smartphones often serve as the \gidx{mobility}{mobility} anchor for students using portable 14–20 cell Braille displays (see Section~\ref{ch3:ssec:14-20-cell}) and as wireless terminals for notetakers. Flagship tiers provide longer OS support, superior cameras (critical for live \gls{ocr}, object recognition, math/handwriting capture), dedicated AI silicon for on-device processing (privacy + latency gains), and advanced haptics for non-visual feedback.\index{smartphone}
+
+\footnotesize
+\tagpdfsetup{table/header-rows={1}}
+\begin{longtblr}[
+		caption = {Current Flagship / Near-Flagship Smartphones (U.S. Accessibility Focus)},
+		label = {ch2:tab:accessible-phones},
+		note = {Vendor-diverse list emphasizing multi-year update policies, rich accessibility feature sets, and reliable Braille HID pairing. Price ranges are approximate prevailing MSRP.}
+	]{
+		colspec = {X[l] X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\normalfont},
+		hlines,
+	}
+	\toprule
+	Model                                                                           & OS / Update Horizon                & Key Accessibility / AT Highlights                                                                                                        & Approx. Price Band \\
+	\midrule
+	iPhone 15 Pro / Pro Max \supercite{AppleAccessibility}                          & iOS (5–6 yr major updates typical) & VoiceOver, Braille Screen Input, Live Speech, Point and Speak (LiDAR), Door Detection, advanced haptics, robust Braille HID              & \$999 - \$1,199+   \\
+	Google Pixel 8 Pro \supercite{AndroidAccessibility, GoogleTalkBack}             & Android (7 yr update commitment)   & TalkBack rapid cadence, Live Caption, Lookout (scene/document/math), Guided Frame, on-device speech models, multi-Braille driver support & \$799 - \$999      \\
+	Samsung Galaxy S24 Ultra \supercite{SamsungAccessibility, AndroidAccessibility} & Android (4+ yr OS / 5 yr security) & TalkBack (Samsung integration), high contrast themes, \gidx{magnification}{Magnification}, multi-window, DeX, advanced camera \gls{ocr} synergy                      & \$1,299 - \$1,499  \\
+	OnePlus 12 \supercite{AndroidAccessibility}                                     & Android (promised multi-year)      & High refresh screen aids \gidx{magnification}{magnification} smoothness, Reading Mode, customizable haptics, large battery for continuous \gls{ocr} sessions         & \$799 - \$899      \\
+	Motorola Edge+ (2024) \supercite{AndroidAccessibility}                          & Android (multi-year updates)       & Clean Android stack, Ready For (desktop mode) workspace expansion, strong camera for A11y AI apps                                        & \$799 - \$899      \\
+	ASUS ROG Phone 8 / 8 Pro \supercite{AndroidAccessibility}                       & Android (multi-year updates)       & Sustained thermal headroom for continuous \gls{ocr}/AI, large battery, vivid display aiding low-vision \gidx{magnification}{magnification}                           & \$999 - \$1,299    \\
+	Sony Xperia 1 VI \supercite{AndroidAccessibility}                               & Android (multi-year updates)       & Triple high-quality lenses for superior \gls{ocr}/image capture, Creator Mode (color accuracy), TalkBack, side sense gestures                  & \$1,199 - \$1,399  \\
+	\bottomrule
+\end{longtblr}
+\normalsize
+
+\subsection*{Smartphone Procurement Notes}
+\begin{itemize}
+	\item \textbf{Camera Quality:} Directly impacts \gls{ocr}, math recognition, \gidx{tactilegraphics}{tactile graphics} capture (for conversion to embossed or multi-line display workflows).
+	\item \textbf{Battery / Thermal Envelope:} Continuous screen reader + AI (scene / text) operations can throttle mid-tier SoCs; flagship silicon sustains peak performance longer.
+	\item \textbf{Braille Pair Stability:} Perform multi-day soak tests logging any HID disconnects across iOS vs. Android vendors before large-scale rollout.
+	\item \textbf{Update Policy:} Prioritize explicit multi-year OS + security commitments (Pixel, iPhone, Samsung S series) for predictable accessibility feature evolution.
+	\item \textbf{Form Factor Considerations:} Large displays aid low vision; ensure weight/ergonomics remain acceptable for extended handheld use.
+\end{itemize}
 
 \section{~~Mobile Applications}\label{ch2:sec:mobile-apps}
 The true power of tablets for students with visual impairments\index{visual impairment} lies in the vast array of specialized applications. The American Academy of Ophthalmology has identified 30 key apps, devices and technologies that are particularly beneficial for people with vision impairments \supercite{AAOApps}. The following sections highlight some of the most impactful apps\index{apps} across various categories.
@@ -145,27 +225,27 @@ The true power of tablets for students with visual impairments\index{visual impa
 
 \subsection{Audiobook/Reading}\label{ch2:ssec:reading-apps}
 \begin{itemize}
-	\item \textbf{BARD Mobile:} Provides access to the National Library Service for the Blind and Print Disabled's collection of audiobooks\index{audiobook} and braille\index{braille} books \supercite{BARDMobile}.
+	\item \textbf{BARD Mobile:} Provides access to the National Library Service for the Blind and Print Disabled's collection of audiobooks\index{audiobook} and \gidx{braille}{braille} books \supercite{BARDMobile}.
 	\item \textbf{Bookshare\index{Bookshare}:} An extensive library of accessible e-books\index{e-books} for people with print disabilities \supercite{Bookshare}.
 	\item \textbf{Audible\index{audiobook!Audible}:} The leading audiobook service, with a massive library of titles \supercite{Audible}.
-	\item \textbf{Voice Dream\index{text-to-speech!Voice Dream} Reader:} A highly customizable reading app that supports a wide range of file formats and text-to-speech\index{text-to-speech} voices \supercite{VoiceDreamReader}.
+	\item \textbf{Voice Dream\gidx{texttospeech}{text-to-speech}\index{text-to-speech!Voice Dream} Reader:} A highly customizable reading app that supports a wide range of file formats and text-to-speech voices \supercite{VoiceDreamReader}.
 \end{itemize}
 
 \subsubsection{Productivity/Schoolwork/Optical Character Recognition}\label{ch2:sssec:ocr-apps}
-Modern OCR technology increasingly relies on artificial intelligence to improve accuracy and functionality \supercite{ABBYYAIOCR}.
+Modern \gls{ocr} technology increasingly relies on artificial intelligence to improve accuracy and functionality \supercite{ABBYYAIOCR}.
 \begin{itemize}
 	\item \textbf{Seeing AI\index{apps!Seeing AI}:} A free app from Microsoft\index{tablet!Microsoft} that uses AI\index{AI} to describe the world, including reading text, identifying products, and recognizing people \supercite{SeeingAI}.
-	\item \textbf{Voice Dream Scanner:} A powerful OCR\index{OCR} app that can quickly scan and read printed documents \supercite{VoiceDreamScanner}.
+	\item \textbf{Voice Dream Scanner:} A powerful \gls{ocr}\index{\gls{ocr}} app that can quickly scan and read printed documents \supercite{VoiceDreamScanner}.
 	\item \textbf{Google\index{tablet!Google} Keep/Evernote:} Note-taking apps that are accessible and support\index{troubleshooting!support} text, audio, and image notes \supercite{GoogleKeep}.
 	\item \textbf{VizWiz:} An app that combines automated image processing with real-time human assistance to answer visual questions \supercite{Bigham2014}.
 \end{itemize}
 
-\subsubsection{Orientation \& Mobility / Navigation}
+\subsubsection{Orientation \& \gidx{mobility}{Mobility} / \gidx{navigation}{Navigation}}
 
 \footnotesize
 \tagpdfsetup{table/header-rows={1}}
 \begin{longtblr}[
-		caption = {Mobile apps for orientation, mobility, and navigation for students with visual impairments (Updated 2025)},
+		caption = {Mobile apps for orientation, \gidx{mobility}{mobility}, and \gidx{navigation}{navigation} for students with visual impairments (Updated 2025)},
 		label = {tab:chapter2:navigation-apps},
 		note = {This table presents mobile apps for orientation, mobility, and navigation, supporting independent travel and spatial awareness for visually impaired students. It includes details on cost, function, and OS compatibility.}
 	]{
@@ -176,17 +256,17 @@ Modern OCR technology increasingly relies on artificial intelligence to improve 
 		stretch = 2
 	}
 	App              & Cost                                                   & Function                         & OS                        \\
-	Apple Maps       & free                                                   & Turn by Turn Navigation          & iOS/iPadOS                \\
+	Apple Maps       & free                                                   & Turn by Turn \gidx{navigation}{Navigation}          & iOS/iPadOS                \\
 	Be My Eyes       & free                                                   & Visual assistance via volunteers & iOS/iPadOS, AndroidOS 14+ \\
-	BlindSquare      & \$49.99                                                & GPS Navigation                   & iOS/iPadOS                \\
-	Clew             & free                                                   & Indoor navigation                & iOS/iPadOS, AndroidOS 14+ \\
-	GoodMaps Explore & free                                                   & Indoor/Outdoor navigation        & iOS/iPadOS                \\
-	Google Maps      & free                                                   & Turn by Turn Navigation          & iOS/iPadOS, AndroidOS 14+ \\
-	Lazarillo        & free                                                   & GPS navigation                   & iOS/iPadOS, AndroidOS 14+ \\
+	BlindSquare      & \$49.99                                                & GPS \gidx{navigation}{Navigation}                   & iOS/iPadOS                \\
+	Clew             & free                                                   & Indoor \gidx{navigation}{navigation}                & iOS/iPadOS, AndroidOS 14+ \\
+	GoodMaps Explore & free                                                   & Indoor/Outdoor \gidx{navigation}{navigation}        & iOS/iPadOS                \\
+	Google Maps      & free                                                   & Turn by Turn \gidx{navigation}{Navigation}          & iOS/iPadOS, AndroidOS 14+ \\
+	Lazarillo        & free                                                   & GPS \gidx{navigation}{navigation}                   & iOS/iPadOS, AndroidOS 14+ \\
 	Moovit           & free\footnote{\raggedright Premium features \$3.99/mo} & Public Transit                   & iOS/iPadOS, AndroidOS 14+ \\
 	Oko              & free                                                   & Smart traffic detection          & iOS/iPadOS, AndroidOS 14+ \\
-	Soundscape       & free                                                   & 3D audio navigation              & iOS/iPadOS, AndroidOS 14+ \\
-	Waymap           & free                                                   & Indoor/Outdoor navigation        & iOS/iPadOS, AndroidOS 14+ \\
+	Soundscape       & free                                                   & 3D audio \gidx{navigation}{navigation}              & iOS/iPadOS, AndroidOS 14+ \\
+	Waymap           & free                                                   & Indoor/Outdoor \gidx{navigation}{navigation}        & iOS/iPadOS, AndroidOS 14+ \\
 \end{longtblr}
 \normalsize
 
@@ -197,7 +277,7 @@ Modern OCR technology increasingly relies on artificial intelligence to improve 
 \begin{longtblr}[
 		caption = {Mobile apps for independent living skills for students with visual impairments (Updated 2025)},
 		label = {tab:chapter2:independent-living-apps},
-		note = {This table lists mobile apps that support independent living skills for visually impaired students, including currency identification, magnification, labeling, and AI-powered assistance. It provides information on cost, function, and platform compatibility.}
+		note = {This table lists mobile apps that support independent living skills for visually impaired students, including currency identification, \gidx{magnification}{magnification}, labeling, and AI-powered assistance. It provides information on cost, function, and platform compatibility.}
 	]{
 		colspec = {X[l] X[l] X[l] X[l]},
 		rowhead = 1,
@@ -208,7 +288,7 @@ Modern OCR technology increasingly relies on artificial intelligence to improve 
 	App             & Cost                                                                                    & Function                & OS                        \\
 	CashReader      & free\footnote{\raggedright Premium features \$2.99/mo, \$19.99/yr, or \$49.99/lifetime} & Currency identification & iOS/iPadOS, AndroidOS 14+ \\
 	Lookout         & free                                                                                    & AI-powered assistance   & AndroidOS 14+             \\
-	Magnifier       & free                                                                                    & Built-in magnification  & iOS/iPadOS                \\
+	Magnifier       & free                                                                                    & Built-in \gidx{magnification}{magnification}  & iOS/iPadOS                \\
 	Menus4All       & free\footnote{\raggedright Premium subscription \$3.99/mo or \$39.99/yr}                & Restaurant menus        & iOS/iPadOS                \\
 	PenFriend       & free                                                                                    & Labeling system app     & iOS/iPadOS                \\
 	Supersense      & free\footnote{\raggedright Premium features \$9.99/mo}                                  & AI scene description    & iOS/iPadOS, AndroidOS 14+ \\
@@ -222,4 +302,5 @@ Modern OCR technology increasingly relies on artificial intelligence to improve 
 \label{sec:conclusion-tablets}
 The landscape of assistive technology for visually impaired students continues to evolve rapidly, with new applications and enhanced features being released regularly. When selecting tablets and applications for educational use, it is essential to consider the specific needs of each student, the available budget, and the compatibility with existing assistive technologies. Regular updates to both hardware and software ensure that students have access to the most current and effective tools for their educational success.
 
-The integration of artificial intelligence and machine learning in accessibility applications has significantly improved the user experience for visually impaired students. From enhanced object recognition to more accurate optical character recognition, these technological advances continue to break down barriers and provide greater independence in educational settings \supercite{Bigham2014}.
+The integration of artificial intelligence and \gidx{machinelearning}{machine learning} in accessibility applications has significantly improved the user experience for visually impaired students. From enhanced object recognition to more accurate optical character recognition, these technological advances continue to break down barriers and provide greater \gidx{independence}{independence} in educational settings \supercite{Bigham2014}.
+

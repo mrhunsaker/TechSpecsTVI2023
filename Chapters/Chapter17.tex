@@ -1,10 +1,147 @@
 \chapter{Creating and Verifying PDF Accessibility with Adobe Acrobat}
+\glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
+% ------------------------------------------------------------------
+% Added standardized pedagogical scaffold sections (do not remove).
+% Existing content (Overview, Check Accessibility, Fix Issues,
+% Accessibility Issues, etc.) should remain below and be adjusted
+% manually if duplication occurs.
+% ------------------------------------------------------------------
+
+\section{~~Overview}\label{ch17:sec:overview-expanded}
+This chapter (expanded) provides a structured, end-to-end framework for creating, auditing, and remediating accessible PDFs using Adobe Acrobat and complementary tools. The scaffold introduces learning objectives, key terminology, standards mapping, implementation strategies, a troubleshooting matrix, equity/ethics considerations, and assessment materials—augmenting the original procedural focus.
+
+\section{~~Learning Objectives}\label{ch17:sec:learning-objectives}
+After completing this chapter, the reader will be able to:
+\begin{enumerate}
+	\item Distinguish core PDF accessibility requirements (tagging, logical order, alt text, forms, metadata, security).
+	\item Execute a phased PDF accessibility workflow (source authoring → tagging → auditing → remediation → validation).
+	\item Map common PDF issues to WCAG 2.x and \gls{pdfua} requirements and articulate remediation steps.
+	\item Diagnose and resolve recurring remediation pitfalls using a structured troubleshooting matrix.
+\end{enumerate}
+
+\section{~~Key Terms}\label{ch17:sec:key-terms}
+\begin{description}
+	\item[Tagged PDF] A PDF containing a logical structure (tag) tree exposing \gidx{readingorder}{reading order} and semantics to assistive technology.
+	\item[Logical Reading Order] The sequence in which content is presented to assistive technologies—independent of visual layout.
+	\item[Artifact] Non-informational content (decorative lines, page numbers) intentionally excluded from the tag tree.
+	\item[Alternative Text] Textual replacement describing the purpose or content of a non-text element.
+	\item[Role Map] Mapping between custom and standard tag names ensuring interoperability with assistive technology.
+	\item[Form Field Tooltip / Accessible Name] Programmatic label announced by a screen reader for interactive fields.
+	\item[\gls{pdfua}] ISO 14289 standard specifying requirements for universally accessible PDF documents and viewers.
+\end{description}
+
+\section{~~Historical and Policy Context}\label{ch17:sec:historical-policy}
+PDF accessibility practices evolved from ad hoc post-production tagging toward source-first authoring and standards-driven validation as WCAG, Section 508 refresh, and \gls{pdfua} matured. Increasing digital textbook distribution, legal enforcement, and the emergence of enterprise document automation elevated expectations for consistent, testable accessibility outcomes.
+
+\section{~~Core Concepts}\label{ch17:sec:core-concepts}
+\begin{itemize}
+	\item \textbf{Source Integrity:} Accessible tagging success depends heavily on semantic structure in the source (styles, headings, alt text placeholders).
+	\item \textbf{Separation of Content vs. Presentation:} Visual order rarely matches logical \gidx{readingorder}{reading order} without deliberate tagging.
+	\item \textbf{Deterministic Remediation:} Each issue category (e.g., untagged figure) maps to reproducible corrective actions.
+	\item \textbf{Iterative Verification:} Automated checks + manual inspection + assistive technology testing form a completeness triad.
+\end{itemize}
+
+\section{~~Technologies and Tools}\label{ch17:sec:technologies-tools}
+\begin{itemize}
+	\item \textbf{Adobe Acrobat Pro:} Primary environment (Autotag, \gidx{readingorder}{Reading Order}, Tags panel, Preflight).
+	\item \textbf{Validation Utilities:} PAC 2021, CommonLook Validator for \gls{pdfua} conformance depth.
+	\item \textbf{Authoring Environments:} Word / InDesign / LaTeX with accessibility-conscious export settings.
+	\item \textbf{Scripting / Batch:} Preflight profiles or command-line tools (where applicable) to enforce metadata, tagging presence.
+\end{itemize}
+
+\section{~~Implementation Strategies}\label{ch17:sec:implementation-strategies}
+\subsection*{1. Source-First Authoring}
+Mandate heading styles, meaningful alt text drafts, table header definition, list semantics, and language metadata before export.
+\subsection*{2. Controlled Export}
+Enable “Document structure tags for accessibility,” include bookmarks, and preserve \gidx{readingorder}{reading order} (e.g., “Use document structure for tab order”).
+\subsection*{3. Initial Tag Audit}
+Run Acrobat Full Check; review Tags tree; correct role misclassification, nested order anomalies, artifact omissions.
+\subsection*{4. Remediation Pass}
+Address structural issues (headings, lists, tables), figures alt text, form field tooltips, and reading order using the Reading Order and Tags panels.
+\subsection*{5. Validation and Assistive Technology Testing}
+Perform screen reader (NVDA/JAWS/VoiceOver) traversal verifying semantic clarity, order, table header association, form \gidx{navigation}{navigation}, and link purpose.
+\subsection*{6. Governance}
+Log remediation cycle time, defect density (issues/page), and rework events for continuous improvement.
+
+\section{~~Standards and Compliance}\label{ch17:sec:standards-compliance}
+\begin{itemize}
+	\item \textbf{WCAG 2.x} (e.g., 1.1.1 Non-text Content, 1.3.1 Info and Relationships, 1.3.2 Meaningful Sequence, 1.4.x Contrast, 2.4.2 Page Titled, 3.1.1 Language of Page).
+	\item \textbf{\gls{pdfua} (ISO 14289):} Tag tree completeness, correct role mapping, alt text for figures, language metadata, form field semantics, artifact classification.
+	\item \textbf{Section 508 / EN 301 549:} Leverages WCAG alignment; incorporate into procurement and publication checklists.
+	\item \textbf{Best Practice:} Maintain a conformance log (tool versions, test scope, exceptions).
+\end{itemize}
+
+\section{~~Best Practices}\label{ch17:sec:best-practices}
+\begin{itemize}
+	\item Enforce source templates embedding heading and table styles.
+	\item Keep alt text concise (purpose-focused) and avoid redundancy with captions.
+	\item Limit manual post-export restructuring through early style discipline.
+	\item Verify \gidx{readingorder}{reading order} per page—do not rely solely on autotagging.
+	\item Use Preflight profiles for batch metadata / tagging validation.
+	\item Track common defect categories to target author training.
+\end{itemize}
+
+\section{~~Troubleshooting and Common Pitfalls}\label{ch17:sec:troubleshooting}
+\footnotesize
+\begin{longtblr}[
+		caption = {Common PDF Accessibility Issues and Resolutions},
+		label = {ch17:tab:troubleshooting},
+		note = {Schema: Issue, RootCause, ImpactOnLearner, ResolutionSteps, PreventivePractice, ReferenceKey.}
+	]{
+		colspec = {X[l] X[l] X[l] X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\bfseries},
+		hlines
+	}
+	Issue                                & RootCause                                                           & ImpactOnLearner                                & ResolutionSteps                                                      & PreventivePractice                                 & ReferenceKey      \\
+	Untagged content blocks              & Export omitted structural tags or manual insertion outside tag tree & Screen reader skips content                    & Autotag as baseline; manually retag missing nodes via Tags panel     & Enforce source styles; export with tagging enabled & AdobeAccessGuide  \\
+	Figures lacking alt text             & Author oversight or bulk insertion                                  & Loss of contextual information                 & Add alt in Figure tag properties; ensure brevity                     & Alt text checklist in authoring stage              & AdobeAccessGuide  \\
+	Incorrect heading nesting            & Manual styling or promotion/demotion errors                         & Disorientation; inefficient \gidx{navigation}{navigation}         & Reassign tag levels (H1→H2 sequence) in Tags panel                   & Template enforcing style cascade                   & AdobePDFUA        \\
+	Table header misassociation          & Improper TH/TD tagging or missing scope attributes                  & Misinterpreted tabular relationships           & Rebuild table structure; set header scope; verify with screen reader & Use accessible table patterns in source            & PubComWCAGvsPDFUA \\
+	\gidx{readingorder}{Reading order} mismatch               & Visual layout overrides logical flow                                & Fragmented comprehension                       & Adjust order numbers or tag sequence with Reading Order tool         & Source linearization before export                 & AdobeAccessGuide  \\
+	Artifacts announced as content       & Decorative elements not marked Artifact                             & Noise; cognitive load                          & Mark as Artifact (\gidx{readingorder}{Reading Order} / Content panel)                     & Authoring guidance to segregate decorative objects & AdobePDFUA        \\
+	Improper form field labeling         & Missing Tooltips / alt associations                                 & Ambiguous form control purpose                 & Add Tooltips; verify tag role / name                                 & Form template library with required labels         & AdobeAccessGuide  \\
+	Security settings block AT           & Incorrect DRM / restrictions                                        & AT cannot access text                          & Remove content copying restrictions; re-save                         & Security policy review pre-publication             & AdobePDFUA        \\
+	Language metadata missing            & Language not set in properties                                      & Incorrect pronunciation / hyphenation          & Set document language; tag inline language shifts                    & Export script enforcing metadata                   & AdobePDFUA        \\
+	Autotag structural misclassification & Complex layout confusion                                            & Incorrect semantics (e.g., list vs. paragraph) & Manually retag misclassified nodes                                   & Validate sample pages before bulk processing       & AdobeAccessGuide  \\
+\end{longtblr}
+\normalsize
+
+\section{~~Emerging Trends and Future Directions}\label{ch17:sec:emerging-trends}
+\begin{itemize}
+	\item AI-assisted autotag refinement (semantic role disambiguation).
+	\item Automated \gidx{readingorder}{reading order} inference via layout vision models.
+	\item Source-to-multi-format pipelines (PDF + EPUB + HTML) with synchronized semantic layers.
+	\item Real-time accessibility validation in authoring environments.
+\end{itemize}
+
+\section{~~Ethical, Equity, and Privacy Considerations}\label{ch17:sec:ethics-equity}
+\begin{itemize}
+	\item \textbf{Equity:} Delayed remediation widens the access gap; track \gidx{latency}{latency} from publication to accessible release.
+	\item \textbf{Accuracy vs. Automation:} Over-trust in AI autotagging risks silent structural errors—mandate human review.
+	\item \textbf{Privacy:} When using cloud remediation, ensure no sensitive or personal data is exposed.
+	\item \textbf{Transparency:} Provide conformance statements with scope, methods, and residual known issues.
+\end{itemize}
+
+\section{~~Assessment and Reflection}\label{ch17:sec:assessment-reflection}
+\textbf{Reflection Questions}
+\begin{enumerate}
+	\item Which three defect categories (from the troubleshooting matrix) most frequently appear in your workflow and why?
+	\item How would you re-engineer the source authoring template to eliminate one recurring remediation step?
+	\item What metrics (e.g., defect density per page, remediation cycle time) will you instrument to measure continuous improvement?
+\end{enumerate}
+\textbf{Applied Exercise} Select a 10–15 page PDF with moderate layout complexity. Produce: (a) baseline issue log (SC mapped), (b) prioritized remediation plan, (c) post-remediation validation summary (tools + AT tests), (d) recommendations to reduce future defects at source.
+
+\section{~~Summary}\label{ch17:sec:summary}
+High-quality accessible PDFs emerge from source-first semantic rigor, disciplined tagging and \gidx{readingorder}{reading order} validation, standards mapping (WCAG + \gls{pdfua}), iterative remediation, and governance metrics. Automation accelerates but does not replace expert human verification; a structured troubleshooting matrix and equity-focused KPIs drive sustainable improvement.
+
+% --- Original chapter content continues below (existing sections preserved) ---
 \label{cha:creating-and-verifying-pdf-accessibility-with-adobe-acrobat}
 
 \section{~~Overview}
 \label{sec:overview-16}
 
-This chapter provides a guide to using Adobe Acrobat Pro\index{PDF!Adobe Acrobat} to check and fix accessibility\index{accessibility} issues in PDF documents~\supercite{AdobeAccessGuide, AdobeHelpX}. Ensuring PDF accessibility\index{PDF!PDF accessibility} is crucial for compliance with standards like WCAG\index{WCAG}~\supercite{WCAG21, WCAG22} and for providing equal access to information for people with disabilities.
+This chapter provides a guide to using Adobe Acrobat Pro\index{PDF!Adobe Acrobat} to check and fix \gidx{accessibility}{accessibility} issues in PDF documents~\supercite{AdobeAccessGuide, AdobeHelpX}. Ensuring PDF accessibility\index{PDF!PDF accessibility} is crucial for compliance with standards like WCAG\index{WCAG}~\supercite{WCAG21, WCAG22} and for providing equal access to information for people with disabilities.
 
 \textbf{By using Acrobat's built-in accessibility checker, identify common accessibility problems, and offer solutions to resolve them. By following these guidelines, you can create PDFs that are navigable and readable by assistive technologies, such as screen readers.}
 
@@ -13,13 +150,13 @@ The topics covered in this chapter include:
 \begin{itemize}
 	\item Checking \gls{pdf} \gls{accessibility}
 	\item Fixing accessibility issues
-	\item Common accessibility\index{accessibility} issues and solutions
+	\item Common \gidx{accessibility}{accessibility} issues and solutions
 \end{itemize}
 
 \section{~~Check Accessibility of PDFs (Acrobat Pro)}
 \label{sec:check-accessibility-of-pdfs-acrobat-pro}
 
-Adobe Acrobat\index{PDF!Adobe Acrobat} Pro includes a built-in accessibility checker\index{accessibility!accessibility testing} that can help identify potential issues in your PDF\index{PDF} documents~\supercite{AdobeAccessGuide}. This tool tests the file against a set of accessibility\index{accessibility} criteria and generates a report that lists\index{Markdown!lists} any problems it finds.
+Adobe Acrobat\index{PDF!Adobe Acrobat} Pro includes a built-in accessibility checker\index{accessibility!accessibility testing} that can help identify potential issues in your PDF\index{PDF} documents~\supercite{AdobeAccessGuide}. This tool tests the file against a set of \gidx{accessibility}{accessibility} criteria and generates a report that lists\index{Markdown!lists} any problems it finds.
 
 \subsection{Steps to Check for Accessibility}\label{sub:steps-to-check-for-accessibility}\supercite{AdobeHelpX}
 
@@ -44,7 +181,7 @@ After running the accessibility checker, you can use the Accessibility Checker r
 
 \begin{itemize}
 	\item \textbf{Fix:} Acrobat either fixes the item automatically or displays a dialog box prompting you to fix the item manually.
-	\item \textbf{Explain:} Opens the online help documentation with details about the accessibility\index{accessibility} issue.
+	\item \textbf{Explain:} Opens the online help documentation with details about the \gidx{accessibility}{accessibility} issue.
 \end{itemize}
 
 \section{~~Accessibility Issues}
@@ -58,7 +195,7 @@ The following sections describe common accessibility issues that can be found in
 \subsubsection{Prevent security settings from interfering with screen readers}
 \label{ssub:prevent-security-settings-from-interfering-with-screen-readers}
 
-Security settings can restrict the use of a PDF file, but they should not prevent a screen reader\index{screen reader} from accessing the text.
+Security settings can restrict the use of a PDF file, but they should not prevent a \gidx{screenreader}{screen reader} from accessing the text.
 
 \paragraph{To check the security settings:}
 \label{par:to-check-the-security-settings}
@@ -96,22 +233,22 @@ If the security settings are too restrictive, you will need the password to chan
 \subsubsection{Image-only PDF}
 \label{ssubsec:pdf-image-only}
 
-\textbf{Issue:} The PDF\index{PDF} contains no text that can be read by a screen reader\index{screen reader}, likely because it was created from a scanned document.
+\textbf{Issue:} The PDF\index{PDF} contains no text that can be read by a \gidx{screenreader}{screen reader}, likely because it was created from a scanned document.
 
 \begin{itemize}
 	\item \textbf{To fix this rule manually:}
 	      \begin{enumerate}
-		      \item Use the \textbf{Scan \& OCR\index{OCR}} tool in Acrobat.
+		      \item Use the \textbf{Scan \& \gls{ocr}\index{\gls{ocr}}} tool in Acrobat.
 		      \item Select \textbf{Recognize Text > In This File}.
-		      \item Acrobat will perform Optical Character Recognition\index{OCR} (OCR) to convert the image of text into actual, readable text.
-		      \item After \gls{OCR} is complete, you will need to review the document for recognition errors and then proceed with tagging the document.
+		      \item Acrobat will perform Optical Character Recognition\index{\gls{ocr}} (\gls{ocr}) to convert the image of text into actual, readable text.
+		      \item After \gls{ocr} is complete, you will need to review the document for recognition errors and then proceed with tagging the document.
 	      \end{enumerate}
 \end{itemize}
 
 \subsubsection{Tagged PDF}
 \label{ssubsec:pdf-tagged}
 
-\textbf{Issue:} The document is not tagged, meaning it lacks the structural information necessary for screen reader navigation.
+\textbf{Issue:} The document is not tagged, meaning it lacks the structural information necessary for screen reader \gidx{navigation}{navigation}.
 
 \begin{itemize}
 	\item \textbf{To fix this rule automatically:}
@@ -127,13 +264,13 @@ If the security settings are too restrictive, you will need the password to chan
 	      \end{enumerate}
 \end{itemize}
 
-\subsubsection{Logical reading order}
+\subsubsection{Logical \gidx{readingorder}{reading order}}
 \label{ssubsec:pdf-reading-order}
 
-\textbf{Issue:} The reading order\index{PDF!reading order} of the document does not match the logical flow of the content. This must be checked manually.
+\textbf{Issue:} The \gidx{readingorder}{reading order}\index{PDF!reading order} of the document does not match the logical flow of the content. This must be checked manually.
 
 \begin{itemize}
-	\item Use the \textbf{Reading Order} tool in the Accessibility\index{accessibility} panel to view and correct the order of elements on each page. You can drag and drop items in the Order panel to re-sequence them.
+	\item Use the \textbf{\gidx{readingorder}{Reading Order}} tool in the Accessibility\index{accessibility} panel to view and correct the order of elements on each page. You can drag and drop items in the Order panel to re-sequence them.
 \end{itemize}
 
 \subsubsection{Document language}
@@ -182,7 +319,7 @@ If the security settings are too restrictive, you will need the password to chan
 \subsubsection{Bookmarks}
 \label{ssubsec:pdf-bookmarks}
 
-\textbf{Issue:} Long documents (21 pages or more) should have bookmarks that correspond to the document structure\index{document structure} for easy navigation.
+\textbf{Issue:} Long documents (21 pages or more) should have bookmarks that correspond to the document structure\index{document structure} for easy \gidx{navigation}{navigation}.
 
 \begin{itemize}
 	\item \textbf{To fix this rule manually:}
@@ -423,7 +560,7 @@ If the security settings are too restrictive, you will need the password to chan
 \textbf{Issue:} Alternate text is for an element that is not part of the page content (an artifact).
 
 \begin{itemize}
-	\item This usually indicates a tagging error. The element should be marked as an artifact so that it is ignored by \gls{screenreader}. Use the Reading Order tool to mark the element as "Background/Artifact."
+	\item This usually indicates a tagging error. The element should be marked as an artifact so that it is ignored by \gls{screenreader}. Use the \gidx{readingorder}{Reading Order} tool to mark the element as "Background/Artifact."
 \end{itemize}
 
 \subsubsection{Hides Annotation}
@@ -468,3 +605,4 @@ If the security settings are too restrictive, you will need the password to chan
 	\item \textbf{Timed responses\index{accessibility!timed responses}:} The document should not require timed responses from the user.
 	\item \textbf{Accessible links\index{accessibility!accessible links}:} Link text must be descriptive and make sense out of context.
 \end{itemize}
+

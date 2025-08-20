@@ -1,13 +1,145 @@
 \chapter{PDF Accessibility: Auditing, Tagging, and Remediation}
+\glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
+% ------------------------------------------------------------------
+% Added pedagogical scaffold (Overview through Summary) per template.
+% Original content starting with \section{~~Introduction} retained below.
+% ------------------------------------------------------------------
+
+\section{~~Overview}\label{ch18:sec:overview}
+This expanded chapter provides a structured, end-to-end framework for producing, auditing, remediating, and validating accessible PDF documents. It augments the procedural narrative with explicit learning objectives, terminology, standards mapping, implementation strategies, troubleshooting guidance, equity considerations, and assessment components to support consistent, standards-aligned practice.
+
+\section{~~Learning Objectives}\label{ch18:sec:learning-objectives}
+After completing this chapter, the reader will be able to:
+\begin{enumerate}
+	\item Explain core PDF accessibility requirements (tagging, logical \gidx{readingorder}{reading order}, alternative text, forms, metadata, language, security).
+	\item Design a phased workflow (source authoring → export → tagging/audit → remediation → validation) aligned with WCAG 2.x and \gls{pdfua}.
+	\item Map common PDF defects to specific standards clauses and select appropriate remediation techniques.
+	\item Apply a structured troubleshooting matrix to diagnose and prevent recurring accessibility failures efficiently.
+\end{enumerate}
+
+\section{~~Key Terms}\label{ch18:sec:key-terms}
+\begin{description}
+	\item[Tagged PDF] A PDF containing a structural (tag) tree that exposes semantics and \gidx{readingorder}{reading order} to assistive technologies.
+	\item[Logical Reading Order] The sequence in which assistive technology traverses content, independent of visual layout placement.
+	\item[Artifact] Non-informational or decorative content excluded from the tag tree (e.g., page numbers, borders).
+	\item[Role Map] Mapping aligning custom or legacy tag names to standard structure types for interoperability.
+	\item[Form Field Tooltip / Accessible Name] Programmatic label announced for interactive form controls.
+	\item[\gls{pdfua}] ISO 14289 standard defining universal accessibility requirements for PDF documents and processors.
+	\item[Remediation] Post-export processes to correct structural, semantic, or metadata deficiencies.
+\end{description}
+
+\section{~~Historical and Policy Context}\label{ch18:sec:historical-policy}
+The maturation from ad hoc post-production tagging toward source-first accessible authoring parallels regulatory reinforcement (Section 508 refresh, EN 301 549) and the establishment of \gls{pdfua}\supercite{AdobePDFUA}. Increased digital distribution (education, government, corporate reporting) elevated expectations for timely, verifiable accessibility. Contemporary practice emphasizes prevention (template governance, style discipline) over purely reactive remediation.
+
+\section{~~Core Concepts}\label{ch18:sec:core-concepts}
+\begin{itemize}
+	\item \textbf{Source Integrity:} Clean semantic structure (headings, lists, tables, alt text placeholders) in source files drastically reduces remediation overhead.
+	\item \textbf{Separation of Layout vs. Semantics:} Visual order rarely equals logical order; explicit tagging resolves ambiguity.
+	\item \textbf{Deterministic Remediation:} Each defect class (e.g., untagged figure) maps to a repeatable corrective action.
+	\item \textbf{Iterative Validation:} Automated checks + manual structural inspection + assistive technology testing ensure completeness.
+\end{itemize}
+
+\section{~~Technologies and Tools}\label{ch18:sec:technologies-tools}
+\begin{itemize}
+	\item \textbf{Authoring Environments:} Word / InDesign / LaTeX with accessible style usage and export options.
+	\item \textbf{Primary Remediation:} Adobe Acrobat Pro (Autotag, \gidx{readingorder}{Reading Order}, Tags, Preflight)\supercite{AdobeAccessGuide}.
+	\item \textbf{Conformance Validation:} PAC 2021, CommonLook Validator (deep \gls{pdfua} checks)\supercite{PubComWCAGvsPDFUA}.
+	\item \textbf{Automation / Batch:} Preflight profiles or scripts for metadata enforcement and tag presence.
+\end{itemize}
+
+\section{~~Implementation Strategies}\label{ch18:sec:implementation-strategies}
+\subsection*{1. Source-First Authoring}
+Mandate heading styles, table headers, meaningful draft alt text, correct language, and descriptive file properties before export.
+\subsection*{2. Controlled Export}
+Enable “Tagged PDF” and document structure for tab order; verify bookmarks and title substitution.
+\subsection*{3. Structural Audit}
+Run initial autotag if necessary; inspect Tags tree for accuracy (headings sequence, list integrity, table semantics).
+\subsection*{4. Granular Remediation}
+Resolve \gidx{readingorder}{reading order}, alt text gaps, form field tooltips, artifact marking, table header associations.
+\subsection*{5. Validation}
+Combine automated checker (Acrobat / PAC) + manual per-page inspection + assistive technology traversal (NVDA/JAWS/VoiceOver).
+\subsection*{6. Governance Metrics}
+Track: defects per page, remediation cycle time, percentage source-level preventable issues, and rework rate.
+
+\section{~~Standards and Compliance}\label{ch18:sec:standards-compliance}
+\begin{itemize}
+	\item \textbf{WCAG 2.x:} Non-text Content (1.1.1), Info and Relationships (1.3.1), Meaningful Sequence (1.3.2), Contrast (1.4.x), Page Titled (2.4.2), Language of Page (3.1.1), Error Identification (3.3.x).
+	\item \textbf{\gls{pdfua} (ISO 14289):} Tag tree completeness, role mapping, alt text, metadata (title, language), form field accessibility, artifact classification\supercite{AdobePDFUA}.
+	\item \textbf{Section 508 / EN 301 549:} Leverage WCAG alignment for procurement and compliance assertions.
+	\item \textbf{Conformance Documentation:} Maintain scope statement, tool versions, test methodology, exceptions.
+\end{itemize}
+
+\section{~~Best Practices}\label{ch18:sec:best-practices}
+\begin{itemize}
+	\item Author with enforced templates (style governance) to reduce post-export fixes.
+	\item Provide concise, purpose-driven alt text; avoid duplicating caption content.
+	\item Normalize heading sequences; disallow manual visual styling in place of semantic headings.
+	\item Maintain a “defect taxonomy” to drive targeted training.
+	\item Use sampled early-page validation before batch processing large document sets.
+\end{itemize}
+
+\section{~~Troubleshooting and Common Pitfalls}\label{ch18:sec:troubleshooting}
+\footnotesize
+\begin{longtblr}[
+		caption = {Common PDF Accessibility Issues and Resolutions},
+		label = {ch18:tab:troubleshooting},
+		note = {Schema: Issue, RootCause, ImpactOnLearner, ResolutionSteps, PreventivePractice, ReferenceKey.}
+	]{
+		colspec = {X[l] X[l] X[l] X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\bfseries},
+		hlines
+	}
+	Issue                          & RootCause                                      & ImpactOnLearner                                & ResolutionSteps                                   & PreventivePractice                                     & ReferenceKey      \\
+	Untagged PDF                   & Export without tagging or legacy generator     & Screen reader skips structure, poor \gidx{navigation}{navigation} & Autotag as baseline; manually refine Tags tree    & Enforce tagged export option in authoring SOP          & AdobeAccessGuide  \\
+	Incorrect \gidx{readingorder}{reading order}        & Complex layout not linearized                  & Fragmented comprehension; context loss         & Adjust order via Reading Order tool; reorder tags & Pre-export layout simplification; template constraints & AdobeAccessGuide  \\
+	Missing alt text for figures   & Author oversight / batch import                & Loss of critical contextual information        & Add concise alt text in Figure tag properties     & Alt text checklist in authoring workflow               & AdobeAccessGuide  \\
+	Improper heading nesting       & Visual styling used instead of semantic levels & Disorientation; inefficient \gidx{navigation}{navigation}         & Reassign tag levels (H1 → H2 sequence)            & Style-based authoring policy                           & AdobePDFUA        \\
+	Tables lack header association & TH/TD mis-tagging or missing scope             & Data relationships unclear                     & Rebuild table tags; set scope; validate with AT   & Author training; accessible table patterns             & PubComWCAGvsPDFUA \\
+	Form fields unlabeled          & Tooltip / name omitted                         & Ambiguous form interaction                     & Add tooltips; verify tag tree roles               & Form template library with naming standards            & AdobeAccessGuide  \\
+	Artifacts announced as content & Decorative elements not marked Artifact        & Noise increases cognitive load                 & Mark as Artifact in \gidx{readingorder}{Reading Order} / Content panel & Author guidance on decorative separation               & AdobePDFUA        \\
+	Language metadata missing      & Language not set in properties                 & Mispronunciation / parsing errors              & Set document language; tag inline language spans  & Export script enforcing metadata                       & AdobePDFUA        \\
+	Security restricts AT access   & Restrictive DRM permissions                    & Assistive tech blocked from content            & Remove conflicting restrictions; resave           & Security review checklist                              & AdobePDFUA        \\
+	Autotag misclassification      & Complex multi-column or irregular layout       & Incorrect semantics (lists, headings)          & Manually retag misclassified nodes                & Early pilot tagging of representative pages            & AdobeAccessGuide  \\
+\end{longtblr}
+\normalsize
+
+\section{~~Emerging Trends and Future Directions}\label{ch18:sec:emerging-trends}
+\begin{itemize}
+	\item AI-enhanced autotag refinement (semantic disambiguation of layout zones).
+	\item Cross-format synchronized authoring (single semantic source → PDF + EPUB + HTML).
+	\item Real-time accessibility linting inside authoring suites.
+	\item Layout vision models inferring natural \gidx{readingorder}{reading order} for complex multi-column designs.
+\end{itemize}
+
+\section{~~Ethical, Equity, and Privacy Considerations}\label{ch18:sec:ethics-equity}
+\begin{itemize}
+	\item \textbf{Equity:} Delay between sighted and accessible release widens instructional gaps—track turnaround metrics.
+	\item \textbf{Accuracy:} Over-reliance on AI autotagging risks silent structural errors; mandate human validation cycles.
+	\item \textbf{Privacy:} Minimize sensitive content passed to cloud remediation services; apply least-privilege principles.
+	\item \textbf{Transparency:} Provide conformance statements summarizing methodology, scope, and unresolved exceptions.
+\end{itemize}
+
+\section{~~Assessment and Reflection}\label{ch18:sec:assessment-reflection}
+\textbf{Reflection Questions}
+\begin{enumerate}
+	\item Which three defect categories in the troubleshooting matrix would you prioritize for training and why?
+	\item How would you redesign your source authoring workflow to eliminate at least one downstream remediation category?
+	\item What quantitative KPIs (e.g., defects/page, remediation cycle time) will you instrument to sustain improvement?
+\end{enumerate}
+\textbf{Applied Exercise} Select a 12–15 page PDF containing tables, images, and form elements. Produce: (a) baseline issue log mapped to WCAG / \gls{pdfua}, (b) prioritized remediation plan, (c) post-remediation validation summary, (d) recommendations for source template enhancements.
+
+\section{~~Summary}\label{ch18:sec:summary}
+Accessible PDF production is optimized by source-level semantic rigor, controlled tagged export, structured remediation (order, alt text, tables, forms, metadata), multi-layer validation, and governance metrics. Automation accelerates coverage but must be balanced by expert review to ensure equity, accuracy, and sustainable compliance.
 \label{chap:pdf-accessibility-report}
 
 \section{~~Introduction}
 \label{sec:pdf-report-introduction}
-This chapter provides a comprehensive guide to PDF\index{PDF} accessibility, covering auditing, tagging, and remediation\index{accessibility!remediation}. It is intended for developers, content creators, and accessibility\index{accessibility} professionals who need to ensure that PDF documents are compliant with modern accessibility standards\index{accessibility!standards}.
+This chapter provides a comprehensive guide to PDF\index{PDF} accessibility, covering auditing, tagging, and remediation\index{accessibility!remediation}. It is intended for developers, content creators, and \gidx{accessibility}{accessibility} professionals who need to ensure that PDF documents are compliant with modern accessibility standards\index{accessibility!standards}.
 
 \section{~~Understanding PDF Accessibility Standards}
 \label{sec:pdf-accessibility-standards}
-Ensuring PDF accessibility\index{PDF!PDF accessibility} requires adherence to established international standards. The two most important standards are the Web Content Accessibility Guidelines (WCAG\index{WCAG}) and PDF/UA\index{PDF!UA} (ISO 14289).
+Ensuring PDF accessibility\index{PDF!PDF accessibility} requires adherence to established international standards. The two most important standards are the Web Content Accessibility Guidelines (WCAG\index{WCAG}) and \gls{pdfua}\index{PDF!UA} (ISO 14289).
 
 \subsection{Web Content Accessibility Guidelines (WCAG)}
 \label{subsec:wcag-pdf}
@@ -16,20 +148,20 @@ Ensuring PDF accessibility\index{PDF!PDF accessibility} requires adherence to es
 \label{ssubsec:wcag-pdf-overview}
 \gls{WCAG}, developed by the World Wide Web Consortium (W3C), is the most widely recognized international standard for \gls{webaccessibility}. While primarily aimed at web content, its principles are applicable to PDFs, which are often distributed via the web.
 
-\subsection{PDF/UA (ISO 14289-1)}
+\subsection{\gls{pdfua} (ISO 14289-1)}
 \label{subsec:pdf-ua}
-PDF/UA, or Universal Access, is the international standard specifically for accessible PDF technology\index{technology}. It provides a set of requirements for creating fully accessible PDF documents and applications that read them.
+\gls{pdfua}, or Universal Access, is the international standard specifically for accessible PDF \gidx{technology}{technology}. It provides a set of requirements for creating fully accessible PDF documents and applications that read them.
 
 \subsubsection{Overview}
 \label{ssubsec:pdf-ua-overview}
 Key requirements of \gls{pdf} include:
 \begin{itemize}
 	\item \textbf{Tagged Content}: All meaningful content must be tagged in a logical structure.
-	\item \textbf{Logical Reading Order}: The reading order must be specified and logical.
+	\item \textbf{Logical \gidx{readingorder}{Reading Order}}: The reading order must be specified and logical.
 	\item \textbf{Alternate Text}: All figures and graphics must have alternative text\index{images and media!alternative text}.
 	\item \textbf{Document Title and Language}: The document title and primary language must be specified.
 	\item \textbf{Interactive Elements}: Form fields, links\index{accessibility!links}, and annotations must be accessible.
-	\item \textbf{Security}: Security settings must not interfere with assistive technology\index{assistive technology}.
+	\item \textbf{Security}: Security settings must not interfere with \gidx{assistivetechnology}{assistive technology}.
 \end{itemize}
 
 \section{~~Tools for PDF Accessibility Auditing}
@@ -42,9 +174,9 @@ Adobe, the creator of PDF, provides powerful tools for accessibility auditing an
 
 \subsubsection{Adobe Acrobat Pro (Windows, macOS)}
 \label{ssubsec:adobe-acrobat-pro}
-Adobe Acrobat Pro is the industry-standard tool for creating and editing PDFs. Its built-in accessibility checker can test against both WCAG\index{WCAG!WCA2.1} 2.1 and PDF/UA standards\index{accessibility!standards}.
+Adobe Acrobat Pro is the industry-standard tool for creating and editing PDFs. Its built-in accessibility checker can test against both WCAG\index{WCAG!WCA2.1} 2.1 and \gls{pdfua} standards\index{accessibility!standards}.
 \begin{itemize}
-	\item \textbf{Features}: Full accessibility check\index{accessibility!accessibility testing}, reading order tool, tags panel, autotagging, and remediation\index{accessibility!remediation strategies} tools.
+	\item \textbf{Features}: Full accessibility check\index{accessibility!accessibility testing}, \gidx{readingorder}{reading order} tool, tags panel, autotagging, and remediation\index{accessibility!remediation strategies} tools.
 	\item \textbf{Pros}: Comprehensive, industry-standard, allows for both auditing and remediation.
 	\item \textbf{Cons}: Requires a paid subscription.
 \end{itemize}
@@ -56,17 +188,17 @@ Several third-party tools also offer robust PDF \gls{accessibility}!\gls{accessi
 \subsubsection{Desktop Applications}
 \label{ssubsec:desktop-apps-pdf}
 \begin{itemize}
-	\item \textbf{axesPDF (Windows)}: A powerful plug-in for Microsoft documents\index{PDF!source documents!Word} that helps create PDF/UA\index{PDF!PDF/UA}-compliant documents from the source.
+	\item \textbf{axesPDF (Windows)}: A powerful plug-in for Microsoft documents\index{PDF!source documents!Word} that helps create \gls{pdfua}\index{PDF!\gls{pdfua}}-compliant documents from the source.
 	      \begin{itemize}
 		      \item \textbf{Pros}: Excellent for creating accessible PDFs from Word.
-		      \item \textbf{Cons}: Windows-only, commercial software\index{software}.
+		      \item \textbf{Cons}: Windows-only, commercial \gidx{software}{software}.
 	      \end{itemize}
-	\item \textbf{CommonLook PDF Validator (Windows)\supercite{AllyantValidator}}: A free tool for testing PDF documents against Section 508\index{accessibility!legal accessibility}, WCAG 2.0, and PDF/UA standards.
+	\item \textbf{CommonLook PDF Validator (Windows)\supercite{AllyantValidator}}: A free tool for testing PDF documents against Section 508\index{accessibility!legal accessibility}, WCAG 2.0, and \gls{pdfua} standards.
 	      \begin{itemize}
 		      \item \textbf{Pros}: Free, comprehensive validation.
 		      \item \textbf{Cons}: Windows-only, does not offer remediation tools\index{sonification!tools}.
 	      \end{itemize}
-	\item \textbf{Foxit PDF Editor (Windows, macOS, Linux\index{operating system!Linux})}: An alternative to Acrobat\index{PDF!Adobe Acrobat} with its own set of accessibility\index{accessibility} tools.
+	\item \textbf{Foxit PDF Editor (Windows, macOS, Linux\index{operating system!Linux})}: An alternative to Acrobat\index{PDF!Adobe Acrobat} with its own set of \gidx{accessibility}{accessibility} tools.
 	      \begin{itemize}
 		      \item \textbf{Pros}: Cross-platform, often more affordable than Acrobat.
 		      \item \textbf{Cons}: Accessibility features may not be as mature as Acrobat's.
@@ -76,9 +208,9 @@ Several third-party tools also offer robust PDF \gls{accessibility}!\gls{accessi
 \subsubsection{Online Tools (Cross-Platform)}
 \label{ssubsec:online-tools-pdf}
 \begin{itemize}
-	\item \textbf{PDF Accessibility Checker (PAC) 2021}: Developed by the PDF/UA\index{PDF!UA} Foundation, PAC is a definitive tool for checking PDF/UA compliance.
+	\item \textbf{PDF Accessibility Checker (PAC) 2021}: Developed by the \gls{pdfua}\index{PDF!UA} Foundation, PAC is a definitive tool for checking \gls{pdfua} compliance.
 	      \begin{itemize}
-		      \item \textbf{Pros}: Authoritative PDF/UA checker, free.
+		      \item \textbf{Pros}: Authoritative \gls{pdfua} checker, free.
 		      \item \textbf{Cons}: Windows-only desktop application, not an online tool.
 	      \end{itemize}
 	\item \textbf{PAVE (PDF Accessibility Validation Engine)}: An online tool that can identify accessibility issues and perform some automatic remediation\index{accessibility!remediation strategies}.
@@ -98,11 +230,11 @@ A full accessibility audit\index{accessibility!accessibility testing} involves a
 	\item \textbf{Automated Check}: Run the PDF\index{PDF} through an automated checker like Adobe Acrobat's or PAC 2021.
 	\item \textbf{Manual Verification}: Manually check the items that automated tools flag for manual review.
 	      \begin{itemize}
-		      \item \textbf{Reading Order}: Verify that the reading order is logical.
+		      \item \textbf{\gidx{readingorder}{Reading Order}}: Verify that the reading order is logical.
 		      \item \textbf{Color Contrast}: Use a color contrast\index{accessibility!Manual Testing} analyzer to check text and background colors.
 		      \item \textbf{Alternate Text}: Ensure that alt text\index{images and media!alternative text} is meaningful and descriptive.
 	      \end{itemize}
-	\item \textbf{Assistive Technology Testing}: Test the document with a screen reader\index{screen reader} (e.g., NVDA, JAWS, VoiceOver\index{screen reader!VoiceOver}) to experience it as a user with a visual impairment\index{visual impairment} would.
+	\item \textbf{Assistive Technology Testing}: Test the document with a \gidx{screenreader}{screen reader} (e.g., NVDA, JAWS, VoiceOver\index{screen reader!VoiceOver}) to experience it as a user with a \gidx{visualimpairment}{visual impairment} would.
 	\item \textbf{Generate Report}: Document all findings, including failures\index{accessibility!failures} and areas needing improvement.
 \end{enumerate}
 
@@ -117,7 +249,7 @@ A full accessibility audit\index{accessibility!accessibility testing} involves a
 	\item Review each item in the report. Right-click on any failed item for options to fix it, explain the issue, or skip the rule.
 	\item Manually inspect the following:
 	      \begin{itemize}
-		      \item \textbf{Tags Panel}: Open the \textbf{Tags} panel to check the document's structure and reading order.
+		      \item \textbf{Tags Panel}: Open the \textbf{Tags} panel to check the document's structure and \gidx{readingorder}{reading order}.
 		      \item \textbf{Reading Order Tool}: Use the \textbf{Reading Order} tool to visually inspect and correct the reading order on each page.
 		      \item \textbf{Content Panel}: Check for any content that is not tagged and should be, or content that should be marked as an artifact.
 	      \end{itemize}
@@ -129,14 +261,14 @@ A full accessibility audit\index{accessibility!accessibility testing} involves a
 	\item \textbf{Using PAC 2021 (Windows\index{operating system!Windows})}:
 	      \begin{enumerate}
 		      \item Open your PDF\index{PDF} in PAC 2021.
-		      \item The tool will automatically perform a check against PDF/UA\index{PDF!UA} criteria.
+		      \item The tool will automatically perform a check against \gls{pdfua}\index{PDF!UA} criteria.
 		      \item The results are displayed in a clear, color-coded report.
-		      \item Use the \textbf{Screenreader\index{screen reader} Preview} to see how a screen reader\index{screen reader} would interpret the document structure\index{document structure}.
+		      \item Use the \textbf{Screenreader\index{screen reader} Preview} to see how a \gidx{screenreader}{screen reader} would interpret the document structure\index{document structure}.
 	      \end{enumerate}
 	\item \textbf{Using PAVE (Online)}:
 	      \begin{enumerate}
 		      \item Go to the PAVE website and upload your PDF.
-		      \item PAVE will analyze the document and present a report!accessibility\index{accessibility} of issues.
+		      \item PAVE will analyze the document and present a report!\gidx{accessibility}{accessibility} of issues.
 		      \item For some issues, PAVE will offer to automatically apply a fix.
 		      \item Download the remediated PDF and perform further manual checks.
 	      \end{enumerate}
@@ -154,7 +286,7 @@ Creating tagged PDFs from LaTeX\index{LaTeX} can be challenging, but with the ri
 \label{ssubsec:accessible-latex-pdfs}
 \begin{itemize}
 	\item \textbf{Use the \texttt{axessibility} package}: This package is designed to improve the accessibility of PDFs generated from LaTeX. It helps with tagging and structure.
-	\item \textbf{Use the \texttt{hyperref} package}: This is essential for creating clickable links\index{accessibility!links} and bookmarks, which are important for navigation.
+	\item \textbf{Use the \texttt{hyperref} package}: This is essential for creating clickable links\index{accessibility!links} and bookmarks, which are important for \gidx{navigation}{navigation}.
 	      \begin{verbatim}
         \usepackage[pdfa,
                     pdftitle={My Document Title},
@@ -182,7 +314,7 @@ Creating tagged PDFs from LaTeX\index{LaTeX} can be challenging, but with the ri
 
 \subsection{Best Practices for Source Documents (Microsoft Word, Adobe InDesign)}
 \label{subsec:best-practices-source-docs}
-Most modern office applications have built-in tools\index{sonification!tools} to improve accessibility\index{accessibility}.
+Most modern office applications have built-in tools\index{sonification!tools} to improve \gidx{accessibility}{accessibility}.
 
 \subsubsection{Microsoft Word}
 \label{ssubsec:ms-word-pdf}
@@ -198,7 +330,7 @@ Most modern office applications have built-in tools\index{sonification!tools} to
 \begin{itemize}
 	\item \textbf{Paragraph Styles}: Use paragraph styles to define headings\index{Markdown!headings}, body text, lists, etc. Map these styles to export tags (\textbf{Edit All Export Tags}).
 	\item \textbf{Object Export Options}: Add alt text to images via \textbf{Object Export Options}.
-	\item \textbf{Articles Panel}: Use the \textbf{Articles} panel to define the reading order of your document.
+	\item \textbf{Articles Panel}: Use the \textbf{Articles} panel to define the \gidx{readingorder}{reading order} of your document.
 	\item \textbf{Exporting to PDF}: When exporting to PDF (Print or Interactive), ensure that \textbf{Create Tagged PDF} is checked. For interactive PDFs, select \textbf{Use Structure for Tab Order}.
 \end{itemize}
 
@@ -213,13 +345,13 @@ The \textbf{Tags} panel in Acrobat is the primary tool for manual tagging\index{
 \subsubsection{Manual Tagging Steps}
 \label{ssubsec:manual-tagging-steps}
 \begin{enumerate}
-	\item \textbf{Open the Tags Panel}: Go to \textbf{View} > \textbf{Show/Hide} > \textbf{Navigation Panes} > \textbf{Tags}.
+	\item \textbf{Open the Tags Panel}: Go to \textbf{View} > \textbf{Show/Hide} > \textbf{\gidx{navigation}{Navigation} Panes} > \textbf{Tags}.
 	\item \textbf{Review Existing Tags}: Examine the tag tree to see if it accurately represents the document's structure.
 	\item \textbf{Create New Tags}: Right-click in the Tags panel and select \textbf{New Tag} to create a new tag. Choose the appropriate tag type (e.g., \texttt{<H1>}, \texttt{<P>}, \texttt{<Figure>}).
 	\item \textbf{Find Untagged Content}: In the Tags panel options, select \textbf{Find}. In the Find Element dialog, choose \textbf{Unmarked Content} and click \textbf{Find}.
 	\item \textbf{Tag Untagged Content}: For each piece of unmarked content, click \textbf{Tag Element} and select the appropriate tag type.
-	\item \textbf{Create Artifacts}: Some content (e.g., decorative lines, page numbers) should be ignored by screen readers\index{screen reader}. Use the Reading Order tool to select this content and mark it as \textbf{Background/Artifact}.
-	\item \textbf{Correct Reading Order}: In the Tags panel, you can drag and drop tags to change their order. The order in the Tags panel determines the order in which a screen reader\index{screen reader} reads the content.
+	\item \textbf{Create Artifacts}: Some content (e.g., decorative lines, page numbers) should be ignored by screen readers\index{screen reader}. Use the \gidx{readingorder}{Reading Order} tool to select this content and mark it as \textbf{Background/Artifact}.
+	\item \textbf{Correct Reading Order}: In the Tags panel, you can drag and drop tags to change their order. The order in the Tags panel determines the order in which a \gidx{screenreader}{screen reader} reads the content.
 	\item \textbf{Add Alternate Text}: Find the \texttt{<Figure>} tag for an image, right-click it, and select \textbf{Properties}. In the \textbf{Tag} tab, enter the alternate text.
 	\item \textbf{Tag Tables}: Ensure tables are correctly tagged with \texttt{<Table>}, \texttt{<TR>}, \texttt{<TH>} (for header cells), and \texttt{<TD>} (for data cells). Use the Table Editor in the Reading Order tool to associate header cells with data cells.
 \end{enumerate}
@@ -244,7 +376,7 @@ Remediation\index{accessibility!remediation} is the process of fixing the access
 \begin{itemize}
 	\item \textbf{Untagged PDF}: The document has no tags at all.
 	\item \textbf{Missing Alt Text}: Images are missing alternative text\index{images and media!alternative text}.
-	\item \textbf{Incorrect Reading Order}: The reading order is illogical.
+	\item \textbf{Incorrect \gidx{readingorder}{Reading Order}}: The reading order is illogical.
 	\item \textbf{No Document Language or Title}: The document properties are incomplete.
 	\item \textbf{Improperly Tagged Tables}: Tables lack proper header and data cell definitions.
 	\item \textbf{Low Color Contrast}: Text is difficult to read against its background.
@@ -262,7 +394,7 @@ Acrobat provides a rich set of tools for remediation.
 	\item \textbf{Language}: In \textbf{File} > \textbf{Properties} > \textbf{Advanced}, select the document language\index{PDF!document language}.
 \end{itemize}
 
-\subsubsection{Tagging and Reading Order Issues}
+\subsubsection{Tagging and \gidx{readingorder}{Reading Order} Issues}
 \label{ssubsec:tagging-reading-order-issues}
 \begin{itemize}
 	\item \textbf{Autotag Document}: If the document is completely untagged, use \textbf{Tools} > \textbf{Accessibility} > \textbf{Autotag Document} as a starting point. This will require significant manual cleanup.
@@ -275,14 +407,14 @@ Acrobat provides a rich set of tools for remediation.
 \begin{itemize}
 	\item \textbf{Prepare Form Tool}: Use the \textbf{Prepare Form} tool to add and edit form fields.
 	\item \textbf{Tag Form Fields}: Ensure each form field is tagged correctly in the tag tree.
-	\item \textbf{Add Tooltips}: Right-click a form field, select \textbf{Properties}, and in the \textbf{General} tab, add a descriptive \textbf{Tooltip}. The tooltip serves as the label for the form field for screen reader\index{screen reader} users.
+	\item \textbf{Add Tooltips}: Right-click a form field, select \textbf{Properties}, and in the \textbf{General} tab, add a descriptive \textbf{Tooltip}. The tooltip serves as the label for the form field for \gidx{screenreader}{screen reader} users.
 	\item \textbf{Set Tab Order}: In the \textbf{Page Thumbnails} panel, select all pages, right-click, and choose \textbf{Page Properties}. In the \textbf{Tab Order} tab, select \textbf{Use Document Structure\index{document structure}}.
 \end{itemize}
 
 \subsubsection{Table Remediation}
 \label{ssubsec:table-remediation}
 \begin{itemize}
-	\item \textbf{Reading Order Tool}: Select the table and click the \textbf{Table} button. This will show the table structure.
+	\item \textbf{\gidx{readingorder}{Reading Order} Tool}: Select the table and click the \textbf{Table} button. This will show the table structure.
 	\item \textbf{Table Editor}: Right-click the table in the Reading Order tool and select \textbf{Table Editor}.
 	\item \textbf{Assign Header Cells}: In the Table Editor, right-click on cells that should be headers and set their \textbf{Type} to \textbf{Header Cell}.
 	\item \textbf{Set Scope}: For each header cell, set its \textbf{Scope} to \textbf{Row}, \textbf{Column}, or \textbf{Both}.
@@ -311,10 +443,11 @@ Remediation\index{accessibility!remediation} in non-Adobe tools\index{sonificati
 \label{ssubsec:remediation-other-tools}
 \begin{itemize}
 	\item \textbf{Pave}: As mentioned, Pave can automatically fix some issues, such as adding a document title or tagging some elements. However, its capabilities are limited.
-	\item \textbf{Foxit PDF Editor}: Offers a suite of accessibility\index{accessibility} tools, including a tag editor, reading order tool, and autotagging features that can be used for remediation\index{accessibility!remediation strategies}.
+	\item \textbf{Foxit PDF Editor}: Offers a suite of \gidx{accessibility}{accessibility} tools, including a tag editor, \gidx{readingorder}{reading order} tool, and autotagging features that can be used for remediation\index{accessibility!remediation strategies}.
 	\item \textbf{CommonLook PDF GlobalAccess (Windows\index{operating system!Windows})\supercite{AllyantCommonLook}}: A commercial plugin for Acrobat that provides advanced remediation features, often simplifying complex tasks like table remediation.
 \end{itemize}
 
-\section{~~Conclusion}
+\section{~~Conclusion (Legacy Section)}
 \label{sec:pdf-report-conclusion}
 Achieving full PDF accessibility is a multi-step process that begins with accessible authoring practices and continues with thorough auditing and remediation. By using the tools and techniques outlined in this chapter, you can create PDF\index{PDF} documents that are usable by everyone, regardless of ability.
+

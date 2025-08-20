@@ -165,6 +165,56 @@
 \usepackage{xcolor}
 \usepackage{chngcntr}
 \usepackage{glossaries-extra}
+% ---- Glossary & Index Integration Additions ----
+\makeindex
+\setglossarystyle{indexgroup}
+\glsenablehyper
+% ---- Glossary Type Definitions (must precede loading entries) ----
+\newglossary[prg]{process}{prm}{prn}{Processes}
+\newglossary[std]{standard}{stm}{stn}{Standards}
+\newglossary[mod]{modality}{mom}{mon}{Modalities}
+\newglossary[dev]{device}{dvm}{dvn}{Devices}
+\newglossary[acr]{acronym}{acm}{acn}{Acronyms}
+\newglossary[cnc]{concept}{cnm}{cnn}{Concepts}
+\newglossary[fmt]{format}{fom}{fon}{Formats}
+\loadglsentries{IndexingGlossary/glossary_definitions.tex}
+\newcommand{\gidx}[3][]{\gls[#1]{#2}\index{#3}}
+\newcommand{\gidxnested}[4][]{\gls[#1]{#2}\index{#3!#4}}
+\newcommand{\indexsee}[2]{\index{#1|see{#2}}}
+\indexsee{artificial intelligence}{AI}
+\indexsee{TTS}{text-to-speech}
+\indexsee{LLM}{large language model}
+\indexsee{OCR remediation}{post-OCR remediation}
+\indexsee{handwriting OCR}{ICR}
+
+% ---- Acronym Definitions (protected against duplicate definition) ----
+\providecommand{\newacroif}[3]{%
+  \ifglsentryexists{#1}{}{%
+    \newacronym{#1}{#2}{#3}%
+  }%
+}
+\newacroif{ocr}{OCR}{optical character recognition}
+\newacroif{icr}{ICR}{intelligent character recognition}
+\newacroif{tts}{TTS}{text-to-speech}
+\newacroif{llm}{LLM}{large language model}
+\newacroif{uia}{UIA}{UI Automation}
+\newacroif{msaa}{MSAA}{Microsoft Active Accessibility}
+\newacroif{pdfua}{PDF/UA}{PDF Universal Accessibility}
+\newacroif{api}{API}{application programming interface}
+\newacroif{cpu}{CPU}{central processing unit}
+
+% ---- Printing Convenience Macro ----
+% Call \printallglossaries where you want the compiled glossary sections (e.g., back matter).
+\newcommand{\printallglossaries}{%
+  \printglossary[type=acronym,title={Acronyms}]%
+  \printglossary[type=process,title={Processes}]%
+  \printglossary[type=standard,title={Standards}]%
+  \printglossary[type=modality,title={Modalities}]%
+  \printglossary[type=device,title={Devices}]%
+  \printglossary[type=concept,title={Concepts}]%
+  \printglossary[type=format,title={Formats}]%
+  \printglossary[title={General Glossary}]%
+}
 \tagpdfsetup{
   activate-all,
   uncompress,
@@ -218,10 +268,7 @@
 }
 
 \appendixtitletocon
-\makeindex
-%\usepackage{glossaries}% TOC Formatting
 \makeglossaries
-\input{glossary_preamble.tex}
 
 \title{Assistive Technology Needs for Students with Visual Impairments}
 \author{Michael Ryan Hunsaker, M.Ed., Ph.D.}

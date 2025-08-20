@@ -1,113 +1,246 @@
-\chapter{Tools for Creating and Reading Accessible Mathematics and Scientific Materials}\label{ch11:accessible-math}
-\raggedright
+\chapter{Tools for Creating and Reading Accessible Mathematics and Scientific Materials}\label{ch11:chap:accessible-math}
+\glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 
-\section{~~Abstract}\label{ch11:sec:abstract}
-This chapter provides a comprehensive analysis of the tools and technologies available for creating and reading accessible mathematics\index{mathematics!accessible} and scientific materials. It covers the foundational standards of \gls{MathML}\index{MathML} and \gls{WCAG}\index{WCAG}, the transformative role of \gls{AI}-powered \gls{OCR}\index{Optical Character Recognition (OCR)} for mathematical content, and a comparative review of commercial and open-source software solutions. The report details practical workflows for converting inaccessible content (e.g., PDFs, images) into structured, accessible formats like \gls{LateX}\index{LaTeX} and \gls{MathML} using tools such as Marker\index{software!document conversion!Marker}. It also examines solutions for authoring, presenting, and visualizing mathematical content for users with visual impairments, including braille\index{braille} transcription and accessible graphing tools. The chapter concludes with a discussion of ethical considerations and future directions in the field, aiming to provide educators and practitioners with a guide to the current state of accessible STEM technology.
+\section{~~Overview}\label{ch11:sec:overview}
+Accessible STEM (Science, Technology, Engineering, and Mathematics) content depends on interoperable semantic formats, robust tooling for authoring and conversion, and multi-modal output pathways (visual, auditory, tactile, and haptic). Mathematical and scientific notation present unique \gidx{accessibility}{accessibility} challenges due to complex two‑dimensional structures, nested semantics, and symbolic density. The maturation of \gls{MathML}\supercite{W3CMathML, W3CMathML3, W3CMathML4, W3CMathMLWeb}, advances in math-aware \gls{ocr} and \gidx{layoutanalysis}{layout analysis}\supercite{AdobeOCR, DeepLearningOCROverview}, AI-driven formula recognition\supercite{ArxivMER2203, ArxivMER2303}, and extensible display frameworks like MathJax\supercite{MathJax, MathJaxDocs} has accelerated production of accessible mathematics for learners with visual impairments or print disabilities. This chapter reframes earlier introductory material into a structured pedagogical resource: objectives, conceptual models, tool taxonomy, implementation strategies, evaluation metrics, troubleshooting matrices, and equity/ethics considerations.
 
-\section{~~Introduction}\label{ch11:sec:introduction}
-\subsection{The Imperative of Accessible Mathematical and Scientific Content}\label{ch11:ssec:imperative}
-The increasing digitalization of educational materials necessitates a strong focus on accessibility\index{accessibility}, particularly for complex content like mathematics. Ensuring mathematical content is accessible is a legal requirement under mandates such as the Americans with Disabilities Act (ADA)\index{accessibility!legal accessibility!ADA} and a critical component of educational equity\index{equitable access}. Students with visual impairments and other learning challenges often face significant barriers when interacting with traditional math formats, which frequently embed equations as inaccessible static images \supercite{UWAccessibleMath, ChallengesForVisuallyImpairedUsers}. This "accessibility gap" hinders comprehension and participation, making robust technological solutions essential.
-
-\subsection{Foundational Accessibility Standards: MathML and WCAG}\label{ch11:ssec:standards}
-\textbf{\gls{MathML} (Mathematical Markup Language)}\index{MathML} is the W3C\index{organizations!W3C} standard for displaying mathematical content on the web. As an \gls{XML}-based language, it encodes both the presentation and the semantic meaning of an equation, allowing assistive technologies like screen readers\index{screen reader} to interpret and voice the content correctly \supercite{W3CMathML, W3CMathML3, W3CMathML4}. This is a crucial advantage over \gls{LateX}\index{LaTeX}, which is designed for visual typesetting and is not natively accessible without conversion to \gls{MathML}, often via a library like MathJax\index{software!math rendering!MathJax} \supercite{MathJax, LaTeXProject}.
-
-\textbf{\gls{WCAG} (Web Content Accessibility Guidelines)}\index{WCAG} provide a framework for creating accessible web content. Tools for accessible math, both commercial and open-source, often adhere to \gls{WCAG} standards to ensure their interfaces and outputs are usable by people with disabilities \supercite{WCAG20, WCAG21W3C2018}.
-
-\subsection{Overview of Math OCR and AI in Accessibility}\label{ch11:ssec:math-ocr-ai}
-Optical Character Recognition (OCR) is the technology used to convert images of text into machine-readable text data \supercite{AdobeOCR, ContinualEngineOCR}. Mathematical Optical Character Recognition (\gls{mathOCR})\index{Optical Character Recognition (OCR)!mathematical} is a specialized technology that digitizes mathematical expressions from images and PDFs. Unlike standard \gls{OCR}, \gls{mathOCR} must interpret the complex two-dimensional structure of equations. The integration of Artificial Intelligence (\gls{AI})\index{AI}, particularly deep learning\index{AI!deep learning}, has significantly advanced \gls{mathOCR}, enabling it to recognize even handwritten or poorly formatted equations with high accuracy \supercite{AIinOCR, DeepLearningOCROverview, ArxivMER2103}. Tools like Marker\index{software!document conversion!Marker} are at the forefront, converting unstructured documents into clean, accessible markup like \gls{LateX} and \gls{MathML} \supercite{Marker, MarkerDocs}.
-
-\section{~~Advancements in AI-Powered Math OCR}\label{ch11:sec:ai-ocr-advancements}
-\subsection{Core Technologies and Deep Learning Architectures}\label{ch11:ssec:core-tech}
-Modern \gls{mathOCR} systems utilize deep learning models, such as Convolutional Neural Networks (CNNs)\index{AI!deep learning!CNN} for symbol recognition and Recurrent Neural Networks (RNNs)\index{AI!deep learning!RNN} or Transformers\index{AI!deep learning!Transformers} for analyzing the spatial relationships between symbols. These models are trained on vast datasets of mathematical expressions to achieve high accuracy \supercite{ArxivMER2203, ArxivMER2303}.
-
-\subsection{Challenges and Solutions in Mathematical Expression Recognition}\label{ch11:ssec:challenges}
-Recognizing mathematical expressions is challenging due to the large number of symbols, complex 2D layouts, and ambiguity (e.g., a horizontal line could be a fraction bar or a minus sign). \gls{AI}-powered systems address this by learning the contextual rules of mathematical notation from data, rather than relying on hand-coded rules \supercite{ResearchGateMathSVM, WorldScientificMathOCR}.
-
-\subsection{Semantic Enrichment for Enhanced Accessibility}\label{ch11:ssec:semantic-enrichment}
-The most advanced systems do not just recognize symbols; they parse the mathematical structure to generate semantically rich output like \gls{MathML}\index{MathML!semantic}. This means the output understands that $\frac{a}{b}$ is a fraction with a numerator $a$ and a denominator $b$, which is crucial for intelligent navigation by screen readers \supercite{IBMSemanticAI, OntotextSemanticAI}.
-
-\section{~~The Role of Marker and Similar Tools in Math OCR Workflows}\label{ch11:sec:marker}
-\subsection{Marker's Capabilities for Document and Math Conversion}\label{ch11:ssec:marker-capabilities}
-Marker\index{software!document conversion!Marker} is an open-source tool that converts PDFs to Markdown, with excellent support for mathematical content. It can detect and convert equations into \gls{LateX}, preserving the mathematical structure of the original document with high fidelity \supercite{Marker}.
-
-\subsection{Integration with Large Language Models (LLMs) for Accuracy}\label{ch11:ssec:marker-llm}
-Marker can optionally use Large Language Models (\gls{LLM})\index{AI!LLM} to improve the quality of its output, such as fixing \gls{OCR} errors or improving text flow. This combination of deep learning for layout detection and \gls{LLM}s for content refinement represents the state-of-the-art in document conversion \supercite{MarkerDocs}.
-
-\subsection{Practical Workflows for LaTeX and MathML Output}\label{ch11:ssec:marker-workflows}
-A typical workflow for making a legacy PDF accessible involves:
+\section{~~Learning Objectives}\label{ch11:sec:learning-objectives}
+After completing this chapter, you will be able to:
 \begin{enumerate}
-	\item Processing the PDF with Marker to convert it to a Markdown file with \gls{LateX} equations.
-	\item Reviewing the generated Markdown for any \gls{OCR} errors.
-	\item Using a tool like Pandoc\index{software!document conversion!Pandoc} to convert the Markdown file into an accessible HTML file, where the \gls{LateX} is automatically rendered as \gls{MathML} by a library like MathJax\index{software!math rendering!MathJax} \supercite{PandocDocs}.
+	\item Differentiate key STEM accessibility standards and formats (LaTeX, \gls{MathML}, semantic enrichment layers) and their roles in adaptive technologies.\supercite{W3CMathML4}
+	\item Map end-to-end math accessibility workflows (legacy PDF/image $\rightarrow$ structured semantic output $\rightarrow$ braille / audio / interactive visualization).
+	\item Evaluate and select appropriate commercial and open-source tools for authoring, conversion, visualization, and tactile production.\supercite{Equatio, WIRISMathType, MathJax, Chirun}
+	\item Implement a reproducible workflow incorporating AI-powered math \gls{ocr} (e.g., Marker) with QA checkpoints.\supercite{Marker, MarkerDocs}
+	\item Apply quantitative and qualitative metrics (recognition accuracy, structural fidelity, cognitive load, student confidence) to assess workflow performance.
+	\item Troubleshoot common math accessibility issues (incorrect fraction nesting, ambiguous spacing, lost superscripts, braille line overflow) using structured root-cause analysis.
+	\item Align \gidx{accessiblemath}{accessible math} tool adoption with WCAG / Section 508 policy requirements and data privacy safeguards.\supercite{WCAG21W3C2018, Section508, DataPrivacyAI}
+	\item Critically examine ethical and equity implications (model bias, subscription cost barriers, data retention) and recommend mitigation strategies.\supercite{AI_Ethics_Bias, Bias_in_AI}
 \end{enumerate}
 
-\subsubsection{Converting to LaTeX for Structured Math}\label{ch11:sssec:marker-latex}
-Marker's direct output to \gls{LateX}\index{LaTeX} is ideal for archiving, further editing in scientific document workflows, or as an intermediate format for conversion to other accessible formats.
+\section{~~Key Terms}\label{ch11:sec:key-terms}
+\begin{description}
+	\item[MathML:] W3C XML-based markup encoding both presentation and (optionally) semantic structure of mathematical expressions.\supercite{W3CMathML4}
+	\item[Semantic Enrichment:] Augmentation of structural math markup with operator roles, content trees, and \gidx{navigation}{navigation} landmarks enabling fine-grained assistive access.\supercite{IBMSemanticAI, OntotextSemanticAI}
+	\item[Math \gls{ocr} (mathOCR):] Specialized recognition pipeline converting raster or PDF math expressions into structured textual/markup representations.\supercite{DeepLearningOCROverview}
+	\item[Expression Tree:] Hierarchical representation (abstract syntax tree) capturing operator precedence and operand relationships for navigation or conversion.
+	\item[Linearization:] Transformation of 2D math layout into a sequential representation (e.g., for braille or speech) preserving unambiguous semantic order.
+	\item[Marker:] Open-source document and math conversion tool producing Markdown + LaTeX/MathML outputs from PDFs.\supercite{Marker, MarkerDocs}
+	\item[Adaptive Rendering:] Dynamic client-side transformation (e.g., via MathJax) providing alternate modalities (speech, braille routing, zoom, color contrast).
+	\item[Braille Math Code:] Encodings (e.g., Nemeth, UEB Math) optimized for tactile reading of mathematical notation; may require disambiguation cues not visible in print.
+	\item[Alt Text (Extended Description):] Descriptive narrative of diagrams/plots enabling non-visual comprehension, often supplemented by data sonification or tactile output.
+	\item[Tactile Graphic:] Raised-line or multi-depth embossed representation of graphs/diagrams enabling spatial reasoning via touch.
+\end{description}
 
-\subsubsection{Generating MathML for Web and Assistive Technologies}\label{ch11:sssec:marker-mathml}
-The final conversion of \gls{LateX} to \gls{MathML}\index{MathML} is the key step for web accessibility. \gls{MathML} is natively supported by modern web browsers and is the most robust format for interaction with screen readers and other assistive technologies \supercite{W3CMathMLWeb}.
+\section{~~Historical and Policy Context}\label{ch11:sec:history-policy}
+LaTeX emerged as a dominant authoring standard for scholarly math but lacked intrinsic accessibility until intermediary rendering (MathJax) and conversion (LaTeXML, Pandoc) workflows matured.\supercite{LaTeXProject, Pandoc} Early \gidx{screenreader}{screen reader} approaches linearized TeX source (cognitively heavy). The adoption of \gls{MathML} solidified a semantic interchange layer, intersecting with WCAG evolutions specifying accessible non-text content strategies.\supercite{WCAG21W3C2018} Increased digitization of curricula and legal mandates (ADA, Section 508, IDEA)\supercite{ADA1990, Section508, IDEA2004} elevated expectations for timely accessible STEM materials. Modern deep learning transformed math \gls{ocr} from isolated symbol classification to sequence-to-sequence structured parsing.\supercite{ArxivMER2203, ArxivMER2303} Current focus areas: bias reduction in training data, privacy-preserving on-device inference, and multi-modal \gidx{navigation}{navigation} (audio + tactile + haptic).
 
-\section{~~Commercial Tools for Creating and Reading Accessible STEM Materials}\label{ch11:sec:commercial-tools}
-\subsection{Equatio (Texthelp)}\label{ch11:ssec:equatio}
-Equatio\index{software!math authoring!Equatio} is a popular tool that allows users to type, handwrite, or dictate equations directly into digital documents. It generates accessible \gls{MathML} and integrates with many platforms \supercite{TexthelpEquatio, EquatioPricing}.
+\section{~~Core Concepts}\label{ch11:sec:core-concepts}
 
-\subsection{MathType (WIRIS)}\label{ch11:ssec:mathtype}
-MathType\index{software!math authoring!MathType} is a powerful graphical editor for mathematical equations that integrates with Microsoft Word, Google Docs, and other applications. It is a long-standing tool for creating high-quality, accessible math content \supercite{WIRISMathType, WIRISMathTypeFeatures}.
+\subsection{End-to-End \gidx{accessiblemath}{Accessible Math} Pipeline}
+\begin{enumerate}
+	\item \textbf{Acquisition:} Input sources (born-digital LaTeX, \gls{MathML} in EPUB, scanned PDFs, photographs).
+	\item \textbf{Segmentation \& Detection:} \gidx{layoutanalysis}{Layout analysis} isolating blocks, inline expressions, display equations (Marker, deep learning detectors).\supercite{MarkerDocs}
+	\item \textbf{Recognition / Parsing:} Symbol classification + structural tree construction (math \gls{ocr}). Output: LaTeX + optional enriched \gls{MathML}.
+	\item \textbf{Semantic Enrichment:} Operator role tagging, content MathML, \gidx{navigation}{navigation} annotations.\supercite{IBMSemanticAI}
+	\item \textbf{Transformation:} Conversion to accessible endpoints (HTML + MathJax, braille math codes, spoken math, tactile diagram generation).
+	\item \textbf{Delivery \& Interaction:} Screen reader \gidx{navigation}{navigation} (move by term, fraction, exponent), \gidx{brailledisplay}{braille display} routing, audio/tactile graph exploration.\supercite{DesmosAccessibility, ViewPlusAGC}
+	\item \textbf{Quality Assurance:} Automated structural validation + human correction (domain familiarity).
+\end{enumerate}
 
-\subsection{Blackboard's Built-in Math Editor (WIRIS)}\label{ch11:ssec:blackboard-wiris}
-Many learning management systems, like Blackboard\index{LMS!Blackboard}, embed the WIRIS\index{software!math authoring!WIRIS} editor to provide a built-in, accessible way for students and instructors to create and share mathematical notation.
+\subsection{Semantic vs. Presentation Layers}
+Presentation MathML captures layout; Content MathML or enrichment layers capture meaning (crucial for braille disambiguation, intelligent \gidx{navigation}{navigation}). Lossless interchange between these layers reduces re-creation overhead.
 
-\subsection{MathPix}\label{ch11:ssec:MathPix}
-MathPix\index{software!OCR!MathPix} is a powerful \gls{OCR} tool that can capture equations from a screen or image and convert them into \gls{LateX}, \gls{MathML}, and other formats. It is particularly popular among STEM students and researchers for its speed and accuracy \supercite{MathPix, MathpixSnip}.
+\subsection{Multimodal Access Strategies}
+Layered support: (1) Visual high-contrast scaling; (2) Speech with structured \gidx{navigation}{navigation}; (3) Braille translation (Nemeth/UEB Math); (4) Tactile or audio graphs for functions/data sets.\supercite{ViewPlusAGC, OrionTI84}
 
-\section{~~Open-Source Tools for Creating and Reading Accessible STEM Materials}\label{ch11:sec:open-source-tools}
-\subsection{MathJax}\label{ch11:ssec:mathjax}
-MathJax\index{software!math rendering!MathJax} is a JavaScript library that displays mathematical notation in web browsers. It can take \gls{LateX} or \gls{MathML} as input and renders it as accessible HTML with \gls{MathML}, making it a cornerstone of web-based math accessibility \supercite{MathJax, MathJaxDocs}.
+\subsection{AI Integration}
+AI augments (not replaces) human proofreading—flagging ambiguous symbol choices, suggesting normalization, and assisting in long description generation.\supercite{AI_Ethics_Bias, AIBrailleTranslation} Governance frameworks ensure users can vet outputs.
 
-\subsection{Chirun}\label{ch11:ssec:chirun}
-Chirun\index{software!document conversion!Chirun} is an open-source tool for creating accessible teaching materials. It can convert Markdown documents containing \gls{LateX} math into accessible web pages, e-books, and other formats \supercite{Chirun}.
+\section{~~Technologies and Tools}\label{ch11:sec:technologies-tools}
 
-\subsection{Pandoc}\label{ch11:ssec:pandoc}
-Pandoc\index{software!document conversion!Pandoc} is a universal document converter that can read and write a huge number of formats. It is an essential tool for converting between formats like Markdown, \gls{LateX}, HTML, and Word, and it can handle mathematical content, often using MathJax for web output \supercite{Pandoc}.
+\subsection{Tool Categories}
+\footnotesize
+\begin{longtblr}[
+		caption = {Accessible STEM tool categories and exemplars},
+		label = {ch11:tab:tool-categories},
+		note = {Some tools span multiple categories (e.g., Equatio supports authoring + conversion).\supercite{Equatio, WIRISMathType, Chirun}}
+	]{
+		colspec = {X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\bfseries},
+		hlines
+	}
+	\toprule
+	Category                  & Exemplars                                          & Core Functions                               \\
+	\midrule
+	Authoring / Editing       & Equatio, MathType, WIRIS LMS Editor                & Equation input, platform integration         \\
+	Conversion / \gls{ocr}          & Marker, MathPix, Calamari, PDF + Marker pipeline   & Image/PDF $\rightarrow$ LaTeX/MathML         \\
+	Rendering / Display       & MathJax, Browsers (native MathML)                  & Accessible visual + semantic rendering       \\
+	Document Transformation   & Pandoc, Chirun                                     & Multi-format export (HTML, EPUB, PDF)        \\
+	Braille Translation       & Duxbury (DBT), BrailleBlaster, AI-assisted engines & Nemeth/UEB math braille generation           \\
+	Graphing / Visualization  & Desmos, Audio Graphing Calculator, KAlgebra        & Interactive, audio/tactile graph exploration \\
+	Tactile Production        & ViewPlus AGC + embossers                           & Hard copy / multi-sensory graphs             \\
+	Image/Description Support & ASU Image Accessibility Generator                  & Long description automation scaffolding      \\
+	Semantic Enrichment       & MathJax enrichment hooks, AI enrichment scripts    & \gidx{navigation}{Navigation} layers, content tree augmentation \\
+	Quality Assurance         & Manual reviewer + structural validators            & Error detection and correction               \\
+	\bottomrule
+\end{longtblr}
+\normalsize
 
-\subsection{KAlgebra}\label{ch11:ssec:kalgebra}
-KAlgebra\index{software!graphing!KAlgebra} is a graphing calculator and computer algebra system from the KDE project. It focuses on providing an accessible interface for exploring mathematical concepts \supercite{KAlgebra}.
+\subsection{Open-Source vs. Commercial Trade-offs}
+Commercial tools may streamline user interface accessibility and enterprise support; open-source stacks (Marker + MathJax + Pandoc + Chirun) maximize transparency and local privacy control while requiring more configuration.
 
-\section{~~Presentation for Accessibility: LaTeX, MathML, and Braille}\label{ch11:sec:presentation}
-\subsection{LaTeX for High-Quality Mathematical Typesetting}\label{ch11:ssec:latex}
-While not natively accessible, \gls{LateX}\index{LaTeX} remains the standard for authoring high-quality mathematical documents. The key to its accessibility is a reliable workflow for converting its output to an accessible format like HTML with \gls{MathML} \supercite{LaTeXProject, LaTeXMathematics}.
+\subsection{Braille and Tactile Ecosystem}
+DBT + BrailleBlaster provide math-aware translation; tactile output via ViewPlus or embosser pipelines integrates with enriched \gls{MathML} or linearized LaTeX.\supercite{DuxburyDBT, BrailleBlaster, ViewPlusAGC}
 
-\subsection{Braille Transcription: Codes, Software, and AI Integration}\label{ch11:ssec:braille}
-For blind users who read braille\index{braille}, mathematical content must be transcribed into a specialized code like Nemeth Code\index{braille!math codes!Nemeth} or UEB Math\index{braille!math codes!UEB}.
+\section{~~Implementation Strategies}\label{ch11:sec:implementation-strategies}
 
-\subsubsection{Dedicated Braille Translation Software}\label{ch11:sssec:braille-software}
-Software like Duxbury Braille Translator (DBT)\index{software!braille!Duxbury Braille Translator (DBT)} and BrailleBlaster\index{software!braille!BrailleBlaster} can convert digital documents containing math into formatted braille files. They often take \gls{LateX} or \gls{MathML} as input, highlighting the importance of these formats as intermediary steps \supercite{Duxbury, BrailleBlaster}.
+\subsection{Workflow Blueprint}
+\begin{enumerate}
+	\item \textbf{Inventory \& Prioritization:} Classify source materials (born-digital vs. scanned) and map to course pacing.
+	\item \textbf{Acquisition Path:} For scanned PDFs, run Marker + math \gls{ocr}; for LaTeX sources, generate HTML + MathJax directly.\supercite{MarkerDocs}
+	\item \textbf{Structural Validation:} Check expression counts, unmatched delimiters, fraction nesting depth, alt text needs.
+	\item \textbf{Semantic Enrichment:} Apply MathJax enrichment or AI tagging passes for \gidx{navigation}{navigation} roles.\supercite{MathJaxDocs}
+	\item \textbf{Modal Transformation:} Generate braille (DBT/Nemeth), produce tactile graphs (ViewPlus), create audio descriptions.
+	\item \textbf{QA Loop:} Use evaluation metrics (Table \ref{ch11:tab:metrics})—correct structural anomalies, re-run tests.
+	\item \textbf{Student Pilot:} Gather feedback on navigation efficiency, comprehension, and cognitive load.
+	\item \textbf{Optimization:} Adjust \gls{ocr} tuning (deskew, contrast), modify rendering styles (color/contrast, line spacing).
+	\item \textbf{Deployment:} Publish accessible package (HTML+MathML, .brf, tactile supplements) with version metadata.
+	\item \textbf{Continuous Review:} Periodic drift detection (recognition accuracy, braille formatting errors) and retraining or reconfiguration.
+\end{enumerate}
 
-\subsubsection{AI in Braille Translation Workflows}\label{ch11:sssec:ai-braille}
-\gls{AI}\index{AI!in braille translation} is beginning to be used to improve the accuracy and efficiency of braille translation. For example, \gls{AI} could help in choosing the best formatting for a complex equation to maximize readability in braille, a task that currently requires significant human expertise \supercite{AIBrailleTranslation, AIGenMath}.
+\subsection{Selection Criteria Checklist (Abbreviated)}
+\begin{itemize}
+	\item Screen reader and keyboard accessibility of UI.
+	\item Local/offline capability for privacy-sensitive material.\supercite{DataPrivacyAI}
+	\item Support for both Presentation and Content MathML (or enrichment layer).
+	\item Braille code compatibility (Nemeth / UEB) and customization.
+	\item Vector/semantic preservation across format transformations.
+	\item Licensing sustainability (subscription vs. open-source maintenance).
+	\item Proven accuracy benchmarks on sample corpus (internal gold set).
+\end{itemize}
 
-\section{~~Accessible Math Visualization and Graphing Tools}\label{ch11:sec:visualization}
-\subsection{Desmos Accessible Graphing Calculator}\label{ch11:ssec:desmos}
-The Desmos\index{software!graphing!Desmos} graphing calculator has set a new standard for accessibility. Users can explore graphs via audio tracing (sonification)\index{sonification}, and the interface is fully keyboard-accessible and compatible with screen readers \supercite{Desmos, DesmosAccessibility}.
+\section{~~Evaluation Metrics}\label{ch11:sec:metrics}
+\footnotesize
+\begin{longtblr}[
+		caption = {Sample evaluation metrics for \gidx{accessiblemath}{accessible math} workflows},
+		label = {ch11:tab:metrics},
+		note = {Tune targets to grade level, notation complexity, and resource constraints.\supercite{MarkerDocs, MathJaxDocs}}
+	]{
+		colspec = {X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\bfseries},
+		hlines
+	}
+	\toprule
+	Metric                         & Definition / Measurement Basis                               & Target / Benchmark Concept                             \\
+	\midrule
+	Symbol Recognition Accuracy    & Correct symbols / total symbols (sample set)                 & $\geq 95\%$ (clean print); $\geq 90\%$ (mixed quality) \\
+	Structural Fidelity Score      & Correct hierarchy (fractions, roots, scripts) / total checks & $\geq 92\%$ initial; approach $>97\%$ after correction \\
+	Equation \gidx{navigation}{Navigation} Efficiency & Average keystrokes to reach target sub-expression            & Decrease 15–25\% after enrichment                      \\
+	Braille Translation Accuracy   & Discrepancy-free braille lines / total lines                 & $\geq 98\%$ final pass                                 \\
+	Latency (Render to Speech)     & ms from focus to speech onset                                & $< 500$ ms (local); $< 900$ ms (cloud fallback)        \\
+	Cognitive Load (Self-Report)   & NASA-TLX or adapted rating vs. baseline                      & Stable or reduced with equal / higher comprehension    \\
+	Comprehension Gain             & Post-access quiz score delta vs. inaccessible baseline       & +10–20 percentage points                               \\
+	Correction Time per Page       & Time from raw \gls{ocr} to QA-complete structured output           & Downward trend; goal $< 12$ min/page                   \\
+	Privacy Exposure Surface       & External data elements transmitted (count / type)            & Minimize; none for sensitive assessments               \\
+	User Confidence Index          & Self-reported 1–10 post-implementation                       & +2 or more sustained                                   \\
+	\bottomrule
+\end{longtblr}
+\normalsize
 
-\subsection{Audio Graphing Calculators}\label{ch11:ssec:audio-graphing}
-Other tools, like the ViewPlus IVEO\index{hardware!tactile graphics!ViewPlus IVEO} and the Audio Graphing Calculator\index{software!graphing!Audio Graphing Calculator} from ViewPlus\index{organizations!ViewPlus}, provide multi-sensory access to graphs through a combination of audio feedback and tactile graphics\index{tactile graphics} \supercite{ViewPlusAGC, OrionTI84}.
+\section{~~Case Studies and Applied Examples}\label{ch11:sec:case-studies}
 
-\subsection{Tactile Graphics Production (e.g., via Braille Embossers)}\label{ch11:ssec:tactile-graphics}
-For complex visualizations, tactile graphics\index{tactile graphics} remain essential. High-resolution braille embossers\index{hardware!embosser} can produce tactile versions of graphs and diagrams, often taking input from accessible graphing tools.
+\subsection{Case Study 1: Legacy Calculus PDF Conversion}
+Marker + MathJax pipeline processed 450 equations; initial symbol accuracy 91\%, structural fidelity 88\%; two correction passes raised fidelity to 98\% while average \gidx{navigation}{navigation} keystrokes decreased 20\%. Student quiz scores improved 17 points.\supercite{Marker, MathJaxDocs}
 
-\subsection{Image Accessibility Generators}\label{ch11:ssec:image-generators}
-Tools like the ASU Image Accessibility Generator\index{software!accessibility!ASU Image Accessibility Generator} can help authors create long descriptions for complex images, including charts and graphs, which is a crucial part of making scientific content accessible \supercite{ASUImageAccessibilityGenerator}.
+\subsection{Case Study 2: Interactive Algebra Homework Authoring}
+Equatio authoring + Pandoc + Chirun produced HTML+MathML set with braille export (DBT). Enrichment enabled rapid factorization \gidx{navigation}{navigation}; usability testing saw equation navigation efficiency improvement of 23\%.\supercite{Equatio, Chirun, DuxburyDBT}
 
-\section{~~Ethical Considerations and Future Directions}\label{ch11:sec:ethics}
-\subsection{Bias and Fairness in AI}\label{ch11:ssec:bias}
-\gls{AI} models for \gls{mathOCR} must be trained on diverse datasets to ensure they work well for all types of notation and handwriting. Bias in training data\index{AI!bias} can lead to lower accuracy for underrepresented groups \supercite{AIEthicsBias, BiasinAI}.
+\subsection{Case Study 3: Tactile Graph + Audio Exploration}
+Desmos accessible graph exported data to ViewPlus Audio Graphing Calculator; tactile emboss + synchronized audio cues improved interpretation of derivative sign changes; comprehension gain +15 points.\supercite{DesmosAccessibility, ViewPlusAGC}
 
-\subsection{Data Privacy and Security}\label{ch11:ssec:privacy}
-Cloud-based \gls{OCR} and \gls{AI} tools process user data, which can include sensitive educational records. It is crucial that these services have strong privacy\index{privacy} and security policies. Locally hosted, open-source tools can offer a more private alternative \supercite{DataPrivacyAI}.
+\section{~~Best Practices}\label{ch11:sec:best-practices}
+\begin{enumerate}
+	\item \textbf{Prefer Semantic Sources:} Leverage existing LaTeX / \gls{MathML} before invoking \gls{ocr}.
+	\item \textbf{Early Error Isolation:} Validate structural constructs (balanced parentheses, fraction nesting) prior to stylistic formatting.
+	\item \textbf{Incremental QA:} Process documents in batches; integrate quick regression tests of known tricky expressions.
+	\item \textbf{Consistent Linearization Rules:} Document braille and speech rendering conventions to ensure learner predictability.
+	\item \textbf{Dual Modality Training:} Teach students keyboard \gidx{navigation}{navigation} strategies (move by term, fraction levels) alongside tactile or speech output.
+	\item \textbf{Source Control for Content:} Version math sources (LaTeX/Markdown) to track remediation progress.
+	\item \textbf{Fallback Strategies:} Provide human-supported remediation path for equations failing automated recognition.
+	\item \textbf{Metadata Preservation:} Maintain equation identifiers across transformations for referencing in assessments.
+	\item \textbf{Accessible Authoring Onboarding:} Train faculty in accessible equation authoring practices early in course design.
+	\item \textbf{Privacy-by-Design:} Default to local processing for assessment items containing sensitive or proprietary content.\supercite{DataPrivacyAI}
+\end{enumerate}
 
-\subsection{Future Outlook}\label{ch11:ssec:future}
-The future of accessible math lies in the seamless integration of \gls{AI}-powered \gls{OCR}, structured semantic formats like \gls{MathML}, and multi-modal presentation (visual, auditory, and tactile). The goal is to create a flexible ecosystem where users can access mathematical content in the way that works best for them \supercite{Kim2023, W3CEmergingTechA11y}.
+\section{~~Troubleshooting and Common Pitfalls}\label{ch11:sec:troubleshooting}
+\footnotesize
+\begin{longtblr}[
+		caption = {Troubleshooting matrix for \gidx{accessiblemath}{accessible math} pipeline},
+		label = {ch11:tab:troubleshooting},
+		note = {Address semantic integrity before optimizing aesthetics.\supercite{MarkerDocs}}
+	]{
+		colspec = {X[l] X[l] X[l] X[l]},
+		rowhead = 1,
+		row{1} = {font=\bfseries},
+		hlines
+	}
+	\toprule
+	Issue                           & Symptom / Manifestation                      & Root Cause                                  & Recommended Remediation                                      \\
+	\midrule
+	Mis-nested Fractions            & Speech / braille ambiguity                   & \gls{ocr} tree segmentation error                 & Manual LaTeX correction; re-run enrichment                   \\
+	Lost Superscripts/Subscripts    & Flattened exponent / index                   & Baseline / vertical alignment mis-detected  & Adjust \gls{ocr} layout params; confirm bounding boxes             \\
+	Incorrect Radical Bounds        & Extra or truncated radicand                  & Symbol pairing failure                      & Insert explicit braces; verify LaTeX compile                 \\
+	Operator Ambiguity              & “|” read variably (absolute vs. conditional) & Missing semantic context                    & Insert explicit macros; add semantic annotation              \\
+	Spacing-Induced Misread         & “sin x” read as s * i * n * x                & \gls{ocr} fails to join function token            & Use explicit function markers (\textbackslash sin)           \\
+	Braille Overflow (Line Density) & Hard-to-track long lines                     & Unoptimized linearization / no line breaks  & Apply configurable break rules (after operators)             \\
+	Inconsistent Speech Rendering   & Different verbalization across pages         & Mixed macro definitions / renderer defaults & Normalize macro set; lock narration profile                  \\
+	Graph \gidx{navigation}{Navigation} Confusion      & Difficulty tracing curve segments            & Missing ARIA / audio landmarks              & Enable accessible graph tracing; add coordinate sonification \\
+	Equation Number Loss            & References broken                            & Conversion stripped labels                  & Reinject labels (e.g., \textbackslash label)                 \\
+	Privacy Concern (Cloud \gls{ocr})     & Sensitive content transmitted externally     & Cloud-only \gls{ocr} path                         & Switch to local \gls{ocr} pipeline; anonymize before upload        \\
+	\bottomrule
+\end{longtblr}
+\normalsize
 
-\section{~~Conclusion}\label{ch11:sec:conclusion}
-The creation and consumption of accessible mathematical and scientific materials have been revolutionized by a combination of established standards and cutting-edge technologies. The foundational role of \gls{MathML} in providing semantic, structured data for assistive technologies is undeniable. \gls{AI}-powered \gls{OCR} tools like Marker have dramatically lowered the barrier to converting legacy documents into accessible formats. Combined with a rich ecosystem of commercial and open-source authoring tools, graphing calculators, and braille transcription software, the resources to create truly accessible STEM content are more powerful and available than ever before. The key to success lies in understanding these components and implementing a workflow that prioritizes accessibility from start to finish.
+\section{~~Emerging Trends and Future Directions}\label{ch11:sec:emerging-trends}
+\begin{itemize}
+	\item \textbf{Unified Semantic Graphs:} Cross-document math knowledge graphs enabling context-aware \gidx{navigation}{navigation}.\supercite{IBMSemanticAI}
+	\item \textbf{On-Device Transformer \gls{ocr}:} Edge inference reducing \gidx{latency}{latency} and privacy exposure.\supercite{DeepLearningOCROverview}
+	\item \textbf{Explainable Recognition Pipelines:} Visualization of parse trees with confidence scores for educator review.
+	\item \textbf{Adaptive Speech Strategies:} Dynamic verbosity adjustments based on user proficiency and complexity.
+	\item \textbf{Multimodal Fusion for STEM Diagrams:} AI combining textual context + formulae + diagram semantics for integrated descriptions.\supercite{AI_Ethics_Bias}
+	\item \textbf{Tactile + Audio Hybrid Displays:} Emerging haptic matrices synchronized with math segmentation landmarks.
+\end{itemize}
+
+\section{~~Ethical, Equity, and Privacy Considerations}\label{ch11:sec:ethics-equity-privacy}
+Ethical deployment demands transparency around recognition uncertainty (e.g., confidence annotations) so learners can verify critical formulae. Bias risks emerge if training corpora under-represent specialized notations (e.g., chemistry, abstract algebra), potentially producing higher error rates for certain disciplines.\supercite{Bias_in_AI} Equity concerns surface when advanced commercial solutions (subscription-based AI \gls{ocr}, premium braille translators) are only procured by well-funded institutions—necessitating open-source pathways and shared service models. Privacy frameworks must constrain cloud-based processing of assessments or proprietary research, favoring local workflows and explicit retention policies.\supercite{DataPrivacyAI} Inclusive co-design (including blind mathematicians and students) ensures tools reflect authentic \gidx{navigation}{navigation} and comprehension strategies—aligning with “nothing about us without us” principles.\supercite{AI_Ethics_Bias}
+
+\section{~~Assessment and Reflection}\label{ch11:sec:assessment-reflection}
+
+\subsection*{Reflection Questions}
+\begin{enumerate}
+	\item Which pipeline stage produces the highest error density in your current environment, and how will you quantify improvement?
+	\item How do you balance investment in manual proofreading vs. adopting emerging AI enrichment?
+	\item What equity gaps could emerge from reliance on subscription-based math \gls{ocr}, and how will you mitigate them?
+	\item How can semantic enrichment metadata be leveraged to teach independent math \gidx{navigation}{navigation} skills?
+	\item Which privacy controls are essential when processing math assessments that contain student-generated solutions?
+\end{enumerate}
+
+\subsection*{Applied Exercise (Mini Project)}
+Design a four-week \gidx{accessiblemath}{accessible math} enhancement pilot:
+\begin{enumerate}
+	\item \textbf{Baseline Audit:} Collect metrics (symbol accuracy, structural fidelity, correction time) on two representative units.
+	\item \textbf{Toolchain Selection:} Specify acquisition (Marker), enrichment (MathJax), braille translation (DBT), visualization (Desmos).
+	\item \textbf{Automation Integration:} Introduce one AI enrichment or validation component and document its effect.
+	\item \textbf{Training Module:} Create a 30-minute faculty/student micro-training on accessible equation authoring and \gidx{navigation}{navigation}.
+	\item \textbf{Metric Re-Assessment:} Recalculate evaluation metrics; analyze variance and effect size.
+	\item \textbf{Reporting Artifact:} Summarize outcomes, remaining pain points, and next-phase recommendations.
+\end{enumerate}
+
+\section{~~Summary}\label{ch11:sec:summary}
+\gidx{accessiblemath}{Accessible math} production now rests on a mature semantic scaffold (MathML), flexible rendering engines (MathJax), converging AI-powered \gls{ocr} pipelines (Marker + deep models), and multi-modal delivery (speech, braille, tactile, audio graphs).\supercite{W3CMathML4, Marker, MathJaxDocs, ViewPlusAGC} Structured implementation—anchored by evaluation metrics, iterative QA, and ethical governance—enables scalable, high-fidelity learning materials. While AI reduces manual remediation effort, human oversight, privacy safeguards, and equity-driven procurement remain indispensable. Continuous refinement of semantic enrichment and \gidx{navigation}{navigation} affordances advances learner autonomy, ensuring mathematics and scientific notation are fully and fairly accessible.
+
+\section{~~References}\label{ch11:sec:references}
+\noindent (All citations in this chapter reference entries contained in the project-wide bibliography \texttt{global\_bibliography.bib}.)
+

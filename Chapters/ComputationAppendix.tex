@@ -1,9 +1,10 @@
 \chapter{Detecting Screen Reader Latency}\label{chap:computationappendix}
+\glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 
-Evaluations were completed on laptops purchased in 2024-2025. One with 8GB RAM, one with 16GB RAM, one with 24GB, one with 32GB, and one with 64GB RAM.
+Evaluations were completed on laptops purchased in 2024-2025. One with 8GB \gidx{ram}{RAM}, one with 16GB RAM, one with 24GB, one with 32GB, and one with 64GB RAM.
 
 \section{~~JAWS Latency Quantification}
-To detect screen reader latency I used the following suite of tools written in python.
+To detect \gidx{screenreader}{screen reader} \gidx{latency}{latency} I used the following suite of tools written in python.
 
 \begin{pyverbatim}
 	import os
@@ -175,7 +176,7 @@ To detect screen reader latency I used the following suite of tools written in p
 \end{pyverbatim}
 
 \section{~~JAWS Latency Quantification \& Printing}
-Data collected and the below analysis indicates that screen reader latency is significantly affected by hardware specifications, particularly RAM and CPU performance. Further testing and data collection are necessary to establish comprehensive guidelines for optimal configurations.
+Data collected and the below analysis indicates that screen reader latency is significantly affected by \gidx{hardware}{hardware} specifications, particularly RAM and \gls{cpu} performance. Further testing and data collection are necessary to establish comprehensive guidelines for optimal configurations.
 
 \begin{pyverbatim}
 	import matplotlib.pyplot as plt
@@ -301,7 +302,7 @@ Data collected and the below analysis indicates that screen reader latency is si
 	813	241	160	72	20	299	119	108	89	18	716	210	122	57	12	807	227	156	71	9
 	""",
 
-	'Navigation Commands': """JAWS8GB	JAWS16GB	JAWS24GB	JAWS32GB	JAWS64GB	NVDA8GB	NVDA16GB	NVDA24GB	NVDA32GB	NVDA64GB	SUPERNOVA8GB	SUPERNOVA16GB	SUPERNOVA24GB	SUPERNOVA32GB	SUPERNOVA64GB
+	'\gidx{navigation}{Navigation} Commands': """JAWS8GB	JAWS16GB	JAWS24GB	JAWS32GB	JAWS64GB	NVDA8GB	NVDA16GB	NVDA24GB	NVDA32GB	NVDA64GB	SUPERNOVA8GB	SUPERNOVA16GB	SUPERNOVA24GB	SUPERNOVA32GB	SUPERNOVA64GB
 	418	225	241	41	41	274	196	95	82	32	336	187	208	25	30
 	361	388	219	68	50	313	172	184	92	26	320	316	184	51	39
 	218	305	109	20	24	336	169	121	30	35	120	245	72	8	14
@@ -508,7 +509,7 @@ Data collected and the below analysis indicates that screen reader latency is si
 	# === THRESHOLDS FOR PAIRWISE COMPARISONS ===
 	thresholds = {
 	'Keystroke Latency': 25,  # ms
-	'Navigation Latency': 50,  # ms
+	'\gidx{navigation}{Navigation} Latency': 50,  # ms
 	'Load Time': 5000,  # ms
 	}
 
@@ -615,7 +616,7 @@ Data collected and the below analysis indicates that screen reader latency is si
 
 	sns.boxplot(x='RAM', y='Latency', hue='ScreenReader', hue_order=SR_ORDER,
 	data=df_navigation, ax=axes[1], palette=palette, dodge=True)
-	axes[1].axhline(y=thresholds_dict['Navigation Latency'], color='red', linestyle='--')
+	axes[1].axhline(y=thresholds_dict['\gidx{navigation}{Navigation} Latency'], color='red', linestyle='--')
 	axes[1].set_title('Navigation Latency by RAM and Screen Reader')
 	axes[1].set_ylabel('Latency (ms)')
 	axes[1].legend(title='Screen Reader')
@@ -640,7 +641,7 @@ Data collected and the below analysis indicates that screen reader latency is si
 	print("Processing data and generating plots...")
 
 	keystroke_long = melt_and_order('Keystroke Latency', datasets['Keystroke Response'])
-	navigation_long = melt_and_order('Navigation Latency', datasets['Navigation Commands'])
+	navigation_long = melt_and_order('\gidx{navigation}{Navigation} Latency', datasets['Navigation Commands'])
 	load_long = melt_and_order('Load Time', datasets['Load Time'])
 	load_long = convert_to_ms(load_long, 'Latency')
 
@@ -651,7 +652,7 @@ Data collected and the below analysis indicates that screen reader latency is si
 
 	make_individual_boxplot(keystroke_long, "Keystroke Latency by RAM and Screen Reader",
 	os.path.join(SAVE_DIR, "keystroke_latency.png"), thresholds['Keystroke Latency'], palette=color_palette)
-	make_individual_boxplot(navigation_long, "Navigation Latency by RAM and Screen Reader",
+	make_individual_boxplot(navigation_long, "\gidx{navigation}{Navigation} Latency by RAM and Screen Reader",
 	os.path.join(SAVE_DIR, "navigation_latency.png"), thresholds['Navigation Latency'], palette=color_palette)
 	make_individual_boxplot(load_long, "Load Time by RAM and Screen Reader",
 	os.path.join(SAVE_DIR, "load_time.png"), thresholds['Load Time'], palette=color_palette)
@@ -757,11 +758,11 @@ Data collected and the below analysis indicates that screen reader latency is si
 
 \textbf{Pairwise Comparison Analysis}: NVDA’s advantages remain substantial: 109.3\,ms faster than JAWS, 76.8\,ms faster than SuperNova, and 101.84\,ms faster than Narrator (all p<0.001), each far exceeding a 25\,ms practical disruption threshold. JAWS vs. Narrator (7.46\,ms, p=0.627) and SuperNova vs. Narrator (25.04\,ms, p=0.091) are now both non‑significant, indicating convergence among the three slower products. Educationally, NVDA alone delivers a latency profile reliably below perceptual disruption, while others cluster in a higher, less predictable regime.
 
-\subsection{ Navigation Latency Descriptive Statistics}
+\subsection{ \gidx{navigation}{Navigation} Latency Descriptive Statistics}
 
 \scriptsize
 \begin{longtblr}[
-		caption = {Navigation Latency Descriptives: NVDA again demonstrates superior performance with the lowest mean and most consistent response times, while JAWS and Narrator exhibit similar patterns of high variability and right-skewed distributions that impede efficient content exploration.},
+		caption = {\gidx{navigation}{Navigation} Latency Descriptives: NVDA again demonstrates superior performance with the lowest mean and most consistent response times, while JAWS and Narrator exhibit similar patterns of high variability and right-skewed distributions that impede efficient content exploration.},
 		label = {tab:stat-navigation-desc},
 		entry = {Navigation Descriptives},
 		note = {Educational Implications: Navigation commands (heading jumps, table traversal, form navigation) require sub-200ms response for fluid content exploration. NVDA approaches this threshold (127ms mean) while competitors exceed 200ms with high variability. Wide IQRs in JAWS (301.5ms) and Narrator (347.25ms) create unpredictable navigation timing that disrupts reading comprehension and information location strategies essential for research tasks.}
@@ -777,13 +778,13 @@ Data collected and the below analysis indicates that screen reader latency is si
 \end{longtblr}
 \normalsize
 
-\textbf{Navigation Latency Analysis}: NVDA again provides the fastest and most consistent navigation responses (mean 126.97\,ms; modest skew 0.90). JAWS (232.10\,ms) and Narrator (224.63\,ms) now sit much closer to each other, with nearly overlapping dispersion (IQR 301.5 vs. 299.5\,ms) and similar tail shape, while SuperNova (198.56\,ms) is intermediate but exhibits the heaviest skew (1.58) and kurtosis (1.76), signaling sporadic stalls. The convergence of JAWS and Narrator reduces differentiation among higher‑latency engines, leaving NVDA as the only option approaching fluid sub‑150\,ms exploration.
+\textbf{\gidx{navigation}{Navigation} Latency Analysis}: NVDA again provides the fastest and most consistent navigation responses (mean 126.97\,ms; modest skew 0.90). JAWS (232.10\,ms) and Narrator (224.63\,ms) now sit much closer to each other, with nearly overlapping dispersion (IQR 301.5 vs. 299.5\,ms) and similar tail shape, while SuperNova (198.56\,ms) is intermediate but exhibits the heaviest skew (1.58) and kurtosis (1.76), signaling sporadic stalls. The convergence of JAWS and Narrator reduces differentiation among higher‑latency engines, leaving NVDA as the only option approaching fluid sub‑150\,ms exploration.
 
-\subsection{ Navigation Latency Two-Way ANOVA}
+\subsection{ \gidx{navigation}{Navigation} Latency Two-Way ANOVA}
 
 \footnotesize
 \begin{longtblr}[
-		caption = {Navigation Latency ANOVA: Even stronger RAM effects than keystroke latency (F=1250.7), confirming that navigation commands place heavier memory demands on screen reader architectures, with persistent interaction effects across different software platforms.},
+		caption = {\gidx{navigation}{Navigation} Latency ANOVA: Even stronger RAM effects than keystroke latency (F=1250.7), confirming that navigation commands place heavier memory demands on screen reader architectures, with persistent interaction effects across different \gidx{software}{software} platforms.},
 		label = {tab:stat-navigation-anova},
 		entry = {Navigation ANOVA},
 		note = {Memory Dependency: Navigation commands exhibit stronger RAM sensitivity than keystroke processing, suggesting these operations involve more complex buffer management and content parsing. The elevated interaction F-ratio (45.6) indicates that screen reader architecture differences become more pronounced under navigation workloads, with memory-constrained systems showing divergent performance patterns across different software implementations.}
@@ -799,13 +800,13 @@ Data collected and the below analysis indicates that screen reader latency is si
 \end{longtblr}
 \normalsize
 
-\textbf{Navigation ANOVA Interpretation}: Updated F‑ratios (Screen Reader: 98.60; RAM: 1310.36; Interaction: 47.56) confirm navigation commands are even more RAM‑intensive than keystrokes. Architecture still contributes large systematic variance, and the strengthened interaction indicates memory upgrades yield uneven benefits—greater for higher-latency engines—necessitating platform‑specific tuning of caching and parsing strategies.
+\textbf{\gidx{navigation}{Navigation} ANOVA Interpretation}: Updated F‑ratios (Screen Reader: 98.60; RAM: 1310.36; Interaction: 47.56) confirm navigation commands are even more RAM‑intensive than keystrokes. Architecture still contributes large systematic variance, and the strengthened interaction indicates memory upgrades yield uneven benefits—greater for higher-latency engines—necessitating platform‑specific tuning of caching and parsing strategies.
 
-\subsection{ Navigation Latency Pairwise Comparisons}
+\subsection{ \gidx{navigation}{Navigation} Latency Pairwise Comparisons}
 
 \footnotesize
 \begin{longtblr}[
-		caption = {Navigation Latency Pairwise Tests: NVDA maintains its performance leadership in navigation tasks, delivering 105ms faster response than JAWS and 113ms faster than Narrator—differences that significantly impact content exploration efficiency in educational contexts.},
+		caption = {\gidx{navigation}{Navigation} Latency Pairwise Tests: NVDA maintains its performance leadership in navigation tasks, delivering 105ms faster response than JAWS and 113ms faster than Narrator—differences that significantly impact content exploration efficiency in educational contexts.},
 		label = {tab:stat-navigation-pairs},
 		entry = {Navigation Pairwise},
 		note = {Content Access Implications: Navigation latency directly affects information location speed and reading comprehension flow. NVDA's advantages translate to faster document traversal, more efficient research strategies, and reduced cognitive load during content exploration. The 50ms threshold for navigation commands proves less critical than the 25ms keystroke threshold, but mean differences exceeding 100ms represent substantial improvements in educational productivity.}
@@ -823,13 +824,13 @@ Data collected and the below analysis indicates that screen reader latency is si
 \end{longtblr}
 \normalsize
 
-\textbf{Navigation Pairwise Analysis}: NVDA retains large, practically meaningful advantages over JAWS (105.12\,ms), SuperNova (71.59\,ms), and Narrator (97.65\,ms), all p<0.001. JAWS vs. Narrator (7.47\,ms, p=0.632) and SuperNova vs. Narrator (26.07\,ms, p=0.085) are non‑significant, underscoring convergence among non‑NVDA products. Consequently, only NVDA consistently supports rapid structural traversal critical for efficient reading and research workflows.
+\textbf{\gidx{navigation}{Navigation} Pairwise Analysis}: NVDA retains large, practically meaningful advantages over JAWS (105.12\,ms), SuperNova (71.59\,ms), and Narrator (97.65\,ms), all p<0.001. JAWS vs. Narrator (7.47\,ms, p=0.632) and SuperNova vs. Narrator (26.07\,ms, p=0.085) are non‑significant, underscoring convergence among non‑NVDA products. Consequently, only NVDA consistently supports rapid structural traversal critical for efficient reading and research workflows.
 
 \subsection{ Load Time Descriptive Statistics}
 
 \scriptsize
 \begin{longtblr}[
-		caption = {Load Time Descriptives: NVDA demonstrates dramatically superior application startup performance with 9-second mean load times versus 48-53 seconds for competitors—a difference that fundamentally alters daily workflow accessibility and user experience.},
+		caption = {Load Time Descriptives: NVDA demonstrates dramatically superior application startup performance with 9-second mean load times versus 48-53 seconds for competitors—a difference that fundamentally alters daily workflow \gidx{accessibility}{accessibility} and user experience.},
 		label = {tab:stat-loadtime-desc},
 		entry = {Load Time Descriptives},
 		note = {Workflow Impact: Application startup latency affects daily accessibility patterns and user adoption. NVDA's sub-10-second startup enables spontaneous technology use, while competitors requiring 45+ seconds create barriers to casual computer access. The 5000ms practical threshold represents user tolerance limits—delays exceeding this boundary discourage regular technology engagement and create dependency on assistive technology specialists for system management.}
@@ -873,7 +874,7 @@ Data collected and the below analysis indicates that screen reader latency is si
 
 \footnotesize
 \begin{longtblr}[
-		caption = {Load Time Pairwise Tests: NVDA's 44-second startup advantage over competitors represents a transformational difference that shifts assistive technology from planned-use tools to spontaneous-access solutions, fundamentally altering user independence and technology integration patterns.},
+		caption = {Load Time Pairwise Tests: NVDA's 44-second startup advantage over competitors represents a transformational difference that shifts assistive technology from planned-use tools to spontaneous-access solutions, fundamentally altering user \gidx{independence}{independence} and technology integration patterns.},
 		label = {tab:stat-loadtime-pairs},
 		entry = {Load Time Pairwise},
 		note = {User Experience Revolution: The 44-second startup advantage eliminates the primary barrier to casual computer access for screen reader users. This difference transforms assistive technology from specialized tools requiring advance planning into transparent system components enabling spontaneous productivity. Commercial screen readers show equivalent (poor) startup performance, while NVDA's efficiency enables natural technology integration patterns comparable to sighted user experiences.}
