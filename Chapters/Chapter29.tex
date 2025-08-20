@@ -5,7 +5,7 @@
 %====================================================
 \section{~~Overview}
 \label{sec:sr29-overview}
-The \textbf{iWing} application (American Printing House for the Blind—APH) for the Monarch \gidx{multilinebrailledisplay}{multi-line braille display} device and the \textbf{Dot Canvas} application for the Dot Pad / Dot Pad X (Dot Incorporation) each advance multi-line tactile and \gidx{braille}{braille} access. Both ecosystems pair \gidx{software}{software} with specialized \gidx{hardware}{hardware} to deliver dynamic \gidx{tactilegraphics}{tactile graphics}, structured braille text, and interactive educational workflows. They differ in (a) architectural scope, (b) pedagogical emphasis, (c) creation vs.\ consumption focus, (d) integration pathways (closed curriculum alignment vs.\ open creative canvas), and (e) collaboration / distribution paradigms. Interoperability with desktop companion or content preparation workflows aligns with \gidx{accessibility}{accessibility} API standards (\gls{msaa}, \gls{uia}) when cross-platform exchange or authoring utilities are employed. This chapter:
+The \textbf{iWing} application (American Printing House for the Blind—APH) for the Monarch \gidx{multilinebrailledisplay}{multi-line braille display} device and the \textbf{Dot Canvas} application for the Dot Pad / Dot Pad X (Dot Incorporation) each advance multi-line tactile and \gidx{braille}{braille} access. Both ecosystems pair \gidx{software}{software} with specialized \gidx{hardware}{hardware} to deliver dynamic \gidx{tactilegraphics}{tactile graphics}, structured braille text, and interactive educational workflows. They differ in (a) architectural scope, (b) pedagogical emphasis, (c) creation vs. consumption focus, (d) integration pathways (closed curriculum alignment vs. open creative canvas), and (e) collaboration / distribution paradigms. Interoperability with desktop companion or content preparation workflows aligns with \gidx{accessibility}{accessibility} API standards (\gls{msaa}, \gls{uia}) when cross-platform exchange or authoring utilities are employed. This chapter:
 \begin{itemize}
 	\item Maps functional and pedagogical differences between iWing (Monarch) and Dot Canvas (Dot Pad/X).
 	\item Analyzes hardware-display architecture (pin density, braille line integration, rendering pipeline).
@@ -20,7 +20,7 @@ The \textbf{iWing} application (American Printing House for the Blind—APH) for
 \label{sec:sr29-learning-objectives}
 After completing this chapter, you will be able to:
 \begin{enumerate}
-	\item Differentiate architectural and pedagogical design philosophies of iWing (Monarch) vs.\ Dot Canvas (Dot Pad/X).
+	\item Differentiate architectural and pedagogical design philosophies of iWing (Monarch) vs. Dot Canvas (Dot Pad/X).
 	\item Explain how display hardware (pin count, braille line integration) influences educational and creative workflows.
 	\item Assess user experience factors: onboarding, tactile rendering fidelity, collaboration, and customization.
 	\item Design a deployment strategy (hardware + software + training) aligned to specific instructional or rehabilitation goals.
@@ -55,12 +55,12 @@ Refreshable braille technology historically focused on single-line displays due 
 \section{~~Core Concepts}
 \label{sec:sr29-core-concepts}
 \begin{enumerate}
-	\item \textbf{Display Architecture Trade-offs}: Unified large multi-line braille + graphics (Monarch) vs.\ hybrid (graphics matrix + separate braille strip) shapes reading vs.\ creation emphasis.
+	\item \textbf{Display Architecture Trade-offs}: Unified large multi-line braille + graphics (Monarch) vs. hybrid (graphics matrix + separate braille strip) shapes reading vs. creation emphasis.
 	\item \textbf{Workflow Orientation}: iWing anchors structured textbook consumption; Dot Canvas emphasizes ad-hoc diagram creation and collaboration.
-	\item \textbf{Content Pipeline}: eBRF ingestion, math/diagram metadata vs.\ real-time drawing gestures and rapid pin updates.
+	\item \textbf{Content Pipeline}: eBRF ingestion, math/diagram metadata vs. real-time drawing gestures and rapid pin updates.
 	\item \textbf{Spatial Cognition Support}: Multi-line braille lines facilitate paragraph/structure scanning; graphics pin arrays support shape recognition patterns.
 	\item \textbf{Interaction Modes}: Navigation (pan/zoom), annotation, shape primitives, freehand drawing, and structured page \gidx{navigation}{navigation}.
-	\item \textbf{Pedagogical Integration}: Curriculum alignment vs.\ flexible cross-domain usage influences teacher training scope.
+	\item \textbf{Pedagogical Integration}: Curriculum alignment vs. flexible cross-domain usage influences teacher training scope.
 	\item \textbf{Equity and Access}: Device cost, funding pathways, and library integration affect adoption breadth.
 \end{enumerate}
 
@@ -83,7 +83,7 @@ Refreshable braille technology historically focused on single-line displays due 
 	\item \textbf{Institutional Funding}: Education grants, vocational rehabilitation funding, philanthropic subsidies influence rollout pace\supercite{floridareading_monarch}.
 	\item \textbf{Software Distribution}: iWing tightly coupled with device ecosystem; Dot Canvas leveraged via mainstream app store (lower friction updates)\supercite{dot_appstore}.
 	\item \textbf{Total Cost of Ownership}: Includes training (teachers, students), maintenance (pin calibration, firmware), and content licensing.
-	\item \textbf{Scalability Considerations}: Classroom set deployment vs.\ individual creative/rehab units alters support cost curves.
+	\item \textbf{Scalability Considerations}: Classroom set deployment vs. individual creative/rehab units alters support cost curves.
 \end{itemize}
 
 %====================================================
@@ -99,16 +99,16 @@ Refreshable braille technology historically focused on single-line displays due 
 		rowhead = 1,
 		hlines
 	}
-	\textbf{Dimension}          & \textbf{iWing (Monarch)}                                                            & \textbf{Dot Canvas (Dot Pad/X)}                                                        & \textbf{Notes}                           \\
-	Primary Orientation         & Structured textbook + curriculum consumption                                        & Creative, exploratory drawing + collaboration                                          & Consumption vs.\ creation emphasis       \\
+		extbf{Dimension}          & \textbf{iWing (Monarch)}                                                            & \textbf{Dot Canvas (Dot Pad/X)}                                                        & \textbf{Notes}                           \\
+	Primary Orientation         & Structured textbook + curriculum consumption                                        & Creative, exploratory drawing + collaboration                                          & Consumption vs. creation emphasis       \\
 	Display Architecture        & Large multi-line braille + full-page tactile pins\supercite{floridareading_monarch} & High-density graphics matrix + single 20-cell braille line\supercite{visionaid_dotpad} & Hybrid design separates text line        \\
 	Content Format Focus        & eBRF, accessible textbooks\supercite{nelowvision_monarch}                           & Freehand, shapes, imported diagrams/PDF\supercite{ces_dotcanvas}                       & Different ingestion complexity           \\
-	Annotation / Markup         & Educator-centered structured annotations                                            & Freeform markup, drawing, instant tactile feedback                                     & Pedagogical scaffolding vs.\ spontaneity \\
+	Annotation / Markup         & Educator-centered structured annotations                                            & Freeform markup, drawing, instant tactile feedback                                     & Pedagogical scaffolding vs. spontaneity \\
 	Collaboration Model         & Teacher-led navigation of standardized content                                      & Real-time shared drawing + cloud updates\supercite{ces_dotcanvas}                      & Distinct multi-user flow                 \\
 	Onboarding Complexity       & Higher (curriculum alignment, library integration)                                  & Moderate / lower (app install + pairing)                                               & Impacts training time                    \\
 	VoiceOver Integration       & Device-level reading synergy                                                        & iOS VoiceOver integration for text labels\supercite{rnib_dotpad}                       & Both leverage screen reader semantics    \\
 	Customization Scope         & Navigation, display routing, page-level structure                                   & Drawing tools, zoom/pan, shapes, translation settings                                  & Different configuration axes             \\
-	STEM / Math Support         & Textbook math diagrams via curated content                                          & Manual creation or import of diagrams; evolving tooling                                & Formal vs.\ ad-hoc math tactile          \\
+	STEM / Math Support         & Textbook math diagrams via curated content                                          & Manual creation or import of diagrams; evolving tooling                                & Formal vs. ad-hoc math tactile          \\
 	Real-Time Rendering Latency & Optimized for stable page navigation                                                & Optimized for rapid line/shape tactile updates                                         & Rendering pipeline goals differ          \\
 \end{longtblr}
 \normalsize
@@ -117,7 +117,7 @@ Refreshable braille technology historically focused on single-line displays due 
 \section{~~Implementation Strategies}
 \label{sec:sr29-implementation}
 \begin{enumerate}
-	\item \textbf{Needs Assessment}: Distinguish structured curricular reliance (choose iWing) vs.\ exploratory/creative/rehab emphasis (Dot Canvas).
+	\item \textbf{Needs Assessment}: Distinguish structured curricular reliance (choose iWing) vs. exploratory/creative/rehab emphasis (Dot Canvas).
 	\item \textbf{Pilot Scope}: Start limited cohort (one class / small creative lab) to gather latency and user satisfaction metrics.
 	\item \textbf{Training Sequencing}: Phase 1—hardware orientation; Phase 2—navigation or drawing primitives; Phase 3—annotation / collaboration; Phase 4—advanced workflows (STEM diagrams or multi-user sessions).
 	\item \textbf{Content Pipeline Governance}: Validate eBRF formatting or drawing import fidelity before large-scale rollout.
@@ -156,7 +156,7 @@ Institution leveraged iWing for standardized textbooks and Dot Canvas for explor
 \section{~~Best Practices}
 \label{sec:sr29-best-practices}
 \begin{itemize}
-	\item Align device selection to primary pedagogical mode (structured vs.\ creative).
+	\item Align device selection to primary pedagogical mode (structured vs. creative).
 	\item Provide tactile orientation guides (legends, pin density expectations) early.
 	\item Standardize annotation symbols to reduce cognitive load when switching contexts.
 	\item Measure comprehension, not only mechanical navigation speed.
@@ -180,16 +180,16 @@ Institution leveraged iWing for standardized textbooks and Dot Canvas for explor
 		hlines
 	}
 	Issue                                                & RootCause                                 & ImpactOnLearner              & ResolutionSteps                                                     & PreventivePractice                            & ReferenceKey           \\
-	Device fails to pair (Dot Pad)                       & Bluetooth profile conflict / stale cache  & Delayed session start        & Reset Bluetooth, re-pair via iOS settings, restart app              & Pairing checklist; firmware currency          & visionaid_dotpad       \\
-	Slow page navigation (Monarch)                       & Large eBRF file segmentation inefficiency & Reading flow disruption      & Re-segment eBRF; update firmware; clear cache                       & Pre-process large texts into logical sections & nelowvision_monarch    \\
-	Uneven tactile pin actuation                         & Dust/debris or mechanical wear            & Misinterpretation of shapes  & Run device self-test; clean per vendor guidance; service if failing & Scheduled maintenance cycle                   & floridareading_monarch \\
-	Annotation not saving (iWing)                        & Interrupted write operation / low storage & Data loss; rework required   & Retry save; ensure storage availability; apply patch                & Storage monitoring; autosave interval policy  & paths_monarch          \\
-	Diagram misaligned after zoom (Dot Canvas)           & Improper coordinate transformation        & Spatial confusion            & Reset zoom; re-render; update to latest app version                 & Regression tests for zoom/pan logic           & ces_dotcanvas          \\
-	Braille line context lost switching modes            & Mode change event not propagated          & Comprehension slowdown       & Toggle mode again; refresh focus via navigation command             & Firmware validation of mode transitions       & rnib_dotpad            \\
-	High latency on complex diagrams                     & Excessive vertex/pin updates per frame    & Cognitive delay; frustration & Simplify path data; enable progressive rendering                    & Author guidelines for diagram complexity      & ces_dotcanvas          \\
-	Inconsistent braille translation                     & Mismatched language/table settings        & Misreading symbols           & Align locale + table across devices; lock config                    & Central configuration profile                 & ed_gov_aph             \\
-	User confusion between creation vs consumption modes & Poor training delineation                 & Inefficient workflow         & Provide role-based training modules; visual/haptic mode cues        & Onboarding curriculum segmentation            & dot_appstore           \\
-	Collaboration overwrite conflicts                    & No version control or locking             & Lost changes; merge errors   & Introduce timestamped versions; adopt naming scheme                 & Collaboration SOP and change log              & ces_dotcanvas          \\
+	Device fails to pair (Dot Pad)                       & Bluetooth profile conflict / stale cache  & Delayed session start        & Reset Bluetooth, re-pair via iOS settings, restart app              & Pairing checklist; firmware currency          & visionaid\_dotpad       \\
+	Slow page navigation (Monarch)                       & Large eBRF file segmentation inefficiency & Reading flow disruption      & Re-segment eBRF; update firmware; clear cache                       & Pre-process large texts into logical sections & nelowvision\_monarch    \\
+	Uneven tactile pin actuation                         & Dust/debris or mechanical wear            & Misinterpretation of shapes  & Run device self-test; clean per vendor guidance; service if failing & Scheduled maintenance cycle                   & floridareading\_monarch \\
+	Annotation not saving (iWing)                        & Interrupted write operation / low storage & Data loss; rework required   & Retry save; ensure storage availability; apply patch                & Storage monitoring; autosave interval policy  & paths\_monarch          \\
+	Diagram misaligned after zoom (Dot Canvas)           & Improper coordinate transformation        & Spatial confusion            & Reset zoom; re-render; update to latest app version                 & Regression tests for zoom/pan logic           & ces\_dotcanvas          \\
+	Braille line context lost switching modes            & Mode change event not propagated          & Comprehension slowdown       & Toggle mode again; refresh focus via navigation command             & Firmware validation of mode transitions       & rnib\_dotpad            \\
+	High latency on complex diagrams                     & Excessive vertex/pin updates per frame    & Cognitive delay; frustration & Simplify path data; enable progressive rendering                    & Author guidelines for diagram complexity      & ces\_dotcanvas          \\
+	Inconsistent braille translation                     & Mismatched language/table settings        & Misreading symbols           & Align locale + table across devices; lock config                    & Central configuration profile                 & ed\_gov\_aph             \\
+	User confusion between creation vs consumption modes & Poor training delineation                 & Inefficient workflow         & Provide role-based training modules; visual/haptic mode cues        & Onboarding curriculum segmentation            & dot\_appstore           \\
+	Collaboration overwrite conflicts                    & No version control or locking             & Lost changes; merge errors   & Introduce timestamped versions; adopt naming scheme                 & Collaboration SOP and change log              & ces\_dotcanvas          \\
 \end{longtblr}
 \normalsize
 
@@ -221,30 +221,16 @@ Institution leveraged iWing for standardized textbooks and Dot Canvas for explor
 \textbf{Short Answer}
 \begin{enumerate}
 	\item Identify two architectural distinctions between Monarch and Dot Pad/X influencing workflow design.
-	\item Explain how eBRF structure contributes to reading efficiency vs.\ ad-hoc drawing.
+	\item Explain how eBRF structure contributes to reading efficiency vs. ad-hoc drawing.
 	\item Describe a metric set to evaluate multi-line tactile deployment success.
 \end{enumerate}
 
 \textbf{Applied Exercise} Draft a pilot evaluation comparing iWing and Dot Canvas over four weeks: specify latency measurement method, comprehension quiz design, annotation success criteria, and collaboration effectiveness indicators. Produce a recommendation matrix.
 
-\textbf{Reflection} Discuss trade-offs between investing in a structured curriculum-aligned tactile ecosystem vs.\ a flexible creative tactile platform for a mixed-discipline educational program.
+\textbf{Reflection} Discuss trade-offs between investing in a structured curriculum-aligned tactile ecosystem vs. a flexible creative tactile platform for a mixed-discipline educational program.
 
 %====================================================
 \section{~~Summary}
 \label{sec:sr29-summary}
-iWing (Monarch) and Dot Canvas (Dot Pad/X) both expand multi-line braille and tactile interaction, yet embody divergent philosophies: structured, curriculum-aligned consumption vs.\ open, creative and collaborative generation. Hardware architecture (unified multi-line vs.\ hybrid matrix + braille strip) cascades into differences in navigation, annotation, and real-time rendering. Effective institutional deployment hinges on aligning ecosystem strengths with pedagogical objectives, instituting rigorous performance and comprehension metrics, and addressing equity through funding and scheduling strategies. Emerging innovations in pin density, AI simplification, and hybrid haptic modalities promise enhanced spatial cognition—tempered by sustainability and privacy considerations. Strategic adoption blends structured content reliability with creative tactile fluency to maximize learner outcomes.
+iWing (Monarch) and Dot Canvas (Dot Pad/X) both expand multi-line braille and tactile interaction, yet embody divergent philosophies: structured, curriculum-aligned consumption vs. open, creative and collaborative generation. Hardware architecture (unified multi-line vs. hybrid matrix + braille strip) cascades into differences in navigation, annotation, and real-time rendering. Effective institutional deployment hinges on aligning ecosystem strengths with pedagogical objectives, instituting rigorous performance and comprehension metrics, and addressing equity through funding and scheduling strategies. Emerging innovations in pin density, AI simplification, and hybrid haptic modalities promise enhanced spatial cognition—tempered by sustainability and privacy considerations. Strategic adoption blends structured content reliability with creative tactile fluency to maximize learner outcomes.
 
-%====================================================
-\section{~~Legacy Content Mapping}
-\label{sec:sr29-legacy-mapping}
-\begin{tabular}{p{0.43\textwidth} p{0.52\textwidth}}
-	\textbf{Original Narrative Segment}       & \textbf{Mapped / Incorporated In}                           \\
-	Purpose and Device Support                & Overview; Comparative Feature Matrix; Technologies          \\
-	Core Functionalities (iWing / Dot Canvas) & Core Concepts; Technologies; Implementation Strategies      \\
-	User Experience and Accessibility         & Comparative Feature Matrix; Best Practices; Troubleshooting \\
-	Ecosystem and Integration                 & Technologies; Implementation Strategies; Standards          \\
-	Unique Features                           & Core Concepts; Comparative Feature Matrix; Emerging Trends  \\
-	Conclusion                                & Summary (Section~\ref{sec:sr29-summary})                    \\
-\end{tabular}
-
-% End of Chapter 29

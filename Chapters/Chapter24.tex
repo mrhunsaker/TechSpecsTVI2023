@@ -123,7 +123,7 @@ Managing event floods (e.g., rapid focus churn, live regions) requires coalescin
 	\item \textbf{Event Optimization}: Eliminate redundant focus cycling; group atomic UI updates to reduce chattiness.
 	\item \textbf{Testing Matrix}: Evaluate across JAWS/NVDA/Narrator with scenarios: form entry, data grids, dialogs, live regions, complex navigation.
 	\item \textbf{Mode Management}: Provide clear indicators and consistent key handling for browse vs. focus mode transitions.
-	\item \textbf{Localization & Language}: Expose lang attributes for proper speech/braille switching.
+	\item \textbf{Localization \& Language}: Expose lang attributes for proper speech/braille switching.
 	\item \textbf{Telemetry (Optional)}: Collect anonymous performance metrics (latency) with consent and privacy safeguards.
 	\item \textbf{Regression Automation}: Scripted UIA property snapshots compared across builds; diff for unintended semantic regressions.
 	\item \textbf{Add-On/Scripting Governance}: Code review pipeline for scripts (security, stability) prior to distribution.
@@ -234,19 +234,3 @@ A new Windows-native note app implements complete UIA Text and Value patterns. W
 \label{sec:sr-summary}
 Windows screen readers orchestrate accessibility APIs, input interception, internal modeling, and multimodal output to create an efficient, navigable non-visual user experience. Robust design depends on exposing rich UIA semantics, managing event flow, balancing verbosity, and sustaining performance. Architectural diversity among JAWS (script extensibility), NVDA (open modularity), and Narrator (baseline integration) demonstrates complementary innovation pathways. Emerging AI-driven summarization and adaptive verbosity promise productivity gains but require careful ethical guardrails. Sustainable accessibility hinges on standardized semantic exposure, continuous user feedback, and security-conscious extensibility.
 
-%====================================================
-\section{~~Legacy Content Mapping}
-\label{sec:sr-legacy-mapping}
-\begin{tabular}{p{0.38\textwidth} p{0.55\textwidth}}
-	\textbf{Original Section / Table}           & \textbf{Mapped / Integrated Into}                                                                \\
-	Interaction with Windows Environment (APIs) & Core Concepts; Technologies (Sections~\ref{sec:sr-core-concepts}, \ref{sec:sr-technologies})     \\
-	Intercepting and Processing User Inputs     & Core Concepts; Implementation (Sections~\ref{sec:sr-core-concepts}, \ref{sec:sr-implementation}) \\
-	Generating Screen Reader Outputs            & Core Concepts (speech/braille/earcons)                                                           \\
-	Internal Data Processing Pipelines          & Core Concepts (virtual buffer, event handling)                                                   \\
-	Architectural Approaches and Unique Methods & Technologies \& Tools; Case Studies                                                              \\
-	Comparison of Methodologies Table           & Retained as Table~\ref{tab:sr-methodologies}                                                     \\
-	Summary of Basic Navigation Commands Table  & Incorporated conceptually (could be appended if required)                                        \\
-	Original Narrative Conclusion               & Summary (Section~\ref{sec:sr-summary})                                                           \\
-\end{tabular}
-
-% End of Chapter 24

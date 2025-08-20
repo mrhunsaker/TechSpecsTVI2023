@@ -1,12 +1,7 @@
 \chapter{Comprehensive Analysis of Braille Transcription Software}
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
-% NOTE: Precise line-numbered edits for adding \gidx / \gidxnested to Key Terms
-% cannot be safely applied without an authoritative line map of Chapter23.tex.
-% Please re-run or supply the file with line numbers so each \item line in the
-% Key Terms list (UEB, BRF, PEF, Translation Table, Back-Translation, Contracted
-% (Grade 2) Braille, UEB Math / Technical, Six-Key Input, \gidx{tactilegraphics}{Tactile Graphics})
-% can be patched using exact <old_text> fragments. No functional change yet.
-\label{chap:braille-transcription-\gidx{software}{software}}
+
+\label{chap:braille-transcription-software}
 
 %====================================================
 \section{~~Overview}
@@ -65,7 +60,7 @@ Pre-processing (style cleanup, \gidx{semantictagging}{semantic tagging}, consist
 \subsection*{Quality Assurance Loop}
 Robust pipelines incorporate: automated translation + human review (visual interline display or dual-pane print/braille view) + targeted re-translation of flagged segments + final emboss simulation (pagination, line breaks, running heads verification).
 
-\subsection*{Open Engine vs.\ Turnkey System}
+\subsection*{Open Engine vs. Turnkey System}
 Libraries like Liblouis provide translation primitives; turnkey systems add UI/UX, layout engines, scripting, tactile graphic helpers, and integrated QA tools.
 
 %====================================================
@@ -158,17 +153,17 @@ Sao Mai Braille used for integrated music lines; exported BRF merged with litera
 		row{1} = {font=\bfseries},
 		hlines
 	}
-	Issue                                                                          & RootCause                                                                & ImpactOnLearner                                 & ResolutionSteps                                                                       & PreventivePractice                                                       & ReferenceKey   \\
-	Incorrect contraction (e.g., unwanted use of 'ing' contraction in proper noun) & Source not tagged as proper noun; generic translation table rule applied & Confusion, mispronunciation, spelling ambiguity & Add word to exception list; retranslate affected lines; verify with back-translation  & Maintain project-level exception dictionary; pre-tag proper nouns        & Liblouis       \\
-	Math code rendered in literary UEB instead of Nemeth                           & Missing or misplaced code switch indicators                              & Math ambiguity; loss of structural clarity      & Insert correct Nemeth start/end markers; retranslate math block                       & Enforce math region tagging in source normalization phase                & Duxbury        \\
-	Table columns misaligned or wrapped inconsistently                             & Improper source table markup; auto line-wrap in narrow width             & Data misassociation; reduced comprehension      & Reformat table using braille table styles; adjust column width / abbreviations        & Pre-assess tables; define column width constraints before translation    & Braille2000    \\
-	Untranslated symbols (boxes, special Unicode)                                  & Unsupported or unmapped Unicode in translation table                     & Missing information; possible meaning loss      & Map symbol to appropriate braille pattern or textual description; update custom table & Run preflight symbol scan; maintain custom symbol mapping file           & Liblouis       \\
-	Page numbering mismatch (print vs.\ braille)                                   & Incorrect print page anchor placement                                    & \gidx{navigation}{Navigation} difficulty; referencing errors       & Reposition print page indicators; regenerate pagination                               & Automate print page anchor validation script                             & BrailleBlaster \\
-	Overfull braille lines / orphaned headings                                     & Post-edit changes introduced line length overflow                        & Reduced readability; structural confusion       & Re-run line reflow for affected pages; check heading spacing rules                    & Lock upstream text after final QA; apply changes in constrained segments & Duxbury        \\
-	Music braille embedded incorrectly within literary text                        & Lack of mode switch or delimiters                                        & Misinterpretation of music notation             & Insert required music delimiters; retranslate segment                                 & Template-driven insertion of music start/end markers                     & SMB            \\
-	Inconsistent capitalization indicators                                         & Mixed source capitalization or style overrides                           & Ambiguity (proper noun vs. emphasis)            & Normalize capitalization in source; retranslate segment                               & Run capitalization consistency check pre-translation                     & Biblos         \\
-	Excess blank lines causing pagination drift                                    & Manual insertion during editing                                          & Increased page count; wasted space              & Remove extraneous blanks; re-paginate                                                 & Use automated spacing rules; lint for sequential blanks > allowed limit  & Braille2000    \\
-	Back-translation differs from original semantics                               & Contraction plus punctuation interplay                                   & Potential content misunderstanding              & Inspect context; adjust punctuation spacing or contraction suppression                & Spot back-translation sampling of every N pages                          & Liblouis       \\
+	Issue                                                                          & RootCause                                                                & ImpactOnLearner                                              & ResolutionSteps                                                                       & PreventivePractice                                                       & ReferenceKey   \\
+	Incorrect contraction (e.g., unwanted use of 'ing' contraction in proper noun) & Source not tagged as proper noun; generic translation table rule applied & Confusion, mispronunciation, spelling ambiguity              & Add word to exception list; retranslate affected lines; verify with back-translation  & Maintain project-level exception dictionary; pre-tag proper nouns        & Liblouis       \\
+	Math code rendered in literary UEB instead of Nemeth                           & Missing or misplaced code switch indicators                              & Math ambiguity; loss of structural clarity                   & Insert correct Nemeth start/end markers; retranslate math block                       & Enforce math region tagging in source normalization phase                & Duxbury        \\
+	Table columns misaligned or wrapped inconsistently                             & Improper source table markup; auto line-wrap in narrow width             & Data misassociation; reduced comprehension                   & Reformat table using braille table styles; adjust column width / abbreviations        & Pre-assess tables; define column width constraints before translation    & Braille2000    \\
+	Untranslated symbols (boxes, special Unicode)                                  & Unsupported or unmapped Unicode in translation table                     & Missing information; possible meaning loss                   & Map symbol to appropriate braille pattern or textual description; update custom table & Run preflight symbol scan; maintain custom symbol mapping file           & Liblouis       \\
+	Page numbering mismatch (print vs.\ braille)                                   & Incorrect print page anchor placement                                    & \gidx{navigation}{Navigation} difficulty; referencing errors & Reposition print page indicators; regenerate pagination                               & Automate print page anchor validation script                             & BrailleBlaster \\
+	Overfull braille lines / orphaned headings                                     & Post-edit changes introduced line length overflow                        & Reduced readability; structural confusion                    & Re-run line reflow for affected pages; check heading spacing rules                    & Lock upstream text after final QA; apply changes in constrained segments & Duxbury        \\
+	Music braille embedded incorrectly within literary text                        & Lack of mode switch or delimiters                                        & Misinterpretation of music notation                          & Insert required music delimiters; retranslate segment                                 & Template-driven insertion of music start/end markers                     & SMB            \\
+	Inconsistent capitalization indicators                                         & Mixed source capitalization or style overrides                           & Ambiguity (proper noun vs. emphasis)                         & Normalize capitalization in source; retranslate segment                               & Run capitalization consistency check pre-translation                     & Biblos         \\
+	Excess blank lines causing pagination drift                                    & Manual insertion during editing                                          & Increased page count; wasted space                           & Remove extraneous blanks; re-paginate                                                 & Use automated spacing rules; lint for sequential blanks > allowed limit  & Braille2000    \\
+	Back-translation differs from original semantics                               & Contraction plus punctuation interplay                                   & Potential content misunderstanding                           & Inspect context; adjust punctuation spacing or contraction suppression                & Spot back-translation sampling of every N pages                          & Liblouis       \\
 \end{longtblr}
 
 %====================================================
@@ -210,20 +205,4 @@ Sao Mai Braille used for integrated music lines; exported BRF merged with litera
 \label{sec:braille-summary}
 Effective braille transcription depends on: (1) structured and semantically clean source content; (2) appropriate tool selection aligned with document complexity (textbook, STEM, music); (3) accurate code switching for specialized content; (4) iterative human QA augmented by automation; and (5) transparent documentation of translation table versions and decisions. A blended ecosystem of commercial and open-source tools—anchored by robust translation libraries—enables scalable, high-quality, and equitable tactile literacy delivery. Emerging cloud, AI, and collaborative paradigms promise efficiency gains while underscoring the continued need for expert human validation.
 
-%====================================================
-\section{~~Legacy Content Mapping}
-\label{sec:braille-legacy-mapping}
-\begin{tabular}{p{0.34\textwidth} p{0.60\textwidth}}
-	\textbf{Original Section Title}                        & \textbf{Mapped / Integrated Into}                                                                               \\
-	Executive Summary                                      & Overview (Section~\ref{sec:braille-overview})                                                                   \\
-	Introduction                                           & Historical \& Policy Context + Overview (Sections~\ref{sec:braille-history}, \ref{sec:braille-overview})        \\
-	Detailed Software Analysis (subsections for each tool) & Technologies and Tools (Section~\ref{sec:braille-tools}); Case Studies (Section~\ref{sec:braille-case-studies}) \\
-	Other Noteworthy Open-Source Options                   & Technologies and Tools (auxiliary list)                                                                         \\
-	Comparative Table of Braille Transcription Software    & (Retained conceptually within Technologies and Tools; table could be appended if needed)                        \\
-	Conclusion                                             & Summary (Section~\ref{sec:braille-summary}) + Best Practices (Section~\ref{sec:braille-best-practices})         \\
-\end{tabular}
-
-%====================================================
-% (Optional) The original comparative table can be reinserted if required.
-% End of Chapter 23
 

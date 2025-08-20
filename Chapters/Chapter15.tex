@@ -1,4 +1,4 @@
-\chapter{Screen Reader Accessibility Guide for Office Documents}\label{ch15:office-\gidx{accessibility}{accessibility}}
+\chapter{Screen Reader Accessibility Guide for Office Documents}\label{ch15:office-accessibility}
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 \gidx{screenreader}{screen reader}
 \index{office suite}
@@ -395,17 +395,17 @@ Use a color contrast checker to ensure that text and background colors meet WCAG
 		row{1} = {font=\bfseries},
 		hlines
 	}
-	Issue                                          & RootCause                                         & ImpactOnLearner                            & ResolutionSteps                                   & PreventivePractice                            & ReferenceKey           \\
-	Improper heading levels (skips from H1 to H3)  & Manual styling instead of built‑in heading styles & Disorienting outline; harder jumping       & Reapply correct styles; rebuild TOC               & Enforce template with style guide             & MicrosoftAccessibility \\
-	Lists manually authored with dashes/asterisks  & Plain text characters not semantic                & Screen reader fails to announce list count & Convert to true list using platform tools         & Author training; pre-publish checklist        & GoogleAccessibility    \\
-	Merged table header cells                      & Visual layout emphasis                            & Screen reader mis-associates data cells    & Split headers; use simple grid                    & Restrict complex tables; design alt structure & WCAG2018               \\
-	Missing or decorative-only alt text left blank & Author oversight                                  & Information / context lost                 & Add concise alt text or mark decorative           & Accessibility checker in workflow             & MicrosoftAccessibility \\
-	Low contrast text (light gray on white)        & Branding / aesthetic choice                       & Reduced readability (low vision, glare)    & Adjust colors to meet 4.5:1 ratio                 & Maintain approved accessible palette          & WCAG2018               \\
-	Chart included without data table              & Exported image only                               & Data inaccessible for non-visual analysis  & Insert underlying data table; descriptive summary & Require paired data + summary                 & MicrosoftAccessibility \\
-	Inconsistent \gidx{readingorder}{reading order} in slides           & Freeform placement / added text boxes             & Fragmented narration sequence              & Reorder objects (Selection Pane); use layouts     & Mandate slide master usage                    & WCAG2018               \\
-	Hyperlink text “click here”                    & Non-descriptive anchor                            & Loss of context in link list               & Replace with meaningful target-specific text      & Link text policy in authoring guide           & MicrosoftAccessibility \\
-	Unlabeled complex formula intent               & Opaque expression                                 & Slowed comprehension / error risk          & Add adjacent explanation/comment                  & Document explanatory annotation pattern       & NVDA2023               \\
-	Tagged PDF export disabled                     & Export defaults unchecked                         & Structure lost in final distribution       & Re-export with tagging enabled                    & Export checklist w/ responsibility signoff    & PDFUA2014              \\
+	Issue                                                     & RootCause                                         & ImpactOnLearner                            & ResolutionSteps                                   & PreventivePractice                            & ReferenceKey           \\
+	Improper heading levels (skips from H1 to H3)             & Manual styling instead of built‑in heading styles & Disorienting outline; harder jumping       & Reapply correct styles; rebuild TOC               & Enforce template with style guide             & MicrosoftAccessibility \\
+	Lists manually authored with dashes/asterisks             & Plain text characters not semantic                & Screen reader fails to announce list count & Convert to true list using platform tools         & Author training; pre-publish checklist        & GoogleAccessibility    \\
+	Merged table header cells                                 & Visual layout emphasis                            & Screen reader mis-associates data cells    & Split headers; use simple grid                    & Restrict complex tables; design alt structure & WCAG2018               \\
+	Missing or decorative-only alt text left blank            & Author oversight                                  & Information / context lost                 & Add concise alt text or mark decorative           & Accessibility checker in workflow             & MicrosoftAccessibility \\
+	Low contrast text (light gray on white)                   & Branding / aesthetic choice                       & Reduced readability (low vision, glare)    & Adjust colors to meet 4.5:1 ratio                 & Maintain approved accessible palette          & WCAG2018               \\
+	Chart included without data table                         & Exported image only                               & Data inaccessible for non-visual analysis  & Insert underlying data table; descriptive summary & Require paired data + summary                 & MicrosoftAccessibility \\
+	Inconsistent \gidx{readingorder}{reading order} in slides & Freeform placement / added text boxes             & Fragmented narration sequence              & Reorder objects (Selection Pane); use layouts     & Mandate slide master usage                    & WCAG2018               \\
+	Hyperlink text “click here”                               & Non-descriptive anchor                            & Loss of context in link list               & Replace with meaningful target-specific text      & Link text policy in authoring guide           & MicrosoftAccessibility \\
+	Unlabeled complex formula intent                          & Opaque expression                                 & Slowed comprehension / error risk          & Add adjacent explanation/comment                  & Document explanatory annotation pattern       & NVDA2023               \\
+	Tagged PDF export disabled                                & Export defaults unchecked                         & Structure lost in final distribution       & Re-export with tagging enabled                    & Export checklist w/ responsibility signoff    & PDFUA2014              \\
 \end{longtblr}
 \normalsize
 
@@ -435,7 +435,7 @@ Use a color contrast checker to ensure that text and background colors meet WCAG
 \subsection{Screen Reader Resources}\label{ch15:ssec:sr-resources}
 \begin{itemize}
 	\item \href{https://www.nvaccess.org/}{NVDA (NonVisual Desktop Access)}
-	\item \href{https://www.freedomscientific.com/products/\gidx{software}{software}/jaws/}{JAWS (Job Access With Speech)}
+	\item \href{https://www.freedomscientific.com/products/software/jaws/}{JAWS (Job Access With Speech)}
 	\item \href{https://www.apple.com/voiceover/info/guide/_1121.html}{VoiceOver User Guide}
 \end{itemize}
 
@@ -533,4 +533,3 @@ Accessible office documents depend on intentional semantic structure, descriptiv
 
 \section{~~Conclusion}\label{ch15:sec:conclusion}
 Creating accessible Office documents is an essential part of inclusive communication. By following the guidelines outlined in this chapter, you can ensure that your content is usable by people of all abilities. Accessibility remains an ongoing process requiring periodic review, stakeholder training, and governance alignment to maintain parity and uphold legal as well as ethical obligations.
-

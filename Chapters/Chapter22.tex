@@ -1,6 +1,6 @@
-\chapter{The Evolving Landscape of Gaming Accessibility for Individuals Who Are Blind and Profoundly Vision Impaired}
+\chapter{Gaming Accessibility for Individuals Who Are Blind/Vision Impaired}
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
-\label{chap:gaming-\gidx{accessibility}{accessibility}}
+\label{chap:gaming-accessibility}
 
 %====================================================
 \section{~~Overview}
@@ -27,7 +27,7 @@ After completing this chapter you will be able to:
 \section{~~Key Terms}
 \label{sec:gaming-key-terms}
 \begin{description}
-	\item[Spatial (Binaural) Audio] \gidxnested{spatialaudio}{Gaming accessibility}{spatial (binaural) audio} Rendering technique using HRTF to simulate 3D positioning of sound sources for directional \gidx{navigation}{navigation}.
+	\item[Spatial (Binaural) Audio] \gidxnested{spatialaudio}{Gaming accessibility}{spatial (binaural) audio} Rendering technique using HRTF to simulate 3D positioning of sound sources for directional \gidx{navigation}{navigation}. (see also \gls{spatialaudio})
 	\item[Informational Audio Cue] \gidxnested{informationalaudiocue}{Gaming accessibility}{informational audio cue} Short distinct audio element conveying state (e.g., target proximity, menu focus, health).
 	\item[Self-Voicing Game] \gidxnested{selfvoicinggame}{Gaming accessibility}{self-voicing game} Title that supplies its own \gidx{texttospeech}{text-to-speech} layer instead of (or in addition to) an external screen reader.
 	\item[Screen Reader Integration] \gidxnested{screenreader}{Gaming accessibility}{screen reader integration} Direct exposure of UI text/accessibility tree to platform AT (e.g., NVDA, VoiceOver, TalkBack).
@@ -155,17 +155,17 @@ Common implementation failures and remediations (schema compliant).
 		row{1} = {font=\bfseries},
 		hlines
 	}
-	Issue                                                     & RootCause                                                  & ImpactOnLearner                                                & ResolutionSteps                                                                                                   & PreventivePractice                                                                                 & ReferenceKey      \\
-	Console system menus inaccessible via screen reader       & Lack of system-wide narration \gls{api} integration              & Player cannot independently purchase, configure, launch games  & Provide alternate accessible companion app or voice assistant pathway; escalate to platform accessibility channel & Early platform capability audit; require accessibility acceptance criteria in publishing contracts & LudaccessList     \\
-	Pre-purchase accessibility info absent or vague           & No standardized disclosure template                        & Financial risk purchasing unplayable game; potential exclusion & Publish structured feature matrix (narration, remap, haptics, spatial audio) on store page                        & Adopt internal accessibility feature taxonomy; automated store metadata validation                 & ScopeGamingReport \\
-	Overloaded audio soundscape (masking cues)                & No prioritization mix model; overlapping frequency domains & Missed critical cues (enemy, objective); cognitive fatigue     & Implement priority-based ducking; spectral separation; user cue filter toggles                                    & Define audio taxonomy + mixing guidelines; test with blind players early                           & AFBIntroVG        \\
-	Non-remappable critical controls                          & Hard-coded input mapping                                   & Physical or cognitive barrier; exclusion from advanced actions & Add remapping UI with conflict detection and preset sharing                                                       & Include “all actions remappable” in engine acceptance tests                                        & Wayline2025       \\
-	Insufficient text scaling / contrast in hybrid interfaces & Fixed-size bitmap/UI elements                              & Low vision players strain or abandon UI interactions           & Rebuild UI with vector/scalable text + dynamic contrast themes                                                    & Adopt design system tokens for typography and color with WCAG thresholds                           & LudaccessList     \\
-	Ambiguous spatial audio for elevation / distance          & Simplistic stereo panning only                             & Difficulty orienting; slower reaction times                    & Integrate HRTF; add distance attenuation + optional verbal compass                                                & Prototype spatial cues in vertical slice; gather localization performance metrics                  & AFBValeReview     \\
-	Lack of onboarding for blind players                      & Visual tutorial assumption                                 & Steep learning curve; early churn                              & Implement audio-first interactive tutorial with progressive disclosure                                            & Player journey mapping with blind focus group; tutorial usability tests                            & AbleGamers2025    \\
-	Inconsistent haptic patterns across similar events        & Ad-hoc vibration assignments                               & Player misinterprets signals; error-prone responses            & Standardize haptic pattern library; document in style guide                                                       & Central pattern registry; automated regression test of pattern IDs                                 & Wayline2025       \\
-	Inaccessible in-game store or inventory \gidx{navigation}{navigation}        & Unlabeled UI elements; no focus order                      & Inability to manage progression economy                        & Add semantic labels; enforce logical focus order; expose to screen reader                                         & Accessibility linting of UI tree; keyboard/focus traversal tests                                   & GitHubGameEngines \\
-	Audio latency causing delayed interaction feedback        & High buffer size; device mismatch                          & Perceived unresponsiveness; timing disadvantage                & Optimize audio pipeline; reduce buffer; prefetch critical cues                                                    & Performance budget specifying max input-to-cue latency                                             & AFBIntroVG        \\
+	Issue                                                                 & RootCause                                                  & ImpactOnLearner                                                & ResolutionSteps                                                                                                   & PreventivePractice                                                                                 & ReferenceKey      \\
+	Console system menus inaccessible via screen reader                   & Lack of system-wide narration \gls{api} integration        & Player cannot independently purchase, configure, launch games  & Provide alternate accessible companion app or voice assistant pathway; escalate to platform accessibility channel & Early platform capability audit; require accessibility acceptance criteria in publishing contracts & LudaccessList     \\
+	Pre-purchase accessibility info absent or vague                       & No standardized disclosure template                        & Financial risk purchasing unplayable game; potential exclusion & Publish structured feature matrix (narration, remap, haptics, spatial audio) on store page                        & Adopt internal accessibility feature taxonomy; automated store metadata validation                 & ScopeGamingReport \\
+	Overloaded audio soundscape (masking cues)                            & No prioritization mix model; overlapping frequency domains & Missed critical cues (enemy, objective); cognitive fatigue     & Implement priority-based ducking; spectral separation; user cue filter toggles                                    & Define audio taxonomy + mixing guidelines; test with blind players early                           & AFBIntroVG        \\
+	Non-remappable critical controls                                      & Hard-coded input mapping                                   & Physical or cognitive barrier; exclusion from advanced actions & Add remapping UI with conflict detection and preset sharing                                                       & Include “all actions remappable” in engine acceptance tests                                        & Wayline2025       \\
+	Insufficient text scaling / contrast in hybrid interfaces             & Fixed-size bitmap/UI elements                              & Low vision players strain or abandon UI interactions           & Rebuild UI with vector/scalable text + dynamic contrast themes                                                    & Adopt design system tokens for typography and color with WCAG thresholds                           & LudaccessList     \\
+	Ambiguous spatial audio for elevation / distance                      & Simplistic stereo panning only                             & Difficulty orienting; slower reaction times                    & Integrate HRTF; add distance attenuation + optional verbal compass                                                & Prototype spatial cues in vertical slice; gather localization performance metrics                  & AFBValeReview     \\
+	Lack of onboarding for blind players                                  & Visual tutorial assumption                                 & Steep learning curve; early churn                              & Implement audio-first interactive tutorial with progressive disclosure                                            & Player journey mapping with blind focus group; tutorial usability tests                            & AbleGamers2025    \\
+	Inconsistent haptic patterns across similar events                    & Ad-hoc vibration assignments                               & Player misinterprets signals; error-prone responses            & Standardize haptic pattern library; document in style guide                                                       & Central pattern registry; automated regression test of pattern IDs                                 & Wayline2025       \\
+	Inaccessible in-game store or inventory \gidx{navigation}{navigation} & Unlabeled UI elements; no focus order                      & Inability to manage progression economy                        & Add semantic labels; enforce logical focus order; expose to screen reader                                         & Accessibility linting of UI tree; keyboard/focus traversal tests                                   & GitHubGameEngines \\
+	Audio latency causing delayed interaction feedback                    & High buffer size; device mismatch                          & Perceived unresponsiveness; timing disadvantage                & Optimize audio pipeline; reduce buffer; prefetch critical cues                                                    & Performance budget specifying max input-to-cue latency                                             & AFBIntroVG        \\
 \end{longtblr}
 
 %====================================================
@@ -207,26 +207,4 @@ Common implementation failures and remediations (schema compliant).
 \section{~~Summary}
 \label{sec:gaming-summary}
 Accessible gaming for blind and profoundly vision impaired players rests on deliberate multi-sensory design: spatially precise, non-overlapping audio; semantically consistent haptics; robust text and \gls{tts} integration; and customizable control/input layers. Platform disparities (notably console system-level narration gaps) persist, while mobile and PC ecosystems accelerate innovation. Structured disclosure and community co-creation reduce purchase risk and elevate quality. Emerging AI and VR/AR modalities promise richer adaptive experiences but require ethical stewardship and ongoing human-centered validation. Sustained success depends on iteratively engaging blind players, publishing transparent accessibility commitments, and treating inclusion as foundational—not auxiliary—to design.
-
-%====================================================
-\section{~~Legacy Content Mapping}
-\label{sec:gaming-legacy-mapping}
-\begin{tabular}{p{0.34\textwidth} p{0.60\textwidth}}
-	\textbf{Original Section Title}                & \textbf{Mapped / Integrated Into}                                                           \\
-	Executive Summary                              & Overview (Section~\ref{sec:gaming-overview})                                                \\
-	Introduction (Gaming as Inclusive Frontier)    & Overview; Historical Context (Sections~\ref{sec:gaming-overview}, \ref{sec:gaming-history}) \\
-	Foundational Principles (Audio, Haptics, Text) & Core Concepts (Section~\ref{sec:gaming-core-concepts})                                      \\
-	Video Gaming Landscape (Developers, Titles)    & Technologies and Tools; Case Studies; Best Practices                                        \\
-	Mainstream Game Accessibility (AAA)            & Case Studies; Best Practices; Implementation Strategies                                     \\
-	Architectures and Platforms                    & Technologies and Tools (Section~\ref{sec:gaming-technologies})                              \\
-	Tabletop Gaming                                & Technologies and Tools (tabletop subsection); Case Studies                                  \\
-	Challenges and Opportunities                   & Troubleshooting (Section~\ref{sec:gaming-troubleshooting}); Emerging Trends                 \\
-	Industry Trends and Future Directions          & Emerging Trends (Section~\ref{sec:gaming-emerging-trends})                                  \\
-	Community and Advocacy                         & Technologies and Tools (community); Case Studies; Best Practices                            \\
-	Conclusion and Recommendations                 & Summary (Section~\ref{sec:gaming-summary}); Best Practices                                  \\
-\end{tabular}
-
-%====================================================
-% Bibliographic references already defined globally.
-% End of Chapter 22
 

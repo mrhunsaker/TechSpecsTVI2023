@@ -145,6 +145,136 @@
     }
   },
   "per_chapter_overrides": {
+    "Chapter01": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Chapter02": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Chapter03": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Chapter04": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Chapter05": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Chapter06": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Appendix00": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example if relevant.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections if relevant.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Appendix01": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example if relevant.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections if relevant.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Appendix02": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example if relevant.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections if relevant.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Appendix03": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example if relevant.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections if relevant.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Appendix04": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example if relevant.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections if relevant.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Appendix05": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example if relevant.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections if relevant.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
+    "Appendix06": {
+      "augment": [
+        "Add explicit Learning Objectives and Key Terms sections if missing.",
+        "Ensure all required template sections are present and in order (Overview, Learning Objectives, Key Terms, etc.).",
+        "Embed at least one case study or applied example if relevant.",
+        "Include Best Practices and Troubleshooting/Common Pitfalls sections if relevant.",
+        "Add at least 3 new references if not already present."
+      ],
+      "new_reference_targets": []
+    },
     "Chapter07": {
       "augment": [
         "Add explicit Learning Objectives section (missing).",

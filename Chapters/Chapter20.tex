@@ -1,4 +1,4 @@
-\chapter{Comprehensive Accessibility Audit of Office Suites for Screen Reader Accessibility}
+\chapter{Accessibility Audit of Office Suites for Screen Reader Accessibility}
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 
 \section{~~Overview}\label{ch20:sec:overview}
@@ -179,7 +179,7 @@ In the United States, Section 508 of the Rehabilitation Act requires federal age
 \index{ARIA}
 \index{accessible rich internet applications}
 
-\gls{ARIA} is a set of attributes that can be added to HTML elements to improve the accessibility of web content and applications. While more relevant to web-based office suites like Google Workspace and Microsoft Office Online, understanding \gls{ARIA} roles, states, and properties can be beneficial for auditing complex interactive elements\supercite{w3caria}.
+\gls{aria} is a set of attributes that can be added to HTML elements to improve the accessibility of web content and applications. While more relevant to web-based office suites like Google Workspace and Microsoft Office Online, understanding\gls{aria} roles, states, and properties can be beneficial for auditing complex interactive elements\supercite{w3caria}.
 
 ***
 
@@ -297,7 +297,7 @@ For web-based suites, the audit can be performed directly within the browser usi
 \index{commercial tools}
 
 \begin{itemize}
-	\item \textbf{axe DevTools\supercite{AxeDevTools}:} A browser extension that provides powerful automated accessibility testing, including checks for \gls{ARIA} implementation, color contrast, and more.
+	\item \textbf{axe DevTools\supercite{AxeDevTools}:} A browser extension that provides powerful automated accessibility testing, including checks for\gls{aria} implementation, color contrast, and more.
 	\item \textbf{WAVE (Web Accessibility Evaluation Tool)\supercite{WAVE}:} While primarily for websites, the WAVE browser extension can be used to evaluate the accessibility of the user interface of web applications like Google Docs.
 	\item \textbf{Deque axe Auditor\supercite{DequeWorldSpace}:} A comprehensive platform for conducting full accessibility audits, suitable for large-scale assessments of web applications.
 	\item \textbf{Siteimprove Accessibility Checker\supercite{SiteimproveAccessibility}:} A free browser extension that can check any web page for accessibility issues.
@@ -315,7 +315,7 @@ For web-based suites, the audit can be performed directly within the browser usi
 	\item \textbf{Accessibility Insights for Web\supercite{AccessibilityInsights}:} A browser extension from Microsoft that helps developers find and fix accessibility issues in web apps and sites.
 	\item \textbf{Screen Readers (NVDA, JAWS, VoiceOver):} As with desktop applications, manual testing with screen readers is indispensable. For web applications, it is important to test with multiple screen readers and browsers to ensure broad compatibility.
 	\item \textbf{ARC Toolkit\supercite{ARCToolkit}:} A browser extension from TPGi that provides a set of tools for identifying accessibility issues.
-	\item \textbf{Bookmarklets\supercite{A11yProject}:} Many free accessibility bookmarklets are available that can be used to check specific aspects of a page, such as headings, images, and \gls{ARIA} attributes.
+	\item \textbf{Bookmarklets\supercite{A11yProject}:} Many free accessibility bookmarklets are available that can be used to check specific aspects of a page, such as headings, images, and\gls{aria} attributes.
 \end{itemize}
 
 ***

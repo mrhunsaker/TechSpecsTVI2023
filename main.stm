@@ -1,0 +1,49 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{A}\relax \glsresetentrylist %
+\glossentry{aria}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{395}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{399}}}\glsgroupskip
+\glsgroupheading{B}\relax \glsresetentrylist %
+\glossentry{bluetooth}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{51}}}\glsgroupskip
+\glsgroupheading{D}\relax \glsresetentrylist %
+\glossentry{daisy}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{79\delimN 80}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{83}}}\glsgroupskip
+\glsgroupheading{G}\relax \glsresetentrylist %
+\glossentry{gps}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{90\delimN 91}}}\glsgroupskip
+\glsgroupheading{H}\relax \glsresetentrylist %
+\glossentry{html}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{181}}}\glsgroupskip
+\glsgroupheading{M}\relax \glsresetentrylist %
+\glossentry{mathml}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{192}}}\glsgroupskip
+\glsgroupheading{N}\relax \glsresetentrylist %
+\glossentry{nimas}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{122}}}\glsgroupskip
+\glsgroupheading{P}\relax \glsresetentrylist %
+\glossentry{pdf/ua}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{397\delimN 398}}}%
+\glossentry{pdfua}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{155\delimR 158}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{161}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{193}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{195\delimN 196}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{199\delimN 200}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{289}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{372\delimR 375}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{377\delimR 381}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{397}}}\glsgroupskip
+\glsgroupheading{U}\relax \glsresetentrylist %
+\glossentry{ueb}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{122}}}%
+\glossentry{uebmathtechnical}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{122}}}\glsgroupskip
+\glsgroupheading{W}\relax \glsresetentrylist %
+\glossentry{WCAG}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{378}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{394\delimN 395}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{403}}}%
+\end{theglossary}\glossarypostamble

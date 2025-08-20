@@ -1,0 +1,90 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{A}\relax \glsresetentrylist %
+\glossentry{audio}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{4}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{83}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{168}}}%
+\glossentry{audioonlygame}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{346}}}\glsgroupskip
+\glsgroupheading{B}\relax \glsresetentrylist %
+\glossentry{braille}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{39}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{44}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{48}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{52}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{60}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{79}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{183\delimN 184}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{192}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{202}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{237}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{249}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{260}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{293}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{303}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{315}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{319}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{325}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{335}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{414}}}\glsgroupskip
+\glsgroupheading{H}\relax \glsresetentrylist %
+\glossentry{haptic}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{249}}}%
+\glossentry{hapticchannel}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{346}}}%
+\glossentry{hapticfeedback}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{87}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{212}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{218}}}\glsgroupskip
+\glsgroupheading{I}\relax \glsresetentrylist %
+\glossentry{informationalaudiocue}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{346}}}\glsgroupskip
+\glsgroupheading{M}\relax \glsresetentrylist %
+\glossentry{magnification}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{26\delimR 34}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{40}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{42}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{46}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{69\delimR 78}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{188}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{304}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{315}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{390}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{400}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{408}}}%
+\glossentry{musicbraille}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{144}}}\glsgroupskip
+\glsgroupheading{S}\relax \glsresetentrylist %
+\glossentry{sonification}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{219}}}%
+\glossentry{spatialaudio}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{346}}}\glsgroupskip
+\glsgroupheading{T}\relax \glsresetentrylist %
+\glossentry{tactile}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{53}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{61}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{318}}}%
+\glossentry{tactilegraphics}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{43}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{53\delimN 54}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{56\delimN 57}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{59\delimR 62}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{64\delimN 65}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{71}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{122}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{124}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{131\delimR 134}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{136}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{138}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{140\delimN 141}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{143}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{184}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{203\delimN 204}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{206\delimN 207}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{210\delimR 212}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{214}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{217\delimN 218}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{222\delimN 223}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{323\delimR 325}}}%
+\end{theglossary}\glossarypostamble

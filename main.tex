@@ -11,7 +11,7 @@
 \usepackage[bottom, hang, multiple]{footmisc}
 \usepackage[export]{adjustbox}
 \PassOptionsToPackage{hyphens}{url}\usepackage[unicode,colorlinks=true,linkcolor=blue]{hyperref}
-\usepackage{accsupp} % removed; alt text now integrated via tagpdf in \imgalt
+\usepackage{accsupp} 
 \usepackage[font=small, labelfont=bf, labelsep=colon, hang, singlelinecheck=off, justification=raggedright]{caption}
 \usepackage[none]{hyphenat}
 \usepackage{appendix}
@@ -35,7 +35,8 @@
   autopunct=true,
   sortcites=true
 ]{biblatex}
-\usepackage{pythontex}
+%\usepackage{pythontex}
+\usepackage{listings}
 
 \addbibresource{global_bibliography.bib}
 \AtBeginDocument{\raggedright}
@@ -177,6 +178,7 @@
 \newglossary[acr]{acronym}{acm}{acn}{Acronyms}
 \newglossary[cnc]{concept}{cnm}{cnn}{Concepts}
 \newglossary[fmt]{format}{fom}{fon}{Formats}
+\makeglossaries
 \loadglsentries{IndexingGlossary/glossary_definitions.tex}
 \newcommand{\gidx}[3][]{\gls[#1]{#2}\index{#3}}
 \newcommand{\gidxnested}[4][]{\gls[#1]{#2}\index{#3!#4}}
@@ -268,7 +270,6 @@
 }
 
 \appendixtitletocon
-\makeglossaries
 
 \title{Assistive Technology Needs for Students with Visual Impairments}
 \author{Michael Ryan Hunsaker, M.Ed., Ph.D.}
@@ -302,6 +303,7 @@
 \include{Chapters/Introduction}
 \pagenumbering{arabic}
 \part{Accessibility Related Hardware Specifications}
+\include{Chapters/Chapter00.tex}
 \include{Chapters/Chapter01.tex}
 \include{Chapters/Chapter02.tex}
 \include{Chapters/Chapter03.tex}
@@ -334,7 +336,7 @@
 \include{Chapters/Chapter29.tex}
 \include{Chapters/Chapter30.tex}
 \include{Chapters/Chapter22.tex}
-\include{Chapters/Chapter23.tex}
+
 \part{Accessibility Auditing \& Evaluation Tools}
 \include{Chapters/Chapter16.tex}
 \include{Chapters/Chapter18.tex}

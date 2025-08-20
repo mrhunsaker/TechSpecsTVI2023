@@ -1,16 +1,16 @@
 \chapter{Screenreader Accessible Graphics and Interactive Data Environments}\label{ch13:accessible-graphics}
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 \raggedright
-\index{data visualization!accessible}\gidx{tactilegraphics}{tactile graphics}\index{haptic feedback}\index{sonification}\gidx{screenreader}{screen reader}\index{AI}
+\index{datavisualization!accessible}\gidx{tactilegraphics}{tactile graphics}\index{haptic feedback}\index{sonification}\gidx{screenreader}{screen reader}\index{AI}
 
 \section{~~Overview}\label{ch13:sec:overview}
-Accessible data visualization integrates multiple sensory channels—tactile, auditory, haptic, and natural language—to allow learners who are blind or have low vision to perceive structure, trends, and insight normally conveyed visually. This chapter reframes prior narrative content into a pedagogical structure: establishing learning objectives, defining key terms, mapping standards, providing implementation strategies, identifying best practices and pitfalls, and presenting emerging multi-modal and AI-driven paradigms. The goal is to equip Teachers of Students with Visual Impairments (TVIs) and \gidx{accessibility}{accessibility} technologists with a repeatable workflow to select, design, and evaluate screen reader accessible graphics experiences.
+Accessible \gls{datavisualization} integrates multiple sensory channels—tactile, auditory, haptic, and natural language—to allow learners who are blind or have low vision to perceive structure, trends, and insight normally conveyed visually. This chapter reframes prior narrative content into a pedagogical structure: establishing learning objectives, defining key terms, mapping standards, providing implementation strategies, identifying best practices and pitfalls, and presenting emerging multi-modal and AI-driven paradigms. The goal is to equip Teachers of Students with Visual Impairments (TVIs) and \gidx{accessibility}{accessibility} technologists with a repeatable workflow to select, design, and evaluate screen reader accessible graphics experiences.
 
 \section{~~Learning Objectives}\label{ch13:sec:learning-objectives}
 After completing this chapter, the reader will be able to:
 \begin{enumerate}
 	\item Explain and differentiate core non-visual modalities (tactile, sonification, haptic, natural language generation) for data exploration.
-	\item Map data visualization accessibility decisions to relevant standards (WCAG non-text content, ARIA roles, \gidx{tactilegraphics}{tactile graphics} guidelines).
+	\item Map \gls{datavisualization} accessibility decisions to relevant standards (WCAG non-text content, ARIA roles, \gidx{tactilegraphics}{tactile graphics} guidelines).
 	\item Design an implementation workflow that combines at least two modalities with structured keyboard \gidx{navigation}{navigation} for an educational dataset.
 	\item Diagnose and resolve common accessibility breakdowns (ambiguous alt text, overcrowded tactile layout, confusing sonification scale) using a structured troubleshooting matrix.
 \end{enumerate}
@@ -39,7 +39,7 @@ The existing sections in this chapter (Executive Summary, modality-specific sect
 \end{itemize}
 
 \section{~~Executive Summary}\label{ch13:sec:executive-summary}
-This chapter provides a comprehensive review of the technologies and research advancing the accessibility of data visualizations\index{data visualization!accessible} for individuals with visual impairments. It examines a range of modalities, including \gidx{tactilegraphics}{tactile graphics}, \gidx{hapticfeedback}{haptic feedback}, sonification\index{sonification}, and natural language generation\index{natural language generation (NLG)}. The report highlights key academic and open-source projects, such as MIT's work on Tactile Vega-Lite and VisText, and discusses the critical role of AI\index{AI!in data accessibility} and multi-modal interfaces in creating rich, interactive data exploration experiences. The analysis concludes that a shift from static, single-mode solutions to dynamic, multi-modal, and AI-driven environments is essential for achieving true data accessibility.
+This chapter provides a comprehensive review of the technologies and research advancing the accessibility of \gls{datavisualization}s\index{datavisualization!accessible} for individuals with visual impairments. It examines a range of modalities, including \gidx{tactilegraphics}{tactile graphics}, \gidx{hapticfeedback}{haptic feedback}, sonification\index{sonification}, and natural language generation\index{natural language generation (NLG)}. The report highlights key academic and open-source projects, such as MIT's work on Tactile Vega-Lite and VisText, and discusses the critical role of AI\index{AI!in data accessibility} and multi-modal interfaces in creating rich, interactive data exploration experiences. The analysis concludes that a shift from static, single-mode solutions to dynamic, multi-modal, and AI-driven environments is essential for achieving true data accessibility.
 
 \section{~~Implementation Strategies}\label{ch13:sec:implementation-strategies}
 \subsection*{1. Needs Assessment}
@@ -72,7 +72,7 @@ Collect usage metrics (time-to-insight, error rate in identifying trend directio
 	\item Provide layered descriptions: brief alt text + expandable structured summary.
 	\item Limit simultaneous channels: introduce modalities progressively to reduce cognitive overload.
 	\item Distinguish tactile elements through texture + spacing (avoid overcrowding).
-	\item Use consistent auditory mappings (pitch increases with Y value) across visualizations for learnability.
+	\item Use consistent auditory mappings (pitch increases with Y value) across \gls{datavisualization}s for learnability.
 	\item Log user interaction paths to detect \gidx{navigation}{navigation} friction (repeated backtracking).
 	\item Pilot with diverse blind users (braille-first, auditory-first) to uncover modality bias.
 \end{itemize}
@@ -122,14 +122,14 @@ Equitable data literacy requires parity in time-to-insight. Designs that increas
 \textbf{Applied Exercise} Select a small dataset (e.g., monthly temperature). Design a three-layer accessibility plan: (1) tactile layout spec, (2) sonification mapping table, (3) VisText-style description draft. Produce a brief QA checklist referencing the troubleshooting table.
 
 \section{~~Summary}\label{ch13:sec:summary}
-Accessible, screen reader friendly data visualization requires coordinated multi-modal design, robust semantic structuring, and iterative user-centered validation. By combining standardized description frameworks, consistent auditory/haptic mappings, tactile clarity, and performance budgets, educators can deliver equitable analytical experiences. Emerging AI and dynamic tactile \gidx{hardware}{hardware} promise richer personalization; governance (transparency, data privacy, bias mitigation) must accompany adoption to preserve trust.
+Accessible, screen reader friendly \gls{datavisualization} requires coordinated multi-modal design, robust semantic structuring, and iterative user-centered validation. By combining standardized description frameworks, consistent auditory/haptic mappings, tactile clarity, and performance budgets, educators can deliver equitable analytical experiences. Emerging AI and dynamic tactile \gidx{hardware}{hardware} promise richer personalization; governance (transparency, data privacy, bias mitigation) must accompany adoption to preserve trust.
 
 % --- Original Detailed Sections (Preserved) ---
 \section{~~Introduction: The Imperative of Accessible Data Visualization}\label{ch13:sec:introduction}
-In an increasingly data-driven world, the ability to understand and interpret graphical representations of data is a fundamental form of literacy. However, for the millions of individuals with visual impairments, standard charts, graphs, and infographics present significant barriers. Making data visualization\index{data visualization!accessible} accessible is not merely a matter of compliance but a crucial step toward educational and professional equity. Projects like the Accessible Graphs initiative demonstrate ongoing efforts to develop comprehensive solutions for making data visualizations accessible to all users \supercite{AccessibleGraphs, AccessVizWorkshop}.
+In an increasingly data-driven world, the ability to understand and interpret graphical representations of data is a fundamental form of literacy. However, for the millions of individuals with visual impairments, standard charts, graphs, and infographics present significant barriers. Making \gls{datavisualization}\index{datavisualization!accessible} accessible is not merely a matter of compliance but a crucial step toward educational and professional equity. Projects like the Accessible Graphs initiative demonstrate ongoing efforts to develop comprehensive solutions for making \gls{datavisualization}s accessible to all users \supercite{AccessibleGraphs, AccessVizWorkshop}.
 
 \subsection{Challenges for Visually Impaired Users}\label{ch13:ssec:challenges}
-Visually impaired users, particularly those who rely on screen readers\index{screen reader}, face numerous challenges with graphical content. Screen readers\index{screen reader!limitations with graphics} can interpret text but cannot convey the spatial relationships, trends, and patterns inherent in a visual chart. Traditional solutions, such as providing raw data tables, are often insufficient as they fail to communicate the high-level insights that visualizations are designed to reveal \supercite{Lundgard2021, Zewe2021Making}.
+Visually impaired users, particularly those who rely on screen readers\index{screen reader}, face numerous challenges with graphical content. Screen readers\index{screen reader!limitations with graphics} can interpret text but cannot convey the spatial relationships, trends, and patterns inherent in a visual chart. Traditional solutions, such as providing raw data tables, are often insufficient as they fail to communicate the high-level insights that \gls{datavisualization}s are designed to reveal \supercite{Lundgard2021, Zewe2021Making}.
 
 \subsection{Evolution of Accessibility Solutions}\label{ch13:ssec:evolution}
 The approach to data accessibility\index{data accessibility} has evolved from simple text descriptions to a rich ecosystem of multi-modal tools. Early efforts focused on static \gidx{tactilegraphics}{tactile graphics}, while modern research explores dynamic, interactive systems that combine touch, sound, and language to create a more comprehensive understanding of the data \supercite{Zewe2022Making, Lundgard2022Accessible}.
@@ -144,7 +144,7 @@ Researchers at MIT have developed tools to simplify the creation of high-quality
 The field of tactile data representation\index{data representation!tactile} is continually evolving, with a focus on creating more dynamic and interactive experiences.
 
 \subsubsection{Refreshable Tactile Displays (RTDs)}\label{ch13:sssec:rtds}
-Refreshable tactile displays (RTDs)\index{hardware!refreshable tactile display}, such as those developed by Dot Inc. and other companies, are devices that use an array of movable pins to create dynamic tactile images and braille\index{braille!displays}. These displays have the potential to render data visualizations in real-time, allowing users to explore graphs interactively without the need for static, embossed copies. The integration of RTDs with data visualization \gidx{software}{software} is a key area of ongoing research \supercite{DotInc, OrbitGraphiti}.
+Refreshable tactile displays (RTDs)\index{hardware!refreshable tactile display}, such as those developed by Dot Inc. and other companies, are devices that use an array of movable pins to create dynamic tactile images and braille\index{braille!displays}. These displays have the potential to render \gls{datavisualization}s in real-time, allowing users to explore graphs interactively without the need for static, embossed copies. The integration of RTDs with \gls{datavisualization} \gidx{software}{software} is a key area of ongoing research \supercite{DotInc, OrbitGraphiti}.
 
 \section{~~Haptic Feedback for Data Exploration}\label{ch13:sec:haptic-feedback}
 \gls{hapticfeedback}\index{haptic feedback} uses vibrations, forces, or motions to provide non-visual information. This technology can complement \gidx{tactilegraphics}{tactile graphics} by adding another layer of data to the user's experience \supercite{HapticDataViz}.
@@ -165,10 +165,10 @@ The \textbf{Umwelt}\index{projects!Umwelt} project is a system that combines son
 Many accessible graphing calculators, such as those from Desmos and ViewPlus, incorporate sonification\index{software!sonification} as a primary means of exploring graphs. These tools allow users to "hear" the shape of a function, making complex mathematical concepts more accessible \supercite{Trayford2023STRAUSS, SonificationSandbox, TwoTone}.
 
 \section{~~Natural Language Generation (NLG) for Data Interpretation}\label{ch13:sec:nlg}
-\gls{nlg}\index{natural language generation (NLG)} is a field of \gls{AI} that focuses on generating human-like text from structured data. For data visualization, this means automatically creating summaries and descriptions of charts.
+\gls{nlg}\index{natural language generation (NLG)} is a field of \gls{AI} that focuses on generating human-like text from structured data. For \gls{datavisualization}, this means automatically creating summaries and descriptions of charts.
 
 \subsection{MIT's VisText and the Four-Level Model of Semantic Content}\label{ch13:ssec:vistext}
-The \textbf{VisText}\index{projects!MIT!VisText} project from MIT proposes a four-level model for generating textual descriptions of data visualizations\index{data visualization!text descriptions}. This model breaks down the description into essential components:
+The \textbf{VisText}\index{projects!MIT!VisText} project from MIT proposes a four-level model for generating textual descriptions of \gls{datavisualization}s\index{datavisualization!text descriptions}. This model breaks down the description into essential components:
 \begin{enumerate}
 	\item \textbf{Construction:} How the chart is built (e.g., "This is a bar chart with the x-axis representing months...").
 	\item \textbf{Evidence:} Key data points and trends (e.g., "Sales peaked in June at \$50,000.").
@@ -181,7 +181,7 @@ This structured approach\index{natural language generation (NLG)!semantic conten
 Several tools and research projects are leveraging \gls{AI}\index{AI!text generation} to automatically generate alt text and summaries for charts. These tools analyze the underlying data and visual structure to produce descriptions that can be read by screen readers, providing a scalable solution for making large numbers of charts accessible \supercite{Smits2024AltGosling, SeeChart}.
 
 \subsection{Frameworks for Computer-Assisted Descriptive Narratives (``From Graphs to Words'')}\label{ch13:ssec:descriptive-narratives}
-The \textbf{"From Graphs to Words"}\index{projects!From Graphs to Words} project is an example of a framework that assists authors in creating rich, narrative descriptions of data visualizations. Instead of being fully automated, these tools work with the author, suggesting key points to highlight and ensuring that the final description is both accurate and insightful \supercite{FromGraphsToWords}.
+The \textbf{"From Graphs to Words"}\index{projects!From Graphs to Words} project is an example of a framework that assists authors in creating rich, narrative descriptions of \gls{datavisualization}s. Instead of being fully automated, these tools work with the author, suggesting key points to highlight and ensuring that the final description is both accurate and insightful \supercite{FromGraphsToWords}.
 
 \section{~~Interactive Graphing Environments and General Accessibility Features}\label{ch13:sec:interactive-environments}
 Modern accessible graphing environments\index{software!graphing!interactive} go beyond single-mode solutions and incorporate a range of accessibility features.

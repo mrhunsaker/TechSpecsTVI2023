@@ -1,4 +1,4 @@
-\chapter{Accessibility Auditing for Internet-Based Materials: A Comprehensive Guide}
+\chapter{Accessibility Auditing for Internet-Based Materials}
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 \label{chap:accessibility-auditing}
 
@@ -51,8 +51,8 @@ Detailed tooling descriptions appear later (Automated Testing Tools; Manual Meth
 \paragraph{Phase 3: Manual Heuristic Review} Keyboard traversal, structural landmarks, focus management, dynamic component behavior, error recovery.
 \paragraph{Phase 4: Assistive Technology Testing} NVDA/JAWS or VoiceOver pass focusing on semantic announcements, \gidx{readingorder}{reading order}, alt text completeness, interactive control clarity.
 \paragraph{Phase 5: User / Contextual Testing} Representative users (e.g., screen reader primary, low vision magnifier user) perform core tasks; capture friction metrics.
-\paragraph{Phase 6: Remediation & Verification} Prioritize blocking issues (task failure) → severe (significant friction) → moderate (efficiency loss) → minor (cosmetic).
-\paragraph{Phase 7: Governance & Monitoring} Integrate automated suites into CI; define regression thresholds and SLA for fix turnaround.
+\paragraph{Phase 6: Remediation \& Verification} Prioritize blocking issues (task failure) → severe (significant friction) → moderate (efficiency loss) → minor (cosmetic).
+\paragraph{Phase 7: Governance \& Monitoring} Integrate automated suites into CI; define regression thresholds and SLA for fix turnaround.
 
 \section{~~Standards and Compliance}\label{sec:standards-compliance-auditing}
 \begin{itemize}
@@ -64,9 +64,9 @@ Detailed tooling descriptions appear later (Automated Testing Tools; Manual Meth
 
 \section{~~Best Practices}\label{sec:best-practices-auditing}
 \begin{itemize}
-	\item Shift-left: Add linting & unit-level accessibility assertions early.
+	\item Shift-left: Add linting \& unit-level accessibility assertions early.
 	\item Maintain a component accessibility spec (roles, states, keyboard map) for each design system element.
-	\item Treat color & contrast tokens as governed design assets with automated regression checks.
+	\item Treat color \& contrast tokens as governed design assets with automated regression checks.
 	\item Use issue templates capturing: SC, reproduction steps, user impact narrative, remediation guidance, acceptance criteria.
 	\item Track mean remediation time and reopen rate to guide training investments.
 \end{itemize}
@@ -83,17 +83,17 @@ Detailed tooling descriptions appear later (Automated Testing Tools; Manual Meth
 		row{1} = {font=\bfseries},
 		hlines
 	}
-	Issue                                       & RootCause                                         & ImpactOnLearner                              & ResolutionSteps                                                   & PreventivePractice                                       & ReferenceKey          \\
-	False positive overload in reports          & Unrefined automated rules / duplicate scanners    & Noise obscures critical blockers             & Consolidate tools; de-duplicate; manually validate sample set     & Curate minimal tool stack; periodic rule review          & DequeAxeCore          \\
-	Missed keyboard trap                        & Insufficient manual traversal depth               & User cannot exit component; task abandonment & Reproduce; add proper focus management or ESC handling            & Keyboard checklist in every sprint review                & WebAIMKeyboardA11y    \\
-	Contrast failures in dynamic states         & Hover/focus styles not audited                    & Low vision users lose state context          & Audit interactive states; adjust token values                     & Design token accessibility gating                        & WebAIMContrastChecker \\
-	Incorrect landmark/heading hierarchy        & Ad hoc template changes                           & Disorientation; increased \gidx{navigation}{navigation} time    & Refactor layout regions; normalize heading levels                 & Locked templates with design system review               & WCAG2018              \\
-	ARIA misuse (role duplication or misrole)   & Copy-paste from examples without semantics review & Screen reader ambiguity; redundant verbosity & Remove invalid roles; use native semantics                        & ARIA usage guidelines + code review checklist            & ARIA                  \\
-	Focus loss after dynamic content update     & JavaScript replacing nodes without focus handling & User stranded; context loss                  & Programmatically restore or move focus logically                  & Pattern library with tested update routines              & WebAIMKeyboardA11y    \\
-	Unlabeled interactive icon buttons          & Reliance on visual glyph only                     & Function unknown; action avoidance           & Add accessible name (aria-label) or visible text                  & Component definition requires label prop                 & WCAGNonText2018       \\
-	Latency in automated CI scans (> build SLA) & Excessive page set / unoptimized concurrency      & Teams disable checks → regression risk       & Parallelize scans; reduce scope to template set; schedule nightly & Tiered scan strategy (PR subset vs. nightly full crawl)  & Pa11y                 \\
-	Stale baseline not updated post-remediation & Lack of versioned audit artifacts                 & Re-opened issues; misaligned metrics         & Snapshot post-fix; update tracking doc and dashboards             & Baseline versioning policy                               & Henry2007             \\
-	User feedback conflicts with tool results   & Over-reliance on automated severity scoring       & Real barriers under-prioritized              & Re-triage with user evidence; adjust severity rubric              & Incorporate user test weighting in prioritization matrix & Petrie2006            \\
+	Issue                                       & RootCause                                         & ImpactOnLearner                                              & ResolutionSteps                                                   & PreventivePractice                                       & ReferenceKey          \\
+	False positive overload in reports          & Unrefined automated rules / duplicate scanners    & Noise obscures critical blockers                             & Consolidate tools; de-duplicate; manually validate sample set     & Curate minimal tool stack; periodic rule review          & DequeAxeCore          \\
+	Missed keyboard trap                        & Insufficient manual traversal depth               & User cannot exit component; task abandonment                 & Reproduce; add proper focus management or ESC handling            & Keyboard checklist in every sprint review                & WebAIMKeyboardA11y    \\
+	Contrast failures in dynamic states         & Hover/focus styles not audited                    & Low vision users lose state context                          & Audit interactive states; adjust token values                     & Design token accessibility gating                        & WebAIMContrastChecker \\
+	Incorrect landmark/heading hierarchy        & Ad hoc template changes                           & Disorientation; increased \gidx{navigation}{navigation} time & Refactor layout regions; normalize heading levels                 & Locked templates with design system review               & WCAG2018              \\
+	ARIA misuse (role duplication or misrole)   & Copy-paste from examples without semantics review & Screen reader ambiguity; redundant verbosity                 & Remove invalid roles; use native semantics                        & ARIA usage guidelines + code review checklist            & ARIA                  \\
+	Focus loss after dynamic content update     & JavaScript replacing nodes without focus handling & User stranded; context loss                                  & Programmatically restore or move focus logically                  & Pattern library with tested update routines              & WebAIMKeyboardA11y    \\
+	Unlabeled interactive icon buttons          & Reliance on visual glyph only                     & Function unknown; action avoidance                           & Add accessible name (aria-label) or visible text                  & Component definition requires label prop                 & WCAGNonText2018       \\
+	Latency in automated CI scans (> build SLA) & Excessive page set / unoptimized concurrency      & Teams disable checks → regression risk                       & Parallelize scans; reduce scope to template set; schedule nightly & Tiered scan strategy (PR subset vs. nightly full crawl)  & Pa11y                 \\
+	Stale baseline not updated post-remediation & Lack of versioned audit artifacts                 & Re-opened issues; misaligned metrics                         & Snapshot post-fix; update tracking doc and dashboards             & Baseline versioning policy                               & Henry2007             \\
+	User feedback conflicts with tool results   & Over-reliance on automated severity scoring       & Real barriers under-prioritized                              & Re-triage with user evidence; adjust severity rubric              & Incorporate user test weighting in prioritization matrix & Petrie2006            \\
 \end{longtblr}
 \normalsize
 
@@ -328,4 +328,3 @@ AI will play an increasingly important role in both creating and auditing for \g
 \label{sec:conclusion-auditing}
 A comprehensive accessibility audit\index{accessibility!accessibility testing} is a critical tool for any organization committed to digital inclusion. By combining automated tools, manual testing\index{accessibility!Manual Testing}, and user feedback, organizations can identify and remediate \gidx{accessibility}{accessibility} barriers, ensuring that their internet-based materials are usable by the widest possible audience. The journey to full accessibility is ongoing, requiring a sustained commitment to testing, remediation\index{accessibility!remediation strategies}, and continuous improvement. Ultimately, building accessibility into the core of an organization's processes and culture is the most effective way to create truly inclusive digital experiences.
 \supercite{Thatcher2006}
-

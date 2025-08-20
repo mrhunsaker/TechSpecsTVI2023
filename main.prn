@@ -1,0 +1,635 @@
+\glossaryentry{3D printing?\glossentry{3DPrinting}|glsseeformat["\seename ]{3dprinting}}{Z}
+\glossaryentry{braille education?\glossentry{brailleeducation}|setentrycounter[]{page}"\glsnumberformat}{ii}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{ii}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{xiii}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{xv}
+\glossaryentry{braille education?\glossentry{brailleeducation}|setentrycounter[]{page}"\glsnumberformat}{xvi}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{xvi}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{xvi}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{xvi}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{xvi}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{xvii}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{xvii}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{xvii}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{xvii}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{2}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{3}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{3}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{6}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{8}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{8}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{9}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{9}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{9}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{9}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{10}
+\glossaryentry{api?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{14}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{16}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{16}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{16}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{16}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{17}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{17}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{19}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{19}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{19}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{22}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{31}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{32}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{33}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{36}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{37}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{37}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{37}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{37}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{39}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{43}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{43}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{44}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{44}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{44}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{48}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{48}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{49}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{49}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{50}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{50}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{51}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{52}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{52}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{55}
+\glossaryentry{api?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{56}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{56}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{57}
+\glossaryentry{braille education?\glossentry{brailleeducation}|setentrycounter[]{page}"\glsnumberformat}{57}
+\glossaryentry{braille education?\glossentry{brailleeducation}|setentrycounter[]{page}"\glsnumberformat}{58}
+\glossaryentry{braille literacy?\glossentry{brailleliteracy}|setentrycounter[]{page}"\glsnumberformat}{58}
+\glossaryentry{braille education?\glossentry{brailleeducation}|setentrycounter[]{page}"\glsnumberformat}{58}
+\glossaryentry{braille education?\glossentry{brailleeducation}|setentrycounter[]{page}"\glsnumberformat}{58}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{59}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{59}
+\glossaryentry{interpoint (braille)?\glossentry{interpoint}|setentrycounter[]{page}"\glsnumberformat}{60}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{61}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{63}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{63}
+\glossaryentry{3D printing?\glossentry{3dprinting}|setentrycounter[]{page}"\glsnumberformat}{64}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{64}
+\glossaryentry{accessible materials?\glossentry{accessiblematerials}|setentrycounter[]{page}"\glsnumberformat}{67}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{70}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{70}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{70}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{70}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{71}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{73}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{75}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{76}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{76}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{76}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{76}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{76}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{77}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{77}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{77}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{79}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{79}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{79}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{79}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{79}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{80}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{80}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{80}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{80}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{80}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{80}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{80}
+\glossaryentry{speech synthesis?\glossentry{speechsynthesis}|setentrycounter[]{page}"\glsnumberformat}{80}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{81}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{81}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{81}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{81}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{81}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{81}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{82}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{82}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{82}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{82}
+\glossaryentry{speech synthesis?\glossentry{speechsynthesis}|setentrycounter[]{page}"\glsnumberformat}{82}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{82}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{82}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{83}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{83}
+\glossaryentry{speech synthesis?\glossentry{speechsynthesis}|setentrycounter[]{page}"\glsnumberformat}{83}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{83}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{84}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{84}
+\glossaryentry{semantic tagging?\glossentry{semantictagging}|setentrycounter[]{page}"\glsnumberformat}{85}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{85}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{85}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{85}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{85}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{86}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{86}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{86}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{86}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{86}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{86}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{86}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{87}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{87}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{87}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{87}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{87}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{88}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{88}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{88}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{89}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{90}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{91}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{91}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{92}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{93}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{93}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{94}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{94}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{94}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{94}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{95}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{96}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{96}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{96}
+\glossaryentry{api?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{96}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{97}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{97}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{98}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{98}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{99}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{100}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{100}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{101}
+\glossaryentry{operating system?\glossentry{operatingsystem}|setentrycounter[]{page}"\glsnumberformat}{110}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{116}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{116}
+\glossaryentry{equitable access?\glossentry{equitableaccess}|setentrycounter[]{page}"\glsnumberformat}{120}
+\glossaryentry{Nemeth entry?\glossentry{nemethentry}|setentrycounter[]{page}"\glsnumberformat}{121}
+\glossaryentry{translation table?\glossentry{translationtable}|setentrycounter[]{page}"\glsnumberformat}{121}
+\glossaryentry{back-translation?\glossentry{backtranslation}|setentrycounter[]{page}"\glsnumberformat}{121}
+\glossaryentry{contracted (Grade 2) braille?\glossentry{contractedbraille}|setentrycounter[]{page}"\glsnumberformat}{121}
+\glossaryentry{six-key input?\glossentry{sixkeyinput}|setentrycounter[]{page}"\glsnumberformat}{121}
+\glossaryentry{semantic tagging?\glossentry{semantictagging}|setentrycounter[]{page}"\glsnumberformat}{122}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{127}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{128}
+\glossaryentry{semantic tagging?\glossentry{semantictagging}|setentrycounter[]{page}"\glsnumberformat}{128}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{130}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{131}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{143}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{144}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{145}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{152}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{155}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{155}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{156}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{156}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{157}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{157}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{158}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{158}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{158}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{159}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{160}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{160}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{160}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{160}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{160}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{161}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{163}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{163}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{163}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{163}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{163}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{163}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{163}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{164}
+\glossaryentry{alt text?\glossentry{alttext}|setentrycounter[]{page}"\glsnumberformat}{169}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{169}
+\glossaryentry{born accessible?\glossentry{bornaccessible}|setentrycounter[]{page}"\glsnumberformat}{172}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{172}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{173}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{174}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{174}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{176}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{176}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{176}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{177}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{178}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{178}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{179}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{181}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{182}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{185}
+\glossaryentry{accessible math?\glossentry{accessiblemath}|setentrycounter[]{page}"\glsnumberformat}{186}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{186}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{186}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{186}
+\glossaryentry{accessible math?\glossentry{accessiblemath}|setentrycounter[]{page}"\glsnumberformat}{187}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{188}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{188}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{188}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{189}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{equitable access?\glossentry{equitableaccess}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{semantic tagging?\glossentry{semantictagging}|setentrycounter[]{page}"\glsnumberformat}{190}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{ICR?\glossentry{icr}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{layout analysis?\glossentry{layoutanalysis}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{semantic tagging?\glossentry{semantictagging}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{born accessible?\glossentry{bornaccessible}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{191}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{192}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{192}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{192}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{192}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{192}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{193}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{193}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{193}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{193}
+\glossaryentry{semantic tagging?\glossentry{semantictagging}|setentrycounter[]{page}"\glsnumberformat}{193}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{193}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{193}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{194}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{194}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{194}
+\glossaryentry{layout analysis?\glossentry{layoutanalysis}|setentrycounter[]{page}"\glsnumberformat}{194}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{194}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{194}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{195}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{195}
+\glossaryentry{layout analysis?\glossentry{layoutanalysis}|setentrycounter[]{page}"\glsnumberformat}{195}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{195}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{195}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{196}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{196}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{196}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{196}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{196}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{196}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{197}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{197}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{197}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{197}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{197}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{197}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{198}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{198}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{198}
+\glossaryentry{semantic tagging?\glossentry{semantictagging}|setentrycounter[]{page}"\glsnumberformat}{198}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{198}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{198}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{199}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{199}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{199}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{200}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{200}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{201}
+\glossaryentry{accessible materials?\glossentry{accessiblematerials}|setentrycounter[]{page}"\glsnumberformat}{201}
+\glossaryentry{semantic tagging?\glossentry{semantictagging}|setentrycounter[]{page}"\glsnumberformat}{203}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{206}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{208}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{208}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{208}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{208}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{210}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{210}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{211}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{212}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{212}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{213}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{213}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{214}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{215}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{215}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{215}
+\glossaryentry{accessible materials?\glossentry{accessiblematerials}|setentrycounter[]{page}"\glsnumberformat}{215}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{216}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{216}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{216}
+\glossaryentry{NLG?\glossentry{nlg}|setentrycounter[]{page}"\glsnumberformat}{217}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{217}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{217}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{218}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{218}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{219}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{220}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{220}
+\glossaryentry{NLG?\glossentry{nlg}|setentrycounter[]{page}"\glsnumberformat}{220}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{221}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{221}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{221}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{222}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{222}
+\glossaryentry{api?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{222}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{222}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{223}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{223}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{223}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{223}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{223}
+\glossaryentry{speech synthesis?\glossentry{speechsynthesis}|setentrycounter[]{page}"\glsnumberformat}{223}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{225}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{225}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{225}
+\glossaryentry{api?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{225}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{225}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{226}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{226}
+\glossaryentry{api?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{226}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{226}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{226}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{227}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{227}
+\glossaryentry{api?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{227}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{228}
+\glossaryentry{api?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{228}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{229}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{229}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{229}
+\glossaryentry{api?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{229}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{230}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{230}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{230}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{231}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{232}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{232}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{233}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{236}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{236}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{247}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{247}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{258}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{258}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{260}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{269}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{270}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{270}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{271}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{271}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{272}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{272}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{274}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{274}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{275}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{275}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{277}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{278}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{278}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{278}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{279}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{279}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{283}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{284}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{284}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{285}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{286}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{287}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{289}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{290}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{291}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{291}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{291}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{301}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{302}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{311}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{312}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{312}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{312}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{312}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{313}
+\glossaryentry{braille literacy?\glossentry{brailleliteracy}|setentrycounter[]{page}"\glsnumberformat}{313}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{314}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{314}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{314}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{315}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{315}
+\glossaryentry{communication?\glossentry{communication}|setentrycounter[]{page}"\glsnumberformat}{315}
+\glossaryentry{communication?\glossentry{communication}|setentrycounter[]{page}"\glsnumberformat}{315}
+\glossaryentry{communication?\glossentry{communication}|setentrycounter[]{page}"\glsnumberformat}{315}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{316}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{318}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{319}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{319}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{319}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{321}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{323}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{323}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{325}
+\glossaryentry{Braille Access Workspace?\glossentry{brailleaccessworkspace}|setentrycounter[]{page}"\glsnumberformat}{333}
+\glossaryentry{command remapping?\glossentry{commandremapping}|setentrycounter[]{page}"\glsnumberformat}{333}
+\glossaryentry{Nemeth entry?\glossentry{nemethentry}|setentrycounter[]{page}"\glsnumberformat}{333}
+\glossaryentry{settings export?\glossentry{settingsexport}|setentrycounter[]{page}"\glsnumberformat}{333}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{333}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{333}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{344}
+\glossaryentry{self-voicing game?\glossentry{selfvoicinggame}|setentrycounter[]{page}"\glsnumberformat}{344}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{344}
+\glossaryentry{hybrid casual?\glossentry{hybridcasual}|setentrycounter[]{page}"\glsnumberformat}{344}
+\glossaryentry{adaptive difficulty?\glossentry{adaptivedifficulty}|setentrycounter[]{page}"\glsnumberformat}{344}
+\glossaryentry{accessible mod?\glossentry{accessiblemod}|setentrycounter[]{page}"\glsnumberformat}{344}
+\glossaryentry{tactile adaptation?\glossentry{tactileadaptation}|setentrycounter[]{page}"\glsnumberformat}{344}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{345}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{345}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{346}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{346}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{346}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{347}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{347}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{347}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{348}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{348}
+\glossaryentry{api?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{349}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{351}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{352}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{353}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{353}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{356}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{358}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{360}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{362}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{363}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{364}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{364}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{365}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{365}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{365}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{366}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{367}
+\glossaryentry{digital accessibility?\glossentry{digitalaccessibility}|setentrycounter[]{page}"\glsnumberformat}{368}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{368}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{369}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{370}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{371}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{372}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{372}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{374}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{374}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{374}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{374}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{375}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{376}
+\glossaryentry{web accessibility?\glossentry{webaccessibility}|setentrycounter[]{page}"\glsnumberformat}{376}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{377}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{377}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{377}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{377}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{377}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{378}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{378}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{378}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{379}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{380}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{380}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{381}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{381}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{382}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{382}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{383}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{384}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{384}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{385}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{385}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{386}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{386}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{387}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{387}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{387}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{388}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{388}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{389}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{390}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{390}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{392}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{392}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{394}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{394}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{397}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{399}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{400}
+\glossaryentry{reading order?\glossentry{readingorder}|setentrycounter[]{page}"\glsnumberformat}{400}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{403}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{404}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{404}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{405}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{405}
+\glossaryentry{troubleshooting?\glossentry{troubleshooting}|setentrycounter[]{page}"\glsnumberformat}{405}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{406}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{407}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{407}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{407}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{407}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{409}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{409}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{410}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{410}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{410}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{412}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{413}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{415}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{415}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{415}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{415}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{416}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{416}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{416}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{417}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{417}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{417}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{417}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{418}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{419}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{419}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{419}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{424}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{424}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{428}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{432}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{438}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{438}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{466}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{466}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{466}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{466}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{466}
+\glossaryentry{software?\glossentry{software}|setentrycounter[]{page}"\glsnumberformat}{466}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{466}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{467}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{467}
+\glossaryentry{navigation?\glossentry{navigation}|setentrycounter[]{page}"\glsnumberformat}{467}
+\glossaryentry{accessibility?\glossentry{accessibility}|setentrycounter[]{page}"\glsnumberformat}{467}
+\glossaryentry{3D printing?\glossentry{3dprinting}|setentrycounter[]{page}"\glsnumberformat}{471}
+\glossaryentry{born accessible?\glossentry{bornaccessible}|setentrycounter[]{page}"\glsnumberformat}{471}
+\glossaryentry{instructional materials?\glossentry{instructionalmaterials}|setentrycounter[]{page}"\glsnumberformat}{471}
+\glossaryentry{equitable access?\glossentry{equitableaccess}|setentrycounter[]{page}"\glsnumberformat}{471}
+\glossaryentry{math OCR?\glossentry{mathocr}|setentrycounter[]{page}"\glsnumberformat}{471}
+\glossaryentry{alt text?\glossentry{alttext}|setentrycounter[]{page}"\glsnumberformat}{471}
+\glossaryentry{data visualization?\glossentry{datavisualization}|setentrycounter[]{page}"\glsnumberformat}{471}
+\glossaryentry{equitable access?\glossentry{equitableaccess}|setentrycounter[]{page}"\glsnumberformat}{471}
+\glossaryentry{assistive technology?\glossentry{assistivetechnology}|setentrycounter[]{page}"\glsnumberformat}{472}
+\glossaryentry{equitable access?\glossentry{equitableaccess}|setentrycounter[]{page}"\glsnumberformat}{472}
+\glossaryentry{accessible materials?\glossentry{accessiblematerials}|setentrycounter[]{page}"\glsnumberformat}{472}
+\glossaryentry{born accessible?\glossentry{bornaccessible}|setentrycounter[]{page}"\glsnumberformat}{472}
+\glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}"\glsnumberformat}{473}
+\glossaryentry{machine learning?\glossentry{machinelearning}|setentrycounter[]{page}"\glsnumberformat}{473}
+\glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}"\glsnumberformat}{473}
+\glossaryentry{neural network?\glossentry{neuralnetwork}|setentrycounter[]{page}"\glsnumberformat}{473}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{473}
+\glossaryentry{layout analysis?\glossentry{layoutanalysis}|setentrycounter[]{page}"\glsnumberformat}{473}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{473}
+\glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}"\glsnumberformat}{473}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{474}
+\glossaryentry{tts?\glossentry{tts}|setentrycounter[]{page}"\glsnumberformat}{474}
+\glossaryentry{speech synthesis?\glossentry{speechsynthesis}|setentrycounter[]{page}"\glsnumberformat}{474}
+\glossaryentry{text-to-speech?\glossentry{texttospeech}|setentrycounter[]{page}"\glsnumberformat}{477}
+\glossaryentry{orientation "\& mobility?\glossentry{orientationmobility}|setentrycounter[]{page}"\glsnumberformat}{481}
+\glossaryentry{AI?\glossentry{ai}|setentrycounter[]{page}"\glsnumberformat}{482}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{485}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{485}
+\glossaryentry{LLM?\glossentry{llm}|setentrycounter[]{page}"\glsnumberformat}{486}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{489}
+\glossaryentry{OCR?\glossentry{ocr}|setentrycounter[]{page}"\glsnumberformat}{491}

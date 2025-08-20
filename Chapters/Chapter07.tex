@@ -1,4 +1,4 @@
-\chapter{\gidx{texttospeech}{Text-to-Speech} and DAISY}\label{ch7:chap:text-to-speech-daisy}
+\chapter{Text-to-Speech and DAISY}\label{ch7:chap:text-to-speech-daisy}
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 \raggedright
 
@@ -115,14 +115,14 @@ and \gidx{software}{software} solutions are selected based on educational releva
 		note={Feature presence indicates common educational deployment characteristics; verify current versions before procurement.},
 	]{colspec={X[l] X[l] X[l] X[l] X[l]}, rowhead=1, hlines}
 	\toprule
-	Category                                             & Example Tools / Platforms                                                                  & Core Function                                    & Key Accessibility Features                                       & Evaluation Considerations                                \\
+	Category                                                          & Example Tools / Platforms                                                                  & Core Function                                        & Key Accessibility Features                                                                                 & Evaluation Considerations                                               \\
 	\midrule
-	Structured Audio Readers                             & DAISY player apps (Voice Dream Reader\supercite{VoiceDreamReader}, Bookshare, BARD Mobile) & Navigable audio + text sync                      & Multi-level TOC, page nav, bookmarks, media overlay highlighting & \gidx{navigation}{Navigation} depth, sync accuracy, battery consumption     \\
-	Desktop / Mobile Screen Readers\gidx{screenreader}{screen reader} & JAWS, NVDA, VoiceOver, TalkBack                                                            & Real-time UI + content speech                    & Structural \gidx{navigation}{navigation} (headings, links), \gidx{brailledisplay}{braille display} support & Latency on large documents, braille translation accuracy \\
-	Conversion Pipelines                                 & DAISY Pipeline / Publisher XML Transformers                                                & Source XML → multi-format (EPUB, braille, DAISY) & Automated validation, page map preservation                      & Schema validation, throughput (files/hour)               \\
-	On-Device Neural \gls{tts} Engines                         & Platform voices (Apple, Microsoft), local neural voices                                    & Low-latency \gidx{speechsynthesis}{speech synthesis}                     & Natural prosody, offline resilience, rate/pitch control          & Startup latency, MOS benchmarks, \gls{cpu}/NPU utilization     \\
-	Cloud \gls{tts} APIs                                       & Commercial neural \gls{tts} services                                                             & High-fidelity multi-voice rendering              & Large voice catalog, SSML control                                & Network jitter impact, privacy risk (data egress)        \\
-	Annotation / Study Tools                             & Accessible EPUB readers with markup                                                        & Highlight, note, export for study                & Keyboard + braille annotation, structural export                 & Note export format fidelity, accessible markup semantics \\
+	Structured Audio Readers                                          & DAISY player apps (Voice Dream Reader\supercite{VoiceDreamReader}, Bookshare, BARD Mobile) & Navigable audio + text sync                          & Multi-level TOC, page nav, bookmarks, media overlay highlighting                                           & \gidx{navigation}{Navigation} depth, sync accuracy, battery consumption \\
+	Desktop / Mobile Screen Readers\gidx{screenreader}{screen reader} & JAWS, NVDA, VoiceOver, TalkBack                                                            & Real-time UI + content speech                        & Structural \gidx{navigation}{navigation} (headings, links), \gidx{brailledisplay}{braille display} support & Latency on large documents, braille translation accuracy                \\
+	Conversion Pipelines                                              & DAISY Pipeline / Publisher XML Transformers                                                & Source XML → multi-format (EPUB, braille, DAISY)     & Automated validation, page map preservation                                                                & Schema validation, throughput (files/hour)                              \\
+	On-Device Neural \gls{tts} Engines                                & Platform voices (Apple, Microsoft), local neural voices                                    & Low-latency \gidx{speechsynthesis}{speech synthesis} & Natural prosody, offline resilience, rate/pitch control                                                    & Startup latency, MOS benchmarks, \gls{cpu}/NPU utilization              \\
+	Cloud \gls{tts} APIs                                              & Commercial neural \gls{tts} services                                                       & High-fidelity multi-voice rendering                  & Large voice catalog, SSML control                                                                          & Network jitter impact, privacy risk (data egress)                       \\
+	Annotation / Study Tools                                          & Accessible EPUB readers with markup                                                        & Highlight, note, export for study                    & Keyboard + braille annotation, structural export                                                           & Note export format fidelity, accessible markup semantics                \\
 	\bottomrule
 \end{longtblr}
 \normalsize
@@ -231,16 +231,16 @@ cohesion score by 15\%.
 		note={ReferenceKey points to existing citation keys; ensure bibliography entries exist.},
 	]{colspec={X[l] X[l] X[l] X[l] X[l] X[l]}, rowhead=1, hlines}
 	\toprule
-	Issue                                              & RootCause                                       & ImpactOnLearner                                 & ResolutionSteps                                     & PreventivePractice                               & ReferenceKey  \\
+	Issue                                              & RootCause                                       & ImpactOnLearner                                             & ResolutionSteps                                     & PreventivePractice                               & ReferenceKey  \\
 	\midrule
-	High initial \gls{tts} latency ($>500$ ms)               & On-demand model load / network call             & Breaks reading flow, reduced engagement         & Pre-warm engine; cache voice; switch to local voice & Measure cold/warm latency pre-deployment         & W3CMediaA11y  \\
-	Misaligned media overlays (sentence offset)        & Incorrect SMIL timing export                    & Comprehension disruption; mistrust of highlight & Re-run timing generation; validate with diff tool   & Automated sync drift test (<300 ms avg)          & W3CMediaA11y  \\
-	Missing page \gidx{navigation}{navigation} entries                    & Omitted page list generation                    & Inability to follow in-class page references    & Regenerate navigation doc; insert page-list         & Build pipeline step validating page count parity & W3CMediaA11y  \\
-	Heading hierarchy flattened                        & Improper heading level mapping in XML transform & Loss of structural \gidx{navigation}{navigation} efficiency        & Adjust XSLT mapping; re-validate semantics          & Schema test + heading depth coverage report      & Section508    \\
-	Incorrect alt text association                     & ID/REF mismatch in NIMAS package                & Screen reader skips descriptions                & Correct ID references; repackage                    & Link integrity automated check                   & Section508    \\
-	\gls{tts} mispronounces domain terms                     & Missing custom lexicon / SSML overrides         & Reduced comprehension of technical vocabulary   & Add pronunciation dictionary; test                  & Maintain shared lexicon repository               & VisionAid2025 \\
-	Voice fatigue reported after long sessions         & Excessive speech rate / monotone prosody        & Declining retention over session                & Tune rate (target 150–180 wpm); enable breaks       & Provide training on adjusting rate/pitch         & Kelly2011     \\
-	EPUB metadata incomplete (no accessibilityFeature) & Export script omission                          & Reduced discoverability in repositories         & Patch export; add metadata injection step           & Metadata validation gate in CI                   & W3CMediaA11y  \\
+	High initial \gls{tts} latency ($>500$ ms)         & On-demand model load / network call             & Breaks reading flow, reduced engagement                     & Pre-warm engine; cache voice; switch to local voice & Measure cold/warm latency pre-deployment         & W3CMediaA11y  \\
+	Misaligned media overlays (sentence offset)        & Incorrect SMIL timing export                    & Comprehension disruption; mistrust of highlight             & Re-run timing generation; validate with diff tool   & Automated sync drift test (<300 ms avg)          & W3CMediaA11y  \\
+	Missing page \gidx{navigation}{navigation} entries & Omitted page list generation                    & Inability to follow in-class page references                & Regenerate navigation doc; insert page-list         & Build pipeline step validating page count parity & W3CMediaA11y  \\
+	Heading hierarchy flattened                        & Improper heading level mapping in XML transform & Loss of structural \gidx{navigation}{navigation} efficiency & Adjust XSLT mapping; re-validate semantics          & Schema test + heading depth coverage report      & Section508    \\
+	Incorrect alt text association                     & ID/REF mismatch in NIMAS package                & Screen reader skips descriptions                            & Correct ID references; repackage                    & Link integrity automated check                   & Section508    \\
+	\gls{tts} mispronounces domain terms               & Missing custom lexicon / SSML overrides         & Reduced comprehension of technical vocabulary               & Add pronunciation dictionary; test                  & Maintain shared lexicon repository               & VisionAid2025 \\
+	Voice fatigue reported after long sessions         & Excessive speech rate / monotone prosody        & Declining retention over session                            & Tune rate (target 150–180 wpm); enable breaks       & Provide training on adjusting rate/pitch         & Kelly2011     \\
+	EPUB metadata incomplete (no accessibilityFeature) & Export script omission                          & Reduced discoverability in repositories                     & Patch export; add metadata injection step           & Metadata validation gate in CI                   & W3CMediaA11y  \\
 	\bottomrule
 \end{longtblr}
 \normalsize
@@ -301,4 +301,3 @@ an integrated component of instructional design.
 % Intentionally left to bibliography system (\supercite used inline). No manual list here.
 
 \endinput
-

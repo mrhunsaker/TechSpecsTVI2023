@@ -1,3 +1,52 @@
+% --- Additional WCAG and accessibility glossary entries ---
+% Understandable (WCAG principle)
+\newglossaryentry{understandable}{
+	name={understandable},
+	type={concept},
+	description={One of the four WCAG principles: information and the operation of the user interface must be understandable.}
+}
+
+% Robust (WCAG principle)
+\newglossaryentry{robust}{
+	name={robust},
+	type={concept},
+	description={One of the four WCAG principles: content must be robust enough to be interpreted reliably by a wide variety of user agents, including assistive technologies.}
+}
+
+% ARIA (Accessible Rich Internet Applications)
+\newglossaryentry{aria}{
+	name={ARIA},
+	type={standard},
+	description={Accessible Rich Internet Applications—W3C specification for adding accessibility information to web content and applications, especially dynamic content and advanced user interface controls developed with Ajax, HTML, JavaScript, and related technologies.}
+}
+
+% PDF/UA (alias for pdfua)
+\newglossaryentry{pdf/ua}{
+	name={PDF/UA},
+	type={standard},
+	description={See \gls{pdfua}. Alias for case-insensitive referencing.}
+}
+% --- Aliases and missing entries for glossary consistency ---
+% Alias for WCAG (uppercase)
+\newglossaryentry{WCAG}{
+	name={WCAG},
+	type={standard},
+	description={See \gls{wcag}. Alias for case-insensitive referencing.}
+}
+
+% Perceivable (WCAG principle)
+\newglossaryentry{perceivable}{
+	name={perceivable},
+	type={concept},
+	description={One of the four WCAG principles: information and user interface components must be presentable to users in ways they can perceive.}
+}
+
+% Operable (WCAG principle)
+\newglossaryentry{operable}{
+	name={operable},
+	type={concept},
+	description={One of the four WCAG principles: user interface components and navigation must be operable by all users.}
+}
 % Generated glossary definitions for LaTeX
 
 % Include this file in your LaTeX preamble after \usepackage{glossaries}
@@ -51,7 +100,7 @@
 \newglossaryentry{alttext}{
 	name={alt text},
 	type={process},
-	description={Textual alternative that conveys the essential purpose or information of non-text content (images, graphics, UI icons). Enables comprehension for screen reader and braille users; complex visuals may require extended descriptions. See also: \gls{tactilegraphics}, \gls{data visualization}, \gls{equitableaccess}.}
+	description={Textual alternative that conveys the essential purpose or information of non-text content (images, graphics, UI icons). Enables comprehension for screen reader and braille users; complex visuals may require extended descriptions. See also: \gls{tactilegraphics}, \gls{datavisualization}, \gls{equitableaccess}.}
 }
 
 \newglossaryentry{api}{
@@ -81,7 +130,7 @@
 \newglossaryentry{audio}{
 	name={audio},
 	type={modality},
-	description={Acoustic output channel leveraged for speech, earcons, spatial cues, and sonification. Critical to non-visual workflows (e.g., \gls{screenreader} speech, \gls{spatial (binaural) audio}, \gls{informationalaudiocue}). See also: \gls{texttospeech}, \gls{sonification}, \gls{haptic}.}
+	description={Acoustic output channel leveraged for speech, earcons, spatial cues, and sonification. Critical to non-visual workflows (e.g., \gls{screenreader} speech, \gls{spatialaudio}, \gls{informationalaudiocue}). See also: \gls{texttospeech}, \gls{sonification}, \gls{haptic}.}
 }
 
 \newglossaryentry{audiobook}{
@@ -393,7 +442,7 @@
 \newglossaryentry{mobility}{
 	name={mobility},
 	type={concept},
-	description={Ability to navigate physical or virtual environments; supported by orientation & mobility training, GPS, indoor navigation beacons, haptic/spatial audio cues. See also: \gls{orientationmobility}.}
+	description={Ability to navigate physical or virtual environments; supported by orientation \& mobility training, GPS, indoor navigation beacons, haptic/spatial audio cues. See also: \gls{orientationmobility}.}
 }
 
 \newglossaryentry{music}{
@@ -480,6 +529,65 @@
 	description={Optical Music Recognition: converting scanned music notation into structured symbolic representations (MusicXML) for braille or audible rendering. See also: \gls{musicbraille}.}
 }
 
+% --- Alias entries for capitalized keys used in chapters ---
+% These provide backward compatibility for \gls{MusicXML} and \gls{OMR}
+% while keeping the canonical data in the lowercase entries (musicxml, omr).
+\newglossaryentry{MusicXML}{
+	alias=musicxml,
+	name={MusicXML},
+	description={}
+}
+\newglossaryentry{OMR}{
+	alias=omr,
+	name={OMR},
+	description={}
+}
+
+% ---- Added alias entries and supporting base entries ----
+% Aliases for capitalization variants
+\newglossaryentry{AI}{
+	alias=ai,
+	name={AI},
+	description={}
+}
+\newglossaryentry{MathML}{
+	alias=mathml,
+	name={MathML},
+	description={}
+}
+\newglossaryentry{BrailleReadyFormat}{
+	alias=brf,
+	name={Braille Ready Format},
+	description={}
+}
+\newglossaryentry{earcons}{
+	alias=audio,
+	name={earcons},
+	description={}
+}
+
+% Base entries for platform screen readers plus their alias forms
+\newglossaryentry{voiceover}{
+	name={VoiceOver},
+	type={device},
+	description={Apple's built-in screen reader for macOS, iOS, and iPadOS}
+}
+\newglossaryentry{VoiceOver}{
+	alias=voiceover,
+	name={VoiceOver},
+	description={}
+}
+\newglossaryentry{talkback}{
+	name={TalkBack},
+	type={device},
+	description={Android's built-in screen reader providing gesture-driven navigation and braille support}
+}
+\newglossaryentry{TalkBack}{
+	alias=talkback,
+	name={TalkBack},
+	description={}
+}
+
 \newglossaryentry{opensource}{
 	name={open source},
 	type={process},
@@ -505,7 +613,7 @@
 }
 
 \newglossaryentry{orientationmobility}{
-	name={orientation \textbackslash{}& mobility},
+	name={orientation \& mobility},
 	type={process},
 	description={Instruction and strategies that build environmental awareness and independent travel skills for individuals with visual impairments; integrates canes, GPS, indoor beacons, haptic/spatial audio. See also: \gls{mobility}.}
 }
@@ -949,3 +1057,39 @@
 	type={process},
 	description={On-the-fly change of active braille translation or contraction table to support multilingual or code-specific workflows}
 }
+
+% === AUTO-GENERATED GLOSSARY ENTRIES START (user requested: interpoint, 3D printing alias, filament, CCTV, wearable) ===
+
+\newglossaryentry{interpoint}{
+  name={interpoint (braille)},
+  type={process},
+  description={A braille embossing technique that produces braille on both sides of a sheet, aligning dots so they do not interfere; enables duplex (two‑sided) braille production to save paper and reduce bulk, but requires compatible embossers and careful translation/pagination to avoid dot collision.}
+}
+
+\newglossaryentry{3DPrinting}{
+  alias=3dprinting,
+  name={3D printing},
+  type={process},
+  description={Alias for \gls{3dprinting}: additive manufacturing processes (e.g., FDM, SLA) used to create tactile models and adaptive devices from digital designs; often used in accessibility contexts to produce manipulatives, tactile maps, and custom mounts.}
+}
+
+\newglossaryentry{filament}{
+  name={filament (3D printing material)},
+  type={concept},
+  description={Thermoplastic feedstock (commonly PLA, ABS, PETG) used in FDM 3D printers; filament diameter (e.g., 1.75 mm) and material properties affect surface finish, tactile detail, strength, and durability of printed tactile learning materials.}
+}
+
+\newglossaryentry{cctv}{
+  alias=videomagnifier,
+  name={CCTV},
+  type={device},
+  description={Closed-Circuit Television: historically used term for video magnifier systems that project a camera-captured image to a display for magnification; in assistive contexts, synonymous with electronic video magnifiers (see \gls{videomagnifier}).}
+}
+
+\newglossaryentry{wearable}{
+  name={wearable},
+  type={device},
+  description={Body‑worn computing devices (smartwatches, haptic belts, wearable cameras, smart glasses) that provide accessible cues (haptic, audio, spatial) or sensing for navigation, object recognition, and context‑aware assistance.}
+}
+
+% === AUTO-GENERATED GLOSSARY ENTRIES END

@@ -1,4 +1,4 @@
-\chapter{Impact of AI and \gls{llm} Technologies on Accessibility}\label{ch9:chap:ai-llm}
+\chapter{Impact of AI and LLM Technologies on Accessibility}\label{ch9:chap:ai-llm}
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 
 \section{~~Overview}\label{ch9:sec:overview}
@@ -79,16 +79,16 @@ Cloud pathways often provide larger context windows and specialized multimodal c
 		hlines,
 	}
 	\toprule
-	Category                 & Core Functions                                 & Example Tasks                        \\
+	Category                                   & Core Functions                                 & Example Tasks                        \\
 	\midrule
-	Environmental Perception & Object / scene description, hazard cueing      & Identifying doorway, class materials \\
-	Document Intelligence    & \gls{ocr} enhancement, summarization, Q\&A           & Extracting key points from article   \\
-	Learning Support         & Concept simplification, adaptive questioning   & Multi-level math explanation         \\
-	Productivity Automation  & Email summary, meeting transcript condensation & Drafting agenda recap                \\
-	Code / STEM Assistance   & Syntax explanation, refactoring suggestion     & Understanding code block behavior    \\
-	\gidx{navigation}{Navigation} Augmentation  & Landmark tagging, spatial context narration    & Indoor junction clarification        \\
-	Creative Enablement      & Audio description, narrative generation        & Describing art project layout        \\
-	Data Accessibility       & Table verbalization, structural tagging        & Converting table to linear speech    \\
+	Environmental Perception                   & Object / scene description, hazard cueing      & Identifying doorway, class materials \\
+	Document Intelligence                      & \gls{ocr} enhancement, summarization, Q\&A     & Extracting key points from article   \\
+	Learning Support                           & Concept simplification, adaptive questioning   & Multi-level math explanation         \\
+	Productivity Automation                    & Email summary, meeting transcript condensation & Drafting agenda recap                \\
+	Code / STEM Assistance                     & Syntax explanation, refactoring suggestion     & Understanding code block behavior    \\
+	\gidx{navigation}{Navigation} Augmentation & Landmark tagging, spatial context narration    & Indoor junction clarification        \\
+	Creative Enablement                        & Audio description, narrative generation        & Describing art project layout        \\
+	Data Accessibility                         & Table verbalization, structural tagging        & Converting table to linear speech    \\
 	\bottomrule
 \end{longtblr}
 \normalsize
@@ -106,18 +106,18 @@ Cloud pathways often provide larger context windows and specialized multimodal c
 		hlines,
 	}
 	\toprule
-	Dimension              & Cloud Inference                 & Local / Edge Inference                        \\
+	Dimension              & Cloud Inference                       & Local / Edge Inference                         \\
 	\midrule
-	Latency Consistency    & Variable (network-dependent)    & Stable (\gidx{hardware}{hardware}-dependent)                   \\
-	Privacy Surface        & Broader (transit + storage)     & Narrow (device-contained)                     \\
-	Model Scale Access     & Very large (context-rich)       & Moderate (quantized)                          \\
-	Offline Resilience     & Limited                         & High                                          \\
-	Update Velocity        & Rapid (centralized)             & Manual / periodic                             \\
-	Cost Structure         & Subscription / usage fees       & Upfront hardware, minimal ongoing             \\
-	Customization          & Limited fine-tuning (\gls{api}-bound) & Full prompt / fine-tune (resource permitting) \\
-	Energy Footprint       & Externalized to provider        & Local battery / thermal impact                \\
-	Regulatory Control     & Vendor attestations             & Direct institution governance                 \\
-	Risk Mitigation Levers & Contractual clauses             & Physical + \gidx{software}{software} isolation                 \\
+	Latency Consistency    & Variable (network-dependent)          & Stable (\gidx{hardware}{hardware}-dependent)   \\
+	Privacy Surface        & Broader (transit + storage)           & Narrow (device-contained)                      \\
+	Model Scale Access     & Very large (context-rich)             & Moderate (quantized)                           \\
+	Offline Resilience     & Limited                               & High                                           \\
+	Update Velocity        & Rapid (centralized)                   & Manual / periodic                              \\
+	Cost Structure         & Subscription / usage fees             & Upfront hardware, minimal ongoing              \\
+	Customization          & Limited fine-tuning (\gls{api}-bound) & Full prompt / fine-tune (resource permitting)  \\
+	Energy Footprint       & Externalized to provider              & Local battery / thermal impact                 \\
+	Regulatory Control     & Vendor attestations                   & Direct institution governance                  \\
+	Risk Mitigation Levers & Contractual clauses                   & Physical + \gidx{software}{software} isolation \\
 	\bottomrule
 \end{longtblr}
 \normalsize
@@ -135,16 +135,16 @@ Cloud pathways often provide larger context windows and specialized multimodal c
 		hlines,
 	}
 	\toprule
-	Tool / Framework   & Primary Modalities         & Strength Highlight                & Accessibility Considerations                            \\
+	Tool / Framework   & Primary Modalities         & Strength Highlight                      & Accessibility Considerations                                  \\
 	\midrule
-	\texttt{llama.cpp} & Text / quantized variants  & \gls{cpu}-friendly low-memory inference & CLI verbosity; ensure screen reader-friendly flags      \\
-	Ollama             & Text + model orchestration & Simple model pull / run UX        & JSON \gls{api} for integration; label button controls in GUIs \\
-	\texttt{llamafile} & Self-contained executable  & One-file distribution simplicity  & File signature verification for trust                   \\
-	LM Studio          & Desktop GUI + chat         & Model discovery + context mgmt    & Test focus order; ARIA labeling in UI                   \\
-	GPT4All            & Cross-platform GUI         & Multi-backend support / logs      & Contrast + shortcut mapping review                      \\
-	Jan                & Desktop hybrid             & Local + plugin extensibility      & Ensure accessible plugin registry descriptions          \\
-	LangChain          & Orchestration library      & Composable retrieval + tooling    & Developer must expose accessible prompts                \\
-	LlamaIndex         & Retrieval augmentation     & Structured document loaders       & Provide alt text for doc structure visualizations       \\
+	\texttt{llama.cpp} & Text / quantized variants  & \gls{cpu}-friendly low-memory inference & CLI verbosity; ensure screen reader-friendly flags            \\
+	Ollama             & Text + model orchestration & Simple model pull / run UX              & JSON \gls{api} for integration; label button controls in GUIs \\
+	\texttt{llamafile} & Self-contained executable  & One-file distribution simplicity        & File signature verification for trust                         \\
+	LM Studio          & Desktop GUI + chat         & Model discovery + context mgmt          & Test focus order; ARIA labeling in UI                         \\
+	GPT4All            & Cross-platform GUI         & Multi-backend support / logs            & Contrast + shortcut mapping review                            \\
+	Jan                & Desktop hybrid             & Local + plugin extensibility            & Ensure accessible plugin registry descriptions                \\
+	LangChain          & Orchestration library      & Composable retrieval + tooling          & Developer must expose accessible prompts                      \\
+	LlamaIndex         & Retrieval augmentation     & Structured document loaders             & Provide alt text for doc structure visualizations             \\
 	\bottomrule
 \end{longtblr}
 \normalsize
@@ -162,19 +162,19 @@ Cloud pathways often provide larger context windows and specialized multimodal c
 		hlines,
 	}
 	\toprule
-	Metric                       & Definition                                    & Target / Benchmark Concept                             \\
+	Metric                                   & Definition                                        & Target / Benchmark Concept                             \\
 	\midrule
-	Response Latency             & Time (ms) prompt to first token / \gls{tts} start   & < 1200 ms cloud; < 700 ms local (critical tasks)       \\
-	Hallucination Rate           & Confirmed factual errors / 50 eval prompts    & Declining trend; near-zero for safety-critical domains \\
-	Grounded Citation Coverage   &                                                                                                        % answers w/ verifiable source anchors & > 80\% for academic Q\&A tasks \\
-	Privacy Exposure Surface     & Distinct data elements transmitted externally & Minimize; zero for sensitive student PII scenarios     \\
-	Model Size vs. \gidx{ram}{RAM} Footprint & Loaded parameter GB / available RAM           & <= 70\% to preserve OS accessibility stability         \\
-	Alt-Text Relevance Score     & Rubric alignment (salient objects, context)   & Mean rubric >= 4/5 post tuning                         \\
-	\gls{ocr} + QA Accuracy            & Correct answers to comprehension queries      & >= 90\% for structured textbook pages                  \\
-	User Confidence Index        & Self-report (1–10) pre/post adoption          & +2 or greater sustained                                \\
-	Accessibility \gls{api} Coverage   & UI elements correctly announced (                                                                      %) & 100\% critical controls; > 95\% overall \\
-	Energy Consumption (Mobile)  &                                                                                                        % battery/hour during continuous use & < 12\% per hour (\gidx{navigation}{navigation} tasks) \\
-	Guardrail Override Incidents & Unsafe/unwanted output bypass occurrences     & Zero in production after testing                       \\
+	Response Latency                         & Time (ms) prompt to first token / \gls{tts} start & < 1200 ms cloud; < 700 ms local (critical tasks)       \\
+	Hallucination Rate                       & Confirmed factual errors / 50 eval prompts        & Declining trend; near-zero for safety-critical domains \\
+	Grounded Citation Coverage               &                                                                                                            % answers w/ verifiable source anchors & > 80\% for academic Q\&A tasks \\
+	Privacy Exposure Surface                 & Distinct data elements transmitted externally     & Minimize; zero for sensitive student PII scenarios     \\
+	Model Size vs. \gidx{ram}{RAM} Footprint & Loaded parameter GB / available RAM               & <= 70\% to preserve OS accessibility stability         \\
+	Alt-Text Relevance Score                 & Rubric alignment (salient objects, context)       & Mean rubric >= 4/5 post tuning                         \\
+	\gls{ocr} + QA Accuracy                  & Correct answers to comprehension queries          & >= 90\% for structured textbook pages                  \\
+	User Confidence Index                    & Self-report (1–10) pre/post adoption              & +2 or greater sustained                                \\
+	Accessibility \gls{api} Coverage         & UI elements correctly announced (                                                                          %) & 100\% critical controls; > 95\% overall \\
+	Energy Consumption (Mobile)              &                                                                                                            % battery/hour during continuous use & < 12\% per hour (\gidx{navigation}{navigation} tasks) \\
+	Guardrail Override Incidents             & Unsafe/unwanted output bypass occurrences         & Zero in production after testing                       \\
 	\bottomrule
 \end{longtblr}
 \normalsize
@@ -303,4 +303,3 @@ AI and \gls{llm} technologies introduce transformational capabilities—multimod
 
 \section{~~References}\label{ch9:sec:references}
 \noindent (All cited works are contained in the global project bibliography file: \texttt{global\_bibliography.bib}.)
-
