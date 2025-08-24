@@ -6,7 +6,7 @@
 		\setentrycounter[]{page}\glsnumberformat{83}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{168}}}%
 \glossentry{audioonlygame}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{346}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{345}}}\glsgroupskip
 \glsgroupheading{B}\relax \glsresetentrylist %
 \glossentry{braille}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{39}\delimN 
@@ -19,27 +19,27 @@
 		\setentrycounter[]{page}\glsnumberformat{192}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{202}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{237}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{249}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{260}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{293}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{303}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{315}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{319}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{325}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{335}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{414}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{248}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{259}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{292}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{302}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{314}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{318}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{324}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{334}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{412}}}\glsgroupskip
 \glsgroupheading{H}\relax \glsresetentrylist %
 \glossentry{haptic}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{249}}}%
+		\setentrycounter[]{page}\glsnumberformat{248}}}%
 \glossentry{hapticchannel}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{346}}}%
+		\setentrycounter[]{page}\glsnumberformat{345}}}%
 \glossentry{hapticfeedback}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{87}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{212}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{218}}}\glsgroupskip
 \glsgroupheading{I}\relax \glsresetentrylist %
 \glossentry{informationalaudiocue}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{346}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{345}}}\glsgroupskip
 \glsgroupheading{M}\relax \glsresetentrylist %
 \glossentry{magnification}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{26\delimR 34}\delimN 
@@ -48,23 +48,23 @@
 		\setentrycounter[]{page}\glsnumberformat{46}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{69\delimR 78}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{188}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{304}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{315}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{390}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{400}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{408}}}%
+		\setentrycounter[]{page}\glsnumberformat{303}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{314}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{388}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{398}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{406}}}%
 \glossentry{musicbraille}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{144}}}\glsgroupskip
 \glsgroupheading{S}\relax \glsresetentrylist %
 \glossentry{sonification}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{219}}}%
 \glossentry{spatialaudio}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{346}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{345}}}\glsgroupskip
 \glsgroupheading{T}\relax \glsresetentrylist %
 \glossentry{tactile}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{53}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{61}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{318}}}%
+		\setentrycounter[]{page}\glsnumberformat{317}}}%
 \glossentry{tactilegraphics}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{43}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{53\delimN 54}\delimN 
@@ -86,5 +86,5 @@
 		\setentrycounter[]{page}\glsnumberformat{214}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{217\delimN 218}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{222\delimN 223}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{323\delimR 325}}}%
+		\setentrycounter[]{page}\glsnumberformat{322\delimR 324}}}%
 \end{theglossary}\glossarypostamble
