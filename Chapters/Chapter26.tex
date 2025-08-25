@@ -1,8 +1,6 @@
 \chapter{Mobile Screen Reader Usage}
 \label{chap:mobile-screenreaders}
-% Pedagogical scaffolded rewrite. Legacy narrative content preserved and reorganized.
 
-%====================================================
 \section{~~Overview}
 \label{sec:sr26-overview}
 Mobile \gidx{screenreader}{screen reader}s deliver non-visual interaction layers for smartphones and tablets, translating operating system (OS) and app semantics into speech, \gidx{braille}{braille}, \gidx{haptic}{haptic}, and \gidx{earcons}{earcon} feedback. On iOS, \gidx{VoiceOver}{VoiceOver} and Braille Screen Input (BSI) offer tightly integrated gesture, rotor, and braille-first paradigms (expanding with iOS 26 Braille Access). On Android, \gidx{TalkBack}{TalkBack} provides gesture-driven \gidx{navigation}{navigation}, AI-assisted description, and braille input (principally text-entry–oriented) across diverse OEM skins (Pixel/Google, Samsung One UI, Generic AOSP). This chapter:
@@ -15,7 +13,6 @@ Mobile \gidx{screenreader}{screen reader}s deliver non-visual interaction layers
 \end{itemize}
 Legacy narrative and command tables are reorganized into a standardized pedagogical scaffold consistent with prior chapters.
 
-%====================================================
 \section{~~Learning Objectives}
 \label{sec:sr26-learning-objectives}
 After completing this chapter, you will be able to:
@@ -30,7 +27,6 @@ After completing this chapter, you will be able to:
 	\item Evaluate ethical, privacy, and equity considerations in AI-based screen description and telemetry collection.
 \end{enumerate}
 
-%====================================================
 \section{~~Key Terms}
 \label{sec:sr26-key-terms}
 \begin{description}
@@ -48,12 +44,10 @@ After completing this chapter, you will be able to:
 	\item[Screen Curtain] Mode disabling display output for privacy and power conservation.
 \end{description}
 
-%====================================================
 \section{~~Historical and Policy Context}
 \label{sec:sr26-history}
 Early mobile screen readers (pre-smartphone) offered limited speech with constrained keypad navigation. The advent of multitouch (iPhone) introduced gesture exploration (touch to explore, flick navigation) and rotor-driven semantic refinement. Android matured more gradually; fragmentation and OEM variance complicated uniform accessibility. Regulatory and procurement pressures (e.g., inclusive educational technology mandates, enterprise mobile app compliance) accelerated standardization: Apple emphasized cohesive API model (UIAccessibility), while Android advanced AccessibilityNodeInfo and accessibility services APIs. User advocacy and global surveys (e.g., adoption/usage studies) highlighted braille proficiency gaps, prompting deeper iOS braille integration and incremental Android improvements. AI-driven description features emerged to reduce reliance on manual alt text, raising privacy and bias concerns.
 
-%====================================================
 \section{~~Core Concepts}
 \label{sec:sr26-core-concepts}
 \begin{enumerate}
@@ -66,7 +60,6 @@ Early mobile screen readers (pre-smartphone) offered limited speech with constra
 	\item \textbf{OEM Variation}: Additional layers (Samsung Gesture Pad) can both enhance or complicate cognitive model transfer.
 \end{enumerate}
 
-%====================================================
 \section{~~Technologies and Tools}
 \label{sec:sr26-technologies}
 \begin{itemize}
@@ -77,7 +70,6 @@ Early mobile screen readers (pre-smartphone) offered limited speech with constra
 	\item \textbf{Testing Utilities}: On-device logs, talkback verbosity settings, rotor configuration export, automated screenshot semantic diff tools.
 \end{itemize}
 
-%====================================================
 \section{~~Economic and Licensing Landscape}
 \label{sec:sr26-economics}
 Mobile screen readers are bundled (zero additional licensing cost). Economic considerations shift toward:
@@ -88,7 +80,6 @@ Mobile screen readers are bundled (zero additional licensing cost). Economic con
 \end{itemize}
 Result: Android’s device price diversity broadens baseline access; iOS’s integrated braille and longevity advantages attract heavy braille and professional users where \gidx{hardware}{hardware} funding exists.
 
-%====================================================
 \section{~~Comparative Feature Matrix}
 \label{sec:sr26-comparative-matrix}
 \footnotesize
@@ -115,7 +106,6 @@ Result: Android’s device price diversity broadens baseline access; iOS’s int
 \end{longtblr}
 \normalsize
 
-%====================================================
 \section{~~Implementation Strategies}
 \label{sec:sr26-implementation}
 \begin{enumerate}
@@ -131,7 +121,6 @@ Result: Android’s device price diversity broadens baseline access; iOS’s int
 	\item \textbf{Documentation Loop}: Capture unresolved issues into centralized knowledge base tied to troubleshooting schema.
 \end{enumerate}
 
-%====================================================
 \section{~~Standards and Compliance Alignment}
 \label{sec:sr26-standards}
 \begin{itemize}
@@ -142,7 +131,6 @@ Result: Android’s device price diversity broadens baseline access; iOS’s int
 	\item \textbf{Gesture Alternatives}: Provide keyboard or switch control equivalents for critical functions (operable principle).
 \end{itemize}
 
-%====================================================
 \section{~~Case Studies}
 \label{sec:sr26-case-studies}
 \subsection*{Braille-First Productivity (iOS)}
@@ -157,7 +145,6 @@ A learning platform improves table semantics; TalkBack 16 users experience 50\% 
 \subsection*{AI Describe Screen Validation}
 AI screen description flagged sensitive user data; policy update disables AI for confidential workflow screens and adds explicit user consent prompts—balancing utility with privacy.
 
-%====================================================
 \section{~~Best Practices}
 \label{sec:sr26-best-practices}
 \begin{itemize}
@@ -171,7 +158,6 @@ AI screen description flagged sensitive user data; policy update disables AI for
 	\item Document OEM-specific quirks (gesture conflicts) early to set learner expectations.
 \end{itemize}
 
-%====================================================
 \section{~~Troubleshooting and Common Pitfalls}
 \label{sec:sr26-troubleshooting}
 \footnotesize
@@ -199,7 +185,6 @@ AI screen description flagged sensitive user data; policy update disables AI for
 \end{longtblr}
 \normalsize
 
-%====================================================
 \section{~~Emerging Trends}
 \label{sec:sr26-emerging-trends}
 \begin{itemize}
@@ -210,7 +195,6 @@ AI screen description flagged sensitive user data; policy update disables AI for
 	\item \textbf{Haptic Semantics}: Distinct vibration patterns conveying role or state without speech.
 \end{itemize}
 
-%====================================================
 \section{~~Ethical, Equity, and Privacy Considerations}
 \label{sec:sr26-ethics}
 \begin{itemize}
@@ -221,7 +205,6 @@ AI screen description flagged sensitive user data; policy update disables AI for
 	\item \textbf{Localization Equity}: Ensure simultaneous feature rollouts for non-English languages and braille tables.
 \end{itemize}
 
-%====================================================
 \section{~~Assessment and Reflection}
 \label{sec:sr26-assessment}
 \textbf{Short Answer}
@@ -235,7 +218,6 @@ AI screen description flagged sensitive user data; policy update disables AI for
 
 \textbf{Reflection} Evaluate trade-offs between broad OEM device affordability (Android) and cohesive, low-fragmentation accessibility ecosystem (iOS) for institutional deployment.
 
-%====================================================
 \section{~~Summary}
 \label{sec:sr26-summary}
 Mobile screen reader ecosystems diverge structurally: iOS integrates a deep braille command layer and consistent rotor semantics, while Android emphasizes extensible gesture navigation across heterogeneous OEM environments with incremental braille and AI enhancements. Braille-first efficiency hinges on command density (BSI command mode, Braille Access workspace) and reliable translation. Training efficacy improves through conceptual abstraction, standardized configurations, objective performance metrics, and structured troubleshooting practices. Emerging AI, adaptive verbosity, and multi-line braille promise efficiency gains but necessitate vigilant governance around privacy, equity, and bias. Sustainable mastery derives from cross-platform mental model transfer, redundancy across modalities, and continuous validation against evolving standards and features.

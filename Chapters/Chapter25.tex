@@ -2,7 +2,6 @@
 \label{chap:windows-screenreader-analysis}
 \hyphenation{multi-screenreader democratization PictureSmart Speech-History enterprise flexibility}
 
-%====================================================
 \section{~~Overview}
 \label{sec:sr25-overview}
 Windows \gidx{screenreader}{screenreader} technologies—principally \gidx{jaws}{JAWS}, \gidx{nvda}{NVDA}, and \gidx{narrator}{Windows Narrator}—form the non-visual interface layer that converts operating system and application semantics into speech, \gidx{braille}{braille}, and auditory (\gidx{earcons}{earcon}) output. This chapter provides a structured, comparative, and workflow-oriented analysis of these tools, emphasizing:
@@ -15,7 +14,6 @@ Windows \gidx{screenreader}{screenreader} technologies—principally \gidx{jaws}
 \end{itemize}
 Legacy narrative content is reorganized into a pedagogical scaffold with a troubleshooting matrix aligned to prior chapters.
 
-%====================================================
 \section{~~Learning Objectives}
 \label{sec:sr25-learning-objectives}
 After completing this chapter, you will be able to:
@@ -30,7 +28,6 @@ After completing this chapter, you will be able to:
 	\item Assess emerging trends (AI description, adaptive verbosity, multi-line braille) and ethical/privacy implications.
 \end{enumerate}
 
-%====================================================
 \section{~~Key Terms}
 \label{sec:sr25-key-terms}
 \begin{description}
@@ -47,12 +44,10 @@ After completing this chapter, you will be able to:
 	\item[Multi-Screenreader Proficiency] Skill of fluidly switching tools to troubleshoot or leverage feature strengths.
 \end{description}
 
-%====================================================
 \section{~~Historical and Policy Context}
 \label{sec:sr25-history}
 Early Windows accessibility depended on MSAA’s limited semantic granularity, prompting proprietary off‑screen modeling (notably in JAWS) for non-standard controls. Evolution of UIA expanded text-range, pattern, and event fidelity, enabling standards-aligned open-source innovation (NVDA) and deeper OEM integration (Narrator). Regulatory emphasis on inclusive procurement and enterprise accessibility accelerated adoption of richer patterns (Grid, Text, Value) and motivated convergence toward interoperable semantics. Economic disparities influenced global distribution: proprietary feature depth vs.\ open-source democratization.
 
-%====================================================
 \section{~~Core Concepts}
 \label{sec:sr25-core-concepts}
 \subsection*{API Mediation}
@@ -77,7 +72,6 @@ Context bundling (role, name, state, value, position) → verbosity filtering �
 	\item Narrator: OS-tied baseline emphasizing predictable coverage over customization.
 \end{itemize}
 
-%====================================================
 \section{~~Technologies and Tools}
 \label{sec:sr25-technologies}
 \subsection*{Screenreaders}
@@ -93,7 +87,6 @@ Windows SAPI voices, bundled natural voices (Jenny, Aria, Guy), Vocalizer/Eloque
 \subsection*{Productivity Augmentations}
 Speech History, Notification History (JAWS); Excel header announcement via defined names; FS Clipboard vs.\ OS multi-item Windows Clipboard; skim reading and rule-based highlight extraction.
 
-%====================================================
 \section{~~Economic and Licensing Landscape}
 \label{sec:sr25-economics}
 \begin{itemize}
@@ -103,7 +96,6 @@ Speech History, Notification History (JAWS); Excel header announcement via defin
 \end{itemize}
 Result: Mixed-tool ecosystems where feature richness, cost, and support trade-offs drive multi-screenreader adoption.
 
-%====================================================
 \section{~~Comparative Feature Matrix}
 \label{sec:sr25-comparative-matrix}
 \footnotesize
@@ -128,7 +120,6 @@ Result: Mixed-tool ecosystems where feature richness, cost, and support trade-of
 \end{longtblr}
 \normalsize
 
-%====================================================
 \section{~~Implementation Strategies}
 \label{sec:sr25-implementation}
 \begin{enumerate}
@@ -144,7 +135,6 @@ Result: Mixed-tool ecosystems where feature richness, cost, and support trade-of
 	\item \textbf{Documentation + Training Cadence:} Maintain an evolving keystroke crosswalk; integrate version difference briefings (e.g., Windows 10 vs.\ 11 voice packs).
 \end{enumerate}
 
-%====================================================
 \section{~~Standards and Compliance Alignment}
 \label{sec:sr25-standards}
 \begin{itemize}
@@ -155,7 +145,6 @@ Result: Mixed-tool ecosystems where feature richness, cost, and support trade-of
 	\item \textbf{Spreadsheet Header Semantics:} Named ranges act as accessible analogs to structural table semantics.
 \end{itemize}
 
-%====================================================
 \section{~~Case Studies}
 \label{sec:sr25-case-studies}
 \subsection*{Enterprise Legacy Form}
@@ -170,7 +159,6 @@ Define Name strategy (“title”) adopted; auditors using NVDA cut context retr
 \subsection*{Onboarding with Narrator}
 New user with no prior AT experience configured Windows, enabled multi-item clipboard, and installed NVDA independently—demonstrating Narrator’s bootstrap utility.
 
-%====================================================
 \section{~~Best Practices}
 \label{sec:sr25-best-practices}
 \begin{itemize}
@@ -184,7 +172,6 @@ New user with no prior AT experience configured Windows, enabled multi-item clip
 	\item Periodically audit add-ons/scripts for version compatibility and security.
 \end{itemize}
 
-%====================================================
 \section{~~Troubleshooting and Common Pitfalls}
 \label{sec:sr25-troubleshooting}
 \begin{longtblr}[
@@ -210,7 +197,6 @@ New user with no prior AT experience configured Windows, enabled multi-item clip
 	Unrecognized custom control               & No UIA/MSAA role/name; custom draw only                   & Inaccessible interactive function                & Implement UIA provider; supply Name/ControlType; test with all tools            & Accessibility gates in dev pipeline                   & kingsbury2025 \\
 \end{longtblr}
 
-%====================================================
 \section{~~Emerging Trends}
 \label{sec:sr25-emerging-trends}
 \begin{itemize}
@@ -221,7 +207,6 @@ New user with no prior AT experience configured Windows, enabled multi-item clip
 	\item \textbf{Secure Script Distribution:} Signed repository ecosystems mitigating malicious add-on risk.
 \end{itemize}
 
-%====================================================
 \section{~~Ethical, Equity, and Privacy Considerations}
 \label{sec:sr25-ethics}
 \begin{itemize}
@@ -232,7 +217,6 @@ New user with no prior AT experience configured Windows, enabled multi-item clip
 	\item \textbf{AI Bias Mitigation:} Validate accuracy and neutrality of generated descriptions across diverse subject domains.
 \end{itemize}
 
-%====================================================
 \section{~~Assessment and Reflection}
 \label{sec:sr25-assessment}
 \textbf{Short Answer}
@@ -246,7 +230,6 @@ New user with no prior AT experience configured Windows, enabled multi-item clip
 
 \textbf{Reflection} Evaluate the trade-offs between investing in proprietary scripting (JAWS) vs.\ cultivating community add-on contributions (NVDA) for a mid-size enterprise with legacy line-of-business applications.
 
-%====================================================
 \section{~~Summary}
 \label{sec:sr25-summary}
 Windows screenreader technologies operate atop API mediation layers, translating semantic structure into multimodal output. JAWS prioritizes extensibility and specialized tooling, NVDA champions open-source scalability and rapid standards alignment, and Narrator ensures a universal baseline. Economic, architectural, and pedagogical factors collectively drive multi-screenreader fluency—reinforced by the dominance of transferable Windows/Office keystrokes. Productivity accelerates through semantic authoring (styles, named ranges), environment optimization, and disciplined notification/verbosity management. Emerging AI, adaptive verbosity, and advanced braille \gidx{hardware}{hardware} promise efficiency gains—but require vigilant ethical, security, and equity governance. Sustained accessibility excellence hinges on interoperable semantics, continuous user-centered validation, and strategic tool plurality.

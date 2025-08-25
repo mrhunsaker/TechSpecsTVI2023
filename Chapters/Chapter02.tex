@@ -1,10 +1,4 @@
 \chapter{Tablets and Accessible Apps}\label{ch2:tablets}
-% === AUTO-GENERATED PROMPT METADATA START ===
-% prompt_applied: true
-% prompt_template: chapter_augmentation_v1
-% prompt_source: prompt.json per_chapter_overrides
-% chapter_id: Chapter02
-% === AUTO-GENERATED PROMPT METADATA END ===
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 
 \begin{raggedright}
@@ -13,7 +7,6 @@
 
 Tablets have emerged as powerful tools\index{sonification!tools} for students with visual impairments, offering a combination of portability, intuitive touch interfaces, and a vast ecosystem of specialized applications \supercite{Day2021, Kelly2011}. This chapter explores the transformative potential of tablets in education, providing guidance on selecting the right device and highlighting key apps\index{apps} that support\index{troubleshooting!support} learning, \gidx{independence}{independence}, and engagement.
 
-% Chapter augmentation scaffold: Overview, Objectives, Key Terms
 \section{~~Overview}\label{chap2:overview}
 This chapter surveys tablet hardware and software options relevant to learners with visual impairments, highlighting accessibility features, app ecosystems, and procurement guidance.
 
@@ -226,98 +219,243 @@ High-end smartphones often serve as the \gidx{mobility}{mobility} anchor for stu
 	\item \textbf{Update Policy:} Prioritize explicit multi-year OS + security commitments (Pixel, iPhone, Samsung S series) for predictable accessibility feature evolution.
 	\item \textbf{Form Factor Considerations:} Large displays aid low vision; ensure weight/ergonomics remain acceptable for extended handheld use.
 \end{itemize}
-
 \section{~~Mobile Applications}\label{ch2:sec:mobile-apps}
-The true power of tablets for students with visual impairments\index{visual impairment} lies in the vast array of specialized applications. The American Academy of Ophthalmology has identified 30 key apps, devices and technologies that are particularly beneficial for people with vision impairments \supercite{AAOApps}. The following sections highlight some of the most impactful apps\index{apps} across various categories.
+The true power of tablets for students with visual impairments\index{visual impairment} lies in the vast array of specialized applications. The American Academy of Ophthalmology has identified 30 key apps, devices and technologies that are particularly beneficial for people with vision impairments \supercite{AAOApps}. The following sections highlight some of the most impactful apps\index{apps} across various categories, updated to reflect reputable vendors and tools available in 2025.
 
-\subsubsection{Accessibility Training/Auditory Games}\label{ch2:sssec:games}
-\begin{itemize}
-	\item \textbf{Blindfold Games:} A suite of audio games that are fully accessible and help develop auditory skills \supercite{BlindfoldGames}.
-	\item \textbf{A Blind Legend:} An audio-only adventure game where the player navigates using 3D sound \supercite{ABlindLegend}.
-	\item \textbf{Zany Touch:} A collection of simple, accessible games for learning touchscreen gestures\index{instructional materials!gestures}.\supercite{TapNSeeNow}
-\end{itemize}
-
-\subsection{Cortical Vision Impairment}\label{ch2:ssec:cvi-apps}
-\begin{itemize}
-	\item \textbf{Tap-n-See Now:} An app designed for children with CVI\index{CVI}, presenting simple, high-contrast images on a black background \supercite{TapNSeeNow}.
-	\item \textbf{InfantSee:} A research-based app that uses preferential looking to assess visual development in infants \supercite{InfantSee}.
-	\item \textbf{Various Sensory Apps:} Many apps designed for sensory exploration, with features like high contrast, simple animations, and cause-and-effect interactions, can be beneficial for students with CVI\index{CVI} \supercite{SensoryApps}.
-\end{itemize}
-
-\subsection{Audiobook/Reading}\label{ch2:ssec:reading-apps}
-\begin{itemize}
-	\item \textbf{BARD Mobile:} Provides access to the National Library Service for the Blind and Print Disabled's collection of audiobooks\index{audiobook} and \gidx{braille}{braille} books \supercite{BARDMobile}.
-	\item \textbf{Bookshare\index{Bookshare}:} An extensive library of accessible e-books\index{e-books} for people with print disabilities \supercite{Bookshare}.
-	\item \textbf{Audible\index{audiobook!Audible}:} The leading audiobook service, with a massive library of titles \supercite{Audible}.
-	\item \textbf{Voice Dream\gidx{texttospeech}{text-to-speech}\index{text-to-speech!Voice Dream} Reader:} A highly customizable reading app that supports a wide range of file formats and text-to-speech voices \supercite{VoiceDreamReader}.
-\end{itemize}
-
-\subsubsection{Productivity/Schoolwork/Optical Character Recognition}\label{ch2:sssec:ocr-apps}
-Modern \gls{ocr} technology increasingly relies on artificial intelligence to improve accuracy and functionality \supercite{ABBYYAIOCR}.
-\begin{itemize}
-	\item \textbf{Seeing AI\index{apps!Seeing AI}:} A free app from Microsoft\index{tablet!Microsoft} that uses AI\index{AI} to describe the world, including reading text, identifying products, and recognizing people \supercite{SeeingAI}.
-	\item \textbf{Voice Dream Scanner:} A powerful \gls{ocr}\index{\gls{ocr}} app that can quickly scan and read printed documents \supercite{VoiceDreamScanner}.
-	\item \textbf{Google\index{tablet!Google} Keep/Evernote:} Note-taking apps that are accessible and support\index{troubleshooting!support} text, audio, and image notes \supercite{GoogleKeep}.
-	\item \textbf{VizWiz:} An app that combines automated image processing with real-time human assistance to answer visual questions \supercite{Bigham2014}.
-\end{itemize}
-
-\subsubsection{Orientation \& \gidx{mobility}{Mobility} / \gidx{navigation}{Navigation}}
-
+\subsubsection{Accessibility Training / Auditory Games}\label{ch2:sssec:games}
 \footnotesize
-\tagpdfsetup{table/header-rows={1}}
 \begin{longtblr}[
-		caption = {Mobile apps for orientation, \gidx{mobility}{mobility}, and \gidx{navigation}{navigation} for students with visual impairments (Updated 2025)},
-		label = {tab:chapter2:navigation-apps},
-		note = {This table presents mobile apps for orientation, mobility, and navigation, supporting independent travel and spatial awareness for visually impaired students. It includes details on cost, function, and OS compatibility.}
-	]{
-		colspec = {X[l] X[l] X[l] X[l]},
-		rowhead = 1,
-		row{1} = {font=\normalfont},
-		hlines,
-		stretch = 2
-	}
-	App              & Cost                                                   & Function                         & OS                        \\
-	Apple Maps       & free                                                   & Turn by Turn \gidx{navigation}{Navigation}          & iOS/iPadOS                \\
-	Be My Eyes       & free                                                   & Visual assistance via volunteers & iOS/iPadOS, AndroidOS 14+ \\
-	BlindSquare      & \$49.99                                                & GPS \gidx{navigation}{Navigation}                   & iOS/iPadOS                \\
-	Clew             & free                                                   & Indoor \gidx{navigation}{navigation}                & iOS/iPadOS, AndroidOS 14+ \\
-	GoodMaps Explore & free                                                   & Indoor/Outdoor \gidx{navigation}{navigation}        & iOS/iPadOS                \\
-	Google Maps      & free                                                   & Turn by Turn \gidx{navigation}{Navigation}          & iOS/iPadOS, AndroidOS 14+ \\
-	Lazarillo        & free                                                   & GPS \gidx{navigation}{navigation}                   & iOS/iPadOS, AndroidOS 14+ \\
-	Moovit           & free\footnote{\raggedright Premium features \$3.99/mo} & Public Transit                   & iOS/iPadOS, AndroidOS 14+ \\
-	Oko              & free                                                   & Smart traffic detection          & iOS/iPadOS, AndroidOS 14+ \\
-	Soundscape       & free                                                   & 3D audio \gidx{navigation}{navigation}              & iOS/iPadOS, AndroidOS 14+ \\
-	Waymap           & free                                                   & Indoor/Outdoor \gidx{navigation}{navigation}        & iOS/iPadOS, AndroidOS 14+ \\
+  caption = {Mobile apps for accessibility training and auditory games (Updated 2025)},
+  label = {tab:chapter2:auditory-games},
+  note = {Apps designed to teach touchscreen gestures, auditory attention, and gaming for students with visual impairments.}
+]{
+  colspec = {X[l] X[l] X[l] X[l]},
+  rowhead = 1,
+  row{1} = {font=\normalfont},
+  hlines,
+  stretch = 2
+}
+App & Cost & Function & OS \\
+CosmoBally in Space & free & Train VoiceOver Gestures & iOS/iPadOS \\
+Ballyland Magic Plus & \$3.99 & Train VoiceOver Gestures & iOS/iPadOS \\
+Ballyland Rotor & \$2.99 & Train VoiceOver rotor & iOS/iPadOS \\
+Ballyland Stay Still Squeaky! & \$2.99 & Train VoiceOver Gestures & iOS/iPadOS \\
+Blindfold Games Launcher & free & Sonic Games & iOS/iPadOS \\
+Blindfold Tap and Swipe & free & Train VoiceOver Gestures & iOS/iPadOS \\
+ObjectiveEd Games & free & Sonic Games & iOS/iPadOS \\
+VO Lab & \$4.99 & Train VoiceOver Gestures & iOS/iPadOS \\
+Screenreader & free & Train Accessibility Gestures & iOS/iPadOS, Android 13+ \\
+Blindfold Games & free--\$9.99 bundles & Suite of accessible auditory games & iOS/iPadOS \\
+A Blind Legend & free & Audio-only adventure game with 3D sound & iOS/iPadOS, AndroidOS 14+ \\
+Zany Touch & free & Gesture-learning through simple auditory play & iOS/iPadOS \\
+Accessibyte Arcade & \$9.99--\$29.99 & Educational and arcade-style accessible games & Web, Chromebook, iOS \\
+TapTapSee & free & Identify objects using photos + speech feedback & iOS/iPadOS, AndroidOS 14+
 \end{longtblr}
 \normalsize
 
-
-\subsection{Independent Living Skills}
+\subsection{Cortical Vision Impairment (CVI)}\label{ch2:ssec:cvi-apps}
 \footnotesize
-\tagpdfsetup{table/header-rows={1}}
 \begin{longtblr}[
-		caption = {Mobile apps for independent living skills for students with visual impairments (Updated 2025)},
-		label = {tab:chapter2:independent-living-apps},
-		note = {This table lists mobile apps that support independent living skills for visually impaired students, including currency identification, \gidx{magnification}{magnification}, labeling, and AI-powered assistance. It provides information on cost, function, and platform compatibility.}
-	]{
-		colspec = {X[l] X[l] X[l] X[l]},
-		rowhead = 1,
-		row{1} = {font=\normalfont},
-		hlines,
-		stretch = 2
-	}
-	App             & Cost                                                                                    & Function                & OS                        \\
-	CashReader      & free\footnote{\raggedright Premium features \$2.99/mo, \$19.99/yr, or \$49.99/lifetime} & Currency identification & iOS/iPadOS, AndroidOS 14+ \\
-	Lookout         & free                                                                                    & AI-powered assistance   & AndroidOS 14+             \\
-	Magnifier       & free                                                                                    & Built-in \gidx{magnification}{magnification}  & iOS/iPadOS                \\
-	Menus4All       & free\footnote{\raggedright Premium subscription \$3.99/mo or \$39.99/yr}                & Restaurant menus        & iOS/iPadOS                \\
-	PenFriend       & free                                                                                    & Labeling system app     & iOS/iPadOS                \\
-	Supersense      & free\footnote{\raggedright Premium features \$9.99/mo}                                  & AI scene description    & iOS/iPadOS, AndroidOS 14+ \\
-	Voice Assistant & free                                                                                    & Voice control           & iOS/iPadOS, AndroidOS 14+ \\
+  caption = {Mobile apps supporting cortical vision impairment (Updated 2025)},
+  label = {tab:chapter2:cvi-apps},
+  note = {Apps designed for students with CVI, featuring high-contrast imagery, simplified graphics, and preferential looking tools.}
+]{
+  colspec={|X[1,l]|X[1,l]|X[2,l]|X[1,l]|},
+  hlines,
+  vlines,
+  rowhead={1}
+}
+App & Cost & Function & OS \\
+Art of Glow & free & CVI-based Vision Training & iOS/iPadOS \\
+Big Band Patterns & \$34.99 & CVI-based Vision Training & iOS/iPadOS \\
+Big Bang Pictures & \$34.99 & CVI-based Vision Training & iOS/iPadOS \\
+CVI Connect & \$10/mo & CVI-based Vision Training & iOS/iPadOS \\
+CVI Connect Pro & free & CVI-based Vision Training & iOS/iPadOS \\
+CVI Toddler Visual Eye Train & free & CVI-based Vision Training & iOS/iPadOS \\
+CVI Training (Color) & free & CVI-based Vision Training & iOS/iPadOS \\
+CVI Training (Human face) & free & CVI-based Vision Training & iOS/iPadOS \\
+CVI Training (Pattern) & free & CVI-based Vision Training & iOS/iPadOS \\
+Training (Recognition) CVI & free & CVI-based Vision Training & iOS/iPadOS \\
+Training (Visual Tracking) CVI & free & CVI-based Vision Training & iOS/iPadOS \\
+Dexteria VMI & \$5.99 & CVI-based Vision Training & iOS/iPadOS \\
+Doodle Kids & free & CVI-based Vision Training & iOS/iPadOS \\
+EDA Play & \$4.99 & CVI-based Vision Training & iOS/iPadOS \\
+EDA Play ELIS & \$2.99 & CVI-based Vision Training & iOS/iPadOS \\
+EDA Play PAULI & \$2.99 & CVI-based Vision Training & iOS/iPadOS \\
+EDA Play TOBY & free & CVI-based Vision Training & iOS/iPadOS \\
+EDA Play TOM & free & CVI-based Vision Training & iOS/iPadOS \\
+EyeMove & free & CVI-based Vision Training & iOS/iPadOS \\
+Fludity HD & free & CVI-based Vision Training & iOS/iPadOS \\
+Little Bear Sees & \$4.99 & CVI-based Vision Training & iOS/iPadOS \\
+P.O.V. Spatial Reasoning & \$3.99 & CVI-based Vision Training & iOS/iPadOS \\
+Peekaboo Barn & \$2.99 & CVI-based Vision Training & iOS/iPadOS \\
+Sensory Electra & free & CVI-based Vision Training & iOS/iPadOS \\
+Sensory Light Box & \$3.99 & CVI-based Vision Training & iOS/iPadOS \\
+Tap-n-See Now & \$2.99 & CVI-based Vision Training & iOS/iPadOS \\
+VO Lab & free & CVI-based Vision Training & iOS/iPadOS \\
+Visual Attention Therapy Lite & free & CVI-based Vision Training & iOS/iPadOS \\
+InfantSee & free & Research-based preferential looking visual development assessment & iOS/iPadOS \\
+Sensory Apps (e.g., Cause \& Effect Sensory Light Box) & \$2.99--\$9.99 & Simple sensory exploration, contrast visuals, animations & iOS/iPadOS, AndroidOS 14+ \\
+NaviLens & free & Distance-scannable QR-style codes for navigation, labels & iOS/iPadOS, AndroidOS 14+
 \end{longtblr}
 \normalsize
 
+\subsection{Audiobook / Reading}\label{ch2:ssec:reading-apps}
+\footnotesize
+\begin{longtblr}[
+  caption = {Mobile apps for audiobook and reading access (Updated 2025)},
+  label = {tab:chapter2:reading-apps},
+  note = {Apps providing accessible reading materials in audio, braille, or text-to-speech formats.}
+]{
+  colspec={|X[1,l]|X[1,l]|X[2,l]|X[1,l]|},
+  hlines,
+  vlines,
+  rowhead={1}
+}
+App & Cost & Function & OS \\
+Audible & free & Audiobook & iOS/iPadOS, AndroidOS 13+ \\
+BARD Mobile & free & e-Book & iOS/iPadOS, AndroidOS 13+ \\
+Bookshare Reader & free & DAISY Reader & iOS/iPadOS \\
+Dolphin EasyReader & free & DAISY Reader & iOS/iPadOS, AndroidOS 13+ \\
+KNFB Reader (rebranded OneStepReader) & \$99.99 & OCR/Reading & iOS/iPadOS, AndroidOS 13+ \\
+Kindle & free & e-Book & iOS/iPadOS, AndroidOS 13+ \\
+Libby & free & Audiobook & iOS/iPadOS, AndroidOS 13+ \\
+VoiceDream Reader & free & DAISY Reader & iOS/iPadOS \\
+Bookshare & free (with eligibility) & Accessible e-book library for print disabilities & iOS/iPadOS, AndroidOS 14+, Web \\
+Voice Dream Reader & \$19.99 (premium voices extra) & Customizable reading with TTS & iOS/iPadOS, AndroidOS 14+ \\
+EasyReader (Dolphin) & free & Accessible e-book reader with library integration & iOS/iPadOS, AndroidOS 14+ \\
+Voice Aloud Reader & free & OCR/Reading & iOS/iPadOS, Android 13+
+\end{longtblr}
+\normalsize
 
+\subsubsection{Productivity / Schoolwork / Optical Character Recognition (OCR)}\label{ch2:sssec:ocr-apps}
+\footnotesize
+\begin{longtblr}[
+  caption = {Mobile apps for OCR and productivity (Updated 2025)},
+  label = {tab:chapter2:ocr-apps},
+  note = {Apps using OCR and AI to convert print to speech, recognize objects, and support student productivity.}
+]{
+  colspec={|X[1,l]|X[1,l]|X[2,l]|X[1,l]|},
+  hlines,
+  vlines,
+  rowhead={1}
+}
+App & Cost & Function & OS \\
+Aiko & free & AI Speech to text & iOS/iPadOS \\
+Ballyland Code 1: Say Hello & \$2.99 & Auditory Coding & iOS/iPadOS \\
+Ballyland Code 2: Give Rotor & \$2.99 & Auditory Codings & iOS/iPadOS \\
+Ballyland Code 3: Pick Up & \$2.99 & Auditory Coding & iOS/iPadOS \\
+Clusiv & free & Online learning platform & iOS/iPadOS \\
+Clusive & free & Online learning platform & iOS/iPadOS \\
+Code Quest & free & Auditory Coding & iOS/iPadOS \\
+Desmos Graphing Calculator & free & Accessible Graphing & iOS/iPadOS, AndroidOS 13+ \\
+Desmos Scientific Calculator & free & Accessible Scientific Calculator & iOS/iPadOS, AndroidOS 13+ \\
+Envision AI & free & OCR & iOS/iPadOS, AndroidOS 13+ \\
+GoodNotes & free & Scan \& Markup Documents & iOS/iPadOS, AndroidOS 13+ \\
+KNFB Reader (rebranded OneStepReader) & \$99.99 & OCR/Reading & iOS/iPadOS, AndroidOS 13+ \\
+My Board Buddy & free & local view of class blackboard & iOS/iPadOS \\
+Notability & free & Scan \& Markup Documents & iOS/iPadOS, AndroidOS 13+ \\
+QuickScanner & free & OCR & iOS/iPadOS, AndroidOS 13+ \\
+SeeingAI & free & Talking Camera & iOS/iPadOS, AndroidOS 13+ \\
+Tap TapSee & free & Talking Camera & iOS/iPadOS, AndroidOS 13+ \\
+Seeing AI (Microsoft) & free & AI-based OCR, product ID, facial recognition & iOS/iPadOS \\
+Voice Dream Scanner & \$5.99 & OCR scanning with direct TTS output & iOS/iPadOS, AndroidOS 14+ \\
+Envision AI & free (premium subscription available) & OCR, object/facial recognition, offline mode & iOS/iPadOS, AndroidOS 14+ \\
+Google Keep & free & Accessible note-taking with OCR support & iOS/iPadOS, AndroidOS 14+ \\
+Lookout by Google & free & Real-time OCR, object/currency recognition & AndroidOS 14+ \\
+VizWiz & free & Human + AI crowdsource Q\&A for images & iOS/iPadOS \\
+ScripTalk Mobile & free & Prescription label reading via NFC & iOS/iPadOS, AndroidOS 14+
+\end{longtblr}
+\normalsize
+
+\subsubsection{Orientation \& \gidx{mobility}{Mobility} / \gidx{navigation}{Navigation}}\label{ch2:sssec:navigation}
+\footnotesize
+\tagpdfsetup{table/header-rows={1}}
+\begin{longtblr}[
+  caption = {Mobile apps for orientation, mobility, and navigation for students with visual impairments (Updated 2025)},
+  label = {tab:chapter2:navigation-apps-expanded},
+  note = {Includes mainstream, AI-powered, and indoor navigation tools.}
+]{
+  colspec={|X[1,l]|X[1,l]|X[2,l]|X[1,l]|},
+  hlines,
+  vlines,
+  rowhead={1}
+}
+App & Cost & Function & OS \\
+Apple Maps & free & Turn by Turn Navigation & iOS/iPadOS \\
+BlindBat & free & Echolocation for the blind & iOS/iPadOS \\
+BlindSquare & \$39.99 & GPS Navigation & iOS/iPadOS \\
+Clew & free & Indoor navigation & iOS/iPadOS, AndroidOS 13+ \\
+Eyedar & free & Echolocation & iOS \\
+GoodMaps Explore & free & Turn by Turn Navigation, Indoor navigation & iOS/iPadOS \\
+GoodMaps Outdoors & free & Turn by Turn Navigation & iOS/iPadOS \\
+Google Maps & free & Turn by Turn Navigation & iOS/iPadOS, AndroidOS 13+ \\
+HapticNav & free & Haptic GPS navigation & iOS/iPadOS, AndroidOS 13+ \\
+Lazarillo & free & GPS navigation & iOS/iPadOS \\
+Moovit & free & Public transit directions & iOS/iPadOS, AndroidOS 13+ \\
+Musical Cane Game & free & White Cane Training & iPadOS \\
+Oko & free & Smart Camera, Traffic lights/traffic & iOS/iPadOS, AndroidOS 13+ \\
+Seeing Eye GPS & free & Turn by Turn Navigation & iOS/iPadOS, AndroidOS 13+ \\
+VoiceVista & free & Auditory Identification of Surroundings & ios \\
+Waymap & free & Turn by Turn Navigation, Indoor navigation & iOS/iPadOS, AndroidOS 13+ \\
+WeWalk & free & GPS Navigation & iOS/iPadOS \\
+Be My Eyes (incl. Be My AI) & free & Visual volunteer + AI-powered assistance & iOS/iPadOS, AndroidOS 14+, Windows \\
+Clew & free & Indoor navigation (short routes) & iOS/iPadOS, AndroidOS 14+ \\
+Soundscape Community & free & 3D audio navigation & iOS/iPadOS
+\end{longtblr}
+\normalsize
+
+\subsection{Independent Living Skills}\label{ch2:ssec:independent-living}
+\footnotesize
+\tagpdfsetup{table/header-rows={1}}
+\begin{longtblr}[
+  caption = {Mobile apps for independent living skills for students with visual impairments (Updated 2025)},
+  label = {tab:chapter2:independent-living-apps-expanded},
+  note = {Apps for daily living skills, currency, labeling, prescriptions, and AI assistance.}
+]{
+  colspec={|X[1,l]|X[1,l]|X[2,l]|X[1,l]|},
+  hlines,
+  vlines,
+  rowhead={1}
+}
+App & Cost & Function & OS \\
+CashReader & free (premium plans available) & Currency identification & iOS/iPadOS, AndroidOS 14+ \\
+Lookout (Google) & free & AI-powered text, object, and currency recognition & AndroidOS 14+ \\
+Magnifier (Apple) & free & Built-in magnification app & iOS/iPadOS \\
+Menus4All & free (premium subscription) & Accessible restaurant menus & iOS/iPadOS \\
+PenFriend & free & Audio labeling app & iOS/iPadOS \\
+Supersense & free (premium \$9.99/mo) & AI-powered scene description, reading & iOS/iPadOS, AndroidOS 14+ \\
+Voice Assistants (Siri, Google Assistant, Alexa) & free & Voice commands for device control & iOS/iPadOS, AndroidOS 14+ \\
+Envision AI & free (premium subscription available) & Scene reading, object ID, OCR & iOS/iPadOS, AndroidOS 14+ \\
+ScripTalk Mobile & free & Prescription label reader & iOS/iPadOS, AndroidOS 14+ \\
+Ray-Ban Meta Glasses (with app) & device purchase & Hands-free AI descriptions, photos & iOS/iPadOS, AndroidOS 14+ \\
+Aira (with app) & subscription-based & Professional remote visual assistance & iOS/iPadOS, AndroidOS 14+
+\end{longtblr}
+\normalsize
+
+\subsection{Health and Wellness}\label{ch2:ssec:health-wellness}
+\footnotesize
+\begin{longtblr}[
+  caption={Mobile Apps for Health and Wellness Management},
+  label={tab:apps_health_wellness},
+]{
+  colspec={|X[1,l]|X[1,l]|X[2,l]|X[1,l]|},
+  hlines,
+  vlines,
+  rowhead={1}
+}
+App & Cost & Function & OS \\
+ScripTalk Mobile & free & Accessible prescription label reader & iOS/iPadOS, AndroidOS 14+ \\
+Apple Health + Fitness+ & free (premium subscription optional) & Accessible exercise tracking, audio-guided workouts & iOS/iPadOS \\
+Headspace & subscription \$12.99/mo & Mindfulness/meditation with accessibility features & iOS/iPadOS, AndroidOS 14+ \\
+Google Fit & free & Fitness/activity monitoring & AndroidOS 14+
+\end{longtblr}
+\normalsize
+
+\paragraph{Discussion: Key Strengths and Limitations (2025).}  
+The 2025 app ecosystem for students who are blind or visually impaired demonstrates significant advances in \gidx{AI}{artificial intelligence}, cross-platform support, and integration with mainstream services. Strengths include the breadth of **OCR and AI apps** (e.g., Seeing AI, Envision, Lookout) that now support offline use, reducing privacy concerns. Navigation apps like **Oko** and **NaviLens** have transformed mobility by detecting signals and scannable codes at distance. **Education-focused tools** (Microsoft OneNote, Quizlet) are increasingly accessible out-of-the-box, showing mainstream adoption of accessibility guidelines.  
+
+Limitations remain in platform exclusivity (e.g., Seeing AI remains iOS-only, while Lookout is Android-only), and many advanced apps require premium subscriptions that may limit equity for students. Some newer wearables like **Ray-Ban Meta Glasses** offer cutting-edge accessibility, but cost and limited availability pose barriers. Finally, while volunteer-driven platforms (e.g., Be My Eyes) provide invaluable support, reliability depends on connectivity and human availability. Overall, the trend in 2025 is toward integration of accessibility into mainstream ecosystems, reducing reliance on niche-only tools.  
 
 \section{~~Conclusion}
 \label{sec:conclusion-tablets}

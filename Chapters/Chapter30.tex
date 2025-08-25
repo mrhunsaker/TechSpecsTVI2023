@@ -1,8 +1,6 @@
 \chapter{iOS 26 VoiceOver and Braille Enhancements}
 \label{chap:sr30-voiceover-braille}
-% Pedagogical scaffolded rewrite. Legacy narrative content preserved and reorganized.
 
-%====================================================
 \section{~~Overview}
 \label{sec:sr30-overview}
 iOS 26 introduces a suite of enhancements over iOS 18 for \gidx{VoiceOver}{VoiceOver} and Braille Screen Input (BSI) users, expanding \gidx{braille}{braille}-first productivity, gesture customization, \gidx{latency}{latency} resilience, and cross‑device profile portability. Central innovations—particularly the \gidx{brailleaccessworkspace}{Braille Access Workspace}, broad \gidx{commandremapping}{command remapping}, \gidx{nemethentry}{Nemeth math entry}, and synchronized \gidx{settingsexport}{settings export}—shift braille interaction from supplemental text entry toward a full desktop-adjacent workflow. While mobile-focused, several enhancements parallel desktop \gidx{screenreader}{screen reader} architectures that leverage \gls{uia} (modern Windows) and legacy \gls{msaa} abstractions for semantic control, underscoring convergence of mobile and desktop \gidx{accessibility}{accessibility} models. This chapter:
@@ -14,7 +12,6 @@ iOS 26 introduces a suite of enhancements over iOS 18 for \gidx{VoiceOver}{Voice
 	\item Evaluates ethical, equity, and privacy implications (e.g., profile sharing, cloud synchronization).
 \end{itemize}
 
-%====================================================
 \section{~~Learning Objectives}
 \label{sec:sr30-learning-objectives}
 After completing this chapter, you will be able to:
@@ -28,7 +25,6 @@ After completing this chapter, you will be able to:
 	\item Formulate privacy-aware strategies for exporting/importing accessibility settings.
 \end{enumerate}
 
-%====================================================
 \section{~~Key Terms}
 \label{sec:sr30-key-terms}
 \begin{description}
@@ -42,12 +38,10 @@ After completing this chapter, you will be able to:
 	\item[Macro Chaining] Sequential execution of multiple mapped operations triggered by a single chord or gesture.
 \end{description}
 
-%====================================================
 \section{~~Historical and Policy Context}
 \label{sec:sr30-history}
 Earlier mobile braille integration emphasized basic text entry layered atop gesture navigation. iOS iterations up to 18 delivered incremental rotor refinements and BSI reliability but retained a speech-centric paradigm. Regulatory and educational accessibility demands (STEM math entry, low-latency study workflows) elevated expectations for multi-stage command density and profile portability. The iOS 26 cycle integrates systemic command remapping, math-centric braille workflows, and exportable configuration—mirroring desktop screen reader scripting benefits—while aligning with trends toward multi-line/hybrid braille hardware\supercite{nelowvision2025, myvision2025}. Policy emphasis on equitable, rapid deployment of accessible configurations underscores the significance of shareable settings profiles.
 
-%====================================================
 \section{~~Core Concepts}
 \label{sec:sr30-core-concepts}
 \begin{enumerate}
@@ -61,7 +55,6 @@ Earlier mobile braille integration emphasized basic text entry layered atop gest
 	\item \textbf{Performance Expectations}: Command latency budgets (<150–200 ms) maintain reading focus and reduce frustration.
 \end{enumerate}
 
-%====================================================
 \section{~~Technologies and Tools}
 \label{sec:sr30-technologies}
 \begin{itemize}
@@ -73,7 +66,6 @@ Earlier mobile braille integration emphasized basic text entry layered atop gest
 	\item \textbf{Command Reference APIs}: Accessibility frameworks enabling consistent action invocation across remapped surface.
 \end{itemize}
 
-%====================================================
 \section{~~Economic and Licensing Landscape}
 \label{sec:sr30-economics}
 VoiceOver and braille enhancements remain bundled (no incremental license). Economic considerations shift to:
@@ -83,7 +75,6 @@ VoiceOver and braille enhancements remain bundled (no incremental license). Econ
 	\item \textbf{Support Overhead}: Increased customization can raise support ticket complexity without structured profiles.
 \end{itemize}
 
-%====================================================
 \section{~~Comparative Feature Matrix}
 \label{sec:sr30-feature-matrix}
 \footnotesize
@@ -110,7 +101,6 @@ VoiceOver and braille enhancements remain bundled (no incremental license). Econ
 \end{longtblr}
 \normalsize
 
-%====================================================
 \section{~~Implementation Strategies}
 \label{sec:sr30-implementation}
 \begin{enumerate}
@@ -126,7 +116,6 @@ VoiceOver and braille enhancements remain bundled (no incremental license). Econ
 	\item \textbf{Fallback Recovery}: Provide quick “reset to standard profile” procedure to remediate accidental command lockouts.
 \end{enumerate}
 
-%====================================================
 \section{~~Standards and Compliance Alignment}
 \label{sec:sr30-standards}
 \begin{itemize}
@@ -137,7 +126,6 @@ VoiceOver and braille enhancements remain bundled (no incremental license). Econ
 	\item \textbf{Documentation Accessibility}: Training artifacts should model accessible design (structured headings, alt text).
 \end{itemize}
 
-%====================================================
 \section{~~Case Studies}
 \label{sec:sr30-case-studies}
 \subsection*{STEM Lab Efficiency}
@@ -149,7 +137,6 @@ Custom remapping (macro chaining for “summarize → navigate headings → inse
 \subsection*{Multi-Device Classroom Deployment}
 Exported settings profiles standardized rotor and verbosity across 25 devices; onboarding time for new learners dropped from 90 to 55 minutes (median) during week-one orientation\supercite{myvision2025}.
 
-%====================================================
 \section{~~Best Practices}
 \label{sec:sr30-best-practices}
 \begin{itemize}
@@ -162,7 +149,6 @@ Exported settings profiles standardized rotor and verbosity across 25 devices; o
 	\item Document math entry conventions (Nemeth punctuation, switching sequences).
 \end{itemize}
 
-%====================================================
 \section{~~Troubleshooting and Common Pitfalls}
 \label{sec:sr30-troubleshooting}
 \footnotesize
@@ -190,7 +176,6 @@ Exported settings profiles standardized rotor and verbosity across 25 devices; o
 \end{longtblr}
 \normalsize
 
-%====================================================
 \section{~~Emerging Trends}
 \label{sec:sr30-emerging-trends}
 \begin{itemize}
@@ -201,7 +186,6 @@ Exported settings profiles standardized rotor and verbosity across 25 devices; o
 	\item \textbf{Hybrid Haptic Channels}: Combined braille + localized haptic pulses to signal structural transitions.
 \end{itemize}
 
-%====================================================
 \section{~~Ethical, Equity, and Privacy Considerations}
 \label{sec:sr30-ethics}
 \begin{itemize}
@@ -212,7 +196,6 @@ Exported settings profiles standardized rotor and verbosity across 25 devices; o
 	\item \textbf{Inclusive Documentation}: Offer accessible tutorials (structured text, audio, braille quick cards).
 \end{itemize}
 
-%====================================================
 \section{~~Assessment and Reflection}
 \label{sec:sr30-assessment}
 \textbf{Short Answer}
@@ -226,7 +209,6 @@ Exported settings profiles standardized rotor and verbosity across 25 devices; o
 
 \textbf{Reflection} Evaluate the trade-off between extensive gesture customization and long-term maintainability/support in an institutional deployment.
 
-%====================================================
 \section{~~Summary}
 \label{sec:sr30-summary}
 iOS 26 elevates VoiceOver and braille usage from incremental input enhancement to a comprehensive productivity paradigm via the Braille Access Workspace, extensive remapping, Nemeth integration, Activity-based verbosity tailoring, and configuration portability. These additions reduce friction in STEM, editorial, and multi-device contexts—provided governance prevents customization sprawl. Strategic deployment hinges on standardized baseline profiles, performance benchmarking, and equity-oriented training. Emerging adaptive and predictive layers promise further efficiency gains, contingent on ethical stewardship of user data and transparent personalization logic.

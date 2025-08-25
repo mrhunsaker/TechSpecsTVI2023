@@ -1,10 +1,5 @@
 \chapter{Refreshable Braille Displays}\label{ch3:braille}
-% === AUTO-GENERATED PROMPT METADATA START ===
-% prompt_applied: true
-% prompt_template: chapter_augmentation_v1
-% prompt_source: prompt.json per_chapter_overrides
-% chapter_id: Chapter03
-% === AUTO-GENERATED PROMPT METADATA END ===
+
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 \raggedright
 
@@ -15,7 +10,6 @@
 \section{~~Braille Notetakers and Laptops}\label{ch3:sec:notetakers-laptops}
 Braille notetakers\index{notetaker!braille notetaker} are specialized devices that combine a refreshable \gidx{brailledisplay}{Braille display} with a Braille keyboard and note-taking\index{Markdown!note-taking} \gidx{software}{software}. They are essential tools for literacy, allowing students to read and write in Braille\index{braille} efficiently \supercite{Holbrook2006, Presley2012, PerkinsNoteTaking, TeachingVI}. When paired with a laptop, a Braille notetaker can serve as a powerful Braille terminal for accessing a wider range of applications and online content \supercite{Kelly2011, Day2021}.
 
-% Chapter augmentation scaffold: Overview, Objectives, Key Terms
 \section{~~Overview}\label{chap3:overview}
 This chapter summarizes refreshable Braille display types, notetakers, and integration strategies for classroom and mobile use.
 
@@ -60,7 +54,6 @@ The choice of a Braille notetaker and laptop combination depends on the student'
 \end{longtblr}
 \normalsize
 
-% ------------------------------------------------------------------
 \subsection*{Advantages and Disadvantages (Summary Across Notetakers)}
 \begin{description}
 	\item[BrailleNote Touch+] \textbf{Advantages:} Full Android + Play Store, strong educational ecosystem, robust build. \textbf{Disadvantages:} Highest cost tier; larger learning curve; repair logistics (international shipping) can extend downtime.
@@ -70,7 +63,6 @@ The choice of a Braille notetaker and laptop combination depends on the student'
 	\item[Orbit Reader 20 / 20 Plus] \textbf{Advantages:} Lowest cost of ownership; hardened cells; Plus model adds onboard translation and features. \textbf{Disadvantages:} More “basic” UI; fewer advanced notetaker apps; slower \gidx{navigation}{navigation} speed vs. premium lines.
 \end{description}
 
-% ------------------------------------------------------------------
 
 
 \section{~~Refreshable Braille Displays}\label{ch3:sec:refreshable-braille}
@@ -109,7 +101,6 @@ Smaller Braille displays are highly portable and are ideal for use with smartpho
 \end{longtblr}
 \normalsize
 
-% ------------------------------------------------------------------
 \subsection*{Advantages and Disadvantages (14--20 Cell Displays)}
 \begin{description}
 	\item[Focus 14 Blue] \textbf{Advantages:} Ultra-portable; strong JAWS integration; rugged housing. \textbf{Disadvantages:} Very short line length impedes speed reading and code inspection.
@@ -122,7 +113,6 @@ Smaller Braille displays are highly portable and are ideal for use with smartpho
 	\item[Braille Me] \textbf{Advantages:} Magnetic pin actuation lowers cost; crisp dots; very low entry price. \textbf{Disadvantages:} Fewer advanced screen reader protocol nuances; narrower distribution/service network.
 	\item[SuperVario 2 20] \textbf{Advantages:} Premium tactile quality and smooth cell feel; lightweight body. \textbf{Disadvantages:} High price vs. 20‑cell peers; limited education discounts.
 \end{description}
-% ------------------------------------------------------------------
 
 
 \subsection{32-40 cell Refreshable Braille Displays}\label{ch3:ssec:32-40-cell}
@@ -158,7 +148,6 @@ Mid-size Braille displays\gidx{brailledisplay}{braille display} offer a good bal
 \end{longtblr}
 \normalsize
 
-% ------------------------------------------------------------------
 \subsection*{Advantages and Disadvantages (32--40 Cell Displays)}
 \begin{description}
 	\item[Focus 40 Blue] \textbf{Advantages:} De facto standard for Windows + JAWS enterprise deployments; robust chassis; well-known key layout. \textbf{Disadvantages:} Lacks native Wi‑Fi/cloud features; heavier than some modern designs.
@@ -172,7 +161,6 @@ Mid-size Braille displays\gidx{brailledisplay}{braille display} offer a good bal
 	\item[SuperVario 2 40] \textbf{Advantages:} Superior dot firmness and uniformity; professional reliability. \textbf{Disadvantages:} High procurement cost; smaller support footprint geographically.
 	\item[APH Mantis Q40] \textbf{Advantages:} Education-aligned, integrated QWERTY fosters literacy crossover; straightforward updates. \textbf{Disadvantages:} QWERTY not optimal for users relying on Perkins muscle memory reinforcement.
 \end{description}
-% ------------------------------------------------------------------
 
 \section{~~High-Cell (60--80) Single-Line Braille Displays}\label{ch3:sec:high-cell}
 High-cell (60--80) single-line \gls{braille} displays provide extended reading real estate that reduces panning, supports faster proofreading, and improves efficiency for programming, data tables (linearized), and long-form academic or professional documents. They trade portability and cost for sustained productivity in tasks where frequent line refreshes or context switching would otherwise introduce cognitive and temporal overhead. These devices are typically deployed in higher education resource centers, transcription labs, and professional workplaces requiring intensive braille review.
@@ -200,14 +188,12 @@ High-cell (60--80) single-line \gls{braille} displays provide extended reading r
 \end{longtblr}
 \normalsize
 
-% ------------------------------------------------------------------
 \subsection*{Advantages and Disadvantages (High-Cell Single-Line)}
 \begin{description}
 	\item[Focus 80 Blue] \textbf{Advantages:} Large continuous line boosts editing/proofing; entrenched enterprise support. \textbf{Disadvantages:} Weight/desk footprint; higher repair logistics cost.
 	\item[SuperVario 2 80] \textbf{Advantages:} Premium tactile ergonomics + lighter 80-cell option; multi-host pairing. \textbf{Disadvantages:} Highest price band; niche distribution.
 	\item[Brailliant BI 84 (Emerging)] \textbf{Advantages:} Adds onboard intelligence to large line; modern I/O stack. \textbf{Disadvantages:} Emerging—confirm final spec, support policies, and lead times.
 \end{description}
-% ------------------------------------------------------------------
 
 
 \section{~~Multiple Line Braille Displays/Tablets}\label{ch3:sec:multi-line}
@@ -238,7 +224,6 @@ Multi-line Braille displays represent a significant advancement in Braille \gidx
 \end{longtblr}
 \normalsize
 
-% ------------------------------------------------------------------
 \section*{Integrated Laptop-with-Braille-Line Hardware: Risk and Cost Considerations}
 Combining a full laptop and a refreshable braille cell line into a single chassis (historical and emerging prototype concepts) introduces compounded failure and downtime risk. A single electronic fault (liquid ingress over key area, battery swelling, mainboard fault, or braille actuator array failure) removes \emph{both} the user's computing and tactile access paths simultaneously. Separate modular procurement (mainstream laptop + independent \gidx{brailledisplay}{braille display}) yields:
 \begin{itemize}
@@ -250,7 +235,6 @@ Combining a full laptop and a refreshable braille cell line into a single chassi
 \end{itemize}
 Net effect: Avoiding integrated all-in-one braille laptops reduces total educational downtime exposure and long-tail repair cost spikes—especially critical in assessment and high-stakes instructional periods.
 
-% ------------------------------------------------------------------
 \section*{Comparative Feature Matrix (Selected Devices)}
 \footnotesize
 \begin{longtblr}[
@@ -282,7 +266,6 @@ Net effect: Avoiding integrated all-in-one braille laptops reduces total educati
 \end{longtblr}
 \normalsize
 
-% ------------------------------------------------------------------
 \section*{Procurement Considerations (TCO, Warranty, Lifecycle)}
 \begin{enumerate}
 	\item \textbf{Total Cost of Ownership (TCO):} Beyond acquisition cost, include: (a) expected refresh cycle (4–6 years for displays; 3–4 for laptops), (b) warranty extension premiums, (c) loaner pool funding, (d) training hours (initial + refresher), (e) shipping/turnaround for repairs.
@@ -302,7 +285,6 @@ Devices tagged \textsuperscript{E} (Emerging) should undergo:
 	\item Contingency fallback (established model) pre-approved if KPIs not met.
 \end{itemize}
 
-% ------------------------------------------------------------------
 \section*{Per-Row Differentiators (Footnote Legend)}
 While per-row footnotes inside tables were requested, to preserve table readability in braille translation the differentiators are consolidated here (cross-referenced by model name):
 \begin{itemize}
@@ -314,16 +296,13 @@ While per-row footnotes inside tables were requested, to preserve table readabil
 	\item \textbf{Brailliant BI X Line:} On-device Wi‑Fi sync + \gls{tts} layer for hybrid auditory-tactile workflow.
 \end{itemize}
 
-% ------------------------------------------------------------------
 \section*{Next Steps / Open Items}
 \begin{itemize}
 	\item If desired, migrate consolidated differentiators directly into table footnotes using tabularray \texttt{note} + superscripts (requires reflow; advise confirming braille translation impact).
 	\item Provide glossary definitions for any unresolved \texttt{\\gls\{\}} entries to clear the remaining “undefined reference” diagnostic.
 	\item Optionally normalize pricing bands with current MSRP verification logs for audit traceability.
 \end{itemize}
-% ------------------------------------------------------------------
 
-% ------------------------------------------------------------------
 \subsection*{Advantages and Disadvantages (\gidx{brailleeducation}{Braille Education} Devices)}
 \begin{description}
 	\item[APH Code Jumper] \textbf{Advantages:} Concrete tactile code sequencing supports dual literacy (braille + computational thinking). \textbf{Disadvantages:} Narrow scope outside coding concepts.
@@ -332,9 +311,7 @@ While per-row footnotes inside tables were requested, to preserve table readabil
 	\item[Braille Buzz] \textbf{Advantages:} Motivational auditory reinforcement; early phonics integration. \textbf{Disadvantages:} Limited longevity as learner advances.
 	\item[Annie Smart Tutor] \textbf{Advantages:} Analytics-driven progression; self-paced modules free instructor bandwidth. \textbf{Disadvantages:} Requires onboarding/training; price threshold for single-student deployment.
 \end{description}
-% ------------------------------------------------------------------
 
-% ------------------------------------------------------------------
 \subsection*{Advantages and Disadvantages (Multi-Line / \gidx{tactilegraphics}{Tactile Graphics})}
 \begin{description}
 	\item[Canute 360] \textbf{Advantages:} Highly affordable per-cell multi-line text; boosts linear reading comprehension. \textbf{Disadvantages:} Limited graphics; physical size limits portability.
@@ -343,7 +320,6 @@ While per-row footnotes inside tables were requested, to preserve table readabil
 	\item[Dot Pad (Original)] \textbf{Advantages:} Pioneering graphics + multi-line braille; early ecosystem tooling. \textbf{Disadvantages:} Earlier-gen hardware—reliability, refresh speed improvements realized more in Dot Pad X.
 	\item[Dot Pad X] \textbf{Advantages:} Added dedicated braille line + refined graphics performance; iOS integration. \textbf{Disadvantages:} High price; training/time investment; availability cycles.
 \end{description}
-% ------------------------------------------------------------------
 
 
 \section{~~\gidx{brailleeducation}{Braille Education} Devices}\label{ch3:sec:braille-ed-devices}
@@ -374,5 +350,4 @@ These devices are specifically designed to support early \gidx{brailleliteracy}{
 \end{longtblr}
 \normalsize
 
-% (Tablet and smartphone sections relocated to Chapter02.)
 

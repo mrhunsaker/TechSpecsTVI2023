@@ -1,7 +1,7 @@
 \glossaryentry{CCTV?\glossentry{cctv}|glsseeformat["\seename ]{videomagnifier}}{Z}
 \glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{x}
-\glossaryentry{notetaker?\glossentry{notetaker}|setentrycounter[]{page}"\glsnumberformat}{xv}
-\glossaryentry{laptop?\glossentry{laptop}|setentrycounter[]{page}"\glsnumberformat}{xv}
+\glossaryentry{notetaker?\glossentry{notetaker}|setentrycounter[]{page}"\glsnumberformat}{xvii}
+\glossaryentry{laptop?\glossentry{laptop}|setentrycounter[]{page}"\glsnumberformat}{xvii}
 \glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{2}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{2}
 \glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{2}
@@ -16,142 +16,144 @@
 \glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{7}
 \glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{8}
 \glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{8}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{22}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{31}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{32}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{32}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{33}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{33}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{33}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{34}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{35}
-\glossaryentry{tablet?\glossentry{tablet}|setentrycounter[]{page}"\glsnumberformat}{37}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{37}
-\glossaryentry{tablet?\glossentry{tablet}|setentrycounter[]{page}"\glsnumberformat}{37}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{37}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{39}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{20}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{32}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{38}
 \glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{39}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{47}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{47}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{48}
-\glossaryentry{notetaker?\glossentry{notetaker}|setentrycounter[]{page}"\glsnumberformat}{48}
-\glossaryentry{notetaker?\glossentry{notetaker}|setentrycounter[]{page}"\glsnumberformat}{48}
-\glossaryentry{laptop?\glossentry{laptop}|setentrycounter[]{page}"\glsnumberformat}{48}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{39}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{41}
 \glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{49}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{49}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{49}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{50}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{51}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{54}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{54}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{59}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{59}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{60}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{60}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{60}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{60}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{61}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{61}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{61}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{73}
-\glossaryentry{wearable?\glossentry{wearable}|setentrycounter[]{page}"\glsnumberformat}{74}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{75}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{82}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{82}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{82}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{92}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{98}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{106}
-\glossaryentry{nvda?\glossentry{nvda}|setentrycounter[]{page}"\glsnumberformat}{106}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{107}
-\glossaryentry{jaws?\glossentry{jaws}|setentrycounter[]{page}"\glsnumberformat}{107}
-\glossaryentry{narrator?\glossentry{narrator}|setentrycounter[]{page}"\glsnumberformat}{108}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{111}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{112}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{120}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{132}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{132}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{134}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{135}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{137}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{137}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{137}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{137}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{149}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{162}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{162}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{169}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{178}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{179}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{181}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{182}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{190}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{200}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{200}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{201}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{202}
+\glossaryentry{tablet?\glossentry{tablet}|setentrycounter[]{page}"\glsnumberformat}{51}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{51}
+\glossaryentry{tablet?\glossentry{tablet}|setentrycounter[]{page}"\glsnumberformat}{51}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{51}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{53}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{53}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{66}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{66}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{67}
+\glossaryentry{notetaker?\glossentry{notetaker}|setentrycounter[]{page}"\glsnumberformat}{67}
+\glossaryentry{notetaker?\glossentry{notetaker}|setentrycounter[]{page}"\glsnumberformat}{67}
+\glossaryentry{laptop?\glossentry{laptop}|setentrycounter[]{page}"\glsnumberformat}{67}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{68}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{68}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{68}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{69}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{70}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{73}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{73}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{78}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{78}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{79}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{79}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{79}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{79}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{80}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{80}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{80}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{92}
+\glossaryentry{wearable?\glossentry{wearable}|setentrycounter[]{page}"\glsnumberformat}{93}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{94}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{101}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{101}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{101}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{111}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{117}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{125}
+\glossaryentry{nvda?\glossentry{nvda}|setentrycounter[]{page}"\glsnumberformat}{125}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{126}
+\glossaryentry{jaws?\glossentry{jaws}|setentrycounter[]{page}"\glsnumberformat}{126}
+\glossaryentry{narrator?\glossentry{narrator}|setentrycounter[]{page}"\glsnumberformat}{127}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{130}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{131}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{139}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{151}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{151}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{153}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{154}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{156}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{156}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{156}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{156}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{168}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{175}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{175}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{192}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{192}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{199}
 \glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{208}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{211}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{221}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{223}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{226}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{227}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{235}
-\glossaryentry{jaws?\glossentry{jaws}|setentrycounter[]{page}"\glsnumberformat}{235}
-\glossaryentry{nvda?\glossentry{nvda}|setentrycounter[]{page}"\glsnumberformat}{235}
-\glossaryentry{narrator?\glossentry{narrator}|setentrycounter[]{page}"\glsnumberformat}{235}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{246}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{257}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{257}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{268}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{290}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{291}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{300}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{305}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{310}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{310}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{312}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{312}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{312}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{321}
-\glossaryentry{multi-line braille display?\glossentry{multilinebrailledisplay}|setentrycounter[]{page}"\glsnumberformat}{322}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{325}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{332}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{209}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{211}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{212}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{220}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{230}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{230}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{231}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{232}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{238}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{241}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{251}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{253}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{256}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{257}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{265}
+\glossaryentry{jaws?\glossentry{jaws}|setentrycounter[]{page}"\glsnumberformat}{265}
+\glossaryentry{nvda?\glossentry{nvda}|setentrycounter[]{page}"\glsnumberformat}{265}
+\glossaryentry{narrator?\glossentry{narrator}|setentrycounter[]{page}"\glsnumberformat}{265}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{276}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{287}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{287}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{298}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{320}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{321}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{330}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{335}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{340}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{340}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{342}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{342}
 \glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{342}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{343}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{361}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{377}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{377}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{380}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{382}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{384}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{390}
-\glossaryentry{nvda?\glossentry{nvda}|setentrycounter[]{page}"\glsnumberformat}{394}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{402}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{402}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{403}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{404}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{406}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{351}
+\glossaryentry{multi-line braille display?\glossentry{multilinebrailledisplay}|setentrycounter[]{page}"\glsnumberformat}{352}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{355}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{362}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{372}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{373}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{391}
 \glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{407}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{408}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{408}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{408}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{409}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{407}
 \glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{410}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{410}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{415}
-\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{415}
-\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{424}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{445}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{412}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{414}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{420}
+\glossaryentry{nvda?\glossentry{nvda}|setentrycounter[]{page}"\glsnumberformat}{424}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{432}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{432}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{433}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{434}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{436}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{437}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{438}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{438}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{438}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{439}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{440}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{440}
 \glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{445}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{449}
-\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{472}
+\glossaryentry{braille display?\glossentry{brailledisplay}|setentrycounter[]{page}"\glsnumberformat}{445}
+\glossaryentry{braille embosser?\glossentry{brailleembosser}|setentrycounter[]{page}"\glsnumberformat}{454}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{475}
 \glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{475}
-\glossaryentry{tactile graphics display?\glossentry{tactilegraphicsdisplay}|setentrycounter[]{page}"\glsnumberformat}{475}
-\glossaryentry{tactile graphics display?\glossentry{tactilegraphicsdisplay}|setentrycounter[]{page}"\glsnumberformat}{476}
-\glossaryentry{video magnifier?\glossentry{videomagnifier}|setentrycounter[]{page}"\glsnumberformat}{477}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{479}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{480}
-\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{480}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{483}
-\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{486}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{479}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{502}
+\glossaryentry{auditory access tool?\glossentry{screenreader}|setentrycounter[]{page}"\glsnumberformat}{505}
+\glossaryentry{tactile graphics display?\glossentry{tactilegraphicsdisplay}|setentrycounter[]{page}"\glsnumberformat}{505}
+\glossaryentry{tactile graphics display?\glossentry{tactilegraphicsdisplay}|setentrycounter[]{page}"\glsnumberformat}{506}
+\glossaryentry{video magnifier?\glossentry{videomagnifier}|setentrycounter[]{page}"\glsnumberformat}{507}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{509}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{510}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{510}

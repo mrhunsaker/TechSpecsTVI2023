@@ -1,8 +1,6 @@
 \chapter{Screen Reader Accessible Digital Reading Applications}
 \label{chap:reading-apps}
-% Pedagogical scaffolded rewrite. Legacy narrative content preserved and reorganized.
 
-%====================================================
 \section{~~Overview}
 \label{sec:sr27-overview}
 Digital reading applications operationalize accessible consumption of textual, tabular, mathematical, and multimodal learning resources for print-disabled individuals. Their effectiveness hinges on (a) semantic exposure to assistive technologies (AT), (b) low interaction \gidx{latency}{latency}, (c) configurability (fonts, spacing, contrast, \gidx{braille}{braille}), (d) robust \gidx{navigation}{navigation} (TOC, landmarks, search granularity), and (e) equitable \gidx{hardware}{hardware}/\gidx{software}{software} provisioning. On desktop platforms, interoperability with legacy \gls{msaa} and modern \gls{uia} \gidx{accessibility}{accessibility} APIs enables \gidx{screenreader}{screen reader}s to extract and present the same structural semantics embodied in well-authored EPUB, DAISY, or tagged PDF/UA sources. This chapter:
@@ -15,7 +13,6 @@ Digital reading applications operationalize accessible consumption of textual, t
 	\item Provides a troubleshooting matrix and strategic recommendations.
 \end{itemize}
 
-%====================================================
 \section{~~Learning Objectives}
 \label{sec:sr27-learning-objectives}
 After completing this chapter, you will be able to:
@@ -30,7 +27,6 @@ After completing this chapter, you will be able to:
 	\item Utilize a structured troubleshooting schema to triage reading accessibility issues.
 \end{enumerate}
 
-%====================================================
 \section{~~Key Terms}
 \label{sec:sr27-key-terms}
 \begin{description}
@@ -46,12 +42,10 @@ After completing this chapter, you will be able to:
 	\item[Adaptive Display Settings] User-adjustable font, line spacing, color themes, and word spacing for reduced cognitive strain.
 \end{description}
 
-%====================================================
 \section{~~Historical and Policy Context}
 \label{sec:sr27-history}
 Early screen reader reading workflows centered on linear plain-text or untagged PDF, resulting in high navigation friction. Standards maturation (DAISY, EPUB 3, PDF/UA) accelerated semantic preservation and multi-modal synchronization. Policy drivers (Section 508 refresh, EU Web Accessibility Directive, procurement accessibility clauses) elevated the expectation that educational and civic platforms deliver accessible digital reading experiences. Equity studies highlighted hardware disparities exacerbating latency and dropout rates\supercite{DiMaggio2001FromUnequalAccess, EquityViolationData}. Contemporary focus includes reducing cognitive load via structured navigation and ensuring real-time responsiveness even on lower-cost hardware.
 
-%====================================================
 \section{~~Core Concepts}
 \label{sec:sr27-core-concepts}
 \begin{enumerate}
@@ -65,7 +59,6 @@ Early screen reader reading workflows centered on linear plain-text or untagged 
 	\item \textbf{User Feedback Loop}: Aggregation of telemetry (opt-in) + surveys to drive targeted latency and semantic accuracy improvements.
 \end{enumerate}
 
-%====================================================
 \section{~~Technologies and Tools}
 \label{sec:sr27-technologies}
 \begin{itemize}
@@ -77,7 +70,6 @@ Early screen reader reading workflows centered on linear plain-text or untagged 
 	\item \textbf{Annotation and Export Tools}: Highlight extraction, structured note export (Markdown/RTF) for study workflows.
 \end{itemize}
 
-%====================================================
 \section{~~Economic and Licensing Landscape}
 \label{sec:sr27-economics}
 \begin{itemize}
@@ -88,7 +80,6 @@ Early screen reader reading workflows centered on linear plain-text or untagged 
 	\item \textbf{Equity Impact}: High pricing without subsidies shifts adoption toward lower-feature alternatives, widening attainment gaps\supercite{Lee2019}.
 \end{itemize}
 
-%====================================================
 \section{~~Comparative Feature Matrix}
 \label{sec:sr27-comparative-matrix}
 \footnotesize
@@ -110,7 +101,6 @@ Early screen reader reading workflows centered on linear plain-text or untagged 
 \end{longtblr}
 \normalsize
 
-%====================================================
 \section{~~Implementation Strategies}
 \label{sec:sr27-implementation}
 \begin{enumerate}
@@ -126,7 +116,6 @@ Early screen reader reading workflows centered on linear plain-text or untagged 
 	\item \textbf{Continuous Professional Development}: Quarterly refresh training aligned to software updates and new standards guidance.
 \end{enumerate}
 
-%====================================================
 \section{~~Standards and Compliance Alignment}
 \label{sec:sr27-standards}
 \begin{itemize}
@@ -137,7 +126,6 @@ Early screen reader reading workflows centered on linear plain-text or untagged 
 	\item \textbf{Section 508 / EN 301 549}: Procurement frameworks mandating accessible software and content ecosystems.
 \end{itemize}
 
-%====================================================
 \section{~~Case Studies}
 \label{sec:sr27-case-studies}
 \subsection*{Underperforming Web Reader Latency}
@@ -152,7 +140,6 @@ Intermittent braille lag traced to aggressive power management throttling USB po
 \subsection*{Equity Hardware Intervention}
 Providing upgraded RAM kits to low-end devices cut average page-turn latency variance by 60\%, narrowing performance gap in comprehension testing\supercite{EquityViolationData, EducationalEquityReport2024}.
 
-%====================================================
 \section{~~Best Practices}
 \label{sec:sr27-best-practices}
 \begin{itemize}
@@ -165,7 +152,6 @@ Providing upgraded RAM kits to low-end devices cut average page-turn latency var
 	\item Maintain accessible annotation exports (plain text + semantic markers) for LMS ingestion.
 \end{itemize}
 
-%====================================================
 \section{~~Troubleshooting and Common Pitfalls}
 \label{sec:sr27-troubleshooting}
 \footnotesize
@@ -193,7 +179,6 @@ Providing upgraded RAM kits to low-end devices cut average page-turn latency var
 \end{longtblr}
 \normalsize
 
-%====================================================
 \section{~~Emerging Trends}
 \label{sec:sr27-emerging-trends}
 \begin{itemize}
@@ -204,7 +189,6 @@ Providing upgraded RAM kits to low-end devices cut average page-turn latency var
 	\item \textbf{Math + STEM Standardization}: Wider native rendering of MathML across mainstream readers.
 \end{itemize}
 
-%====================================================
 \section{~~Ethical, Equity, and Privacy Considerations}
 \label{sec:sr27-ethics}
 \begin{itemize}
@@ -215,7 +199,6 @@ Providing upgraded RAM kits to low-end devices cut average page-turn latency var
 	\item \textbf{Inclusive Procurement}: Contract clauses enforcing accessible source delivery reduce long-term remediation risk\supercite{Lazar2015, USAccessBoard2018}.
 \end{itemize}
 
-%====================================================
 \section{~~Assessment and Reflection}
 \label{sec:sr27-assessment}
 \textbf{Short Answer}
@@ -229,7 +212,6 @@ Providing upgraded RAM kits to low-end devices cut average page-turn latency var
 
 \textbf{Reflection} Assess the ethical balance between collecting usage telemetry for performance improvement and protecting learner privacy in educational contexts.
 
-%====================================================
 \section{~~Summary}
 \label{sec:sr27-summary}
 Accessible reading effectiveness emerges from synergy between semantic-rich content formats, performant and interoperable reading systems, and equitable hardware deployment. Latency, structural fidelity, and customization options directly influence comprehension and study efficiency. Institutional strategies emphasizing format-first acquisition, performance benchmarking, and structured remediation pathways reduce cognitive load and achievement gaps. Emerging AI and analytics tools promise enhanced semantic gap filling and adaptive support—necessitating vigilant ethical governance. Sustainable accessibility depends on continuous validation against standards, inclusive procurement, and data-informed iterative improvements.

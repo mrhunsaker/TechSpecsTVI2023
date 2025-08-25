@@ -2,12 +2,10 @@
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 \label{chap:gaming-accessibility}
 
-%====================================================
 \section{~~Overview}
 \label{sec:gaming-overview}
 Gaming provides social connection, cognitive challenge, skill development, and community identity for players who are blind or profoundly vision impaired. Accessibility\index{accessibility} now spans audio-first design, robust haptics, adaptive input \gidx{hardware}{hardware}, \gidx{screenreader}{screen reader} integration, high-contrast and scalable interfaces, and inclusive community ecosystems\supercite{AbleGamers2025}. This chapter introduces core sensory interaction paradigms (audio, haptics, structured text), design frameworks, technology stacks across video, mobile, web, VR/AR, and tabletop domains, implementation strategies, standards alignment, troubleshooting patterns, and emerging AI + spatial computing trends. We conclude with ethical and equity considerations, assessment prompts, and a legacy mapping from the pre-scaffold narrative.
 
-%====================================================
 \section{~~Learning Objectives}
 \label{sec:gaming-learning-objectives}
 After completing this chapter you will be able to:
@@ -23,7 +21,6 @@ After completing this chapter you will be able to:
 	\item Formulate ethical and privacy safeguards for telemetry and community moderation impacting blind players.
 \end{enumerate}
 
-%====================================================
 \section{~~Key Terms}
 \label{sec:gaming-key-terms}
 \begin{description}
@@ -39,12 +36,10 @@ After completing this chapter you will be able to:
 	\item[Tactile Adaptation] \gidxnested{tactileadaptation}{Gaming accessibility}{tactile adaptation} Physical modification (Braille labels, textured overlays) enabling non-visual tabletop play.
 \end{description}
 
-%====================================================
 \section{~~Historical and Policy Context}
 \label{sec:gaming-history}
 Early accessible games were predominantly hobbyist or community-driven, demonstrating feasibility (e.g., audio adaptations and mods like Hearthstone Accessibility)\supercite{AFBIntroVG}. Growing recognition of disabled gamers’ economic influence (sometimes termed the “purple pound”)\supercite{ScopeGamingReport} catalyzed mainstream studios to build in accessibility suites (\textit{The Last of Us}, \textit{Forza Motorsport 8})\supercite{LudaccessList}. Parallel policy momentum in digital accessibility (e.g., anti-discrimination mandates) strengthened arguments for inclusive interactive media. Tabletop accessibility leveraged longstanding tactile and Braille production ecosystems, while mobile platforms accelerated adoption via unified accessibility APIs (iOS VoiceOver, Android TalkBack). The contemporary landscape merges specialized audio-first studios with AAA feature-rich implementations.
 
-%====================================================
 \section{~~Core Concepts}
 \label{sec:gaming-core-concepts}
 \subsection*{Sensory Substitution and Redundancy}
@@ -65,7 +60,6 @@ Remapping, sensitivity curves, audio mix matrices (voice/music/effects/spatial c
 \subsection*{Tabletop Tactility}
 Physical games rely on Braille labeling, shape differentiation, textured overlays, and positional constraints (raised borders) to provide state legibility comparable to visual scanning.
 
-%====================================================
 \section{~~Technologies and Tools}
 \label{sec:gaming-technologies}
 \subsection*{Game Engines and Frameworks}
@@ -86,7 +80,6 @@ Adaptive controllers, single-switch, mouth, head, or foot-operated devices, as w
 \subsection*{Community and Advocacy Infrastructure}
 Organizations like AbleGamers provide peer counseling, engineering research, and professional development, reinforcing industry readiness and user research pipelines\supercite{AbleGamers2025}. Community clubs (Blind Gaming Club, Blind Racing Club) supply iterative feedback loops and social reinforcement.
 
-%====================================================
 \section{~~Implementation Strategies}
 \label{sec:gaming-implementation}
 \begin{enumerate}
@@ -101,7 +94,6 @@ Organizations like AbleGamers provide peer counseling, engineering research, and
 	\item \textbf{Post-Launch Feedback Loop}: Community reporting channels with SLA for triaging accessibility defects; patch cadence planning.
 \end{enumerate}
 
-%====================================================
 \section{~~Standards and Compliance}
 \label{sec:gaming-standards}
 \begin{itemize}
@@ -112,7 +104,6 @@ Organizations like AbleGamers provide peer counseling, engineering research, and
 	\item \textbf{Data Protection Policies}: Telemetry, matchmaking, and personalization features must safeguard sensitive user data especially for minors or health-related adaptations.
 \end{itemize}
 
-%====================================================
 \section{~~Case Studies}
 \label{sec:gaming-case-studies}
 \subsection*{Audio-Only RPG (\textit{The Vale})}
@@ -127,7 +118,6 @@ Gesture-driven, \gls{tts}-customizable experiences demonstrate scalable producti
 \subsection*{Tabletop Adaptation Kit (64 Ounce Games)}
 Braille overlays, tactile piece redesign, and thermoformed boards show cost-effective retrofitting pipeline for mainstream titles\supercite{64OunceGames}.
 
-%====================================================
 \section{~~Best Practices}
 \label{sec:gaming-best-practices}
 \begin{itemize}
@@ -141,7 +131,6 @@ Braille overlays, tactile piece redesign, and thermoformed boards show cost-effe
 	\item \textbf{Data-Informed Iteration}: Leverage accessibility telemetry aggregated + anonymized; share improvements.
 \end{itemize}
 
-%====================================================
 \section{~~Troubleshooting and Common Pitfalls}
 \label{sec:gaming-troubleshooting}
 Common implementation failures and remediations (schema compliant).
@@ -168,7 +157,6 @@ Common implementation failures and remediations (schema compliant).
 	Audio latency causing delayed interaction feedback                    & High buffer size; device mismatch                          & Perceived unresponsiveness; timing disadvantage                & Optimize audio pipeline; reduce buffer; prefetch critical cues                                                    & Performance budget specifying max input-to-cue latency                                             & AFBIntroVG        \\
 \end{longtblr}
 
-%====================================================
 \section{~~Emerging Trends}
 \label{sec:gaming-emerging-trends}
 \begin{itemize}
@@ -180,7 +168,6 @@ Common implementation failures and remediations (schema compliant).
 	\item \textbf{Adaptive Difficulty via ML}: Real-time classification of player struggle states adjusting mechanics in accessible ways without reducing agency.
 \end{itemize}
 
-%====================================================
 \section{~~Ethical, Equity, and Privacy Considerations}
 \label{sec:gaming-ethics}
 \begin{itemize}
@@ -191,7 +178,6 @@ Common implementation failures and remediations (schema compliant).
 	\item \textbf{Moderation Accessibility}: Reporting tools must be accessible to mitigate harassment that disproportionately impacts disabled gamers\supercite{ScopeGamingReport}.
 \end{itemize}
 
-%====================================================
 \section{~~Assessment and Reflection}
 \label{sec:gaming-assessment}
 \textbf{Short Answer}
@@ -203,7 +189,6 @@ Common implementation failures and remediations (schema compliant).
 \textbf{Applied Design Exercise} Draft a sprint plan (four weeks) to add screen reader \gidx{navigation}{navigation}, remappable controls, and spatial audio cues to a mid-scope indie action game: specify deliverables, validation metrics (e.g., median menu navigation time), risk mitigation strategies, and user testing cadence with blind participants.
 \textbf{Reflection} Identify one AAA and one audio-first indie title you have used (or researched). Evaluate each against three best practices in Section~\ref{sec:gaming-best-practices}. Propose one improvement for each.
 
-%====================================================
 \section{~~Summary}
 \label{sec:gaming-summary}
 Accessible gaming for blind and profoundly vision impaired players rests on deliberate multi-sensory design: spatially precise, non-overlapping audio; semantically consistent haptics; robust text and \gls{tts} integration; and customizable control/input layers. Platform disparities (notably console system-level narration gaps) persist, while mobile and PC ecosystems accelerate innovation. Structured disclosure and community co-creation reduce purchase risk and elevate quality. Emerging AI and VR/AR modalities promise richer adaptive experiences but require ethical stewardship and ongoing human-centered validation. Sustained success depends on iteratively engaging blind players, publishing transparent accessibility commitments, and treating inclusion as foundational—not auxiliary—to design.

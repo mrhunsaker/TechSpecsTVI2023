@@ -3,12 +3,10 @@
 
 \label{chap:braille-transcription-software}
 
-%====================================================
 \section{~~Overview}
 \label{sec:braille-overview}
 Braille transcription software\index{braille!transcription software} converts print or structured digital text into correctly coded braille output suitable for embossing, electronic distribution (BRF / PEF), or real-time display on refreshable braille devices\gidx{brailledisplay}{braille display}. High-quality transcription ensures \gidx{equitableaccess}{equitable access} to literary, STEM (Nemeth Code\index{braille!Nemeth Code}, UEB technical), music\index{music braille}, and multi-lingual content. This chapter surveys leading commercial and open-source tools (e.g., Duxbury DBT\supercite{Duxbury}, Braille2000\supercite{Braille2000}, BrailleBlaster\supercite{BrailleBlaster}, Biblos\supercite{Biblos}, Sao Mai Braille\supercite{SMB}, Dotify\supercite{Dotify}, and the Liblouis\supercite{Liblouis} translation library), outlines implementation and workflow strategies, and provides troubleshooting guidance, emerging trends (cloud automation, AI validation), ethical considerations, and assessment prompts. Legacy narrative content has been reorganized into a pedagogical scaffold.
 
-%====================================================
 \section{~~Learning Objectives}
 \label{sec:braille-learning-objectives}
 After completing this chapter you will be able to:
@@ -23,7 +21,6 @@ After completing this chapter you will be able to:
 	\item Articulate ethical, equity, and localization considerations in multi-language braille production.
 \end{enumerate}
 
-%====================================================
 \section{~~Key Terms}
 \label{sec:braille-key-terms}
 \begin{description}
@@ -40,12 +37,10 @@ After completing this chapter you will be able to:
 	\item[\gidx{tactilegraphics}{Tactile Graphics}] \gidxnested{tactilegraphics}{Braille production}{tactile graphics} Raised-line or embossed diagrams conveying spatial/visual information.
 \end{description}
 
-%====================================================
 \section{~~Historical and Policy Context}
 \label{sec:braille-history}
 Braille production migrated from manual slate-and-stylus and mechanical Perkins transcription to semi-automated computer-assisted translation in the late 20th century. Standards bodies (e.g., BANA) guided the evolution from EBAE to UEB to improve international consistency. Legislative mandates for timely accessible instructional materials accelerated adoption of NIMAS-based workflows and spurred open-source innovation (e.g., BrailleBlaster targeting K–12 textbook production). Concurrently, the emergence of low-cost refreshable braille displays broadened demand for accurate, multi-lingual digital braille distribution beyond embossed hard copy.
 
-%====================================================
 \section{~~Core Concepts}
 \label{sec:braille-core-concepts}
 \subsection*{Translation vs.\ Formatting}
@@ -63,7 +58,6 @@ Robust pipelines incorporate: automated translation + human review (visual inter
 \subsection*{Open Engine vs. Turnkey System}
 Libraries like Liblouis provide translation primitives; turnkey systems add UI/UX, layout engines, scripting, tactile graphic helpers, and integrated QA tools.
 
-%====================================================
 \section{~~Technologies and Tools}
 \label{sec:braille-tools}
 \subsection*{Commercial}
@@ -84,7 +78,6 @@ Libraries like Liblouis provide translation primitives; turnkey systems add UI/U
 	\item QA scripts (spell/terminology consistency, contraction verification)
 \end{itemize}
 
-%====================================================
 \section{~~Implementation Strategies}
 \label{sec:braille-implementation}
 \begin{enumerate}
@@ -100,7 +93,6 @@ Libraries like Liblouis provide translation primitives; turnkey systems add UI/U
 	\item \textbf{Archival \& Version Control}: Store source, normalized pre-translation, translation logs (tool version, translation table hash), and final output.
 \end{enumerate}
 
-%====================================================
 \section{~~Standards and Compliance}
 \label{sec:braille-standards}
 \begin{itemize}
@@ -111,7 +103,6 @@ Libraries like Liblouis provide translation primitives; turnkey systems add UI/U
 	\item \textbf{Accessibility QA}: Alignment with timely provision mandates for educational institutions (reduces lag vs.\ print).
 \end{itemize}
 
-%====================================================
 \section{~~Case Studies}
 \label{sec:braille-case-studies}
 \subsection*{Textbook (NIMAS) Workflow with BrailleBlaster}
@@ -126,7 +117,6 @@ XML ingest → OBFL transformation → scheduled batch braille generation. Reduc
 \subsection*{Music + Literary Hybrid (SMB + Liblouis)}
 Sao Mai Braille used for integrated music lines; exported BRF merged with literary sections from Biblos; final pass ensures consistent page numbering and transcriber notes.
 
-%====================================================
 \section{~~Best Practices}
 \label{sec:braille-best-practices}
 \begin{itemize}
@@ -140,7 +130,6 @@ Sao Mai Braille used for integrated music lines; exported BRF merged with litera
 	\item Run random spot back-translation for high-risk passages (equations, specialized vocabulary).
 \end{itemize}
 
-%====================================================
 \section{~~Troubleshooting and Common Pitfalls}
 \label{sec:braille-troubleshooting}
 \begin{longtblr}[
@@ -166,7 +155,6 @@ Sao Mai Braille used for integrated music lines; exported BRF merged with litera
 	Back-translation differs from original semantics                               & Contraction plus punctuation interplay                                   & Potential content misunderstanding                           & Inspect context; adjust punctuation spacing or contraction suppression                & Spot back-translation sampling of every N pages                          & Liblouis       \\
 \end{longtblr}
 
-%====================================================
 \section{~~Emerging Trends}
 \label{sec:braille-emerging-trends}
 \begin{itemize}
@@ -177,7 +165,6 @@ Sao Mai Braille used for integrated music lines; exported BRF merged with litera
 	\item \textbf{Automated Tactile Graphic Generation}: Vector-to-relief preprocessing combined with human refinement workflows.
 \end{itemize}
 
-%====================================================
 \section{~~Ethical, Equity, and Privacy Considerations}
 \label{sec:braille-ethics}
 \begin{itemize}
@@ -188,7 +175,6 @@ Sao Mai Braille used for integrated music lines; exported BRF merged with litera
 	\item \textbf{Sustainability of Open Projects}: Community governance and funding models (for Liblouis, BrailleBlaster) affect long-term reliability; stewardship is an ethical responsibility.
 \end{itemize}
 
-%====================================================
 \section{~~Assessment and Reflection}
 \label{sec:braille-assessment}
 \textbf{Short Answer}
@@ -200,7 +186,6 @@ Sao Mai Braille used for integrated music lines; exported BRF merged with litera
 \textbf{Applied Exercise} Design a two-week sprint plan to produce a 250-page STEM textbook in braille using NIMAS source: identify toolchain, risk mitigation steps for math, QA checkpoints, and staffing assumptions.
 \textbf{Reflection} Evaluate pros and cons of adopting an open-source-first approach (BrailleBlaster + Liblouis) versus a hybrid commercial strategy (DBT + custom scripts) for a small educational service center.
 
-%====================================================
 \section{~~Summary}
 \label{sec:braille-summary}
 Effective braille transcription depends on: (1) structured and semantically clean source content; (2) appropriate tool selection aligned with document complexity (textbook, STEM, music); (3) accurate code switching for specialized content; (4) iterative human QA augmented by automation; and (5) transparent documentation of translation table versions and decisions. A blended ecosystem of commercial and open-source tools—anchored by robust translation libraries—enables scalable, high-quality, and equitable tactile literacy delivery. Emerging cloud, AI, and collaborative paradigms promise efficiency gains while underscoring the continued need for expert human validation.

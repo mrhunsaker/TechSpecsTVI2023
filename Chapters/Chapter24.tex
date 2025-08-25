@@ -1,12 +1,10 @@
 \chapter{Screen Reader Interaction with Windows Environment and User Data Processing}
 \label{chap:windows-screen-reader-architecture}
 
-%====================================================
 \section{~~Overview}
 \label{sec:sr-overview}
 Windows \gidx{screenreader}{screen reader}s (JAWS, NVDA, Narrator) transform operating system and application user interface (UI) semantics into speech, \gidx{braille}{braille}, and auditory (earcon) output. They mediate between \gidx{accessibility}{accessibility} APIs (\gls{msaa}, \gls{uia}), low-level input interception, internal virtual buffers, and multimodal output channels (\gidx{tts}{TTS}, refreshable \gidx{brailledisplay}{braille display}, earcons). This chapter presents core architectural layers, API usage patterns, data processing pipelines, scripting/extensibility models, performance considerations (\gidx{latency}{latency}, event handling), standards alignment, troubleshooting, emerging trends (contextual AI narration, semantic diffing), ethical/privacy issues, and reflective assessment. Legacy narrative and tabular material has been reorganized under a pedagogical scaffold.
 
-%====================================================
 \section{~~Learning Objectives}
 \label{sec:sr-learning-objectives}
 After completing this chapter you will be able to:
@@ -21,7 +19,6 @@ After completing this chapter you will be able to:
 	\item Assess ethical and privacy considerations in telemetry, user profiling, and script distribution.
 \end{enumerate}
 
-%====================================================
 \section{~~Key Terms}
 \label{sec:sr-key-terms}
 \begin{description}
@@ -39,12 +36,10 @@ After completing this chapter you will be able to:
 	\item[Event Throttling] Strategy to coalesce or defer redundant UIA/MSAA events to reduce latency.
 \end{description}
 
-%====================================================
 \section{~~Historical and Policy Context}
 \label{sec:sr-history}
 Early Windows assistive technologies depended on MSAA’s limited role/state abstraction, leading vendors (notably JAWS) to implement proprietary off-screen models and custom drivers for inaccessible legacy controls. Introduction of UIA expanded granularity (control patterns, text ranges), enabling more standards-driven approaches (NVDA, Narrator). Regulatory and procurement requirements emphasizing accessibility (e.g., alignment with web/desktop application inclusive design) incentivized developers to expose richer semantics via UIA. Open-source community growth around NVDA accelerated turnaround for new control support and braille display drivers, while OEM integration focused Narrator on baseline universal availability.
 
-%====================================================
 \section{~~Core Concepts}
 \label{sec:sr-core-concepts}
 \subsection*{API Abstraction Layer}
@@ -70,7 +65,6 @@ JAWS uses proprietary scripting (procedural event handlers) for deep app customi
 \subsection*{Performance and Latency}
 Managing event floods (e.g., rapid focus churn, live regions) requires coalescing, debounce logic, and priority queues. Speech interruption heuristics weigh current utterance importance vs. urgent new context (e.g., dialog alert).
 
-%====================================================
 \section{~~Technologies and Tools}
 \label{sec:sr-technologies}
 \subsection*{Accessibility APIs}
@@ -114,7 +108,6 @@ Managing event floods (e.g., rapid focus churn, live regions) requires coalescin
 \end{longtblr}
 \normalsize
 
-%====================================================
 \section{~~Implementation Strategies}
 \label{sec:sr-implementation}
 \begin{enumerate}
@@ -130,7 +123,6 @@ Managing event floods (e.g., rapid focus churn, live regions) requires coalescin
 	\item \textbf{Documentation}: Publish accessibility keyboard reference and known limitations for users.
 \end{enumerate}
 
-%====================================================
 \section{~~Standards and Compliance}
 \label{sec:sr-standards}
 \begin{itemize}
@@ -141,7 +133,6 @@ Managing event floods (e.g., rapid focus churn, live regions) requires coalescin
 	\item \textbf{Localization Standards}: Language tagging for accurate pronunciation and braille table switching.
 \end{itemize}
 
-%====================================================
 \section{~~Case Studies}
 \label{sec:sr-case-studies}
 \subsection*{Enterprise Legacy Application (JAWS Scripting)}
@@ -153,7 +144,6 @@ Developers enhance a dynamic React grid by adding ARIA row/column headers and li
 \subsection*{Baseline Consumer Productivity App (Narrator)}
 A new Windows-native note app implements complete UIA Text and Value patterns. Without additional scripting, Narrator provides consistent editing navigation and selection feedback, validating design-by-default accessibility.
 
-%====================================================
 \section{~~Best Practices}
 \label{sec:sr-best-practices}
 \begin{itemize}
@@ -166,7 +156,6 @@ A new Windows-native note app implements complete UIA Text and Value patterns. W
 	\item Implement performance budget: target sub-150ms from user keystroke to speech onset for high-frequency commands.
 \end{itemize}
 
-%====================================================
 \section{~~Troubleshooting and Common Pitfalls}
 \label{sec:sr-troubleshooting}
 \begin{longtblr}[
@@ -192,7 +181,6 @@ A new Windows-native note app implements complete UIA Text and Value patterns. W
 	Script/add-on causes crash in newer application version  & Hard-coded control IDs; unhandled pattern changes     & Loss of AT functionality mid-task          & Add defensive pattern detection; semantic queries instead of IDs                          & Version compatibility matrix; CI add-on tests               & NVAccess             \\
 \end{longtblr}
 
-%====================================================
 \section{~~Emerging Trends}
 \label{sec:sr-emerging-trends}
 \begin{itemize}
@@ -204,7 +192,6 @@ A new Windows-native note app implements complete UIA Text and Value patterns. W
 	\item \textbf{Cloud Script Repositories with Security Vetting}: Centralized distribution with cryptographic signing.
 \end{itemize}
 
-%====================================================
 \section{~~Ethical, Equity, and Privacy Considerations}
 \label{sec:sr-ethics}
 \begin{itemize}
@@ -215,7 +202,6 @@ A new Windows-native note app implements complete UIA Text and Value patterns. W
 	\item \textbf{Localization Fairness}: Ensure non-English UIA properties receive equal semantic fidelity.
 \end{itemize}
 
-%====================================================
 \section{~~Assessment and Reflection}
 \label{sec:sr-assessment}
 \textbf{Short Answer}
@@ -229,7 +215,6 @@ A new Windows-native note app implements complete UIA Text and Value patterns. W
 
 \textbf{Reflection} Compare JAWS scripting and NVDA add-ons for maintaining support in a rapidly evolving Electron-based productivity app. Which model better mitigates regression risk and why?
 
-%====================================================
 \section{~~Summary}
 \label{sec:sr-summary}
 Windows screen readers orchestrate accessibility APIs, input interception, internal modeling, and multimodal output to create an efficient, navigable non-visual user experience. Robust design depends on exposing rich UIA semantics, managing event flow, balancing verbosity, and sustaining performance. Architectural diversity among JAWS (script extensibility), NVDA (open modularity), and Narrator (baseline integration) demonstrates complementary innovation pathways. Emerging AI-driven summarization and adaptive verbosity promise productivity gains but require careful ethical guardrails. Sustainable accessibility hinges on standardized semantic exposure, continuous user feedback, and security-conscious extensibility.

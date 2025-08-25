@@ -1,14 +1,11 @@
 \chapter{Optical Character Recognition for Text and Math/STEM Material}
 \glsreset{ocr}\glsreset{icr}\glsreset{tts}\glsreset{llm}\glsreset{uia}\glsreset{msaa}\glsreset{pdfua}\glsreset{api}\glsreset{cpu}
 \label{chap:ocr}
-% Pedagogical scaffolded rewrite. Legacy narrative content preserved and reorganized.
 
-%==================== Overview ====================
 \section{~~Overview}
 \label{sec:ocr-overview}
 \gidx{ocr}{\gls{ocr}} (\gls{ocr}) converts raster or vector images containing textual or symbolic content into machine-encoded, searchable, selectable, and structurally remediable text. For \gidx{accessibility}{accessibility}, \gls{ocr} is the on-ramp that enables downstream tagging, semantic enrichment, \gidx{braille}{braille} translation, \gidx{mathml}{MathML} rendering of equations, \gidx{screenreader}{screen reader} \gidx{navigation}{navigation}, and \gidx{equitableaccess}{equitable access} to legacy or born-inaccessible artifacts (e.g., scanned PDFs\index{PDF}). This chapter presents foundational concepts, technology options, accessibility-focused implementation workflows, standards alignment, common pitfalls, and emerging AI-driven trends. It culminates with case studies, best practices, and reflective assessment prompts for practitioners.
 
-%==================== Learning Objectives ====================
 \section{~~Learning Objectives}
 \label{sec:ocr-learning-objectives}
 After studying this chapter, you will be able to:
@@ -23,7 +20,6 @@ After studying this chapter, you will be able to:
 	\item Identify ethical, equity, and privacy considerations in large-scale digitization projects.
 \end{enumerate}
 
-%==================== Key Terms ====================
 \section{~~Key Terms}
 \label{sec:ocr-key-terms}
 \begin{description}
@@ -41,12 +37,10 @@ After studying this chapter, you will be able to:
 	\item[Reading Order] Sequence in which content should be presented to assistive technologies.
 \end{description}
 
-%==================== Historical and Policy Context ====================
 \section{~~Historical and Policy Context}
 \label{sec:ocr-history}
 Early \gls{ocr} systems (mid-20th century) relied on rigid pattern matching and required constrained fonts. Advances in statistical modeling and modern deep neural networks expanded robustness across fonts\index{fonts}, noise conditions, and languages. Policy and legal frameworks (e.g., anti-discrimination and digital accessibility regulations) indirectly accelerated adoption by making digitized, tagged, and searchable documents fundamental to equitable access. Large-scale digitization projects in libraries and government archives introduced mandates for preserving not only text but navigable structure for print-disabled patrons. STEM accessibility requirements further propelled specialized math \gls{ocr} and hybrid workflows combining general \gls{ocr} with equation extraction tools.
 
-%==================== Core Concepts ====================
 \section{~~Core Concepts}
 \label{sec:ocr-core-concepts}
 The \gls{ocr} pipeline comprises three macro stages:
@@ -57,7 +51,6 @@ The \gls{ocr} pipeline comprises three macro stages:
 \end{enumerate}
 Accessibility quality depends less on raw character accuracy alone and more on preservation or reconstruction of semantics (headings, lists\index{Markdown!lists}, tables, alternative text\index{images and media!alternative text}, MathML structure). Mathematical notation adds complexity due to baseline shifts, nested fractions, superscripts, and operator ambiguity.
 
-%==================== Technologies and Tools ====================
 \section{~~Technologies and Tools}
 \label{sec:ocr-tools}
 A mixed ecosystem supports accessibility-centered \gls{ocr}:
@@ -69,7 +62,6 @@ A mixed ecosystem supports accessibility-centered \gls{ocr}:
 \end{itemize}
 No single engine solves high-fidelity math, complex layout, and perfect \gidx{readingorder}{reading order} simultaneously; composite workflows are typical.
 
-%==================== Implementation Strategies ====================
 \section{~~Implementation Strategies}
 \label{sec:ocr-implementation}
 A robust accessibility-oriented workflow:
@@ -86,7 +78,6 @@ A robust accessibility-oriented workflow:
 	\item \textbf{Continuous Improvement}: Feed structured error annotations into model retraining or tuning heuristics.
 \end{enumerate}
 
-%==================== Standards and Compliance ====================
 \section{~~Standards and Compliance}
 \label{sec:ocr-standards}
 Key frameworks influencing \gls{ocr} remediation quality:
@@ -99,7 +90,6 @@ Key frameworks influencing \gls{ocr} remediation quality:
 \end{itemize}
 Compliance depends on post-\gls{ocr} remediation rigor more than initial engine selection.
 
-%==================== Case Studies ====================
 \section{~~Case Studies}
 \label{sec:ocr-case-studies}
 \subsection{Legacy STEM Journal Digitization}
@@ -109,7 +99,6 @@ Scanned multi-column forms initially yield cross-column text collisions. \gidx{l
 \subsection{Open Textbook Remediation}
 A math textbook lacking source files is remediated. High-resolution re-scan plus style-consistent heading tagging and MathML embedding produce an EPUB 3 package supporting synchronized audio and math speech.
 
-%==================== Best Practices ====================
 \section{~~Best Practices}
 \label{sec:ocr-best-practices}
 \begin{itemize}
@@ -123,7 +112,6 @@ A math textbook lacking source files is remediated. High-resolution re-scan plus
 	\item Preserve provenance (original scans) for audit and reprocessing as engines improve.
 \end{itemize}
 
-%==================== Troubleshooting and Common Pitfalls ====================
 \section{~~Troubleshooting and Common Pitfalls}
 \label{sec:ocr-troubleshooting}
 The table enumerates recurrent issues mapped to root causes, learner impact, resolutions, and preventive controls.
@@ -151,17 +139,14 @@ The table enumerates recurrent issues mapped to root causes, learner impact, res
 	Excessive manual correction time                                              & Lack of confidence-driven triage                                      & Inefficient allocation of remediation labor                              & Sort segments by confidence; prioritize below threshold; automate glossary corrections & Store and exploit confidence metadata; maintain domain lexicon                           &                   \\
 \end{longtblr}
 
-%==================== Emerging Trends ====================
 \section{~~Emerging Trends}
 \label{sec:ocr-emerging-trends}
 AI-enhanced \gls{ocr} integrates transformer-based vision-language models that jointly infer layout, \gidx{readingorder}{reading order}, and semantic roles (e.g., caption vs.\ paragraph). Multi-task training improves simultaneous text, table, and math parsing. Anticipated developments include near real-time math structure extraction, confidence calibration models prioritizing accessibility risk, and semi-automated remediation suggesting heading levels and table scopes. One-click remediation promises speed but still necessitates expert human validation.
 
-%==================== Ethical, Equity, and Privacy Considerations ====================
 \section{~~Ethical, Equity, and Privacy Considerations}
 \label{sec:ocr-ethics}
 Large-scale \gls{ocr} of archival or instructional materials raises privacy (personally identifiable information in forms), intellectual property, and data retention concerns. Equity issues emerge if only high-resource institutions can afford premium engines or manual remediation labor, widening access gaps. AI bias may under-recognize minority language typography or specialized STEM symbols, disproportionately affecting certain learners. Transparent confidence reporting, inclusive training datasets, and prioritization of born-accessible authoring mitigate these risks. Human oversight remains essential to prevent automation complacency and to ensure culturally sensitive alt text descriptions.
 
-%==================== Assessment and Reflection ====================
 \section{~~Assessment and Reflection}
 \label{sec:ocr-assessment}
 \textbf{Short Answer Prompts}
@@ -172,12 +157,10 @@ Large-scale \gls{ocr} of archival or instructional materials raises privacy (per
 \end{enumerate}
 \textbf{Applied Exercise} Design a mini workflow: Given 50 legacy STEM lab worksheets, outline tooling, sequencing, QA checkpoints, and standards validation to convert them into MathML-enhanced, \gls{pdfua}-compliant documents within two weeks. Identify risk mitigations.
 
-%==================== Summary ====================
 \section{~~Summary}
 \label{sec:ocr-summary}
 \gls{ocr} enables the transition from inert image-based documents to structured, assistive technology-ready resources. Accessibility excellence depends on deliberate post-\gls{ocr} remediation: \gidx{semantictagging}{semantic tagging}, MathML embedding, reliable \gidx{readingorder}{reading order}, and validated table structures. Hybrid toolchains (general \gls{ocr} + math-specific engines + professional remediation utilities like CommonLook PDF GlobalAccess\supercite{AllyantCommonLook}) and quality-first acquisition practices markedly reduce downstream corrections. AI advances accelerate layout and math parsing yet do not remove the necessity of human expertise for ethical, accurate, and equitable outcomes.
 
-%==================== Legacy Content Mapping ====================
 \section{~~Legacy Content Mapping}
 \label{sec:ocr-legacy-mapping}
 \begin{tabular}{p{0.32\textwidth} p{0.64\textwidth}}
@@ -191,4 +174,3 @@ Large-scale \gls{ocr} of archival or instructional materials raises privacy (per
 	Conclusions and Recommendations                    & Best Practices; Summary                                                      \\
 \end{tabular}
 
-% End of Chapter 21

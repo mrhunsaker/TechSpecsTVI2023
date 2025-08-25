@@ -2,15 +2,15 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{B}\relax \glsresetentrylist %
 \glossentry{brf}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{122}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{183}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{141}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{213}}}\glsgroupskip
 \glsgroupheading{M}\relax \glsresetentrylist %
 \glossentry{markdown}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{179}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{209}}}\glsgroupskip
 \glsgroupheading{P}\relax \glsresetentrylist %
 \glossentry{pdf}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{161}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{376}}}%
+		\setentrycounter[]{page}\glsnumberformat{191}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{406}}}%
 \glossentry{pef}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{122}}}%
+		\setentrycounter[]{page}\glsnumberformat{141}}}%
 \end{theglossary}\glossarypostamble
