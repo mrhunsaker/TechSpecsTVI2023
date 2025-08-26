@@ -6,184 +6,184 @@ Evaluations were completed on laptops purchased in 2024-2025. One with 8GB \gidx
 \section{~~JAWS Latency Quantification}
 To detect \gidx{screenreader}{screen reader} \gidx{latency}{latency} I used the following suite of tools written in python.
 
-\begin{lstlisting}[language=Python]
-	import os
-	import psutil
-	import subprocess
-	import time
-	import json
-	import sounddevice as sd
-	import numpy as np
-	from pynput.keyboard import Controller
-	from pywinauto import Application
-	import win32gui
-	import win32process
+\begin{lstlisting}[language=python]
+import os
+import psutil
+import subprocess
+import time
+import json
+import sounddevice as sd
+import numpy as np
+from pynput.keyboard import Controller
+from pywinauto import Application
+import win32gui
+import win32process
 
-	# === CONFIGURATION ===
-	SCREEN_READERS = {
-	"JAWS": {
-	"process": "jfw.exe",
-	"path": r"C:\Program Files\Freedom Scientific\JAWS\2025\jfw.exe",
-	"config_path": os.path.expandvars(r"%APPDATA%\Freedom Scientific\JAWS\2025\Settings\enu\default.jcf")
-	},
-	"NVDA": {
-	"process": "nvda.exe",
-	"path": r"C:\Program Files\NVDA\nvda.exe",
-	"config_path": os.path.expandvars(r"%APPDATA%\nvda\nvda.ini")
-	},
-	"SuperNova": {
-	"process": "supernova.exe",
-	"path": r"C:\Program Files\Dolphin\SuperNova\supernova.exe"
+# === CONFIGURATION ===
+SCREEN_READERS = {
+"JAWS": {
+"process": "jfw.exe",
+"path": r"C:\Program Files\Freedom Scientific\JAWS\2025\jfw.exe",
+"config_path": os.path.expandvars(r"%APPDATA%\Freedom Scientific\JAWS\2025\Settings\enu\default.jcf")
+},
+"NVDA": {
+"process": "nvda.exe",
+"path": r"C:\Program Files\NVDA\nvda.exe",
+"config_path": os.path.expandvars(r"%APPDATA%\nvda\nvda.ini")
+},
+"SuperNova": {
+"process": "supernova.exe",
+"path": r"C:\Program Files\Dolphin\SuperNova\supernova.exe"
+}
+"Narrator": {
+"process": "Narrator.exe",
+"path": r"C:\Windows\System32\Narrator.exe"
+}
+}
+
+KEY_TO_PRESS = 'a'
+DURATION_SECONDS = 5
+SAMPLE_RATE = 44100
+THRESHOLD = 0.05
+LOGFILE = "suite_latency_log.json"
+
+keyboard = Controller()
+
+def is_process_running(name):
+for proc in psutil.process_iter(['pid', 'name']):
+if proc.info['name'] and proc.info['name'].lower() == name.lower():
+return proc.info['pid']
+return None
+
+def launch_screen_reader(reader):
+info = SCREEN_READERS.get(reader)
+path = info["path"]
+if os.path.isfile(path):
+subprocess.Popen([path])
+time.sleep(5)
+return is_process_running(info["process"])
+return None
+
+def activate_reader_window(reader):
+info = SCREEN_READERS.get(reader)
+proc_name = info["process"]
+for proc in psutil.process_iter(['pid', 'name']):
+if proc.info['name'].lower() == proc_name:
+try:
+app = Application(backend="uia").connect(process=proc.info['pid'])
+app.top_window().set_focus()
+return True
+except Exception:
+return False
+return False
+
+def get_foreground_app_name():
+hwnd = win32gui.GetForegroundWindow()
+_, pid = win32process.GetWindowThreadProcessId(hwnd)
+try:
+return psutil.Process(pid).name()
+except psutil.NoSuchProcess:
+return None
+
+def is_nvda_muted():
+cfg = SCREEN_READERS["NVDA"]["config_path"]
+if not os.path.exists(cfg):
+return None
+with open(cfg, "r", encoding="utf-8") as f:
+for line in f:
+if line.strip().lower().startswith("speechmode"):
+val = line.strip().split("=")[-1].strip().lower()
+return val in ["off", "beeps"]
+return None
+
+def get_jaws_verbosity_mode():
+cfg = SCREEN_READERS["JAWS"]["config_path"]
+if not os.path.exists(cfg):
+return None
+try:
+with open(cfg, "r", encoding="utf-8", errors="ignore") as f:
+for line in f:
+if "VerbosityLevel" in line:
+val = ''.join([c for c in line if c.isdigit()])
+return int(val) if val else None
+except Exception:
+return None
+return None
+
+def detect_or_start_readers(focus=True, auto_start=True):
+report = {}
+for reader, info in SCREEN_READERS.items():
+pid = is_process_running(info["process"])
+if not pid and auto_start:
+pid = launch_screen_reader(reader)
+status = {"running": bool(pid), "pid": pid, "focused": False}
+
+if pid and focus:
+focused = activate_reader_window(reader)
+status["focused"] = focused
+
+if reader == "NVDA" and pid:
+status["muted"] = is_nvda_muted()
+if reader == "JAWS" and pid:
+status["verbosity_level"] = get_jaws_verbosity_mode()
+
+report[reader] = status
+return report
+
+def detect_audio_peak(audio_data, fs, threshold=0.05):
+frame_rms = np.sqrt(np.mean(np.square(audio_data), axis=1))
+for i, amp in enumerate(frame_rms):
+if amp > threshold:
+return i / fs
+return None
+
+def measure_latency():
+audio_data = []
+def callback(indata, frames, time_info, status):
+audio_data.append(indata.copy())
+
+with sd.InputStream(callback=callback, channels=1, samplerate=SAMPLE_RATE):
+time.sleep(1)
+keypress_time = time.time()
+keyboard.press(KEY_TO_PRESS)
+
+keyboard.release(KEY_TO_PRESS)
+time.sleep(DURATION_SECONDS)
+
+audio = np.concatenate(audio_data, axis=0).flatten()
+latency_offset = detect_audio_peak(audio.reshape(-1, 1), SAMPLE_RATE, THRESHOLD)
+if latency_offset is not None:
+return {
+		"keypress_time": keypress_time,
+		"audio_feedback_time": keypress_time + latency_offset,
+		"latency_ms": round(latency_offset * 1000, 2),
+		"success": True
 	}
-	"Narrator": {
-	"process": "Narrator.exe",
-	"path": r"C:\Windows\System32\Narrator.exe"
+return {
+		"keypress_time": keypress_time,
+		"audio_feedback_time": None,
+		"latency_ms": None,
+		"success": False
 	}
-	}
 
-	KEY_TO_PRESS = 'a'
-	DURATION_SECONDS = 5
-	SAMPLE_RATE = 44100
-	THRESHOLD = 0.05
-	LOGFILE = "suite_latency_log.json"
+def run_suite():
+full_log = {
+"timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+"foreground_app_before_keypress": get_foreground_app_name(),
+"screen_reader_status": detect_or_start_readers(focus=True, auto_start=True),
+"keypress_to_audio_latency": measure_latency()
+}
+with open(LOGFILE, "w") as f:
+json.dump(full_log, f, indent=2)
+return full_log
 
-	keyboard = Controller()
-
-	def is_process_running(name):
-	for proc in psutil.process_iter(['pid', 'name']):
-	if proc.info['name'] and proc.info['name'].lower() == name.lower():
-	return proc.info['pid']
-	return None
-
-	def launch_screen_reader(reader):
-	info = SCREEN_READERS.get(reader)
-	path = info["path"]
-	if os.path.isfile(path):
-	subprocess.Popen([path])
-	time.sleep(5)
-	return is_process_running(info["process"])
-	return None
-
-	def activate_reader_window(reader):
-	info = SCREEN_READERS.get(reader)
-	proc_name = info["process"]
-	for proc in psutil.process_iter(['pid', 'name']):
-	if proc.info['name'].lower() == proc_name:
-	try:
-	app = Application(backend="uia").connect(process=proc.info['pid'])
-	app.top_window().set_focus()
-	return True
-	except Exception:
-	return False
-	return False
-
-	def get_foreground_app_name():
-	hwnd = win32gui.GetForegroundWindow()
-	_, pid = win32process.GetWindowThreadProcessId(hwnd)
-	try:
-	return psutil.Process(pid).name()
-	except psutil.NoSuchProcess:
-	return None
-
-	def is_nvda_muted():
-	cfg = SCREEN_READERS["NVDA"]["config_path"]
-	if not os.path.exists(cfg):
-	return None
-	with open(cfg, "r", encoding="utf-8") as f:
-	for line in f:
-	if line.strip().lower().startswith("speechmode"):
-	val = line.strip().split("=")[-1].strip().lower()
-	return val in ["off", "beeps"]
-	return None
-
-	def get_jaws_verbosity_mode():
-	cfg = SCREEN_READERS["JAWS"]["config_path"]
-	if not os.path.exists(cfg):
-	return None
-	try:
-	with open(cfg, "r", encoding="utf-8", errors="ignore") as f:
-	for line in f:
-	if "VerbosityLevel" in line:
-	val = ''.join([c for c in line if c.isdigit()])
-	return int(val) if val else None
-	except Exception:
-	return None
-	return None
-
-	def detect_or_start_readers(focus=True, auto_start=True):
-	report = {}
-	for reader, info in SCREEN_READERS.items():
-	pid = is_process_running(info["process"])
-	if not pid and auto_start:
-	pid = launch_screen_reader(reader)
-	status = {"running": bool(pid), "pid": pid, "focused": False}
-
-	if pid and focus:
-	focused = activate_reader_window(reader)
-	status["focused"] = focused
-
-	if reader == "NVDA" and pid:
-	status["muted"] = is_nvda_muted()
-	if reader == "JAWS" and pid:
-	status["verbosity_level"] = get_jaws_verbosity_mode()
-
-	report[reader] = status
-	return report
-
-	def detect_audio_peak(audio_data, fs, threshold=0.05):
-	frame_rms = np.sqrt(np.mean(np.square(audio_data), axis=1))
-	for i, amp in enumerate(frame_rms):
-	if amp > threshold:
-	return i / fs
-	return None
-
-	def measure_latency():
-	audio_data = []
-	def callback(indata, frames, time_info, status):
-	audio_data.append(indata.copy())
-
-	with sd.InputStream(callback=callback, channels=1, samplerate=SAMPLE_RATE):
-	time.sleep(1)
-	keypress_time = time.time()
-	keyboard.press(KEY_TO_PRESS)
-	
-	keyboard.release(KEY_TO_PRESS)
-	time.sleep(DURATION_SECONDS)
-
-	audio = np.concatenate(audio_data, axis=0).flatten()
-	latency_offset = detect_audio_peak(audio.reshape(-1, 1), SAMPLE_RATE, THRESHOLD)
-	if latency_offset is not None:
-	return {
-			"keypress_time": keypress_time,
-			"audio_feedback_time": keypress_time + latency_offset,
-			"latency_ms": round(latency_offset * 1000, 2),
-			"success": True
-		}
-	return {
-			"keypress_time": keypress_time,
-			"audio_feedback_time": None,
-			"latency_ms": None,
-			"success": False
-		}
-
-	def run_suite():
-	full_log = {
-	"timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
-	"foreground_app_before_keypress": get_foreground_app_name(),
-	"screen_reader_status": detect_or_start_readers(focus=True, auto_start=True),
-	"keypress_to_audio_latency": measure_latency()
-	}
-	with open(LOGFILE, "w") as f:
-	json.dump(full_log, f, indent=2)
-	return full_log
-
-	run_suite()
+run_suite()
 \end{lstlisting}
 
 \section{~~JAWS Latency Quantification \& Printing}
 Data collected and the below analysis indicates that screen reader latency is significantly affected by \gidx{hardware}{hardware} specifications, particularly RAM and \gls{cpu} performance. Further testing and data collection are necessary to establish comprehensive guidelines for optimal configurations.
 
-\begin{lstlisting}[language=Python]
+\begin{lstlisting}[language=python]
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd

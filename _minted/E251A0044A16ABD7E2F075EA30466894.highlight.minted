@@ -1,0 +1,173 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{os}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{psutil}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{subprocess}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{time}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{json}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{sounddevice}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n+nn}{sd}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{numpy}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n+nn}{np}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{pynput.keyboard}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{Controller}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{pywinauto}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{Application}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{win32gui}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{win32process}
+
+\PYG{c+c1}{\PYGZsh{} === CONFIGURATION ===}
+\PYG{n}{SCREEN\PYGZus{}READERS} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+\PYG{l+s+s2}{\PYGZdq{}JAWS\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+\PYG{l+s+s2}{\PYGZdq{}process\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}jfw.exe\PYGZdq{}}\PYG{p}{,}
+\PYG{l+s+s2}{\PYGZdq{}path\PYGZdq{}}\PYG{p}{:} \PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}C:\PYGZbs{}Program Files\PYGZbs{}Freedom Scientific\PYGZbs{}JAWS\PYGZbs{}2025\PYGZbs{}jfw.exe\PYGZdq{}}\PYG{p}{,}
+\PYG{l+s+s2}{\PYGZdq{}config\PYGZus{}path\PYGZdq{}}\PYG{p}{:} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{expandvars}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}APPDATA\PYGZpc{}\PYGZbs{}Freedom Scientific\PYGZbs{}JAWS\PYGZbs{}2025\PYGZbs{}Settings\PYGZbs{}enu\PYGZbs{}default.jcf\PYGZdq{}}\PYG{p}{)}
+\PYG{p}{\PYGZcb{},}
+\PYG{l+s+s2}{\PYGZdq{}NVDA\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+\PYG{l+s+s2}{\PYGZdq{}process\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}nvda.exe\PYGZdq{}}\PYG{p}{,}
+\PYG{l+s+s2}{\PYGZdq{}path\PYGZdq{}}\PYG{p}{:} \PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}C:\PYGZbs{}Program Files\PYGZbs{}NVDA\PYGZbs{}nvda.exe\PYGZdq{}}\PYG{p}{,}
+\PYG{l+s+s2}{\PYGZdq{}config\PYGZus{}path\PYGZdq{}}\PYG{p}{:} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{expandvars}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}APPDATA\PYGZpc{}\PYGZbs{}nvda\PYGZbs{}nvda.ini\PYGZdq{}}\PYG{p}{)}
+\PYG{p}{\PYGZcb{},}
+\PYG{l+s+s2}{\PYGZdq{}SuperNova\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+\PYG{l+s+s2}{\PYGZdq{}process\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}supernova.exe\PYGZdq{}}\PYG{p}{,}
+\PYG{l+s+s2}{\PYGZdq{}path\PYGZdq{}}\PYG{p}{:} \PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}C:\PYGZbs{}Program Files\PYGZbs{}Dolphin\PYGZbs{}SuperNova\PYGZbs{}supernova.exe\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{l+s+s2}{\PYGZdq{}Narrator\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+\PYG{l+s+s2}{\PYGZdq{}process\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Narrator.exe\PYGZdq{}}\PYG{p}{,}
+\PYG{l+s+s2}{\PYGZdq{}path\PYGZdq{}}\PYG{p}{:} \PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}C:\PYGZbs{}Windows\PYGZbs{}System32\PYGZbs{}Narrator.exe\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n}{KEY\PYGZus{}TO\PYGZus{}PRESS} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}
+\PYG{n}{DURATION\PYGZus{}SECONDS} \PYG{o}{=} \PYG{l+m+mi}{5}
+\PYG{n}{SAMPLE\PYGZus{}RATE} \PYG{o}{=} \PYG{l+m+mi}{44100}
+\PYG{n}{THRESHOLD} \PYG{o}{=} \PYG{l+m+mf}{0.05}
+\PYG{n}{LOGFILE} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}suite\PYGZus{}latency\PYGZus{}log.json\PYGZdq{}}
+
+\PYG{n}{keyboard} \PYG{o}{=} \PYG{n}{Controller}\PYG{p}{()}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{is\PYGZus{}process\PYGZus{}running}\PYG{p}{(}\PYG{n}{name}\PYG{p}{):}
+\PYG{k}{for} \PYG{n}{proc} \PYG{o+ow}{in} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{process\PYGZus{}iter}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}pid\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{]):}
+\PYG{k}{if} \PYG{n}{proc}\PYG{o}{.}\PYG{n}{info}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{]} \PYG{o+ow}{and} \PYG{n}{proc}\PYG{o}{.}\PYG{n}{info}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()} \PYG{o}{==} \PYG{n}{name}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{():}
+\PYG{k}{return} \PYG{n}{proc}\PYG{o}{.}\PYG{n}{info}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}pid\PYGZsq{}}\PYG{p}{]}
+\PYG{k}{return} \PYG{k+kc}{None}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{launch\PYGZus{}screen\PYGZus{}reader}\PYG{p}{(}\PYG{n}{reader}\PYG{p}{):}
+\PYG{n}{info} \PYG{o}{=} \PYG{n}{SCREEN\PYGZus{}READERS}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{reader}\PYG{p}{)}
+\PYG{n}{path} \PYG{o}{=} \PYG{n}{info}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}path\PYGZdq{}}\PYG{p}{]}
+\PYG{k}{if} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{isfile}\PYG{p}{(}\PYG{n}{path}\PYG{p}{):}
+\PYG{n}{subprocess}\PYG{o}{.}\PYG{n}{Popen}\PYG{p}{([}\PYG{n}{path}\PYG{p}{])}
+\PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{k}{return} \PYG{n}{is\PYGZus{}process\PYGZus{}running}\PYG{p}{(}\PYG{n}{info}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}process\PYGZdq{}}\PYG{p}{])}
+\PYG{k}{return} \PYG{k+kc}{None}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{activate\PYGZus{}reader\PYGZus{}window}\PYG{p}{(}\PYG{n}{reader}\PYG{p}{):}
+\PYG{n}{info} \PYG{o}{=} \PYG{n}{SCREEN\PYGZus{}READERS}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{reader}\PYG{p}{)}
+\PYG{n}{proc\PYGZus{}name} \PYG{o}{=} \PYG{n}{info}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}process\PYGZdq{}}\PYG{p}{]}
+\PYG{k}{for} \PYG{n}{proc} \PYG{o+ow}{in} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{process\PYGZus{}iter}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}pid\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{]):}
+\PYG{k}{if} \PYG{n}{proc}\PYG{o}{.}\PYG{n}{info}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()} \PYG{o}{==} \PYG{n}{proc\PYGZus{}name}\PYG{p}{:}
+\PYG{k}{try}\PYG{p}{:}
+\PYG{n}{app} \PYG{o}{=} \PYG{n}{Application}\PYG{p}{(}\PYG{n}{backend}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uia\PYGZdq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{connect}\PYG{p}{(}\PYG{n}{process}\PYG{o}{=}\PYG{n}{proc}\PYG{o}{.}\PYG{n}{info}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}pid\PYGZsq{}}\PYG{p}{])}
+\PYG{n}{app}\PYG{o}{.}\PYG{n}{top\PYGZus{}window}\PYG{p}{()}\PYG{o}{.}\PYG{n}{set\PYGZus{}focus}\PYG{p}{()}
+\PYG{k}{return} \PYG{k+kc}{True}
+\PYG{k}{except} \PYG{n+ne}{Exception}\PYG{p}{:}
+\PYG{k}{return} \PYG{k+kc}{False}
+\PYG{k}{return} \PYG{k+kc}{False}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{get\PYGZus{}foreground\PYGZus{}app\PYGZus{}name}\PYG{p}{():}
+\PYG{n}{hwnd} \PYG{o}{=} \PYG{n}{win32gui}\PYG{o}{.}\PYG{n}{GetForegroundWindow}\PYG{p}{()}
+\PYG{n}{\PYGZus{}}\PYG{p}{,} \PYG{n}{pid} \PYG{o}{=} \PYG{n}{win32process}\PYG{o}{.}\PYG{n}{GetWindowThreadProcessId}\PYG{p}{(}\PYG{n}{hwnd}\PYG{p}{)}
+\PYG{k}{try}\PYG{p}{:}
+\PYG{k}{return} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{Process}\PYG{p}{(}\PYG{n}{pid}\PYG{p}{)}\PYG{o}{.}\PYG{n}{name}\PYG{p}{()}
+\PYG{k}{except} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{NoSuchProcess}\PYG{p}{:}
+\PYG{k}{return} \PYG{k+kc}{None}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{is\PYGZus{}nvda\PYGZus{}muted}\PYG{p}{():}
+\PYG{n}{cfg} \PYG{o}{=} \PYG{n}{SCREEN\PYGZus{}READERS}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}NVDA\PYGZdq{}}\PYG{p}{][}\PYG{l+s+s2}{\PYGZdq{}config\PYGZus{}path\PYGZdq{}}\PYG{p}{]}
+\PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{exists}\PYG{p}{(}\PYG{n}{cfg}\PYG{p}{):}
+\PYG{k}{return} \PYG{k+kc}{None}
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{cfg}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{,} \PYG{n}{encoding}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+\PYG{k}{for} \PYG{n}{line} \PYG{o+ow}{in} \PYG{n}{f}\PYG{p}{:}
+\PYG{k}{if} \PYG{n}{line}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()}\PYG{o}{.}\PYG{n}{startswith}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}speechmode\PYGZdq{}}\PYG{p}{):}
+\PYG{n}{val} \PYG{o}{=} \PYG{n}{line}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}=\PYGZdq{}}\PYG{p}{)[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()}
+\PYG{k}{return} \PYG{n}{val} \PYG{o+ow}{in} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}off\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}beeps\PYGZdq{}}\PYG{p}{]}
+\PYG{k}{return} \PYG{k+kc}{None}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{get\PYGZus{}jaws\PYGZus{}verbosity\PYGZus{}mode}\PYG{p}{():}
+\PYG{n}{cfg} \PYG{o}{=} \PYG{n}{SCREEN\PYGZus{}READERS}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}JAWS\PYGZdq{}}\PYG{p}{][}\PYG{l+s+s2}{\PYGZdq{}config\PYGZus{}path\PYGZdq{}}\PYG{p}{]}
+\PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{exists}\PYG{p}{(}\PYG{n}{cfg}\PYG{p}{):}
+\PYG{k}{return} \PYG{k+kc}{None}
+\PYG{k}{try}\PYG{p}{:}
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{cfg}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{,} \PYG{n}{encoding}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}}\PYG{p}{,} \PYG{n}{errors}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}ignore\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+\PYG{k}{for} \PYG{n}{line} \PYG{o+ow}{in} \PYG{n}{f}\PYG{p}{:}
+\PYG{k}{if} \PYG{l+s+s2}{\PYGZdq{}VerbosityLevel\PYGZdq{}} \PYG{o+ow}{in} \PYG{n}{line}\PYG{p}{:}
+\PYG{n}{val} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{([}\PYG{n}{c} \PYG{k}{for} \PYG{n}{c} \PYG{o+ow}{in} \PYG{n}{line} \PYG{k}{if} \PYG{n}{c}\PYG{o}{.}\PYG{n}{isdigit}\PYG{p}{()])}
+\PYG{k}{return} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{val}\PYG{p}{)} \PYG{k}{if} \PYG{n}{val} \PYG{k}{else} \PYG{k+kc}{None}
+\PYG{k}{except} \PYG{n+ne}{Exception}\PYG{p}{:}
+\PYG{k}{return} \PYG{k+kc}{None}
+\PYG{k}{return} \PYG{k+kc}{None}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{detect\PYGZus{}or\PYGZus{}start\PYGZus{}readers}\PYG{p}{(}\PYG{n}{focus}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{auto\PYGZus{}start}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{):}
+\PYG{n}{report} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{k}{for} \PYG{n}{reader}\PYG{p}{,} \PYG{n}{info} \PYG{o+ow}{in} \PYG{n}{SCREEN\PYGZus{}READERS}\PYG{o}{.}\PYG{n}{items}\PYG{p}{():}
+\PYG{n}{pid} \PYG{o}{=} \PYG{n}{is\PYGZus{}process\PYGZus{}running}\PYG{p}{(}\PYG{n}{info}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}process\PYGZdq{}}\PYG{p}{])}
+\PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{pid} \PYG{o+ow}{and} \PYG{n}{auto\PYGZus{}start}\PYG{p}{:}
+\PYG{n}{pid} \PYG{o}{=} \PYG{n}{launch\PYGZus{}screen\PYGZus{}reader}\PYG{p}{(}\PYG{n}{reader}\PYG{p}{)}
+\PYG{n}{status} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}running\PYGZdq{}}\PYG{p}{:} \PYG{n+nb}{bool}\PYG{p}{(}\PYG{n}{pid}\PYG{p}{),} \PYG{l+s+s2}{\PYGZdq{}pid\PYGZdq{}}\PYG{p}{:} \PYG{n}{pid}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}focused\PYGZdq{}}\PYG{p}{:} \PYG{k+kc}{False}\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{if} \PYG{n}{pid} \PYG{o+ow}{and} \PYG{n}{focus}\PYG{p}{:}
+\PYG{n}{focused} \PYG{o}{=} \PYG{n}{activate\PYGZus{}reader\PYGZus{}window}\PYG{p}{(}\PYG{n}{reader}\PYG{p}{)}
+\PYG{n}{status}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}focused\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{focused}
+
+\PYG{k}{if} \PYG{n}{reader} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}NVDA\PYGZdq{}} \PYG{o+ow}{and} \PYG{n}{pid}\PYG{p}{:}
+\PYG{n}{status}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}muted\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{is\PYGZus{}nvda\PYGZus{}muted}\PYG{p}{()}
+\PYG{k}{if} \PYG{n}{reader} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}JAWS\PYGZdq{}} \PYG{o+ow}{and} \PYG{n}{pid}\PYG{p}{:}
+\PYG{n}{status}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}verbosity\PYGZus{}level\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{get\PYGZus{}jaws\PYGZus{}verbosity\PYGZus{}mode}\PYG{p}{()}
+
+\PYG{n}{report}\PYG{p}{[}\PYG{n}{reader}\PYG{p}{]} \PYG{o}{=} \PYG{n}{status}
+\PYG{k}{return} \PYG{n}{report}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{detect\PYGZus{}audio\PYGZus{}peak}\PYG{p}{(}\PYG{n}{audio\PYGZus{}data}\PYG{p}{,} \PYG{n}{fs}\PYG{p}{,} \PYG{n}{threshold}\PYG{o}{=}\PYG{l+m+mf}{0.05}\PYG{p}{):}
+\PYG{n}{frame\PYGZus{}rms} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sqrt}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{mean}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{square}\PYG{p}{(}\PYG{n}{audio\PYGZus{}data}\PYG{p}{),} \PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{))}
+\PYG{k}{for} \PYG{n}{i}\PYG{p}{,} \PYG{n}{amp} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n}{frame\PYGZus{}rms}\PYG{p}{):}
+\PYG{k}{if} \PYG{n}{amp} \PYG{o}{\PYGZgt{}} \PYG{n}{threshold}\PYG{p}{:}
+\PYG{k}{return} \PYG{n}{i} \PYG{o}{/} \PYG{n}{fs}
+\PYG{k}{return} \PYG{k+kc}{None}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{measure\PYGZus{}latency}\PYG{p}{():}
+\PYG{n}{audio\PYGZus{}data} \PYG{o}{=} \PYG{p}{[]}
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{callback}\PYG{p}{(}\PYG{n}{indata}\PYG{p}{,} \PYG{n}{frames}\PYG{p}{,} \PYG{n}{time\PYGZus{}info}\PYG{p}{,} \PYG{n}{status}\PYG{p}{):}
+\PYG{n}{audio\PYGZus{}data}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{indata}\PYG{o}{.}\PYG{n}{copy}\PYG{p}{())}
+
+\PYG{k}{with} \PYG{n}{sd}\PYG{o}{.}\PYG{n}{InputStream}\PYG{p}{(}\PYG{n}{callback}\PYG{o}{=}\PYG{n}{callback}\PYG{p}{,} \PYG{n}{channels}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{samplerate}\PYG{o}{=}\PYG{n}{SAMPLE\PYGZus{}RATE}\PYG{p}{):}
+\PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{keypress\PYGZus{}time} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+\PYG{n}{keyboard}\PYG{o}{.}\PYG{n}{press}\PYG{p}{(}\PYG{n}{KEY\PYGZus{}TO\PYGZus{}PRESS}\PYG{p}{)}
+
+\PYG{n}{keyboard}\PYG{o}{.}\PYG{n}{release}\PYG{p}{(}\PYG{n}{KEY\PYGZus{}TO\PYGZus{}PRESS}\PYG{p}{)}
+\PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{n}{DURATION\PYGZus{}SECONDS}\PYG{p}{)}
+
+\PYG{n}{audio} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{concatenate}\PYG{p}{(}\PYG{n}{audio\PYGZus{}data}\PYG{p}{,} \PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{o}{.}\PYG{n}{flatten}\PYG{p}{()}
+\PYG{n}{latency\PYGZus{}offset} \PYG{o}{=} \PYG{n}{detect\PYGZus{}audio\PYGZus{}peak}\PYG{p}{(}\PYG{n}{audio}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n}{SAMPLE\PYGZus{}RATE}\PYG{p}{,} \PYG{n}{THRESHOLD}\PYG{p}{)}
+\PYG{k}{if} \PYG{n}{latency\PYGZus{}offset} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{k+kc}{None}\PYG{p}{:}
+\PYG{k}{return} \PYG{p}{\PYGZob{}}
+		\PYG{l+s+s2}{\PYGZdq{}keypress\PYGZus{}time\PYGZdq{}}\PYG{p}{:} \PYG{n}{keypress\PYGZus{}time}\PYG{p}{,}
+		\PYG{l+s+s2}{\PYGZdq{}audio\PYGZus{}feedback\PYGZus{}time\PYGZdq{}}\PYG{p}{:} \PYG{n}{keypress\PYGZus{}time} \PYG{o}{+} \PYG{n}{latency\PYGZus{}offset}\PYG{p}{,}
+		\PYG{l+s+s2}{\PYGZdq{}latency\PYGZus{}ms\PYGZdq{}}\PYG{p}{:} \PYG{n+nb}{round}\PYG{p}{(}\PYG{n}{latency\PYGZus{}offset} \PYG{o}{*} \PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{),}
+		\PYG{l+s+s2}{\PYGZdq{}success\PYGZdq{}}\PYG{p}{:} \PYG{k+kc}{True}
+	\PYG{p}{\PYGZcb{}}
+\PYG{k}{return} \PYG{p}{\PYGZob{}}
+		\PYG{l+s+s2}{\PYGZdq{}keypress\PYGZus{}time\PYGZdq{}}\PYG{p}{:} \PYG{n}{keypress\PYGZus{}time}\PYG{p}{,}
+		\PYG{l+s+s2}{\PYGZdq{}audio\PYGZus{}feedback\PYGZus{}time\PYGZdq{}}\PYG{p}{:} \PYG{k+kc}{None}\PYG{p}{,}
+		\PYG{l+s+s2}{\PYGZdq{}latency\PYGZus{}ms\PYGZdq{}}\PYG{p}{:} \PYG{k+kc}{None}\PYG{p}{,}
+		\PYG{l+s+s2}{\PYGZdq{}success\PYGZdq{}}\PYG{p}{:} \PYG{k+kc}{False}
+	\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{run\PYGZus{}suite}\PYG{p}{():}
+\PYG{n}{full\PYGZus{}log} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+\PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{:} \PYG{n}{time}\PYG{o}{.}\PYG{n}{strftime}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}Y\PYGZhy{}\PYGZpc{}m\PYGZhy{}}\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s2}{T\PYGZpc{}H:\PYGZpc{}M:\PYGZpc{}S\PYGZdq{}}\PYG{p}{),}
+\PYG{l+s+s2}{\PYGZdq{}foreground\PYGZus{}app\PYGZus{}before\PYGZus{}keypress\PYGZdq{}}\PYG{p}{:} \PYG{n}{get\PYGZus{}foreground\PYGZus{}app\PYGZus{}name}\PYG{p}{(),}
+\PYG{l+s+s2}{\PYGZdq{}screen\PYGZus{}reader\PYGZus{}status\PYGZdq{}}\PYG{p}{:} \PYG{n}{detect\PYGZus{}or\PYGZus{}start\PYGZus{}readers}\PYG{p}{(}\PYG{n}{focus}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{auto\PYGZus{}start}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{),}
+\PYG{l+s+s2}{\PYGZdq{}keypress\PYGZus{}to\PYGZus{}audio\PYGZus{}latency\PYGZdq{}}\PYG{p}{:} \PYG{n}{measure\PYGZus{}latency}\PYG{p}{()}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{LOGFILE}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+\PYG{n}{json}\PYG{o}{.}\PYG{n}{dump}\PYG{p}{(}\PYG{n}{full\PYGZus{}log}\PYG{p}{,} \PYG{n}{f}\PYG{p}{,} \PYG{n}{indent}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{k}{return} \PYG{n}{full\PYGZus{}log}
+
+\PYG{n}{run\PYGZus{}suite}\PYG{p}{()}
+\end{MintedVerbatim}
