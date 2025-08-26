@@ -1,0 +1,499 @@
+\chapter{An In-Depth Analysis of the Eti-Eloquence and IBM ViaVoice Text-to-Speech Engines: History, Technical Legacy, and Enduring User Loyalty}
+\section{Executive Summary}
+This report provides a comprehensive analysis of the Eti-Eloquence and
+IBM ViaVoice text-to-speech (TTS) engines, from their origins to their
+enduring legacy in modern accessibility. Developed by Eloquent
+Technology, Inc. (ETI), these synthesizers are not celebrated for their
+naturalism but for their unparalleled functional performance. The report
+dissects the technical and corporate history, tracing ownership from ETI
+to Nuance Communications, Inc., and now its parent company, Microsoft.
+It provides a detailed diagnosis of the specific technical challenges,
+such as dynamic-link library (DLL) incompatibility and the deprecation
+of SAPI 4, which led to a divide between legacy and modern systems. The
+core of this analysis lies in explaining the paradox of user loyalty:
+for a segment of screen reader power users, Eloquence's non-human voice
+is superior to modern neural voices due to its low latency, high-speed
+intelligibility, and minimal resource footprint. A comparative analysis
+of these performance metrics is presented alongside practical guidance
+on how to obtain and integrate these voices into modern screen reader
+environments like JAWS and NVDA via both community-driven and officially
+licensed channels.
+
+\section{Part I: The Genesis of a Unique Synthesizer}
+\subsection{1.1. The Foundational Work of Eloquent Technology, Inc. (ETI)}
+The history of the Eti-Eloquence synthesizer is fundamentally linked to
+the pioneering work of Dr. Susan Hertz. In 1983, Dr. Hertz founded
+Eloquent Technology, Inc. (ETI), a company dedicated to producing
+innovative text-to-speech software.\supercite{1} Dr. Hertz brought over four
+decades of experience in multi-language speech synthesis to her work,
+with expertise in both rule-based and concatenative methods.\supercite{1} Her
+vision for ETI's core technology, codified in the ETI-Eloquence system,
+was distinct from the prevailing trends of the time. While many systems
+were beginning to focus on concatenative synthesis---which involves
+stitching together fragments of recorded human speech---ETI-Eloquence
+was built on an innovative rule-based system known as "Delta
+synthesis".\supercite{2}
+
+This approach allowed the system to generate speech waveforms entirely
+algorithmically, simulating a human vocal tract rather than relying on a
+large database of pre-recorded audio.\supercite{3} This foundational design choice
+conferred several immediate and lasting advantages. The system achieved
+an "extremely small memory footprint" and was celebrated for its
+"flexibility" and "exceptionally accurate text processing".\supercite{1} A
+testament to its sophistication, the synthesizer could handle complex
+linguistic tasks, such as expanding numbers, acronyms, and currency
+expressions without the need for a massive, memory-intensive
+dictionary.\supercite{3} Additionally, it gave users granular control over voice
+characteristics. The Delta synthesis system provided annotations with
+which users could specify parameters like the degree of breathiness,
+vocal tract size, pitch range, and overall pitch level on a word-by-word
+basis.\supercite{2}
+
+The foundational design choice of algorithmic, rule-based synthesis is
+the direct cause of Eloquence's enduring performance benefits and
+distinct, non-human sound. During the 1990s and early 2000s,
+concatenative synthesis became the dominant paradigm, promising more
+"natural" sounding voices by stitching together pre-recorded phoneme,
+diphones, or word units.\supercite{4} This approach required large databases and
+introduced performance overhead. By contrast, ETI's algorithmic
+approach eliminated the need for a large software footprint, making it
+incredibly lightweight and fast.\supercite{6} This efficiency-first design,
+implemented in the 1980s, is precisely what gives the synthesizer its
+low latency and high-speed advantages over modern, resource-heavy neural
+networks. The unique, "robotic" sound of Eloquence is not a flaw in
+its design; it is a direct consequence of a deliberate engineering
+philosophy focused on functional efficiency over aesthetic realism.
+
+\subsection{1.2. The IBM Partnership and the Rise of ViaVoice}
+ETI's technical innovations found a significant commercial platform
+through a partnership with IBM. In 1997, IBM launched its ViaVoice
+product, a flagship speech recognition solution.\supercite{7} The core TTS
+component of ViaVoice was powered by ETI's technology. This
+collaboration effectively married ETI's groundbreaking synthesizer with
+IBM's commercial reach. The partnership was particularly significant as
+IBM ViaVoice was a major commercial competitor to Dragon
+NaturallySpeaking.\supercite{7}
+
+The relationship between the two technologies is further clarified by
+community-driven technical projects. The SAPI5IBMTTS project, which aims
+to bridge the gap between legacy and modern systems, notes that IBM
+ViaVoice and ETI-Eloquence are similar products that "used the same
+interface" and were built around the same core dynamic-link libraries
+(DLLs).\supercite{8} This shared technical foundation, centered on the
+
+IBMECI.dll and ECI.dll files, demonstrates that ViaVoice was essentially
+a licensed commercialization of the ETI-Eloquence engine.\supercite{8} This
+partnership cemented the presence of the Eloquence voice in the market,
+making it the recognizable sound for an entire generation of computer
+users who relied on assistive technology.
+
+\section{Part II: The Era of Disruption and Discontinuation}
+\subsection{2.1. A Corporate Timeline of Ownership}
+The corporate history of the Eloquence synthesizer is complex, marked by
+a series of acquisitions and mergers that ultimately led to the
+discontinuation of its original development and distribution. This
+timeline is a critical element in understanding the current state of the
+technology and the legal and technical landscape faced by its users
+today.
+
+In January 2001, Dr. Susan Hertz sold Eloquent Technology, Inc. to
+SpeechWorks International, Inc..\supercite{1} This marked the end of the original
+ETI-led development and placed the intellectual property (IP) under new
+corporate management. The following years were characterized by further
+industry consolidation. In 2003, IBM awarded ScanSoft, which owned the
+competing speech recognition product Dragon NaturallySpeaking, exclusive
+global distribution rights for ViaVoice desktop products.\supercite{7} This move
+strategically positioned ScanSoft to control the primary consumer-facing
+products in the speech recognition market. In 2005, ScanSoft merged with
+Nuance Communications, Inc., an acquisition that consolidated the
+intellectual property of Dragon, ViaVoice, and ETI-Eloquence under a
+single corporate umbrella.\supercite{7} In a more recent development, Nuance was
+acquired by Microsoft in 2022. This corporate lineage means the IP for
+the Eloquence voice is now an asset of Microsoft, though its
+distribution to the public is primarily managed by its subsidiaries and
+licensed partners.
+
+This sequence of legal and corporate transfers directly contributed to
+the technical fragmentation of the Eloquence ecosystem. The intellectual
+property was transferred from the original developers, who had a deep
+understanding of its core user base, to large corporations that were
+primarily focused on new, commercially lucrative applications.\supercite{1} This
+shift in corporate focus meant that the task of updating the legacy
+software for modern operating systems fell outside the scope of new
+business priorities. This created a technical vacuum that was eventually
+filled by a dedicated user community and third-party developers, who had
+to create workarounds to keep their preferred synthesizer alive. This
+history underscores how a product's utility for a niche market can be
+decoupled from its commercial viability in the eyes of a large
+corporation.
+
+The table below provides a clear timeline of these significant events.
+
+Table 1: Eloquence's Corporate and Distribution Timeline
+
+  -----------------------------------------------------------------------
+  Year                                Event
+  ----------------------------------- -----------------------------------
+  1983                                Eloquent Technology, Inc. (ETI) is
+                                      founded by Dr. Susan Hertz.\supercite{1}
+
+  1993                                IBM launches the Personal Dictation
+                                      System, later renamed VoiceType.\supercite{7}
+
+  1997                                IBM introduces ViaVoice, which uses
+                                      ETI's core technology.\supercite{7}
+
+  2001                                Dr. Hertz sells ETI to SpeechWorks
+                                      International, Inc..\supercite{1}
+
+  2003                                IBM grants ScanSoft exclusive
+                                      global distribution rights for
+                                      ViaVoice desktop products.\supercite{7}
+
+  2005                                Nuance Communications, Inc. merges
+                                      with ScanSoft, consolidating the IP
+                                      of Dragon, ViaVoice, and
+                                      Eloquence.\supercite{7}
+
+  2016-Present                        Code Factory releases an officially
+                                      licensed, SAPI 5-compliant version
+                                      of Eloquence for Windows.\supercite{9}
+  -----------------------------------------------------------------------
+
+\subsection{2.2. The Paradox of User Loyalty: Function Over Form}
+In an era dominated by neural voices designed to sound as human as
+possible, the Eti-Eloquence synthesizer has maintained a remarkably
+dedicated following. This loyalty stems from a deep-seated functional
+preference rather than an aesthetic one. For a specific user
+demographic---the screen reader power user---the core requirements of a
+TTS engine are responsiveness, intelligibility at high speeds, and a
+minimal resource footprint, all areas where Eloquence excels.
+
+User testimony confirms that the primary metric for a synthesizer's
+quality is its responsiveness. Eloquence provides feedback "almost
+instantly (certainly less than 50 milliseconds) from the moment the text
+is sent to the synthesiser to the moment the audio is output".\supercite{6} This
+is in stark contrast to modern AI synthesizers, which can take "500
+milliseconds to even a second in some cases," a delay that is a
+significant performance bottleneck for efficient workflow.\supercite{6} This low
+latency is essential for navigating user interfaces and receiving
+immediate feedback on keystrokes and commands.\supercite{10}
+
+The second critical factor is clarity at high-speed reading rates.
+Eloquence is renowned for "delivering unmatched clarity at high reading
+speeds" because it "embraces a robotic style".\supercite{11} As one user notes,
+modern voices "falter when pushed to 3x speed or higher," while
+Eloquence maintains clarity even at speeds where natural voices would
+sound "muddled or artificial".\supercite{6} This phonetic consistency and
+rhythmic simplicity allow experienced users to parse information at
+extraordinary rates, with some reporting speeds of
+
+800 words per minute (WPM) or more.\supercite{10} This is a pace that is
+"incomprehensible" to a new listener but represents a profound
+cognitive adaptation to a high-speed information stream.\supercite{12}
+
+Finally, the lightweight nature of Eloquence's algorithmic design is a
+key advantage. The installation is "just over 10 MB for many different
+languages and voices".\supercite{6} This contrasts sharply with modern,
+data-intensive neural voices that can take up to 780 MB and are thus
+less suitable for older or lower-specification hardware.\supercite{6}
+
+The enduring preference for a "robotic" voice like Eloquence is a
+learned, cognitive adaptation, representing a psychological rejection of
+the "uncanny valley" in favor of pure functional efficiency. While the
+general public and casual users may prefer human-like voices for
+aesthetic reasons, the screen reader power user community has trained
+their minds to process the consistent, non-human output of Eloquence at
+speeds far exceeding the natural human speaking rate.\supercite{13} This turns the
+conventional TTS goal of "naturalness" on its head and highlights a
+significant divergence in user needs: one group seeks an
+emotionally-resonant, mimetic experience, while the other demands a
+high-speed utility for information retrieval.
+
+\section{Part III: Navigating a Modern Digital Landscape}
+\subsection{3.1. The DLL Dilemma: Incompatibility with Modern Windows}
+The technical barrier that has segmented the Eloquence user base from
+the modern computing environment is a critical issue of API and DLL
+incompatibility. The original ETI-Eloquence and IBM ViaVoice engines
+were designed for Microsoft Speech API (SAPI) 4, an older standard that
+is no longer supported by modern applications and operating systems.\supercite{8}
+This posed a significant challenge for users who wanted to continue
+using their preferred voices on Windows 10, Windows 11, and other
+contemporary systems.
+
+The root of the problem lies in the core dynamic-link libraries (DLLs)
+themselves. The SAPI5IBMTTS project, an open-source effort to make these
+legacy voices compatible, explicitly documents this issue. The core
+Eloquence file, ECI.dll, is not directly recognized by modern
+SAPI5-compliant software. The workaround requires users to rename
+ECI.dll to IBMECI.dll to function with a custom SAPI5 driver, a process
+that highlights the technical chasm between the two standards.\supercite{8} This
+technical dependency on legacy files and APIs meant that a simple,
+universal solution was not available for many years, forcing users into
+complex and often unstable workarounds. The
+
+SAPI5IBMTTS project, for instance, notes several "known issues,"
+including the engine "cut\[ting\] off text" and causing system
+crashes, particularly with the "say all" command in some screen
+readers.\supercite{8}
+
+\subsection{3.2. The Third-Party Driver Ecosystem: Community vs. Commercial}
+The legal and technical fragmentation of the Eloquence ecosystem is a
+direct consequence of a corporate intellectual property transfer that
+did not prioritize the specific needs of its core accessibility user
+base. The abandonment of dedicated development by Nuance created a
+technical vacuum that was filled by a passionate community and
+third-party developers.
+
+The community solution, born from the frustration with corporate
+inaction, took the form of open-source drivers and add-ons. Projects
+like IBMTTS and the "Eloquence Synthesizer" add-on for NVDA were
+created to bridge the SAPI4 to SAPI5 gap.\supercite{8} These efforts are often
+distributed without the original binaries to navigate legal constraints,
+relying on users to provide their own legacy
+
+ECI.dll files.\supercite{14} While functional, these community workarounds are not
+officially supported and are prone to the stability issues mentioned
+previously. They represent a classic example of a dedicated user base
+becoming its own de facto development team to keep a beloved product
+alive after its commercial owner has moved on.
+
+In response to this demand, a legitimate, commercially viable solution
+emerged. Code Factory, a company with a history of developing
+accessibility solutions, has released an officially licensed,
+SAPI5-compliant version of "ETI-Eloquence for Windows".\supercite{9} This
+product is designed to work seamlessly with a wide range of modern
+applications and screen readers, including JAWS, NVDA, and Narrator.\supercite{9}
+This official solution provides stability and ease of use, eliminating
+the need for complex workarounds. It offers a permanent license for up
+to three personal computers and supports ten languages and dialects,
+including US English, UK English, German, and French.\supercite{9}
+
+\section{Part IV: Eloquence vs. The World: A Comparative Analysis}
+\subsection{4.1. A New Generation of TTS}
+The modern TTS landscape has evolved dramatically since the era of
+ETI-Eloquence. The industry is now dominated by neural network-based
+engines from tech giants like Microsoft (Azure AI Speech), Amazon
+(Polly), and Google (Cloud TTS).\supercite{16} These systems are built on "deep
+learning technologies" and "generative voice engines" trained on
+massive datasets to produce speech that is often described as
+"lifelike," "emotionally engaged," and "highly colloquial".\supercite{16}
+Their primary value proposition is not just the conversion of text to
+speech, but the creation of an immersive and human-like user experience,
+optimized for conversational AI, video narration, and virtual
+assistants.\supercite{17} Many of these advanced voices are cloud-based, which can
+present a new set of challenges for users who prioritize performance and
+offline capability.\supercite{17}
+
+\subsection{4.2. The Performance Gap: An Efficiency-Centric View}
+While modern neural voices represent a significant leap in aesthetic
+quality, they have, in some ways, created a functional regression for a
+specialized user demographic. The history of Eloquence proves that what
+constitutes "good" TTS for the general public is not the same as what
+constitutes a "high-performance" tool for experts. The following table
+provides a comparative analysis of the key performance metrics.
+
+Table 2: The Eloquence Performance Advantage: A Comparative Analysis
+
+  -----------------------------------------------------------------------
+  Metric                  ETI-Eloquence           Modern Neural TTS
+                                                  (Azure/Polly/Google)
+  ----------------------- ----------------------- -----------------------
+  Latency             Extremely low, often    Noticeable latency, 500
+                          under 50 ms.\supercite{6}         ms to 1 second due to
+                                                  cloud processing.\supercite{6}
+
+  High-Speed            Superior clarity and    Quality degrades
+  Intelligibility       rhythmic consistency at significantly when sped
+                          high speeds (e.g.,      up, losing intonation
+                          \>800 WPM).\supercite{10^         and clarity.^11}
+
+  Resource Footprint  Extremely small,        Large, with voices
+                          approximately 10 MB for ranging from 50 MB to
+                          a multi-language        over 780 MB.\supercite{6}
+                          installer.\supercite{6}           
+
+  Connectivity        Local installation,     Requires persistent
+                          full offline            internet connection for
+                          functionality.\supercite{9}       cloud-based
+                                                  synthesis.\supercite{17}
+
+  Primary Use Case    High-speed data         Natural conversational
+                          consumption, efficient  AI, immersive video
+                          screen reader           narration, customer
+                          navigation.\supercite{10^         service bots.^16}
+  -----------------------------------------------------------------------
+
+The modern TTS industry's singular focus on "naturalness" for general
+consumer applications has inadvertently created a functional regression
+for a specialized, high-performance user demographic. Companies like
+Amazon, Google, and Microsoft have invested in neural voices to create
+lifelike conversational agents for smart devices and customer service.
+This emphasis on a mass-market aesthetic has not accounted for the
+specialized performance needs of expert screen reader users who use TTS
+as a high-speed data stream.\supercite{13} By sacrificing low latency and
+consistent rhythm for human-like qualities, modern TTS engines have
+become less efficient tools for a key segment of the market. This
+highlights a critical divergence between what is considered "good" TTS
+by the general public and what is considered a "high-performance" tool
+by experts.
+
+\section{Part V: Strategic Outlook and Recommendations}
+\subsection{5.1. For the User: A Practical Guide to Obtaining and Integrating Eloquence}
+The primary challenge for users today is navigating the fragmented
+landscape of Eloquence availability. The following section provides a
+practical guide to obtaining and integrating the synthesizer into modern
+systems.
+
+Obtaining a SAPI5 License: For a legal, stable, and permanent
+solution, the recommended course of action is to purchase a license for
+the official SAPI5-compliant version of Eloquence for Windows from Code
+Factory.\supercite{9} This solution is designed to integrate seamlessly and
+reliably with modern operating systems and applications.
+
+Installation and Configuration:
+
+The official Code Factory product is a SAPI5 synthesizer, which
+simplifies the installation process. After installation, the user must
+configure their screen reader to use Eloquence as the default voice.
+
+- For JAWS: In the JAWS interface, the user can configure voice
+  settings under the Voices menu. This includes adjusting the
+  "Rate" and "Punctuation" levels to match their preferred
+  high-speed reading habits. While the default "Volume" for the
+  Eloquence voice is managed by the system, other parameters like pitch
+  can be adjusted.\supercite{20} For more advanced customization, such as
+  adjusting the "head size," "roughness," or "breathiness," it may
+  be necessary to directly edit the\
+  ECI.INI configuration file, though this is an unsupported modification
+  that comes with risks.\supercite{21}
+
+- For NVDA: NVDA's built-in support for SAPI5 allows for
+  straightforward integration. The user can navigate to NVDA Menu \>
+  Preferences \> Synthesizer and select "Microsoft Speech API
+  5".\supercite{22} From there, they can select Eloquence as the voice in the\
+  Voice Settings menu and adjust parameters like rate, pitch, and
+  volume.\supercite{23} This process is now streamlined, contrasting with a time
+  when using the synthesizer with NVDA was considered "illegal"
+  without a proper license.\supercite{22}
+
+\subsection{5.2. For the Developer: Lessons from a Legacy Engine}
+The history and enduring appeal of Eti-Eloquence offer critical lessons
+for developers of modern TTS systems. The industry's myopic focus on
+aesthetic naturalism has overlooked key functional metrics that are
+non-negotiable for a significant user base.
+
+Re-evaluating Performance Metrics: Developers should consider that
+for a portion of the market, a TTS engine is not a conversational
+partner but a high-speed data delivery tool. This necessitates a
+fundamental re-evaluation of performance, where metrics like low latency
+and rhythmic consistency are prioritized alongside or even above
+emotional nuance and human-like qualities.\supercite{6}
+
+Hybrid Architectural Models: A strategic approach would be to
+develop a hybrid TTS architecture. This would involve a lightweight,
+on-device engine (conceptually similar to an updated Eloquence) for
+low-latency, real-time feedback and navigation. For reading long-form
+content, a higher-fidelity, cloud-based neural engine could be used.
+This dual-engine approach would provide the best of both worlds,
+ensuring a responsive user experience for navigation while still
+offering natural, high-quality voices for consumption.
+
+\subsection{5.3. The Future of Accessibility Voices}
+The story of Eti-Eloquence is not a tale of an obsolete technology left
+behind by progress. Instead, it is a testament to the fact that
+excellence in assistive technology is defined by utility, not mimicry.
+The enduring loyalty to a "robotic" voice proves that a synthesizer's
+value is in its ability to empower the user to retrieve and process
+information efficiently. As neural voices continue to improve, the next
+frontier in accessibility may not be in making machines sound more
+human, but in making them function more perfectly as tools for the human
+mind. The legacy of Eloquence is a powerful reminder that the most
+powerful voice is not the most human-like, but the most useful.
+
+\subsection{Works cited}
+1.  About Us - Synfonica, accessed August 26, 2025,
+    [[https://www.synfonicaspeech.com/about]{.underline}](https://www.synfonicaspeech.com/about)
+
+2.  LANGUAGE-UNIVERSAL AND LANGUAGE-SPECIFIC COMPONENTS IN THE
+    MULTI-LANGUAGE ETI-ELOQUENCE TEXT-TO-SPEECH SYSTEM, accessed August
+    26, 2025,
+    [[https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS1999/papers/p14_2283.pdf]{.underline}](https://www.internationalphoneticassociation.org/icphs-proceedings/ICPhS1999/papers/p14_2283.pdf)
+
+3.  ETI-Eloquence, accessed August 26, 2025,
+    [[http://svr-www.eng.cam.ac.uk/comp.speech/Section5/Synth/eloquence.html]{.underline}](http://svr-www.eng.cam.ac.uk/comp.speech/Section5/Synth/eloquence.html)
+
+4.  The Complete Evolution of Text to Speech Technology - LyricWinter,
+    accessed August 26, 2025,
+    [[https://lyricwinter.com/blog/complete-evolution-text-to-speech-technology]{.underline}](https://lyricwinter.com/blog/complete-evolution-text-to-speech-technology)
+
+5.  The Rise of the Talking Machines: A Journey Through the History of
+    Text to Speech Technology --- Part 1 - Tharuka KasthuriArachchi,
+    accessed August 26, 2025,
+    [[https://tharuka-ckasthuri.medium.com/the-rise-of-the-talking-machines-a-journey-through-the-history-of-text-to-speech-technology-b76c8b0a5a1d]{.underline}](https://tharuka-ckasthuri.medium.com/the-rise-of-the-talking-machines-a-journey-through-the-history-of-text-to-speech-technology-b76c8b0a5a1d)
+
+6.  Why Eloquence? - chat@nvda.groups.io, accessed August 26, 2025,
+    [[https://nvda.groups.io/g/chat/topic/why_eloquence/105595533]{.underline}](https://nvda.groups.io/g/chat/topic/why_eloquence/105595533)
+
+7.  IBM ViaVoice - Wikipedia, accessed August 26, 2025,
+    [[https://en.wikipedia.org/wiki/IBM_ViaVoice]{.underline}](https://en.wikipedia.org/wiki/IBM_ViaVoice)
+
+8.  datajake1999/SAPI5IBMTTS: SAPI5 interface for the IBM \... - GitHub,
+    accessed August 26, 2025,
+    [[https://github.com/datajake1999/SAPI5IBMTTS]{.underline}](https://github.com/datajake1999/SAPI5IBMTTS)
+
+9.  Eloquence for Windows - Code Factory, accessed August 26, 2025,
+    [[https://codefactoryglobal.com/usecases/apps/eloquence-for-windows/]{.underline}](https://codefactoryglobal.com/usecases/apps/eloquence-for-windows/)
+
+10. Is there a difference for how fast you can listen to the newer more
+    nicely sou\... \| Hacker News, accessed August 26, 2025,
+    [[https://news.ycombinator.com/item?id=44719112]{.underline}](https://news.ycombinator.com/item?id=44719112)
+
+11. Eloquence TTS Voices on iPhone and Mac: Unlock Speed Reading -
+    Speech Central, accessed August 26, 2025,
+    [[https://speechcentral.net/2025/01/17/eloquence-tts-voices-on-iphone-and-mac-unlock-speed-reading/]{.underline}](https://speechcentral.net/2025/01/17/eloquence-tts-voices-on-iphone-and-mac-unlock-speed-reading/)
+
+12. The Voices of Screen Readers - Tamman Inc, accessed August 26, 2025,
+    [[https://tammaninc.com/learn/the-voices-of-screen-readers/]{.underline}](https://tammaninc.com/learn/the-voices-of-screen-readers/)
+
+13. screen reader and Speech output - why is it so fast and sounds
+    artificial?, accessed August 26, 2025,
+    [[https://www.netz-barrierefrei.de/en/screenreader-output.html]{.underline}](https://www.netz-barrierefrei.de/en/screenreader-output.html)
+
+14. Eloquence - NVDA Add-ons Directory, accessed August 26, 2025,
+    [[https://nvda-addons.org/revreq.php?id=10]{.underline}](https://nvda-addons.org/revreq.php?id=10)
+
+15. Eloquence SAPI5 - Tiflotecnia Voices for NVDA, accessed August 26,
+    2025,
+    [[https://www.tiflotecnia.com/eloquence.html]{.underline}](https://www.tiflotecnia.com/eloquence.html)
+
+16. AI Voice Generator and Text-to-Speech Tool - Amazon Polly, accessed
+    August 26, 2025,
+    [[https://aws.amazon.com/polly/]{.underline}](https://aws.amazon.com/polly/)
+
+17. Azure AI Speech \| Microsoft Azure, accessed August 26, 2025,
+    [[https://azure.microsoft.com/en-us/products/ai-services/ai-speech]{.underline}](https://azure.microsoft.com/en-us/products/ai-services/ai-speech)
+
+18. Text-to-Speech AI: Lifelike Speech Synthesis - Google Cloud,
+    accessed August 26, 2025,
+    [[https://cloud.google.com/text-to-speech]{.underline}](https://cloud.google.com/text-to-speech)
+
+19. Neural Speech Synthesis 2.0: Natural Voice Technology Transcends
+    Current Audio Accessibility, accessed August 26, 2025,
+    [[https://accessible.org/neural-speech-synthesis-2-0-natural-voice-technology-audio-accessibility/]{.underline}](https://accessible.org/neural-speech-synthesis-2-0-natural-voice-technology-audio-accessibility/)
+
+20. How to configure Jaws voice settings - Nomensa, accessed August 26,
+    2025,
+    [[https://www.nomensa.com/blog/how-configure-jaws-voice-settings/]{.underline}](https://www.nomensa.com/blog/how-configure-jaws-voice-settings/)
+
+21. tech-vi@groups.io \| An Amazing JAWS Power Tip From Leo Bado \...,
+    accessed August 26, 2025,
+    [[https://groups.io/g/tech-vi/topic/an_amazing_jaws_power_tip/100908445]{.underline}](https://groups.io/g/tech-vi/topic/an_amazing_jaws_power_tip/100908445)
+
+22. Switching From JAWS To NVDA nvaccess/nvda-community Wiki · GitHub,
+    accessed August 26, 2025,
+    [[https://gttprogram.blog/2018/12/20/switching-from-jaws-to-nvda-nvaccess-nvda-community-wiki-%C2%B7-github/]{.underline}](https://gttprogram.blog/2018/12/20/switching-from-jaws-to-nvda-nvaccess-nvda-community-wiki-%C2%B7-github/)
+
+23. how to install additional nvda components - Accessibility Central,
+    accessed August 26, 2025,
+    [[http://accessibilitycentral.net/how%20to%20install%20additional%20nvda%20components.html]{.underline}](http://accessibilitycentral.net/how%20to%20install%20additional%20nvda%20components.html)
